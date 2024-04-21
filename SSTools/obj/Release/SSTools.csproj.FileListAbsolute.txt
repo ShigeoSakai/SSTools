@@ -1,0 +1,8 @@
+C:\Users\s-sakai\source\repos\SSTools\SSTools\bin\Release\SSTools.dll
+C:\Users\s-sakai\source\repos\SSTools\SSTools\bin\Release\SSTools.pdb
+C:\Users\s-sakai\source\repos\SSTools\SSTools\obj\Release\SSTools.csproj.AssemblyReference.cache
+C:\Users\s-sakai\source\repos\SSTools\SSTools\obj\Release\SSTools.WaitingForm.resources
+C:\Users\s-sakai\source\repos\SSTools\SSTools\obj\Release\SSTools.csproj.GenerateResource.cache
+C:\Users\s-sakai\source\repos\SSTools\SSTools\obj\Release\SSTools.csproj.CoreCompileInputs.cache
+C:\Users\s-sakai\source\repos\SSTools\SSTools\obj\Release\SSTools.dll
+C:\Users\s-sakai\source\repos\SSTools\SSTools\obj\Release\SSTools.pdb

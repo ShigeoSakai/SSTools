@@ -1,0 +1,9 @@
+C:\Users\s-sakai\source\repos\SSTools\SSTools\bin\Debug\SSTools.dll
+C:\Users\s-sakai\source\repos\SSTools\SSTools\bin\Debug\SSTools.pdb
+C:\Users\s-sakai\source\repos\SSTools\SSTools\obj\Debug\SSTools.csproj.AssemblyReference.cache
+C:\Users\s-sakai\source\repos\SSTools\SSTools\obj\Debug\SSTools.WaitingForm.resources
+C:\Users\s-sakai\source\repos\SSTools\SSTools\obj\Debug\SSTools.csproj.GenerateResource.cache
+C:\Users\s-sakai\source\repos\SSTools\SSTools\obj\Debug\SSTools.csproj.CoreCompileInputs.cache
+C:\Users\s-sakai\source\repos\SSTools\SSTools\obj\Debug\SSTools.dll
+C:\Users\s-sakai\source\repos\SSTools\SSTools\obj\Debug\SSTools.pdb
+C:\Users\s-sakai\source\repos\SSTools\SSTools\obj\Debug\SSTools.TrackBarAndValue.resources

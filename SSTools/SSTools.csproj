@@ -75,7 +75,6 @@
       <DependentUpon>WaitingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThread.cs" />
-    <Compile Include="WindowMessageAnalyzer.cs" />
     <Compile Include="WindowsMessage\WndMessageAnalysisDef.cs" />
     <Compile Include="WindowsMessage\WndMsgAnalysis.cs" />
     <Compile Include="WindowsMessage\WndMsgAnalysisMessageClasscs.cs" />

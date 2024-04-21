@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SSTools
 {
+	/// <summary>
+	/// Windowメッセージ定義
+	/// </summary>
 	public enum WND_MSG_ENUM
 	{
 		WM_NULL = 0x0000,

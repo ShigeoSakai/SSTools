@@ -6,21 +6,66 @@ namespace SSTools
 {
 	public partial class WndMsgAnalysis
 	{
+		/// <summary>
+		/// メッセージ解析I/F
+		/// </summary>
 		private interface IMakeAndCall
 		{
-			object MakeParameter(IntPtr wparam, IntPtr lparam);
-			bool Call(IntPtr hdl, object param, bool UseDescription);
+			/// <summary>
+			/// Windowメッセージ
+			/// </summary>
 			WND_MSG_ENUM MsgID { get; }
+			/// <summary>
+			/// 説明
+			/// </summary>
 			string Description { get; }
+			/// <summary>
+			/// 解析モード
+			/// </summary>
 			ANALYSIS_MODE AnalysisMode { get; }
+			/// <summary>
+			/// パラメータ型
+			/// </summary>
 			Type Type { get; }
+			/// <summary>
+			/// 関数定義があるか
+			/// </summary>
 			bool IsFunc { get; }
+			/// <summary>
+			/// 処理関数設定
+			/// </summary>
+			/// <typeparam name="T">パラメータ型</typeparam>
+			/// <param name="func">処理関数</param>
+			/// <returns>true:登録OK/false:型が違う</returns>
 			bool SetFunc<T>(Func<IntPtr, WND_MSG_ENUM, T, string, bool> func) where T :class;
+			/// <summary>
+			/// 処理関数クリア
+			/// </summary>
+			void ClearFunc();
+			/// <summary>
+			/// パラメータの生成
+			/// </summary>
+			/// <param name="wparam">WParam</param>
+			/// <param name="lparam">LParam</param>
+			/// <returns>指定パラメータ型で生成した結果</returns>
+			object MakeParameter(IntPtr wparam, IntPtr lparam);
+			/// <summary>
+			/// 処理関数呼び出し
+			/// </summary>
+			/// <param name="hdl">Windowハンドル</param>
+			/// <param name="param">パラメータ</param>
+			/// <param name="UseDescription">説明を表示するか？</param>
+			/// <returns>呼び出し結果 true:このメッセージの処理済み/false:未処理</returns>
+			bool Call(IntPtr hdl, object param, bool UseDescription);
 		}
+		/// <summary>
+		/// Windowメッセージ定義
+		/// </summary>
+		/// <typeparam name="T">パラメータ型</typeparam>
 		private class WindowsMessageDefine<T> :IMakeAndCall where T :class
 		{
 			/// <summary>
-			/// メッセージ名
+			/// Windowメッセージ
 			/// </summary>
 			public WND_MSG_ENUM MsgID { get; private set; }
 			/// <summary>
@@ -39,7 +84,18 @@ namespace SSTools
 			/// 関数が登録されているか
 			/// </summary>
 			public bool IsFunc { get => (Func != null); }
+			/// <summary>
+			/// パラメータ型
+			/// </summary>
+			public Type Type { get => typeof(T); }
 
+			/// <summary>
+			/// コンストラクタ
+			/// </summary>
+			/// <param name="msgID">Windowメッセージ</param>
+			/// <param name="analysisMode">解析モード</param>
+			/// <param name="func">処理関数</param>
+			/// <param name="description">説明</param>
 			public WindowsMessageDefine(WND_MSG_ENUM msgID, ANALYSIS_MODE analysisMode,
 				Func<IntPtr, WND_MSG_ENUM, T, string, bool> func = null, string description = null)
 			{
@@ -48,10 +104,21 @@ namespace SSTools
 				AnalysisMode = analysisMode;
 				Func = func;
 			}
+			/// <summary>
+			/// 処理関数登録
+			/// </summary>
+			/// <param name="func">処理関数</param>
 			public void SetFunc(Func<IntPtr, WND_MSG_ENUM, T, string, bool> func) => Func = func;
+			/// <summary>
+			/// 処理関数クリア
+			/// </summary>
 			public void ClearFunc() => Func = null;
-			public Type Type { get => typeof(T); }
-
+			/// <summary>
+			/// パラメータの生成
+			/// </summary>
+			/// <param name="wparam">WParam</param>
+			/// <param name="lparam">LParam</param>
+			/// <returns>指定パラメータ型で生成した結果</returns>
 			public object MakeParameter(IntPtr wParam,IntPtr lParam)
 			{
 				ConstructorInfo ctor = typeof(T).GetConstructor(new Type[] { typeof(IntPtr), typeof(IntPtr) });
@@ -59,13 +126,25 @@ namespace SSTools
 					return ctor.Invoke(new object[] {wParam, lParam });
 				return null;
 			}
+			/// <summary>
+			/// 処理関数呼び出し
+			/// </summary>
+			/// <param name="hdl">Windowハンドル</param>
+			/// <param name="param">パラメータ</param>
+			/// <param name="UseDescription">説明を表示するか？</param>
+			/// <returns>呼び出し結果 true:このメッセージの処理済み/false:未処理</returns>
 			public bool Call(IntPtr hdl, object obj, bool UseDescription)
 			{
 				if (obj is T param)
 					return Func(hdl, MsgID, param, (UseDescription) ? Description : null);
 				return false;
 			}
-
+			/// <summary>
+			/// 処理関数設定
+			/// </summary>
+			/// <typeparam name="T1">パラメータ型</typeparam>
+			/// <param name="func">処理関数</param>
+			/// <returns>true:登録OK/false:型が違う</returns>
 			public bool SetFunc<T1>(Func<IntPtr, WND_MSG_ENUM, T1, string, bool> func) where T1 : class
 			{
 				if (Type == typeof(T1))
@@ -76,24 +155,69 @@ namespace SSTools
 				return false;
 			}
 		}
+		/// <summary>
+		/// Windowメッセージ定義(Factory)
+		/// </summary>
 		private class WMFactory
 		{
+			/// <summary>
+			/// Windowメッセージ定義
+			/// </summary>
 			public IMakeAndCall Define { get; private set; }
+			/// <summary>
+			/// Windowメッセージ定義インスタンスの生成
+			/// </summary>
+			/// <typeparam name="T">パラメータ型</typeparam>
+			/// <param name="msgID">Windowメッセージ</param>
+			/// <param name="analysisMode">解析モード</param>
+			/// <param name="func">処理関数</param>
+			/// <param name="description">説明</param>
+			/// <returns>Windowメッセージ定義インスタンス</returns>
 			public static WMFactory New<T>(WND_MSG_ENUM msgID, ANALYSIS_MODE analysisMode,
 				Func<IntPtr, WND_MSG_ENUM, T, string, bool> func = null, string description = null) where T : class
 				 => new WMFactory(new WindowsMessageDefine<T>(msgID, analysisMode, func, description));
-
+			/// <summary>
+			/// Windowメッセージ
+			/// </summary>
 			public WND_MSG_ENUM MsgID { get => (Define != null) ? Define.MsgID : WND_MSG_ENUM.WM_NULL; }
+			/// <summary>
+			/// 説明
+			/// </summary>
 			public string Description { get => Define?.Description; }
+			/// <summary>
+			/// 解析モード
+			/// </summary>
 			public ANALYSIS_MODE AnalysisMode { get => (Define != null) ? Define.AnalysisMode : ANALYSIS_MODE.NONE; }
+			/// <summary>
+			/// 関数が登録されているか
+			/// </summary>
 			public bool IsFunc { get => (Define != null) && Define.IsFunc; }
+			/// <summary>
+			/// パラメータ型
+			/// </summary>
 			public Type Type { get => Define?.Type; }
 
+			/// <summary>
+			/// コンストラクタ
+			/// </summary>
+			/// <param name="define">Windowメッセージ定義</param>
 			private WMFactory(IMakeAndCall define) => Define = define;
+			/// <summary>
+			/// 処理関数呼び出し
+			/// </summary>
+			/// <param name="hdl">Windowハンドル</param>
+			/// <param name="wParam">WParaam</param>
+			/// <param name="lParam">WParaam</param>
+			/// <param name="UseDescription">説明を表示するか？</param>
+			/// <returns>呼び出し結果 true:このメッセージの処理済み/false:未処理 or 処理関数定義なし</returns>
+			/// <remarks>
+			/// 処理関数がtrueを返す .... WndProc()/HookProc()を呼び出さない(このメッセージは処理済み)
+			/// 処理関数がfalseを返す、もしくはメッセージ処理未定義 ... WndProc()/HookProc()を呼び出す。
+			/// </remarks>
 			public bool Call(IntPtr hdl,IntPtr wParam,IntPtr lParam , bool UseDescription)
 			{
-				if (Define != null)
-				{
+				if ((Define != null) && (Define.IsFunc))
+				{	// 処理関数定義はある時のみ
 					object parameter = Define.MakeParameter(wParam, lParam);
 					return Define.Call(hdl, parameter, UseDescription);
 				}
@@ -111,9 +235,12 @@ namespace SSTools
 				return false;
 			}
 		}
-
+		/// <summary>
+		/// Windowメッセージ定義リスト
+		/// </summary>
 		private static List<WMFactory> windowsMessageDefines = new List<WMFactory>()
 		{
+			// Window関連
 			// 00
 			WMFactory.New<PARAMETER_NOT_USE>(WND_MSG_ENUM.WM_DESTROY, ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction, "ウインドウが破棄されようとしている"),
 			WMFactory.New<WPARAM_XY>(WND_MSG_ENUM.WM_MOVE, ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウィンドウが移動された"),
@@ -211,8 +338,8 @@ namespace SSTools
 			WMFactory.New<PARAMETER_NOT_USE>(WND_MSG_ENUM.WM_DWMSENDICONICLIVEPREVIEWBITMAP,ANALYSIS_MODE.WINDOW_MGR_MSG,DefaultDebugFunction,"ウィンドウのライブプレビューとして使用する静的ビットマップを要求"),
 
             // IME関連
-			WMFactory.New<IME_SETCONTEXT>(WND_MSG_ENUM.WM_IME_SETCONTEXT,ANALYSIS_MODE.IIME_MSG,DefaultDebugFunction,"ウィンドウがアクティブ化された"),
-			WMFactory.New<IME_NOTIFY>(WND_MSG_ENUM.WM_IME_NOTIFY,ANALYSIS_MODE.IIME_MSG,DefaultDebugFunction,"IMEウィンドウへの変更を通知"),
+			WMFactory.New<IME_SETCONTEXT>(WND_MSG_ENUM.WM_IME_SETCONTEXT,ANALYSIS_MODE.IME_MSG,DefaultDebugFunction,"ウィンドウがアクティブ化された"),
+			WMFactory.New<IME_NOTIFY>(WND_MSG_ENUM.WM_IME_NOTIFY,ANALYSIS_MODE.IME_MSG,DefaultDebugFunction,"IMEウィンドウへの変更を通知"),
 			// その他
 			WMFactory.New<WM_PRINT_CLIENT>(WND_MSG_ENUM.WM_PRINTCLIENT,ANALYSIS_MODE.OTHER_MSG,DefaultDebugFunction,"指定されたデバイスコンテキスト(プリンタ)でクライアント領域の描画要求"),
 
@@ -220,9 +347,12 @@ namespace SSTools
 		/// <summary>
 		/// デフォルト処理関数
 		/// </summary>
-		/// <param name="hWnd"></param>
-		/// <param name="msgID"></param>
-		/// <param name="param"></param>
+		/// <typeparam name="T">パラメータ型</typeparam>
+		/// <param name="hWnd">Windowハンドル</param>
+		/// <param name="msgID">Windowメッセージ</param>
+		/// <param name="param">パラメータ</param>
+		/// <param name="description">説明</param>
+		/// <returns>常にfalse</returns>
 		private static bool DefaultDebugFunction<T>(IntPtr hWnd, WND_MSG_ENUM msgID, T param, string description) where T : class
 		{
 			Console.WriteLine("{0}(0x{1:X4}) {2} :{3}", msgID.ToString(), (ushort)msgID , param.ToString(), description);
@@ -231,11 +361,11 @@ namespace SSTools
 		/// <summary>
 		/// NcActivate用処理関数
 		/// </summary>
-		/// <param name="hWnd"></param>
-		/// <param name="msgID"></param>
-		/// <param name="param"></param>
-		/// <param name="description"></param>
-		/// <returns></returns>
+		/// <param name="hWnd">Windowハンドル</param>
+		/// <param name="msgID">Windowメッセージ</param>
+		/// <param name="param">パラメータ</param>
+		/// <param name="description">説明</param>
+		/// <returns>常にfalse</returns>
 		private static bool DebugNcActivate(IntPtr hWnd, WND_MSG_ENUM msgID, WPARAM_LPARAM_IS_VALUE<WPRAM_LPARAM> param, string description)
 		{
 			Console.WriteLine("{0}(0x{1:X4}):{2} Handle:0x{3:X8}", msgID.ToString(), (ushort)msgID, (param.Param.W.ValuePtr != (IntPtr)0), param.Param.L.ValuePtr);

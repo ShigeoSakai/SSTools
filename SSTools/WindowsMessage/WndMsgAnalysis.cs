@@ -3,22 +3,30 @@ using System.Collections.Generic;
 
 namespace SSTools
 {
+	/// <summary>
+	/// Windowメッセージ解析
+	/// </summary>
 	public partial class WndMsgAnalysis
 	{
+		/// <summary>
+		/// 解析モード
+		/// </summary>
 		[Flags]
 		public enum ANALYSIS_MODE
 		{
-			NONE = 0,
-			WINDOW_MSG = 0x01,
-			CONTROL_MSG = 0x02,
-			MOUSE_MSG = 0x04,
-			WINDOW_MGR_MSG = 0x08,
-			IIME_MSG = 0x10,
-			OTHER_MSG = 0x20,
-			USER_DEFINE = 0x100,
-			SHOW_DESCRIPTION = 0x1000,
-			DEBUG = 0x2000,
-			ALL = WINDOW_MSG | CONTROL_MSG | MOUSE_MSG | WINDOW_MGR_MSG | IIME_MSG | OTHER_MSG,
+			NONE = 0,					// なし
+			WINDOW_MSG = 0x01,			// Window関連
+			CONTROL_MSG = 0x02,			// Control関連
+			MOUSE_MSG = 0x04,			// マウス関連
+			WINDOW_MGR_MSG = 0x08,		// ウィンドウマネージャ関連
+			IME_MSG = 0x10,				// IME関連
+			OTHER_MSG = 0x20,			// その他メッセージ関連
+
+			USER_DEFINE = 0x100,		// ユーザー定義処理
+			SHOW_DESCRIPTION = 0x1000,	// 説明を表示
+			DEBUG = 0x2000,				// デバッグ
+			// メッセージ全て
+			ALL = WINDOW_MSG | CONTROL_MSG | MOUSE_MSG | WINDOW_MGR_MSG | IME_MSG | OTHER_MSG,
 		}
 
 		/// <summary>
@@ -55,7 +63,7 @@ namespace SSTools
 				{   // DWM(ウィンドウマネージャ)関連
 					WndMsgDictionary.Add((ushort)factory.MsgID, factory);
 				}
-				else if ((AnalysisMode.HasFlag(ANALYSIS_MODE.IIME_MSG)) && (factory.AnalysisMode.HasFlag(ANALYSIS_MODE.IIME_MSG)))
+				else if ((AnalysisMode.HasFlag(ANALYSIS_MODE.IME_MSG)) && (factory.AnalysisMode.HasFlag(ANALYSIS_MODE.IME_MSG)))
 				{   // IME関連
 					WndMsgDictionary.Add((ushort)factory.MsgID, factory);
 				}
@@ -66,7 +74,11 @@ namespace SSTools
 			}
 		}
 
-
+		/// <summary>
+		/// 説明を取得
+		/// </summary>
+		/// <param name="msgId">Windowメッセージ</param>
+		/// <returns>説明</returns>
 		private string GetDescription(ushort msgId)
 		{
 			WMFactory factory = windowsMessageDefines.Find((p) => (ushort)p.MsgID == msgId);
@@ -77,16 +89,20 @@ namespace SSTools
 		/// <summary>
 		/// 処理関数を追加する
 		/// </summary>
-		/// <typeparam name="T"></typeparam>
-		/// <param name="msgId"></param>
-		/// <param name="msgName"></param>
-		/// <param name="func"></param>
+		/// <typeparam name="T">パラメータ型</typeparam>
+		/// <param name="msgId">WindowメッセージID</param>
+		/// <param name="msgName">Windowメッセージ名</param>
+		/// <param name="func">処理関数</param>
 		/// <returns>true;定義済みメッセージに登録/false:新規にメッセージを登録</returns>
+		/// <remarks>
+		/// WindowメッセージID もしくは Windowメッセージ名がWND_MSG_ENUMある事。
+		/// （ない場合は、falseが返る）
+		/// </remarks>
 		public bool SetFunc<T>(ushort msgId,string msgName, Func<IntPtr, WND_MSG_ENUM, T, string, bool> func) where T :class
 		{
 			WND_MSG_ENUM MsgEnumID;
 			if (Enum.IsDefined(typeof(WND_MSG_ENUM), msgId))
-			{
+			{	// IDがある
 				MsgEnumID = (WND_MSG_ENUM)msgId;
 			}
 			else if (Enum.TryParse<WND_MSG_ENUM>(msgName,out MsgEnumID) == false)
@@ -95,34 +111,38 @@ namespace SSTools
 			}
 
 			if (WndMsgDictionary.ContainsKey((ushort)MsgEnumID))
-			{
+			{	// 登録が辞書にあった
 				if  (WndMsgDictionary[(ushort)MsgEnumID].SetFunc<T>(func))
 					return true;
-				// 定義を削除する
+				// 型が一致しない → 定義を削除する
 				WndMsgDictionary.Remove((ushort)MsgEnumID);
 			}
+			// 説明を取得
 			string description = GetDescription((ushort)MsgEnumID);
+			// 定義を新規登録
 			WndMsgDictionary.Add(msgId, WMFactory.New<T>(MsgEnumID, ANALYSIS_MODE.USER_DEFINE, func, description));
 			return false;
 		}
 		/// <summary>
 		/// 処理関数を追加する
 		/// </summary>
-		/// <typeparam name="T"></typeparam>
-		/// <param name="msgId"></param>
-		/// <param name="func"></param>
+		/// <typeparam name="T">パラメータ型</typeparam>
+		/// <param name="msgId">Windowメッセージ</param>
+		/// <param name="func">処理関数</param>
 		/// <returns>true;定義済みメッセージに登録/false:新規にメッセージを登録</returns>
 		public bool SetFunc<T>(WND_MSG_ENUM msgId, Func<IntPtr, WND_MSG_ENUM, T, string, bool> func) where T : class
 		{
 			ushort id = (ushort)msgId;
 			if (WndMsgDictionary.ContainsKey(id))
-			{
+			{   // 登録が辞書にあった
 				if (WndMsgDictionary[id].SetFunc<T>(func))
 					return true;
-				// 定義を削除する
+				// 型が一致しない → 定義を削除する
 				WndMsgDictionary.Remove(id);
 			}
+			// 説明を取得
 			string description = GetDescription(id);
+			// 定義を新規登録
 			WndMsgDictionary.Add(id, WMFactory.New<T>(msgId, ANALYSIS_MODE.USER_DEFINE, func,description));
 			return false;
 		}
@@ -130,10 +150,10 @@ namespace SSTools
 		/// <summary>
 		/// メッセージ解析
 		/// </summary>
-		/// <param name="hWnd"></param>
-		/// <param name="msg"></param>
-		/// <param name="wparam"></param>
-		/// <param name="lparam"></param>
+		/// <param name="hWnd">Windowハンドル</param>
+		/// <param name="msg">WindowメッセージID</param>
+		/// <param name="wparam">WParam</param>
+		/// <param name="lparam">LParam</param>
 		/// <return>true:処理済み/false:未処理</return>
 		public bool Analysis(IntPtr hWnd, int msg, IntPtr wparam, IntPtr lparam)
 		{
@@ -143,21 +163,24 @@ namespace SSTools
 			{   
 				// メッセージ名
 				string name = WndMsgDictionary[(ushort)msg].MsgID.ToString();
+				// 処理関数を夜b出したか？
 				bool is_func_called = false;
 				// 型指定がされているか？
 				if (WndMsgDictionary[(ushort)msg].Type != null)
-				{
+				{	// 処理関数を呼び出して結果をもらう
 					result = WndMsgDictionary[(ushort)msg].Call(hWnd, wparam, lparam, AnalysisMode.HasFlag(ANALYSIS_MODE.SHOW_DESCRIPTION));
+					// 処理関数呼び出し
+					is_func_called　= true;
 				}
 				if ((AnalysisMode.HasFlag(ANALYSIS_MODE.DEBUG)) && (is_func_called == false))
-				{
+				{	// デバッグモードで、処理関数を呼び出していない... メッセージをコンソールに表示
 					Console.WriteLine("{0}(0x{1:X4}) {2}", name, (ushort)msg,
 						((AnalysisMode.HasFlag(ANALYSIS_MODE.SHOW_DESCRIPTION)) ? WndMsgDictionary[(ushort)msg].Description : ""));
 				}
 			}
 			else if (AnalysisMode.HasFlag(ANALYSIS_MODE.DEBUG))
-			{
-				Console.WriteLine("ID:0x{0:X4}", (ushort)msg);
+			{	// デバックモード ... 未定義メッセージをコンソールに表示
+				Console.WriteLine("ID:0x{0:X4} Unknown", (ushort)msg);
 			}
 			return result;
 		}

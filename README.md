@@ -7,8 +7,15 @@
 * FullscreenForm<br>全画面対応フォーム
 * WaitingForm<br>処理待ちフォーム
 * ColorDialogWithLocation<br>表示位置指定が可能なColorDialog
+## コントロール
+* AutoSizeNumericUpDown<br>AutoSizeに対応したNumericUpDown
+## 複合
+* TrackBarAndValue<br>NumericUpDownとTrackBarを組み合わせたコントロール
+## Log
+* LogUtil<br>ログ出力
 ## ウィンドウメッセージ解析
 * WndMsgAnalysis<br>Windowsメッセージ解析
 ## その他
 * ComboItem<br>コンボボックスアイテム登録
 * FormThread<br>フォームを別スレッドで起動
+* IntPtrEx<br>IntPtrを使いやすくするクラス

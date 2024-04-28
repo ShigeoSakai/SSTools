@@ -42,8 +42,17 @@ namespace SSTools
 		/// コンストラクタ
 		/// </summary>
 		/// <param name="mode">解析モード</param>
-		public WndMsgAnalysis(ANALYSIS_MODE mode = ANALYSIS_MODE.NONE)
+		public unsafe WndMsgAnalysis(ANALYSIS_MODE mode = ANALYSIS_MODE.NONE)
 		{
+			// 不正な組み合わせチェック
+			Console.WriteLine(string.Format("IntPtr={0} CPU={1}", sizeof(IntPtr), Environment.Is64BitProcess ? "64" : "32"));
+			System.Diagnostics.Debug.Assert(((Environment.Is64BitProcess) && (sizeof(IntPtr) == 8)) ||
+				((Environment.Is64BitProcess == false) && (sizeof(IntPtr) == 4)),
+				string.Format("想定されていないIntPtr({0})とCPUビット数({1})の組み合わせです",
+				sizeof(IntPtr),Environment.Is64BitProcess ? "64" : "32"));
+#if WIN32
+			System.Diagnostics.Debug.Assert(Environment.Is64BitProcess == false, "Win32用を64bitで実行しようとしています。");
+#endif
 			AnalysisMode = mode;
 			foreach(WMFactory factory in windowsMessageDefines)
 			{

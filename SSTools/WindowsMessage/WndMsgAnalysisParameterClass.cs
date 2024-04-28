@@ -20,6 +20,27 @@ namespace SSTools
 			}
 			public override string ToString() => lParam.ToString();
 		}
+
+		private static T Construct<T>(IntPtr value)
+		{
+			return (T)typeof(T).GetConstructor(new Type[] { typeof(IntPtr) }).Invoke(new object[] { value });
+		}
+
+		/// <summary>
+		/// LParamのみ構造体に適用
+		/// </summary>
+		/// <typeparam name="T">構造体</typeparam>
+		public class ONLY_LPARAM_CLASS<T> where T : class
+		{
+			public HI_LO wParam;
+			public T lParam;
+			public ONLY_LPARAM_CLASS(IntPtr wParam, IntPtr lParam)
+			{
+				this.wParam.ValuePtr = wParam;
+				this.lParam = Construct<T>(lParam);
+			}
+			public override string ToString() => lParam.ToString();
+		}
 		/// <summary>
 		/// WParamがFalseの場合、T0構造体を適用
 		/// WParamがFalseの場合、T1構造体を適用

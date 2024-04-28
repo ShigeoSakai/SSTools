@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.trackBar1 = new System.Windows.Forms.TrackBar();
+			this.trackBarAndValue21 = new SSTools.TrackBarAndValue();
 			this.colorSelectionButton1 = new SSTools.ColorSelectionButton();
-			this.trackBarAndValue1 = new SSTools.TrackBarAndValue();
 			((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -46,6 +46,43 @@
 			this.trackBar1.TickFrequency = 10;
 			this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
 			this.trackBar1.Value = 10;
+			// 
+			// trackBarAndValue21
+			// 
+			this.trackBarAndValue21.AutoSize = true;
+			this.trackBarAndValue21.DecimalPlaces = 2;
+			this.trackBarAndValue21.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.trackBarAndValue21.LargeChange = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+			this.trackBarAndValue21.Location = new System.Drawing.Point(375, 193);
+			this.trackBarAndValue21.Name = "trackBarAndValue21";
+			this.trackBarAndValue21.Orientation = System.Windows.Forms.Orientation.Vertical;
+			this.trackBarAndValue21.Size = new System.Drawing.Size(66, 224);
+			this.trackBarAndValue21.SmallChange = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.trackBarAndValue21.TabIndex = 4;
+			this.trackBarAndValue21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.trackBarAndValue21.TickFrequency = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+			this.trackBarAndValue21.UpDownControlWidth = 60;
+			this.trackBarAndValue21.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
 			// 
 			// colorSelectionButton1
 			// 
@@ -63,55 +100,13 @@
 			this.colorSelectionButton1.UseVisualStyleBackColor = false;
 			this.colorSelectionButton1.WindowLocation = new System.Drawing.Point(0, 0);
 			// 
-			// trackBarAndValue1
-			// 
-			this.trackBarAndValue1.Hexadecimal = true;
-			this.trackBarAndValue1.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.trackBarAndValue1.LargeChange = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-			this.trackBarAndValue1.Location = new System.Drawing.Point(44, 86);
-			this.trackBarAndValue1.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.trackBarAndValue1.MinimumSize = new System.Drawing.Size(62, 25);
-			this.trackBarAndValue1.Name = "trackBarAndValue1";
-			this.trackBarAndValue1.Orientation = System.Windows.Forms.Orientation.Vertical;
-			this.trackBarAndValue1.Reverse = true;
-			this.trackBarAndValue1.Size = new System.Drawing.Size(62, 155);
-			this.trackBarAndValue1.SmallChange = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.trackBarAndValue1.TabIndex = 2;
-			this.trackBarAndValue1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.trackBarAndValue1.TickFrequency = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.trackBarAndValue1.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.trackBarAndValue21);
 			this.Controls.Add(this.colorSelectionButton1);
-			this.Controls.Add(this.trackBarAndValue1);
 			this.Controls.Add(this.trackBar1);
 			this.Name = "Form1";
 			this.Text = "Form1";
@@ -123,8 +118,8 @@
 
 		#endregion
 		private System.Windows.Forms.TrackBar trackBar1;
-		private SSTools.TrackBarAndValue trackBarAndValue1;
 		private SSTools.ColorSelectionButton colorSelectionButton1;
+		private SSTools.TrackBarAndValue trackBarAndValue21;
 	}
 }
 

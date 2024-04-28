@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using static SSTools.WndMsgAnalysis;
 
 namespace SSTools
 {
@@ -194,7 +195,7 @@ namespace SSTools
 			/// </summary>
 			/// <returns></returns>
 			public override string ToString() =>
-				string.Format("({0},{1}) center:({2},{3}) flags:{4:X8}", X, Y, Cx, Cy, Flags);
+				string.Format("({0},{1}) W:{2},H:{3} flags:{4:X8}", X, Y, Cx, Cy, Flags);
 		}
 
 		/// <summary>
@@ -206,15 +207,44 @@ namespace SSTools
 			public RECT Rect0;
 			public RECT Rect1;
 			public RECT Rect2;
-			public WINDOWPOS_PARAMS LpPos;
+			public IntPtr LpPos;    // WINDOWPOS_PARAMS
 
 			/// <summary>
 			/// 文字列変換
 			/// </summary>
 			/// <returns></returns>
 			public override string ToString() =>
-				string.Format("RECT0:{0}\r\nRECT[1]:{1}\r\nRECT[2]:{2}\r\n:LPPos:{3}",
+				string.Format("RECT0:{0} RECT[1]:{1} RECT[2]:{2} LPPos:{3}",
 					Rect0.ToString(), Rect1.ToString(), Rect2.ToString(), LpPos.ToString());
+		}
+
+		public class NCCALCSIZE_PARAMS_CLASS
+		{
+			public NCCALCSIZE_PARAMS NcCalcSize;
+			public WINDOWPOS_PARAMS WindowPos;
+
+			public NCCALCSIZE_PARAMS_CLASS(IntPtr address)
+			{
+				NcCalcSize = IntPtrEx.Instance(address).GetStructure<NCCALCSIZE_PARAMS>(PtrFunc);
+			}
+			private void PtrFunc(string name,Type type,object value)
+			{
+				if (name == "LpPos")
+				{
+					if ((type == typeof(IntPtr)) && (value is IntPtr addr))
+						WindowPos = IntPtrEx.Instance(addr).GetStructure<WINDOWPOS_PARAMS>();
+					else if ((type == typeof(IntPtrEx)) && (value is IntPtrEx ptr))
+						WindowPos = ptr.GetStructure<WINDOWPOS_PARAMS>();
+				}
+					
+			}
+
+			public override string ToString() =>
+				string.Format("RECT0:{0} RECT[1]:{1} RECT[2]:{2} LPPos:{3}" +
+					" Hwnd:{4} HwndInsertAfter:{5} X:{6} Y:{7} W:{8} H:{9} Flags:{10}",
+					NcCalcSize.Rect0.ToString(), NcCalcSize.Rect1.ToString(), NcCalcSize.Rect2.ToString(),IntPtrEx.Instance(NcCalcSize.LpPos),
+					IntPtrEx.Instance(WindowPos.Hwnd), IntPtrEx.Instance(WindowPos.HwndInsertAfter),
+					WindowPos.X, WindowPos.Y, WindowPos.Cx,WindowPos.Cy,WindowPos.Flags);
 		}
 
 		/// <summary>

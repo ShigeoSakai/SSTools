@@ -242,37 +242,129 @@ namespace SSTools
 		{
 			// Window関連
 			// 00
+			//  WM_NULL
+			//  WM_CREATE
 			WMFactory.New<PARAMETER_NOT_USE>(WND_MSG_ENUM.WM_DESTROY, ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction, "ウインドウが破棄されようとしている"),
 			WMFactory.New<WPARAM_XY>(WND_MSG_ENUM.WM_MOVE, ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウィンドウが移動された"),
 			WMFactory.New<WPARAM_SIZE>(WND_MSG_ENUM.WM_SIZE, ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウのサイズが変更"),
 			WMFactory.New<WM_ACTIVE>(WND_MSG_ENUM.WM_ACTIVATE, ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"アクティブ状態が変更"),
 			WMFactory.New<WPARAMETER_IS_HANDLE>(WND_MSG_ENUM.WM_SETFOCUS, ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウがキーボードフォーカスを取得した"),
 			WMFactory.New<WPARAMETER_IS_HANDLE>(WND_MSG_ENUM.WM_KILLFOCUS, ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウがキーボードフォーカスを失った"),
+			//  WM_ENABLE
+			//  WM_SETREDRAW
+			//  WM_SETTEXT
+			//  WM_GETTEXT
+			//  WM_GETTEXTLENGTH
 			WMFactory.New<PARAMETER_NOT_USE>(WND_MSG_ENUM.WM_PAINT, ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウのクライアント領域を描画する必要があり"),
 
 			// 10
 			WMFactory.New<PARAMETER_NOT_USE>(WND_MSG_ENUM.WM_CLOSE,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"コントロールメニューの[クローズ]コマンドが選択"),
+			//  WM_QUERYENDSESSION
+			//  WM_QUIT
+			//  WM_QUERYOPEN
 			WMFactory.New<WPARAMETER_IS_HANDLE>(WND_MSG_ENUM.WM_ERASEBKGND,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウの背景を消去する必要があり"),
+			//  WM_SYSCOLORCHANGE
+			//  WM_ENDSESSION
+			//  WM_SYSTEMERROR
 			WMFactory.New<WM_SHOWWINDOW>(WND_MSG_ENUM.WM_SHOWWINDOW,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウの表示または非表示の状態が変更"),
+			//  WM_CTLCOLOR
+			//  WM_WININICHANGE
+			//  WM_DEVMODECHANGE = 0x001B,
+			//  WM_ACTIVATEAPP = 0x001C,
+			//  WM_FONTCHANGE = 0x001D,
+			//  WM_TIMECHANGE = 0x001E,
+			//  WM_CANCELMODE = 0x001F,
+			// 20
+			//  WM_SETCURSOR = 0x0020,
+			//  WM_MOUSEACTIVATE = 0x0021,
+			//  WM_CHILDACTIVATE = 0x0022,
+			//  WM_QUEUESYNC = 0x0023,
+			//  WM_GETMINMAXINFO = 0x0024,
+			//  WM_PAINTICON = 0x0026,
+			//  WM_ICONERASEBKGND = 0x0027,
+			//  WM_NEXTDLGCTL = 0x0028,
+			//  WM_SPOOLERSTATUS = 0x002A,
+			//  WM_DRAWITEM = 0x002B,
+			//  WM_MEASUREITEM = 0x002C,
+			//  WM_DELETEITEM = 0x002D,
+			//  WM_VKEYTOITEM = 0x002E,
+			//  WM_CHARTOITEM = 0x002F,
 			// 30
 			WMFactory.New<WM_DEFAULT>(WND_MSG_ENUM.WM_SETFONT,ANALYSIS_MODE.WINDOW_MSG | ANALYSIS_MODE.CONTROL_MSG, DefaultDebugFunction,"コントロールで使われるフォントを設定します。"),
-			WMFactory.New<WM_NOTIFY_FORMAT>(WND_MSG_ENUM.WM_NOTIFYFORMAT,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ANSIまたはUnicodeの構造体を受け入れるかどうかを決定"),
+			//  WM_GETFONT = 0x0031,
+			//  WM_SETHOTKEY = 0x0032,
+			//  WM_GETHOTKEY = 0x0033,
+			//  WM_QUERYDRAGICON = 0x0037,
+			//  WM_COMPAREITEM = 0x0039,
+			//  WM_GETOBJECT = 0x003D,
 			// 40
+			//  WM_COMPACTING = 0x0041,
+			//  WM_COMMNOTIFY = 0x0044,
 			WMFactory.New<ONLY_LPARAM<WINDOWPOS_PARAMS>>(WND_MSG_ENUM.WM_WINDOWPOSCHANGING,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウに新しいサイズまたは位置を通知"),
 			WMFactory.New<ONLY_LPARAM<WINDOWPOS_PARAMS>>(WND_MSG_ENUM.WM_WINDOWPOSCHANGED,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウにサイズまたは位置の変更を通知"),
+			//  WM_POWER = 0x0048,
+			//  WM_COPYDATA = 0x004A,
+			//  WM_CANCELJOURNAL = 0x004B,
 			WMFactory.New<ONLY_LPARAM<NMHDR>>(WND_MSG_ENUM.WM_NOTIFY,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"イベントが発生、またはコントロールに何らかの情報が必要"),
+			// 50
+			//  WM_INPUTLANGCHANGEREQUEST = 0x0050,
+			//  WM_INPUTLANGCHANGE = 0x0051,
+			//  WM_TCARD = 0x0052,
+			//  WM_HELP = 0x0053,
+			//  WM_USERCHANGED = 0x0054,
+			WMFactory.New<WM_NOTIFY_FORMAT>(WND_MSG_ENUM.WM_NOTIFYFORMAT,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ANSIまたはUnicodeの構造体を受け入れるかどうかを決定"),
 			// 70
+			//  WM_CONTEXTMENU = 0x007B,
+			//  WM_STYLECHANGING = 0x007C,
+			//  WM_STYLECHANGED = 0x007D,
+			//  WM_DISPLAYCHANGE = 0x007E,
 			WMFactory.New<WM_GETICON>(WND_MSG_ENUM.WM_GETICON,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウィンドウに関連付けられているアイコンを取得"),
 			// 80
+			//  WM_SETICON = 0x0080,
+			//  WM_NCCREATE = 0x0081,
 			WMFactory.New<PARAMETER_NOT_USE>(WND_MSG_ENUM.WM_NCDESTROY,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウの非クライアント領域が破棄されている"),
-			WMFactory.New<ONLY_LPARAM<NCCALCSIZE_PARAMS>>(WND_MSG_ENUM.WM_NCCALCSIZE,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウのクライアント領域のサイズを計算"),
+			//WMFactory.New<ONLY_LPARAM<NCCALCSIZE_PARAMS>>(WND_MSG_ENUM.WM_NCCALCSIZE,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウのクライアント領域のサイズを計算"),
+			WMFactory.New<ONLY_LPARAM_CLASS<NCCALCSIZE_PARAMS_CLASS>>(WND_MSG_ENUM.WM_NCCALCSIZE,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウのクライアント領域のサイズを計算"),
 			WMFactory.New<WPARAMETER_IS_HANDLE>(WND_MSG_ENUM.WM_NCPAINT,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウの枠を描画する必要があり"),
 			WMFactory.New<WM_DEFAULT>(WND_MSG_ENUM.WM_NCACTIVATE,ANALYSIS_MODE.WINDOW_MSG, DebugNcActivate,"非クライアント領域のアクティブ状態を変更"),
+			//  WM_GETDLGCODE = 0x0087,
+			//  WM_SYNCPAINT = 0x88,
+			// F0
+			//	WM_INPUT_DEVICE_CHANGE = 0x00FE,
+			//	WM_INPUT = 0x00FF,
+			// 100
+			//	WM_KEYDOWN = 0x0100,
+			//	WM_KEYUP = 0x0101,
+			//	WM_CHAR = 0x0102,
+			//	WM_DEADCHAR = 0x0103,
+			//	WM_SYSKEYDOWN = 0x0104,
+			//	WM_SYSKEYUP = 0x0105,
+			//	WM_SYSCHAR = 0x0106,
+			//	WM_SYSDEADCHAR = 0x0107,
+			//	WM_UNICHAR = 0x0109,
+			//	WM_IME_STARTCOMPOSITION = 0x010D,
+			//	WM_IME_ENDCOMPOSITION = 0x010E,
+			//	WM_IME_COMPOSITION = 0x010F,
 			// 110 
 			WMFactory.New<WM_DEFAULT>(WND_MSG_ENUM.WM_INITDIALOG,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ダイアログボックスを初期化"),
 			WMFactory.New<WM_COMMAND>(WND_MSG_ENUM.WM_COMMAND,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"コマンドメッセージを指定"),
 			WMFactory.New<WM_SYSCOMMAND>(WND_MSG_ENUM.WM_SYSCOMMAND,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"システムコマンドを要求"),
+			//	WM_TIMER = 0x0113,
+			//	WM_HSCROLL = 0x0114,
+			//	WM_VSCROLL = 0x0115,
+			//	WM_INITMENU = 0x0116,
+			//	WM_INITMENUPOPUP = 0x0117,
+			//	WM_GESTURE = 0x0119,
+			//	WM_GESTURENOTIFY = 0x011A,
+			//	WM_MENUSELECT = 0x011F,
 			// 120
+			//	WM_MENUCHAR = 0x0120,
+			//	WM_ENTERIDLE = 0x0121,
+			//	WM_MENURBUTTONUP = 0x0122,
+			//	WM_MENUDRAG = 0x0123,
+			//	WM_MENUGETOBJECT = 0x0124,
+			//	WM_UNINITMENUPOPUP = 0x0125,
+			//	WM_MENUCOMMAND = 0x0126,
 			WMFactory.New<WM_UISTATE>(WND_MSG_ENUM.WM_CHANGEUISTATE,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"UI の状態を変更する必要がある"),
 			WMFactory.New<WM_UISTATE>(WND_MSG_ENUM.WM_UPDATEUISTATE,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"指定したウィンドウとそのすべての子ウィンドウの UI 状態を変更"),
 			WMFactory.New<PARAMETER_NOT_USE>(WND_MSG_ENUM.WM_QUERYUISTATE,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウィンドウの UI 状態を取得"),

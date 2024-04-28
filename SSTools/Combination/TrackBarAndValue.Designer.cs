@@ -28,50 +28,61 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.TbValue = new System.Windows.Forms.NumericUpDown();
+			this.UpDownValue = new SSTools.AutoSizeNumericUpDown();
 			this.TrackBarValue = new System.Windows.Forms.TrackBar();
-			((System.ComponentModel.ISupportInitialize)(this.TbValue)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.UpDownValue)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.TrackBarValue)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// TbValue
+			// UpDownValue
 			// 
-			this.TbValue.Location = new System.Drawing.Point(3, 6);
-			this.TbValue.Name = "TbValue";
-			this.TbValue.Size = new System.Drawing.Size(56, 19);
-			this.TbValue.TabIndex = 0;
-			this.TbValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.TbValue.ValueChanged += new System.EventHandler(this.TbValue_ValueChanged);
+			this.UpDownValue.AutoSize = true;
+			this.UpDownValue.Location = new System.Drawing.Point(3, 3);
+			this.UpDownValue.Maximum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+			this.UpDownValue.Minimum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+			this.UpDownValue.Name = "UpDownValue";
+			this.UpDownValue.Size = new System.Drawing.Size(42, 19);
+			this.UpDownValue.TabIndex = 0;
+			this.UpDownValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.UpDownValue.ValueChanged += new System.EventHandler(this.UpDownValue_ValueChanged);
+			this.UpDownValue.SizeChanged += new System.EventHandler(this.UpDownValue_SizeChanged);
 			// 
 			// TrackBarValue
 			// 
 			this.TrackBarValue.AutoSize = false;
-			this.TrackBarValue.Location = new System.Drawing.Point(65, 3);
-			this.TrackBarValue.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+			this.TrackBarValue.Location = new System.Drawing.Point(51, 3);
 			this.TrackBarValue.Name = "TrackBarValue";
-			this.TrackBarValue.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.TrackBarValue.Size = new System.Drawing.Size(112, 24);
+			this.TrackBarValue.Size = new System.Drawing.Size(104, 19);
 			this.TrackBarValue.TabIndex = 1;
-			this.TrackBarValue.TickFrequency = 10;
 			this.TrackBarValue.Scroll += new System.EventHandler(this.TrackBarValue_Scroll);
 			this.TrackBarValue.ValueChanged += new System.EventHandler(this.TrackBarValue_ValueChanged);
 			// 
-			// TrackBarAndValue
+			// TrackBarAndValue2
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoSize = true;
 			this.Controls.Add(this.TrackBarValue);
-			this.Controls.Add(this.TbValue);
-			this.Name = "TrackBarAndValue";
-			this.Size = new System.Drawing.Size(180, 28);
-			((System.ComponentModel.ISupportInitialize)(this.TbValue)).EndInit();
+			this.Controls.Add(this.UpDownValue);
+			this.Name = "TrackBarAndValue2";
+			this.Size = new System.Drawing.Size(158, 25);
+			((System.ComponentModel.ISupportInitialize)(this.UpDownValue)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.TrackBarValue)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.NumericUpDown TbValue;
+		private AutoSizeNumericUpDown UpDownValue;
 		private System.Windows.Forms.TrackBar TrackBarValue;
 	}
 }

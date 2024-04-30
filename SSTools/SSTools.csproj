@@ -72,6 +72,10 @@
     <Compile Include="Combination\TrackBarAndValue.Designer.cs">
       <DependentUpon>TrackBarAndValue.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomizeControl\LabeledTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizeControl\ZoomPictureBoxAffineMatrix.cs" />
     <Compile Include="CustomizeControl\AutoSizeNumericUpDown.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -85,9 +89,20 @@
     <Compile Include="Button\FolderSelectButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomizeControl\Shape\BaseShape.cs" />
+    <Compile Include="CustomizeControl\Shape\PointShape.cs" />
+    <Compile Include="CustomizeControl\Shape\PolygonShape.cs" />
+    <Compile Include="CustomizeControl\Shape\RectangleShape.cs" />
+    <Compile Include="CustomizeControl\ZoomPictureBoxUtils.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizeControl\ZoomPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form\ColorDialogWithLocation.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Form\FormUtils.cs" />
     <Compile Include="Form\FullscreenForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,5 +135,6 @@
       <DependentUpon>WaitingForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

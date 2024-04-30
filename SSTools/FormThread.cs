@@ -65,7 +65,7 @@ namespace SSTools
 		/// <summary>
 		/// UIスレッド表示完了イベント
 		/// </summary>
-		private ManualResetEvent setEvent = new ManualResetEvent(false);
+		private readonly ManualResetEvent setEvent = new ManualResetEvent(false);
 
 		/// <summary>
 		/// ダイアログの表示結果
@@ -77,48 +77,44 @@ namespace SSTools
 		public DialogResult DialogResult { get { return _dialogResult; } }
 
 		/// <summary>
-		/// インスタンス
-		/// </summary>
-		private static FormThread instance_ = null;
-		/// <summary>
 		/// コンストラクタ
 		/// </summary>
 		/// <param name="caption">表示する文字列</param>
 		/// <param name="total">合計数</param>
 		public FormThread(Form form)
 		{
-			// スレッドを生成
-			UIThread = new Thread(() => {
-				try
-				{
-					// フォームを生成
-					UIForm = form;
-					// イベント追加
-					UIForm.Shown += Form_Shown;
-					UIForm.FormClosed += UIForm_FormClosed;
-					// ダイアログで表示
-					_dialogResult = UIForm.ShowDialog();
-				}
-				catch (Exception ex) when ((ex is ThreadInterruptedException) || (ex is ThreadAbortException))
-				{   // 割り込み、中断の場合はフォームのスレッドを停止
-					// イベント削除
-					UIForm.Shown -= Form_Shown;
-					UIForm.FormClosed -= UIForm_FormClosed;
-					_dialogResult = DialogResult.Abort;
-					UIForm?.Close();
-					UIForm?.Dispose();
-					UIForm = null;
-				}
-			});
-			UIThread.IsBackground = true;                   // 親スレッド(例えばメニュー画面)の終了時に同時に終了する
-			UIThread.SetApartmentState(ApartmentState.STA); // 保存ダイアログ等を利用したとき問題が出ないよう、STA属性を指定
+            // スレッドを生成
+            UIThread = new Thread(() =>
+            {
+                try
+                {
+                    // フォームを生成
+                    UIForm = form;
+                    // イベント追加
+                    UIForm.Shown += Form_Shown;
+                    UIForm.FormClosed += UIForm_FormClosed;
+                    // ダイアログで表示
+                    _dialogResult = UIForm.ShowDialog();
+                }
+                catch (Exception ex) when ((ex is ThreadInterruptedException) || (ex is ThreadAbortException))
+                {   // 割り込み、中断の場合はフォームのスレッドを停止
+                    // イベント削除
+                    UIForm.Shown -= Form_Shown;
+                    UIForm.FormClosed -= UIForm_FormClosed;
+                    _dialogResult = DialogResult.Abort;
+                    UIForm?.Close();
+                    UIForm?.Dispose();
+                    UIForm = null;
+                }
+            })
+            {
+                IsBackground = true                   // 親スレッド(例えばメニュー画面)の終了時に同時に終了する
+            };
+            UIThread.SetApartmentState(ApartmentState.STA); // 保存ダイアログ等を利用したとき問題が出ないよう、STA属性を指定
 															// UIスレッド開始
 			UIThread.Start();
 			// インスタンス生成待ち
 			setEvent.WaitOne();
-
-			// インスタンスを保存
-			instance_ = this;
 		}
 		/// <summary>
 		/// フォームが表示された時の処理
@@ -244,7 +240,7 @@ namespace SSTools
 					return GetPropertyExec<T> (propertyInfo);
 				}
 			}
-			return default(T);
+			return default;
 		}
 		/// <summary>
 		/// プロパティ取得(ジェネリック)

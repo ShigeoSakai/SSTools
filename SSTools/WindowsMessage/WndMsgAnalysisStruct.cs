@@ -6,6 +6,46 @@ namespace SSTools
 {
 	public partial class WndMsgAnalysis
 	{
+        //       C++                   C#
+        //  型名      64bit  32bit 
+        //  char        1      1     sbyte
+        //  byte        1      1     byte
+        //  short       2      2     short/Int16
+        //  ushort      2      2     usort/UInt16
+        //  int         4      4     int/Int32
+        //  uint        4      4     uint/UInt32
+        //  long        4      4     int/Int32
+        //  ulong       4      4     uint/UInt32
+        //  long long   8      8     long/Int64
+        //  float       4      4     float
+        //  double      8      8     double
+        //  FLOAT128   16     16
+        //  bool        1      1     bool/Boolean
+        //  BOOL        4      4     int/Int32
+        //  BOOLEAN     1      1     bool/Boolean
+        //  HWND        8      4     IntPtr
+        //  ポインタ    8      4     IntPtr
+        //  WPARAM      8      4     IntPtr
+        //  LPARAM      8      4     IntPtr
+
+        // C++ での結果 64bit
+        //  char=1 CHAR=1 BYTE=1
+        //	short=2 SHORT=2 USHORT=2 WORD=2
+        //	int=4 INT=4 UINT=4
+        //	long=4 LONG=4 ULONG=4
+        //	long long=8 LONGLON=8 ULONGLONG=8
+        //	INT8=1 INT16=2 INT32=4 INT64=8
+        //	DWORD=4 DWORD32=4 DWORD64=8 DWORDLONG=8
+        //	float=4 FLOAT=4 FLOAT128=16 double=8
+        //	bool=1 BOOL=4 BOOLEAN=1
+        //	HWND:8 WPARAM=8 LPARAM=8
+        //	WINDOWPOS=40 RECT=16 NCCALCSIZE_PARAMS=56
+        //
+        // C++ での結果 32bit差分のみ
+        //	HWND:8 WPARAM=8 LPARAM=8
+        //	WINDOWPOS=40 RECT=16 NCCALCSIZE_PARAMS=56
+
+
 		/// <summary>
 		/// WParam/LParam値設定I/F
 		/// </summary>
@@ -259,5 +299,32 @@ namespace SSTools
 			public override string ToString() =>
 				string.Format("HwndFrom:0x{0:X8} ID From:0x{1:X8} Code:0x{2:X8}",(uint)HwndFrom, IdFrom, Code);
 		}
-	}
+
+        /// <summary>
+        /// CREATESTRUCTA構造体
+        /// </summary>
+        [StructLayout(LayoutKind.Sequential)]
+
+        public struct CREATESTRUCTA
+        {
+            public IntPtr lpCreateParams;
+            public IntPtr hInstance;
+            public IntPtr hMenu;
+            public IntPtr hwndParent;
+            public int cy;
+            public int cx;
+            public int y;
+            public int x;
+            public UInt32 style;
+            public IntPtr lpszName;
+            public IntPtr lpszClass;
+            public UInt32 dwExStyle;
+
+			public override string ToString() =>
+				string.Format("CreateParams:0x{0:X8} Instance:0x{1:X8} Menu:0x{2:X8} Parent:0x{3:X8} X:{4},Y:{5} Cx:{6} Cy:{7} Style:{8}" +
+					" Name:0x{9:X8} Class:0x{10:X8} ExtStyle:{11}",
+					(uint)lpCreateParams, (uint)hInstance, (uint)hMenu, (uint)hwndParent, 
+					x, y, cx, cy, (WINDOW_STYLE)style,(uint)lpszName,(uint)lpszClass,(EXTEND_WINDOW_STYLE)dwExStyle);
+        }
+    }
 }

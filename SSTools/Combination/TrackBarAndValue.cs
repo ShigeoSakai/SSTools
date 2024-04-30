@@ -638,7 +638,7 @@ namespace SSTools
 				return minSize;
 			else
 			{	// 全体のサイズを変更
-				Size newSize = (size.HasValue) ? size.Value : Size;
+				Size newSize = size ?? Size;
 				if (newSize.Width < minSize.Width)
 					newSize.Width = minSize.Width;
 				if (newSize.Height < minSize.Height)

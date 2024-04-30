@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace SSTools
 {
+	/// <summary>
+	/// 色選択ボタン
+	/// </summary>
 	public class ColorSelectionButton :Button
 	{
 		/// <summary>
@@ -160,21 +163,19 @@ namespace SSTools
 			Description("ユーザーが純色のみ選択できる場合は true。それ以外の場合は false。")]
 		public bool SolidColorOnly { get; set; } = false;
 
-		public FormStartPosition StartPosition { get; set; } = FormStartPosition.CenterScreen;
-
-		public Point WindowLocation { get; set; } = new Point(0, 0);
+        /// <summary>
+        /// ダイアログ表示の開始位置
+        /// </summary>
+        [Category("色指定ダイアログ"), DefaultValue(typeof(FormStartPosition), "CenterScreen"),
+            Description("ダイアログの表示開始位置指定。")]
+        public FormStartPosition StartPosition { get; set; } = FormStartPosition.CenterScreen;
 
 		/// <summary>
-		/// ColorDialogの最小、最大サイズ
+		/// ダイアログ表示位置
 		/// </summary>
-		private readonly Size minDialogSize = new Size(275, 384);
-		private readonly Size maxDialogSize = new Size(545, 384);
-
-		private Size CalcDialogSize()
-		{
-			//if ((AllowFullOpen) || (FullOpen)) { return maxDialogSize; }
-			return minDialogSize;
-		}
+        [Category("色指定ダイアログ"), DefaultValue(typeof(Point),"0,0"),
+			Description("StartPostionが\"Manual\"時のダイアログ表示座標。")]
+        public Point WindowLocation { get; set; } = new Point(0, 0);
 
 
 		/// <summary>
@@ -183,33 +184,10 @@ namespace SSTools
 		/// <param name="e"></param>
 		protected override void OnClick(EventArgs e)
 		{
-			// ダイアログ表示位置...
+			// ダイアログ表示位置指定
 			FormStartPosition startPosition = StartPosition;
+			// ウィンドウ表示位置
 			Point location = WindowLocation;
-			if (startPosition == FormStartPosition.WindowsDefaultBounds)
-			{
-				startPosition = FormStartPosition.Manual;
-				Point scrLocation = Parent.PointToScreen(Location);
-				Size dialogSize = CalcDialogSize();
-				// ボタンの下で表示できるか？
-				Rectangle rect = new Rectangle(scrLocation.X, scrLocation.Y + this.Height, dialogSize.Width, dialogSize.Height);
-				Rectangle screen = Screen.FromControl(this).WorkingArea;
-				if (screen.Contains(rect) == false)
-				{   // 右側で...
-					rect = new Rectangle(scrLocation.X + this.Width, scrLocation.Y, dialogSize.Width, dialogSize.Height);
-					if (screen.Contains(rect) == false)
-					{   // 左側で...
-						rect = new Rectangle(scrLocation.X - dialogSize.Width, scrLocation.Y, dialogSize.Width, dialogSize.Height);
-						if (screen.Contains(rect) == false)
-						{   // 上側で...
-							rect = new Rectangle(scrLocation.X, scrLocation.Y - dialogSize.Height, dialogSize.Width, dialogSize.Height);
-							if (screen.Contains(rect) == false)
-								startPosition = FormStartPosition.WindowsDefaultLocation;
-						}
-					}
-				}
-				location = rect.Location;
-			}
 
 			// 色選択ダイアログを生成
 			ColorDialogWithLocation dlg = new ColorDialogWithLocation(this)

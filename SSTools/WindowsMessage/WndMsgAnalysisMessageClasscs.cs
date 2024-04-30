@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -377,5 +378,114 @@ namespace SSTools
 			public IME_SETCONTEXT(IntPtr wParam, IntPtr lParam) : base(wParam, lParam) { }
 			public override string ToString() =>string.Format("WindowActive:{0} ShowUI:{1}", IsWindowActive, ShowUI);
 		}
-	}
+        [Flags]
+        public enum WINDOW_STYLE : long
+        {
+            WS_BORDER = 0x00800000L,    // ウィンドウに細い線の罫線がある
+            WS_CAPTION = 0x00C00000L,   // ウィンドウにはタイトル バーがあります (WS_BORDER スタイルが含まれます)。
+            WS_CHILD = 0x40000000L, // ウィンドウは子ウィンドウです。 このスタイルのウィンドウにメニュー バーを設定することはできません。 このスタイルは 、WS_POPUP スタイルでは使用できません。
+            WS_CHILDWINDOW = 0x40000000L,   // WS_CHILD スタイルと同じです。
+            WS_CLIPCHILDREN = 0x02000000L,  // 親ウィンドウ内で描画が行われるときに、子ウィンドウが占有する領域を除外します。 このスタイルは、親ウィンドウを作成するときに使用されます。
+            WS_CLIPSIBLINGS = 0x04000000L,  // 互いに相対的に子ウィンドウをクリップします。つまり、特定の子ウィンドウが WM_PAINT メッセージを受信すると、 WS_CLIPSIBLINGS スタイルは、更新する子ウィンドウの領域から他のすべての重複する子ウィンドウをクリップします。 WS_CLIPSIBLINGSが指定されておらず、子ウィンドウが重複している場合は、子ウィンドウのクライアント領域内で描画するときに、隣接する子ウィンドウのクライアント領域内に描画できます。
+            WS_DISABLED = 0x08000000L,  // ウィンドウは最初は無効になっています。 無効なウィンドウは、ユーザーからの入力を受信できません。 ウィンドウの作成後にこれを変更するには、 EnableWindow 関数を使用します。
+            WS_DLGFRAME = 0x00400000L,  // ウィンドウには、通常ダイアログ ボックスで使用されるスタイルの境界線があります。 このスタイルのウィンドウにタイトル バーを設定することはできません。
+            Ws_group = 0x00020000L, // ウィンドウは、コントロールのグループの最初のコントロールです。 グループは、この最初のコントロールと、
+                                    // その後に定義されたすべてのコントロールから、 WS_GROUP スタイルを持つ次のコントロールまでで構成されます。
+                                    // 各グループの最初のコントロールには通常、 ユーザー がグループからグループに移動できるように、
+                                    // WS_TABSTOP スタイルがあります。 ユーザーは、その後、方向キーを使用して、グループ内の 1 つのコントロールから
+                                    // グループ内の次のコントロールにキーボード フォーカスを変更できます。
+                                    // このスタイルのオンとオフを切り替えて、ダイアログ ボックスのナビゲーションを変更できます。 ウィンドウの作成後にこのスタイルを変更するには、 SetWindowLong 関数を使用します。
+            WS_HSCROLL = 0x00100000L,   // ウィンドウには水平スクロール バーがあります。
+            WS_ICONIC = 0x20000000L,    // ウィンドウは最初は最小化されます。 WS_MINIMIZEスタイルと同じです。
+            WS_MAXIMIZE = 0x01000000L,  // ウィンドウは最初は最大化されます。
+            WS_MAXIMIZEBOX = 0x00010000L,   // ウィンドウには最大化ボタンがあります。 WS_EX_CONTEXTHELP スタイルと組み合わせることはできません。 WS_SYSMENU スタイルも指定する必要があります。
+            WS_MINIMIZE = 0x20000000L,  // ウィンドウは最初は最小化されます。 WS_ICONICスタイルと同じです。
+            WS_MINIMIZEBOX = 0x00020000L,   // ウィンドウには最小化ボタンがあります。 WS_EX_CONTEXTHELP スタイルと組み合わせることはできません。 WS_SYSMENU スタイルも指定する必要があります。
+            WS_OVERLAPPED = 0x00000000L,    // ウィンドウは重なり合ったウィンドウです。 オーバーラップ ウィンドウには、タイトル バーと境界線があります。 WS_TILEDスタイルと同じです。
+            WS_OVERLAPPEDWINDOW = (WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX),  // ウィンドウは重なり合ったウィンドウです。 WS_TILEDWINDOW スタイルと同じです。
+            WS_POPUP = 0x80000000L, // ウィンドウはポップアップ ウィンドウです。 このスタイルは 、WS_CHILD スタイルでは使用できません。
+            WS_POPUPWINDOW = (WS_POPUP | WS_BORDER | WS_SYSMENU),  // ウィンドウはポップアップ ウィンドウです。 ウィンドウ メニューを表示するには、WS_CAPTIONスタイルとWS_POPUPWINDOWスタイルを組み合わせる必要があります。
+            WS_SIZEBOX = 0x00040000L,   // ウィンドウにはサイズ設定の境界線があります。 WS_THICKFRAME スタイルと同じです。
+            WS_SYSMENU = 0x00080000L,   // ウィンドウには、タイトル バーにウィンドウ メニューがあります。 WS_CAPTION スタイルも指定する必要があります。
+            WS_TABSTOP = 0x00010000L,   // ウィンドウは、ユーザーが Tab キーを押したときにキーボード フォーカスを受け取ることができるコントロールです。
+                                        // Tab キーを押すと、キーボードフォーカスが WS_TABSTOP スタイルの次のコントロールに変更されます。
+                                        // このスタイルのオンとオフを切り替えて、ダイアログ ボックスのナビゲーションを変更できます。
+                                        // ウィンドウの作成後にこのスタイルを変更するには、 SetWindowLong 関数を使用します。 ユーザーが作成したウィンドウとモードレス ダイアログがタブ位置を操作するには、メッセージ ループを変更して IsDialogMessage 関数を呼び出します。
+            WS_THICKFRAME = 0x00040000L,    // ウィンドウにはサイズ設定の境界線があります。 WS_SIZEBOXスタイルと同じです。
+            WS_TILED = 0x00000000L, // ウィンドウは重なり合ったウィンドウです。 オーバーラップ ウィンドウには、タイトル バーと境界線があります。 WS_OVERLAPPED スタイルと同じです。
+            WS_TILEDWINDOW = (WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX),  // ウィンドウは重なり合ったウィンドウです。 WS_OVERLAPPEDWINDOWスタイルと同じです。
+            WS_VISIBLE = 0x10000000L,   // ウィンドウは最初に表示されます。
+                                        // このスタイルは、 ShowWindow または SetWindowPos 関数を使用してオンとオフを切 り 替えることができます。
+            WS_VSCROLL = 0x00200000L,	// ウィンドウには垂直スクロール バーがあります
+        }
+        [Flags]
+        public enum EXTEND_WINDOW_STYLE : long
+        {
+            WS_EX_ACCEPTFILES = 0x00000010L,    // ウィンドウは、ドラッグ アンド ドロップ ファイルを受け入れます。
+            WS_EX_APPWINDOW = 0x00040000L,  // ウィンドウが表示されているときに、タスク バーに最上位のウィンドウを強制的に配置します。
+            WS_EX_CLIENTEDGE = 0x00000200L, // ウィンドウには、縁がくぼんだ境界線があります。
+            WS_EX_COMPOSITED = 0x02000000L, // ダブルバッファリングを使用して、ウィンドウのすべての子孫を下から上に塗りつぶします。 下から上への描画順序を使用すると、子孫ウィンドウに半透明 (アルファ) 効果と透明度(カラー キー) 効果を適用できますが、子孫ウィンドウにもWS_EX_TRANSPARENTビットが設定されている場合に限ります。 ダブルバッファリングを使用すると、ウィンドウとその子孫をちらつきなく塗りつぶすことができます。 ウィンドウの クラス スタイル が CS_OWNDCまたは CS_CLASSDC の場合、これは使用できません。
+                                            // Windows 2000: このスタイルはサポートされていません。
+            WS_EX_CONTEXTHELP = 0x00000400L,    // ウィンドウのタイトル バーには疑問符が含まれています。 ユーザーがこの疑問符をクリックすると、カーソルは、疑問符付きのポインターに変化します。 ユーザーが子ウィンドウをクリックすると、子は WM_HELP メッセージを受け取ります。 子ウィンドウは、HELP_WM_HELP コマンドを使用して WinHelp 関数を呼び出す必要がある親ウィンドウ プロシージャにメッセージを渡す必要があります。 ヘルプ アプリケーションには、通常、子ウィンドウのヘルプを含むポップアップ ウィンドウが表示されます。
+                                                // WS_EX_CONTEXTHELP は、 WS_MAXIMIZEBOX または WS_MINIMIZEBOX スタイルでは使用できません。
+            WS_EX_CONTROLPARENT = 0x00010000L,  // ウィンドウ自体には、ダイアログ ボックスのナビゲーションに参加する必要がある子ウィンドウが含まれています。 このスタイルを指定すると、Tab キー、方向キー、キーボードニーモニックの処理などのナビゲーション操作を実行するときに、ダイアログ マネージャーはこのウィンドウの子に再帰されます。
+            WS_EX_DLGMODALFRAME = 0x00000001L,  // ウィンドウには二重の境界線があります。必要に応じて、dwStyle パラメーターでWS_CAPTION スタイルを指定することで、ウィンドウをタイトル バーで作成できます。
+            WS_EX_LAYERED = 0x00080000L,    // ウィンドウは レイヤーウィンドウです。 ウィンドウのクラス スタイルが CS_OWNDC または CS_CLASSDC の場合、このスタイルは使用できません。
+                                            // Windows 8:WS_EX_LAYERED スタイルは、最上位のウィンドウと子ウィンドウでサポートされています。 以前のバージョンの Windows では、最上位のウィンドウに対してのみ WS_EX_LAYERED がサポートされています。
+            WS_EX_LAYOUTRTL = 0x00400000L,  // シェル言語がヘブライ語、アラビア語、または読み取り順序の配置をサポートする別の言語の場合、ウィンドウの水平方向の原点は右端にあります。 水平方向の値を増やすと、左に進みます。
+            WS_EX_LEFT = 0x00000000L,   // ウィンドウには、一般的な左揃えプロパティがあります。 既定値です。
+            WS_EX_LEFTSCROLLBAR = 0x00004000L,  // シェル言語がヘブライ語、アラビア語、または読み取り順序の配置をサポートする別の言語の場合、垂直スクロール バー(存在する場合) はクライアント領域の左側にあります。 他の言語の場合、スタイルは無視されます。
+            WS_EX_LTRREADING = 0x00000000L, // ウィンドウ テキストは、左から右の読み取り順序プロパティを使用して表示されます。 既定値です。
+            WS_EX_MDICHILD = 0x00000040L,   // ウィンドウは MDI 子ウィンドウです。
+            WS_EX_NOACTIVATE = 0x08000000L, // このスタイルで作成されたトップレベル ウィンドウは、ユーザーがクリックしても前景ウィンドウになりません。 ユーザーがフォアグラウンド ウィンドウを最小化または閉じると、システムはこのウィンドウをフォアグラウンドに移動しません。
+                                            // プログラムによるアクセスや、ナレーターなどのアクセス可能なテクノロジによるキーボード ナビゲーションを使用して、ウィンドウをアクティブ化しないでください。
+                                            // ウィンドウをアクティブにするには、 SetActiveWindow または SetForegroundWindow 関数を 使用します。
+                                            // 既定では、タスク バーにウィンドウは表示されません。 タスク バーにウィンドウを強制的に表示するには、 WS_EX_APPWINDOW スタイルを使用します。
+            WS_EX_NOINHERITLAYOUT = 0x00100000L,    // ウィンドウは、そのウィンドウ レイアウトを子ウィンドウに渡しません。
+            WS_EX_NOPARENTNOTIFY = 0x00000004L, // このスタイルで作成された子ウィンドウは、作成時または破棄時に WM_PARENTNOTIFY メッセージを親ウィンドウに送信しません。
+            WS_EX_NOREDIRECTIONBITMAP = 0x00200000L,    // ウィンドウはリダイレクト 画面にレンダリングされません。 これは、目に見えるコンテンツがないウィンドウ、またはサーフェス以外のメカニズムを使用してビジュアルを提供するウィンドウ用です。
+            WS_EX_OVERLAPPEDWINDOW = (WS_EX_WINDOWEDGE | WS_EX_CLIENTEDGE), // ウィンドウは重なり合ったウィンドウです。
+            WS_EX_PALETTEWINDOW = (WS_EX_WINDOWEDGE | WS_EX_TOOLWINDOW | WS_EX_TOPMOST),    // ウィンドウはパレット ウィンドウで、コマンドの配列を表示するモードレス ダイアログ ボックスです。
+            WS_EX_RIGHT = 0x00001000L,  // ウィンドウには、汎用の "右揃え" プロパティがあります。 これはウィンドウ クラスに依存します。 このスタイルは、シェル言語がヘブライ語、アラビア語、または読み取り順序の配置をサポートする別の言語である場合にのみ有効です。それ以外の場合、スタイルは無視されます。
+                                        // 静的コントロールまたは編集コントロールに WS_EX_RIGHT スタイルを使用すると、 それぞれ SS_RIGHT または ES_RIGHT スタイルを使用する場合と同じ効果があります。 ボタン コントロールでこのスタイルを使用すると、 BS_RIGHT スタイルや BS_RIGHTBUTTON スタイルを使用する場合と同じ効果があります。
+            WS_EX_RIGHTSCROLLBAR = 0x00000000L, // 垂直スクロール バー(存在する場合) は、クライアント領域の右側にあります。 既定値です。
+            WS_EX_RTLREADING = 0x00002000L, // シェル言語がヘブライ語、アラビア語、または読み取り順序の配置をサポートする別の言語である場合、ウィンドウ テキストは右から左への読み取り順序プロパティを使用して表示されます。 他の言語の場合、スタイルは無視されます。
+            WS_EX_STATICEDGE = 0x00020000L, // ウィンドウには、ユーザー入力を受け入れられないアイテムに使用することを目的とした 3 次元の罫線スタイルがあります。
+            WS_EX_TOOLWINDOW = 0x00000080L, // ウィンドウは、フローティング ツールバーとして使用することを目的としています。 ツール ウィンドウには、通常のタイトル バーより短いタイトル バーがあり、ウィンドウ タイトルは小さいフォントを使用して描画されます。 ツール ウィンドウは、タスク バーや、ユーザーが Alt キーを押しながら Tab キーを押したときに表示されるダイアログには表示されません。 ツール ウィンドウにシステム メニューがある場合、そのアイコンはタイトル バーに表示されません。 ただし、右クリックするか、Alt + SPACE キーを押して、システム メニューを表示できます。
+            WS_EX_TOPMOST = 0x00000008L,    // ウィンドウは、最上位以外のすべてのウィンドウの上に配置し、ウィンドウが非アクティブ化されている場合でも、その上に配置する必要があります。 このスタイルを追加または削除するには、 SetWindowPos 関数を使用します。
+            WS_EX_TRANSPARENT = 0x00000020L,    // ウィンドウの下の兄弟(同じスレッドによって作成された) が描画されるまで、ウィンドウを描画しないでください。 基になる兄弟ウィンドウのビットが既に塗りつぶされているため、ウィンドウは透明に表示されます。
+                                                // これらの制限なしで透過性を実現するには、 SetWindowRgn 関数を 使用します。
+            WS_EX_WINDOWEDGE = 0x00000100L, // ウィンドウには、エッジが上がった罫線があります。
+        }
+
+        public class WM_CREATE : ONLY_LPARAM<CREATESTRUCTA>
+		{
+            public IntPtr CreateParams { get => lParam.lpCreateParams; }
+            public IntPtr Instance { get => lParam.hInstance; }
+            public IntPtr Menu { get => lParam.hMenu; }
+            public IntPtr HwndParent { get => lParam.hwndParent; }
+            public int Cy { get => lParam.cy; }
+            public int Cx { get => lParam.cx; }
+            public int Y { get => lParam.y; }
+            public int X { get => lParam.x; }
+
+            public readonly string Name;
+			public readonly string ClassName;
+			public WINDOW_STYLE Style { get => (WINDOW_STYLE)lParam.style; }
+			public EXTEND_WINDOW_STYLE ExtStyle {  get => (EXTEND_WINDOW_STYLE)lParam.dwExStyle; }
+            public WM_CREATE(IntPtr wParam, IntPtr lParam) : base(wParam, lParam) 
+			{
+				if (this.lParam.lpszName != (IntPtr)0)
+					Name = Marshal.PtrToStringAuto(this.lParam.lpszName);
+				if (this.lParam.lpszClass != (IntPtr)0)
+					ClassName = Marshal.PtrToStringAuto(this.lParam.lpszClass);
+			}
+			public override string ToString() => 
+                string.Format("CreateParams:0x{0:X16} Instance:0x{1:X16} Menu:0x{2:X16} Parent:0x{3:X16} X:{4},Y:{5} Cx:{6} Cy:{7} Style:{8}" +
+                    " Name:{9} Class:{10} ExtStyle:{11}",
+                    (ulong)CreateParams, (ulong)Instance, (ulong)Menu, (ulong)HwndParent,
+                    X, Y, Cx, Cy, Style, Name, ClassName, ExtStyle);
+        }
+
+    }
 }

@@ -244,6 +244,7 @@ namespace SSTools
 			// 00
 			//  WM_NULL
 			//  WM_CREATE
+			WMFactory.New<WM_CREATE>(WND_MSG_ENUM.WM_CREATE,ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウが生成されようとしている"),
 			WMFactory.New<PARAMETER_NOT_USE>(WND_MSG_ENUM.WM_DESTROY, ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction, "ウインドウが破棄されようとしている"),
 			WMFactory.New<WPARAM_XY>(WND_MSG_ENUM.WM_MOVE, ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウィンドウが移動された"),
 			WMFactory.New<WPARAM_SIZE>(WND_MSG_ENUM.WM_SIZE, ANALYSIS_MODE.WINDOW_MSG, DefaultDebugFunction,"ウインドウのサイズが変更"),

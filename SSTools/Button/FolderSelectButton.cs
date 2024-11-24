@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 using System.ComponentModel;
+using System.Reflection;
 
 namespace SSTools
 {
@@ -82,10 +83,25 @@ namespace SSTools
             Description("フォルダー参照ダイアログボックスに [新しいフォルダー] ボタンを表示するかどうかを示す値")]
         public bool ShowNewFolderButton { get; set; } = true;
 
-        /// <summary>
-        /// フォルダ選択ダイアログを開く
-        /// </summary>
-        private void OpenFolderDialog()
+		/// <summary>
+		/// カスタムフォルダブラウズダイアログを使用
+		/// </summary>
+		[Category("ダイアログ"),
+			Description("カスタムフォルダブラウズダイアログを使用")]
+		public bool UserCustomDialog { get; set; } = false;
+
+		/// <summary>
+		/// Clickイベントを送信するコントロール
+		/// </summary>
+		[Category("ダイアログ"),
+			Description("Clickイベントを送信するコントロール")]
+		public Control SendClickControl { get; set; } = null;
+
+
+		/// <summary>
+		/// フォルダ選択ダイアログを開く
+		/// </summary>
+		private void OpenFolderDialog()
         {
             //　初期フォルダの設定
             string folder = SelectedPath;
@@ -114,9 +130,27 @@ namespace SSTools
                 if (LinkControl != null)
                     LinkControl.Text = dialog.SelectedPath;
                 SelectedPath = dialog.SelectedPath;
-            }
-            // ダイアログ解放
-            dialog.Dispose();
+
+				// クリックイベント発行
+				if (SendClickControl != null)
+				{
+					MethodInfo info = SendClickControl.GetType().GetMethod("PerformClick", BindingFlags.Public);
+					if (info != null)
+					{   // PerformClick呼び出し
+						info.Invoke(SendClickControl, null);
+					}
+					else
+					{   // 強引にOnCLickを呼び出す
+						SendClickControl.GetType().InvokeMember("OnClick",
+							BindingFlags.InvokeMethod | BindingFlags.NonPublic | BindingFlags.Instance,
+							null,
+							SendClickControl,
+							new object[] { EventArgs.Empty });
+					}
+				}
+			}
+			// ダイアログ解放
+			dialog.Dispose();
         }
         /// <summary>
         /// クリックイベント

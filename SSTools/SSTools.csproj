@@ -72,6 +72,24 @@
     <Compile Include="Combination\TrackBarAndValue.Designer.cs">
       <DependentUpon>TrackBarAndValue.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomizeControl\FileListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomizeControl\FileListView.Designer.cs">
+      <DependentUpon>FileListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizeControl\FolderTreeNode.cs" />
+    <Compile Include="CustomizeControl\FolderTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizeControl\FolderTreeView.Designer.cs">
+      <DependentUpon>FolderTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizeControl\IconResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IconResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="CustomizeControl\LabeledTrackBar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -119,6 +137,14 @@
       <DependentUpon>WaitingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThread.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Win32API\ShellItem.cs" />
+    <Compile Include="Win32API\SystemIconManager.cs" />
+    <Compile Include="Win32API\Win32FileInfo.cs" />
     <Compile Include="WindowsMessage\WndMessageAnalysisDef.cs" />
     <Compile Include="WindowsMessage\WndMsgAnalysis.cs" />
     <Compile Include="WindowsMessage\WndMsgAnalysisMessageClasscs.cs" />
@@ -131,10 +157,85 @@
     <EmbeddedResource Include="Combination\TrackBarAndValue.resx">
       <DependentUpon>TrackBarAndValue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomizeControl\FileListView.resx">
+      <DependentUpon>FileListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizeControl\FolderTreeView.resx">
+      <DependentUpon>FolderTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizeControl\IconResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IconResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\WaitingForm.resx">
       <DependentUpon>WaitingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpArrow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\Down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\DownArrowBW.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\DownArrowColor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\Up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\UpArrowBW.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\UpArrowColor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\Details.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\ExtraLarge.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\Jumbo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\Large.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\List.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\Small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\Tile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\TileLarge.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blank.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomizeControl\Icon\Blank.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

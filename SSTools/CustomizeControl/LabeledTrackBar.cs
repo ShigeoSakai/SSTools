@@ -2034,7 +2034,12 @@ namespace SSTools
 				} 
 				else if (value != m_Value)
 				{
+                    // スライダー位置更新
+                    SliderBar.Value = value;
+
 					m_Value = value;
+                    // 描画
+                    Invalidate(SliderBar.AllRectangle);
 					// イベント発行
 					OnValueChanged(new EventArgs());
 				}
@@ -2073,7 +2078,12 @@ namespace SSTools
 				}
 				else if (value != m_Value)
 				{
+                    // スライダー位置更新
+                    SliderBar.Value = value;
+
 					m_Value = value;
+                    // 描画
+                    Invalidate(SliderBar.AllRectangle);
 					// イベント発行
 					OnValueChanged(new EventArgs());
 				}

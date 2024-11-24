@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SSTools;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,20 +13,22 @@ namespace TestForm
 {
 	public partial class Form1 : Form
 	{
+
+		SystemIconManager iconManager = new SystemIconManager();
 		public Form1()
 		{
 			InitializeComponent();
 
 		}
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-			Form2 form = new Form2();
-			Point location = SSTools.FormUtils.CalcLocation(button1,form.Size);
-			Console.WriteLine("CalcLocation():{0}", location);
-			form.Location = location;
-			form.ShowDialog();
-			form.Dispose();
-        }
-    }
+		private void folderTreeView1_SelectNodeEvent(object sender, string path, string fullpath, SSTools.CustomizeControl.FolderTreeNode topNode)
+		{
+			fileListView1.SetPath(fullpath,topNode);
+		}
+
+		private void fileListView1_ChangeDirectoryEvent(object sender, string path, SSTools.CustomizeControl.FolderTreeNode topNode)
+		{
+			folderTreeView1.SelectFolder(path,topNode);
+		}
+	}
 }

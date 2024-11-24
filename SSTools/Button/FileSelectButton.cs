@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.ComponentModel;
+using System.Reflection;
 
 namespace SSTools
 {
@@ -15,9 +16,98 @@ namespace SSTools
     public class FileSelectButton : Button
     {
         /// <summary>
-        /// ファイル選択イベント
+        /// フォルタプリセット
         /// </summary>
-        [Category("Action"),Description("ファイル選択イベント")]
+        public enum FILTER_PRESET
+        {
+            NONE = 0,
+            [Description("画像ファイル")]
+            IMAGE = 1,
+			[Description("テキストファイル")]
+			TEXT = 2,
+			[Description("動画ファイル")]
+			MOVIE = 3,
+			[Description("実行ファイル")]
+			EXE = 16,
+			[Description("システムファイル")]
+			SYSTEM = 17,
+        }
+
+        /// <summary>
+        /// フィルタプリセットクラス
+        /// </summary>
+		private class FILTER_PRESET_CLASS
+        {
+            /// <summary>
+            /// 拡張子辞書
+            /// </summary>
+            private Dictionary<FILTER_PRESET,string> PresetDict = new Dictionary<FILTER_PRESET,string>();
+            /// <summary>
+            /// コンストラクタ
+            /// </summary>
+            public FILTER_PRESET_CLASS() 
+            {
+                PresetDict.Clear();
+                // 画像ファイル
+                PresetDict.Add(FILTER_PRESET.IMAGE, "画像ファイル|*.bmp;*.png;*.jpg;*.jpeg;*.tif;*.tiff;*.gif;*.svg;*.webp|" +
+                    "ビットマップファイル|*.bmp|" +
+                    "PNGファイル|*.png|" +
+                    "JPEGファイル|*.jpg;*.jpeg|" +
+                    "TIFFファイル|*.tif;*.tiff|" +
+					"GIFファイル|*.gif|" +
+					"SVGファイル|*.svg|" +
+					"WebPファイル|*.webp|" +
+					"全てのファイル|*.*");
+                // テキストファイル
+                PresetDict.Add(FILTER_PRESET.TEXT, "テキストファイル|*.txt;*.csv;*.log;*.ini|" +
+					"プレーンテキストファイル|*.txt|" +
+					"CSVファイル|*.csv|" +
+                    "ログファイル|*.log|" +
+					"INIファイル|*.ini|" +
+					"全てのファイル|*.*");
+                PresetDict.Add(FILTER_PRESET.MOVIE, "動画ファイル|*.mp4;*.mpeg;*.mpg;*.ts;*.m2t;*.avi;*.webm;*.wmv;*.mov;*.mkv" +
+                    "MPEG-4ファイル|*.mp4|" +
+                    "MPEG-2ファイル|*.mpeg;*.mpg;*.ts;*.m2t|" +
+                    "AVIファイル|*.avi|" +
+                    "WebMファイル|*.webm|" +
+                    "Windows Mediaファイル|*.wmv|" +
+                    "MOVファイル|*.mov|" +
+					"MKVファイル|*.mkv|" +
+					"全てのファイル|*.*");
+				// 実行可能ファイル
+				PresetDict.Add(FILTER_PRESET.EXE, "実行可能ファイル|*.exe;*.com;*.bat|" +
+                    "EXEファイル|*.exe|" +
+                    "COMファイル|*.com|" +
+                    "BATファイル|*.bat|" +
+                    "全てのファイル|*.*");
+				PresetDict.Add(FILTER_PRESET.SYSTEM,"システムファイル|*.exe;*.com;*.dll;*.bat;*.sys|" +
+					"EXEファイル|*.exe|" +
+					"COMファイル|*.com|" +
+                    "DLLファイル|*.dll|" +
+					"BATファイル|*.bat|" +
+					"SYSファイル|*.sys|" +
+					"全てのファイル|*.*");
+			}
+            /// <summary>
+            /// プリセットフィルターの取得
+            /// </summary>
+            /// <param name="filter"></param>
+            /// <returns></returns>
+            public string GetPresetFilter(FILTER_PRESET filter)
+            {
+                if (PresetDict.ContainsKey(filter)) return PresetDict[filter];
+                return "全てのファイル|*.*";
+            }
+		}
+        /// <summary>
+        /// プリセットフィルタ
+        /// </summary>
+        private FILTER_PRESET_CLASS PresetFilter = new FILTER_PRESET_CLASS();
+
+		/// <summary>
+		/// ファイル選択イベント
+		/// </summary>
+		[Category("Action"),Description("ファイル選択イベント")]
         public event EventHandler FileSelect;
 
         /// <summary>
@@ -198,9 +288,44 @@ namespace SSTools
         public Control LinkControl { get; set; } = null;
 
         /// <summary>
-        /// ダイアログ ボックスで選択されたすべてのファイルの名前
+        /// フィルタプリセット
         /// </summary>
-        [Browsable(false)]
+        private FILTER_PRESET _presetFilter = FILTER_PRESET.NONE;
+		/// <summary>
+		/// フィルタプリセット
+		/// </summary>
+		[Category("ダイアログ"),
+			Description("自動設定するフィルタを指定")]
+		public FILTER_PRESET Preset
+        {
+            get => _presetFilter;
+            set
+            {
+                if (value != _presetFilter)
+                {
+                    if (value != FILTER_PRESET.NONE)
+                        Filter = PresetFilter.GetPresetFilter(value);
+                }
+            }
+        }
+		/// <summary>
+		/// カスタムファイルオープンダイアログを使用
+		/// </summary>
+		[Category("ダイアログ"),
+			Description("カスタムファイルオープンダイアログを使用")]
+		public bool UserCustomDialog { get; set; } = false;
+
+		/// <summary>
+		/// Clickイベントを送信するコントロール
+		/// </summary>
+		[Category("ダイアログ"),
+			Description("Clickイベントを送信するコントロール")]
+		public Control SendClickControl { get; set; } = null;
+
+		/// <summary>
+		/// ダイアログ ボックスで選択されたすべてのファイルの名前
+		/// </summary>
+		[Browsable(false)]
         public string[] FileNames { get; private set; } = null;
 
         /// <summary>
@@ -290,6 +415,24 @@ namespace SSTools
                 FileNames = ofd.FileNames;
                 InitialDirectory = Path.GetDirectoryName(ofd.FileName);
                 DefaultExt = ofd.DefaultExt;
+
+                // クリックイベント発行
+                if (SendClickControl != null)
+                {
+                    MethodInfo info = SendClickControl.GetType().GetMethod("PerformClick", BindingFlags.Public);
+                    if (info != null)
+					{   // PerformClick呼び出し
+						info.Invoke(SendClickControl, null);
+                    }
+                    else
+                    {   // 強引にOnCLickを呼び出す
+						SendClickControl.GetType().InvokeMember("OnClick",
+	                        BindingFlags.InvokeMethod |BindingFlags.NonPublic |BindingFlags.Instance,
+	                        null,
+	                        SendClickControl,
+	                        new object[] { EventArgs.Empty });
+					}
+                }
             }
             // ダイアログを解放
             ofd.Dispose();

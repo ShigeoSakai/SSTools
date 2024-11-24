@@ -60,6 +60,30 @@ namespace SSTools
 				combo.Items.Add(item);
 		}
 		/// <summary>
+		/// コンボボックスの作成
+		/// </summary>
+		/// <param name="combo">コンボボックス</param>
+		/// <param name="array"><T></T>の配列</param>
+		public static void MakeCombo(Array array, ComboBox combo)
+		{
+			combo.Items.Clear();
+			foreach(T item in array)
+				combo.Items.Add(new ComboItem<T>(item));
+		}
+		/// <summary>
+		/// コンボボックスの作成
+		/// </summary>
+		/// <param name="combo">コンボボックス</param>
+		/// <param name="array"><T></T>の配列</param>
+		public static void MakeCombo(ComboBox combo, IEnumerable<T> items)
+		{
+			combo.Items.Clear();
+			foreach (T item in items)
+				combo.Items.Add(new ComboItem<T>(item));
+		}
+
+
+		/// <summary>
 		/// コンボボックスから値を取得
 		/// </summary>
 		/// <param name="combo">コンボボックス</param>

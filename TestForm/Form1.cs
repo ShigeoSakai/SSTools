@@ -14,63 +14,66 @@ using System.IO;
 
 namespace TestForm
 {
-	public partial class Form1 : Form
-	{
-
-
-		private int GetNum(string text)
-		{
-			Match match = Regex.Match(text, @".+_(\((\d+)\)|(\d+))$");
-			if ((match != null) && (match.Success) && (match.Groups.Count >= 4))
-			{
-				string num_text = (match.Groups[2].Success) ? match.Groups[2].Value :
-					(match.Groups[3].Success) ? match.Groups[3].Value : null;
-				if ((string.IsNullOrEmpty(num_text) == false) &&
-					(int.TryParse(num_text, out int value)))
-					return value;
-			}
-			return -1;
+	public partial class Form1 : SSTools.FullscreenForm
+    {
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        public Form1() :base()
+        {
+            InitializeComponent();
         }
 
-		SystemIconManager iconManager = new SystemIconManager();
-		public Form1()
-		{
-			InitializeComponent();
+        /// <summary>
+        /// 画像ファイル拡張子
+        /// </summary>
+        private string[] ImageExtensions = new string[]
+        {
+            ".jpg",".jpeg",".bmp",".png",".tif",".tiff"
+        };
 
-			int val1  = GetNum("AAA_(1)_456");
-            int val2 = GetNum("AAA_123");
+        /// <summary>
+        /// 画像フォルダを開く
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtOpen_Click(object sender, EventArgs e)
+        {
 
-
-
-            string text = "画像ファイル|*.bmp;*.png;*.jpg;*.jpeg;*.tif;*.tiff;*.gif;*.svg;*.webp|" +
-					"ビットマップファイル|*.bmp|" +
-					"PNGファイル|*.png|" +
-					"JPEGファイル|*.jpg;*.jpeg|" +
-					"TIFFファイル|*.tif;*.tiff|" +
-					"GIFファイル|*.gif|" +
-					"SVGファイル|*.svg|" +
-					"WebPファイル|*.webp|" +
-					"全てのファイル|*.*";
-
-
-			SSTools.Form.FileSelectDialog dialog = new SSTools.Form.FileSelectDialog()
-			{
-				//Filter = text,
-				InitialDirectory = Directory.GetCurrentDirectory(),
-				FilterIndex = 1,
-				FileName = "TestForm.pdb"
-            };
-			dialog.ShowDialog();
+            if ((TbImageFolder.Text.Length > 0) && (Directory.Exists(TbImageFolder.Text)))
+            {
+                LbImages.Items.Clear();
+                foreach (string fname in Directory.EnumerateFiles(TbImageFolder.Text))
+                {
+                    string ext = Path.GetExtension(fname);
+                    if (ImageExtensions.Contains(ext))
+                    {
+                        LbImages.Items.Add(Path.GetFileName(fname));
+                    }
+                }
+                if (LbImages.Items.Count > 0) LbImages.SelectedIndex = 0;
+            }
         }
-
-		private void folderTreeView1_SelectNodeEvent(object sender, string path, string fullpath, SSTools.CustomizeControl.FolderTreeNode topNode)
-		{
-			fileListView1.SetPath(fullpath,topNode);
-		}
-
-		private void fileListView1_ChangeDirectoryEvent(object sender, string path, SSTools.CustomizeControl.FolderTreeNode topNode)
-		{
-			folderTreeView1.SelectFolder(path,topNode);
-		}
-	}
+        /// <summary>
+        /// 画像ファイルが選択された
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LbImages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (LbImages.SelectedItems.Count > 0)
+            {
+                string image_file = Path.Combine(TbImageFolder.Text,
+                    LbImages.SelectedItems[0].ToString());
+                if (File.Exists(image_file))
+                {
+                    Bitmap bmp = null;
+                    using(FileStream fs = new FileStream(image_file, FileMode.Open, FileAccess.Read))
+                        bmp = new Bitmap(fs);
+                    if (bmp != null) 
+                        ZPbImage.Image = bmp;
+                }
+            }
+        }
+    }
 }

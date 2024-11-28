@@ -1,4 +1,4 @@
-﻿namespace FilterBase.Parts
+﻿namespace SSTools
 {
     partial class CustomTextBox
     {

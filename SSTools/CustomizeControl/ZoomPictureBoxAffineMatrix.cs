@@ -344,6 +344,8 @@ namespace SSTools
         /// 画像サイズ
         /// </summary>
         public Size ImageSize { get; private set; } = new Size();
+
+        public SizeF ImageSizeF { get { return new SizeF(ImageSize.Width, ImageSize.Height); } }
         /// <summary>
         /// コントロールのサイズ
         /// </summary>
@@ -438,13 +440,14 @@ namespace SSTools
         /// <param name="x_scale"></param>
         /// <param name="y_scale"></param>
         /// <returns></returns>
-        private int CalcMinZoomIndex(Size imageSize,Size controlSize,float x_scale,float y_scale)
+        private int CalcMinZoomIndex(Size imageSize, Size controlSize, float x_scale, float y_scale)
         {
             int imgX = (int)(imageSize.Width * x_scale);
             int imgY = (int)(imageSize.Height * y_scale);
 
             float x_ratio = (float)controlSize.Width / imgX;
             float y_ratio = (float)controlSize.Height / imgY;
+          
             // 小さい方を採用
             float ratio = (x_ratio < y_ratio) ? x_ratio : y_ratio;
 
@@ -455,7 +458,6 @@ namespace SSTools
             return index;
         }
 
-
         /// <summary>
         /// アフィン行列のリセット
         /// </summary>
@@ -464,7 +466,8 @@ namespace SSTools
         /// <param name="sizeMode">SizeMode</param>
         /// <param name="aspect">アスペクト比</param>
         /// <param name="zoomReset">倍率をリセットするか</param>
-        public void Reset(Size imageSize, Size contorlSize, PictureBoxSizeMode sizeMode, double aspect = 1.0, bool zoomReset = false)
+        public void Reset(Size imageSize, Size contorlSize, PictureBoxSizeMode sizeMode, double aspect = 1.0, bool zoomReset = false,
+            Rectangle? rect = null)
         {
             // 大きさを保存
             ImageSize = imageSize;
@@ -478,26 +481,37 @@ namespace SSTools
                 invMatrix_ = new Matrix();
             }
 
+            Point? rectCenter = null;
+            // 基準サイズ
+            Size baseSize = contorlSize;
+            if (rect.HasValue)
+            {
+                baseSize = rect.Value.Size;
+                rectCenter = new Point((rect.Value.Left + rect.Value.Right) / 2, (rect.Value.Top + rect.Value.Bottom) / 2);
+            }
+
             // SizeModeでデフォルトMatrixを作成
             switch (sizeMode)
             {
                 case PictureBoxSizeMode.StretchImage:
                     // アスペクト比を再算出
-                    float x_scale = (float)contorlSize.Width / (float)(imageSize.Width * aspect);
-                    float y_scale = (float)contorlSize.Height / (float)(imageSize.Height);
+                    float x_scale = (float)baseSize.Width / (float)(imageSize.Width * aspect);
+                    float y_scale = (float)baseSize.Height / (float)(imageSize.Height);
                     aspect_= aspect;
-                    defaultMatrix_ = new Matrix((float)(x_scale * aspect), 0.0F, 0.0F, y_scale, 0.0F, 0.0F);
+                    Matrix tmpSt = new Matrix((float)(x_scale * aspect), 0.0F, 0.0F, y_scale, 0.0F, 0.0F);
+                    defaultMatrix_ = tmpSt;
                     // 最小倍率の設定(等倍が最小)
                     minZoomIndex = 9;
                     break;
                 case PictureBoxSizeMode.Zoom:
                     // 収まるように拡大率を算出
-                    float x_scale_zoom = (float)contorlSize.Width / (float)(imageSize.Width * aspect);
-                    float y_scale_zoom = (float)contorlSize.Height / (float)(imageSize.Height);
+                    float x_scale_zoom = (float)baseSize.Width / (float)(imageSize.Width * aspect);
+                    float y_scale_zoom = (float)baseSize.Height / (float)(imageSize.Height);
                     // 小さい方を採用
                     float scale_zoom = (x_scale_zoom < y_scale_zoom) ? x_scale_zoom : y_scale_zoom;
                     aspect_ = aspect;
-                    defaultMatrix_ = new Matrix((float)(scale_zoom * aspect), 0.0F, 0.0F, scale_zoom, 0.0F, 0.0F);
+                    Matrix tmpZ = new Matrix((float)(scale_zoom * aspect), 0.0F, 0.0F, scale_zoom, 0.0F, 0.0F);
+                    defaultMatrix_ = tmpZ;
                     // 最小倍率の設定(等倍が最小)
                     minZoomIndex = 9;
                     break;
@@ -508,13 +522,12 @@ namespace SSTools
                     float scale_center = 1.0F;
                     if (aspect_ < 1.0)
                         scale_center = 1.0F / (float)aspect_;
-                    Matrix tmp = new Matrix((float)aspect * scale_center, 0.0F, 0.0F, 1.0F * scale_center, 0.0F, 0.0F);
+                    Matrix tmpCI = new Matrix((float)aspect * scale_center, 0.0F, 0.0F, 1.0F * scale_center, 0.0F, 0.0F);
                     // 中心の差分分平行移動
-                    tmp.Translate((float)(contorlSize.Width - imageSize.Width * aspect * scale_center) / 2.0F,
-                        (contorlSize.Height - imageSize.Height * scale_center) / 2.0F, MatrixOrder.Append);
-                    defaultMatrix_ = tmp;
+                    tmpCI.Translate((float)(baseSize.Width - imageSize.Width * aspect * scale_center) / 2.0F,
+                        (baseSize.Height - imageSize.Height * scale_center) / 2.0F, MatrixOrder.Append);
                     // 最小倍率の計算
-                    minZoomIndex = CalcMinZoomIndex(imageSize, ControlSize, defaultMatrix_.Elements[0], defaultMatrix_.Elements[3]);
+                    minZoomIndex = CalcMinZoomIndex(imageSize, baseSize, defaultMatrix_.Elements[0], defaultMatrix_.Elements[3]);
                     break;
                 case PictureBoxSizeMode.Normal:
                 case PictureBoxSizeMode.AutoSize:
@@ -524,9 +537,10 @@ namespace SSTools
                     float scale = 1.0F;
                     if (aspect_ < 1.0)
                         scale = 1.0F / (float)aspect_;
-                    defaultMatrix_ = new Matrix((float)aspect * scale, 0.0F, 0.0F, 1.0F * scale, 0.0F, 0.0F);
+                    Matrix tmpAS = new Matrix((float)aspect * scale, 0.0F, 0.0F, 1.0F * scale, 0.0F, 0.0F);
+                    defaultMatrix_ = tmpAS;
                     // 最小倍率の計算
-                    minZoomIndex = CalcMinZoomIndex(imageSize, ControlSize, defaultMatrix_.Elements[0], defaultMatrix_.Elements[3]);
+                    minZoomIndex = CalcMinZoomIndex(imageSize, baseSize, defaultMatrix_.Elements[0], defaultMatrix_.Elements[3]);
                     break;
             }
             // アスペクト比によるスケールの設定
@@ -556,24 +570,27 @@ namespace SSTools
         /// <summary>
         /// Zoom倍率を考慮したMatrixの生成(初期化・リセット時)
         /// </summary>
-        private void CalcZoomInit()
+        public void CalcZoomInit()
         {
-            // 倍率
-            float zoom = GetZoomFactor();
             // デフォルトMatrixの逆行列
             Matrix invDefault = CalcInvMatrix(defaultMatrix_);
+
+            // 倍率
+            float zoom = GetZoomFactor();
+            float offsetX, offsetY;
+
             // コントロールのサイズ→実画像サイズ変換
             PointF[] pts_size = new PointF[] { new PointF(ControlSize.Width, ControlSize.Height) };
             invDefault.TransformVectors(pts_size);
 
             // Offset計算
-            float offsetX = defaultMatrix_.Elements[4];
+            offsetX = defaultMatrix_.Elements[4];
             if (offsetX < (pts_size[0].X - ImageSize.Width) * defaultMatrix_.Elements[0] * zoom)
                 offsetX = (pts_size[0].X - ImageSize.Width) * defaultMatrix_.Elements[0] * zoom;
             if (offsetX > 0.0F)
                 offsetX = 0.0F;
 
-            float offsetY = defaultMatrix_.Elements[5]; ;
+            offsetY = defaultMatrix_.Elements[5]; ;
             if (offsetY < (pts_size[0].Y - ImageSize.Height) * defaultMatrix_.Elements[3] * zoom)
                 offsetY = (pts_size[0].Y - ImageSize.Height) * defaultMatrix_.Elements[3] * zoom;
             if (offsetY > 0.0F)
@@ -586,6 +603,41 @@ namespace SSTools
             // 逆行列を算出
             invMatrix_ =  CalcInvMatrix(matrix_);
         }
+
+        public void SetShowRectAngle(Rectangle rect)
+        {
+            // 現在のコントロールサイズ内での倍率
+            float x_ratio = ControlSize.Width / (rect.Width * 1.2F);
+            float y_ratio = ControlSize.Height / (rect.Height * 1.2F);
+            // 小さい方を採用
+            float ratio = (x_ratio < y_ratio) ? x_ratio : y_ratio;
+            // 現在の倍率にかける
+            float zoom = GetZoomFactor() * ratio;
+            // テーブルを逆検索
+            int zoomIndex = zoomFactor.Length - 1;
+            for (; (zoomIndex >= 0) && (zoomFactor[zoomIndex] > ratio); zoomIndex--) { }
+
+            // 指定倍率計算
+            CalcZoom(zoomIndex);
+
+            // 現在の表示されているサイズ
+            SizeF dispImgSize = GetImageSizeF(ControlSize);
+            RectangleF expRect = new RectangleF(
+                rect.X - (dispImgSize.Width - rect.Width * 1.2F) / 2.0F,
+                rect.Y - (dispImgSize.Height - rect.Height * 1.2F) / 2.0F,
+                dispImgSize.Width,
+                dispImgSize.Height);
+            zoom = GetZoomFactor();
+
+            // アフィン行列作成
+            matrix_ = new Matrix(defaultMatrix_.Elements[0] * zoom, 0.0F, 0.0F, defaultMatrix_.Elements[3] * zoom,
+                -expRect.X * zoom, -expRect.Y * zoom);
+
+            // 逆行列を算出
+            invMatrix_ = CalcInvMatrix(matrix_);
+
+        }
+
         /// <summary>
         /// コントロールサイズ変更
         /// </summary>

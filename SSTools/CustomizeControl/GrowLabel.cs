@@ -5,7 +5,7 @@ using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace FilterBase.Parts
+namespace SSTools
 {
     public class GrowLabel : Label
     {

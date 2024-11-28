@@ -35,10 +35,6 @@ namespace SSTools.Shape
         /// </summary>
         public bool Fill { get; set; } = false;
         /// <summary>
-        /// 塗りつぶし色
-        /// </summary>
-        public Color FillColor { get; set; } = Color.White;
-        /// <summary>
         /// 開始点
         /// </summary>
         public Point StartPoint
@@ -100,6 +96,27 @@ namespace SSTools.Shape
             IsClose = false;
             IsEditing = true;
         }
+
+        /// <summary>
+        /// コピーコンストラクタ
+        /// </summary>
+        /// <param name="src"></param>
+        public PolygonShape(PolygonShape src) : base(src) 
+        {
+            points = new List<Point>(src.Points);
+            IsClose = src.IsClose ;
+            IsEditing = src.IsEditing ;
+            ExtraPoint = src.ExtraPoint ;
+            Fill = src.Fill ;
+        }
+        /// <summary>
+        /// クローンコピー
+        /// </summary>
+        public override BaseShape Clone()
+        {
+            return new PolygonShape(this);
+        }
+
         /// <summary>
         /// 座標の追加
         /// </summary>
@@ -156,44 +173,56 @@ namespace SSTools.Shape
         /// 描画
         /// </summary>
         /// <param name="g">グラフィックス</param>
-        public override void Draw(Graphics g)
+        public override void Draw(Graphics g, SizeF? size)
         {
-            if ((points != null) && (points.Count > 0))
+            if (Visible)
             {
-                // 塗りつぶし指定
-                if (Fill)
+                if ((points != null) && (points.Count > 0))
                 {
-                    if (points.Count > 2) 
+                    // 塗りつぶし指定
+                    if (Fill)
                     {
-                        SolidBrush brush = new SolidBrush(FillColor);
-                        g.FillPolygon(brush,points.ToArray());
-                        brush.Dispose();
+                        if (points.Count > 2)
+                        {
+                            SolidBrush brush = new SolidBrush(GetDrawColor(COLOR_SELECT.FILL_COLOR));
+                            g.FillPolygon(brush, points.ToArray());
+                            brush.Dispose();
+                        }
                     }
-                }
-                // 線分を描画
-                Pen pen = new Pen(Color, LineWidth)
-                {
-                    DashStyle  = this.DashStyle,
-                };
-                Point before = points[0];
-                if (IsEditing)
-                    g.DrawRectangle(pen, before.X - MarkerSize, before.Y - MarkerSize, MarkerSize * 2.0F, MarkerSize * 2.0F);
-                for(int i = 1; i < points.Count; i++)
-                {
-                    g.DrawLine(pen, before, points[i]);
+                    // 線分を描画
+                    Pen pen = new Pen(GetDrawColor(COLOR_SELECT.NORMAL_COLOR), LineWidth)
+                    {
+                        DashStyle = this.DashStyle,
+                    };
+                    Point before = points[0];
                     if (IsEditing)
-                        g.DrawRectangle(pen, points[i].X - MarkerSize, points[i].Y - MarkerSize, MarkerSize * 2.0F, MarkerSize * 2.0F);
-                    before = points[i];
+                        g.DrawRectangle(pen, before.X - MarkerSize, before.Y - MarkerSize, MarkerSize * 2.0F, MarkerSize * 2.0F);
+                    for (int i = 1; i < points.Count; i++)
+                    {
+                        g.DrawLine(pen, before, points[i]);
+                        if (IsEditing)
+                            g.DrawRectangle(pen, points[i].X - MarkerSize, points[i].Y - MarkerSize, MarkerSize * 2.0F, MarkerSize * 2.0F);
+                        before = points[i];
+                    }
+                    if ((IsEditing) && (ExtraPoint.HasValue))
+                    {
+                        g.DrawLine(pen, before, ExtraPoint.Value);
+                    }
+                    // 閉じた図形か？
+                    if (IsClose)
+                        g.DrawLine(pen, points.Last(), points[0]);
+                    pen.Dispose();
                 }
-                if ((IsEditing) && (ExtraPoint.HasValue))
-                {
-                    g.DrawLine(pen, before, ExtraPoint.Value);
-                }
-                // 閉じた図形か？
-                if (IsClose)
-                    g.DrawLine(pen, points.Last(), points[0]);
-                pen.Dispose();
             }
+        }
+        public override Rectangle GetDrawSize()
+        {
+            Rectangle rect = GetBoundingRect();
+            return new Rectangle(
+                (int)(rect.X - LineWidth),
+                (int)(rect.Y - LineWidth),
+                (int)(rect.Width + LineWidth * 2.0),
+                (int)(rect.Height + LineWidth * 2.0));
         }
     }
 }

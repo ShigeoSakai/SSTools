@@ -21,10 +21,8 @@ namespace SSTools.Shape
         /// 塗りつぶすかどうか
         /// </summary>
         public bool Fill { get; set; } = false;
-        /// <summary>
-        /// 塗りつぶし色
-        /// </summary>
-        public Color FillColor { get; set; } = Color.White;
+
+        public bool ShowCenter { get; set; } = false;
 
         /// <summary>
         /// コンストラクタ
@@ -52,6 +50,23 @@ namespace SSTools.Shape
             if (fillColor.HasValue)
                 FillColor = fillColor.Value;
         }
+        /// <summary>
+        /// コピーコンストラクタ
+        /// </summary>
+        /// <param name="src"></param>
+        public RectangleShape(RectangleShape src) : base(src) 
+        {
+            Rectangle = src.Rectangle;
+            Fill = src.Fill;
+            ShowCenter = src.ShowCenter;
+        }
+        /// <summary>
+        /// クローンコピー
+        /// </summary>
+        public override BaseShape Clone()
+        {
+            return new RectangleShape(this);
+        }
 
         /// <summary>
         /// 領域に図形が含まれるか
@@ -69,20 +84,38 @@ namespace SSTools.Shape
         /// 描画
         /// </summary>
         /// <param name="g">グラフィックス</param>
-        public override void Draw(Graphics g)
+        public override void Draw(Graphics g, SizeF? size)
         {
-            if (Fill)
-            {   // 塗りつぶし
-                SolidBrush brush = new SolidBrush(FillColor);
-                g.FillRectangle(brush, Rectangle);
-                brush.Dispose();
+            if (Visible)
+            {
+                if (Fill)
+                {   // 塗りつぶし
+                    SolidBrush brush = new SolidBrush(GetDrawColor(COLOR_SELECT.FILL_COLOR));
+                    g.FillRectangle(brush, Rectangle);
+                    brush.Dispose();
+                }
+                // 外形を描画
+                Pen pen = new Pen(GetDrawColor(COLOR_SELECT.NORMAL_COLOR), LineWidth)
+                {
+                    DashStyle = this.DashStyle
+                };
+                g.DrawRectangle(pen, Rectangle);
+                pen.Dispose();
+
+                if (ShowCenter)
+                {
+                    DrawPoint(g, size, dashStyle: DashStyle.Solid);
+                }
             }
-            // 外形を描画
-            Pen pen = new Pen(Color, LineWidth) { 
-                DashStyle = this.DashStyle
-            };
-            g.DrawRectangle(pen, Rectangle);
-            pen.Dispose();
         }
+        public override Rectangle GetDrawSize()
+        {
+            return new Rectangle(
+                (int)(Rectangle.X - LineWidth),
+                (int)(Rectangle.Y - LineWidth),
+                (int)(Rectangle.Width + LineWidth * 2.0),
+                (int)(Rectangle.Height + LineWidth * 2.0));
+        }
+
     }
 }

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SSTools.CustomizeControl
+namespace SSTools
 {
 	public class FolderTreeNode : TreeNode, IDisposable
 	{

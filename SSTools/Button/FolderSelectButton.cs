@@ -7,7 +7,6 @@ using System.IO;
 using System.Windows.Forms;
 using System.ComponentModel;
 using System.Reflection;
-using SSTools.Form;
 
 namespace SSTools
 {

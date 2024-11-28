@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SSTools.CustomizeControl {
+namespace SSTools {
     using System;
     
     

@@ -237,5 +237,27 @@ namespace SSTools
                     return 0;
             }
         }
+
+        /// <summary>
+        /// 凡例データクラス
+        /// </summary>
+        public class LegendData
+        {
+            public string Name { get; private set; }
+            public Color Color { get; private set; }
+            public string Text { get; private set; }
+            public Type Type { get; private set; }
+
+            public LegendData(string name, Color color,string text, Type type)
+            {
+                Name = name;
+                Color = color;
+                if (string.IsNullOrEmpty(text))
+                    Text = name;
+                else
+                    Text = text;
+                Type = type;
+            }
+        }
     }
 }

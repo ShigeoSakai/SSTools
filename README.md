@@ -7,8 +7,15 @@
 * FullscreenForm<br>全画面対応フォーム
 * WaitingForm<br>処理待ちフォーム
 * ColorDialogWithLocation<br>表示位置指定が可能なColorDialog
+* FileSelectDialog<br>ファイル選択ダイアログ
+* FolderSelectDialog<br>フォルダ選択ダイアログ
 ## コントロール
 * AutoSizeNumericUpDown<br>AutoSizeに対応したNumericUpDown
+* CustomTextBox<br>TextChaneイベントを、文字入力から500ms待って更新されていたらTextChangeイベント発行
+* FileListView<br>ファイル一覧表示コントロール
+* FolderTreeView<br>フォルダツリー表示コントロール
+* GrowLabel<br>指定幅で自動で折り返すラベルコントロール
+* ZoomPictureBox<br>拡大・縮小・図形表示が可能なPictireBox
 ## 複合
 * TrackBarAndValue<br>NumericUpDownとTrackBarを組み合わせたコントロール
 ## Log

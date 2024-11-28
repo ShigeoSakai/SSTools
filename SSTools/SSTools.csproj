@@ -78,6 +78,7 @@
     <Compile Include="CustomizeControl\CustomTextBox.Designer.cs">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomizeControl\Enums.cs" />
     <Compile Include="CustomizeControl\FileListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,6 +103,7 @@
     <Compile Include="CustomizeControl\LabeledTrackBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomizeControl\ShapeManager.cs" />
     <Compile Include="CustomizeControl\ZoomPictureBoxAffineMatrix.cs" />
     <Compile Include="CustomizeControl\AutoSizeNumericUpDown.cs">
       <SubType>Component</SubType>

@@ -1,4 +1,4 @@
-﻿namespace SSTools.Form
+﻿namespace SSTools
 {
     partial class FileSelectDialog
     {
@@ -35,7 +35,7 @@
             this.TbFolderSelect = new SSTools.FolderSelectButton();
             this.BtOpen = new System.Windows.Forms.Button();
             this.FolderTree = new SSTools.FolderTreeView();
-            this.FileView = new SSTools.CustomizeControl.FileListView();
+            this.FileView = new SSTools.FileListView();
             this.label2 = new System.Windows.Forms.Label();
             this.CbFilter = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -150,9 +150,9 @@
             this.FileView.ShowNewFolderButton = true;
             this.FileView.Size = new System.Drawing.Size(548, 340);
             this.FileView.TabIndex = 5;
-            this.FileView.View = SSTools.CustomizeControl.FileListView.FILE_VIEW.LargeIcon;
-            this.FileView.ChangeDirectoryEvent += new SSTools.CustomizeControl.FileListView.ChangeDirectoryEventHandler(this.FileView_ChangeDirectoryEvent);
-            this.FileView.FileSelectedEvent += new SSTools.CustomizeControl.FileListView.FileSelectedEventHandler(this.FileView_SelectedEvent);
+            this.FileView.View = SSTools.FileListView.FILE_VIEW.LargeIcon;
+            this.FileView.ChangeDirectoryEvent += new SSTools.FileListView.ChangeDirectoryEventHandler(this.FileView_ChangeDirectoryEvent);
+            this.FileView.FileSelectedEvent += new SSTools.FileListView.FileSelectedEventHandler(this.FileView_SelectedEvent);
             // 
             // label2
             // 
@@ -250,7 +250,7 @@
         private FolderSelectButton TbFolderSelect;
         private System.Windows.Forms.Button BtOpen;
         private FolderTreeView FolderTree;
-        private CustomizeControl.FileListView FileView;
+        private FileListView FileView;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox CbFilter;
         private System.Windows.Forms.Label label3;

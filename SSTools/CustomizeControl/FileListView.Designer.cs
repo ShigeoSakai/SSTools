@@ -1,5 +1,4 @@
-﻿namespace SSTools.CustomizeControl
-{
+﻿namespace SSTools{
 	partial class FileListView
 	{
 		/// <summary> 

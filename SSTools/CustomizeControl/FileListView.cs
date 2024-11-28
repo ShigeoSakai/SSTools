@@ -14,7 +14,7 @@ using static SSTools.Win32FileInfo;
 using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
-namespace SSTools.CustomizeControl
+namespace SSTools
 {
 	public partial class FileListView : UserControl
 	{

@@ -1,4 +1,4 @@
-﻿namespace SSTools.Form
+﻿namespace SSTools
 {
     partial class FolderSelectDialog
     {
@@ -35,7 +35,7 @@
             this.TbFolderSelect = new SSTools.FolderSelectButton();
             this.BtOpen = new System.Windows.Forms.Button();
             this.FolderTree = new SSTools.FolderTreeView();
-            this.FileView = new SSTools.CustomizeControl.FileListView();
+            this.FileView = new SSTools.FileListView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtCancel = new System.Windows.Forms.Button();
             this.BtOK = new System.Windows.Forms.Button();
@@ -142,9 +142,9 @@
             this.FileView.ShowNewFolderButton = false;
             this.FileView.Size = new System.Drawing.Size(548, 388);
             this.FileView.TabIndex = 5;
-            this.FileView.View = SSTools.CustomizeControl.FileListView.FILE_VIEW.LargeIcon;
-            this.FileView.ChangeDirectoryEvent += new SSTools.CustomizeControl.FileListView.ChangeDirectoryEventHandler(this.FileView_ChangeDirectoryEvent);
-            this.FileView.FolderSelectedEvent += new SSTools.CustomizeControl.FileListView.FolderSelectedEventHandler(this.FileView_FolderSelectedEvent);
+            this.FileView.View = SSTools.FileListView.FILE_VIEW.LargeIcon;
+            this.FileView.ChangeDirectoryEvent += new SSTools.FileListView.ChangeDirectoryEventHandler(this.FileView_ChangeDirectoryEvent);
+            this.FileView.FolderSelectedEvent += new SSTools.FileListView.FolderSelectedEventHandler(this.FileView_FolderSelectedEvent);
             // 
             // panel1
             // 
@@ -201,7 +201,7 @@
         private FolderSelectButton TbFolderSelect;
         private System.Windows.Forms.Button BtOpen;
         private FolderTreeView FolderTree;
-        private CustomizeControl.FileListView FileView;
+        private FileListView FileView;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtOK;
         private System.Windows.Forms.Button BtCancel;

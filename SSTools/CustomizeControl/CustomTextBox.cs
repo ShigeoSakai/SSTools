@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilterBase.Parts
+namespace SSTools
 {
     /// <summary>
     /// TextChangeEventを遅延させたTextBox

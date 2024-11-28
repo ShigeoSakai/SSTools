@@ -9,10 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-using SSTools.CustomizeControl;
 using System.Reflection.Emit;
 
-namespace SSTools.Form
+namespace SSTools
 {
     public partial class FileSelectDialog : System.Windows.Forms.Form
     {
@@ -379,7 +378,7 @@ namespace SSTools.Form
         /// <param name="path"></param>
         /// <param name="fullpath"></param>
         /// <param name="topNode"></param>
-        private void FolderTree_SelectNodeEvent(object sender, string path, string fullpath, CustomizeControl.FolderTreeNode topNode)
+        private void FolderTree_SelectNodeEvent(object sender, string path, string fullpath, FolderTreeNode topNode)
         {
             // パスの更新
             TbPath.Text = fullpath;

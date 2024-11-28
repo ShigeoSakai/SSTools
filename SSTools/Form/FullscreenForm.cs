@@ -36,7 +36,7 @@ namespace SSTools
     /// <remarks>
     /// プロパティ:WindowShowStateを使って、ウィンドウ表示状態を更新する
     /// </remarks>
-    public partial class FullscreenForm: Form
+    public partial class FullscreenForm: System.Windows.Forms.Form
     {
 		/// <summary>
 		/// バージョン情報

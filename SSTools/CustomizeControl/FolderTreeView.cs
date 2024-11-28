@@ -79,6 +79,9 @@ namespace SSTools
 		public event OnSelectNodeEventHandler SelectNodeEvent;
 		protected virtual void OnSelectNode(string path, string fullpath, FolderTreeNode topNode)
 		{
+            // 現在のパスを設定
+            CurrentPath = fullpath;
+            // イベント発行
 			SelectNodeEvent?.Invoke(this, path, fullpath, topNode);
 		}
 
@@ -130,7 +133,7 @@ namespace SSTools
 			BeginUpdate();
 			//op_node.Collapse(false);
 			FolderTreeNode node = op_node.FindPath(path, ref IconImageList, op_node, ShowHiddenFolder);
-			if ((node != null) && (SelectedNode.Equals(node) == false))
+			if ((node != null) && ((SelectedNode == null) || (SelectedNode.Equals(node) == false)))
 			{
 				node.ExpandToTopNode();
 				SelectedNode = node;
@@ -138,8 +141,17 @@ namespace SSTools
 				OnSelectNode(node.Text, node.ShellItem.Path, topNode);
 			}
 			else
+			{
 				op_node.Expand();
+				// 現在のパスを設定
+				CurrentPath = path;
+            }
 			EndUpdate();
 		}
+		/// <summary>
+		/// 現在選択されているパス
+		/// </summary>
+		public string CurrentPath { get; set; } = string.Empty;
+
 	}
 }

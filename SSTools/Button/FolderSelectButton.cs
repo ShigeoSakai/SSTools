@@ -7,6 +7,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.ComponentModel;
 using System.Reflection;
+using SSTools.Form;
 
 namespace SSTools
 {
@@ -114,23 +115,56 @@ namespace SSTools
             {
                 folder = Directory.GetCurrentDirectory();
             }
-            // フォルダ選択ダイアログ生成
-            FolderBrowserDialog dialog = new FolderBrowserDialog()
-            { 
-                Description = Description,
-                RootFolder = RootFolder,
-                SelectedPath = folder,
-                ShowNewFolderButton = ShowNewFolderButton,
-            };
-            // フォルダ選択ダイアログを開く
-            DialogResult = dialog.ShowDialog();
 
-            if (DialogResult == DialogResult.OK)
+            DialogResult dialog_result;
+            if (UserCustomDialog == false)
+            {   // 通常のダイアログ
+                // フォルダ選択ダイアログ生成
+                FolderBrowserDialog dialog = new FolderBrowserDialog()
+                {
+                    Description = Description,
+                    RootFolder = RootFolder,
+                    SelectedPath = folder,
+                    ShowNewFolderButton = ShowNewFolderButton,
+                };
+                // フォルダ選択ダイアログを開く
+                dialog_result = dialog.ShowDialog();
+                if (dialog_result == DialogResult.OK)
+                {
+                    // リンクコントロールに設定
+                    if (LinkControl != null)
+                        LinkControl.Text = dialog.SelectedPath;
+                    // 選択パスに設定
+                    SelectedPath = dialog.SelectedPath;
+                }
+                dialog.Dispose();
+                dialog = null;
+            }
+            else
+            {   // カスタムダイアログ
+                FolderSelectDialog dialog = new FolderSelectDialog()
+                {
+                    Description = Description,
+                    RootFolder = RootFolder,
+                    SelectedPath = folder,
+                    ShowNewFolderButton = ShowNewFolderButton,
+                };
+                // フォルダ選択ダイアログを開く
+                dialog_result = dialog.ShowDialog();
+                if (dialog_result == DialogResult.OK)
+                {
+                    // リンクコントロールに設定
+                    if (LinkControl != null)
+                        LinkControl.Text = dialog.SelectedPath;
+                    // 選択パスに設定
+                    SelectedPath = dialog.SelectedPath;
+                }
+                dialog.Dispose();
+                dialog = null;
+
+            }
+            if (dialog_result == DialogResult.OK)
             {
-                if (LinkControl != null)
-                    LinkControl.Text = dialog.SelectedPath;
-                SelectedPath = dialog.SelectedPath;
-
 				// クリックイベント発行
 				if (SendClickControl != null)
 				{
@@ -149,8 +183,6 @@ namespace SSTools
 					}
 				}
 			}
-			// ダイアログ解放
-			dialog.Dispose();
         }
         /// <summary>
         /// クリックイベント
@@ -163,8 +195,8 @@ namespace SSTools
             // フォルダ選択イベント発行
             if (DialogResult == DialogResult.OK)
                 OnFolderSelect();
-            // クリックイベント発行
-            base.OnClick(e);
+            // クリックイベントは発行しない
+            //  base.OnClick(e);
         }
     }
 }

@@ -61,7 +61,7 @@ namespace SSTools
 		/// <summary>
 		/// フォーム
 		/// </summary>
-		private Form UIForm = null;
+		private System.Windows.Forms.Form UIForm = null;
 		/// <summary>
 		/// UIスレッド表示完了イベント
 		/// </summary>
@@ -81,7 +81,7 @@ namespace SSTools
 		/// </summary>
 		/// <param name="caption">表示する文字列</param>
 		/// <param name="total">合計数</param>
-		public FormThread(Form form)
+		public FormThread(System.Windows.Forms.Form form)
 		{
             // スレッドを生成
             UIThread = new Thread(() =>

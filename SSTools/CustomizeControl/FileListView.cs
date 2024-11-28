@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static SSTools.Win32FileInfo;
+using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace SSTools.CustomizeControl
 {
@@ -53,26 +55,48 @@ namespace SSTools.CustomizeControl
 		/// </summary>
 		/// <param name="sender">送信元</param>
 		/// <param name="paths">選択されたパス</param>
-		public delegate void SelectedEventHandler(object sender, string[] paths);
+		public delegate void FileSelectedEventHandler(object sender, string[] paths, bool IsDoubleClick);
 		/// <summary>
 		/// ファイル選択イベント
 		/// </summary>
-		public event SelectedEventHandler SelectedEvent;
+		public event FileSelectedEventHandler FileSelectedEvent;
 		/// <summary>
 		/// ファイル選択イベント発行
 		/// </summary>
 		/// <param name="paths">選択されたパス</param>
-		protected virtual void OnSelectedEvent(string[] paths) => SelectedEvent?.Invoke(this, paths);
+		protected virtual void OnFileSelectedEvent(string[] paths, bool IsDoubleClick) => FileSelectedEvent?.Invoke(this, paths,IsDoubleClick);
 		/// <summary>
 		/// ファイル選択イベント発行
 		/// </summary>
 		/// <param name="paths">選択されたパス</param>
-		protected virtual void OnSelectedEvent(string path) => SelectedEvent?.Invoke(this, new string[] { path });
+		protected virtual void OnFileSelectedEvent(string path, bool IsDoubleClick) => FileSelectedEvent?.Invoke(this, new string[] { path },IsDoubleClick);
 
-		/// <summary>
-		/// 並び替えアイコン(空白)
-		/// </summary>
-		private const string BLANK_IMG_KEY = "Blank";
+        /// <summary>
+        /// フォルダ選択イベントハンドラ
+        /// </summary>
+        /// <param name="sender">送信元</param>
+        /// <param name="paths">選択されたパス</param>
+        public delegate void FolderSelectedEventHandler(object sender, string[] paths);
+        /// <summary>
+        /// フォルダ選択イベント
+        /// </summary>
+        public event FolderSelectedEventHandler FolderSelectedEvent;
+        /// <summary>
+        /// フォルダ選択イベント発行
+        /// </summary>
+        /// <param name="paths">選択されたパス</param>
+        protected virtual void OnFolderSelectedEvent(string[] paths) => FolderSelectedEvent?.Invoke(this, paths);
+        /// <summary>
+        /// フォルダ選択イベント発行
+        /// </summary>
+        /// <param name="paths">選択されたパス</param>
+        protected virtual void OnFolderSelectedEvent(string path) => FolderSelectedEvent?.Invoke(this, new string[] { path });
+
+
+        /// <summary>
+        /// 並び替えアイコン(空白)
+        /// </summary>
+        private const string BLANK_IMG_KEY = "Blank";
 		/// <summary>
 		/// 並び替えアイコン(上矢印)
 		/// </summary>
@@ -503,12 +527,65 @@ namespace SSTools.CustomizeControl
 
 			return result_s;
 		}
+
+		/// <summary>
+		/// ワイルドカードマッチング
+		/// </summary>
+		/// <param name="text"></param>
+		/// <param name="pattern"></param>
+		/// <returns></returns>
+		private bool IsWildcardMatch(string text, string pattern)
+		{
+			string regex_pattern = string.Empty;
+			foreach (char c in text)
+			{
+				if (c == '*') regex_pattern += ".*";
+				else if (c == '?') regex_pattern += ".";
+				else regex_pattern += Regex.Escape(c.ToString());
+			}
+			return Regex.IsMatch(text, regex_pattern);
+		}
+		/// <summary>
+		/// 拡張子によるフィルタ
+		/// </summary>
+		/// <param name="fileInfo"></param>
+		/// <param name="ext_lists"></param>
+		/// <returns></returns>
+		private bool FilterFilename(FileInfo fileInfo, List<string> ext_lists)
+		{
+			if ((fileInfo != null) && (ext_lists != null) && (ext_lists.Count > 0))
+			{
+				// ディレクトリは常に表示許可
+				if (fileInfo.Attributes.HasFlag(FileAttributes.Directory))
+					return true;
+				// ファイルの場合
+				string ext = System.IO.Path.GetExtension(fileInfo.FullName);
+				// 拡張子に入っていたらOK
+				if (ext_lists.Contains(ext)) return true;
+
+				// ワイルドカードマッチング
+				foreach (string item in ext_lists)
+				{
+					if ((string.IsNullOrEmpty(item) == false) &&
+						((item.IndexOf('*') > 0) || (item.IndexOf('?') > 0)))
+					{
+						bool result = IsWildcardMatch(ext, item);
+						if (result) return true;
+                    }
+				}
+				return false;
+			}
+			// 表示許可
+			return true;
+		}
+
+
 		/// <summary>
 		/// パス設定
 		/// </summary>
 		/// <param name="path">ディレクトリ</param>
 		/// <param name="topNode">最上位ノード</param>
-		public void SetPath(string path, FolderTreeNode topNode = null)
+		public void SetPath(string path, FolderTreeNode topNode = null,List<string> ext_lists = null)
 		{
 			ListViewFile.BeginUpdate();
 
@@ -537,28 +614,44 @@ namespace SSTools.CustomizeControl
 						file_size = FileSizeToString(fileInfo.Length);
 					}
 					if (fileInfo != null)
-					{
-						// ListViewに追加
-						ListViewFile.Items.Add(new ListViewItem(new string[]
-						{
-						f_info.szDisplayName,
-						f_info.szTypeName,
-						file_size,
-						fileInfo.CreationTime.ToString("yyyy/MM/dd HH:mm:ss"),
-						fileInfo.LastWriteTime.ToString("yyyy/MM/dd HH:mm:ss"),
-						fileInfo.LastAccessTime.ToString("yyyy/MM/dd HH:mm:ss"),
-						((UInt32)fileInfo.Attributes).ToString("X8"),
+                    {
+                        if (FilterFilename(fileInfo, ext_lists))
+                        {
+                            // ListViewに追加
+                            ListViewFile.Items.Add(new ListViewItem(new string[]
+							{
+								f_info.szDisplayName,
+								f_info.szTypeName,
+								file_size,
+								fileInfo.CreationTime.ToString("yyyy/MM/dd HH:mm:ss"),
+								fileInfo.LastWriteTime.ToString("yyyy/MM/dd HH:mm:ss"),
+								fileInfo.LastAccessTime.ToString("yyyy/MM/dd HH:mm:ss"),
+								((UInt32)fileInfo.Attributes).ToString("X8"),
 
-						}, SetIconImage(f_info.iIcon)));
+							}, SetIconImage(f_info.iIcon)));
+						}
 					}
 				}
 			}
 			// 現在の状態を保存
 			m_Path = path;
-			m_TopNode = topNode;
+			if (topNode != null)
+				m_TopNode = topNode;
 
-			ListViewFile.EndUpdate();
-		}
+			if (_selectRequest.Count > 0)
+			{
+                foreach (ListViewItem item in ListViewFile.Items)
+                {
+                    bool check = (_selectRequest.Contains(item.SubItems[CHeaderFileName.Index].Text));
+                    item.Selected = check;
+                }
+				_selectRequest.Clear();
+            }
+            ListViewFile.EndUpdate();
+
+            ListViewFile.Refresh();
+
+        }
 		/// <summary>
 		/// ファイルサイズの単位
 		/// </summary>
@@ -669,7 +762,34 @@ namespace SSTools.CustomizeControl
 					item.ImageIndex,
 					(FileAttributes)Convert.ToUInt32(item.SubItems[CHeaderAttr.Index].Text, 16)
 				);
-			}
+                List<string> select_path = new List<string>();
+                List<string> folder_path = new List<string>();
+
+                // ディレクトリが選択されていた場合は、そのパスを開いてもらう
+                for (int index = 0; index < ListViewFile.SelectedItems.Count; index++)
+                {
+                    ListViewItem lv_item = ListViewFile.SelectedItems[index];
+                    FileAttributes attr = (FileAttributes)Convert.ToUInt32(lv_item.SubItems[CHeaderAttr.Index].Text, 16);
+                    if (attr.HasFlag(FileAttributes.Directory) == false)
+                    {   // リストに追加
+						select_path.Add(System.IO.Path.Combine(m_Path, lv_item.SubItems[CHeaderFileName.Index].Text));
+                    }
+					else
+					{   // フォルダリストに追加
+                        folder_path.Add(System.IO.Path.Combine(m_Path, lv_item.SubItems[CHeaderFileName.Index].Text));
+
+                    }
+                }
+				// ファイルの選択通知
+                if (select_path.Count > 0)
+                {	// 全て通知
+                    OnFileSelectedEvent(select_path.ToArray(),false);
+                }
+				if (folder_path.Count > 0)
+				{	// 全て通知
+					OnFolderSelectedEvent(folder_path.ToArray());
+				}
+            }
 		}
 		/// <summary>
 		/// 画像ファイル拡張子
@@ -699,11 +819,15 @@ namespace SSTools.CustomizeControl
 			string fullpath = System.IO.Path.Combine(m_Path,filename);
 			Bitmap bmp = null;
 			if ((File.Exists(fullpath)) && (ImageExtensions.Contains(System.IO.Path.GetExtension(fullpath)))) 
-			{	// 画像ファイルなので読み込んで表示する
-				using(FileStream fs = new FileStream(fullpath,FileMode.Open,FileAccess.Read))
+			{   // 画像ファイルなので読み込んで表示する
+				try
 				{
-					bmp = new Bitmap(fs);
+					using (FileStream fs = new FileStream(fullpath, FileMode.Open, FileAccess.Read))
+					{
+						bmp = new Bitmap(fs);
+					}
 				}
+				catch { bmp = null; }
 			}
 			// 画像を設定
 			if (PbFileImage.Image != null)
@@ -816,6 +940,8 @@ namespace SSTools.CustomizeControl
 		{
 			if (ListViewFile.SelectedItems.Count > 0)
 			{
+				List<string> select_path = new List<string>();
+
 				// ディレクトリが選択されていた場合は、そのパスを開いてもらう
 				for(int index = 0; index < ListViewFile.SelectedItems.Count; index ++)
 				{
@@ -824,11 +950,352 @@ namespace SSTools.CustomizeControl
 					if (attr.HasFlag(FileAttributes.Directory))
 					{	// イベントを発行
 						OnChangeDirectoryEvent(System.IO.Path.Combine(m_Path, item.SubItems[CHeaderFileName.Index].Text), m_TopNode);
-						break;
+						// 抜ける
+						return;
 					}
+					select_path.Add(System.IO.Path.Combine(m_Path, item.SubItems[CHeaderFileName.Index].Text));
+				}
+				if (select_path.Count > 0)
+				{
+					// 全て通知
+					OnFileSelectedEvent(select_path.ToArray(),true);
 				}
 			}
-
 		}
-	}
+
+		/// <summary>
+		/// 選択要求リスト
+		/// </summary>
+		private List<string> _selectRequest = new List<string>();
+
+		/// <summary>
+		/// 指定されたファイルを選択状態にする
+		/// </summary>
+		/// <param name="filenames"></param>
+		/// <returns></returns>
+		public bool SetSelect(string[] filenames)
+		{
+			// 選択要求リストをクリア
+            _selectRequest.Clear();
+
+            foreach (string filename in filenames)
+			{
+                _selectRequest.Add(System.IO.Path.GetFileName(filename));
+			}
+			// この段階で一旦Select状態にする
+			bool result = false;
+			foreach(ListViewItem item in ListViewFile.Items)
+			{
+				bool check = (_selectRequest.Contains(item.SubItems[CHeaderFileName.Index].Text));
+				item.Selected = check;
+				result |= check;
+			}
+			return result;
+		}
+		/// <summary>
+		/// 選択対象フラグ
+		/// </summary>
+		[Flags]
+		public enum SELECT_FLAGS
+		{
+			FILE = 1,
+			FOLDER = 2,
+			ALL = 3
+		}
+		/// <summary>
+		/// 選択されているアイテムを取得する
+		/// </summary>
+		/// <returns></returns>
+		public string[] GetSelected(SELECT_FLAGS flags = SELECT_FLAGS.ALL)
+		{
+			if (ListViewFile.SelectedItems.Count > 0)
+			{
+				List<string> selected_item = new List<string>();
+				foreach(ListViewItem item in ListViewFile.SelectedItems)
+				{
+					if (item.Selected)
+					{
+                        FileAttributes attr = (FileAttributes)Convert.ToUInt32(item.SubItems[CHeaderAttr.Index].Text, 16);
+						if ((attr.HasFlag(FileAttributes.Directory)) && (flags.HasFlag(SELECT_FLAGS.FOLDER)))
+							selected_item.Add(System.IO.Path.Combine(m_Path, item.SubItems[CHeaderFileName.Index].Text));
+						else if (flags.HasFlag(SELECT_FLAGS.FILE))
+                            selected_item.Add(System.IO.Path.Combine(m_Path, item.SubItems[CHeaderFileName.Index].Text));
+                    }
+                }
+				if (selected_item.Count > 0) 
+					return selected_item.ToArray();
+			}
+			return null;
+		}
+
+
+
+		/// <summary>
+		/// 新規フォルダボタンの表示・非表示
+		/// </summary>
+		public bool ShowNewFolderButton
+		{
+			get => BtNewFolder.Visible;
+			set => BtNewFolder.Visible = value;
+		}
+		/// <summary>
+		/// 名前の末尾にあるSuffixを取得する
+		/// </summary>
+		/// <param name="text"></param>
+		/// <param name="suffix"></param>
+		/// <returns></returns>
+		private bool GetSuffixNum(string text,out int suffix)
+		{
+			suffix = -1;
+            Match match = Regex.Match(text, @".+_(\((\d+)\)|(\d+))$");
+            if ((match != null) && (match.Success) && (match.Groups.Count >= 4))
+            {
+                string num_text = (match.Groups[2].Success) ? match.Groups[2].Value :
+                    (match.Groups[3].Success) ? match.Groups[3].Value : null;
+				if ((string.IsNullOrEmpty(num_text) == false) &&
+					(int.TryParse(num_text, out int value)))
+				{
+					suffix = value;
+					return true;
+				}
+            }
+            return false;
+        }
+		/// <summary>
+		/// Suffixを追加した名前を取得
+		/// </summary>
+		/// <param name="names"></param>
+		/// <param name="default_name"></param>
+		/// <returns></returns>
+		private string GetSuffixName(string[] names,string default_name)
+		{
+			if (names.Length > 0)
+			{
+                Array.Sort(names);
+                int? suffix = null;
+                for (int index = names.Length - 1; index >= 0; index--)
+                {
+                    string name = System.IO.Path.GetFileNameWithoutExtension(names[index]);
+                    if (name.StartsWith(default_name))
+                    {
+                        if (GetSuffixNum(name, out int suffix_value))
+                        {
+                            suffix = suffix_value;
+                            break;
+                        }
+                        else if (name == default_name)
+                        {
+                            suffix = 0;
+                            break;
+                        }
+                    }
+                }
+                if (suffix.HasValue)
+                {
+                    default_name = string.Format("{0}_({1})", default_name, suffix.Value + 1);
+                }
+            }
+            return default_name;
+		}
+
+
+        /// <summary>
+        /// 新規フォルダを作成
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtNewFolder_Click(object sender, EventArgs e)
+        {
+			string new_foldername = "新規フォルダ";
+			// 同じ名前のフォルダがあったら、番号を末尾に付ける
+			string[] now_dirs = Directory.GetDirectories(m_Path,new_foldername + "*");
+			new_foldername = GetSuffixName(now_dirs,new_foldername);
+
+            try
+			{
+				// ディレクトリ作成
+				Directory.CreateDirectory(System.IO.Path.Combine(m_Path, new_foldername));
+				// 再表示
+				SetPath(m_Path);
+
+				// ラベル編集可能にする
+				ListViewFile.LabelEdit = true;
+				// 追加したフォルダを編集可能状態にする
+				bool isEdit = false;
+				foreach (ListViewItem item in ListViewFile.Items)
+                {
+                    if (item.Text == new_foldername)
+					{
+						item.BeginEdit();
+						isEdit = true;
+						break;
+					}
+                }
+				if (isEdit == false)
+				{   // 見つからない...ラベル編集不可
+                    ListViewFile.LabelEdit = false;
+                }
+            }
+            catch (Exception ex)
+			{
+				MessageBox.Show(ex.ToString(),"ディレクトリ作成エラー",MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+        }
+
+		/// <summary>
+		/// 編集しているIndex
+		/// </summary>
+		int? _editting_index = null;
+		/// <summary>
+		/// 編集前の内容
+		/// </summary>
+		string _beforeText = null;
+        /// <summary>
+        /// ラベル編集開始
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ListViewFile_BeforeLabelEdit(object sender, LabelEditEventArgs e)
+		{
+			if ((e.Item >= 0) && (e.Item < ListViewFile.Items.Count))
+			{
+				_editting_index = e.Item;
+				_beforeText = ListViewFile.Items[e.Item].SubItems[CHeaderFileName.Index].Text;
+			}
+        }
+        /// <summary>
+        /// ラベル編集終了
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ListViewFile_AfterLabelEdit(object sender, LabelEditEventArgs e)
+        {
+			if (_editting_index.HasValue) 
+			{
+				if ((_beforeText != null) && (e.Label != null) && (_beforeText != e.Label))
+				{   // 入力されて名前が変わった
+
+                    FileAttributes attr = (FileAttributes)Convert.ToUInt32(ListViewFile.Items[e.Item].SubItems[CHeaderAttr.Index].Text, 16);
+					if (attr.HasFlag(FileAttributes.System) == false)
+					{
+
+						if (attr.HasFlag(FileAttributes.Directory))
+						{   // ディレクトリ名の変更
+							Directory.Move(
+								System.IO.Path.Combine(m_Path, _beforeText),
+								System.IO.Path.Combine(m_Path, e.Label));
+						}
+						else
+						{   // ファイル名の変更
+							File.Move(
+								System.IO.Path.Combine(m_Path, _beforeText),
+								System.IO.Path.Combine(m_Path, e.Label));
+						}
+						ListViewItem item = ListViewFile.Items[e.Item];
+                        // ListViewの中身も変える
+                        item.SubItems[CHeaderFileName.Index].Text = e.Label;
+						// 詳細を更新
+                        SetFileDetailInfo(
+							item.SubItems[CHeaderFileName.Index].Text,
+							item.SubItems[CHeaderType.Index].Text,
+							item.SubItems[CHeaderCreateDate.Index].Text,
+							item.SubItems[CHeaderUpdateDate.Index].Text,
+							item.SubItems[CHeaderAccessDate.Index].Text,
+							item.ImageIndex,
+							(FileAttributes)Convert.ToUInt32(item.SubItems[CHeaderAttr.Index].Text, 16)
+						);
+
+                    }
+                    else
+					{	// 編集をキャンセルする
+						e.CancelEdit = true;
+					}
+				}
+				_editting_index = null;
+				_beforeText = null;
+			}
+            // ラベル編集不可
+            ListViewFile.LabelEdit = false;
+        }
+		/// <summary>
+		/// メニューから新規ファイルを作成
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+        private void ToolStripMenuItemNewFile_Click(object sender, EventArgs e)
+        {
+            string new_filename = "新規ファイル";
+            // 同じ名前のフォルダがあったら、番号を末尾に付ける
+            string[] now_dirs = Directory.GetFiles(m_Path, new_filename + "*");
+            new_filename = GetSuffixName(now_dirs, new_filename) + ".txt";
+
+			try
+			{	// ファイルを作成
+				FileStream fs = File.Create(System.IO.Path.Combine(m_Path,new_filename));
+				fs.Close();
+                // 再表示
+                SetPath(m_Path);
+
+                // ラベル編集可能にする
+                ListViewFile.LabelEdit = true;
+                // 追加したフォルダを編集可能状態にする
+                bool isEdit = false;
+                foreach (ListViewItem item in ListViewFile.Items)
+                {
+                    if (item.Text == new_filename)
+                    {
+                        item.BeginEdit();
+                        isEdit = true;
+                        break;
+                    }
+                }
+                if (isEdit == false)
+                {   // 見つからない...ラベル編集不可
+                    ListViewFile.LabelEdit = false;
+                }
+            }
+            catch (Exception ex) { Console.WriteLine(ex.ToString()); }
+
+        }
+        /// <summary>
+        /// メニューから新規フォルダを作成
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ToolStripMenuItemNewFolder_Click(object sender, EventArgs e)
+        {
+			// 新規フォルダ作成ボタンを呼び出す
+			BtNewFolder_Click(sender, e);
+        }
+		/// <summary>
+		/// メニューから名前を変更
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+        private void ToolStripMenuItemRename_Click(object sender, EventArgs e)
+        {
+			// 選択されているアイテムがあるかチェック
+			if (ListViewFile.SelectedItems.Count > 0)
+			{
+				// 最初のもののみ編集可能
+				ListViewItem item = ListViewFile.SelectedItems[0];
+                if (item != null)
+                {
+                    // ラベル編集可能にする
+                    ListViewFile.LabelEdit = true;
+					// 選択されたものの編集開始
+					item.BeginEdit();
+                }
+            }
+        }
+		/// <summary>
+		/// メニューから削除
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+        private void ToolStripMenuItemDelete_Click(object sender, EventArgs e)
+        {
+			throw new NotImplementedException();
+        }
+    }
 }

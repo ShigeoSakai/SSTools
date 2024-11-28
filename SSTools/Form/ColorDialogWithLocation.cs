@@ -62,11 +62,11 @@ namespace SSTools
 		/// </summary>
 		/// <param name="ctrl">コントロール</param>
 		/// <returns>親Form。見つからない場合はnull</returns>
-		private Form GetParentForm(Control ctrl)
+		private System.Windows.Forms.Form GetParentForm(Control ctrl)
 		{
 			if (ctrl == null)
 				return null;
-			if (ctrl is Form frm)
+			if (ctrl is System.Windows.Forms.Form frm)
 				return frm;
 			return GetParentForm(ctrl.Parent);
 		}
@@ -142,7 +142,7 @@ namespace SSTools
 
 				case FormStartPosition.CenterParent:
 					// 親Formの中央
-					Form parent = GetParentForm(Parent);
+					System.Windows.Forms.Form parent = GetParentForm(Parent);
 					if (parent != null)
 					{
 						Location = new Point(parent.Location.X + (parent.Size.Width - dialogSize.Width) / 2,

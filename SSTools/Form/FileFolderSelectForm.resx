@@ -117,19 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="FileListViewMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>538, 17</value>
-  </metadata>
-  <metadata name="LargeIconList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>127, 17</value>
-  </metadata>
-  <metadata name="SmallIconList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SmallImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="ExtraLargeIconList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>237, 17</value>
+  <metadata name="FileLargeIconList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>290, 17</value>
   </metadata>
-  <metadata name="JumboIconList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>408, 17</value>
+  <metadata name="FileSmallIconList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>149, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RbTile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAAJlJREFUOE/tlTEOgCAMRXsJLiTH1N3dizVAdFX+UNKQDlV0k+Ql0JZfoEmhUkpM
+        Ka05522EqrEwcyRMrIAn4GAkixDCTkSnBja9wUMThEA/YBO/lVCovqPptEl19AM28XvRVz50VqAze2mC
+        b/GdoPXosOlgD+6iWAkF/dZuQS/6yn+V/yo7QYMd7tYCmjW+gKkyWwF3wMGYOV5CfNp4IWCmIgAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="RbList.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAAGpJREFUOE9j+Pz5s/PHjx+Xf/r0aRMlGGjGnPfv3zszgBjYFJCDQQ5jwCZBCaat
+        gaKiol8ZGBj+I2Og2Ddi5UF4iHmZGng0DCnHo2FIOR4CYUiN0hqGQYU1qApwAuLZ2BSQgkEOe//+vTMA
+        MOsMFGVz8SMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="RbLarge.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAAIFJREFUOE/tlTEOgCAMRXsJLiTH1N3dizVAdNX+wYQaBgs4mEDyEgjty18olFLy
+        IYQ1xri1II6FmT1hUyqoAcGodNGCEjrndiI6LaAndyghCqwLPcqhDkP4Zg3h34TyjA4UWEBP7lDCHjwT
+        1gyHjxP2mNY3GNb4AiZhLhVYQDBm9hdtCBzfUnxUEAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="RbSmall.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAAIpJREFUOE/tlT0OgCAMRnsJLiTH1N3dizVAdFXegAPiUH8GE5u8BNovXyA0RVJK
+        PoQwxhinO2SPQVW9sGgJrsDBpGycc7OIrDXkLZrdkEIryJs0JvFvWKJpmF9qoVBD3qLZDZ/iPUOa8+Q6
+        f2Mf46OGNCeFGvIWDQP29rQuMKz5ArpM3xJY4GCq6jc6dL+lDhPSHgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="RbDedicate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAAGlJREFUOE9j+Pz5s/PHjx+Xf/r0aRMlGGjGnPfv3zszgBjYFJCDQQ5jwCZBCaat
+        gaKiol8ZGBj+k4KBer4hmzHEvEwNPBqGlOPRMKQcD4EwpEZpDcOgwhpUBTgB8WxsCkjBIIe9f//eGQAf
+        pfYRy8MKeAAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

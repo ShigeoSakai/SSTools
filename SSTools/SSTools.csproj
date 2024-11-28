@@ -72,6 +72,12 @@
     <Compile Include="Combination\TrackBarAndValue.Designer.cs">
       <DependentUpon>TrackBarAndValue.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomizeControl\CustomTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizeControl\CustomTextBox.Designer.cs">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomizeControl\FileListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </Compile>
     <Compile Include="CustomizeControl\FolderTreeView.Designer.cs">
       <DependentUpon>FolderTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizeControl\GrowLabel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CustomizeControl\IconResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -119,6 +128,18 @@
     </Compile>
     <Compile Include="Form\ColorDialogWithLocation.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form\FileSelectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FileSelectDialog.Designer.cs">
+      <DependentUpon>FileSelectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FolderSelectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FolderSelectDialog.Designer.cs">
+      <DependentUpon>FolderSelectDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FormUtils.cs" />
     <Compile Include="Form\FullscreenForm.cs">
@@ -160,12 +181,21 @@
     <EmbeddedResource Include="CustomizeControl\FileListView.resx">
       <DependentUpon>FileListView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomizeControl\CustomTextBox.resx">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomizeControl\FolderTreeView.resx">
       <DependentUpon>FolderTreeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomizeControl\IconResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>IconResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FileSelectDialog.resx">
+      <DependentUpon>FileSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FolderSelectDialog.resx">
+      <DependentUpon>FolderSelectDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\WaitingForm.resx">
       <DependentUpon>WaitingForm.cs</DependentUpon>

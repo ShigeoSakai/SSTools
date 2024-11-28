@@ -7,6 +7,8 @@ using System.Windows.Forms;
 using System.IO;
 using System.ComponentModel;
 using System.Reflection;
+using SSTools.Form;
+using System.Security.Cryptography;
 
 namespace SSTools
 {
@@ -341,8 +343,8 @@ namespace SSTools
             if (DialogResult == DialogResult.OK)
                 OnFileSelect();
 
-            // Clickイベントを発行してもらう
-            base.OnClick(e);
+            // クリックイベントは発行しない
+            // base.OnClick(e);
         }
         /// <summary>
         /// ファイル選択ダイアログを開く
@@ -379,43 +381,80 @@ namespace SSTools
             string filter = Filter;
             if ((filter == null) || (filter.Trim().Length == 0))
                 filter = "全てのファイル|*.*";
-            
-            // ファイル選択ダイアログを生成
-            OpenFileDialog ofd = new OpenFileDialog()
+
+            DialogResult dialog_result;
+            if (UserCustomDialog == false)
+            {   // 通常のダイアログ
+                // ファイル選択ダイアログを生成
+                OpenFileDialog ofd = new OpenFileDialog()
+                {
+                    AddExtension = AddExtension,
+                    AutoUpgradeEnabled = AutoUpgradeEnabled,
+                    CheckFileExists = CheckFileExists,
+                    CheckPathExists = CheckPathExists,
+                    DefaultExt = DefaultExt,
+                    DereferenceLinks = DereferenceLinks,
+                    FileName = filename,
+                    Filter = filter,
+                    FilterIndex = FilterIndex,
+                    InitialDirectory = folder,
+                    RestoreDirectory = RestoreDirectory,
+                    ShowHelp = ShowHelp,
+                    SupportMultiDottedExtensions = SupportMultiDottedExtensions,
+                    Title = Title,
+                    ValidateNames = ValidateNames,
+                    Multiselect = Multiselect,
+                    ReadOnlyChecked = ReadOnlyChecked,
+                    ShowReadOnly = ShowReadOnly,
+                };
+                // ダイアログを表示して結果を取得
+                dialog_result = ofd.ShowDialog();
+                if (dialog_result == DialogResult.OK)
+                {
+                    //  リンクコントロールのTextにファイル名を設定
+                    if (LinkControl != null)
+                        LinkControl.Text = ofd.FileName;
+                    // その他を設定
+                    FileName = ofd.FileName;
+                    FileNames = ofd.FileNames;
+                    InitialDirectory = Path.GetDirectoryName(ofd.FileName);
+                    DefaultExt = ofd.DefaultExt;
+                }
+                ofd.Dispose();
+                ofd = null;
+            }
+            else
             {
-                AddExtension = AddExtension,
-                AutoUpgradeEnabled = AutoUpgradeEnabled,
-                CheckFileExists = CheckFileExists,
-                CheckPathExists = CheckPathExists,
-                DefaultExt = DefaultExt,
-                DereferenceLinks = DereferenceLinks,
-                FileName = filename,
-                Filter = filter,
-                FilterIndex = FilterIndex,
-                InitialDirectory = folder,
-                RestoreDirectory = RestoreDirectory,
-                ShowHelp = ShowHelp,
-                SupportMultiDottedExtensions = SupportMultiDottedExtensions,
-                Title = Title,
-                ValidateNames = ValidateNames,
-                Multiselect = Multiselect,
-                ReadOnlyChecked = ReadOnlyChecked,
-                ShowReadOnly = ShowReadOnly,
-            };
-            // ダイアログを表示して結果を取得
-            DialogResult = ofd.ShowDialog();
+                // カスタムダイアログを開く
+                FileSelectDialog fileSelectDialog = new FileSelectDialog()
+                {
+                    CheckFileExists = CheckFileExists,
+                    CheckPathExists = CheckPathExists,
+                    FileName = filename,
+                    Filter = filter,
+                    FilterIndex = FilterIndex,
+                    InitialDirectory = folder,
+                    Title = Title,
+                    Multiselect = Multiselect,
+                };
+                // ダイアログを表示して結果を取得
+                dialog_result = fileSelectDialog.ShowDialog();
+                if (dialog_result == DialogResult.OK)
+                {
+                    //  リンクコントロールのTextにファイル名を設定
+                    if (LinkControl != null)
+                        LinkControl.Text = fileSelectDialog.FileName;
+                    // その他を設定
+                    FileName = fileSelectDialog.FileName;
+                    FileNames = fileSelectDialog.FileNames;
+                    InitialDirectory = Path.GetDirectoryName(fileSelectDialog.FileName);
+                }
+                fileSelectDialog.Dispose();
+                fileSelectDialog = null;
+            }
 
-            if (DialogResult == DialogResult.OK)
+            if (dialog_result == DialogResult.OK)
             {   // ダイアログがOKで終了
-                //  リンクコントロールのTextにファイル名を設定
-                if (LinkControl != null)
-                    LinkControl.Text = ofd.FileName;
-                // その他を設定
-                FileName = ofd.FileName;
-                FileNames = ofd.FileNames;
-                InitialDirectory = Path.GetDirectoryName(ofd.FileName);
-                DefaultExt = ofd.DefaultExt;
-
                 // クリックイベント発行
                 if (SendClickControl != null)
                 {
@@ -434,8 +473,6 @@ namespace SSTools
 					}
                 }
             }
-            // ダイアログを解放
-            ofd.Dispose();
         }
     }
 }

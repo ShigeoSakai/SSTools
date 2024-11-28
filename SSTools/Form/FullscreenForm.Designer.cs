@@ -2,7 +2,7 @@
 
 namespace SSTools
 {
-    public partial class FullscreenForm : Form 
+    public partial class FullscreenForm : System.Windows.Forms.Form 
     {
         /// <summary>
         /// 必要なデザイナー変数です。

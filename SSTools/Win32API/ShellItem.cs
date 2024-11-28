@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using System.Text;
 using System.Collections;
 using System.Runtime.InteropServices;
@@ -16,7 +16,7 @@ namespace SSTools
 
         private string[] CompressdFileTypes = new string[]
         {
-            "à≥èk","ÉAÅ[ÉJÉCÉu","Compressed","Zip"
+            "ÂúßÁ∏Æ","„Ç¢„Éº„Ç´„Ç§„Éñ","Compressed","Zip"
         };
 
         private bool IsCompressdFileType(string typeString)
@@ -27,76 +27,80 @@ namespace SSTools
             return false;
         }
 
+        private static Object lock_obj = new Object();
+
 		/// <summary>
 		/// Constructor. Creates the ShellItem object for the Desktop.
 		/// </summary>
 		public ShellItem(Environment.SpecialFolder folder = Environment.SpecialFolder.Desktop, bool include_hidden = false)
         {
             // new ShellItem() can only be called once.
-            if (m_bHaveRootShell)
-                throw new Exception("The Desktop shell item already exists so cannot be created again.");
-
-            // Obtain the root IShellFolder interface.
-            int hRes = SHGetDesktopFolder(ref m_shRootShell);
-            if (hRes != 0)
-                Marshal.ThrowExceptionForHR(hRes);
-
-            // Now get the PIDL for the Desktop shell item.
-            hRes = SHGetSpecialFolderLocation(IntPtr.Zero, (uint)folder, ref m_pIDL);
-            if (hRes != 0)
-                Marshal.ThrowExceptionForHR(hRes);
-
-            // Now retrieve some attributes for the root shell item.
-            SHFILEINFO shInfo = new SHFILEINFO();
-            SHGetFileInfo(m_pIDL, 0, out shInfo, (uint)Marshal.SizeOf(shInfo), 
-                SHGFI.SHGFI_DISPLAYNAME | 
-                SHGFI.SHGFI_TYPENAME |
-                SHGFI.SHGFI_PIDL | 
-                SHGFI.SHGFI_SMALLICON | 
-                SHGFI.SHGFI_SYSICONINDEX
-            );
-
-            // Set the arributes to object properties.
-            DisplayName  = shInfo.szDisplayName;
-            FileType     = shInfo.szTypeName;
-            IconIndex    = shInfo.iIcon;
-            IsFolder     = true;
-            HasSubFolder = true;
-            Path         = GetPath();
-
-            // ëIëÉAÉCÉRÉìéÊìæ
-			SHFILEINFO shInfo_openicon = new SHFILEINFO();
-			SHGetFileInfo(m_pIDL, 0, out shInfo_openicon, (uint)Marshal.SizeOf(shInfo_openicon),
-				SHGFI.SHGFI_PIDL |
-				SHGFI.SHGFI_SMALLICON |
-                SHGFI.SHGFI_SELECTED |
-                SHGFI.SHGFI_ADDOVERLAYS |
-				SHGFI.SHGFI_ICON
-			);
-            OpenIconIndex = shInfo_openicon.iIcon;
-            OpenIcon = shInfo_openicon.hIcon;
-
-            // ñ{ìñÇ…ÉTÉuÉtÉHÉãÉ_Ç™Ç†ÇÈÇ©ämîF
-            if ((IsFolder) && (folder != Environment.SpecialFolder.Desktop))
+            // if (m_bHaveRootShell)
+            //     throw new Exception("The Desktop shell item already exists so cannot be created again.");
+            lock (lock_obj)
             {
-                if (IsCompressdFileType(FileType))
+                // Obtain the root IShellFolder interface.
+                int hRes = SHGetDesktopFolder(ref m_shRootShell);
+                if (hRes != 0)
+                    Marshal.ThrowExceptionForHR(hRes);
+
+                // Now get the PIDL for the Desktop shell item.
+                hRes = SHGetSpecialFolderLocation(IntPtr.Zero, (uint)folder, ref m_pIDL);
+                if (hRes != 0)
+                    Marshal.ThrowExceptionForHR(hRes);
+
+                // Now retrieve some attributes for the root shell item.
+                SHFILEINFO shInfo = new SHFILEINFO();
+                SHGetFileInfo(m_pIDL, 0, out shInfo, (uint)Marshal.SizeOf(shInfo),
+                    SHGFI.SHGFI_DISPLAYNAME |
+                    SHGFI.SHGFI_TYPENAME |
+                    SHGFI.SHGFI_PIDL |
+                    SHGFI.SHGFI_SMALLICON |
+                    SHGFI.SHGFI_SYSICONINDEX
+                );
+
+                // Set the arributes to object properties.
+                DisplayName = shInfo.szDisplayName;
+                FileType = shInfo.szTypeName;
+                IconIndex = shInfo.iIcon;
+                IsFolder = true;
+                HasSubFolder = true;
+                Path = GetPath();
+
+                // ÈÅ∏Êäû„Ç¢„Ç§„Ç≥„É≥ÂèñÂæó
+                SHFILEINFO shInfo_openicon = new SHFILEINFO();
+                SHGetFileInfo(m_pIDL, 0, out shInfo_openicon, (uint)Marshal.SizeOf(shInfo_openicon),
+                    SHGFI.SHGFI_PIDL |
+                    SHGFI.SHGFI_SMALLICON |
+                    SHGFI.SHGFI_SELECTED |
+                    SHGFI.SHGFI_ADDOVERLAYS |
+                    SHGFI.SHGFI_ICON
+                );
+                OpenIconIndex = shInfo_openicon.iIcon;
+                OpenIcon = shInfo_openicon.hIcon;
+
+                // Êú¨ÂΩì„Å´„Çµ„Éñ„Éï„Ç©„É´„ÉÄ„Åå„ÅÇ„Çã„ÅãÁ¢∫Ë™ç
+                if ((IsFolder) && (folder != Environment.SpecialFolder.Desktop))
                 {
-                    IsFolder = false;
-                    HasSubFolder = false;
+                    if (IsCompressdFileType(FileType))
+                    {
+                        IsFolder = false;
+                        HasSubFolder = false;
+                    }
+                    else
+                    {
+                        uint hRes2 = m_shRootShell.BindToObject(m_pIDL, IntPtr.Zero, ref IID_IShellFolder, out m_shShellFolder);
+                        if (hRes2 != 0)
+                            Marshal.ThrowExceptionForHR((int)hRes2);
+                        HasSubFolder = IsRealyHasSubFolder(include_hidden);
+                    }
                 }
                 else
-                {
-                    uint hRes2 = m_shRootShell.BindToObject(m_pIDL, IntPtr.Zero, ref IID_IShellFolder, out m_shShellFolder);
-                    if (hRes2 != 0)
-                        Marshal.ThrowExceptionForHR((int)hRes2);
-                    HasSubFolder = IsRealyHasSubFolder(include_hidden);
+                {   // Internal with no set{} mutator.
+                    m_shShellFolder = RootShellFolder;
                 }
-			}
-            else
-            {   // Internal with no set{} mutator.
-				m_shShellFolder = RootShellFolder;
-			}
-			m_bHaveRootShell = true;
+                m_bHaveRootShell = true;
+            }
         }
 
         /// <summary>
@@ -135,7 +139,7 @@ namespace SSTools
             FileType    = shInfo.szTypeName;
 			IconIndex   = shInfo.iIcon;
             Path        = GetPath();
-			// ëIëÉAÉCÉRÉìéÊìæ
+			// ÈÅ∏Êäû„Ç¢„Ç§„Ç≥„É≥ÂèñÂæó
 			SHFILEINFO shInfo_openicon = new SHFILEINFO();
 			SHGetFileInfo(m_pIDL, 0, out shInfo_openicon, (uint)Marshal.SizeOf(shInfo_openicon),
 				SHGFI.SHGFI_PIDL |
@@ -166,16 +170,16 @@ namespace SSTools
         }
 
         /// <summary>
-        /// ÉfÉXÉgÉâÉNÉ^
+        /// „Éá„Çπ„Éà„É©„ÇØ„Çø
         /// </summary>
         ~ShellItem() => Dispose(false);
 
         /// <summary>
-        /// ÉfÉXÉgÉâÉNÉ^
+        /// „Éá„Çπ„Éà„É©„ÇØ„Çø
         /// </summary>
         public void Dispose() => Dispose(true);
         /// <summary>
-        /// ÉfÉXÉgÉâÉNÉ^
+        /// „Éá„Çπ„Éà„É©„ÇØ„Çø
         /// </summary>
         /// <param name="disposing"></param>
         protected virtual void Dispose(bool disposing)
@@ -183,10 +187,10 @@ namespace SSTools
             if (disposed== false) 
             {
                 if (disposing)
-                {   // É}ÉlÅ[ÉWÉhÉäÉ\Å[ÉXâï˙
+                {   // „Éû„Éç„Éº„Ç∏„Éâ„É™„ÇΩ„Éº„ÇπËß£Êîæ
                 
                 }
-                // ÉAÉìÉ}ÉlÅ[ÉWÉhÉäÉ\Å[ÉXâï˙
+                // „Ç¢„É≥„Éû„Éç„Éº„Ç∏„Éâ„É™„ÇΩ„Éº„ÇπËß£Êîæ
     //            if (m_shRootShell != null)
     //            {
     //                Marshal.ReleaseComObject(m_shRootShell);
@@ -285,7 +289,7 @@ namespace SSTools
             return arrChildren;
         }
         /// <summary>
-        /// ñ{ìñÇ…ÉTÉuÉtÉHÉãÉ_Ç™Ç†ÇÈÇ©ÅH
+        /// Êú¨ÂΩì„Å´„Çµ„Éñ„Éï„Ç©„É´„ÉÄ„Åå„ÅÇ„Çã„ÅãÔºü
         /// </summary>
         /// <param name="include_hidden"></param>
         /// <returns></returns>
@@ -345,7 +349,7 @@ namespace SSTools
         Int32 m_iIconIndex = -1;
 
         /// <summary>
-        /// ëIëÉAÉCÉRÉìÇÃÉCÉìÉfÉbÉNÉX
+        /// ÈÅ∏Êäû„Ç¢„Ç§„Ç≥„É≥„ÅÆ„Ç§„É≥„Éá„ÉÉ„ÇØ„Çπ
         /// </summary>
         public Int32 OpenIconIndex
         {
@@ -354,7 +358,7 @@ namespace SSTools
         }
         private Int32 m_openIconIndex = -1;
         /// <summary>
-        /// ëIëÉAÉCÉRÉìÇÃÉnÉìÉhÉã
+        /// ÈÅ∏Êäû„Ç¢„Ç§„Ç≥„É≥„ÅÆ„Éè„É≥„Éâ„É´
         /// </summary>
         public IntPtr OpenIcon
         {
@@ -420,7 +424,7 @@ namespace SSTools
         string m_strPath = "";
         
         /// <summary>
-        /// ÉtÉ@ÉCÉãéÌï 
+        /// „Éï„Ç°„Ç§„É´Á®ÆÂà•
         /// </summary>
         public string FileType
         {

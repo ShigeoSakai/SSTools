@@ -14,7 +14,7 @@ namespace SSTools
 	/// <summary>
 	/// 進捗表示付き待ちフォーム
 	/// </summary>
-	public partial class WaitingForm : Form
+	public partial class WaitingForm : System.Windows.Forms.Form
 	{
 		/// <summary>
 		/// キャンセルイベント

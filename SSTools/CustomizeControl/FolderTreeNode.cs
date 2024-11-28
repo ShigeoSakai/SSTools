@@ -168,7 +168,9 @@ namespace SSTools.CustomizeControl
 				return CHECK_RESULT.MATCH;
 			else if (Parent == null)
 				return CHECK_RESULT.PARTIAL_MATCH;
-			return CHECK_RESULT.NOT_MATCH;
+			else if (ShellItem.DisplayName == System.IO.Path.GetFileName(path))
+                return CHECK_RESULT.MATCH;
+            return CHECK_RESULT.NOT_MATCH;
 		}
 
 

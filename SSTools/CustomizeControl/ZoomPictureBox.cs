@@ -63,6 +63,39 @@ namespace SSTools
             }
 
         }
+        /// <summary>
+        /// マスク用カラーマトリックス
+        /// </summary>
+        private ColorMatrix maskColorMatrix = new ColorMatrix();
+        /// <summary>
+        /// マスク用画像アトリビュート
+        /// </summary>
+        private ImageAttributes maskImageAttribute = new ImageAttributes();
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        public ZoomPictureBox() :base()
+        {
+            //ColorMatrixの行列の値を変更して、アルファ値が0.5に変更されるようにする
+            maskColorMatrix.Matrix00 = maskColorMatrix.Matrix11 = maskColorMatrix.Matrix22 = maskColorMatrix.Matrix44 = 1;
+            maskColorMatrix.Matrix33 = 0.5F;
+            //ColorMatrixを設定する
+            maskImageAttribute.SetColorMatrix(maskColorMatrix);
+        }
+        /// <summary>
+        /// マスク画像のAlfa値
+        /// </summary>
+        public float MaskAlfa
+        {
+            get => maskColorMatrix.Matrix33;
+            set
+            {
+                maskColorMatrix.Matrix33 = value;
+                //ColorMatrixを設定する
+                maskImageAttribute.SetColorMatrix(maskColorMatrix);
+            }
+        }
+
 
         public bool AutoImageDispose { get; set; } = true;
 
@@ -269,7 +302,9 @@ namespace SSTools
                     // マスク画像
                     if ((maskImage_ != null) && (maskShow_))
                     {
-                        g.DrawImage(maskImage_, 0, 0);
+                        //g.DrawImage(maskImage_, 0, 0);
+                        g.DrawImage (maskImage_,new Rectangle(0, 0, base.Image.Width, base.Image.Height),
+                            0, 0, base.Image.Width, base.Image.Height, GraphicsUnit.Pixel, maskImageAttribute);
                     }
                     // 図形
                     if ((_Shapes.Count > 0) && (shapeShow_))

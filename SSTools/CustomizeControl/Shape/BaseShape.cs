@@ -301,8 +301,28 @@ namespace SSTools.Shape
                 ((targetRect.Left <= baseRect.Right) && (baseRect.Right <= targetRect.Right)))
                 return true;
             return false;
+        }
+        protected bool RectContains(RectangleF targetRect, RectangleF baseRect)
+        {
+            if ((targetRect.Contains(baseRect.Left, baseRect.Top)) ||
+                (targetRect.Contains(baseRect.Right, baseRect.Top)) ||
+                (targetRect.Contains(baseRect.Left, baseRect.Bottom)) ||
+                (targetRect.Contains(baseRect.Right, baseRect.Bottom)))
+                return true;
+            if ((baseRect.Contains(targetRect.Left, targetRect.Top)) ||
+                (baseRect.Contains(targetRect.Right, targetRect.Top)) ||
+                (baseRect.Contains(targetRect.Left, targetRect.Bottom)) ||
+                (baseRect.Contains(targetRect.Right, targetRect.Bottom)))
+                return true;
+            if (((targetRect.Top <= baseRect.Top) && (baseRect.Top <= targetRect.Bottom)) ||
+                ((targetRect.Bottom <= baseRect.Top) && (baseRect.Bottom <= targetRect.Bottom)) ||
+                ((targetRect.Left <= baseRect.Left) && (baseRect.Left <= targetRect.Right)) ||
+                ((targetRect.Left <= baseRect.Right) && (baseRect.Right <= targetRect.Right)))
+                return true;
+            return false;
 
         }
+
         /// <summary>
         /// 色の選択
         /// </summary>

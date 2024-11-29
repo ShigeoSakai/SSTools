@@ -46,7 +46,7 @@ namespace SSTools
         /// <summary>
         /// ユーザーが選択したパス
         /// </summary>
-        private string _selectPath = Directory.GetCurrentDirectory();
+        private string _selectPath = null;
         /// <summary>
         /// ユーザーが選択したパス
         /// </summary>
@@ -58,30 +58,45 @@ namespace SSTools
             {
                 if (string.IsNullOrEmpty(TbPath.Text))
                 {
-                    _selectPath = Directory.GetCurrentDirectory();
+                    // 直近のパスから
+                    _selectPath = FileSelectDialog.GetIntialDirectory(_selectPath);
                     TbPath.Text = _selectPath;
                 }
-                else if ((_selectPath != TbPath.Text.Trim()) &&
+                else if ((string.IsNullOrEmpty(_selectPath)== false) &&
+                    (_selectPath != TbPath.Text.Trim()) &&
                     (Directory.Exists(TbPath.Text)))
                 {
                     _selectPath = TbPath.Text.Trim();
                 }
+                else if (string.IsNullOrEmpty(_selectPath))
+                {
+                    // 直近のパスから取得
+                    _selectPath = FileSelectDialog.GetIntialDirectory(_selectPath);
+                    TbPath.Text = _selectPath;
+                }
+
                 return _selectPath;
             }
             set
             {
-                if ((CheckPathExists) && (Directory.Exists(value) == false))
+                if (string.IsNullOrEmpty(value))
+                {   // 直近のパスから取得
+                    _selectPath = FileSelectDialog.GetIntialDirectory(_selectPath);
+                    TbPath.Text = _selectPath;
+                }
+                else if ((CheckPathExists) && (Directory.Exists(value) == false))
                 {   // 存在しないパスを指定された
                     MessageBox.Show(string.Format("指定されたディレクトリ:\"{0}\"は存在しません", value), "ディレクトリが存在しない",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
                 else
                 {
                     _selectPath = value;
                     TbPath.Text = value;
-                    // パスを表示
-                    ShowSelectTree(_selectPath);
                 }
+                // パスを表示
+                ShowSelectTree(_selectPath);
             }
         }
         /// <summary>
@@ -114,6 +129,25 @@ namespace SSTools
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// 表示された
+        /// </summary>
+        /// <param name="e"></param>
+
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            if (string.IsNullOrEmpty(_selectPath))
+            {
+                // 直近のパスから取得
+                _selectPath = FileSelectDialog.GetIntialDirectory(_selectPath);
+                TbPath.Text = _selectPath;
+                // パスを表示
+                ShowSelectTree(_selectPath);
+            }
+
+        }
+
         /// <summary>
         /// 選択されたパスを表示
         /// </summary>

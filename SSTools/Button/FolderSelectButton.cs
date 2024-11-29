@@ -109,8 +109,8 @@ namespace SSTools
             {
                 folder = LinkControl.Text;
             }
-            if ((folder == null) ||(folder.Trim().Length == 0) || 
-                (Directory.Exists(folder)== false))
+            if (((string.IsNullOrEmpty(folder)) || 
+                (Directory.Exists(folder)== false)) && (UserCustomDialog == false))
             {
                 folder = Directory.GetCurrentDirectory();
             }

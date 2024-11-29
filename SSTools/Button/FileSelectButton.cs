@@ -370,11 +370,11 @@ namespace SSTools
                     }
                 }
             }
-            // フォルダ未設定の場合は、カレントディレクトリ
-            if ((folder == null) || (folder.Trim().Length == 0) || (Directory.Exists(folder) == false))
+            // フォルダ未設定でカスタムダイアログ未使用なら、カレントディレクトリ
+            if (((string.IsNullOrEmpty(folder)) || (Directory.Exists(folder) == false)) && (UserCustomDialog == false))
                 folder = Directory.GetCurrentDirectory();
             // ファイル名未設定の場合は、"default.txt"
-            if ((filename == null) || (filename.Trim().Length == 0))
+            if (string.IsNullOrEmpty(filename))
                 filename = "default.txt";
             // フィルタの設定
             string filter = Filter;
@@ -436,6 +436,8 @@ namespace SSTools
                     Title = Title,
                     Multiselect = Multiselect,
                 };
+
+
                 // ダイアログを表示して結果を取得
                 dialog_result = fileSelectDialog.ShowDialog();
                 if (dialog_result == DialogResult.OK)

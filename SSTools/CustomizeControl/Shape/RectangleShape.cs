@@ -16,7 +16,7 @@ namespace SSTools.Shape
         /// <summary>
         /// 矩形
         /// </summary>
-        public Rectangle Rectangle { get; set; }
+        public RectangleF Rectangle { get; set; }
         /// <summary>
         /// 塗りつぶすかどうか
         /// </summary>
@@ -45,7 +45,27 @@ namespace SSTools.Shape
             base(name, new Point((rectangle.Left + rectangle.Right)/2, (rectangle.Top + rectangle.Bottom)/2),
                 color, lineWidth, dashStyle)
         {
-            Rectangle = rectangle;
+            Rectangle = new RectangleF(rectangle.X,rectangle.Y,rectangle.Width,rectangle.Height);
+            Fill = isFill;
+            if (fillColor.HasValue)
+                FillColor = fillColor.Value;
+        }
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="name">名前</param>
+        /// <param name="rectangle">矩形</param>
+        /// <param name="isFill">塗りつぶすかどうか</param>
+        /// <param name="color">線色</param>
+        /// <param name="lineWidth">線幅</param>
+        /// <param name="dashStyle">線種</param>
+        /// <param name="fillColor">塗りつぶし色</param>
+        public RectangleShape(string name, RectangleF rectangle, bool isFill = false,
+            Color? color = null, float? lineWidth = null, DashStyle? dashStyle = null, Color? fillColor = null) :
+            base(name, new Point((int)((rectangle.Left + rectangle.Right) / 2.0F),(int)((rectangle.Top + rectangle.Bottom) / 2.0F)),
+                color, lineWidth, dashStyle)
+        {
+            Rectangle = new RectangleF(rectangle.X, rectangle.Y, rectangle.Width, rectangle.Height);
             Fill = isFill;
             if (fillColor.HasValue)
                 FillColor = fillColor.Value;
@@ -99,15 +119,64 @@ namespace SSTools.Shape
                 {
                     DashStyle = this.DashStyle
                 };
-                g.DrawRectangle(pen, Rectangle);
+                g.DrawRectangle(pen, Rectangle.X,Rectangle.Y,Rectangle.Width,Rectangle.Height);
                 pen.Dispose();
 
                 if (ShowCenter)
                 {
                     DrawPoint(g, size, dashStyle: DashStyle.Solid);
                 }
+                if (ShowLable)
+                {
+                    DrawText(g, size, new PointF(Point.X, Point.Y));
+                }
             }
         }
+        /// <summary>
+        /// テキスト表示位置の算出
+        /// </summary>
+        /// <param name="textSize">文字列表示サイズ</param>
+        /// <param name="size">表示サイズ</param>
+        /// <param name="pts">頂点座標リスト</param>
+        /// <returns>テキスト表示領域</returns>
+
+        protected override RectangleF CalcTextPosition(SizeF textSize, SizeF? size, PointF center)
+        {
+            // 表示位置とオフセットを計算
+            CalcTextOffset(textSize, out int leftRight, out int topBottom, out int upDown, out float offsetX, out float offsetY);
+
+            PointF pt = new PointF();
+            // 横方向
+            if (leftRight == 1)
+                pt.X = Rectangle.Left + offsetX;    // 左端
+            else if (leftRight == 2)
+                pt.X = Rectangle.X + Rectangle.Width / 2.0F + offsetX;  // 中央
+            else
+                pt.X = Rectangle.Right + offsetX;   // 右端
+            // 縦方向
+            if (topBottom == 1)
+                pt.Y = Rectangle.Top + offsetY;     // 上側
+            else if (topBottom == 3)
+                pt.Y = Rectangle.Bottom - offsetY;  // 下側(基準線上側が実際は矩形の外側となるので符号が反転)
+            else
+                pt.Y = Rectangle.Top + Rectangle.Height / 2.0F + offsetY;   // 中央
+
+            // はみ出す場合の処理
+            if ((size.HasValue) && (pt.X + offsetX >= size.Value.Width))
+                pt.X = size.Value.Width - textSize.Width;
+            if (pt.X + offsetX < 0.0F)
+                pt.X = 0;
+            if ((size.HasValue) && (pt.Y + offsetY >= size.Value.Height))
+                pt.Y = size.Value.Height - textSize.Height;
+            if (pt.Y + offsetY < 0.0F)
+                pt.Y = 0;
+
+            return new RectangleF(pt, textSize);
+
+        }
+
+
+
         public override Rectangle GetDrawSize()
         {
             return new Rectangle(

@@ -150,7 +150,7 @@ namespace SSTools
         /// <summary>
         /// 初期表示フォルダ
         /// </summary>
-        private string _initialDirectory = Directory.GetCurrentDirectory();
+        private string _initialDirectory = null;
         /// <summary>
         /// ファイル ダイアログ ボックスに表示される起動ディレクトリ
         /// </summary>
@@ -162,30 +162,44 @@ namespace SSTools
             {
                 if (string.IsNullOrEmpty(TbPath.Text))
                 {
-                    _initialDirectory = Directory.GetCurrentDirectory();
+                    // 直近のパスから取得
+                    _initialDirectory = GetIntialDirectory(_initialDirectory);
                     TbPath.Text = _initialDirectory;
                 }
-                else if ((_initialDirectory != TbPath.Text.Trim()) && 
+                else if ((string.IsNullOrEmpty(_initialDirectory) == false) &&
+                    (_initialDirectory != TbPath.Text.Trim()) && 
                     (Directory.Exists(TbPath.Text)))
                 {
                     _initialDirectory = TbPath.Text.Trim();
+                }
+                else if (string.IsNullOrEmpty(_initialDirectory))
+                {
+                    // 直近のパスから取得
+                    _initialDirectory = GetIntialDirectory(_initialDirectory);
+                    TbPath.Text = _initialDirectory;
                 }
                 return _initialDirectory;
             }
             set
             {
-                if ((CheckPathExists) && (Directory.Exists(value) == false))
+                if (string.IsNullOrEmpty(value))
+                {   // 直近のパスから取得
+                    _initialDirectory = GetIntialDirectory(_initialDirectory);
+                    TbPath.Text = _initialDirectory;
+                }
+                else if ((CheckPathExists) && (Directory.Exists(value) == false))
                 {   // 存在しないパスを指定された
                     MessageBox.Show(string.Format("指定されたディレクトリ:\"{0}\"は存在しません", value), "ディレクトリが存在しない",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
                 else
                 {
                     _initialDirectory = value;
                     TbPath.Text = value;
-                    // パスを表示
-                    ShowSelectTree(_initialDirectory);
                 }
+                // パスを表示
+                ShowSelectTree(_initialDirectory);
             }
         }
         /// <summary>
@@ -349,6 +363,26 @@ namespace SSTools
                 return result;
             }
         }
+        /// <summary>
+        /// 直近の選択パス
+        /// </summary>
+        public static string RecentPath = null;
+        /// <summary>
+        /// 直近のパスと新規パスから、参照できるパスを取得
+        /// </summary>
+        /// <param name="init_folder"></param>
+        /// <returns></returns>
+        public static string GetIntialDirectory(string init_folder)
+        {
+            if (string.IsNullOrEmpty(init_folder))
+                if (string.IsNullOrEmpty(RecentPath))
+                    return Directory.GetCurrentDirectory();
+                else
+                    return RecentPath;
+            else 
+                return init_folder;
+        }
+
 
         /// <summary>
         /// コンストラクタ
@@ -363,6 +397,25 @@ namespace SSTools
             FIlterListClass.MakeComboBox(CbFilter, _filterList);
 
         }
+        /// <summary>
+        /// 表示された
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+
+            if (string.IsNullOrEmpty(_initialDirectory))
+            {
+                // 直近のパスから取得
+                _initialDirectory = GetIntialDirectory(_initialDirectory);
+                TbPath.Text = _initialDirectory;
+                // パスを表示
+                ShowSelectTree(_initialDirectory);
+            }
+        }
+
+
         /// <summary>
         /// 選択されたパスを表示
         /// </summary>
@@ -501,6 +554,10 @@ namespace SSTools
                 }
                 SafeFileName = files[0];
                 _fileName = full_paths[0];
+
+                // 直近のパスに設定
+                RecentPath = Path.GetDirectoryName(_fileName);
+
                 return true;
             }
             return false;

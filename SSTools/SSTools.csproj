@@ -128,6 +128,19 @@
     <Compile Include="CustomizeControl\ZoomPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Enumerations\Enumeration.Array.cs" />
+    <Compile Include="Enumerations\Enumeration.CartesianSquare.cs" />
+    <Compile Include="Enumerations\Enumeration.cs" />
+    <Compile Include="Enumerations\EnumerationItem.cs" />
+    <Compile Include="Enumerations\EnumerationItemBase.cs" />
+    <Compile Include="Enumerations\StringAttributes.cs" />
+    <Compile Include="Enumerations\StringAttributeUtility.cs" />
+    <Compile Include="Enumerations\UI\BitwiseEnumerationEditor.cs" />
+    <Compile Include="Enumerations\UI\DefinitionSet.cs" />
+    <Compile Include="Enumerations\UI\EnumerationEditor.cs" />
+    <Compile Include="Enumerations\UI\EnumerationEditorBase.cs" />
+    <Compile Include="Enumerations\UI\EnumerationUtility.cs" />
+    <Compile Include="Enumerations\UI\TypeConverters.cs" />
     <Compile Include="Form\ColorDialogWithLocation.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -269,5 +282,6 @@
   <ItemGroup>
     <None Include="CustomizeControl\Icon\Blank.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

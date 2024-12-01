@@ -128,6 +128,8 @@ namespace SSTools
         public FolderSelectDialog()
         {
             InitializeComponent();
+            // Viewを設定
+            FileView.View = FileSelectDialog.RecentView;
         }
         /// <summary>
         /// 表示された
@@ -216,7 +218,8 @@ namespace SSTools
             // ファイルの選択チェック
             if (CheckFolder() == false)
                 return;
-
+            // Viewの選択を保存
+            FileSelectDialog.RecentView = FileView.View;
             DialogResult = DialogResult.OK;
             this.Close();
 

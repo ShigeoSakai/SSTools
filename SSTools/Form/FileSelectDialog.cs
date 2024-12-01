@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Reflection.Emit;
+using static SSTools.FileListView;
 
 namespace SSTools
 {
@@ -382,6 +383,10 @@ namespace SSTools
             else 
                 return init_folder;
         }
+        /// <summary>
+        /// 最後に選択されたView
+        /// </summary>
+        public static FileListView.FILE_VIEW RecentView = FileListView.FILE_VIEW.LargeIcon;
 
 
         /// <summary>
@@ -390,6 +395,8 @@ namespace SSTools
         public FileSelectDialog()
         {
             InitializeComponent();
+            // リストViewを設定
+            FileView.View = RecentView;
 
             // デフォルトのフィルタリストを作成
             _filterList = FIlterListClass.MakeList(Filter);
@@ -575,6 +582,8 @@ namespace SSTools
             if (CheckAndStoreFileNames() == false)
                 return;
 
+            // 現在のViewの選択を保存
+            RecentView = FileView.View;
             DialogResult = DialogResult.OK;
             this.Close();
 

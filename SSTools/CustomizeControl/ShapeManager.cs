@@ -327,6 +327,26 @@ namespace SSTools
             }
         }
         /// <summary>
+        /// パターンを指定して削除
+        /// </summary>
+        /// <param name="pattern"></param>
+        /// <returns></returns>
+        public bool RemovePattern(string pattern)
+        {
+            bool isDel = false;
+            Regex regex = new Regex(pattern);
+            foreach (KeyValuePair<string, BaseShape> shape in shapeDictionary)
+            {
+                if ((regex.IsMatch(shape.Key)) || (regex.IsMatch(shape.Value.Name)))
+                {
+                    shapeDictionary.Remove(shape.Key);
+                    isDel |= true;
+                }
+            }
+            return isDel;
+        }
+
+        /// <summary>
         /// 指定図形のプロパティを設定する
         /// </summary>
         /// <param name="pattern">取得する図形名の正規表現</param>

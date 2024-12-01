@@ -569,6 +569,14 @@ namespace SSTools
         {
            return _Shapes.Remove(name);
         }
+
+        public bool RemovePattern(string pattern)
+        {
+            return _Shapes.RemovePattern(pattern);
+        }
+
+
+
         public void ClearShape()
         {
             _Shapes.ClearShape();

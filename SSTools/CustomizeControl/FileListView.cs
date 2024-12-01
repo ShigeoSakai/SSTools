@@ -141,11 +141,10 @@ namespace SSTools
 			ListViewFile.Columns[CHeaderUpdateDate.Index].AutoResize(ColumnHeaderAutoResizeStyle.HeaderSize);
 			ListViewFile.Columns[CHeaderAccessDate.Index].AutoResize(ColumnHeaderAutoResizeStyle.HeaderSize);
 		}
-
-		/// <summary>
-		/// 表示(View)
-		/// </summary>
-		private FILE_VIEW m_view = FILE_VIEW.LargeIcon;
+        /// <summary>
+        /// 表示(View)
+        /// </summary>
+        private FILE_VIEW m_view = FILE_VIEW.LargeIcon;
 		/// <summary>
 		/// 表示(View)プロパティ
 		/// </summary>
@@ -197,7 +196,10 @@ namespace SSTools
 					SetViewRadioButton(m_view);
 
 					ListViewFile.EndUpdate();
-				}
+					// 項目に合わせて自動調整
+					ListViewFile.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+
+                }
 			}
 		}
 		/// <summary>
@@ -647,10 +649,11 @@ namespace SSTools
                 }
 				_selectRequest.Clear();
             }
+            // 項目に合わせて自動調整
+            ListViewFile.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             ListViewFile.EndUpdate();
 
             ListViewFile.Refresh();
-
         }
 		/// <summary>
 		/// ファイルサイズの単位

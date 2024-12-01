@@ -306,22 +306,24 @@ namespace SSTools
                     contf |= SHCONTF.SHCONTF_INCLUDEHIDDEN;
 
                 uint hRes = ShellFolder.EnumObjects(IntPtr.Zero, contf, out pEnum);
-                if (hRes != 0)
-                    Marshal.ThrowExceptionForHR((int)hRes);
-
-                if (pEnum != null)
+                //if (hRes != 0)
+                //    Marshal.ThrowExceptionForHR((int)hRes);
+                if (hRes == 0)
                 {
-                    IntPtr pIDL = IntPtr.Zero;
-                    Int32 iGot = 0;
+                    if (pEnum != null)
+                    {
+                        IntPtr pIDL = IntPtr.Zero;
+                        Int32 iGot = 0;
 
-                    pEnum.Next(1, out pIDL, out iGot);
+                        pEnum.Next(1, out pIDL, out iGot);
 
-                    bool result = ((pIDL.Equals(IntPtr.Zero) == false) && (iGot == 1));
+                        bool result = ((pIDL.Equals(IntPtr.Zero) == false) && (iGot == 1));
 
-                    if (pIDL.Equals(IntPtr.Zero) == false)
-                        Marshal.FreeCoTaskMem(pIDL);
-                    Marshal.ReleaseComObject(pEnum);
-                    return result;
+                        if (pIDL.Equals(IntPtr.Zero) == false)
+                            Marshal.FreeCoTaskMem(pIDL);
+                        Marshal.ReleaseComObject(pEnum);
+                        return result;
+                    }
                 }
             }
             catch { }

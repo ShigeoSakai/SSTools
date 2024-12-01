@@ -682,8 +682,9 @@ namespace SSTools
 
                 if ((drawMask) && (maskImage_ != null))
                 {
-                    g.DrawImage(maskImage_, 0, 0);
-                }
+					g.DrawImage(maskImage_, new Rectangle(0, 0, base.Image.Width, base.Image.Height),
+							0, 0, base.Image.Width, base.Image.Height, GraphicsUnit.Pixel, maskImageAttribute);
+				}
                 if ((drawShape) && (_Shapes.Count > 0))
                 {
                     DrawShape(g);

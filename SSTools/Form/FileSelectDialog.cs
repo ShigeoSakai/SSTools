@@ -531,7 +531,7 @@ namespace SSTools
         private bool CheckAndStoreFileNames()
         {
             string[] files = GetFilenamesFromTextbox(TbSelectFiles);
-            if (files.Length > 0)
+            if ((files != null) && (files.Length > 0))
             {
                 string[] full_paths = new string[files.Length];
                 

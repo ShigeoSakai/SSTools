@@ -27,8 +27,6 @@ namespace SSTools
             return false;
         }
 
-        private static Object lock_obj = new Object();
-
 		/// <summary>
 		/// Constructor. Creates the ShellItem object for the Desktop.
 		/// </summary>
@@ -37,7 +35,6 @@ namespace SSTools
             // new ShellItem() can only be called once.
             // if (m_bHaveRootShell)
             //     throw new Exception("The Desktop shell item already exists so cannot be created again.");
-            lock (lock_obj)
             {
                 // Obtain the root IShellFolder interface.
                 int hRes = SHGetDesktopFolder(ref m_shRootShell);
@@ -191,12 +188,12 @@ namespace SSTools
                 
                 }
                 // アンマネージドリソース解放
-    //            if (m_shRootShell != null)
-    //            {
-    //                Marshal.ReleaseComObject(m_shRootShell);
-    //                m_shRootShell = null;
-				//	m_bHasSubFolder = false;
-				//}
+                if (m_shRootShell != null)
+                {
+                    Marshal.ReleaseComObject(m_shRootShell);
+                    m_shRootShell = null;
+					m_bHasSubFolder = false;
+				}
                 // Release the IShellFolder interface of this shell item.
                 if (m_shShellFolder != null)
                 {

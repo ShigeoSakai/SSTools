@@ -20,11 +20,13 @@ namespace SSTools
 		/// </summary>
 		public bool SubFolderIsDummy { get; set; } = false;
 
+		private ShellItem m_shDesktop = null;
+
 		public FolderTreeNode(ref ImageList imageList, bool isShowHidenFolder,
 			Environment.SpecialFolder folder = Environment.SpecialFolder.Desktop) : base()
 		{
 			// Create the root shell item.
-			ShellItem m_shDesktop = new ShellItem(folder);
+			m_shDesktop = new ShellItem(folder);
 			CreateNode(m_shDesktop, ref imageList);
 
 			// Now we need to add any children to the root node.
@@ -82,6 +84,11 @@ namespace SSTools
 						treeNode.Dispose();
                 }
 				Nodes.Clear();
+			}
+			if (m_shDesktop != null)
+			{
+				m_shDesktop.Dispose();
+				m_shDesktop = null;
 			}
 			// ShellItemのクリア
 			if (ShellItem != null)

@@ -85,19 +85,24 @@ namespace SSTools
                 }
 				Nodes.Clear();
 			}
-			if (m_shDesktop != null)
-			{
-				m_shDesktop.Dispose();
-				m_shDesktop = null;
-			}
-			// ShellItemのクリア
-			if (ShellItem != null)
-			{
-				ShellItem.Dispose();
-				ShellItem = null;
-			}
 		}
-		public void ExpandSubFolder(ref ImageList imgList, bool isShowHidenFolder = false)
+		public void DisposeRoot()
+		{
+            if (m_shDesktop != null)
+            {
+                m_shDesktop.Dispose();
+                m_shDesktop = null;
+            }
+            // ShellItemのクリア
+            if (ShellItem != null)
+            {
+                ShellItem.Dispose();
+                ShellItem = null;
+            }
+        }
+
+
+        public void ExpandSubFolder(ref ImageList imgList, bool isShowHidenFolder = false)
 		{
 			if (SubFolderIsDummy)
 			{

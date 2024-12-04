@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SSTools
 {
-	public partial class FolderTreeView : TreeView
+	public partial class FolderTreeView : TreeView 
 	{
 		private FolderTreeNode rootNode = null;
 		private bool first_expand = false;
@@ -40,7 +40,29 @@ namespace SSTools
 
 			LoadRootNodes(rootFolder);
 		}
-		[Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        /// <summary> 
+        /// 使用中のリソースをすべてクリーンアップします。
+        /// </summary>
+        /// <param name="disposing">マネージド リソースを破棄する場合は true を指定し、その他の場合は false を指定します。</param>
+        protected override void Dispose(bool disposing)
+        {
+			if (rootNode != null)
+			{
+				rootNode.Dispose();
+				rootNode.DisposeRoot();
+                rootNode = null;
+            }
+
+
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+
+        [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
 		public new TreeNodeCollection Nodes
 		{
 			get { return base.Nodes; }

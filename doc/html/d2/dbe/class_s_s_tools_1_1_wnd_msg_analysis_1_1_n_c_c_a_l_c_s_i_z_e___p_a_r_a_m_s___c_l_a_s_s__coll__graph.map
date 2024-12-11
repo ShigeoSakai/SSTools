@@ -1,0 +1,9 @@
+<map id="SSTools.WndMsgAnalysis.NCCALCSIZE_PARAMS_CLASS" name="SSTools.WndMsgAnalysis.NCCALCSIZE_PARAMS_CLASS">
+<area shape="rect" id="Node000001" title=" " alt="" coords="151,235,417,277"/>
+<area shape="rect" id="Node000002" href="$db/da3/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_n_c_c_a_l_c_s_i_z_e___p_a_r_a_m_s.html" title="WM_NCCALCSIZE" alt="" coords="5,128,272,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,178,257,232,254,236,178,182"/>
+<area shape="rect" id="Node000003" href="$d9/d5e/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_r_e_c_t.html" title="RECT構造体" alt="" coords="30,5,247,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="141,47,141,128,136,128,136,47"/>
+<area shape="rect" id="Node000004" href="$de/dfb/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_w_i_n_d_o_w_p_o_s___p_a_r_a_m_s.html" title="WINDOWPOS" alt="" coords="296,128,565,171"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="391,182,314,236,311,232,388,178"/>
+</map>

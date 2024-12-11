@@ -1,0 +1,7 @@
+<map id="SSTools.ShellItem.ShellItem" name="SSTools.ShellItem.ShellItem">
+<area shape="rect" id="Node000001" title="Constructor. Create a sub&#45;item shell item object." alt="" coords="5,35,194,61"/>
+<area shape="rect" id="Node000002" href="$d6/ddc/class_s_s_tools_1_1_shell_item.html#a6db7ebdc287081a8165edd18f0e618f1" title="Gets the system path for this shell item." alt="" coords="242,5,423,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,34,226,29,226,35,194,39"/>
+<area shape="rect" id="Node000003" href="$d6/ddc/class_s_s_tools_1_1_shell_item.html#a42babd61d7ede189e27ec8a70a74043a" title="本当にサブフォルダがあるか？" alt="" coords="243,56,422,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,57,228,61,227,67,193,62"/>
+</map>

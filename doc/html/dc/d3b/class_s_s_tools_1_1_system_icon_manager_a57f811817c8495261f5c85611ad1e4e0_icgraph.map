@@ -1,0 +1,7 @@
+<map id="SSTools.SystemIconManager.GetIcon" name="SSTools.SystemIconManager.GetIcon">
+<area shape="rect" id="Node000001" title="アイコンの取得" alt="" coords="252,39,450,81"/>
+<area shape="rect" id="Node000002" href="$dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#aea7ed6c4b3fdbd831d35a307634d5472" title="画像リストに全てのアイコンを格納する" alt="" coords="5,5,204,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,47,204,43,205,37,236,42"/>
+<area shape="rect" id="Node000003" href="$dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#a390b999c4527d517e0846a305f21d045" title="画像リストにアイコンを格納する" alt="" coords="5,72,204,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,78,205,83,204,77,236,73"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="SSTools.ZoomPictureBox.OnDoubleClick" name="SSTools.ZoomPictureBox.OnDoubleClick">
+<area shape="rect" id="Node000001" title="ダブルクリック時の処理" alt="" coords="5,5,198,48"/>
+<area shape="rect" id="Node000002" href="$d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a0588979d0f992d59415686ec0f2831b9" title="表示エリア確定イベント発行" alt="" coords="246,5,438,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,24,230,24,230,29,198,29"/>
+</map>

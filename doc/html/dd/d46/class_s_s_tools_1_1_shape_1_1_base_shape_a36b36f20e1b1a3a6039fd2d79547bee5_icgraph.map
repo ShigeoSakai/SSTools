@@ -1,0 +1,7 @@
+<map id="SSTools.Shape.BaseShape.DrawPoint" name="SSTools.Shape.BaseShape.DrawPoint">
+<area shape="rect" id="Node000001" title="点の描画" alt="" coords="300,23,486,65"/>
+<area shape="rect" id="Node000002" href="$d9/d44/class_s_s_tools_1_1_shape_1_1_circle_shape.html#aa3a6087b94c3f273b6e73f4003338ccc" title="描画" alt="" coords="18,5,239,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="284,36,239,32,240,27,284,31"/>
+<area shape="rect" id="Node000003" href="$d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a951a4ff0740fdc972edc7e83b6ec02e2" title="描画" alt="" coords="5,56,252,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,57,252,60,252,55,284,52"/>
+</map>

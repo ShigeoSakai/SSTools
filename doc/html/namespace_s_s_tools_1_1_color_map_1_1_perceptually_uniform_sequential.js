@@ -1,8 +1,0 @@
-var namespace_s_s_tools_1_1_color_map_1_1_perceptually_uniform_sequential =
-[
-    [ "CividisColorMap", "class_s_s_tools_1_1_color_map_1_1_perceptually_uniform_sequential_1_1_cividis_color_map.html", "class_s_s_tools_1_1_color_map_1_1_perceptually_uniform_sequential_1_1_cividis_color_map" ],
-    [ "InfernoColorMap", "class_s_s_tools_1_1_color_map_1_1_perceptually_uniform_sequential_1_1_inferno_color_map.html", "class_s_s_tools_1_1_color_map_1_1_perceptually_uniform_sequential_1_1_inferno_color_map" ],
-    [ "MagmaColorMap", "class_s_s_tools_1_1_color_map_1_1_perceptually_uniform_sequential_1_1_magma_color_map.html", "class_s_s_tools_1_1_color_map_1_1_perceptually_uniform_sequential_1_1_magma_color_map" ],
-    [ "PlasmaColorMap", "class_s_s_tools_1_1_color_map_1_1_perceptually_uniform_sequential_1_1_plasma_color_map.html", "class_s_s_tools_1_1_color_map_1_1_perceptually_uniform_sequential_1_1_plasma_color_map" ],
-    [ "ViridisColorMap", "class_s_s_tools_1_1_color_map_1_1_perceptually_uniform_sequential_1_1_viridis_color_map.html", "class_s_s_tools_1_1_color_map_1_1_perceptually_uniform_sequential_1_1_viridis_color_map" ]
-];

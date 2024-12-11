@@ -1,0 +1,562 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SSTools: SSTools.FullscreenForm クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SSTools
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d8/dad/class_s_s_tools_1_1_fullscreen_form.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="#events">イベント</a> &#124;
+<a href="../../df/dc5/class_s_s_tools_1_1_fullscreen_form-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">SSTools.FullscreenForm クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>フルスクリーン表示対応フォーム  
+ <a href="#details">[詳解]</a></p>
+<div class="dynheader">
+SSTools.FullscreenForm の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/dab/class_s_s_tools_1_1_fullscreen_form__inherit__graph.png" border="0" usemap="#a_s_s_tools_8_fullscreen_form_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_s_s_tools_8_fullscreen_form_inherit__map" id="a_s_s_tools_8_fullscreen_form_inherit__map">
+<area shape="rect" title="フルスクリーン表示対応フォーム" alt="" coords="10,96,174,123"/>
+<area shape="rect" title=" " alt="" coords="5,5,179,48"/>
+<area shape="poly" title=" " alt="" coords="86,64,88,95,83,96,80,64"/>
+<area shape="poly" title=" " alt="" coords="104,64,101,96,96,95,98,64"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+SSTools.FullscreenForm 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/daa/class_s_s_tools_1_1_fullscreen_form__coll__graph.png" border="0" usemap="#a_s_s_tools_8_fullscreen_form_coll__map" alt="Collaboration graph"/></div>
+<map name="a_s_s_tools_8_fullscreen_form_coll__map" id="a_s_s_tools_8_fullscreen_form_coll__map">
+<area shape="rect" title="フルスクリーン表示対応フォーム" alt="" coords="10,96,174,123"/>
+<area shape="rect" title=" " alt="" coords="5,5,179,48"/>
+<area shape="poly" title=" " alt="" coords="86,64,88,95,83,96,80,64"/>
+<area shape="poly" title=" " alt="" coords="104,64,101,96,96,95,98,64"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a06a68dc420f463d50cfeb17082fa9cb5" id="r_a06a68dc420f463d50cfeb17082fa9cb5"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06a68dc420f463d50cfeb17082fa9cb5">WindowShowStateChangeEventHandler</a> (object sender, <a class="el" href="../../d7/db1/namespace_s_s_tools.html#a7e92970dfe9fbee83411343b82b2eac9">FullscreenFormWindowShowState</a> newState)</td></tr>
+<tr class="memdesc:a06a68dc420f463d50cfeb17082fa9cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ表示状態更新イベントハンドラ  <br /></td></tr>
+<tr class="separator:a06a68dc420f463d50cfeb17082fa9cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad321e7ec2188699568123176ffb7761a" id="r_ad321e7ec2188699568123176ffb7761a"><td class="memItemLeft" align="right" valign="top"><a id="ad321e7ec2188699568123176ffb7761a" name="ad321e7ec2188699568123176ffb7761a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FullscreenForm</b> ()</td></tr>
+<tr class="memdesc:ad321e7ec2188699568123176ffb7761a"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="separator:ad321e7ec2188699568123176ffb7761a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:aa643017385678aecf1158ebd5ca55721" id="r_aa643017385678aecf1158ebd5ca55721"><td class="memItemLeft" align="right" valign="top"><a id="aa643017385678aecf1158ebd5ca55721" name="aa643017385678aecf1158ebd5ca55721"></a>
+static string&#160;</td><td class="memItemRight" valign="bottom"><b>Version</b> = &quot;0.0.0.0&quot;</td></tr>
+<tr class="memdesc:aa643017385678aecf1158ebd5ca55721"><td class="mdescLeft">&#160;</td><td class="mdescRight">バージョン情報 <br /></td></tr>
+<tr class="separator:aa643017385678aecf1158ebd5ca55721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eee1a7d6209d11e4098053e65bbfc6f" id="r_a6eee1a7d6209d11e4098053e65bbfc6f"><td class="memItemLeft" align="right" valign="top"><a id="a6eee1a7d6209d11e4098053e65bbfc6f" name="a6eee1a7d6209d11e4098053e65bbfc6f"></a>
+static string&#160;</td><td class="memItemRight" valign="bottom"><b>Copyright</b> = &quot;&quot;</td></tr>
+<tr class="memdesc:a6eee1a7d6209d11e4098053e65bbfc6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copyright情報 <br /></td></tr>
+<tr class="separator:a6eee1a7d6209d11e4098053e65bbfc6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a682ea49c05b9be85f6edcbc0c48828c2" id="r_a682ea49c05b9be85f6edcbc0c48828c2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a682ea49c05b9be85f6edcbc0c48828c2">OnWindowShowStateChangeEvent</a> (<a class="el" href="../../d7/db1/namespace_s_s_tools.html#a7e92970dfe9fbee83411343b82b2eac9">FullscreenFormWindowShowState</a> newState)</td></tr>
+<tr class="memdesc:a682ea49c05b9be85f6edcbc0c48828c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ表示状態更新イベント発行  <br /></td></tr>
+<tr class="separator:a682ea49c05b9be85f6edcbc0c48828c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bea62ff4d0f6360b96155ff97f48bae" id="r_a2bea62ff4d0f6360b96155ff97f48bae"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bea62ff4d0f6360b96155ff97f48bae">OnClientSizeChanged</a> (EventArgs e)</td></tr>
+<tr class="memdesc:a2bea62ff4d0f6360b96155ff97f48bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォームのサイズ変更  <br /></td></tr>
+<tr class="separator:a2bea62ff4d0f6360b96155ff97f48bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120728adc8d58d31435ad53320866d29" id="r_a120728adc8d58d31435ad53320866d29"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a120728adc8d58d31435ad53320866d29">OnToolStripMenuItemNormal</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:a120728adc8d58d31435ad53320866d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">メニュー（元に戻す）  <br /></td></tr>
+<tr class="separator:a120728adc8d58d31435ad53320866d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bdf1bc02bee0bdf8d8cfff5465dd0b0" id="r_a3bdf1bc02bee0bdf8d8cfff5465dd0b0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bdf1bc02bee0bdf8d8cfff5465dd0b0">OnToolStripMenuItemMinimized</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:a3bdf1bc02bee0bdf8d8cfff5465dd0b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">メニュー（最小化）  <br /></td></tr>
+<tr class="separator:a3bdf1bc02bee0bdf8d8cfff5465dd0b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7e97d6fed4dc5099b98546e9263d509" id="r_ac7e97d6fed4dc5099b98546e9263d509"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7e97d6fed4dc5099b98546e9263d509">OnToolStripMenuItemMaximized</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:ac7e97d6fed4dc5099b98546e9263d509"><td class="mdescLeft">&#160;</td><td class="mdescRight">メニュー（最大化）  <br /></td></tr>
+<tr class="separator:ac7e97d6fed4dc5099b98546e9263d509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9315fcf2724da43c1959c62833849b56" id="r_a9315fcf2724da43c1959c62833849b56"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9315fcf2724da43c1959c62833849b56">Dispose</a> (bool disposing)</td></tr>
+<tr class="memdesc:a9315fcf2724da43c1959c62833849b56"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用中のリソースをすべてクリーンアップします。  <br /></td></tr>
+<tr class="separator:a9315fcf2724da43c1959c62833849b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a9725cfa61a057cd3f4fabd0286fa3c18" id="r_a9725cfa61a057cd3f4fabd0286fa3c18"><td class="memItemLeft" align="right" valign="top"><a id="a9725cfa61a057cd3f4fabd0286fa3c18" name="a9725cfa61a057cd3f4fabd0286fa3c18"></a>
+ContextMenuStrip&#160;</td><td class="memItemRight" valign="bottom"><b>DisplayMenuStrip</b></td></tr>
+<tr class="separator:a9725cfa61a057cd3f4fabd0286fa3c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:ad26d46cd667a43b89af7d22c6adf4523" id="r_ad26d46cd667a43b89af7d22c6adf4523"><td class="memItemLeft" align="right" valign="top"><a id="ad26d46cd667a43b89af7d22c6adf4523" name="ad26d46cd667a43b89af7d22c6adf4523"></a>
+<a class="el" href="../../d7/db1/namespace_s_s_tools.html#a7e92970dfe9fbee83411343b82b2eac9">FullscreenFormWindowShowState</a>&#160;</td><td class="memItemRight" valign="bottom"><b>WindowShowState</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:ad26d46cd667a43b89af7d22c6adf4523"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ表示状態プロパティ <br /></td></tr>
+<tr class="separator:ad26d46cd667a43b89af7d22c6adf4523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f8d14db1e086b7d4137f9475c7aee8c" id="r_a2f8d14db1e086b7d4137f9475c7aee8c"><td class="memItemLeft" align="right" valign="top">new FormWindowState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f8d14db1e086b7d4137f9475c7aee8c">WindowState</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a2f8d14db1e086b7d4137f9475c7aee8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ表示プロパティ  <br /></td></tr>
+<tr class="separator:a2f8d14db1e086b7d4137f9475c7aee8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ec50b7d4282dc1077859359dce2283" id="r_a40ec50b7d4282dc1077859359dce2283"><td class="memItemLeft" align="right" valign="top">new FormBorderStyle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40ec50b7d4282dc1077859359dce2283">FormBorderStyle</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a40ec50b7d4282dc1077859359dce2283"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボーダースタイルプロパティ  <br /></td></tr>
+<tr class="separator:a40ec50b7d4282dc1077859359dce2283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29fb9c2e891ae75e9468d4a839d7cd8d" id="r_a29fb9c2e891ae75e9468d4a839d7cd8d"><td class="memItemLeft" align="right" valign="top">new Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29fb9c2e891ae75e9468d4a839d7cd8d">ClientSize</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a29fb9c2e891ae75e9468d4a839d7cd8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">クライアントサイズプロパティ  <br /></td></tr>
+<tr class="separator:a29fb9c2e891ae75e9468d4a839d7cd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab375416daf7a64e9a45b080438d6938d" id="r_ab375416daf7a64e9a45b080438d6938d"><td class="memItemLeft" align="right" valign="top"><a id="ab375416daf7a64e9a45b080438d6938d" name="ab375416daf7a64e9a45b080438d6938d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>MemuBarAlwaysShow</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:ab375416daf7a64e9a45b080438d6938d"><td class="mdescLeft">&#160;</td><td class="mdescRight">メニューバー常時表示プロパティ <br /></td></tr>
+<tr class="separator:ab375416daf7a64e9a45b080438d6938d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19fd929ee530e0b17ffd41c28424852" id="r_af19fd929ee530e0b17ffd41c28424852"><td class="memItemLeft" align="right" valign="top"><a id="af19fd929ee530e0b17ffd41c28424852" name="af19fd929ee530e0b17ffd41c28424852"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>StatusBarAlwaysShow</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:af19fd929ee530e0b17ffd41c28424852"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステータスバー常時表示プロパティ <br /></td></tr>
+<tr class="separator:af19fd929ee530e0b17ffd41c28424852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+イベント</h2></td></tr>
+<tr class="memitem:a4820880e5fd203b09c2f5591851f7a20" id="r_a4820880e5fd203b09c2f5591851f7a20"><td class="memItemLeft" align="right" valign="top"><a id="a4820880e5fd203b09c2f5591851f7a20" name="a4820880e5fd203b09c2f5591851f7a20"></a>
+<a class="el" href="#a06a68dc420f463d50cfeb17082fa9cb5">WindowShowStateChangeEventHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><b>WindowShowStateChange</b></td></tr>
+<tr class="memdesc:a4820880e5fd203b09c2f5591851f7a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ表示状態更新イベント <br /></td></tr>
+<tr class="separator:a4820880e5fd203b09c2f5591851f7a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>フルスクリーン表示対応フォーム </p>
+<p>プロパティ:WindowShowStateを使って、ウィンドウ表示状態を更新する </p>
+</div><h2 class="groupheader">メソッド詳解</h2>
+<a id="a9315fcf2724da43c1959c62833849b56" name="a9315fcf2724da43c1959c62833849b56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9315fcf2724da43c1959c62833849b56">&#9670;&#160;</a></span>Dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.FullscreenForm.Dispose </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>disposing</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使用中のリソースをすべてクリーンアップします。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disposing</td><td>マネージド リソースを破棄する場合は true を指定し、その他の場合は false を指定します。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2bea62ff4d0f6360b96155ff97f48bae" name="a2bea62ff4d0f6360b96155ff97f48bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bea62ff4d0f6360b96155ff97f48bae">&#9670;&#160;</a></span>OnClientSizeChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.FullscreenForm.OnClientSizeChanged </td>
+          <td>(</td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>フォームのサイズ変更 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#ad26d46cd667a43b89af7d22c6adf4523">SSTools.FullscreenForm.WindowShowState</a>.</p>
+
+</div>
+</div>
+<a id="ac7e97d6fed4dc5099b98546e9263d509" name="ac7e97d6fed4dc5099b98546e9263d509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7e97d6fed4dc5099b98546e9263d509">&#9670;&#160;</a></span>OnToolStripMenuItemMaximized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SSTools.FullscreenForm.OnToolStripMenuItemMaximized </td>
+          <td>(</td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>sender</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>メニュー（最大化） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sender</td><td></td></tr>
+    <tr><td class="paramname">e</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#ad26d46cd667a43b89af7d22c6adf4523">SSTools.FullscreenForm.WindowShowState</a>.</p>
+
+</div>
+</div>
+<a id="a3bdf1bc02bee0bdf8d8cfff5465dd0b0" name="a3bdf1bc02bee0bdf8d8cfff5465dd0b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bdf1bc02bee0bdf8d8cfff5465dd0b0">&#9670;&#160;</a></span>OnToolStripMenuItemMinimized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SSTools.FullscreenForm.OnToolStripMenuItemMinimized </td>
+          <td>(</td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>sender</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>メニュー（最小化） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sender</td><td></td></tr>
+    <tr><td class="paramname">e</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#ad26d46cd667a43b89af7d22c6adf4523">SSTools.FullscreenForm.WindowShowState</a>.</p>
+
+</div>
+</div>
+<a id="a120728adc8d58d31435ad53320866d29" name="a120728adc8d58d31435ad53320866d29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a120728adc8d58d31435ad53320866d29">&#9670;&#160;</a></span>OnToolStripMenuItemNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SSTools.FullscreenForm.OnToolStripMenuItemNormal </td>
+          <td>(</td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>sender</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>メニュー（元に戻す） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sender</td><td></td></tr>
+    <tr><td class="paramname">e</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#ad26d46cd667a43b89af7d22c6adf4523">SSTools.FullscreenForm.WindowShowState</a>.</p>
+
+</div>
+</div>
+<a id="a682ea49c05b9be85f6edcbc0c48828c2" name="a682ea49c05b9be85f6edcbc0c48828c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682ea49c05b9be85f6edcbc0c48828c2">&#9670;&#160;</a></span>OnWindowShowStateChangeEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SSTools.FullscreenForm.OnWindowShowStateChangeEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/db1/namespace_s_s_tools.html#a7e92970dfe9fbee83411343b82b2eac9">FullscreenFormWindowShowState</a></td>          <td class="paramname"><span class="paramname"><em>newState</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ウィンドウ表示状態更新イベント発行 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newState</td><td>更新後のウィンドウ表示状態</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a4820880e5fd203b09c2f5591851f7a20">SSTools.FullscreenForm.WindowShowStateChange</a>.</p>
+
+</div>
+</div>
+<a id="a06a68dc420f463d50cfeb17082fa9cb5" name="a06a68dc420f463d50cfeb17082fa9cb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a68dc420f463d50cfeb17082fa9cb5">&#9670;&#160;</a></span>WindowShowStateChangeEventHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">delegate void SSTools.FullscreenForm.WindowShowStateChangeEventHandler </td>
+          <td>(</td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>sender</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/db1/namespace_s_s_tools.html#a7e92970dfe9fbee83411343b82b2eac9">FullscreenFormWindowShowState</a></td>          <td class="paramname"><span class="paramname"><em>newState</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ウィンドウ表示状態更新イベントハンドラ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sender</td><td>送信元</td></tr>
+    <tr><td class="paramname">newState</td><td>更新後のウィンドウ表示状態</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ詳解</h2>
+<a id="a29fb9c2e891ae75e9468d4a839d7cd8d" name="a29fb9c2e891ae75e9468d4a839d7cd8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29fb9c2e891ae75e9468d4a839d7cd8d">&#9670;&#160;</a></span>ClientSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">new Size SSTools.FullscreenForm.ClientSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>クライアントサイズプロパティ </p>
+<p>既存プロパティを不可視にする </p>
+
+</div>
+</div>
+<a id="a40ec50b7d4282dc1077859359dce2283" name="a40ec50b7d4282dc1077859359dce2283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40ec50b7d4282dc1077859359dce2283">&#9670;&#160;</a></span>FormBorderStyle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">new FormBorderStyle SSTools.FullscreenForm.FormBorderStyle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ボーダースタイルプロパティ </p>
+<p>既存プロパティを不可視にする </p>
+
+</div>
+</div>
+<a id="a2f8d14db1e086b7d4137f9475c7aee8c" name="a2f8d14db1e086b7d4137f9475c7aee8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f8d14db1e086b7d4137f9475c7aee8c">&#9670;&#160;</a></span>WindowState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">new FormWindowState SSTools.FullscreenForm.WindowState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ウィンドウ表示プロパティ </p>
+<p>既存プロパティを不可視にする </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SSTools/Form/<b>FullscreenForm.cs</b></li>
+<li>SSTools/Form/<b>FullscreenForm.Designer.cs</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/db1/namespace_s_s_tools.html">SSTools</a></li><li class="navelem"><a class="el" href="../../d8/dad/class_s_s_tools_1_1_fullscreen_form.html">FullscreenForm</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

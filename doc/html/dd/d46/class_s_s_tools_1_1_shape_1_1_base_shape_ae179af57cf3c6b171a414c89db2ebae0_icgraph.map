@@ -1,0 +1,17 @@
+<map id="SSTools.Shape.BaseShape.IsContain" name="SSTools.Shape.BaseShape.IsContain">
+<area shape="rect" id="Node000001" title="領域に図形が含まれるか" alt="" coords="764,48,951,91"/>
+<area shape="rect" id="Node000002" href="$d0/d70/class_s_s_tools_1_1_shape_manager.html#ab5ebe8673ebbf9754429dd876f911a85" title="描画(float)" alt="" coords="520,56,716,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="749,72,717,72,717,67,749,67"/>
+<area shape="rect" id="Node000003" href="$d0/d70/class_s_s_tools_1_1_shape_manager.html#a0fa3044022632cb9f8df7d38dd6adfcb" title="描画" alt="" coords="269,5,466,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="533,55,436,35,437,30,534,50"/>
+<area shape="rect" id="Node000004" href="$d0/d70/class_s_s_tools_1_1_shape_manager.html#a67716a6c0c69b71cd9f9ff15f4d9dc09" title="描画(int)" alt="" coords="269,56,466,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="504,72,466,72,466,67,504,67"/>
+<area shape="rect" id="Node000005" href="$d0/d70/class_s_s_tools_1_1_shape_manager.html#a5b1c69ea0df3f844f56c8d8f65f610a6" title="クリッピングした画像を取得" alt="" coords="263,107,472,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="534,89,437,109,436,103,533,84"/>
+<area shape="rect" id="Node000006" href="$d0/d70/class_s_s_tools_1_1_shape_manager.html#a022930420fb6c9ee4ec5fdb0c3160c35" title="図形がある領域のクリッピングした画像を取得" alt="" coords="5,48,215,75"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="290,105,171,78,172,73,292,100"/>
+<area shape="rect" id="Node000007" href="$d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#ab542a8380e339c3be83c15c0164880bc" title="図形が入る領域で画像を切り取り、ファイルに保存する" alt="" coords="7,99,213,141"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="247,123,213,123,213,117,247,117"/>
+<area shape="rect" id="Node000008" href="$d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a027ed911faf713c6d203b749f7208029" title="指定された矩形で画像を切り取り、ファイルに保存する" alt="" coords="7,165,213,208"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="299,140,196,167,195,162,297,135"/>
+</map>

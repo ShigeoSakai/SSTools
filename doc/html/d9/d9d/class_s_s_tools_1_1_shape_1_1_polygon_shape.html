@@ -1,0 +1,749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SSTools: SSTools.Shape.PolygonShape クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SSTools
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="../../d6/d59/class_s_s_tools_1_1_shape_1_1_polygon_shape-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">SSTools.Shape.PolygonShape クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>多角形クラス  
+ <a href="#details">[詳解]</a></p>
+<div class="dynheader">
+SSTools.Shape.PolygonShape の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/dca/class_s_s_tools_1_1_shape_1_1_polygon_shape__inherit__graph.png" border="0" usemap="#a_s_s_tools_8_shape_8_polygon_shape_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_s_s_tools_8_shape_8_polygon_shape_inherit__map" id="a_s_s_tools_8_shape_8_polygon_shape_inherit__map">
+<area shape="rect" title="多角形クラス" alt="" coords="5,80,205,107"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html" title="図形基本クラス" alt="" coords="61,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="108,48,108,80,102,80,102,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+SSTools.Shape.PolygonShape 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d77/class_s_s_tools_1_1_shape_1_1_polygon_shape__coll__graph.png" border="0" usemap="#a_s_s_tools_8_shape_8_polygon_shape_coll__map" alt="Collaboration graph"/></div>
+<map name="a_s_s_tools_8_shape_8_polygon_shape_coll__map" id="a_s_s_tools_8_shape_8_polygon_shape_coll__map">
+<area shape="rect" title="多角形クラス" alt="" coords="5,80,205,107"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html" title="図形基本クラス" alt="" coords="61,5,149,32"/>
+<area shape="poly" title=" " alt="" coords="108,48,108,80,102,80,102,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:abbbdd5f892f6388fb55b764ddb6c88e4" id="r_abbbdd5f892f6388fb55b764ddb6c88e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbbdd5f892f6388fb55b764ddb6c88e4">PolygonShape</a> (string name)</td></tr>
+<tr class="memdesc:abbbdd5f892f6388fb55b764ddb6c88e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ  <br /></td></tr>
+<tr class="separator:abbbdd5f892f6388fb55b764ddb6c88e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9f4a3a9c2121305cc563f28f238f546" id="r_ad9f4a3a9c2121305cc563f28f238f546"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9f4a3a9c2121305cc563f28f238f546">PolygonShape</a> (string name, IEnumerable&lt; <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae43961a4a0476d0f1788807c2fc39f47">Point</a> &gt; pointList, bool isClose=true, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>? color=null, float? lineWidth=null, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a4ca17aa58b47af231e63b88ff72c3126">DashStyle</a>? dashStyle=null, bool isFill=false, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>? fillColor=null)</td></tr>
+<tr class="memdesc:ad9f4a3a9c2121305cc563f28f238f546"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:ad9f4a3a9c2121305cc563f28f238f546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac83141991b82479bb45fe4ff893a0b14" id="r_ac83141991b82479bb45fe4ff893a0b14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac83141991b82479bb45fe4ff893a0b14">PolygonShape</a> (string name, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae43961a4a0476d0f1788807c2fc39f47">Point</a> startPoint, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>? color=null, float? lineWidth=null, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a4ca17aa58b47af231e63b88ff72c3126">DashStyle</a>? dashStyle=null, float? markerSize=null)</td></tr>
+<tr class="memdesc:ac83141991b82479bb45fe4ff893a0b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(編集図形)  <br /></td></tr>
+<tr class="separator:ac83141991b82479bb45fe4ff893a0b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff27a2ab720777025e230d72314d818" id="r_adff27a2ab720777025e230d72314d818"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adff27a2ab720777025e230d72314d818">PolygonShape</a> (<a class="el" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html">PolygonShape</a> src)</td></tr>
+<tr class="memdesc:adff27a2ab720777025e230d72314d818"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ  <br /></td></tr>
+<tr class="separator:adff27a2ab720777025e230d72314d818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb12cf936908b0fd2f1eae9967597de5" id="r_aeb12cf936908b0fd2f1eae9967597de5"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html">BaseShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb12cf936908b0fd2f1eae9967597de5">Clone</a> ()</td></tr>
+<tr class="memdesc:aeb12cf936908b0fd2f1eae9967597de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">クローンコピー  <br /></td></tr>
+<tr class="separator:aeb12cf936908b0fd2f1eae9967597de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec8c55a9c7b9004371185cae39ba43c" id="r_a8ec8c55a9c7b9004371185cae39ba43c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ec8c55a9c7b9004371185cae39ba43c">AddPoint</a> (<a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae43961a4a0476d0f1788807c2fc39f47">Point</a> point)</td></tr>
+<tr class="memdesc:a8ec8c55a9c7b9004371185cae39ba43c"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標の追加  <br /></td></tr>
+<tr class="separator:a8ec8c55a9c7b9004371185cae39ba43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcf4f4cb8a95b6f7e250ba18d1621014" id="r_afcf4f4cb8a95b6f7e250ba18d1621014"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcf4f4cb8a95b6f7e250ba18d1621014">IsContain</a> (RectangleF rect)</td></tr>
+<tr class="memdesc:afcf4f4cb8a95b6f7e250ba18d1621014"><td class="mdescLeft">&#160;</td><td class="mdescRight">領域に含まれるか？  <br /></td></tr>
+<tr class="separator:afcf4f4cb8a95b6f7e250ba18d1621014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08776870afe0b86b6a41cffef7d0d14c" id="r_a08776870afe0b86b6a41cffef7d0d14c"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08776870afe0b86b6a41cffef7d0d14c">Draw</a> (Graphics g, SizeF? size)</td></tr>
+<tr class="memdesc:a08776870afe0b86b6a41cffef7d0d14c"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画  <br /></td></tr>
+<tr class="separator:a08776870afe0b86b6a41cffef7d0d14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f99a0506ddb521450adaed9d7e7f55a" id="r_a3f99a0506ddb521450adaed9d7e7f55a"><td class="memItemLeft" align="right" valign="top">override Rectangle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f99a0506ddb521450adaed9d7e7f55a">GetDrawSize</a> ()</td></tr>
+<tr class="memdesc:a3f99a0506ddb521450adaed9d7e7f55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画領域サイズを取得  <br /></td></tr>
+<tr class="separator:a3f99a0506ddb521450adaed9d7e7f55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html">SSTools.Shape.BaseShape</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a760d6466dd64b77c9c30ddfe83abcc9b inherit pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a760d6466dd64b77c9c30ddfe83abcc9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a760d6466dd64b77c9c30ddfe83abcc9b">BaseShape</a> (string name)</td></tr>
+<tr class="memdesc:a760d6466dd64b77c9c30ddfe83abcc9b inherit pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:a760d6466dd64b77c9c30ddfe83abcc9b inherit pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac34113479bd9f47ed837b34790fdbf0d inherit pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_ac34113479bd9f47ed837b34790fdbf0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ac34113479bd9f47ed837b34790fdbf0d">BaseShape</a> (string name, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae43961a4a0476d0f1788807c2fc39f47">Point</a> point, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>? color=null, float? lineWidth=null, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a4ca17aa58b47af231e63b88ff72c3126">DashStyle</a>? dashStyle=null, float? markerSize=null)</td></tr>
+<tr class="memdesc:ac34113479bd9f47ed837b34790fdbf0d inherit pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:ac34113479bd9f47ed837b34790fdbf0d inherit pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5c88d3b94c86a0c8f0e8c0545ca878b inherit pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_ab5c88d3b94c86a0c8f0e8c0545ca878b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ab5c88d3b94c86a0c8f0e8c0545ca878b">BaseShape</a> (string name, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>? color=null, float? lineWidth=null, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a4ca17aa58b47af231e63b88ff72c3126">DashStyle</a>? dashStyle=null, float? markerSize=null)</td></tr>
+<tr class="memdesc:ab5c88d3b94c86a0c8f0e8c0545ca878b inherit pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:ab5c88d3b94c86a0c8f0e8c0545ca878b inherit pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d835cee9ea13cd4125f938e42f954e inherit pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a98d835cee9ea13cd4125f938e42f954e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a98d835cee9ea13cd4125f938e42f954e">BaseShape</a> (<a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html">BaseShape</a> src)</td></tr>
+<tr class="memdesc:a98d835cee9ea13cd4125f938e42f954e inherit pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ  <br /></td></tr>
+<tr class="separator:a98d835cee9ea13cd4125f938e42f954e inherit pub_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a337588d2c18cd7e1c5b456fb1bb409e4" id="r_a337588d2c18cd7e1c5b456fb1bb409e4"><td class="memItemLeft" align="right" valign="top"><a id="a337588d2c18cd7e1c5b456fb1bb409e4" name="a337588d2c18cd7e1c5b456fb1bb409e4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsClose</b> = true<code> [get, set]</code></td></tr>
+<tr class="memdesc:a337588d2c18cd7e1c5b456fb1bb409e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">閉じた図形か？ <br /></td></tr>
+<tr class="separator:a337588d2c18cd7e1c5b456fb1bb409e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b920eeb8d2294fe89c3f19b8304d07" id="r_a20b920eeb8d2294fe89c3f19b8304d07"><td class="memItemLeft" align="right" valign="top"><a id="a20b920eeb8d2294fe89c3f19b8304d07" name="a20b920eeb8d2294fe89c3f19b8304d07"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsEditing</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:a20b920eeb8d2294fe89c3f19b8304d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">編集中か？ <br /></td></tr>
+<tr class="separator:a20b920eeb8d2294fe89c3f19b8304d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eccbf8a5d2e56e87a3740a2b584671a" id="r_a6eccbf8a5d2e56e87a3740a2b584671a"><td class="memItemLeft" align="right" valign="top"><a id="a6eccbf8a5d2e56e87a3740a2b584671a" name="a6eccbf8a5d2e56e87a3740a2b584671a"></a>
+<a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae43961a4a0476d0f1788807c2fc39f47">Point</a>?&#160;</td><td class="memItemRight" valign="bottom"><b>ExtraPoint</b> = null<code> [get, set]</code></td></tr>
+<tr class="memdesc:a6eccbf8a5d2e56e87a3740a2b584671a"><td class="mdescLeft">&#160;</td><td class="mdescRight">編集中の最後の点座標 <br /></td></tr>
+<tr class="separator:a6eccbf8a5d2e56e87a3740a2b584671a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b2b62d43569d032318dfdbe550eb69" id="r_a80b2b62d43569d032318dfdbe550eb69"><td class="memItemLeft" align="right" valign="top"><a id="a80b2b62d43569d032318dfdbe550eb69" name="a80b2b62d43569d032318dfdbe550eb69"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Fill</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:a80b2b62d43569d032318dfdbe550eb69"><td class="mdescLeft">&#160;</td><td class="mdescRight">塗つぶすかどうか <br /></td></tr>
+<tr class="separator:a80b2b62d43569d032318dfdbe550eb69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2662192cd26b35d845fd812ef415666" id="r_af2662192cd26b35d845fd812ef415666"><td class="memItemLeft" align="right" valign="top"><a id="af2662192cd26b35d845fd812ef415666" name="af2662192cd26b35d845fd812ef415666"></a>
+<a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae43961a4a0476d0f1788807c2fc39f47">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><b>StartPoint</b><code> [get]</code></td></tr>
+<tr class="memdesc:af2662192cd26b35d845fd812ef415666"><td class="mdescLeft">&#160;</td><td class="mdescRight">開始点 <br /></td></tr>
+<tr class="separator:af2662192cd26b35d845fd812ef415666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c07522f5422971747bfd85e3b473cc" id="r_a89c07522f5422971747bfd85e3b473cc"><td class="memItemLeft" align="right" valign="top"><a id="a89c07522f5422971747bfd85e3b473cc" name="a89c07522f5422971747bfd85e3b473cc"></a>
+List&lt; <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae43961a4a0476d0f1788807c2fc39f47">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Points</b><code> [get]</code></td></tr>
+<tr class="memdesc:a89c07522f5422971747bfd85e3b473cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">点座標の取得 <br /></td></tr>
+<tr class="separator:a89c07522f5422971747bfd85e3b473cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_s_s_tools_1_1_shape_1_1_base_shape')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html">SSTools.Shape.BaseShape</a> に属する継承プロパティ</td></tr>
+<tr class="memitem:ad0de32725ad947d5ab05583ccda24b0b inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_ad0de32725ad947d5ab05583ccda24b0b"><td class="memItemLeft" align="right" valign="top">
+string&#160;</td><td class="memItemRight" valign="bottom"><b>Name</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:ad0de32725ad947d5ab05583ccda24b0b inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前 <br /></td></tr>
+<tr class="separator:ad0de32725ad947d5ab05583ccda24b0b inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae43961a4a0476d0f1788807c2fc39f47 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_ae43961a4a0476d0f1788807c2fc39f47"><td class="memItemLeft" align="right" valign="top">
+Point&#160;</td><td class="memItemRight" valign="bottom"><b>Point</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae43961a4a0476d0f1788807c2fc39f47 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">中心座標 <br /></td></tr>
+<tr class="separator:ae43961a4a0476d0f1788807c2fc39f47 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee350c9e7e502deb5252d3723171489 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_aeee350c9e7e502deb5252d3723171489"><td class="memItemLeft" align="right" valign="top">
+Color&#160;</td><td class="memItemRight" valign="bottom"><b>Color</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:aeee350c9e7e502deb5252d3723171489 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">色 <br /></td></tr>
+<tr class="separator:aeee350c9e7e502deb5252d3723171489 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e91d2ace6d36aa189d0ef15c80f0deb inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a4e91d2ace6d36aa189d0ef15c80f0deb"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>?&#160;</td><td class="memItemRight" valign="bottom"><b>FillColor</b> = Color.White<code> [get, set]</code></td></tr>
+<tr class="memdesc:a4e91d2ace6d36aa189d0ef15c80f0deb inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">塗りつぶし色 <br /></td></tr>
+<tr class="separator:a4e91d2ace6d36aa189d0ef15c80f0deb inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f1b8156462d2221eeea3e04f6b1e33d inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a5f1b8156462d2221eeea3e04f6b1e33d"><td class="memItemLeft" align="right" valign="top">
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LineWidth</b> = 1.0F<code> [get, set]</code></td></tr>
+<tr class="memdesc:a5f1b8156462d2221eeea3e04f6b1e33d inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">線幅 <br /></td></tr>
+<tr class="separator:a5f1b8156462d2221eeea3e04f6b1e33d inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af159a52ece422b612a8cd642d123a3cf inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_af159a52ece422b612a8cd642d123a3cf"><td class="memItemLeft" align="right" valign="top">
+float&#160;</td><td class="memItemRight" valign="bottom"><b>MarkerSize</b> = 10.0F<code> [get, set]</code></td></tr>
+<tr class="memdesc:af159a52ece422b612a8cd642d123a3cf inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">マーカーサイズ <br /></td></tr>
+<tr class="separator:af159a52ece422b612a8cd642d123a3cf inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca17aa58b47af231e63b88ff72c3126 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a4ca17aa58b47af231e63b88ff72c3126"><td class="memItemLeft" align="right" valign="top">
+DashStyle&#160;</td><td class="memItemRight" valign="bottom"><b>DashStyle</b> = DashStyle.Solid<code> [get, set]</code></td></tr>
+<tr class="memdesc:a4ca17aa58b47af231e63b88ff72c3126 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">線種 <br /></td></tr>
+<tr class="separator:a4ca17aa58b47af231e63b88ff72c3126 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addfde9c7820a881782cd1bb9c4a57c6e inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_addfde9c7820a881782cd1bb9c4a57c6e"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowLable</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:addfde9c7820a881782cd1bb9c4a57c6e inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル表示 <br /></td></tr>
+<tr class="separator:addfde9c7820a881782cd1bb9c4a57c6e inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd07559b4b5017d8106bf304392595b inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a2bd07559b4b5017d8106bf304392595b"><td class="memItemLeft" align="right" valign="top">
+string&#160;</td><td class="memItemRight" valign="bottom"><b>Text</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a2bd07559b4b5017d8106bf304392595b inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示文字列 <br /></td></tr>
+<tr class="separator:a2bd07559b4b5017d8106bf304392595b inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e5766e4261951f5c7cc7a8b59d3d04c inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a7e5766e4261951f5c7cc7a8b59d3d04c"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="../../d7/db1/namespace_s_s_tools.html#aadc7a5c2a68cdad766a47914b2a24f12">LABEL_POSITION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LabelPosition</b> = <a class="el" href="../../d7/db1/namespace_s_s_tools.html#aadc7a5c2a68cdad766a47914b2a24f12a747385047b85ae751f83adb36435a3c1">LABEL_POSITION.TOP_LEFT</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a7e5766e4261951f5c7cc7a8b59d3d04c inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル表示位置 <br /></td></tr>
+<tr class="separator:a7e5766e4261951f5c7cc7a8b59d3d04c inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3e611e1495ee16f10ea655302994ce inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a7c3e611e1495ee16f10ea655302994ce"><td class="memItemLeft" align="right" valign="top">
+Font&#160;</td><td class="memItemRight" valign="bottom"><b>LabelFont</b> = new Font(FontFamily.GenericSansSerif, 10.0F)<code> [get, set]</code></td></tr>
+<tr class="memdesc:a7c3e611e1495ee16f10ea655302994ce inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベルフォント <br /></td></tr>
+<tr class="separator:a7c3e611e1495ee16f10ea655302994ce inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ea573511972e481ee56c2e9531478f inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a21ea573511972e481ee56c2e9531478f"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>?&#160;</td><td class="memItemRight" valign="bottom"><b>LabelColor</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a21ea573511972e481ee56c2e9531478f inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル文字色 <br /></td></tr>
+<tr class="separator:a21ea573511972e481ee56c2e9531478f inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16cab4d4b34bf74ddbddf81b913bb3c6 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a16cab4d4b34bf74ddbddf81b913bb3c6"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>LabelFill</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:a16cab4d4b34bf74ddbddf81b913bb3c6 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル塗りつぶし <br /></td></tr>
+<tr class="separator:a16cab4d4b34bf74ddbddf81b913bb3c6 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208b40f6cb1ca32ffa2810e0061fe568 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a208b40f6cb1ca32ffa2810e0061fe568"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>?&#160;</td><td class="memItemRight" valign="bottom"><b>LabelFillColor</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a208b40f6cb1ca32ffa2810e0061fe568 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル塗りつぶし色 <br /></td></tr>
+<tr class="separator:a208b40f6cb1ca32ffa2810e0061fe568 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8faaba1280d8ed434fcc8e78cd547406 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a8faaba1280d8ed434fcc8e78cd547406"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>LabelBorder</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:a8faaba1280d8ed434fcc8e78cd547406 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル枠 <br /></td></tr>
+<tr class="separator:a8faaba1280d8ed434fcc8e78cd547406 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5c9390b8528d080db3acf9dce592bc inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a3a5c9390b8528d080db3acf9dce592bc"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>?&#160;</td><td class="memItemRight" valign="bottom"><b>LabelBorderColor</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a3a5c9390b8528d080db3acf9dce592bc inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル枠色 <br /></td></tr>
+<tr class="separator:a3a5c9390b8528d080db3acf9dce592bc inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab32684cb6a80f39cfcaf79549726433a inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_ab32684cb6a80f39cfcaf79549726433a"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Visible</b> = true<code> [get, set]</code></td></tr>
+<tr class="memdesc:ab32684cb6a80f39cfcaf79549726433a inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示・非表示 <br /></td></tr>
+<tr class="separator:ab32684cb6a80f39cfcaf79549726433a inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76038845dcfcb4ba16a8f57a2388fd43 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a76038845dcfcb4ba16a8f57a2388fd43"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af7b01f96f07453dd68d10c6fb3100070">MARKER_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MarkerType</b> = <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af7b01f96f07453dd68d10c6fb3100070a04dd53a8e6c2306e9bbf944c1d6047f2">MARKER_TYPE.CROSS</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a76038845dcfcb4ba16a8f57a2388fd43 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">マーカー種類 <br /></td></tr>
+<tr class="separator:a76038845dcfcb4ba16a8f57a2388fd43 inherit properties_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pub_types_class_s_s_tools_1_1_shape_1_1_base_shape"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_s_s_tools_1_1_shape_1_1_base_shape')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html">SSTools.Shape.BaseShape</a> に属する継承公開型</td></tr>
+<tr class="memitem:af7b01f96f07453dd68d10c6fb3100070 inherit pub_types_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_af7b01f96f07453dd68d10c6fb3100070"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af7b01f96f07453dd68d10c6fb3100070">MARKER_TYPE</a> { <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af7b01f96f07453dd68d10c6fb3100070aaebdbcb765394d25d6a604589a890f82">POINT</a> = 0
+, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af7b01f96f07453dd68d10c6fb3100070a883acd43c77567e1c3baced84ccf6ed7">PLUS</a> = 1
+, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af7b01f96f07453dd68d10c6fb3100070a04dd53a8e6c2306e9bbf944c1d6047f2">CROSS</a> = 2
+, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af7b01f96f07453dd68d10c6fb3100070a0af50777920c1401ab975cab64c4d491">CIRCLE</a> = 3
+ }</td></tr>
+<tr class="memdesc:af7b01f96f07453dd68d10c6fb3100070"><td class="mdescLeft">&#160;</td><td class="mdescRight">マーカーの種類  <a href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af7b01f96f07453dd68d10c6fb3100070">[詳解]</a><br /></td></tr>
+<tr class="separator:af7b01f96f07453dd68d10c6fb3100070 inherit pub_types_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_types_class_s_s_tools_1_1_shape_1_1_base_shape"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_types_class_s_s_tools_1_1_shape_1_1_base_shape')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html">SSTools.Shape.BaseShape</a> に属する継承限定公開型</td></tr>
+<tr class="memitem:a2cc8f0ab48fb0499086031c2073c4fd2 inherit pro_types_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a2cc8f0ab48fb0499086031c2073c4fd2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a2cc8f0ab48fb0499086031c2073c4fd2">COLOR_SELECT</a> { <br />
+&#160;&#160;<a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a2cc8f0ab48fb0499086031c2073c4fd2a83ca8ba10c5c73e476ee584e3ccefe51">NORMAL_COLOR</a>
+, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a2cc8f0ab48fb0499086031c2073c4fd2a6bdaccdf2fd7d5797322d2423de35b8f">FILL_COLOR</a>
+, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a2cc8f0ab48fb0499086031c2073c4fd2a05e2aafba3572595b59f5cba195004f4">TEXT_COLOR</a>
+, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a2cc8f0ab48fb0499086031c2073c4fd2a3ee043530b0a9562bc4e280bb126062a">TEXT_FILL_COLOR</a>
+, <br />
+&#160;&#160;<a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a2cc8f0ab48fb0499086031c2073c4fd2a93aa0e3af148a04030f0bf0440e0f042">TEXT_BORDER_COLOR</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a2cc8f0ab48fb0499086031c2073c4fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">色の選択  <a href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a2cc8f0ab48fb0499086031c2073c4fd2">[詳解]</a><br /></td></tr>
+<tr class="separator:a2cc8f0ab48fb0499086031c2073c4fd2 inherit pro_types_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html">SSTools.Shape.BaseShape</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a36b36f20e1b1a3a6039fd2d79547bee5 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a36b36f20e1b1a3a6039fd2d79547bee5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a36b36f20e1b1a3a6039fd2d79547bee5">DrawPoint</a> (Graphics g, SizeF? size, PointF? point=null, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>? color=null, float? lineWidth=null, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a4ca17aa58b47af231e63b88ff72c3126">DashStyle</a>? dashStyle=null, float? markerSize=null, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af7b01f96f07453dd68d10c6fb3100070">MARKER_TYPE</a>? markerType=null)</td></tr>
+<tr class="memdesc:a36b36f20e1b1a3a6039fd2d79547bee5 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">点の描画  <br /></td></tr>
+<tr class="separator:a36b36f20e1b1a3a6039fd2d79547bee5 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae235e1ffa6d4a68faea38f0c883cfd49 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_ae235e1ffa6d4a68faea38f0c883cfd49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae235e1ffa6d4a68faea38f0c883cfd49">RectContains</a> (RectangleF targetRect, Rectangle baseRect)</td></tr>
+<tr class="memdesc:ae235e1ffa6d4a68faea38f0c883cfd49 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形が領域に含まれるか  <br /></td></tr>
+<tr class="separator:ae235e1ffa6d4a68faea38f0c883cfd49 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9051a06ac564f2f3fa0f08941184382d inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a9051a06ac564f2f3fa0f08941184382d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a9051a06ac564f2f3fa0f08941184382d">RectContains</a> (RectangleF targetRect, RectangleF baseRect)</td></tr>
+<tr class="memdesc:a9051a06ac564f2f3fa0f08941184382d inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形が領域に含まれるか  <br /></td></tr>
+<tr class="separator:a9051a06ac564f2f3fa0f08941184382d inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e058da057b7319763aabec9a3d9df0 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a50e058da057b7319763aabec9a3d9df0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a50e058da057b7319763aabec9a3d9df0">GetDrawColor</a> (<a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a2cc8f0ab48fb0499086031c2073c4fd2">COLOR_SELECT</a> colorSelect)</td></tr>
+<tr class="memdesc:a50e058da057b7319763aabec9a3d9df0 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画色を取得  <br /></td></tr>
+<tr class="separator:a50e058da057b7319763aabec9a3d9df0 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb447ddc1011c77d3f2c56680526ae1 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_afeb447ddc1011c77d3f2c56680526ae1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#afeb447ddc1011c77d3f2c56680526ae1">CalcTextOffset</a> (SizeF textSize, out int leftRight, out int topBottom, out int upDown, out float offsetX, out float offsetY)</td></tr>
+<tr class="memdesc:afeb447ddc1011c77d3f2c56680526ae1 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列表示位置からオフセットを算出  <br /></td></tr>
+<tr class="separator:afeb447ddc1011c77d3f2c56680526ae1 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5983565ef863d8f2852d1fcd22eb735 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_af5983565ef863d8f2852d1fcd22eb735"><td class="memItemLeft" align="right" valign="top">virtual RectangleF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af5983565ef863d8f2852d1fcd22eb735">CalcTextPosition</a> (SizeF textSize, SizeF? size, PointF center)</td></tr>
+<tr class="memdesc:af5983565ef863d8f2852d1fcd22eb735 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキスト表示位置の算出  <br /></td></tr>
+<tr class="separator:af5983565ef863d8f2852d1fcd22eb735 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f64bfd13606235e33ee63c3dd716138 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape" id="r_a8f64bfd13606235e33ee63c3dd716138"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a8f64bfd13606235e33ee63c3dd716138">DrawText</a> (Graphics graphics, SizeF? size, PointF center)</td></tr>
+<tr class="memdesc:a8f64bfd13606235e33ee63c3dd716138 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列の描画  <br /></td></tr>
+<tr class="separator:a8f64bfd13606235e33ee63c3dd716138 inherit pro_methods_class_s_s_tools_1_1_shape_1_1_base_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>多角形クラス </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="abbbdd5f892f6388fb55b764ddb6c88e4" name="abbbdd5f892f6388fb55b764ddb6c88e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbbdd5f892f6388fb55b764ddb6c88e4">&#9670;&#160;</a></span>PolygonShape() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.Shape.PolygonShape.PolygonShape </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デフォルトコンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>名前</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照元 <a class="el" href="#aeb12cf936908b0fd2f1eae9967597de5">SSTools.Shape.PolygonShape.Clone()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_abbbdd5f892f6388fb55b764ddb6c88e4_icgraph.png" border="0" usemap="#ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_abbbdd5f892f6388fb55b764ddb6c88e4_icgraph" alt=""/></div>
+<map name="ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_abbbdd5f892f6388fb55b764ddb6c88e4_icgraph" id="ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_abbbdd5f892f6388fb55b764ddb6c88e4_icgraph">
+<area shape="rect" title="デフォルトコンストラクタ" alt="" coords="257,5,460,48"/>
+<area shape="rect" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html#aeb12cf936908b0fd2f1eae9967597de5" title="クローンコピー" alt="" coords="5,5,209,48"/>
+<area shape="poly" title=" " alt="" coords="241,29,209,29,209,24,241,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad9f4a3a9c2121305cc563f28f238f546" name="ad9f4a3a9c2121305cc563f28f238f546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9f4a3a9c2121305cc563f28f238f546">&#9670;&#160;</a></span>PolygonShape() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.Shape.PolygonShape.PolygonShape </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae43961a4a0476d0f1788807c2fc39f47">Point</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>pointList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isClose</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>?</td>          <td class="paramname"><span class="paramname"><em>color</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float?</td>          <td class="paramname"><span class="paramname"><em>lineWidth</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a4ca17aa58b47af231e63b88ff72c3126">DashStyle</a>?</td>          <td class="paramname"><span class="paramname"><em>dashStyle</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isFill</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>?</td>          <td class="paramname"><span class="paramname"><em>fillColor</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>名前</td></tr>
+    <tr><td class="paramname">pointList</td><td>点群</td></tr>
+    <tr><td class="paramname">isClose</td><td>閉じた図形か</td></tr>
+    <tr><td class="paramname">color</td><td>線色</td></tr>
+    <tr><td class="paramname">lineWidth</td><td>線幅</td></tr>
+    <tr><td class="paramname">dashStyle</td><td>線種</td></tr>
+    <tr><td class="paramname">isFill</td><td>塗りつぶすか</td></tr>
+    <tr><td class="paramname">fillColor</td><td>塗りつぶし色</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a80b2b62d43569d032318dfdbe550eb69">SSTools.Shape.PolygonShape.Fill</a>, <a class="el" href="#a337588d2c18cd7e1c5b456fb1bb409e4">SSTools.Shape.PolygonShape.IsClose</a>.</p>
+
+</div>
+</div>
+<a id="ac83141991b82479bb45fe4ff893a0b14" name="ac83141991b82479bb45fe4ff893a0b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac83141991b82479bb45fe4ff893a0b14">&#9670;&#160;</a></span>PolygonShape() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.Shape.PolygonShape.PolygonShape </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae43961a4a0476d0f1788807c2fc39f47">Point</a></td>          <td class="paramname"><span class="paramname"><em>startPoint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#aeee350c9e7e502deb5252d3723171489">Color</a>?</td>          <td class="paramname"><span class="paramname"><em>color</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float?</td>          <td class="paramname"><span class="paramname"><em>lineWidth</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a4ca17aa58b47af231e63b88ff72c3126">DashStyle</a>?</td>          <td class="paramname"><span class="paramname"><em>dashStyle</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float?</td>          <td class="paramname"><span class="paramname"><em>markerSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ(編集図形) </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>名前</td></tr>
+    <tr><td class="paramname">startPoint</td><td>開始座標</td></tr>
+    <tr><td class="paramname">color</td><td>線色</td></tr>
+    <tr><td class="paramname">lineWidth</td><td>線幅</td></tr>
+    <tr><td class="paramname">dashStyle</td><td>線種</td></tr>
+    <tr><td class="paramname">markerSize</td><td>マーカーサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a337588d2c18cd7e1c5b456fb1bb409e4">SSTools.Shape.PolygonShape.IsClose</a>, <a class="el" href="#a20b920eeb8d2294fe89c3f19b8304d07">SSTools.Shape.PolygonShape.IsEditing</a>.</p>
+
+</div>
+</div>
+<a id="adff27a2ab720777025e230d72314d818" name="adff27a2ab720777025e230d72314d818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adff27a2ab720777025e230d72314d818">&#9670;&#160;</a></span>PolygonShape() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.Shape.PolygonShape.PolygonShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html">PolygonShape</a></td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コピーコンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>コピー元</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a6eccbf8a5d2e56e87a3740a2b584671a">SSTools.Shape.PolygonShape.ExtraPoint</a>, <a class="el" href="#a80b2b62d43569d032318dfdbe550eb69">SSTools.Shape.PolygonShape.Fill</a>, <a class="el" href="#a337588d2c18cd7e1c5b456fb1bb409e4">SSTools.Shape.PolygonShape.IsClose</a>, <a class="el" href="#a20b920eeb8d2294fe89c3f19b8304d07">SSTools.Shape.PolygonShape.IsEditing</a>, <a class="el" href="#a89c07522f5422971747bfd85e3b473cc">SSTools.Shape.PolygonShape.Points</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="a8ec8c55a9c7b9004371185cae39ba43c" name="a8ec8c55a9c7b9004371185cae39ba43c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec8c55a9c7b9004371185cae39ba43c">&#9670;&#160;</a></span>AddPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SSTools.Shape.PolygonShape.AddPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae43961a4a0476d0f1788807c2fc39f47">Point</a></td>          <td class="paramname"><span class="paramname"><em>point</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>座標の追加 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>追加点座標</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>座標点数・編集モード以外の時は-1</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="#a20b920eeb8d2294fe89c3f19b8304d07">SSTools.Shape.PolygonShape.IsEditing</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a27fa469e752c14bd359e8354df8b9c14">SSTools.ZoomPictureBox.OnMouseUp()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_a8ec8c55a9c7b9004371185cae39ba43c_icgraph.png" border="0" usemap="#ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_a8ec8c55a9c7b9004371185cae39ba43c_icgraph" alt=""/></div>
+<map name="ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_a8ec8c55a9c7b9004371185cae39ba43c_icgraph" id="ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_a8ec8c55a9c7b9004371185cae39ba43c_icgraph">
+<area shape="rect" title="座標の追加" alt="" coords="246,5,449,48"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a27fa469e752c14bd359e8354df8b9c14" title="マウスアップイベント" alt="" coords="5,5,198,48"/>
+<area shape="poly" title=" " alt="" coords="230,29,198,29,198,24,230,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeb12cf936908b0fd2f1eae9967597de5" name="aeb12cf936908b0fd2f1eae9967597de5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb12cf936908b0fd2f1eae9967597de5">&#9670;&#160;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html">BaseShape</a> SSTools.Shape.PolygonShape.Clone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>クローンコピー </p>
+<dl class="section return"><dt>戻り値</dt><dd>コピーされたオブジェクト</dd></dl>
+
+<p><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a1d27065a4b6ac4e9210617291b6dae2b">SSTools.Shape.BaseShape</a>を再実装しています。</p>
+
+<p class="reference">参照先 <a class="el" href="#abbbdd5f892f6388fb55b764ddb6c88e4">SSTools.Shape.PolygonShape.PolygonShape()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_aeb12cf936908b0fd2f1eae9967597de5_cgraph.png" border="0" usemap="#ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_aeb12cf936908b0fd2f1eae9967597de5_cgraph" alt=""/></div>
+<map name="ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_aeb12cf936908b0fd2f1eae9967597de5_cgraph" id="ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_aeb12cf936908b0fd2f1eae9967597de5_cgraph">
+<area shape="rect" title="クローンコピー" alt="" coords="5,5,209,48"/>
+<area shape="rect" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html#abbbdd5f892f6388fb55b764ddb6c88e4" title="デフォルトコンストラクタ" alt="" coords="257,5,460,48"/>
+<area shape="poly" title=" " alt="" coords="209,24,241,24,241,29,209,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a08776870afe0b86b6a41cffef7d0d14c" name="a08776870afe0b86b6a41cffef7d0d14c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08776870afe0b86b6a41cffef7d0d14c">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.Shape.PolygonShape.Draw </td>
+          <td>(</td>
+          <td class="paramtype">Graphics</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SizeF?</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>グラフィックス</td></tr>
+    <tr><td class="paramname">size</td><td>表示サイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a7070e38f80176738a445171c1d136c6b">SSTools.Shape.BaseShape</a>を再実装しています。</p>
+
+<p class="reference">参照先 <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a4ca17aa58b47af231e63b88ff72c3126">SSTools.Shape.BaseShape.DashStyle</a>, <a class="el" href="#a6eccbf8a5d2e56e87a3740a2b584671a">SSTools.Shape.PolygonShape.ExtraPoint</a>, <a class="el" href="#a80b2b62d43569d032318dfdbe550eb69">SSTools.Shape.PolygonShape.Fill</a>, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a50e058da057b7319763aabec9a3d9df0">SSTools.Shape.BaseShape.GetDrawColor()</a>, <a class="el" href="#a337588d2c18cd7e1c5b456fb1bb409e4">SSTools.Shape.PolygonShape.IsClose</a>, <a class="el" href="#a20b920eeb8d2294fe89c3f19b8304d07">SSTools.Shape.PolygonShape.IsEditing</a>, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a5f1b8156462d2221eeea3e04f6b1e33d">SSTools.Shape.BaseShape.LineWidth</a>, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af159a52ece422b612a8cd642d123a3cf">SSTools.Shape.BaseShape.MarkerSize</a>, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae43961a4a0476d0f1788807c2fc39f47">SSTools.Shape.BaseShape.Point</a>, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ab32684cb6a80f39cfcaf79549726433a">SSTools.Shape.BaseShape.Visible</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#ab52fa42945fe0743c0feb98436ef1969">SSTools.ZoomPictureBox.OnPaint()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_a08776870afe0b86b6a41cffef7d0d14c_cgraph.png" border="0" usemap="#ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_a08776870afe0b86b6a41cffef7d0d14c_cgraph" alt=""/></div>
+<map name="ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_a08776870afe0b86b6a41cffef7d0d14c_cgraph" id="ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_a08776870afe0b86b6a41cffef7d0d14c_cgraph">
+<area shape="rect" title="描画" alt="" coords="5,13,240,40"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a50e058da057b7319763aabec9a3d9df0" title="描画色を取得" alt="" coords="288,5,474,48"/>
+<area shape="poly" title=" " alt="" coords="240,24,272,24,272,29,240,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_a08776870afe0b86b6a41cffef7d0d14c_icgraph.png" border="0" usemap="#ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_a08776870afe0b86b6a41cffef7d0d14c_icgraph" alt=""/></div>
+<map name="ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_a08776870afe0b86b6a41cffef7d0d14c_icgraph" id="ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_a08776870afe0b86b6a41cffef7d0d14c_icgraph">
+<area shape="rect" title="描画" alt="" coords="246,13,480,40"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#ab52fa42945fe0743c0feb98436ef1969" title="描画イベント" alt="" coords="5,5,198,48"/>
+<area shape="poly" title=" " alt="" coords="230,29,198,29,198,24,230,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3f99a0506ddb521450adaed9d7e7f55a" name="a3f99a0506ddb521450adaed9d7e7f55a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f99a0506ddb521450adaed9d7e7f55a">&#9670;&#160;</a></span>GetDrawSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override Rectangle SSTools.Shape.PolygonShape.GetDrawSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画領域サイズを取得 </p>
+<dl class="section return"><dt>戻り値</dt><dd>描画領域サイズ</dd></dl>
+
+<p><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a0f6e6a2d2321e6e176085c1d80a0e4b3">SSTools.Shape.BaseShape</a>を再実装しています。</p>
+
+<p class="reference">参照先 <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a5f1b8156462d2221eeea3e04f6b1e33d">SSTools.Shape.BaseShape.LineWidth</a>.</p>
+
+</div>
+</div>
+<a id="afcf4f4cb8a95b6f7e250ba18d1621014" name="afcf4f4cb8a95b6f7e250ba18d1621014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcf4f4cb8a95b6f7e250ba18d1621014">&#9670;&#160;</a></span>IsContain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool SSTools.Shape.PolygonShape.IsContain </td>
+          <td>(</td>
+          <td class="paramtype">RectangleF</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>領域に含まれるか？ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>領域</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true;含まれる</dd></dl>
+
+<p><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae179af57cf3c6b171a414c89db2ebae0">SSTools.Shape.BaseShape</a>を再実装しています。</p>
+
+<p class="reference">参照先 <a class="el" href="#a20b920eeb8d2294fe89c3f19b8304d07">SSTools.Shape.PolygonShape.IsEditing</a>, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af159a52ece422b612a8cd642d123a3cf">SSTools.Shape.BaseShape.MarkerSize</a>, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae43961a4a0476d0f1788807c2fc39f47">SSTools.Shape.BaseShape.Point</a>, <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae235e1ffa6d4a68faea38f0c883cfd49">SSTools.Shape.BaseShape.RectContains()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_afcf4f4cb8a95b6f7e250ba18d1621014_cgraph.png" border="0" usemap="#ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_afcf4f4cb8a95b6f7e250ba18d1621014_cgraph" alt=""/></div>
+<map name="ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_afcf4f4cb8a95b6f7e250ba18d1621014_cgraph" id="ad9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape_afcf4f4cb8a95b6f7e250ba18d1621014_cgraph">
+<area shape="rect" title="領域に含まれるか？" alt="" coords="5,5,209,48"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae235e1ffa6d4a68faea38f0c883cfd49" title="矩形が領域に含まれるか" alt="" coords="257,5,443,48"/>
+<area shape="poly" title=" " alt="" coords="209,24,241,24,241,29,209,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SSTools/CustomizeControl/Shape/<b>PolygonShape.cs</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/db1/namespace_s_s_tools.html">SSTools</a></li><li class="navelem"><a class="el" href="../../d6/d31/namespace_s_s_tools_1_1_shape.html">Shape</a></li><li class="navelem"><a class="el" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html">PolygonShape</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

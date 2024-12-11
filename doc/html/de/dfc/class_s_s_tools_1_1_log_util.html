@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SSTools: SSTools.LogUtil クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SSTools
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('de/dfc/class_s_s_tools_1_1_log_util.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="../../d8/da6/class_s_s_tools_1_1_log_util-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">SSTools.LogUtil クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>ログユーティリティ  
+ <a href="#details">[詳解]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a7f5b53387fddb73bed3d46ebbfa00d51" id="r_a7f5b53387fddb73bed3d46ebbfa00d51"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51">KIND</a> { <br />
+&#160;&#160;<a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51ab50339a10e1de285ac99d4c3990b8693">NONE</a> = 0
+, <a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51a725e74fd6435d86483781e2bd8e9d2c7">METHOD</a> = 0x01
+, <a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51a4fa9034e961c8e7ea2342e1c55166373">FILE_NAME</a> = 0x02
+, <a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51ac9d0dde02d585c8bc32daecc3b18ed55">FULL_PATH</a> = 0x04
+, <br />
+&#160;&#160;<a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51a811e381a370716efa27497da13529122">LINE_NO</a> = 0x08
+, <a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a> = 0x10
+, <a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51a5fb1f955b45e38e31789286a1790398d">ALL</a> = METHOD | FILE_NAME | FULL_PATH |LINE_NO
+, <a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51aa35c2b02966b1563e5bf7b81b8b0cf77">SHORT</a> = METHOD | FILE_NAME | LINE_NO
+, <br />
+&#160;&#160;<a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51a7718ac023f15379fb38452fd7f3fa770">SOURCE_SHORT</a> = FILE_NAME | LINE_NO
+, <a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51ae60b4854b44ccfb2d92aa6f035171bb4">SOURCE</a> = SOURCE_SHORT | FULL_PATH
+<br />
+ }</td></tr>
+<tr class="memdesc:a7f5b53387fddb73bed3d46ebbfa00d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">呼び出し元表示  <a href="#a7f5b53387fddb73bed3d46ebbfa00d51">[詳解]</a><br /></td></tr>
+<tr class="separator:a7f5b53387fddb73bed3d46ebbfa00d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a53d3d9b2b7092ac37966e9ef4d47843f" id="r_a53d3d9b2b7092ac37966e9ef4d47843f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d2d/class_s_s_tools_1_1_log_detail.html">LogDetail</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53d3d9b2b7092ac37966e9ef4d47843f">Log</a> (<a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51">KIND</a> kind=<a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51ab50339a10e1de285ac99d4c3990b8693">KIND.NONE</a>, string tag=null, [CallerMemberName] string memberName=&quot;&quot;, [CallerFilePath] string sourceFilePath=&quot;&quot;, [CallerLineNumber] int sourceLineNumber=0)</td></tr>
+<tr class="memdesc:a53d3d9b2b7092ac37966e9ef4d47843f"><td class="mdescLeft">&#160;</td><td class="mdescRight">LogDetailオブジェクト取得  <br /></td></tr>
+<tr class="separator:a53d3d9b2b7092ac37966e9ef4d47843f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b914d7bce280d3fee38aeb079aa983c" id="r_a5b914d7bce280d3fee38aeb079aa983c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d2d/class_s_s_tools_1_1_log_detail.html">LogDetail</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b914d7bce280d3fee38aeb079aa983c">Log</a> (string log_path, <a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51">KIND</a> kind=<a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51ab50339a10e1de285ac99d4c3990b8693">KIND.NONE</a>, string tag=null, [CallerMemberName] string memberName=&quot;&quot;, [CallerFilePath] string sourceFilePath=&quot;&quot;, [CallerLineNumber] int sourceLineNumber=0)</td></tr>
+<tr class="memdesc:a5b914d7bce280d3fee38aeb079aa983c"><td class="mdescLeft">&#160;</td><td class="mdescRight">LogDetailオブジェクト取得  <br /></td></tr>
+<tr class="separator:a5b914d7bce280d3fee38aeb079aa983c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe14a6e94c719657306d6ecc176bb1a2" id="r_afe14a6e94c719657306d6ecc176bb1a2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d2d/class_s_s_tools_1_1_log_detail.html">LogDetail</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe14a6e94c719657306d6ecc176bb1a2">Console</a> (<a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51">KIND</a> kind=<a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51ab50339a10e1de285ac99d4c3990b8693">KIND.NONE</a>, string tag=null, [CallerMemberName] string memberName=&quot;&quot;, [CallerFilePath] string sourceFilePath=&quot;&quot;, [CallerLineNumber] int sourceLineNumber=0)</td></tr>
+<tr class="memdesc:afe14a6e94c719657306d6ecc176bb1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Console用LogDetailオブジェクト取得  <br /></td></tr>
+<tr class="separator:afe14a6e94c719657306d6ecc176bb1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:afa1078ef61240f0ddfd8daf9014f5eb6" id="r_afa1078ef61240f0ddfd8daf9014f5eb6"><td class="memItemLeft" align="right" valign="top"><a id="afa1078ef61240f0ddfd8daf9014f5eb6" name="afa1078ef61240f0ddfd8daf9014f5eb6"></a>
+const string&#160;</td><td class="memItemRight" valign="bottom"><b>CONSOLE</b> = &quot;Console:&quot;</td></tr>
+<tr class="memdesc:afa1078ef61240f0ddfd8daf9014f5eb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Console出力の文字列 <br /></td></tr>
+<tr class="separator:afa1078ef61240f0ddfd8daf9014f5eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ログユーティリティ </p>
+<p>使い方： <a class="el" href="#a53d3d9b2b7092ac37966e9ef4d47843f" title="LogDetailオブジェクト取得">LogUtil.Log</a>("log.txt").WriteLine("a={0},b={1}",a,b); <a class="el" href="#a53d3d9b2b7092ac37966e9ef4d47843f" title="LogDetailオブジェクト取得">LogUtil.Log</a>("log.txt",<a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51aa35c2b02966b1563e5bf7b81b8b0cf77" title="短いフォーマット(メソッド名,ファイル名,行番号)">LogUtil.KIND.SHORT</a>,"[ERROR]").WriteLine(ex.toString()); <a class="el" href="#afe14a6e94c719657306d6ecc176bb1a2" title="Console用LogDetailオブジェクト取得">LogUtil.Console</a>(<a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51a2d3e4144aa384b18849ab9a8abad74d6" title="スタックトレース">LogUtil.KIND.TRACE</a>,"[Info]").DebugWriteLine("This is {0}",zzz); </p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a7f5b53387fddb73bed3d46ebbfa00d51" name="a7f5b53387fddb73bed3d46ebbfa00d51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f5b53387fddb73bed3d46ebbfa00d51">&#9670;&#160;</a></span>KIND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51">SSTools.LogUtil.KIND</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>呼び出し元表示 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a7f5b53387fddb73bed3d46ebbfa00d51ab50339a10e1de285ac99d4c3990b8693" name="a7f5b53387fddb73bed3d46ebbfa00d51ab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"><p>なし </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7f5b53387fddb73bed3d46ebbfa00d51a725e74fd6435d86483781e2bd8e9d2c7" name="a7f5b53387fddb73bed3d46ebbfa00d51a725e74fd6435d86483781e2bd8e9d2c7"></a>METHOD&#160;</td><td class="fielddoc"><p>メソッド名 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7f5b53387fddb73bed3d46ebbfa00d51a4fa9034e961c8e7ea2342e1c55166373" name="a7f5b53387fddb73bed3d46ebbfa00d51a4fa9034e961c8e7ea2342e1c55166373"></a>FILE_NAME&#160;</td><td class="fielddoc"><p>ファイル名 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7f5b53387fddb73bed3d46ebbfa00d51ac9d0dde02d585c8bc32daecc3b18ed55" name="a7f5b53387fddb73bed3d46ebbfa00d51ac9d0dde02d585c8bc32daecc3b18ed55"></a>FULL_PATH&#160;</td><td class="fielddoc"><p>ファイル名(フルパス) </p>
+<p>FILE_NAMEとセットで指定</p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7f5b53387fddb73bed3d46ebbfa00d51a811e381a370716efa27497da13529122" name="a7f5b53387fddb73bed3d46ebbfa00d51a811e381a370716efa27497da13529122"></a>LINE_NO&#160;</td><td class="fielddoc"><p>行番号 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7f5b53387fddb73bed3d46ebbfa00d51a2d3e4144aa384b18849ab9a8abad74d6" name="a7f5b53387fddb73bed3d46ebbfa00d51a2d3e4144aa384b18849ab9a8abad74d6"></a>TRACE&#160;</td><td class="fielddoc"><p>スタックトレース </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7f5b53387fddb73bed3d46ebbfa00d51a5fb1f955b45e38e31789286a1790398d" name="a7f5b53387fddb73bed3d46ebbfa00d51a5fb1f955b45e38e31789286a1790398d"></a>ALL&#160;</td><td class="fielddoc"><p>全て(メソッド名,フルパスファイル名,行番号) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7f5b53387fddb73bed3d46ebbfa00d51aa35c2b02966b1563e5bf7b81b8b0cf77" name="a7f5b53387fddb73bed3d46ebbfa00d51aa35c2b02966b1563e5bf7b81b8b0cf77"></a>SHORT&#160;</td><td class="fielddoc"><p>短いフォーマット(メソッド名,ファイル名,行番号) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7f5b53387fddb73bed3d46ebbfa00d51a7718ac023f15379fb38452fd7f3fa770" name="a7f5b53387fddb73bed3d46ebbfa00d51a7718ac023f15379fb38452fd7f3fa770"></a>SOURCE_SHORT&#160;</td><td class="fielddoc"><p>短いソース(ファイル名,行番号) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7f5b53387fddb73bed3d46ebbfa00d51ae60b4854b44ccfb2d92aa6f035171bb4" name="a7f5b53387fddb73bed3d46ebbfa00d51ae60b4854b44ccfb2d92aa6f035171bb4"></a>SOURCE&#160;</td><td class="fielddoc"><p>ソース(フルパスファイル名,行番号) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="afe14a6e94c719657306d6ecc176bb1a2" name="afe14a6e94c719657306d6ecc176bb1a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe14a6e94c719657306d6ecc176bb1a2">&#9670;&#160;</a></span>Console()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d8/d2d/class_s_s_tools_1_1_log_detail.html">LogDetail</a> SSTools.LogUtil.Console </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51">KIND</a></td>          <td class="paramname"><span class="paramname"><em>kind</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51ab50339a10e1de285ac99d4c3990b8693">KIND::NONE</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>tag</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerMemberName] string</td>          <td class="paramname"><span class="paramname"><em>memberName</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerFilePath] string</td>          <td class="paramname"><span class="paramname"><em>sourceFilePath</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerLineNumber] int</td>          <td class="paramname"><span class="paramname"><em>sourceLineNumber</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Console用LogDetailオブジェクト取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kind</td><td>呼び出し元表示</td></tr>
+    <tr><td class="paramname">tag</td><td>タグ</td></tr>
+    <tr><td class="paramname">memberName</td><td>メンバー名</td></tr>
+    <tr><td class="paramname">sourceFilePath</td><td>ソースファイルパス</td></tr>
+    <tr><td class="paramname">sourceLineNumber</td><td>行番号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>LogDetailオブジェクト</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="#afa1078ef61240f0ddfd8daf9014f5eb6">SSTools.LogUtil.CONSOLE</a>.</p>
+
+</div>
+</div>
+<a id="a53d3d9b2b7092ac37966e9ef4d47843f" name="a53d3d9b2b7092ac37966e9ef4d47843f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d3d9b2b7092ac37966e9ef4d47843f">&#9670;&#160;</a></span>Log() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d8/d2d/class_s_s_tools_1_1_log_detail.html">LogDetail</a> SSTools.LogUtil.Log </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51">KIND</a></td>          <td class="paramname"><span class="paramname"><em>kind</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51ab50339a10e1de285ac99d4c3990b8693">KIND::NONE</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>tag</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerMemberName] string</td>          <td class="paramname"><span class="paramname"><em>memberName</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerFilePath] string</td>          <td class="paramname"><span class="paramname"><em>sourceFilePath</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerLineNumber] int</td>          <td class="paramname"><span class="paramname"><em>sourceLineNumber</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>LogDetailオブジェクト取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kind</td><td>呼び出し元表示</td></tr>
+    <tr><td class="paramname">tag</td><td>タグ</td></tr>
+    <tr><td class="paramname">memberName</td><td>メンバー名</td></tr>
+    <tr><td class="paramname">sourceFilePath</td><td>ソースファイルパス</td></tr>
+    <tr><td class="paramname">sourceLineNumber</td><td>行番号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>LogDetailオブジェクト</dd></dl>
+
+</div>
+</div>
+<a id="a5b914d7bce280d3fee38aeb079aa983c" name="a5b914d7bce280d3fee38aeb079aa983c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b914d7bce280d3fee38aeb079aa983c">&#9670;&#160;</a></span>Log() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d8/d2d/class_s_s_tools_1_1_log_detail.html">LogDetail</a> SSTools.LogUtil.Log </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>log_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51">KIND</a></td>          <td class="paramname"><span class="paramname"><em>kind</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a7f5b53387fddb73bed3d46ebbfa00d51ab50339a10e1de285ac99d4c3990b8693">KIND::NONE</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>tag</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerMemberName] string</td>          <td class="paramname"><span class="paramname"><em>memberName</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerFilePath] string</td>          <td class="paramname"><span class="paramname"><em>sourceFilePath</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[CallerLineNumber] int</td>          <td class="paramname"><span class="paramname"><em>sourceLineNumber</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>LogDetailオブジェクト取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">log_path</td><td>ログパス</td></tr>
+    <tr><td class="paramname">kind</td><td>呼び出し元表示</td></tr>
+    <tr><td class="paramname">tag</td><td>タグ</td></tr>
+    <tr><td class="paramname">memberName</td><td>メンバー名</td></tr>
+    <tr><td class="paramname">sourceFilePath</td><td>ソースファイルパス</td></tr>
+    <tr><td class="paramname">sourceLineNumber</td><td>行番号</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>LogDetailオブジェクト</dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SSTools/Log/<b>LogUtil.cs</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/db1/namespace_s_s_tools.html">SSTools</a></li><li class="navelem"><a class="el" href="../../de/dfc/class_s_s_tools_1_1_log_util.html">LogUtil</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

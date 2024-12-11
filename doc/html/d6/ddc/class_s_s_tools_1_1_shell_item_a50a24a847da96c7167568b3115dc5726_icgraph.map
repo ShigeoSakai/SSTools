@@ -1,0 +1,9 @@
+<map id="SSTools.ShellItem.GetSubFolders" name="SSTools.ShellItem.GetSubFolders">
+<area shape="rect" id="Node000001" title="Retrieves an array of ShellItem objects for sub&#45;folders of this shell item." alt="" coords="524,5,701,48"/>
+<area shape="rect" id="Node000002" href="$d1/df6/class_s_s_tools_1_1_folder_tree_node.html#afbbea22b4bb450f88a2f93777ee4508a" title="サブフォルダの展開" alt="" coords="5,5,221,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="508,16,476,13,372,10,269,13,222,17,221,11,269,8,372,4,476,8,508,11"/>
+<area shape="rect" id="Node000003" href="$d1/df6/class_s_s_tools_1_1_folder_tree_node.html#ada0e2fc6ee8cafbc01c602ef2caa676d" title="コンストラクタ" alt="" coords="269,47,476,89"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="509,47,477,53,476,48,508,42"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="253,52,221,46,221,41,254,46"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="411,34,397,28,372,25,350,27,336,32,330,38,332,46,327,47,325,37,333,28,349,22,372,20,398,22,413,29"/>
+</map>

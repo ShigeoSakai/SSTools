@@ -1,0 +1,11 @@
+<map id="SSTools.Shape.BaseShape" name="SSTools.Shape.BaseShape">
+<area shape="rect" id="Node000001" title="図形基本クラス" alt="" coords="5,81,188,108"/>
+<area shape="rect" id="Node000002" href="$d9/d44/class_s_s_tools_1_1_shape_1_1_circle_shape.html" title="円,楕円クラス" alt="" coords="248,5,434,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,73,235,41,277,30,278,35,236,47,147,78"/>
+<area shape="rect" id="Node000003" href="$dc/d06/class_s_s_tools_1_1_shape_1_1_point_shape.html" title="点クラス" alt="" coords="250,56,432,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="203,81,249,76,250,81,203,86"/>
+<area shape="rect" id="Node000004" href="$d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html" title="多角形クラス" alt="" coords="242,107,441,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="204,103,241,107,241,112,203,108"/>
+<area shape="rect" id="Node000005" href="$d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html" title="矩形図形クラス" alt="" coords="236,157,447,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="147,111,236,143,278,154,277,159,235,148,145,116"/>
+</map>

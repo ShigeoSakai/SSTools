@@ -1,0 +1,15 @@
+<map id="SSTools.ShellItem.GetPath" name="SSTools.ShellItem.GetPath">
+<area shape="rect" id="Node000001" title="Gets the system path for this shell item." alt="" coords="986,39,1167,65"/>
+<area shape="rect" id="Node000002" href="$d6/ddc/class_s_s_tools_1_1_shell_item.html#a9da25f2b29c68dd5ccb97f896ec410ec" title="Constructor. Creates the ShellItem object for the Desktop." alt="" coords="749,13,938,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="970,43,938,40,938,34,971,38"/>
+<area shape="rect" id="Node000006" href="$d6/ddc/class_s_s_tools_1_1_shell_item.html#aeaae3583e767c900db1be53e4ce778d7" title="Constructor. Create a sub&#45;item shell item object." alt="" coords="749,64,938,91"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="971,66,938,70,938,64,970,61"/>
+<area shape="rect" id="Node000003" href="$d6/ddc/class_s_s_tools_1_1_shell_item.html#a50a24a847da96c7167568b3115dc5726" title="Retrieves an array of ShellItem objects for sub&#45;folders of this shell item." alt="" coords="524,5,701,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="734,29,702,29,702,24,734,24"/>
+<area shape="rect" id="Node000004" href="$d1/df6/class_s_s_tools_1_1_folder_tree_node.html#afbbea22b4bb450f88a2f93777ee4508a" title="サブフォルダの展開" alt="" coords="5,5,221,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="508,16,476,13,372,10,269,13,222,17,221,11,269,8,372,4,476,8,508,11"/>
+<area shape="rect" id="Node000005" href="$d1/df6/class_s_s_tools_1_1_folder_tree_node.html#ada0e2fc6ee8cafbc01c602ef2caa676d" title="コンストラクタ" alt="" coords="269,47,476,89"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="509,47,477,53,476,48,508,42"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="253,52,221,46,221,41,254,46"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="411,34,397,28,372,25,350,27,336,32,330,38,332,46,327,47,325,37,333,28,349,22,372,20,398,22,413,29"/>
+</map>

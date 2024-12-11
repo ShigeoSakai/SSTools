@@ -1,0 +1,7 @@
+<map id="SSTools.IntPtrEx.HI_LO.GetUnsigned" name="SSTools.IntPtrEx.HI_LO.GetUnsigned">
+<area shape="rect" id="Node000001" title="符号なし値の取得" alt="" coords="247,23,387,65"/>
+<area shape="rect" id="Node000002" href="$da/d2b/struct_s_s_tools_1_1_int_ptr_ex.html#a6a5863e262eaa53e1155af0ce9876308" title="値の比較" alt="" coords="5,5,199,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,37,199,33,199,27,231,31"/>
+<area shape="rect" id="Node000003" href="$da/d2b/struct_s_s_tools_1_1_int_ptr_ex.html#ac255f9e0b6636ccbf105e7c5d9d00169" title="文字列変換" alt="" coords="15,56,189,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="231,57,190,62,189,56,231,51"/>
+</map>

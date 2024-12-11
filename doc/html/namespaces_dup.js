@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "SSTools", "namespace_s_s_tools.html", "namespace_s_s_tools" ]
+    [ "SSTools", "d7/db1/namespace_s_s_tools.html", "d7/db1/namespace_s_s_tools" ]
 ];

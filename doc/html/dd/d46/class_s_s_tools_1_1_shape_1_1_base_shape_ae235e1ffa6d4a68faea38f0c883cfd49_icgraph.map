@@ -1,0 +1,7 @@
+<map id="SSTools.Shape.BaseShape.RectContains" name="SSTools.Shape.BaseShape.RectContains">
+<area shape="rect" id="Node000001" title="矩形が領域に含まれるか" alt="" coords="269,39,455,81"/>
+<area shape="rect" id="Node000002" href="$d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html#afcf4f4cb8a95b6f7e250ba18d1621014" title="領域に含まれるか？" alt="" coords="11,5,215,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,48,215,43,215,38,253,43"/>
+<area shape="rect" id="Node000003" href="$d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a4670ec7e79f889a6504d8790ca987e3e" title="領域に図形が含まれるか" alt="" coords="5,72,221,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="254,77,222,81,221,76,253,72"/>
+</map>

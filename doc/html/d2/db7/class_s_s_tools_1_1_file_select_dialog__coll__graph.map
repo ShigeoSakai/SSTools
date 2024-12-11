@@ -1,0 +1,9 @@
+<map id="SSTools.FileSelectDialog" name="SSTools.FileSelectDialog">
+<area shape="rect" id="Node000001" title="ファイル選択ダイアログ" alt="" coords="29,188,198,215"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,81,179,124"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,138,113,187,108,188,97,140"/>
+<area shape="rect" id="Node000003" href="$de/d4c/class_s_s_tools_1_1_file_list_view.html" title="ファイル一覧View" alt="" coords="203,89,349,116"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,126,136,190,133,185,241,122"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="230,5,322,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="279,47,279,89,273,89,273,47"/>
+</map>

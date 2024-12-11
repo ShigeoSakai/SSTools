@@ -1,0 +1,9 @@
+<map id="SSTools.Shape.BaseShape.DrawText" name="SSTools.Shape.BaseShape.DrawText">
+<area shape="rect" id="Node000001" title="文字列の描画" alt="" coords="5,39,192,81"/>
+<area shape="rect" id="Node000002" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af5983565ef863d8f2852d1fcd22eb735" title="テキスト表示位置の算出" alt="" coords="240,5,426,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,44,224,39,225,45,192,49"/>
+<area shape="rect" id="Node000004" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a50e058da057b7319763aabec9a3d9df0" title="描画色を取得" alt="" coords="240,72,426,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,71,225,75,224,81,192,76"/>
+<area shape="rect" id="Node000003" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#afeb447ddc1011c77d3f2c56680526ae1" title="文字列表示位置からオフセットを算出" alt="" coords="474,5,660,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="426,24,458,24,458,29,426,29"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="SSTools.ShapeManager.EnumerableShape" name="SSTools.ShapeManager.EnumerableShape">
+<area shape="rect" id="Node000001" title="図形の一覧(Enumerator)" alt="" coords="298,5,532,48"/>
+<area shape="rect" id="Node000002" href="$d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a2430db5ee5e653128e5f160b6674e6e2" title="登録されている図形の一覧を取得する(Enumrator)" alt="" coords="5,5,250,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="282,29,250,29,250,24,282,24"/>
+</map>

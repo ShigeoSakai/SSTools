@@ -1,0 +1,661 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SSTools: SSTools.FolderTreeView クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SSTools
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d6/df5/class_s_s_tools_1_1_folder_tree_view.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="#events">イベント</a> &#124;
+<a href="../../d3/d85/class_s_s_tools_1_1_folder_tree_view-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">SSTools.FolderTreeView クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>フォルダTreeView  
+ <a href="#details">[詳解]</a></p>
+<div class="dynheader">
+SSTools.FolderTreeView の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/de0/class_s_s_tools_1_1_folder_tree_view__inherit__graph.png" border="0" usemap="#a_s_s_tools_8_folder_tree_view_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_s_s_tools_8_folder_tree_view_inherit__map" id="a_s_s_tools_8_folder_tree_view_inherit__map">
+<area shape="rect" title="フォルダTreeView" alt="" coords="5,80,171,107"/>
+<area shape="rect" title=" " alt="" coords="50,5,126,32"/>
+<area shape="poly" title=" " alt="" coords="91,48,91,80,85,80,85,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+SSTools.FolderTreeView 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d4e/class_s_s_tools_1_1_folder_tree_view__coll__graph.png" border="0" usemap="#a_s_s_tools_8_folder_tree_view_coll__map" alt="Collaboration graph"/></div>
+<map name="a_s_s_tools_8_folder_tree_view_coll__map" id="a_s_s_tools_8_folder_tree_view_coll__map">
+<area shape="rect" title="フォルダTreeView" alt="" coords="5,80,171,107"/>
+<area shape="rect" title=" " alt="" coords="50,5,126,32"/>
+<area shape="poly" title=" " alt="" coords="91,48,91,80,85,80,85,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1680da89df681e03a361219e64811084" id="r_a1680da89df681e03a361219e64811084"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1680da89df681e03a361219e64811084">FolderTreeView</a> ()</td></tr>
+<tr class="memdesc:a1680da89df681e03a361219e64811084"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:a1680da89df681e03a361219e64811084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe0200683742afb424f4fbf27019847b" id="r_abe0200683742afb424f4fbf27019847b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe0200683742afb424f4fbf27019847b">FolderTreeView</a> (Environment.SpecialFolder rootFolder)</td></tr>
+<tr class="memdesc:abe0200683742afb424f4fbf27019847b"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ(ルートフォルダ指定)  <br /></td></tr>
+<tr class="separator:abe0200683742afb424f4fbf27019847b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae323f91aea8a317d299830e97dae90" id="r_a0ae323f91aea8a317d299830e97dae90"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ae323f91aea8a317d299830e97dae90">OnSelectNodeEventHandler</a> (object sender, string path, string fullpath, <a class="el" href="../../d1/df6/class_s_s_tools_1_1_folder_tree_node.html">FolderTreeNode</a> topNode)</td></tr>
+<tr class="memdesc:a0ae323f91aea8a317d299830e97dae90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node選択イベントハンドラ  <br /></td></tr>
+<tr class="separator:a0ae323f91aea8a317d299830e97dae90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0215bb3b313639dca04b45cbb104df7" id="r_ad0215bb3b313639dca04b45cbb104df7"><td class="memItemLeft" align="right" valign="top"><a id="ad0215bb3b313639dca04b45cbb104df7" name="ad0215bb3b313639dca04b45cbb104df7"></a>
+new void&#160;</td><td class="memItemRight" valign="bottom"><b>BeginUpdate</b> ()</td></tr>
+<tr class="memdesc:ad0215bb3b313639dca04b45cbb104df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新開始 <br /></td></tr>
+<tr class="separator:ad0215bb3b313639dca04b45cbb104df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73648626531e717493b6725ae211a850" id="r_a73648626531e717493b6725ae211a850"><td class="memItemLeft" align="right" valign="top"><a id="a73648626531e717493b6725ae211a850" name="a73648626531e717493b6725ae211a850"></a>
+new void&#160;</td><td class="memItemRight" valign="bottom"><b>EndUpdate</b> ()</td></tr>
+<tr class="memdesc:a73648626531e717493b6725ae211a850"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新終了 <br /></td></tr>
+<tr class="separator:a73648626531e717493b6725ae211a850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a018b4200cb28aecae23cc9cb8d0ccc81" id="r_a018b4200cb28aecae23cc9cb8d0ccc81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a018b4200cb28aecae23cc9cb8d0ccc81">ChangeRoot</a> (Environment.SpecialFolder folder)</td></tr>
+<tr class="memdesc:a018b4200cb28aecae23cc9cb8d0ccc81"><td class="mdescLeft">&#160;</td><td class="mdescRight">ルートフォルダの変更  <br /></td></tr>
+<tr class="separator:a018b4200cb28aecae23cc9cb8d0ccc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8744e631349d0301e428785daa2fe843" id="r_a8744e631349d0301e428785daa2fe843"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8744e631349d0301e428785daa2fe843">SelectFolder</a> (string path, <a class="el" href="../../d1/df6/class_s_s_tools_1_1_folder_tree_node.html">FolderTreeNode</a> topNode=null)</td></tr>
+<tr class="memdesc:a8744e631349d0301e428785daa2fe843"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォルダを選択  <br /></td></tr>
+<tr class="separator:a8744e631349d0301e428785daa2fe843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:addefa9bc4ada71d64aebe9f55b91ae7f" id="r_addefa9bc4ada71d64aebe9f55b91ae7f"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addefa9bc4ada71d64aebe9f55b91ae7f">Dispose</a> (bool disposing)</td></tr>
+<tr class="memdesc:addefa9bc4ada71d64aebe9f55b91ae7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用中のリソースをすべてクリーンアップします。  <br /></td></tr>
+<tr class="separator:addefa9bc4ada71d64aebe9f55b91ae7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af463c66960f2e6eb87e5a0d9084ec05f" id="r_af463c66960f2e6eb87e5a0d9084ec05f"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af463c66960f2e6eb87e5a0d9084ec05f">OnVisibleChanged</a> (EventArgs e)</td></tr>
+<tr class="memdesc:af463c66960f2e6eb87e5a0d9084ec05f"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示・非表示が変更になった  <br /></td></tr>
+<tr class="separator:af463c66960f2e6eb87e5a0d9084ec05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace6710a301c6c11539f22cd2210f9551" id="r_ace6710a301c6c11539f22cd2210f9551"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace6710a301c6c11539f22cd2210f9551">OnBeforeExpand</a> (TreeViewCancelEventArgs e)</td></tr>
+<tr class="memdesc:ace6710a301c6c11539f22cd2210f9551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tree展開前イベント処理  <br /></td></tr>
+<tr class="separator:ace6710a301c6c11539f22cd2210f9551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf2b6e4146743faac7f1a33af01dbe79" id="r_aaf2b6e4146743faac7f1a33af01dbe79"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf2b6e4146743faac7f1a33af01dbe79">OnSelectNode</a> (string path, string fullpath, <a class="el" href="../../d1/df6/class_s_s_tools_1_1_folder_tree_node.html">FolderTreeNode</a> topNode)</td></tr>
+<tr class="memdesc:aaf2b6e4146743faac7f1a33af01dbe79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node選択イベント発行  <br /></td></tr>
+<tr class="separator:aaf2b6e4146743faac7f1a33af01dbe79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad434cdd55361504b7bdfd2df706f220" id="r_aad434cdd55361504b7bdfd2df706f220"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad434cdd55361504b7bdfd2df706f220">OnAfterSelect</a> (TreeViewEventArgs e)</td></tr>
+<tr class="memdesc:aad434cdd55361504b7bdfd2df706f220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node選択後イベント処理  <br /></td></tr>
+<tr class="separator:aad434cdd55361504b7bdfd2df706f220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a9cc2a6026b9c7de159df499561b94dfc" id="r_a9cc2a6026b9c7de159df499561b94dfc"><td class="memItemLeft" align="right" valign="top"><a id="a9cc2a6026b9c7de159df499561b94dfc" name="a9cc2a6026b9c7de159df499561b94dfc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowHiddenFolder</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a9cc2a6026b9c7de159df499561b94dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">隠しフォルダを表示するか(プロパティ) <br /></td></tr>
+<tr class="separator:a9cc2a6026b9c7de159df499561b94dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af708aa63ab2b4496fc8900e9ae1db2b9" id="r_af708aa63ab2b4496fc8900e9ae1db2b9"><td class="memItemLeft" align="right" valign="top">new TreeNodeCollection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af708aa63ab2b4496fc8900e9ae1db2b9">Nodes</a><code> [get]</code></td></tr>
+<tr class="memdesc:af708aa63ab2b4496fc8900e9ae1db2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tree Node  <br /></td></tr>
+<tr class="separator:af708aa63ab2b4496fc8900e9ae1db2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7deee697afd48d89e290782cfaa0f811" id="r_a7deee697afd48d89e290782cfaa0f811"><td class="memItemLeft" align="right" valign="top"><a id="a7deee697afd48d89e290782cfaa0f811" name="a7deee697afd48d89e290782cfaa0f811"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentPath</b> = string.Empty<code> [get, set]</code></td></tr>
+<tr class="memdesc:a7deee697afd48d89e290782cfaa0f811"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在選択されているパス <br /></td></tr>
+<tr class="separator:a7deee697afd48d89e290782cfaa0f811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+イベント</h2></td></tr>
+<tr class="memitem:a421400a113db0e94cf8ea4a68f1339f1" id="r_a421400a113db0e94cf8ea4a68f1339f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a0ae323f91aea8a317d299830e97dae90">OnSelectNodeEventHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a421400a113db0e94cf8ea4a68f1339f1">SelectNodeEvent</a></td></tr>
+<tr class="memdesc:a421400a113db0e94cf8ea4a68f1339f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node選択イベント  <br /></td></tr>
+<tr class="separator:a421400a113db0e94cf8ea4a68f1339f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>フォルダTreeView </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a1680da89df681e03a361219e64811084" name="a1680da89df681e03a361219e64811084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1680da89df681e03a361219e64811084">&#9670;&#160;</a></span>FolderTreeView() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.FolderTreeView.FolderTreeView </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<p>ルートフォルダをDesktopで生成する </p>
+
+</div>
+</div>
+<a id="abe0200683742afb424f4fbf27019847b" name="abe0200683742afb424f4fbf27019847b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe0200683742afb424f4fbf27019847b">&#9670;&#160;</a></span>FolderTreeView() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.FolderTreeView.FolderTreeView </td>
+          <td>(</td>
+          <td class="paramtype">Environment.SpecialFolder</td>          <td class="paramname"><span class="paramname"><em>rootFolder</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ(ルートフォルダ指定) </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rootFolder</td><td>ルートフォルダ指定</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#a71b1a2230221186807de76e83bed8979">SSTools.SystemIconManager.Init()</a>, <a class="el" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#ae236bc1d279eac3f3d59ca64784b5302">SSTools.SystemIconManager.InitImageList()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/df5/class_s_s_tools_1_1_folder_tree_view_abe0200683742afb424f4fbf27019847b_cgraph.png" border="0" usemap="#ad6/df5/class_s_s_tools_1_1_folder_tree_view_abe0200683742afb424f4fbf27019847b_cgraph" alt=""/></div>
+<map name="ad6/df5/class_s_s_tools_1_1_folder_tree_view_abe0200683742afb424f4fbf27019847b_cgraph" id="ad6/df5/class_s_s_tools_1_1_folder_tree_view_abe0200683742afb424f4fbf27019847b_cgraph">
+<area shape="rect" title="コンストラクタ(ルートフォルダ指定)" alt="" coords="5,27,210,69"/>
+<area shape="rect" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#a71b1a2230221186807de76e83bed8979" title="アイコンマネージャ初期化" alt="" coords="258,5,474,32"/>
+<area shape="poly" title=" " alt="" coords="210,34,242,30,243,35,211,39"/>
+<area shape="rect" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#ae236bc1d279eac3f3d59ca64784b5302" title="画像リストを初期化する" alt="" coords="267,56,465,99"/>
+<area shape="poly" title=" " alt="" coords="211,57,251,62,251,67,210,62"/>
+<area shape="rect" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#a5bf3b954effdb2e329bc22bbe4e2e535" title="アイコンのサイズを取得する" alt="" coords="522,56,720,99"/>
+<area shape="poly" title=" " alt="" coords="466,75,506,75,506,80,466,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="a018b4200cb28aecae23cc9cb8d0ccc81" name="a018b4200cb28aecae23cc9cb8d0ccc81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a018b4200cb28aecae23cc9cb8d0ccc81">&#9670;&#160;</a></span>ChangeRoot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.FolderTreeView.ChangeRoot </td>
+          <td>(</td>
+          <td class="paramtype">Environment.SpecialFolder</td>          <td class="paramname"><span class="paramname"><em>folder</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ルートフォルダの変更 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">folder</td><td>ルートフォルダ</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#ad0215bb3b313639dca04b45cbb104df7">SSTools.FolderTreeView.BeginUpdate()</a>, <a class="el" href="#a73648626531e717493b6725ae211a850">SSTools.FolderTreeView.EndUpdate()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/df5/class_s_s_tools_1_1_folder_tree_view_a018b4200cb28aecae23cc9cb8d0ccc81_cgraph.png" border="0" usemap="#ad6/df5/class_s_s_tools_1_1_folder_tree_view_a018b4200cb28aecae23cc9cb8d0ccc81_cgraph" alt=""/></div>
+<map name="ad6/df5/class_s_s_tools_1_1_folder_tree_view_a018b4200cb28aecae23cc9cb8d0ccc81_cgraph" id="ad6/df5/class_s_s_tools_1_1_folder_tree_view_a018b4200cb28aecae23cc9cb8d0ccc81_cgraph">
+<area shape="rect" title="ルートフォルダの変更" alt="" coords="5,47,247,73"/>
+<area shape="rect" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html#ad0215bb3b313639dca04b45cbb104df7" title="更新開始" alt="" coords="295,5,496,48"/>
+<area shape="poly" title=" " alt="" coords="239,43,279,38,280,44,240,49"/>
+<area shape="rect" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html#a73648626531e717493b6725ae211a850" title="更新終了" alt="" coords="300,72,491,115"/>
+<area shape="poly" title=" " alt="" coords="240,71,284,77,284,82,239,77"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="addefa9bc4ada71d64aebe9f55b91ae7f" name="addefa9bc4ada71d64aebe9f55b91ae7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addefa9bc4ada71d64aebe9f55b91ae7f">&#9670;&#160;</a></span>Dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.FolderTreeView.Dispose </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>disposing</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使用中のリソースをすべてクリーンアップします。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disposing</td><td>マネージド リソースを破棄する場合は true を指定し、その他の場合は false を指定します。</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aad434cdd55361504b7bdfd2df706f220" name="aad434cdd55361504b7bdfd2df706f220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad434cdd55361504b7bdfd2df706f220">&#9670;&#160;</a></span>OnAfterSelect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.FolderTreeView.OnAfterSelect </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewEventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Node選択後イベント処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="../../d1/df6/class_s_s_tools_1_1_folder_tree_node.html#a64084e94def080c8298df2aa946fc6e0">SSTools.FolderTreeNode.GetTopOfNode()</a>, <a class="el" href="#aaf2b6e4146743faac7f1a33af01dbe79">SSTools.FolderTreeView.OnSelectNode()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/df5/class_s_s_tools_1_1_folder_tree_view_aad434cdd55361504b7bdfd2df706f220_cgraph.png" border="0" usemap="#ad6/df5/class_s_s_tools_1_1_folder_tree_view_aad434cdd55361504b7bdfd2df706f220_cgraph" alt=""/></div>
+<map name="ad6/df5/class_s_s_tools_1_1_folder_tree_view_aad434cdd55361504b7bdfd2df706f220_cgraph" id="ad6/df5/class_s_s_tools_1_1_folder_tree_view_aad434cdd55361504b7bdfd2df706f220_cgraph">
+<area shape="rect" title="Node選択後イベント処理" alt="" coords="5,63,191,105"/>
+<area shape="rect" href="../../d1/df6/class_s_s_tools_1_1_folder_tree_node.html#a64084e94def080c8298df2aa946fc6e0" title="Top Nodeの取得" alt="" coords="239,29,431,72"/>
+<area shape="poly" title=" " alt="" coords="191,68,223,64,223,69,192,74"/>
+<area shape="rect" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html#aaf2b6e4146743faac7f1a33af01dbe79" title="Node選択イベント発行" alt="" coords="242,96,428,139"/>
+<area shape="poly" title=" " alt="" coords="192,94,227,99,226,105,191,100"/>
+<area shape="poly" title=" " alt="" coords="290,29,288,19,296,10,311,5,335,3,360,5,375,11,373,16,359,10,335,8,312,10,299,15,293,21,295,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ace6710a301c6c11539f22cd2210f9551" name="ace6710a301c6c11539f22cd2210f9551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace6710a301c6c11539f22cd2210f9551">&#9670;&#160;</a></span>OnBeforeExpand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.FolderTreeView.OnBeforeExpand </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewCancelEventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tree展開前イベント処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a9cc2a6026b9c7de159df499561b94dfc">SSTools.FolderTreeView.ShowHiddenFolder</a>.</p>
+
+</div>
+</div>
+<a id="aaf2b6e4146743faac7f1a33af01dbe79" name="aaf2b6e4146743faac7f1a33af01dbe79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf2b6e4146743faac7f1a33af01dbe79">&#9670;&#160;</a></span>OnSelectNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SSTools.FolderTreeView.OnSelectNode </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>fullpath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/df6/class_s_s_tools_1_1_folder_tree_node.html">FolderTreeNode</a></td>          <td class="paramname"><span class="paramname"><em>topNode</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Node選択イベント発行 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>パス</td></tr>
+    <tr><td class="paramname">fullpath</td><td>フルパス</td></tr>
+    <tr><td class="paramname">topNode</td><td>Top Node</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a7deee697afd48d89e290782cfaa0f811">SSTools.FolderTreeView.CurrentPath</a>, <a class="el" href="#a421400a113db0e94cf8ea4a68f1339f1">SSTools.FolderTreeView.SelectNodeEvent</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="#aad434cdd55361504b7bdfd2df706f220">SSTools.FolderTreeView.OnAfterSelect()</a>, <a class="el" href="#a8744e631349d0301e428785daa2fe843">SSTools.FolderTreeView.SelectFolder()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/df5/class_s_s_tools_1_1_folder_tree_view_aaf2b6e4146743faac7f1a33af01dbe79_icgraph.png" border="0" usemap="#ad6/df5/class_s_s_tools_1_1_folder_tree_view_aaf2b6e4146743faac7f1a33af01dbe79_icgraph" alt=""/></div>
+<map name="ad6/df5/class_s_s_tools_1_1_folder_tree_view_aaf2b6e4146743faac7f1a33af01dbe79_icgraph" id="ad6/df5/class_s_s_tools_1_1_folder_tree_view_aaf2b6e4146743faac7f1a33af01dbe79_icgraph">
+<area shape="rect" title="Node選択イベント発行" alt="" coords="259,39,444,81"/>
+<area shape="rect" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html#aad434cdd55361504b7bdfd2df706f220" title="Node選択後イベント処理" alt="" coords="15,5,201,48"/>
+<area shape="poly" title=" " alt="" coords="243,48,201,42,202,37,244,43"/>
+<area shape="rect" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html#a8744e631349d0301e428785daa2fe843" title="フォルダを選択" alt="" coords="5,72,211,115"/>
+<area shape="poly" title=" " alt="" coords="244,77,212,82,211,77,243,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0ae323f91aea8a317d299830e97dae90" name="a0ae323f91aea8a317d299830e97dae90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae323f91aea8a317d299830e97dae90">&#9670;&#160;</a></span>OnSelectNodeEventHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">delegate void SSTools.FolderTreeView.OnSelectNodeEventHandler </td>
+          <td>(</td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>sender</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>fullpath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/df6/class_s_s_tools_1_1_folder_tree_node.html">FolderTreeNode</a></td>          <td class="paramname"><span class="paramname"><em>topNode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Node選択イベントハンドラ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sender</td><td>送信元</td></tr>
+    <tr><td class="paramname">path</td><td>パス</td></tr>
+    <tr><td class="paramname">fullpath</td><td>フルパス</td></tr>
+    <tr><td class="paramname">topNode</td><td>Top Node</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af463c66960f2e6eb87e5a0d9084ec05f" name="af463c66960f2e6eb87e5a0d9084ec05f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af463c66960f2e6eb87e5a0d9084ec05f">&#9670;&#160;</a></span>OnVisibleChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.FolderTreeView.OnVisibleChanged </td>
+          <td>(</td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>表示・非表示が変更になった </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8744e631349d0301e428785daa2fe843" name="a8744e631349d0301e428785daa2fe843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8744e631349d0301e428785daa2fe843">&#9670;&#160;</a></span>SelectFolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.FolderTreeView.SelectFolder </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/df6/class_s_s_tools_1_1_folder_tree_node.html">FolderTreeNode</a></td>          <td class="paramname"><span class="paramname"><em>topNode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フォルダを選択 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>選択するパス</td></tr>
+    <tr><td class="paramname">topNode</td><td>Top Node</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#ad0215bb3b313639dca04b45cbb104df7">SSTools.FolderTreeView.BeginUpdate()</a>, <a class="el" href="#a7deee697afd48d89e290782cfaa0f811">SSTools.FolderTreeView.CurrentPath</a>, <a class="el" href="#a73648626531e717493b6725ae211a850">SSTools.FolderTreeView.EndUpdate()</a>, <a class="el" href="../../d1/df6/class_s_s_tools_1_1_folder_tree_node.html#a1b1d46152e2c027829ad181c7a515805">SSTools.FolderTreeNode.ExpandToTopNode()</a>, <a class="el" href="../../d1/df6/class_s_s_tools_1_1_folder_tree_node.html#aff5f16301eba7ffe5efc00f4c3dcf8c2">SSTools.FolderTreeNode.FindPath()</a>, <a class="el" href="#aaf2b6e4146743faac7f1a33af01dbe79">SSTools.FolderTreeView.OnSelectNode()</a>, <a class="el" href="../../d6/ddc/class_s_s_tools_1_1_shell_item.html#ab131a0cb3c46c748487dcaea197e5c46">SSTools.ShellItem.Path</a>, <a class="el" href="../../d1/df6/class_s_s_tools_1_1_folder_tree_node.html#aff653425c0cd586dbf086b1bccaa8fe1">SSTools.FolderTreeNode.ShellItem</a>, <a class="el" href="#a9cc2a6026b9c7de159df499561b94dfc">SSTools.FolderTreeView.ShowHiddenFolder</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/df5/class_s_s_tools_1_1_folder_tree_view_a8744e631349d0301e428785daa2fe843_cgraph.png" border="0" usemap="#ad6/df5/class_s_s_tools_1_1_folder_tree_view_a8744e631349d0301e428785daa2fe843_cgraph" alt=""/></div>
+<map name="ad6/df5/class_s_s_tools_1_1_folder_tree_view_a8744e631349d0301e428785daa2fe843_cgraph" id="ad6/df5/class_s_s_tools_1_1_folder_tree_view_a8744e631349d0301e428785daa2fe843_cgraph">
+<area shape="rect" title="フォルダを選択" alt="" coords="5,139,211,181"/>
+<area shape="rect" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html#ad0215bb3b313639dca04b45cbb104df7" title="更新開始" alt="" coords="270,5,471,48"/>
+<area shape="poly" title=" " alt="" coords="135,136,190,97,257,58,271,52,273,56,260,62,193,101,138,140"/>
+<area shape="rect" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html#a73648626531e717493b6725ae211a850" title="更新終了" alt="" coords="275,72,466,115"/>
+<area shape="poly" title=" " alt="" coords="194,135,268,116,270,122,195,141"/>
+<area shape="rect" href="../../d1/df6/class_s_s_tools_1_1_folder_tree_node.html#a1b1d46152e2c027829ad181c7a515805" title="親Nodeから全て転換する" alt="" coords="263,139,478,181"/>
+<area shape="poly" title=" " alt="" coords="211,157,247,157,247,163,211,163"/>
+<area shape="rect" href="../../d1/df6/class_s_s_tools_1_1_folder_tree_node.html#aff5f16301eba7ffe5efc00f4c3dcf8c2" title="指定パスのNodeを検索する" alt="" coords="259,205,482,232"/>
+<area shape="poly" title=" " alt="" coords="207,179,293,199,292,204,206,185"/>
+<area shape="rect" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html#aaf2b6e4146743faac7f1a33af01dbe79" title="Node選択イベント発行" alt="" coords="278,256,463,299"/>
+<area shape="poly" title=" " alt="" coords="145,180,198,211,260,242,275,248,273,253,258,246,195,216,142,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ詳解</h2>
+<a id="af708aa63ab2b4496fc8900e9ae1db2b9" name="af708aa63ab2b4496fc8900e9ae1db2b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af708aa63ab2b4496fc8900e9ae1db2b9">&#9670;&#160;</a></span>Nodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">new TreeNodeCollection SSTools.FolderTreeView.Nodes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tree Node </p>
+<p>プロパティエディタで非表示にする </p>
+
+</div>
+</div>
+<h2 class="groupheader">イベント詳解</h2>
+<a id="a421400a113db0e94cf8ea4a68f1339f1" name="a421400a113db0e94cf8ea4a68f1339f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a421400a113db0e94cf8ea4a68f1339f1">&#9670;&#160;</a></span>SelectNodeEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a0ae323f91aea8a317d299830e97dae90">OnSelectNodeEventHandler</a> SSTools.FolderTreeView.SelectNodeEvent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Node選択イベント </p>
+<p>Nodeが選択された時に、パスを通知します。 </p>
+
+<p class="reference">参照元 <a class="el" href="#aaf2b6e4146743faac7f1a33af01dbe79">SSTools.FolderTreeView.OnSelectNode()</a>.</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SSTools/CustomizeControl/<b>FolderTreeView.cs</b></li>
+<li>SSTools/CustomizeControl/<b>FolderTreeView.Designer.cs</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/db1/namespace_s_s_tools.html">SSTools</a></li><li class="navelem"><a class="el" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html">FolderTreeView</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

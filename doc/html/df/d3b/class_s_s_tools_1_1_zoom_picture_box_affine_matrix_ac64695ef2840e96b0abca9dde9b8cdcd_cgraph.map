@@ -1,0 +1,7 @@
+<map id="SSTools.ZoomPictureBoxAffineMatrix.Shift" name="SSTools.ZoomPictureBoxAffineMatrix.Shift">
+<area shape="rect" id="Node000001" title="移動" alt="" coords="5,39,210,81"/>
+<area shape="rect" id="Node000002" href="$df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#a00d3f651fc772c5412017518b4a7787a" title="コントロール座標系差分から画像座標系差分を求める" alt="" coords="258,5,462,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,44,242,40,242,45,210,49"/>
+<area shape="rect" id="Node000003" href="$df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#a9e24cd79c78b0e5f08b4b26d5dabbc3e" title="コントロールサイズから実画像サイズを求める" alt="" coords="258,72,462,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,71,242,75,242,80,210,76"/>
+</map>

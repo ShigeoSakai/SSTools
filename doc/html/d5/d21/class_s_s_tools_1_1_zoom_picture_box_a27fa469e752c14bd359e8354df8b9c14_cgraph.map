@@ -1,0 +1,9 @@
+<map id="SSTools.ZoomPictureBox.OnMouseUp" name="SSTools.ZoomPictureBox.OnMouseUp">
+<area shape="rect" id="Node000001" title="マウスアップイベント" alt="" coords="5,72,198,115"/>
+<area shape="rect" id="Node000002" href="$d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html#a8ec8c55a9c7b9004371185cae39ba43c" title="座標の追加" alt="" coords="246,5,449,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,69,251,50,252,55,183,74"/>
+<area shape="rect" id="Node000003" href="$d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a0588979d0f992d59415686ec0f2831b9" title="表示エリア確定イベント発行" alt="" coords="251,72,444,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,91,236,91,236,96,198,96"/>
+<area shape="rect" id="Node000004" href="$d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a447043ad4482b5e9e230200526fb4586" title="画像イベント発行" alt="" coords="251,139,444,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="183,113,252,131,251,137,182,118"/>
+</map>

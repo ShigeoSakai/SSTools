@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SSTools: SSTools.SystemIconManager クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SSTools
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('dc/d3b/class_s_s_tools_1_1_system_icon_manager.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="../../d5/d9a/class_s_s_tools_1_1_system_icon_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">SSTools.SystemIconManager クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>システムアイコンマネージャ  
+ <a href="#details">[詳解]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:ad1e276add4ff388fa2a40b019941fc6b" id="r_ad1e276add4ff388fa2a40b019941fc6b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a> { <a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7">SMALL</a> = 0x0001
+, <a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba71726adf0ff60cd03eaf3c515883eeb8">LARGE</a> = 0x0002
+, <a class="el" href="#ad1e276add4ff388fa2a40b019941fc6baf15a17d42f52702abe251cd13067f199">EXTRA_LARGE</a> = 0x0004
+, <a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba5874dfcd8d6975064baa1b9320872b27">JUMBO</a> = 0x0008
+ }</td></tr>
+<tr class="memdesc:ad1e276add4ff388fa2a40b019941fc6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">アイコンサイズ指定  <a href="#ad1e276add4ff388fa2a40b019941fc6b">[詳解]</a><br /></td></tr>
+<tr class="separator:ad1e276add4ff388fa2a40b019941fc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a71b1a2230221186807de76e83bed8979" id="r_a71b1a2230221186807de76e83bed8979"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71b1a2230221186807de76e83bed8979">Init</a> (<a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a> kind)</td></tr>
+<tr class="memdesc:a71b1a2230221186807de76e83bed8979"><td class="mdescLeft">&#160;</td><td class="mdescRight">アイコンマネージャ初期化  <br /></td></tr>
+<tr class="separator:a71b1a2230221186807de76e83bed8979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8b6c46257eeaee15a5e6847987339d" id="r_a2b8b6c46257eeaee15a5e6847987339d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b8b6c46257eeaee15a5e6847987339d">Init</a> ()</td></tr>
+<tr class="memdesc:a2b8b6c46257eeaee15a5e6847987339d"><td class="mdescLeft">&#160;</td><td class="mdescRight">アイコンマネージャ初期化  <br /></td></tr>
+<tr class="separator:a2b8b6c46257eeaee15a5e6847987339d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae681706907988f32e94784a7a4790890" id="r_ae681706907988f32e94784a7a4790890"><td class="memItemLeft" align="right" valign="top"><a id="ae681706907988f32e94784a7a4790890" name="ae681706907988f32e94784a7a4790890"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>Dispose</b> ()</td></tr>
+<tr class="memdesc:ae681706907988f32e94784a7a4790890"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr class="separator:ae681706907988f32e94784a7a4790890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f811817c8495261f5c85611ad1e4e0" id="r_a57f811817c8495261f5c85611ad1e4e0"><td class="memItemLeft" align="right" valign="top">static Icon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57f811817c8495261f5c85611ad1e4e0">GetIcon</a> (IntPtr list, int index)</td></tr>
+<tr class="memdesc:a57f811817c8495261f5c85611ad1e4e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">アイコンの取得  <br /></td></tr>
+<tr class="separator:a57f811817c8495261f5c85611ad1e4e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec04caad51f41bce23ffa218c963ef7" id="r_a4ec04caad51f41bce23ffa218c963ef7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ec04caad51f41bce23ffa218c963ef7">GetIconCount</a> (<a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a> size=<a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7">ICON_SIZE.SMALL</a>)</td></tr>
+<tr class="memdesc:a4ec04caad51f41bce23ffa218c963ef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">リストに登録されているアイコンの数を取得  <br /></td></tr>
+<tr class="separator:a4ec04caad51f41bce23ffa218c963ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c9919e186b7d1eb2b7fee26ab9d0978" id="r_a4c9919e186b7d1eb2b7fee26ab9d0978"><td class="memItemLeft" align="right" valign="top">static Icon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c9919e186b7d1eb2b7fee26ab9d0978">GetIcon</a> (int index, <a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a> size=<a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7">ICON_SIZE.SMALL</a>)</td></tr>
+<tr class="memdesc:a4c9919e186b7d1eb2b7fee26ab9d0978"><td class="mdescLeft">&#160;</td><td class="mdescRight">アイコンを取得  <br /></td></tr>
+<tr class="separator:a4c9919e186b7d1eb2b7fee26ab9d0978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf3b954effdb2e329bc22bbe4e2e535" id="r_a5bf3b954effdb2e329bc22bbe4e2e535"><td class="memItemLeft" align="right" valign="top">static Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bf3b954effdb2e329bc22bbe4e2e535">GetIconSize</a> (<a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a> size=<a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7">ICON_SIZE.SMALL</a>)</td></tr>
+<tr class="memdesc:a5bf3b954effdb2e329bc22bbe4e2e535"><td class="mdescLeft">&#160;</td><td class="mdescRight">アイコンのサイズを取得する  <br /></td></tr>
+<tr class="separator:a5bf3b954effdb2e329bc22bbe4e2e535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae236bc1d279eac3f3d59ca64784b5302" id="r_ae236bc1d279eac3f3d59ca64784b5302"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae236bc1d279eac3f3d59ca64784b5302">InitImageList</a> (ref ImageList imgList, <a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a> size=<a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7">ICON_SIZE.SMALL</a>)</td></tr>
+<tr class="memdesc:ae236bc1d279eac3f3d59ca64784b5302"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像リストを初期化する  <br /></td></tr>
+<tr class="separator:ae236bc1d279eac3f3d59ca64784b5302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390b999c4527d517e0846a305f21d045" id="r_a390b999c4527d517e0846a305f21d045"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a390b999c4527d517e0846a305f21d045">StoreImageList</a> (ref ImageList imgList, int icon_index, <a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a> size=<a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7">ICON_SIZE.SMALL</a>)</td></tr>
+<tr class="memdesc:a390b999c4527d517e0846a305f21d045"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像リストにアイコンを格納する  <br /></td></tr>
+<tr class="separator:a390b999c4527d517e0846a305f21d045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fa4836484cb0379adc0f355607cc98a" id="r_a0fa4836484cb0379adc0f355607cc98a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fa4836484cb0379adc0f355607cc98a">StoreOpenIconImageList</a> (ref ImageList imgList, IntPtr openIcon, int icon_index)</td></tr>
+<tr class="memdesc:a0fa4836484cb0379adc0f355607cc98a"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像リストに「開いた」アイコンを格納する  <br /></td></tr>
+<tr class="separator:a0fa4836484cb0379adc0f355607cc98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7ed6c4b3fdbd831d35a307634d5472" id="r_aea7ed6c4b3fdbd831d35a307634d5472"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea7ed6c4b3fdbd831d35a307634d5472">StoreAllIcon</a> (ref ImageList imgList, <a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a> size=<a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7">ICON_SIZE.SMALL</a>)</td></tr>
+<tr class="memdesc:aea7ed6c4b3fdbd831d35a307634d5472"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像リストに全てのアイコンを格納する  <br /></td></tr>
+<tr class="separator:aea7ed6c4b3fdbd831d35a307634d5472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>システムアイコンマネージャ </p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="ad1e276add4ff388fa2a40b019941fc6b" name="ad1e276add4ff388fa2a40b019941fc6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1e276add4ff388fa2a40b019941fc6b">&#9670;&#160;</a></span>ICON_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">SSTools.SystemIconManager.ICON_SIZE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アイコンサイズ指定 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7" name="ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7"></a>SMALL&#160;</td><td class="fielddoc"><p>小アイコン </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad1e276add4ff388fa2a40b019941fc6ba71726adf0ff60cd03eaf3c515883eeb8" name="ad1e276add4ff388fa2a40b019941fc6ba71726adf0ff60cd03eaf3c515883eeb8"></a>LARGE&#160;</td><td class="fielddoc"><p>大アイコン </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad1e276add4ff388fa2a40b019941fc6baf15a17d42f52702abe251cd13067f199" name="ad1e276add4ff388fa2a40b019941fc6baf15a17d42f52702abe251cd13067f199"></a>EXTRA_LARGE&#160;</td><td class="fielddoc"><p>特大アイコン </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad1e276add4ff388fa2a40b019941fc6ba5874dfcd8d6975064baa1b9320872b27" name="ad1e276add4ff388fa2a40b019941fc6ba5874dfcd8d6975064baa1b9320872b27"></a>JUMBO&#160;</td><td class="fielddoc"><p>ジャンボアイコン </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="a4c9919e186b7d1eb2b7fee26ab9d0978" name="a4c9919e186b7d1eb2b7fee26ab9d0978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c9919e186b7d1eb2b7fee26ab9d0978">&#9670;&#160;</a></span>GetIcon() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Icon SSTools.SystemIconManager.GetIcon </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7">ICON_SIZE::SMALL</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アイコンを取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>インデックス</td></tr>
+    <tr><td class="paramname">size</td><td>アイコンのサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>アイコン</dd></dl>
+
+</div>
+</div>
+<a id="a57f811817c8495261f5c85611ad1e4e0" name="a57f811817c8495261f5c85611ad1e4e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57f811817c8495261f5c85611ad1e4e0">&#9670;&#160;</a></span>GetIcon() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Icon SSTools.SystemIconManager.GetIcon </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アイコンの取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>アイコンリストのアドレス</td></tr>
+    <tr><td class="paramname">index</td><td>インデックス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>アイコン</dd></dl>
+
+<p class="reference">参照元 <a class="el" href="#aea7ed6c4b3fdbd831d35a307634d5472">SSTools.SystemIconManager.StoreAllIcon()</a>, <a class="el" href="#a390b999c4527d517e0846a305f21d045">SSTools.SystemIconManager.StoreImageList()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager_a57f811817c8495261f5c85611ad1e4e0_icgraph.png" border="0" usemap="#adc/d3b/class_s_s_tools_1_1_system_icon_manager_a57f811817c8495261f5c85611ad1e4e0_icgraph" alt=""/></div>
+<map name="adc/d3b/class_s_s_tools_1_1_system_icon_manager_a57f811817c8495261f5c85611ad1e4e0_icgraph" id="adc/d3b/class_s_s_tools_1_1_system_icon_manager_a57f811817c8495261f5c85611ad1e4e0_icgraph">
+<area shape="rect" title="アイコンの取得" alt="" coords="252,39,450,81"/>
+<area shape="rect" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#aea7ed6c4b3fdbd831d35a307634d5472" title="画像リストに全てのアイコンを格納する" alt="" coords="5,5,204,48"/>
+<area shape="poly" title=" " alt="" coords="236,47,204,43,205,37,236,42"/>
+<area shape="rect" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#a390b999c4527d517e0846a305f21d045" title="画像リストにアイコンを格納する" alt="" coords="5,72,204,115"/>
+<area shape="poly" title=" " alt="" coords="236,78,205,83,204,77,236,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4ec04caad51f41bce23ffa218c963ef7" name="a4ec04caad51f41bce23ffa218c963ef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ec04caad51f41bce23ffa218c963ef7">&#9670;&#160;</a></span>GetIconCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int SSTools.SystemIconManager.GetIconCount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7">ICON_SIZE::SMALL</a></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>リストに登録されているアイコンの数を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>アイコンのサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>アイコンの数。-1の場合はエラー</dd></dl>
+
+<p class="reference">参照元 <a class="el" href="#aea7ed6c4b3fdbd831d35a307634d5472">SSTools.SystemIconManager.StoreAllIcon()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager_a4ec04caad51f41bce23ffa218c963ef7_icgraph.png" border="0" usemap="#adc/d3b/class_s_s_tools_1_1_system_icon_manager_a4ec04caad51f41bce23ffa218c963ef7_icgraph" alt=""/></div>
+<map name="adc/d3b/class_s_s_tools_1_1_system_icon_manager_a4ec04caad51f41bce23ffa218c963ef7_icgraph" id="adc/d3b/class_s_s_tools_1_1_system_icon_manager_a4ec04caad51f41bce23ffa218c963ef7_icgraph">
+<area shape="rect" title="リストに登録されているアイコンの数を取得" alt="" coords="252,5,450,48"/>
+<area shape="rect" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#aea7ed6c4b3fdbd831d35a307634d5472" title="画像リストに全てのアイコンを格納する" alt="" coords="5,5,204,48"/>
+<area shape="poly" title=" " alt="" coords="236,29,204,29,204,24,236,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5bf3b954effdb2e329bc22bbe4e2e535" name="a5bf3b954effdb2e329bc22bbe4e2e535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf3b954effdb2e329bc22bbe4e2e535">&#9670;&#160;</a></span>GetIconSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Size SSTools.SystemIconManager.GetIconSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7">ICON_SIZE::SMALL</a></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アイコンのサイズを取得する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>アイコンサイズ</dd></dl>
+
+<p class="reference">参照元 <a class="el" href="#ae236bc1d279eac3f3d59ca64784b5302">SSTools.SystemIconManager.InitImageList()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager_a5bf3b954effdb2e329bc22bbe4e2e535_icgraph.png" border="0" usemap="#adc/d3b/class_s_s_tools_1_1_system_icon_manager_a5bf3b954effdb2e329bc22bbe4e2e535_icgraph" alt=""/></div>
+<map name="adc/d3b/class_s_s_tools_1_1_system_icon_manager_a5bf3b954effdb2e329bc22bbe4e2e535_icgraph" id="adc/d3b/class_s_s_tools_1_1_system_icon_manager_a5bf3b954effdb2e329bc22bbe4e2e535_icgraph">
+<area shape="rect" title="アイコンのサイズを取得する" alt="" coords="504,39,702,81"/>
+<area shape="rect" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#ae236bc1d279eac3f3d59ca64784b5302" title="画像リストを初期化する" alt="" coords="258,39,456,81"/>
+<area shape="poly" title=" " alt="" coords="488,63,457,63,457,57,488,57"/>
+<area shape="rect" href="../../de/d4c/class_s_s_tools_1_1_file_list_view.html#ab68375e1028b81f8669e7c3193222cc3" title="コンストラクタ" alt="" coords="23,5,192,48"/>
+<area shape="poly" title=" " alt="" coords="242,47,192,41,193,35,243,42"/>
+<area shape="rect" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html#abe0200683742afb424f4fbf27019847b" title="コンストラクタ(ルートフォルダ指定)" alt="" coords="5,72,210,115"/>
+<area shape="poly" title=" " alt="" coords="243,78,211,82,210,77,242,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2b8b6c46257eeaee15a5e6847987339d" name="a2b8b6c46257eeaee15a5e6847987339d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b8b6c46257eeaee15a5e6847987339d">&#9670;&#160;</a></span>Init() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SSTools.SystemIconManager.Init </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アイコンマネージャ初期化 </p>
+<p>アイコンサイズは、大・小を指定 </p>
+
+</div>
+</div>
+<a id="a71b1a2230221186807de76e83bed8979" name="a71b1a2230221186807de76e83bed8979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71b1a2230221186807de76e83bed8979">&#9670;&#160;</a></span>Init() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SSTools.SystemIconManager.Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a></td>          <td class="paramname"><span class="paramname"><em>kind</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アイコンマネージャ初期化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kind</td><td>アイコンサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照元 <a class="el" href="../../de/d4c/class_s_s_tools_1_1_file_list_view.html#ab68375e1028b81f8669e7c3193222cc3">SSTools.FileListView.FileListView()</a>, <a class="el" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html#abe0200683742afb424f4fbf27019847b">SSTools.FolderTreeView.FolderTreeView()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager_a71b1a2230221186807de76e83bed8979_icgraph.png" border="0" usemap="#adc/d3b/class_s_s_tools_1_1_system_icon_manager_a71b1a2230221186807de76e83bed8979_icgraph" alt=""/></div>
+<map name="adc/d3b/class_s_s_tools_1_1_system_icon_manager_a71b1a2230221186807de76e83bed8979_icgraph" id="adc/d3b/class_s_s_tools_1_1_system_icon_manager_a71b1a2230221186807de76e83bed8979_icgraph">
+<area shape="rect" title="アイコンマネージャ初期化" alt="" coords="258,47,474,73"/>
+<area shape="rect" href="../../de/d4c/class_s_s_tools_1_1_file_list_view.html#ab68375e1028b81f8669e7c3193222cc3" title="コンストラクタ" alt="" coords="23,5,192,48"/>
+<area shape="poly" title=" " alt="" coords="242,47,192,40,193,35,243,41"/>
+<area shape="rect" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html#abe0200683742afb424f4fbf27019847b" title="コンストラクタ(ルートフォルダ指定)" alt="" coords="5,72,210,115"/>
+<area shape="poly" title=" " alt="" coords="242,79,211,83,210,77,242,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae236bc1d279eac3f3d59ca64784b5302" name="ae236bc1d279eac3f3d59ca64784b5302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae236bc1d279eac3f3d59ca64784b5302">&#9670;&#160;</a></span>InitImageList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool SSTools.SystemIconManager.InitImageList </td>
+          <td>(</td>
+          <td class="paramtype">ref ImageList</td>          <td class="paramname"><span class="paramname"><em>imgList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7">ICON_SIZE::SMALL</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>画像リストを初期化する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imgList</td><td>画像リスト</td></tr>
+    <tr><td class="paramname">size</td><td>アイコンサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:初期化完了</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="#a5bf3b954effdb2e329bc22bbe4e2e535">SSTools.SystemIconManager.GetIconSize()</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../de/d4c/class_s_s_tools_1_1_file_list_view.html#ab68375e1028b81f8669e7c3193222cc3">SSTools.FileListView.FileListView()</a>, <a class="el" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html#abe0200683742afb424f4fbf27019847b">SSTools.FolderTreeView.FolderTreeView()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager_ae236bc1d279eac3f3d59ca64784b5302_cgraph.png" border="0" usemap="#adc/d3b/class_s_s_tools_1_1_system_icon_manager_ae236bc1d279eac3f3d59ca64784b5302_cgraph" alt=""/></div>
+<map name="adc/d3b/class_s_s_tools_1_1_system_icon_manager_ae236bc1d279eac3f3d59ca64784b5302_cgraph" id="adc/d3b/class_s_s_tools_1_1_system_icon_manager_ae236bc1d279eac3f3d59ca64784b5302_cgraph">
+<area shape="rect" title="画像リストを初期化する" alt="" coords="5,5,204,48"/>
+<area shape="rect" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#a5bf3b954effdb2e329bc22bbe4e2e535" title="アイコンのサイズを取得する" alt="" coords="252,5,450,48"/>
+<area shape="poly" title=" " alt="" coords="204,24,236,24,236,29,204,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager_ae236bc1d279eac3f3d59ca64784b5302_icgraph.png" border="0" usemap="#adc/d3b/class_s_s_tools_1_1_system_icon_manager_ae236bc1d279eac3f3d59ca64784b5302_icgraph" alt=""/></div>
+<map name="adc/d3b/class_s_s_tools_1_1_system_icon_manager_ae236bc1d279eac3f3d59ca64784b5302_icgraph" id="adc/d3b/class_s_s_tools_1_1_system_icon_manager_ae236bc1d279eac3f3d59ca64784b5302_icgraph">
+<area shape="rect" title="画像リストを初期化する" alt="" coords="258,39,456,81"/>
+<area shape="rect" href="../../de/d4c/class_s_s_tools_1_1_file_list_view.html#ab68375e1028b81f8669e7c3193222cc3" title="コンストラクタ" alt="" coords="23,5,192,48"/>
+<area shape="poly" title=" " alt="" coords="242,47,192,41,193,35,243,42"/>
+<area shape="rect" href="../../d6/df5/class_s_s_tools_1_1_folder_tree_view.html#abe0200683742afb424f4fbf27019847b" title="コンストラクタ(ルートフォルダ指定)" alt="" coords="5,72,210,115"/>
+<area shape="poly" title=" " alt="" coords="243,78,211,82,210,77,242,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aea7ed6c4b3fdbd831d35a307634d5472" name="aea7ed6c4b3fdbd831d35a307634d5472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7ed6c4b3fdbd831d35a307634d5472">&#9670;&#160;</a></span>StoreAllIcon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int SSTools.SystemIconManager.StoreAllIcon </td>
+          <td>(</td>
+          <td class="paramtype">ref ImageList</td>          <td class="paramname"><span class="paramname"><em>imgList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7">ICON_SIZE::SMALL</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>画像リストに全てのアイコンを格納する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imgList</td><td>画像リスト</td></tr>
+    <tr><td class="paramname">size</td><td>アイコンサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>画像リストの件数</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="#a57f811817c8495261f5c85611ad1e4e0">SSTools.SystemIconManager.GetIcon()</a>, <a class="el" href="#a4ec04caad51f41bce23ffa218c963ef7">SSTools.SystemIconManager.GetIconCount()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager_aea7ed6c4b3fdbd831d35a307634d5472_cgraph.png" border="0" usemap="#adc/d3b/class_s_s_tools_1_1_system_icon_manager_aea7ed6c4b3fdbd831d35a307634d5472_cgraph" alt=""/></div>
+<map name="adc/d3b/class_s_s_tools_1_1_system_icon_manager_aea7ed6c4b3fdbd831d35a307634d5472_cgraph" id="adc/d3b/class_s_s_tools_1_1_system_icon_manager_aea7ed6c4b3fdbd831d35a307634d5472_cgraph">
+<area shape="rect" title="画像リストに全てのアイコンを格納する" alt="" coords="5,39,204,81"/>
+<area shape="rect" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#a57f811817c8495261f5c85611ad1e4e0" title="アイコンの取得" alt="" coords="252,5,450,48"/>
+<area shape="poly" title=" " alt="" coords="204,44,236,40,237,45,205,49"/>
+<area shape="rect" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#a4ec04caad51f41bce23ffa218c963ef7" title="リストに登録されているアイコンの数を取得" alt="" coords="252,72,450,115"/>
+<area shape="poly" title=" " alt="" coords="205,71,237,75,236,80,204,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a390b999c4527d517e0846a305f21d045" name="a390b999c4527d517e0846a305f21d045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a390b999c4527d517e0846a305f21d045">&#9670;&#160;</a></span>StoreImageList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int SSTools.SystemIconManager.StoreImageList </td>
+          <td>(</td>
+          <td class="paramtype">ref ImageList</td>          <td class="paramname"><span class="paramname"><em>imgList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>icon_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6b">ICON_SIZE</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#ad1e276add4ff388fa2a40b019941fc6ba9b9c17e13f0e3dc9860a26e08b59b2a7">ICON_SIZE::SMALL</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>画像リストにアイコンを格納する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imgList</td><td>画像リスト</td></tr>
+    <tr><td class="paramname">icon_index</td><td>アイコンインデックス</td></tr>
+    <tr><td class="paramname">size</td><td>アイコンサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>画像リストのインデックス</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="#a57f811817c8495261f5c85611ad1e4e0">SSTools.SystemIconManager.GetIcon()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager_a390b999c4527d517e0846a305f21d045_cgraph.png" border="0" usemap="#adc/d3b/class_s_s_tools_1_1_system_icon_manager_a390b999c4527d517e0846a305f21d045_cgraph" alt=""/></div>
+<map name="adc/d3b/class_s_s_tools_1_1_system_icon_manager_a390b999c4527d517e0846a305f21d045_cgraph" id="adc/d3b/class_s_s_tools_1_1_system_icon_manager_a390b999c4527d517e0846a305f21d045_cgraph">
+<area shape="rect" title="画像リストにアイコンを格納する" alt="" coords="5,5,204,48"/>
+<area shape="rect" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#a57f811817c8495261f5c85611ad1e4e0" title="アイコンの取得" alt="" coords="252,5,450,48"/>
+<area shape="poly" title=" " alt="" coords="204,24,236,24,236,29,204,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0fa4836484cb0379adc0f355607cc98a" name="a0fa4836484cb0379adc0f355607cc98a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fa4836484cb0379adc0f355607cc98a">&#9670;&#160;</a></span>StoreOpenIconImageList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int SSTools.SystemIconManager.StoreOpenIconImageList </td>
+          <td>(</td>
+          <td class="paramtype">ref ImageList</td>          <td class="paramname"><span class="paramname"><em>imgList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>openIcon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>icon_index</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>画像リストに「開いた」アイコンを格納する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imgList</td><td>画像リスト</td></tr>
+    <tr><td class="paramname">openIcon</td><td>開いたアイコンのアドレス</td></tr>
+    <tr><td class="paramname">icon_index</td><td>アイコンインデックス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>画像リストのインデックス</dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SSTools/Win32API/<b>SystemIconManager.cs</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/db1/namespace_s_s_tools.html">SSTools</a></li><li class="navelem"><a class="el" href="../../dc/d3b/class_s_s_tools_1_1_system_icon_manager.html">SystemIconManager</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

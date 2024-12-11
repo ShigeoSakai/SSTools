@@ -1,0 +1,9 @@
+<map id="SSTools.ZoomPictureBoxAffineMatrix.GetImageSizeF" name="SSTools.ZoomPictureBoxAffineMatrix.GetImageSizeF">
+<area shape="rect" id="Node000001" title="コントロールサイズから実画像サイズを求める" alt="" coords="258,72,462,115"/>
+<area shape="rect" id="Node000002" href="$df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#acfe4759f2a79970a366456e80d8a2096" title="コントロールサイズ変更" alt="" coords="5,5,210,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="261,70,190,51,192,46,263,65"/>
+<area shape="rect" id="Node000003" href="$df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#a2ae9b168f4d96806f50e889aff26202c" title="表示領域の設定" alt="" coords="5,72,210,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,96,210,96,210,91,242,91"/>
+<area shape="rect" id="Node000004" href="$df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#ac64695ef2840e96b0abca9dde9b8cdcd" title="移動" alt="" coords="5,139,210,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="263,122,192,141,190,135,261,117"/>
+</map>

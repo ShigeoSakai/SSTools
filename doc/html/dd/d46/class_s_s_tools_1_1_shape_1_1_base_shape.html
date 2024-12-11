@@ -1,0 +1,1296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SSTools: SSTools.Shape.BaseShape クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SSTools
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-types">限定公開型</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="../../db/de3/class_s_s_tools_1_1_shape_1_1_base_shape-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">SSTools.Shape.BaseShape クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>図形基本クラス  
+ <a href="#details">[詳解]</a></p>
+<div class="dynheader">
+SSTools.Shape.BaseShape の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d75/class_s_s_tools_1_1_shape_1_1_base_shape__inherit__graph.png" border="0" usemap="#a_s_s_tools_8_shape_8_base_shape_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_s_s_tools_8_shape_8_base_shape_inherit__map" id="a_s_s_tools_8_shape_8_base_shape_inherit__map">
+<area shape="rect" title="図形基本クラス" alt="" coords="5,81,188,108"/>
+<area shape="rect" href="../../d9/d44/class_s_s_tools_1_1_shape_1_1_circle_shape.html" title="円,楕円クラス" alt="" coords="248,5,434,32"/>
+<area shape="poly" title=" " alt="" coords="145,73,235,41,277,30,278,35,236,47,147,78"/>
+<area shape="rect" href="../../dc/d06/class_s_s_tools_1_1_shape_1_1_point_shape.html" title="点クラス" alt="" coords="250,56,432,83"/>
+<area shape="poly" title=" " alt="" coords="203,81,249,76,250,81,203,86"/>
+<area shape="rect" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html" title="多角形クラス" alt="" coords="242,107,441,133"/>
+<area shape="poly" title=" " alt="" coords="204,103,241,107,241,112,203,108"/>
+<area shape="rect" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html" title="矩形図形クラス" alt="" coords="236,157,447,184"/>
+<area shape="poly" title=" " alt="" coords="147,111,236,143,278,154,277,159,235,148,145,116"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:af7b01f96f07453dd68d10c6fb3100070" id="r_af7b01f96f07453dd68d10c6fb3100070"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7b01f96f07453dd68d10c6fb3100070">MARKER_TYPE</a> { <a class="el" href="#af7b01f96f07453dd68d10c6fb3100070aaebdbcb765394d25d6a604589a890f82">POINT</a> = 0
+, <a class="el" href="#af7b01f96f07453dd68d10c6fb3100070a883acd43c77567e1c3baced84ccf6ed7">PLUS</a> = 1
+, <a class="el" href="#af7b01f96f07453dd68d10c6fb3100070a04dd53a8e6c2306e9bbf944c1d6047f2">CROSS</a> = 2
+, <a class="el" href="#af7b01f96f07453dd68d10c6fb3100070a0af50777920c1401ab975cab64c4d491">CIRCLE</a> = 3
+ }</td></tr>
+<tr class="memdesc:af7b01f96f07453dd68d10c6fb3100070"><td class="mdescLeft">&#160;</td><td class="mdescRight">マーカーの種類  <a href="#af7b01f96f07453dd68d10c6fb3100070">[詳解]</a><br /></td></tr>
+<tr class="separator:af7b01f96f07453dd68d10c6fb3100070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a760d6466dd64b77c9c30ddfe83abcc9b" id="r_a760d6466dd64b77c9c30ddfe83abcc9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a760d6466dd64b77c9c30ddfe83abcc9b">BaseShape</a> (string name)</td></tr>
+<tr class="memdesc:a760d6466dd64b77c9c30ddfe83abcc9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:a760d6466dd64b77c9c30ddfe83abcc9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac34113479bd9f47ed837b34790fdbf0d" id="r_ac34113479bd9f47ed837b34790fdbf0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac34113479bd9f47ed837b34790fdbf0d">BaseShape</a> (string name, <a class="el" href="#ae43961a4a0476d0f1788807c2fc39f47">Point</a> point, <a class="el" href="#aeee350c9e7e502deb5252d3723171489">Color</a>? color=null, float? lineWidth=null, <a class="el" href="#a4ca17aa58b47af231e63b88ff72c3126">DashStyle</a>? dashStyle=null, float? markerSize=null)</td></tr>
+<tr class="memdesc:ac34113479bd9f47ed837b34790fdbf0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:ac34113479bd9f47ed837b34790fdbf0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5c88d3b94c86a0c8f0e8c0545ca878b" id="r_ab5c88d3b94c86a0c8f0e8c0545ca878b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5c88d3b94c86a0c8f0e8c0545ca878b">BaseShape</a> (string name, <a class="el" href="#aeee350c9e7e502deb5252d3723171489">Color</a>? color=null, float? lineWidth=null, <a class="el" href="#a4ca17aa58b47af231e63b88ff72c3126">DashStyle</a>? dashStyle=null, float? markerSize=null)</td></tr>
+<tr class="memdesc:ab5c88d3b94c86a0c8f0e8c0545ca878b"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:ab5c88d3b94c86a0c8f0e8c0545ca878b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d835cee9ea13cd4125f938e42f954e" id="r_a98d835cee9ea13cd4125f938e42f954e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98d835cee9ea13cd4125f938e42f954e">BaseShape</a> (<a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html">BaseShape</a> src)</td></tr>
+<tr class="memdesc:a98d835cee9ea13cd4125f938e42f954e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ  <br /></td></tr>
+<tr class="separator:a98d835cee9ea13cd4125f938e42f954e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d27065a4b6ac4e9210617291b6dae2b" id="r_a1d27065a4b6ac4e9210617291b6dae2b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html">BaseShape</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d27065a4b6ac4e9210617291b6dae2b">Clone</a> ()</td></tr>
+<tr class="memdesc:a1d27065a4b6ac4e9210617291b6dae2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">クローンコピー  <br /></td></tr>
+<tr class="separator:a1d27065a4b6ac4e9210617291b6dae2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae179af57cf3c6b171a414c89db2ebae0" id="r_ae179af57cf3c6b171a414c89db2ebae0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae179af57cf3c6b171a414c89db2ebae0">IsContain</a> (RectangleF rect)</td></tr>
+<tr class="memdesc:ae179af57cf3c6b171a414c89db2ebae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">領域に図形が含まれるか  <br /></td></tr>
+<tr class="separator:ae179af57cf3c6b171a414c89db2ebae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7070e38f80176738a445171c1d136c6b" id="r_a7070e38f80176738a445171c1d136c6b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7070e38f80176738a445171c1d136c6b">Draw</a> (Graphics g, SizeF? size)</td></tr>
+<tr class="memdesc:a7070e38f80176738a445171c1d136c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画  <br /></td></tr>
+<tr class="separator:a7070e38f80176738a445171c1d136c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f6e6a2d2321e6e176085c1d80a0e4b3" id="r_a0f6e6a2d2321e6e176085c1d80a0e4b3"><td class="memItemLeft" align="right" valign="top">virtual Rectangle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f6e6a2d2321e6e176085c1d80a0e4b3">GetDrawSize</a> ()</td></tr>
+<tr class="memdesc:a0f6e6a2d2321e6e176085c1d80a0e4b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画領域サイズを取得  <br /></td></tr>
+<tr class="separator:a0f6e6a2d2321e6e176085c1d80a0e4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
+限定公開型</h2></td></tr>
+<tr class="memitem:a2cc8f0ab48fb0499086031c2073c4fd2" id="r_a2cc8f0ab48fb0499086031c2073c4fd2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cc8f0ab48fb0499086031c2073c4fd2">COLOR_SELECT</a> { <br />
+&#160;&#160;<a class="el" href="#a2cc8f0ab48fb0499086031c2073c4fd2a83ca8ba10c5c73e476ee584e3ccefe51">NORMAL_COLOR</a>
+, <a class="el" href="#a2cc8f0ab48fb0499086031c2073c4fd2a6bdaccdf2fd7d5797322d2423de35b8f">FILL_COLOR</a>
+, <a class="el" href="#a2cc8f0ab48fb0499086031c2073c4fd2a05e2aafba3572595b59f5cba195004f4">TEXT_COLOR</a>
+, <a class="el" href="#a2cc8f0ab48fb0499086031c2073c4fd2a3ee043530b0a9562bc4e280bb126062a">TEXT_FILL_COLOR</a>
+, <br />
+&#160;&#160;<a class="el" href="#a2cc8f0ab48fb0499086031c2073c4fd2a93aa0e3af148a04030f0bf0440e0f042">TEXT_BORDER_COLOR</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a2cc8f0ab48fb0499086031c2073c4fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">色の選択  <a href="#a2cc8f0ab48fb0499086031c2073c4fd2">[詳解]</a><br /></td></tr>
+<tr class="separator:a2cc8f0ab48fb0499086031c2073c4fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a36b36f20e1b1a3a6039fd2d79547bee5" id="r_a36b36f20e1b1a3a6039fd2d79547bee5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36b36f20e1b1a3a6039fd2d79547bee5">DrawPoint</a> (Graphics g, SizeF? size, PointF? point=null, <a class="el" href="#aeee350c9e7e502deb5252d3723171489">Color</a>? color=null, float? lineWidth=null, <a class="el" href="#a4ca17aa58b47af231e63b88ff72c3126">DashStyle</a>? dashStyle=null, float? markerSize=null, <a class="el" href="#af7b01f96f07453dd68d10c6fb3100070">MARKER_TYPE</a>? markerType=null)</td></tr>
+<tr class="memdesc:a36b36f20e1b1a3a6039fd2d79547bee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">点の描画  <br /></td></tr>
+<tr class="separator:a36b36f20e1b1a3a6039fd2d79547bee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae235e1ffa6d4a68faea38f0c883cfd49" id="r_ae235e1ffa6d4a68faea38f0c883cfd49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae235e1ffa6d4a68faea38f0c883cfd49">RectContains</a> (RectangleF targetRect, Rectangle baseRect)</td></tr>
+<tr class="memdesc:ae235e1ffa6d4a68faea38f0c883cfd49"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形が領域に含まれるか  <br /></td></tr>
+<tr class="separator:ae235e1ffa6d4a68faea38f0c883cfd49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9051a06ac564f2f3fa0f08941184382d" id="r_a9051a06ac564f2f3fa0f08941184382d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9051a06ac564f2f3fa0f08941184382d">RectContains</a> (RectangleF targetRect, RectangleF baseRect)</td></tr>
+<tr class="memdesc:a9051a06ac564f2f3fa0f08941184382d"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形が領域に含まれるか  <br /></td></tr>
+<tr class="separator:a9051a06ac564f2f3fa0f08941184382d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e058da057b7319763aabec9a3d9df0" id="r_a50e058da057b7319763aabec9a3d9df0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aeee350c9e7e502deb5252d3723171489">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50e058da057b7319763aabec9a3d9df0">GetDrawColor</a> (<a class="el" href="#a2cc8f0ab48fb0499086031c2073c4fd2">COLOR_SELECT</a> colorSelect)</td></tr>
+<tr class="memdesc:a50e058da057b7319763aabec9a3d9df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画色を取得  <br /></td></tr>
+<tr class="separator:a50e058da057b7319763aabec9a3d9df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb447ddc1011c77d3f2c56680526ae1" id="r_afeb447ddc1011c77d3f2c56680526ae1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeb447ddc1011c77d3f2c56680526ae1">CalcTextOffset</a> (SizeF textSize, out int leftRight, out int topBottom, out int upDown, out float offsetX, out float offsetY)</td></tr>
+<tr class="memdesc:afeb447ddc1011c77d3f2c56680526ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列表示位置からオフセットを算出  <br /></td></tr>
+<tr class="separator:afeb447ddc1011c77d3f2c56680526ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5983565ef863d8f2852d1fcd22eb735" id="r_af5983565ef863d8f2852d1fcd22eb735"><td class="memItemLeft" align="right" valign="top">virtual RectangleF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5983565ef863d8f2852d1fcd22eb735">CalcTextPosition</a> (SizeF textSize, SizeF? size, PointF center)</td></tr>
+<tr class="memdesc:af5983565ef863d8f2852d1fcd22eb735"><td class="mdescLeft">&#160;</td><td class="mdescRight">テキスト表示位置の算出  <br /></td></tr>
+<tr class="separator:af5983565ef863d8f2852d1fcd22eb735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f64bfd13606235e33ee63c3dd716138" id="r_a8f64bfd13606235e33ee63c3dd716138"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f64bfd13606235e33ee63c3dd716138">DrawText</a> (Graphics graphics, SizeF? size, PointF center)</td></tr>
+<tr class="memdesc:a8f64bfd13606235e33ee63c3dd716138"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列の描画  <br /></td></tr>
+<tr class="separator:a8f64bfd13606235e33ee63c3dd716138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:ad0de32725ad947d5ab05583ccda24b0b" id="r_ad0de32725ad947d5ab05583ccda24b0b"><td class="memItemLeft" align="right" valign="top"><a id="ad0de32725ad947d5ab05583ccda24b0b" name="ad0de32725ad947d5ab05583ccda24b0b"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>Name</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:ad0de32725ad947d5ab05583ccda24b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前 <br /></td></tr>
+<tr class="separator:ad0de32725ad947d5ab05583ccda24b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae43961a4a0476d0f1788807c2fc39f47" id="r_ae43961a4a0476d0f1788807c2fc39f47"><td class="memItemLeft" align="right" valign="top"><a id="ae43961a4a0476d0f1788807c2fc39f47" name="ae43961a4a0476d0f1788807c2fc39f47"></a>
+Point&#160;</td><td class="memItemRight" valign="bottom"><b>Point</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae43961a4a0476d0f1788807c2fc39f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">中心座標 <br /></td></tr>
+<tr class="separator:ae43961a4a0476d0f1788807c2fc39f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee350c9e7e502deb5252d3723171489" id="r_aeee350c9e7e502deb5252d3723171489"><td class="memItemLeft" align="right" valign="top"><a id="aeee350c9e7e502deb5252d3723171489" name="aeee350c9e7e502deb5252d3723171489"></a>
+Color&#160;</td><td class="memItemRight" valign="bottom"><b>Color</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:aeee350c9e7e502deb5252d3723171489"><td class="mdescLeft">&#160;</td><td class="mdescRight">色 <br /></td></tr>
+<tr class="separator:aeee350c9e7e502deb5252d3723171489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e91d2ace6d36aa189d0ef15c80f0deb" id="r_a4e91d2ace6d36aa189d0ef15c80f0deb"><td class="memItemLeft" align="right" valign="top"><a id="a4e91d2ace6d36aa189d0ef15c80f0deb" name="a4e91d2ace6d36aa189d0ef15c80f0deb"></a>
+<a class="el" href="#aeee350c9e7e502deb5252d3723171489">Color</a>?&#160;</td><td class="memItemRight" valign="bottom"><b>FillColor</b> = Color.White<code> [get, set]</code></td></tr>
+<tr class="memdesc:a4e91d2ace6d36aa189d0ef15c80f0deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">塗りつぶし色 <br /></td></tr>
+<tr class="separator:a4e91d2ace6d36aa189d0ef15c80f0deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f1b8156462d2221eeea3e04f6b1e33d" id="r_a5f1b8156462d2221eeea3e04f6b1e33d"><td class="memItemLeft" align="right" valign="top"><a id="a5f1b8156462d2221eeea3e04f6b1e33d" name="a5f1b8156462d2221eeea3e04f6b1e33d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LineWidth</b> = 1.0F<code> [get, set]</code></td></tr>
+<tr class="memdesc:a5f1b8156462d2221eeea3e04f6b1e33d"><td class="mdescLeft">&#160;</td><td class="mdescRight">線幅 <br /></td></tr>
+<tr class="separator:a5f1b8156462d2221eeea3e04f6b1e33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af159a52ece422b612a8cd642d123a3cf" id="r_af159a52ece422b612a8cd642d123a3cf"><td class="memItemLeft" align="right" valign="top"><a id="af159a52ece422b612a8cd642d123a3cf" name="af159a52ece422b612a8cd642d123a3cf"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>MarkerSize</b> = 10.0F<code> [get, set]</code></td></tr>
+<tr class="memdesc:af159a52ece422b612a8cd642d123a3cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">マーカーサイズ <br /></td></tr>
+<tr class="separator:af159a52ece422b612a8cd642d123a3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca17aa58b47af231e63b88ff72c3126" id="r_a4ca17aa58b47af231e63b88ff72c3126"><td class="memItemLeft" align="right" valign="top"><a id="a4ca17aa58b47af231e63b88ff72c3126" name="a4ca17aa58b47af231e63b88ff72c3126"></a>
+DashStyle&#160;</td><td class="memItemRight" valign="bottom"><b>DashStyle</b> = DashStyle.Solid<code> [get, set]</code></td></tr>
+<tr class="memdesc:a4ca17aa58b47af231e63b88ff72c3126"><td class="mdescLeft">&#160;</td><td class="mdescRight">線種 <br /></td></tr>
+<tr class="separator:a4ca17aa58b47af231e63b88ff72c3126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addfde9c7820a881782cd1bb9c4a57c6e" id="r_addfde9c7820a881782cd1bb9c4a57c6e"><td class="memItemLeft" align="right" valign="top"><a id="addfde9c7820a881782cd1bb9c4a57c6e" name="addfde9c7820a881782cd1bb9c4a57c6e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowLable</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:addfde9c7820a881782cd1bb9c4a57c6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル表示 <br /></td></tr>
+<tr class="separator:addfde9c7820a881782cd1bb9c4a57c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd07559b4b5017d8106bf304392595b" id="r_a2bd07559b4b5017d8106bf304392595b"><td class="memItemLeft" align="right" valign="top"><a id="a2bd07559b4b5017d8106bf304392595b" name="a2bd07559b4b5017d8106bf304392595b"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>Text</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a2bd07559b4b5017d8106bf304392595b"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示文字列 <br /></td></tr>
+<tr class="separator:a2bd07559b4b5017d8106bf304392595b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e5766e4261951f5c7cc7a8b59d3d04c" id="r_a7e5766e4261951f5c7cc7a8b59d3d04c"><td class="memItemLeft" align="right" valign="top"><a id="a7e5766e4261951f5c7cc7a8b59d3d04c" name="a7e5766e4261951f5c7cc7a8b59d3d04c"></a>
+<a class="el" href="../../d7/db1/namespace_s_s_tools.html#aadc7a5c2a68cdad766a47914b2a24f12">LABEL_POSITION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LabelPosition</b> = <a class="el" href="../../d7/db1/namespace_s_s_tools.html#aadc7a5c2a68cdad766a47914b2a24f12a747385047b85ae751f83adb36435a3c1">LABEL_POSITION.TOP_LEFT</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a7e5766e4261951f5c7cc7a8b59d3d04c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル表示位置 <br /></td></tr>
+<tr class="separator:a7e5766e4261951f5c7cc7a8b59d3d04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3e611e1495ee16f10ea655302994ce" id="r_a7c3e611e1495ee16f10ea655302994ce"><td class="memItemLeft" align="right" valign="top"><a id="a7c3e611e1495ee16f10ea655302994ce" name="a7c3e611e1495ee16f10ea655302994ce"></a>
+Font&#160;</td><td class="memItemRight" valign="bottom"><b>LabelFont</b> = new Font(FontFamily.GenericSansSerif, 10.0F)<code> [get, set]</code></td></tr>
+<tr class="memdesc:a7c3e611e1495ee16f10ea655302994ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベルフォント <br /></td></tr>
+<tr class="separator:a7c3e611e1495ee16f10ea655302994ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ea573511972e481ee56c2e9531478f" id="r_a21ea573511972e481ee56c2e9531478f"><td class="memItemLeft" align="right" valign="top"><a id="a21ea573511972e481ee56c2e9531478f" name="a21ea573511972e481ee56c2e9531478f"></a>
+<a class="el" href="#aeee350c9e7e502deb5252d3723171489">Color</a>?&#160;</td><td class="memItemRight" valign="bottom"><b>LabelColor</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a21ea573511972e481ee56c2e9531478f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル文字色 <br /></td></tr>
+<tr class="separator:a21ea573511972e481ee56c2e9531478f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16cab4d4b34bf74ddbddf81b913bb3c6" id="r_a16cab4d4b34bf74ddbddf81b913bb3c6"><td class="memItemLeft" align="right" valign="top"><a id="a16cab4d4b34bf74ddbddf81b913bb3c6" name="a16cab4d4b34bf74ddbddf81b913bb3c6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>LabelFill</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:a16cab4d4b34bf74ddbddf81b913bb3c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル塗りつぶし <br /></td></tr>
+<tr class="separator:a16cab4d4b34bf74ddbddf81b913bb3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208b40f6cb1ca32ffa2810e0061fe568" id="r_a208b40f6cb1ca32ffa2810e0061fe568"><td class="memItemLeft" align="right" valign="top"><a id="a208b40f6cb1ca32ffa2810e0061fe568" name="a208b40f6cb1ca32ffa2810e0061fe568"></a>
+<a class="el" href="#aeee350c9e7e502deb5252d3723171489">Color</a>?&#160;</td><td class="memItemRight" valign="bottom"><b>LabelFillColor</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a208b40f6cb1ca32ffa2810e0061fe568"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル塗りつぶし色 <br /></td></tr>
+<tr class="separator:a208b40f6cb1ca32ffa2810e0061fe568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8faaba1280d8ed434fcc8e78cd547406" id="r_a8faaba1280d8ed434fcc8e78cd547406"><td class="memItemLeft" align="right" valign="top"><a id="a8faaba1280d8ed434fcc8e78cd547406" name="a8faaba1280d8ed434fcc8e78cd547406"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>LabelBorder</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:a8faaba1280d8ed434fcc8e78cd547406"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル枠 <br /></td></tr>
+<tr class="separator:a8faaba1280d8ed434fcc8e78cd547406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5c9390b8528d080db3acf9dce592bc" id="r_a3a5c9390b8528d080db3acf9dce592bc"><td class="memItemLeft" align="right" valign="top"><a id="a3a5c9390b8528d080db3acf9dce592bc" name="a3a5c9390b8528d080db3acf9dce592bc"></a>
+<a class="el" href="#aeee350c9e7e502deb5252d3723171489">Color</a>?&#160;</td><td class="memItemRight" valign="bottom"><b>LabelBorderColor</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a3a5c9390b8528d080db3acf9dce592bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラベル枠色 <br /></td></tr>
+<tr class="separator:a3a5c9390b8528d080db3acf9dce592bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab32684cb6a80f39cfcaf79549726433a" id="r_ab32684cb6a80f39cfcaf79549726433a"><td class="memItemLeft" align="right" valign="top"><a id="ab32684cb6a80f39cfcaf79549726433a" name="ab32684cb6a80f39cfcaf79549726433a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Visible</b> = true<code> [get, set]</code></td></tr>
+<tr class="memdesc:ab32684cb6a80f39cfcaf79549726433a"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示・非表示 <br /></td></tr>
+<tr class="separator:ab32684cb6a80f39cfcaf79549726433a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76038845dcfcb4ba16a8f57a2388fd43" id="r_a76038845dcfcb4ba16a8f57a2388fd43"><td class="memItemLeft" align="right" valign="top"><a id="a76038845dcfcb4ba16a8f57a2388fd43" name="a76038845dcfcb4ba16a8f57a2388fd43"></a>
+<a class="el" href="#af7b01f96f07453dd68d10c6fb3100070">MARKER_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MarkerType</b> = <a class="el" href="#af7b01f96f07453dd68d10c6fb3100070a04dd53a8e6c2306e9bbf944c1d6047f2">MARKER_TYPE.CROSS</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a76038845dcfcb4ba16a8f57a2388fd43"><td class="mdescLeft">&#160;</td><td class="mdescRight">マーカー種類 <br /></td></tr>
+<tr class="separator:a76038845dcfcb4ba16a8f57a2388fd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>図形基本クラス </p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a2cc8f0ab48fb0499086031c2073c4fd2" name="a2cc8f0ab48fb0499086031c2073c4fd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc8f0ab48fb0499086031c2073c4fd2">&#9670;&#160;</a></span>COLOR_SELECT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a2cc8f0ab48fb0499086031c2073c4fd2">SSTools.Shape.BaseShape.COLOR_SELECT</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>色の選択 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a2cc8f0ab48fb0499086031c2073c4fd2a83ca8ba10c5c73e476ee584e3ccefe51" name="a2cc8f0ab48fb0499086031c2073c4fd2a83ca8ba10c5c73e476ee584e3ccefe51"></a>NORMAL_COLOR&#160;</td><td class="fielddoc"><p>通常の色 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2cc8f0ab48fb0499086031c2073c4fd2a6bdaccdf2fd7d5797322d2423de35b8f" name="a2cc8f0ab48fb0499086031c2073c4fd2a6bdaccdf2fd7d5797322d2423de35b8f"></a>FILL_COLOR&#160;</td><td class="fielddoc"><p>塗りつぶし色 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2cc8f0ab48fb0499086031c2073c4fd2a05e2aafba3572595b59f5cba195004f4" name="a2cc8f0ab48fb0499086031c2073c4fd2a05e2aafba3572595b59f5cba195004f4"></a>TEXT_COLOR&#160;</td><td class="fielddoc"><p>テキスト色 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2cc8f0ab48fb0499086031c2073c4fd2a3ee043530b0a9562bc4e280bb126062a" name="a2cc8f0ab48fb0499086031c2073c4fd2a3ee043530b0a9562bc4e280bb126062a"></a>TEXT_FILL_COLOR&#160;</td><td class="fielddoc"><p>テキスト枠色 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2cc8f0ab48fb0499086031c2073c4fd2a93aa0e3af148a04030f0bf0440e0f042" name="a2cc8f0ab48fb0499086031c2073c4fd2a93aa0e3af148a04030f0bf0440e0f042"></a>TEXT_BORDER_COLOR&#160;</td><td class="fielddoc"><p>テキスト枠色 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="af7b01f96f07453dd68d10c6fb3100070" name="af7b01f96f07453dd68d10c6fb3100070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b01f96f07453dd68d10c6fb3100070">&#9670;&#160;</a></span>MARKER_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#af7b01f96f07453dd68d10c6fb3100070">SSTools.Shape.BaseShape.MARKER_TYPE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>マーカーの種類 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="af7b01f96f07453dd68d10c6fb3100070aaebdbcb765394d25d6a604589a890f82" name="af7b01f96f07453dd68d10c6fb3100070aaebdbcb765394d25d6a604589a890f82"></a>POINT&#160;</td><td class="fielddoc"><p>点 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af7b01f96f07453dd68d10c6fb3100070a883acd43c77567e1c3baced84ccf6ed7" name="af7b01f96f07453dd68d10c6fb3100070a883acd43c77567e1c3baced84ccf6ed7"></a>PLUS&#160;</td><td class="fielddoc"><p>＋(十字) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af7b01f96f07453dd68d10c6fb3100070a04dd53a8e6c2306e9bbf944c1d6047f2" name="af7b01f96f07453dd68d10c6fb3100070a04dd53a8e6c2306e9bbf944c1d6047f2"></a>CROSS&#160;</td><td class="fielddoc"><p>× </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af7b01f96f07453dd68d10c6fb3100070a0af50777920c1401ab975cab64c4d491" name="af7b01f96f07453dd68d10c6fb3100070a0af50777920c1401ab975cab64c4d491"></a>CIRCLE&#160;</td><td class="fielddoc"><p>〇 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a760d6466dd64b77c9c30ddfe83abcc9b" name="a760d6466dd64b77c9c30ddfe83abcc9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a760d6466dd64b77c9c30ddfe83abcc9b">&#9670;&#160;</a></span>BaseShape() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.Shape.BaseShape.BaseShape </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>名前</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#ad0de32725ad947d5ab05583ccda24b0b">SSTools.Shape.BaseShape.Name</a>.</p>
+
+</div>
+</div>
+<a id="ac34113479bd9f47ed837b34790fdbf0d" name="ac34113479bd9f47ed837b34790fdbf0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac34113479bd9f47ed837b34790fdbf0d">&#9670;&#160;</a></span>BaseShape() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.Shape.BaseShape.BaseShape </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ae43961a4a0476d0f1788807c2fc39f47">Point</a></td>          <td class="paramname"><span class="paramname"><em>point</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aeee350c9e7e502deb5252d3723171489">Color</a>?</td>          <td class="paramname"><span class="paramname"><em>color</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float?</td>          <td class="paramname"><span class="paramname"><em>lineWidth</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a4ca17aa58b47af231e63b88ff72c3126">DashStyle</a>?</td>          <td class="paramname"><span class="paramname"><em>dashStyle</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float?</td>          <td class="paramname"><span class="paramname"><em>markerSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>名前</td></tr>
+    <tr><td class="paramname">point</td><td>中心座標</td></tr>
+    <tr><td class="paramname">color</td><td>色</td></tr>
+    <tr><td class="paramname">lineWidth</td><td>線幅</td></tr>
+    <tr><td class="paramname">dashStyle</td><td>線種</td></tr>
+    <tr><td class="paramname">markerSize</td><td>マーカーサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#ae43961a4a0476d0f1788807c2fc39f47">SSTools.Shape.BaseShape.Point</a>.</p>
+
+</div>
+</div>
+<a id="ab5c88d3b94c86a0c8f0e8c0545ca878b" name="ab5c88d3b94c86a0c8f0e8c0545ca878b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5c88d3b94c86a0c8f0e8c0545ca878b">&#9670;&#160;</a></span>BaseShape() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.Shape.BaseShape.BaseShape </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aeee350c9e7e502deb5252d3723171489">Color</a>?</td>          <td class="paramname"><span class="paramname"><em>color</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float?</td>          <td class="paramname"><span class="paramname"><em>lineWidth</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a4ca17aa58b47af231e63b88ff72c3126">DashStyle</a>?</td>          <td class="paramname"><span class="paramname"><em>dashStyle</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float?</td>          <td class="paramname"><span class="paramname"><em>markerSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>名前</td></tr>
+    <tr><td class="paramname">color</td><td>色</td></tr>
+    <tr><td class="paramname">lineWidth</td><td>線幅</td></tr>
+    <tr><td class="paramname">dashStyle</td><td>線種</td></tr>
+    <tr><td class="paramname">markerSize</td><td>マーカーサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#aeee350c9e7e502deb5252d3723171489">SSTools.Shape.BaseShape.Color</a>, <a class="el" href="#a4ca17aa58b47af231e63b88ff72c3126">SSTools.Shape.BaseShape.DashStyle</a>, <a class="el" href="#a5f1b8156462d2221eeea3e04f6b1e33d">SSTools.Shape.BaseShape.LineWidth</a>, <a class="el" href="#af159a52ece422b612a8cd642d123a3cf">SSTools.Shape.BaseShape.MarkerSize</a>.</p>
+
+</div>
+</div>
+<a id="a98d835cee9ea13cd4125f938e42f954e" name="a98d835cee9ea13cd4125f938e42f954e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d835cee9ea13cd4125f938e42f954e">&#9670;&#160;</a></span>BaseShape() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.Shape.BaseShape.BaseShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html">BaseShape</a></td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コピーコンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>コピー元</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#aeee350c9e7e502deb5252d3723171489">SSTools.Shape.BaseShape.Color</a>, <a class="el" href="#a4ca17aa58b47af231e63b88ff72c3126">SSTools.Shape.BaseShape.DashStyle</a>, <a class="el" href="#a4e91d2ace6d36aa189d0ef15c80f0deb">SSTools.Shape.BaseShape.FillColor</a>, <a class="el" href="#a8faaba1280d8ed434fcc8e78cd547406">SSTools.Shape.BaseShape.LabelBorder</a>, <a class="el" href="#a3a5c9390b8528d080db3acf9dce592bc">SSTools.Shape.BaseShape.LabelBorderColor</a>, <a class="el" href="#a21ea573511972e481ee56c2e9531478f">SSTools.Shape.BaseShape.LabelColor</a>, <a class="el" href="#a16cab4d4b34bf74ddbddf81b913bb3c6">SSTools.Shape.BaseShape.LabelFill</a>, <a class="el" href="#a208b40f6cb1ca32ffa2810e0061fe568">SSTools.Shape.BaseShape.LabelFillColor</a>, <a class="el" href="#a7c3e611e1495ee16f10ea655302994ce">SSTools.Shape.BaseShape.LabelFont</a>, <a class="el" href="#a7e5766e4261951f5c7cc7a8b59d3d04c">SSTools.Shape.BaseShape.LabelPosition</a>, <a class="el" href="#a5f1b8156462d2221eeea3e04f6b1e33d">SSTools.Shape.BaseShape.LineWidth</a>, <a class="el" href="#af159a52ece422b612a8cd642d123a3cf">SSTools.Shape.BaseShape.MarkerSize</a>, <a class="el" href="#a76038845dcfcb4ba16a8f57a2388fd43">SSTools.Shape.BaseShape.MarkerType</a>, <a class="el" href="#ad0de32725ad947d5ab05583ccda24b0b">SSTools.Shape.BaseShape.Name</a>, <a class="el" href="#ae43961a4a0476d0f1788807c2fc39f47">SSTools.Shape.BaseShape.Point</a>, <a class="el" href="#addfde9c7820a881782cd1bb9c4a57c6e">SSTools.Shape.BaseShape.ShowLable</a>, <a class="el" href="#a2bd07559b4b5017d8106bf304392595b">SSTools.Shape.BaseShape.Text</a>, <a class="el" href="#ab32684cb6a80f39cfcaf79549726433a">SSTools.Shape.BaseShape.Visible</a> (計18項目).</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="afeb447ddc1011c77d3f2c56680526ae1" name="afeb447ddc1011c77d3f2c56680526ae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeb447ddc1011c77d3f2c56680526ae1">&#9670;&#160;</a></span>CalcTextOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.Shape.BaseShape.CalcTextOffset </td>
+          <td>(</td>
+          <td class="paramtype">SizeF</td>          <td class="paramname"><span class="paramname"><em>textSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out int</td>          <td class="paramname"><span class="paramname"><em>leftRight</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out int</td>          <td class="paramname"><span class="paramname"><em>topBottom</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out int</td>          <td class="paramname"><span class="paramname"><em>upDown</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float</td>          <td class="paramname"><span class="paramname"><em>offsetX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float</td>          <td class="paramname"><span class="paramname"><em>offsetY</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列表示位置からオフセットを算出 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textSize</td><td>文字列表示サイズ</td></tr>
+    <tr><td class="paramname">leftRight</td><td>1:左,2:中央,3:右</td></tr>
+    <tr><td class="paramname">topBottom</td><td>1:上,2;中央,3:下</td></tr>
+    <tr><td class="paramname">upDown</td><td>0:基準線より上,1:基準線より下</td></tr>
+    <tr><td class="paramname">offsetX</td><td>オフセットX</td></tr>
+    <tr><td class="paramname">offsetY</td><td>オフセットY</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a7e5766e4261951f5c7cc7a8b59d3d04c">SSTools.Shape.BaseShape.LabelPosition</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="#af5983565ef863d8f2852d1fcd22eb735">SSTools.Shape.BaseShape.CalcTextPosition()</a>, <a class="el" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a5068179db79a8a3ad06b1c13039753a8">SSTools.Shape.RectangleShape.CalcTextPosition()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_afeb447ddc1011c77d3f2c56680526ae1_icgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_afeb447ddc1011c77d3f2c56680526ae1_icgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_afeb447ddc1011c77d3f2c56680526ae1_icgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_afeb447ddc1011c77d3f2c56680526ae1_icgraph">
+<area shape="rect" title="文字列表示位置からオフセットを算出" alt="" coords="1556,107,1743,149"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af5983565ef863d8f2852d1fcd22eb735" title="テキスト表示位置の算出" alt="" coords="1308,73,1494,116"/>
+<area shape="poly" title=" " alt="" coords="1541,116,1494,110,1495,105,1541,111"/>
+<area shape="rect" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a5068179db79a8a3ad06b1c13039753a8" title="テキスト表示位置の算出" alt="" coords="1293,140,1508,183"/>
+<area shape="poly" title=" " alt="" coords="1541,145,1509,149,1509,144,1541,140"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a8f64bfd13606235e33ee63c3dd716138" title="文字列の描画" alt="" coords="1059,73,1245,116"/>
+<area shape="poly" title=" " alt="" coords="1292,97,1246,97,1246,92,1292,92"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a7070e38f80176738a445171c1d136c6b" title="描画" alt="" coords="779,56,996,83"/>
+<area shape="poly" title=" " alt="" coords="1043,87,997,82,997,77,1043,82"/>
+<area shape="rect" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a951a4ff0740fdc972edc7e83b6ec02e2" title="描画" alt="" coords="764,107,1011,133"/>
+<area shape="poly" title=" " alt="" coords="1043,108,1011,111,1011,106,1043,102"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#ab5ebe8673ebbf9754429dd876f911a85" title="描画(float)" alt="" coords="520,56,716,83"/>
+<area shape="poly" title=" " alt="" coords="764,72,717,72,717,67,764,67"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a0fa3044022632cb9f8df7d38dd6adfcb" title="描画" alt="" coords="269,5,466,32"/>
+<area shape="poly" title=" " alt="" coords="533,55,436,35,437,30,534,50"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a67716a6c0c69b71cd9f9ff15f4d9dc09" title="描画(int)" alt="" coords="269,56,466,83"/>
+<area shape="poly" title=" " alt="" coords="504,72,466,72,466,67,504,67"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a5b1c69ea0df3f844f56c8d8f65f610a6" title="クリッピングした画像を取得" alt="" coords="263,107,472,133"/>
+<area shape="poly" title=" " alt="" coords="534,89,437,109,436,103,533,84"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a022930420fb6c9ee4ec5fdb0c3160c35" title="図形がある領域のクリッピングした画像を取得" alt="" coords="5,48,215,75"/>
+<area shape="poly" title=" " alt="" coords="290,105,171,78,172,73,292,100"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#ab542a8380e339c3be83c15c0164880bc" title="図形が入る領域で画像を切り取り、ファイルに保存する" alt="" coords="7,99,213,141"/>
+<area shape="poly" title=" " alt="" coords="247,123,213,123,213,117,247,117"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a027ed911faf713c6d203b749f7208029" title="指定された矩形で画像を切り取り、ファイルに保存する" alt="" coords="7,165,213,208"/>
+<area shape="poly" title=" " alt="" coords="299,140,196,167,195,162,297,135"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af5983565ef863d8f2852d1fcd22eb735" name="af5983565ef863d8f2852d1fcd22eb735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5983565ef863d8f2852d1fcd22eb735">&#9670;&#160;</a></span>CalcTextPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual RectangleF SSTools.Shape.BaseShape.CalcTextPosition </td>
+          <td>(</td>
+          <td class="paramtype">SizeF</td>          <td class="paramname"><span class="paramname"><em>textSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SizeF?</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PointF</td>          <td class="paramname"><span class="paramname"><em>center</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テキスト表示位置の算出 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textSize</td><td>文字列表示サイズ</td></tr>
+    <tr><td class="paramname">size</td><td>表示サイズ</td></tr>
+    <tr><td class="paramname">center</td><td>中心座標</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>テキスト表示領域</dd></dl>
+
+<p><a class="el" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a5068179db79a8a3ad06b1c13039753a8">SSTools.Shape.RectangleShape</a>で再実装されています。</p>
+
+<p class="reference">参照先 <a class="el" href="#afeb447ddc1011c77d3f2c56680526ae1">SSTools.Shape.BaseShape.CalcTextOffset()</a>, <a class="el" href="#af159a52ece422b612a8cd642d123a3cf">SSTools.Shape.BaseShape.MarkerSize</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="#a8f64bfd13606235e33ee63c3dd716138">SSTools.Shape.BaseShape.DrawText()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_af5983565ef863d8f2852d1fcd22eb735_cgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_af5983565ef863d8f2852d1fcd22eb735_cgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_af5983565ef863d8f2852d1fcd22eb735_cgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_af5983565ef863d8f2852d1fcd22eb735_cgraph">
+<area shape="rect" title="テキスト表示位置の算出" alt="" coords="5,5,192,48"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#afeb447ddc1011c77d3f2c56680526ae1" title="文字列表示位置からオフセットを算出" alt="" coords="240,5,426,48"/>
+<area shape="poly" title=" " alt="" coords="192,24,224,24,224,29,192,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_af5983565ef863d8f2852d1fcd22eb735_icgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_af5983565ef863d8f2852d1fcd22eb735_icgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_af5983565ef863d8f2852d1fcd22eb735_icgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_af5983565ef863d8f2852d1fcd22eb735_icgraph">
+<area shape="rect" title="テキスト表示位置の算出" alt="" coords="1293,73,1479,116"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a8f64bfd13606235e33ee63c3dd716138" title="文字列の描画" alt="" coords="1059,73,1245,116"/>
+<area shape="poly" title=" " alt="" coords="1278,97,1245,97,1245,92,1278,92"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a7070e38f80176738a445171c1d136c6b" title="描画" alt="" coords="779,56,996,83"/>
+<area shape="poly" title=" " alt="" coords="1043,87,997,82,997,77,1043,82"/>
+<area shape="rect" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a951a4ff0740fdc972edc7e83b6ec02e2" title="描画" alt="" coords="764,107,1011,133"/>
+<area shape="poly" title=" " alt="" coords="1043,108,1011,111,1011,106,1043,102"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#ab5ebe8673ebbf9754429dd876f911a85" title="描画(float)" alt="" coords="520,56,716,83"/>
+<area shape="poly" title=" " alt="" coords="764,72,717,72,717,67,764,67"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a0fa3044022632cb9f8df7d38dd6adfcb" title="描画" alt="" coords="269,5,466,32"/>
+<area shape="poly" title=" " alt="" coords="533,55,436,35,437,30,534,50"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a67716a6c0c69b71cd9f9ff15f4d9dc09" title="描画(int)" alt="" coords="269,56,466,83"/>
+<area shape="poly" title=" " alt="" coords="504,72,466,72,466,67,504,67"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a5b1c69ea0df3f844f56c8d8f65f610a6" title="クリッピングした画像を取得" alt="" coords="263,107,472,133"/>
+<area shape="poly" title=" " alt="" coords="534,89,437,109,436,103,533,84"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a022930420fb6c9ee4ec5fdb0c3160c35" title="図形がある領域のクリッピングした画像を取得" alt="" coords="5,48,215,75"/>
+<area shape="poly" title=" " alt="" coords="290,105,171,78,172,73,292,100"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#ab542a8380e339c3be83c15c0164880bc" title="図形が入る領域で画像を切り取り、ファイルに保存する" alt="" coords="7,99,213,141"/>
+<area shape="poly" title=" " alt="" coords="247,123,213,123,213,117,247,117"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a027ed911faf713c6d203b749f7208029" title="指定された矩形で画像を切り取り、ファイルに保存する" alt="" coords="7,165,213,208"/>
+<area shape="poly" title=" " alt="" coords="299,140,196,167,195,162,297,135"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1d27065a4b6ac4e9210617291b6dae2b" name="a1d27065a4b6ac4e9210617291b6dae2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d27065a4b6ac4e9210617291b6dae2b">&#9670;&#160;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html">BaseShape</a> SSTools.Shape.BaseShape.Clone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>クローンコピー </p>
+<dl class="section return"><dt>戻り値</dt><dd>コピーされたオブジェクト</dd></dl>
+
+<p><a class="el" href="../../d9/d44/class_s_s_tools_1_1_shape_1_1_circle_shape.html#ae8c3cdef108fe4ddf728cf7b9637fc63">SSTools.Shape.CircleShape</a>, <a class="el" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html#aeb12cf936908b0fd2f1eae9967597de5">SSTools.Shape.PolygonShape</a>, <a class="el" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a9a4772bb96d48ee535f940b43cd05ae6">SSTools.Shape.RectangleShape</a>で再実装されています。</p>
+
+<p class="reference">参照元 <a class="el" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a681b9ee7ee481c5a972bedc849dff998">SSTools.ShapeManager.AddShape()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a1d27065a4b6ac4e9210617291b6dae2b_icgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a1d27065a4b6ac4e9210617291b6dae2b_icgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a1d27065a4b6ac4e9210617291b6dae2b_icgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a1d27065a4b6ac4e9210617291b6dae2b_icgraph">
+<area shape="rect" title="クローンコピー" alt="" coords="242,5,428,48"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a681b9ee7ee481c5a972bedc849dff998" title="図形の追加" alt="" coords="5,5,194,48"/>
+<area shape="poly" title=" " alt="" coords="226,29,194,29,194,24,226,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7070e38f80176738a445171c1d136c6b" name="a7070e38f80176738a445171c1d136c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7070e38f80176738a445171c1d136c6b">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SSTools.Shape.BaseShape.Draw </td>
+          <td>(</td>
+          <td class="paramtype">Graphics</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SizeF?</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>グラフィックス</td></tr>
+    <tr><td class="paramname">size</td><td>表示サイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="../../d9/d44/class_s_s_tools_1_1_shape_1_1_circle_shape.html#aa3a6087b94c3f273b6e73f4003338ccc">SSTools.Shape.CircleShape</a>, <a class="el" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html#a08776870afe0b86b6a41cffef7d0d14c">SSTools.Shape.PolygonShape</a>, <a class="el" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a951a4ff0740fdc972edc7e83b6ec02e2">SSTools.Shape.RectangleShape</a>で再実装されています。</p>
+
+<p class="reference">参照先 <a class="el" href="#a4ca17aa58b47af231e63b88ff72c3126">SSTools.Shape.BaseShape.DashStyle</a>, <a class="el" href="#a8f64bfd13606235e33ee63c3dd716138">SSTools.Shape.BaseShape.DrawText()</a>, <a class="el" href="#a50e058da057b7319763aabec9a3d9df0">SSTools.Shape.BaseShape.GetDrawColor()</a>, <a class="el" href="#a5f1b8156462d2221eeea3e04f6b1e33d">SSTools.Shape.BaseShape.LineWidth</a>, <a class="el" href="#af159a52ece422b612a8cd642d123a3cf">SSTools.Shape.BaseShape.MarkerSize</a>, <a class="el" href="#a76038845dcfcb4ba16a8f57a2388fd43">SSTools.Shape.BaseShape.MarkerType</a>, <a class="el" href="#ae43961a4a0476d0f1788807c2fc39f47">SSTools.Shape.BaseShape.Point</a>, <a class="el" href="#addfde9c7820a881782cd1bb9c4a57c6e">SSTools.Shape.BaseShape.ShowLable</a>, <a class="el" href="#ab32684cb6a80f39cfcaf79549726433a">SSTools.Shape.BaseShape.Visible</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#ab5ebe8673ebbf9754429dd876f911a85">SSTools.ShapeManager.Draw()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a7070e38f80176738a445171c1d136c6b_cgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a7070e38f80176738a445171c1d136c6b_cgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a7070e38f80176738a445171c1d136c6b_cgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a7070e38f80176738a445171c1d136c6b_cgraph">
+<area shape="rect" title="描画" alt="" coords="5,51,223,77"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a8f64bfd13606235e33ee63c3dd716138" title="文字列の描画" alt="" coords="271,13,457,56"/>
+<area shape="poly" title=" " alt="" coords="223,49,255,45,256,50,223,54"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a50e058da057b7319763aabec9a3d9df0" title="描画色を取得" alt="" coords="505,72,691,115"/>
+<area shape="poly" title=" " alt="" coords="223,68,490,84,490,89,223,73"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af5983565ef863d8f2852d1fcd22eb735" title="テキスト表示位置の算出" alt="" coords="505,5,691,48"/>
+<area shape="poly" title=" " alt="" coords="457,29,489,28,490,33,457,34"/>
+<area shape="poly" title=" " alt="" coords="452,54,496,65,495,70,451,59"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#afeb447ddc1011c77d3f2c56680526ae1" title="文字列表示位置からオフセットを算出" alt="" coords="739,5,926,48"/>
+<area shape="poly" title=" " alt="" coords="692,24,724,24,724,29,692,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a7070e38f80176738a445171c1d136c6b_icgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a7070e38f80176738a445171c1d136c6b_icgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a7070e38f80176738a445171c1d136c6b_icgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a7070e38f80176738a445171c1d136c6b_icgraph">
+<area shape="rect" title="描画" alt="" coords="764,56,982,83"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#ab5ebe8673ebbf9754429dd876f911a85" title="描画(float)" alt="" coords="520,56,716,83"/>
+<area shape="poly" title=" " alt="" coords="749,72,717,72,717,67,749,67"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a0fa3044022632cb9f8df7d38dd6adfcb" title="描画" alt="" coords="269,5,466,32"/>
+<area shape="poly" title=" " alt="" coords="533,55,436,35,437,30,534,50"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a67716a6c0c69b71cd9f9ff15f4d9dc09" title="描画(int)" alt="" coords="269,56,466,83"/>
+<area shape="poly" title=" " alt="" coords="504,72,466,72,466,67,504,67"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a5b1c69ea0df3f844f56c8d8f65f610a6" title="クリッピングした画像を取得" alt="" coords="263,107,472,133"/>
+<area shape="poly" title=" " alt="" coords="534,89,437,109,436,103,533,84"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a022930420fb6c9ee4ec5fdb0c3160c35" title="図形がある領域のクリッピングした画像を取得" alt="" coords="5,48,215,75"/>
+<area shape="poly" title=" " alt="" coords="290,105,171,78,172,73,292,100"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#ab542a8380e339c3be83c15c0164880bc" title="図形が入る領域で画像を切り取り、ファイルに保存する" alt="" coords="7,99,213,141"/>
+<area shape="poly" title=" " alt="" coords="247,123,213,123,213,117,247,117"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a027ed911faf713c6d203b749f7208029" title="指定された矩形で画像を切り取り、ファイルに保存する" alt="" coords="7,165,213,208"/>
+<area shape="poly" title=" " alt="" coords="299,140,196,167,195,162,297,135"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a36b36f20e1b1a3a6039fd2d79547bee5" name="a36b36f20e1b1a3a6039fd2d79547bee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36b36f20e1b1a3a6039fd2d79547bee5">&#9670;&#160;</a></span>DrawPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.Shape.BaseShape.DrawPoint </td>
+          <td>(</td>
+          <td class="paramtype">Graphics</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SizeF?</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PointF?</td>          <td class="paramname"><span class="paramname"><em>point</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aeee350c9e7e502deb5252d3723171489">Color</a>?</td>          <td class="paramname"><span class="paramname"><em>color</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float?</td>          <td class="paramname"><span class="paramname"><em>lineWidth</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a4ca17aa58b47af231e63b88ff72c3126">DashStyle</a>?</td>          <td class="paramname"><span class="paramname"><em>dashStyle</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float?</td>          <td class="paramname"><span class="paramname"><em>markerSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#af7b01f96f07453dd68d10c6fb3100070">MARKER_TYPE</a>?</td>          <td class="paramname"><span class="paramname"><em>markerType</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>点の描画 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>グラフィックス</td></tr>
+    <tr><td class="paramname">size</td><td>サイズ</td></tr>
+    <tr><td class="paramname">point</td><td>点座標</td></tr>
+    <tr><td class="paramname">color</td><td>色</td></tr>
+    <tr><td class="paramname">lineWidth</td><td>線幅</td></tr>
+    <tr><td class="paramname">dashStyle</td><td>線種</td></tr>
+    <tr><td class="paramname">markerSize</td><td>マーカーサイズ</td></tr>
+    <tr><td class="paramname">markerType</td><td>マーカー種類</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#aeee350c9e7e502deb5252d3723171489">SSTools.Shape.BaseShape.Color</a>, <a class="el" href="#a4ca17aa58b47af231e63b88ff72c3126">SSTools.Shape.BaseShape.DashStyle</a>, <a class="el" href="#a50e058da057b7319763aabec9a3d9df0">SSTools.Shape.BaseShape.GetDrawColor()</a>, <a class="el" href="#a5f1b8156462d2221eeea3e04f6b1e33d">SSTools.Shape.BaseShape.LineWidth</a>, <a class="el" href="#af159a52ece422b612a8cd642d123a3cf">SSTools.Shape.BaseShape.MarkerSize</a>, <a class="el" href="#a76038845dcfcb4ba16a8f57a2388fd43">SSTools.Shape.BaseShape.MarkerType</a>, <a class="el" href="#ae43961a4a0476d0f1788807c2fc39f47">SSTools.Shape.BaseShape.Point</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../d9/d44/class_s_s_tools_1_1_shape_1_1_circle_shape.html#aa3a6087b94c3f273b6e73f4003338ccc">SSTools.Shape.CircleShape.Draw()</a>, <a class="el" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a951a4ff0740fdc972edc7e83b6ec02e2">SSTools.Shape.RectangleShape.Draw()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a36b36f20e1b1a3a6039fd2d79547bee5_cgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a36b36f20e1b1a3a6039fd2d79547bee5_cgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a36b36f20e1b1a3a6039fd2d79547bee5_cgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a36b36f20e1b1a3a6039fd2d79547bee5_cgraph">
+<area shape="rect" title="点の描画" alt="" coords="5,5,192,48"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a50e058da057b7319763aabec9a3d9df0" title="描画色を取得" alt="" coords="240,5,426,48"/>
+<area shape="poly" title=" " alt="" coords="192,24,224,24,224,29,192,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a36b36f20e1b1a3a6039fd2d79547bee5_icgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a36b36f20e1b1a3a6039fd2d79547bee5_icgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a36b36f20e1b1a3a6039fd2d79547bee5_icgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a36b36f20e1b1a3a6039fd2d79547bee5_icgraph">
+<area shape="rect" title="点の描画" alt="" coords="300,23,486,65"/>
+<area shape="rect" href="../../d9/d44/class_s_s_tools_1_1_shape_1_1_circle_shape.html#aa3a6087b94c3f273b6e73f4003338ccc" title="描画" alt="" coords="18,5,239,32"/>
+<area shape="poly" title=" " alt="" coords="284,36,239,32,240,27,284,31"/>
+<area shape="rect" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a951a4ff0740fdc972edc7e83b6ec02e2" title="描画" alt="" coords="5,56,252,83"/>
+<area shape="poly" title=" " alt="" coords="284,57,252,60,252,55,284,52"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8f64bfd13606235e33ee63c3dd716138" name="a8f64bfd13606235e33ee63c3dd716138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f64bfd13606235e33ee63c3dd716138">&#9670;&#160;</a></span>DrawText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.Shape.BaseShape.DrawText </td>
+          <td>(</td>
+          <td class="paramtype">Graphics</td>          <td class="paramname"><span class="paramname"><em>graphics</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SizeF?</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PointF</td>          <td class="paramname"><span class="paramname"><em>center</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列の描画 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphics</td><td>グラフィック</td></tr>
+    <tr><td class="paramname">size</td><td>表示サイズ</td></tr>
+    <tr><td class="paramname">center</td><td>中心座標</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#af5983565ef863d8f2852d1fcd22eb735">SSTools.Shape.BaseShape.CalcTextPosition()</a>, <a class="el" href="#a50e058da057b7319763aabec9a3d9df0">SSTools.Shape.BaseShape.GetDrawColor()</a>, <a class="el" href="#a8faaba1280d8ed434fcc8e78cd547406">SSTools.Shape.BaseShape.LabelBorder</a>, <a class="el" href="#a16cab4d4b34bf74ddbddf81b913bb3c6">SSTools.Shape.BaseShape.LabelFill</a>, <a class="el" href="#a7c3e611e1495ee16f10ea655302994ce">SSTools.Shape.BaseShape.LabelFont</a>, <a class="el" href="#addfde9c7820a881782cd1bb9c4a57c6e">SSTools.Shape.BaseShape.ShowLable</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="#a7070e38f80176738a445171c1d136c6b">SSTools.Shape.BaseShape.Draw()</a>, <a class="el" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a951a4ff0740fdc972edc7e83b6ec02e2">SSTools.Shape.RectangleShape.Draw()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a8f64bfd13606235e33ee63c3dd716138_cgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a8f64bfd13606235e33ee63c3dd716138_cgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a8f64bfd13606235e33ee63c3dd716138_cgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a8f64bfd13606235e33ee63c3dd716138_cgraph">
+<area shape="rect" title="文字列の描画" alt="" coords="5,39,192,81"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af5983565ef863d8f2852d1fcd22eb735" title="テキスト表示位置の算出" alt="" coords="240,5,426,48"/>
+<area shape="poly" title=" " alt="" coords="192,44,224,39,225,45,192,49"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a50e058da057b7319763aabec9a3d9df0" title="描画色を取得" alt="" coords="240,72,426,115"/>
+<area shape="poly" title=" " alt="" coords="192,71,225,75,224,81,192,76"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#afeb447ddc1011c77d3f2c56680526ae1" title="文字列表示位置からオフセットを算出" alt="" coords="474,5,660,48"/>
+<area shape="poly" title=" " alt="" coords="426,24,458,24,458,29,426,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a8f64bfd13606235e33ee63c3dd716138_icgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a8f64bfd13606235e33ee63c3dd716138_icgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a8f64bfd13606235e33ee63c3dd716138_icgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a8f64bfd13606235e33ee63c3dd716138_icgraph">
+<area shape="rect" title="文字列の描画" alt="" coords="1059,73,1245,116"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a7070e38f80176738a445171c1d136c6b" title="描画" alt="" coords="779,56,996,83"/>
+<area shape="poly" title=" " alt="" coords="1043,87,997,82,997,77,1043,82"/>
+<area shape="rect" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a951a4ff0740fdc972edc7e83b6ec02e2" title="描画" alt="" coords="764,107,1011,133"/>
+<area shape="poly" title=" " alt="" coords="1043,108,1011,111,1011,106,1043,102"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#ab5ebe8673ebbf9754429dd876f911a85" title="描画(float)" alt="" coords="520,56,716,83"/>
+<area shape="poly" title=" " alt="" coords="764,72,717,72,717,67,764,67"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a0fa3044022632cb9f8df7d38dd6adfcb" title="描画" alt="" coords="269,5,466,32"/>
+<area shape="poly" title=" " alt="" coords="533,55,436,35,437,30,534,50"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a67716a6c0c69b71cd9f9ff15f4d9dc09" title="描画(int)" alt="" coords="269,56,466,83"/>
+<area shape="poly" title=" " alt="" coords="504,72,466,72,466,67,504,67"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a5b1c69ea0df3f844f56c8d8f65f610a6" title="クリッピングした画像を取得" alt="" coords="263,107,472,133"/>
+<area shape="poly" title=" " alt="" coords="534,89,437,109,436,103,533,84"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a022930420fb6c9ee4ec5fdb0c3160c35" title="図形がある領域のクリッピングした画像を取得" alt="" coords="5,48,215,75"/>
+<area shape="poly" title=" " alt="" coords="290,105,171,78,172,73,292,100"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#ab542a8380e339c3be83c15c0164880bc" title="図形が入る領域で画像を切り取り、ファイルに保存する" alt="" coords="7,99,213,141"/>
+<area shape="poly" title=" " alt="" coords="247,123,213,123,213,117,247,117"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a027ed911faf713c6d203b749f7208029" title="指定された矩形で画像を切り取り、ファイルに保存する" alt="" coords="7,165,213,208"/>
+<area shape="poly" title=" " alt="" coords="299,140,196,167,195,162,297,135"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a50e058da057b7319763aabec9a3d9df0" name="a50e058da057b7319763aabec9a3d9df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e058da057b7319763aabec9a3d9df0">&#9670;&#160;</a></span>GetDrawColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aeee350c9e7e502deb5252d3723171489">Color</a> SSTools.Shape.BaseShape.GetDrawColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a2cc8f0ab48fb0499086031c2073c4fd2">COLOR_SELECT</a></td>          <td class="paramname"><span class="paramname"><em>colorSelect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画色を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">colorSelect</td><td>色の種別</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>色</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="#aeee350c9e7e502deb5252d3723171489">SSTools.Shape.BaseShape.Color</a>, <a class="el" href="#a4e91d2ace6d36aa189d0ef15c80f0deb">SSTools.Shape.BaseShape.FillColor</a>, <a class="el" href="#a3a5c9390b8528d080db3acf9dce592bc">SSTools.Shape.BaseShape.LabelBorderColor</a>, <a class="el" href="#a21ea573511972e481ee56c2e9531478f">SSTools.Shape.BaseShape.LabelColor</a>, <a class="el" href="#a208b40f6cb1ca32ffa2810e0061fe568">SSTools.Shape.BaseShape.LabelFillColor</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="#a7070e38f80176738a445171c1d136c6b">SSTools.Shape.BaseShape.Draw()</a>, <a class="el" href="../../d9/d44/class_s_s_tools_1_1_shape_1_1_circle_shape.html#aa3a6087b94c3f273b6e73f4003338ccc">SSTools.Shape.CircleShape.Draw()</a>, <a class="el" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html#a08776870afe0b86b6a41cffef7d0d14c">SSTools.Shape.PolygonShape.Draw()</a>, <a class="el" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a951a4ff0740fdc972edc7e83b6ec02e2">SSTools.Shape.RectangleShape.Draw()</a>, <a class="el" href="#a36b36f20e1b1a3a6039fd2d79547bee5">SSTools.Shape.BaseShape.DrawPoint()</a>, <a class="el" href="#a8f64bfd13606235e33ee63c3dd716138">SSTools.Shape.BaseShape.DrawText()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a50e058da057b7319763aabec9a3d9df0_icgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a50e058da057b7319763aabec9a3d9df0_icgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a50e058da057b7319763aabec9a3d9df0_icgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a50e058da057b7319763aabec9a3d9df0_icgraph">
+<area shape="rect" title="描画色を取得" alt="" coords="1341,165,1527,208"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a7070e38f80176738a445171c1d136c6b" title="描画" alt="" coords="779,56,996,83"/>
+<area shape="poly" title=" " alt="" coords="1405,155,1356,107,1326,85,1292,68,1248,55,1202,46,1109,41,1023,47,951,58,950,53,1022,42,1109,36,1203,41,1249,49,1294,63,1328,80,1360,103,1409,151"/>
+<area shape="rect" href="../../d9/d44/class_s_s_tools_1_1_shape_1_1_circle_shape.html#aa3a6087b94c3f273b6e73f4003338ccc" title="描画" alt="" coords="777,228,998,255"/>
+<area shape="poly" title=" " alt="" coords="1384,218,1341,237,1294,252,1213,264,1130,267,1052,264,983,258,984,253,1052,259,1130,262,1212,258,1292,247,1339,232,1381,213"/>
+<area shape="rect" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html#a08776870afe0b86b6a41cffef7d0d14c" title="描画" alt="" coords="1059,312,1293,339"/>
+<area shape="poly" title=" " alt="" coords="1401,221,1352,260,1294,296,1245,314,1243,309,1292,291,1349,255,1397,216"/>
+<area shape="rect" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a951a4ff0740fdc972edc7e83b6ec02e2" title="描画" alt="" coords="764,144,1011,171"/>
+<area shape="poly" title=" " alt="" coords="1325,184,1011,167,1011,161,1325,178"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a36b36f20e1b1a3a6039fd2d79547bee5" title="点の描画" alt="" coords="1083,195,1269,237"/>
+<area shape="poly" title=" " alt="" coords="1326,202,1270,208,1269,203,1325,196"/>
+<area shape="rect" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a8f64bfd13606235e33ee63c3dd716138" title="文字列の描画" alt="" coords="1083,77,1269,120"/>
+<area shape="poly" title=" " alt="" coords="1354,162,1240,123,1242,118,1356,157"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#ab5ebe8673ebbf9754429dd876f911a85" title="描画(float)" alt="" coords="520,56,716,83"/>
+<area shape="poly" title=" " alt="" coords="764,72,717,72,717,67,764,67"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a0fa3044022632cb9f8df7d38dd6adfcb" title="描画" alt="" coords="269,5,466,32"/>
+<area shape="poly" title=" " alt="" coords="533,55,436,35,437,30,534,50"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a67716a6c0c69b71cd9f9ff15f4d9dc09" title="描画(int)" alt="" coords="269,56,466,83"/>
+<area shape="poly" title=" " alt="" coords="504,72,466,72,466,67,504,67"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a5b1c69ea0df3f844f56c8d8f65f610a6" title="クリッピングした画像を取得" alt="" coords="263,107,472,133"/>
+<area shape="poly" title=" " alt="" coords="534,89,437,109,436,103,533,84"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a022930420fb6c9ee4ec5fdb0c3160c35" title="図形がある領域のクリッピングした画像を取得" alt="" coords="5,48,215,75"/>
+<area shape="poly" title=" " alt="" coords="290,105,171,78,172,73,292,100"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#ab542a8380e339c3be83c15c0164880bc" title="図形が入る領域で画像を切り取り、ファイルに保存する" alt="" coords="7,99,213,141"/>
+<area shape="poly" title=" " alt="" coords="247,123,213,123,213,117,247,117"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a027ed911faf713c6d203b749f7208029" title="指定された矩形で画像を切り取り、ファイルに保存する" alt="" coords="7,165,213,208"/>
+<area shape="poly" title=" " alt="" coords="299,140,196,167,195,162,297,135"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#ab52fa42945fe0743c0feb98436ef1969" title="描画イベント" alt="" coords="791,304,984,347"/>
+<area shape="poly" title=" " alt="" coords="1043,328,984,328,984,323,1043,323"/>
+<area shape="poly" title=" " alt="" coords="1067,228,999,234,999,229,1067,223"/>
+<area shape="poly" title=" " alt="" coords="1067,197,956,174,957,169,1068,191"/>
+<area shape="poly" title=" " alt="" coords="1067,90,997,83,997,78,1067,85"/>
+<area shape="poly" title=" " alt="" coords="1068,123,957,146,956,141,1067,118"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f6e6a2d2321e6e176085c1d80a0e4b3" name="a0f6e6a2d2321e6e176085c1d80a0e4b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f6e6a2d2321e6e176085c1d80a0e4b3">&#9670;&#160;</a></span>GetDrawSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Rectangle SSTools.Shape.BaseShape.GetDrawSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画領域サイズを取得 </p>
+<dl class="section return"><dt>戻り値</dt><dd>描画領域サイズ</dd></dl>
+
+<p><a class="el" href="../../d9/d44/class_s_s_tools_1_1_shape_1_1_circle_shape.html#a6f95c83e9a2b1b06ca8668b87ae15975">SSTools.Shape.CircleShape</a>, <a class="el" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html#a3f99a0506ddb521450adaed9d7e7f55a">SSTools.Shape.PolygonShape</a>, <a class="el" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a5b22c936b6c78c34803afdd2ca18324c">SSTools.Shape.RectangleShape</a>で再実装されています。</p>
+
+<p class="reference">参照先 <a class="el" href="#a5f1b8156462d2221eeea3e04f6b1e33d">SSTools.Shape.BaseShape.LineWidth</a>, <a class="el" href="#af159a52ece422b612a8cd642d123a3cf">SSTools.Shape.BaseShape.MarkerSize</a>, <a class="el" href="#a76038845dcfcb4ba16a8f57a2388fd43">SSTools.Shape.BaseShape.MarkerType</a>, <a class="el" href="#ae43961a4a0476d0f1788807c2fc39f47">SSTools.Shape.BaseShape.Point</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a022930420fb6c9ee4ec5fdb0c3160c35">SSTools.ShapeManager.GetClip()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a0f6e6a2d2321e6e176085c1d80a0e4b3_icgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a0f6e6a2d2321e6e176085c1d80a0e4b3_icgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a0f6e6a2d2321e6e176085c1d80a0e4b3_icgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_a0f6e6a2d2321e6e176085c1d80a0e4b3_icgraph">
+<area shape="rect" title="描画領域サイズを取得" alt="" coords="263,5,449,48"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a022930420fb6c9ee4ec5fdb0c3160c35" title="図形がある領域のクリッピングした画像を取得" alt="" coords="5,13,215,40"/>
+<area shape="poly" title=" " alt="" coords="247,29,215,29,215,24,247,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae179af57cf3c6b171a414c89db2ebae0" name="ae179af57cf3c6b171a414c89db2ebae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae179af57cf3c6b171a414c89db2ebae0">&#9670;&#160;</a></span>IsContain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SSTools.Shape.BaseShape.IsContain </td>
+          <td>(</td>
+          <td class="paramtype">RectangleF</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>領域に図形が含まれるか </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>領域</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:含まれる</dd></dl>
+<p>座標系は画像座標系 </p>
+
+<p><a class="el" href="../../d9/d44/class_s_s_tools_1_1_shape_1_1_circle_shape.html#a3833a5c636543279ccb868705d2d3dff">SSTools.Shape.CircleShape</a>, <a class="el" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html#afcf4f4cb8a95b6f7e250ba18d1621014">SSTools.Shape.PolygonShape</a>, <a class="el" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a4670ec7e79f889a6504d8790ca987e3e">SSTools.Shape.RectangleShape</a>で再実装されています。</p>
+
+<p class="reference">参照先 <a class="el" href="#ae43961a4a0476d0f1788807c2fc39f47">SSTools.Shape.BaseShape.Point</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#ab5ebe8673ebbf9754429dd876f911a85">SSTools.ShapeManager.Draw()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_ae179af57cf3c6b171a414c89db2ebae0_icgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_ae179af57cf3c6b171a414c89db2ebae0_icgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_ae179af57cf3c6b171a414c89db2ebae0_icgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_ae179af57cf3c6b171a414c89db2ebae0_icgraph">
+<area shape="rect" title="領域に図形が含まれるか" alt="" coords="764,48,951,91"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#ab5ebe8673ebbf9754429dd876f911a85" title="描画(float)" alt="" coords="520,56,716,83"/>
+<area shape="poly" title=" " alt="" coords="749,72,717,72,717,67,749,67"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a0fa3044022632cb9f8df7d38dd6adfcb" title="描画" alt="" coords="269,5,466,32"/>
+<area shape="poly" title=" " alt="" coords="533,55,436,35,437,30,534,50"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a67716a6c0c69b71cd9f9ff15f4d9dc09" title="描画(int)" alt="" coords="269,56,466,83"/>
+<area shape="poly" title=" " alt="" coords="504,72,466,72,466,67,504,67"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a5b1c69ea0df3f844f56c8d8f65f610a6" title="クリッピングした画像を取得" alt="" coords="263,107,472,133"/>
+<area shape="poly" title=" " alt="" coords="534,89,437,109,436,103,533,84"/>
+<area shape="rect" href="../../d0/d70/class_s_s_tools_1_1_shape_manager.html#a022930420fb6c9ee4ec5fdb0c3160c35" title="図形がある領域のクリッピングした画像を取得" alt="" coords="5,48,215,75"/>
+<area shape="poly" title=" " alt="" coords="290,105,171,78,172,73,292,100"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#ab542a8380e339c3be83c15c0164880bc" title="図形が入る領域で画像を切り取り、ファイルに保存する" alt="" coords="7,99,213,141"/>
+<area shape="poly" title=" " alt="" coords="247,123,213,123,213,117,247,117"/>
+<area shape="rect" href="../../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a027ed911faf713c6d203b749f7208029" title="指定された矩形で画像を切り取り、ファイルに保存する" alt="" coords="7,165,213,208"/>
+<area shape="poly" title=" " alt="" coords="299,140,196,167,195,162,297,135"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae235e1ffa6d4a68faea38f0c883cfd49" name="ae235e1ffa6d4a68faea38f0c883cfd49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae235e1ffa6d4a68faea38f0c883cfd49">&#9670;&#160;</a></span>RectContains() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.Shape.BaseShape.RectContains </td>
+          <td>(</td>
+          <td class="paramtype">RectangleF</td>          <td class="paramname"><span class="paramname"><em>targetRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle</td>          <td class="paramname"><span class="paramname"><em>baseRect</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>矩形が領域に含まれるか </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targetRect</td><td>領域</td></tr>
+    <tr><td class="paramname">baseRect</td><td>矩形</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:含まれる</dd></dl>
+
+<p class="reference">参照元 <a class="el" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html#afcf4f4cb8a95b6f7e250ba18d1621014">SSTools.Shape.PolygonShape.IsContain()</a>, <a class="el" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a4670ec7e79f889a6504d8790ca987e3e">SSTools.Shape.RectangleShape.IsContain()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape_ae235e1ffa6d4a68faea38f0c883cfd49_icgraph.png" border="0" usemap="#add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_ae235e1ffa6d4a68faea38f0c883cfd49_icgraph" alt=""/></div>
+<map name="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_ae235e1ffa6d4a68faea38f0c883cfd49_icgraph" id="add/d46/class_s_s_tools_1_1_shape_1_1_base_shape_ae235e1ffa6d4a68faea38f0c883cfd49_icgraph">
+<area shape="rect" title="矩形が領域に含まれるか" alt="" coords="269,39,455,81"/>
+<area shape="rect" href="../../d9/d9d/class_s_s_tools_1_1_shape_1_1_polygon_shape.html#afcf4f4cb8a95b6f7e250ba18d1621014" title="領域に含まれるか？" alt="" coords="11,5,215,48"/>
+<area shape="poly" title=" " alt="" coords="253,48,215,43,215,38,253,43"/>
+<area shape="rect" href="../../d8/db8/class_s_s_tools_1_1_shape_1_1_rectangle_shape.html#a4670ec7e79f889a6504d8790ca987e3e" title="領域に図形が含まれるか" alt="" coords="5,72,221,115"/>
+<area shape="poly" title=" " alt="" coords="254,77,222,81,221,76,253,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9051a06ac564f2f3fa0f08941184382d" name="a9051a06ac564f2f3fa0f08941184382d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9051a06ac564f2f3fa0f08941184382d">&#9670;&#160;</a></span>RectContains() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.Shape.BaseShape.RectContains </td>
+          <td>(</td>
+          <td class="paramtype">RectangleF</td>          <td class="paramname"><span class="paramname"><em>targetRect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RectangleF</td>          <td class="paramname"><span class="paramname"><em>baseRect</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>矩形が領域に含まれるか </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targetRect</td><td>領域</td></tr>
+    <tr><td class="paramname">baseRect</td><td>矩形</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:含まれる</dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SSTools/CustomizeControl/Shape/<b>BaseShape.cs</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/db1/namespace_s_s_tools.html">SSTools</a></li><li class="navelem"><a class="el" href="../../d6/d31/namespace_s_s_tools_1_1_shape.html">Shape</a></li><li class="navelem"><a class="el" href="../../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html">BaseShape</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

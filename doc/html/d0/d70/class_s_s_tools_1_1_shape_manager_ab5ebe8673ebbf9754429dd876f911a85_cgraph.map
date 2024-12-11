@@ -1,0 +1,16 @@
+<map id="SSTools.ShapeManager.Draw" name="SSTools.ShapeManager.Draw">
+<area shape="rect" id="Node000001" title="描画(float)" alt="" coords="5,80,202,107"/>
+<area shape="rect" id="Node000002" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a7070e38f80176738a445171c1d136c6b" title="描画" alt="" coords="250,51,467,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,79,234,76,235,81,203,85"/>
+<area shape="rect" id="Node000007" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae179af57cf3c6b171a414c89db2ebae0" title="領域に図形が含まれるか" alt="" coords="265,101,452,144"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="203,102,250,108,249,113,202,107"/>
+<area shape="rect" id="Node000003" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a8f64bfd13606235e33ee63c3dd716138" title="文字列の描画" alt="" coords="515,13,701,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="467,49,499,45,500,50,468,54"/>
+<area shape="rect" id="Node000006" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a50e058da057b7319763aabec9a3d9df0" title="描画色を取得" alt="" coords="749,72,936,115"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="467,68,734,84,734,89,467,73"/>
+<area shape="rect" id="Node000004" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af5983565ef863d8f2852d1fcd22eb735" title="テキスト表示位置の算出" alt="" coords="749,5,936,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="702,29,734,28,734,33,702,34"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="696,54,741,65,739,70,695,59"/>
+<area shape="rect" id="Node000005" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#afeb447ddc1011c77d3f2c56680526ae1" title="文字列表示位置からオフセットを算出" alt="" coords="984,5,1170,48"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="936,24,968,24,968,29,936,29"/>
+</map>

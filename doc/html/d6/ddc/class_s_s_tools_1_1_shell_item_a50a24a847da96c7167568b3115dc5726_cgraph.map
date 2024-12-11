@@ -1,0 +1,9 @@
+<map id="SSTools.ShellItem.GetSubFolders" name="SSTools.ShellItem.GetSubFolders">
+<area shape="rect" id="Node000001" title="Retrieves an array of ShellItem objects for sub&#45;folders of this shell item." alt="" coords="5,27,183,69"/>
+<area shape="rect" id="Node000002" href="$d6/ddc/class_s_s_tools_1_1_shell_item.html#a9da25f2b29c68dd5ccb97f896ec410ec" title="Constructor. Creates the ShellItem object for the Desktop." alt="" coords="231,35,419,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,45,215,45,215,51,183,51"/>
+<area shape="rect" id="Node000003" href="$d6/ddc/class_s_s_tools_1_1_shell_item.html#a6db7ebdc287081a8165edd18f0e618f1" title="Gets the system path for this shell item." alt="" coords="467,5,648,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="419,34,451,29,452,35,419,39"/>
+<area shape="rect" id="Node000004" href="$d6/ddc/class_s_s_tools_1_1_shell_item.html#a42babd61d7ede189e27ec8a70a74043a" title="本当にサブフォルダがあるか？" alt="" coords="468,56,647,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="419,57,453,61,452,67,419,62"/>
+</map>

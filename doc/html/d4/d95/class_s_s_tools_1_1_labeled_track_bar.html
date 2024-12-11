@@ -1,0 +1,1099 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SSTools: SSTools.LabeledTrackBar クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SSTools
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d4/d95/class_s_s_tools_1_1_labeled_track_bar.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="#events">イベント</a> &#124;
+<a href="../../d8/dc2/class_s_s_tools_1_1_labeled_track_bar-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">SSTools.LabeledTrackBar クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>カスタムトラックバー Minimum,Maximum,中央値のラベル表示と、説明ラベル表示を追加  
+ <a href="#details">[詳解]</a></p>
+<div class="dynheader">
+SSTools.LabeledTrackBar の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/db7/class_s_s_tools_1_1_labeled_track_bar__inherit__graph.png" border="0" usemap="#a_s_s_tools_8_labeled_track_bar_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_s_s_tools_8_labeled_track_bar_inherit__map" id="a_s_s_tools_8_labeled_track_bar_inherit__map">
+<area shape="rect" title="カスタムトラックバー Minimum,Maximum,中央値のラベル表示と、説明ラベル表示を追加" alt="" coords="8,80,180,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,69,32"/>
+<area shape="poly" title=" " alt="" coords="58,43,87,78,82,81,54,46"/>
+<area shape="rect" title=" " alt="" coords="92,5,211,32"/>
+<area shape="poly" title=" " alt="" coords="134,46,106,81,102,78,130,43"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+SSTools.LabeledTrackBar 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d2c/class_s_s_tools_1_1_labeled_track_bar__coll__graph.png" border="0" usemap="#a_s_s_tools_8_labeled_track_bar_coll__map" alt="Collaboration graph"/></div>
+<map name="a_s_s_tools_8_labeled_track_bar_coll__map" id="a_s_s_tools_8_labeled_track_bar_coll__map">
+<area shape="rect" title="カスタムトラックバー Minimum,Maximum,中央値のラベル表示と、説明ラベル表示を追加" alt="" coords="8,80,180,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,69,32"/>
+<area shape="poly" title=" " alt="" coords="58,43,87,78,82,81,54,46"/>
+<area shape="rect" title=" " alt="" coords="92,5,211,32"/>
+<area shape="poly" title=" " alt="" coords="134,46,106,81,102,78,130,43"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad284e3af93cfa59022a3264b3f2e9dcb" id="r_ad284e3af93cfa59022a3264b3f2e9dcb"><td class="memItemLeft" align="right" valign="top"><a id="ad284e3af93cfa59022a3264b3f2e9dcb" name="ad284e3af93cfa59022a3264b3f2e9dcb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LabeledTrackBar</b> ()</td></tr>
+<tr class="memdesc:ad284e3af93cfa59022a3264b3f2e9dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="separator:ad284e3af93cfa59022a3264b3f2e9dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9cc5c676a8f88b77e6129d4589a539" id="r_aee9cc5c676a8f88b77e6129d4589a539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee9cc5c676a8f88b77e6129d4589a539">BeginInit</a> ()</td></tr>
+<tr class="memdesc:aee9cc5c676a8f88b77e6129d4589a539"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化開始  <br /></td></tr>
+<tr class="separator:aee9cc5c676a8f88b77e6129d4589a539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af51b0c0bfb614374bc9fae80efdc2d06" id="r_af51b0c0bfb614374bc9fae80efdc2d06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af51b0c0bfb614374bc9fae80efdc2d06">EndInit</a> ()</td></tr>
+<tr class="memdesc:af51b0c0bfb614374bc9fae80efdc2d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化終了  <br /></td></tr>
+<tr class="separator:af51b0c0bfb614374bc9fae80efdc2d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029edf6a61c3c66d564d43df83364fcb" id="r_a029edf6a61c3c66d564d43df83364fcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a029edf6a61c3c66d564d43df83364fcb">SetRange</a> (int minValue, int maxValue)</td></tr>
+<tr class="memdesc:a029edf6a61c3c66d564d43df83364fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">値の範囲を設定  <br /></td></tr>
+<tr class="separator:a029edf6a61c3c66d564d43df83364fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6c6b52acd287223eaa0001fe82ffdd45" id="r_a6c6b52acd287223eaa0001fe82ffdd45"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c6b52acd287223eaa0001fe82ffdd45">Dispose</a> (bool disposing)</td></tr>
+<tr class="memdesc:a6c6b52acd287223eaa0001fe82ffdd45"><td class="mdescLeft">&#160;</td><td class="mdescRight">リソースの解放  <br /></td></tr>
+<tr class="separator:a6c6b52acd287223eaa0001fe82ffdd45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84aebd678eae1dc293f50a7355cb00b2" id="r_a84aebd678eae1dc293f50a7355cb00b2"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84aebd678eae1dc293f50a7355cb00b2">OnClientSizeChanged</a> (EventArgs e)</td></tr>
+<tr class="memdesc:a84aebd678eae1dc293f50a7355cb00b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">クライアントサイズ変更  <br /></td></tr>
+<tr class="separator:a84aebd678eae1dc293f50a7355cb00b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a2c75109703a55755ee134ce525dc39" id="r_a0a2c75109703a55755ee134ce525dc39"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a2c75109703a55755ee134ce525dc39">OnGotFocus</a> (EventArgs e)</td></tr>
+<tr class="memdesc:a0a2c75109703a55755ee134ce525dc39"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォーカスが来た  <br /></td></tr>
+<tr class="separator:a0a2c75109703a55755ee134ce525dc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0fdae220f17a312d94551a857bbe7e2" id="r_ae0fdae220f17a312d94551a857bbe7e2"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0fdae220f17a312d94551a857bbe7e2">OnLostFocus</a> (EventArgs e)</td></tr>
+<tr class="memdesc:ae0fdae220f17a312d94551a857bbe7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォーカスが離れた  <br /></td></tr>
+<tr class="separator:ae0fdae220f17a312d94551a857bbe7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f797d140280c6aa460e7b5e54fe7e22" id="r_a5f797d140280c6aa460e7b5e54fe7e22"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f797d140280c6aa460e7b5e54fe7e22">OnPaddingChanged</a> (EventArgs e)</td></tr>
+<tr class="memdesc:a5f797d140280c6aa460e7b5e54fe7e22"><td class="mdescLeft">&#160;</td><td class="mdescRight">パディングが変更になった  <br /></td></tr>
+<tr class="separator:a5f797d140280c6aa460e7b5e54fe7e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae835338131da29cead85ccf5c44ea117" id="r_ae835338131da29cead85ccf5c44ea117"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae835338131da29cead85ccf5c44ea117">OnPaint</a> (PaintEventArgs e)</td></tr>
+<tr class="memdesc:ae835338131da29cead85ccf5c44ea117"><td class="mdescLeft">&#160;</td><td class="mdescRight">OnPaint ... トラックバーの描画処理  <br /></td></tr>
+<tr class="separator:ae835338131da29cead85ccf5c44ea117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa44b6294cb8ee761bd675905777b991d" id="r_aa44b6294cb8ee761bd675905777b991d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa44b6294cb8ee761bd675905777b991d">OnMouseDown</a> (MouseEventArgs e)</td></tr>
+<tr class="memdesc:aa44b6294cb8ee761bd675905777b991d"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスボタン押された時の処理  <br /></td></tr>
+<tr class="separator:aa44b6294cb8ee761bd675905777b991d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788dfa7e496b0de7572f1c7bd3b24a37" id="r_a788dfa7e496b0de7572f1c7bd3b24a37"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a788dfa7e496b0de7572f1c7bd3b24a37">OnMouseUp</a> (MouseEventArgs e)</td></tr>
+<tr class="memdesc:a788dfa7e496b0de7572f1c7bd3b24a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスボタンが離れた時の処理  <br /></td></tr>
+<tr class="separator:a788dfa7e496b0de7572f1c7bd3b24a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad122ce171037d1b1558d3336c553960e" id="r_ad122ce171037d1b1558d3336c553960e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad122ce171037d1b1558d3336c553960e">OnValueChanged</a> (EventArgs e)</td></tr>
+<tr class="memdesc:ad122ce171037d1b1558d3336c553960e"><td class="mdescLeft">&#160;</td><td class="mdescRight">値変更イベント発行  <br /></td></tr>
+<tr class="separator:ad122ce171037d1b1558d3336c553960e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff4a7d68e21ee8cf31834b614bfbbb2b" id="r_aff4a7d68e21ee8cf31834b614bfbbb2b"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff4a7d68e21ee8cf31834b614bfbbb2b">OnMouseMove</a> (MouseEventArgs e)</td></tr>
+<tr class="memdesc:aff4a7d68e21ee8cf31834b614bfbbb2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウス移動中処理  <br /></td></tr>
+<tr class="separator:aff4a7d68e21ee8cf31834b614bfbbb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e412c5c5cf0a681856299e9eb947661" id="r_a4e412c5c5cf0a681856299e9eb947661"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e412c5c5cf0a681856299e9eb947661">OnPreviewKeyDown</a> (PreviewKeyDownEventArgs e)</td></tr>
+<tr class="memdesc:a4e412c5c5cf0a681856299e9eb947661"><td class="mdescLeft">&#160;</td><td class="mdescRight">カーソルキーをキャッチする  <br /></td></tr>
+<tr class="separator:a4e412c5c5cf0a681856299e9eb947661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50339e7f028a65b715411db6a580fb5c" id="r_a50339e7f028a65b715411db6a580fb5c"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50339e7f028a65b715411db6a580fb5c">OnKeyDown</a> (KeyEventArgs e)</td></tr>
+<tr class="memdesc:a50339e7f028a65b715411db6a580fb5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーボード処理  <br /></td></tr>
+<tr class="separator:a50339e7f028a65b715411db6a580fb5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:aa6d06dda1b3096153cbf4dacd5ace49e" id="r_aa6d06dda1b3096153cbf4dacd5ace49e"><td class="memItemLeft" align="right" valign="top"><a id="aa6d06dda1b3096153cbf4dacd5ace49e" name="aa6d06dda1b3096153cbf4dacd5ace49e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>Maximum</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:aa6d06dda1b3096153cbf4dacd5ace49e"><td class="mdescLeft">&#160;</td><td class="mdescRight">スライダー位置の最大値 <br /></td></tr>
+<tr class="separator:aa6d06dda1b3096153cbf4dacd5ace49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a0008b8735dffbef420d09a041bdc47" id="r_a6a0008b8735dffbef420d09a041bdc47"><td class="memItemLeft" align="right" valign="top"><a id="a6a0008b8735dffbef420d09a041bdc47" name="a6a0008b8735dffbef420d09a041bdc47"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>Minimum</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a6a0008b8735dffbef420d09a041bdc47"><td class="mdescLeft">&#160;</td><td class="mdescRight">スライダー位置の最小値 <br /></td></tr>
+<tr class="separator:a6a0008b8735dffbef420d09a041bdc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8056211b7d34d2c2b4559f3a30a315fd" id="r_a8056211b7d34d2c2b4559f3a30a315fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8056211b7d34d2c2b4559f3a30a315fd">Value</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a8056211b7d34d2c2b4559f3a30a315fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在値(スライダーの位置)  <br /></td></tr>
+<tr class="separator:a8056211b7d34d2c2b4559f3a30a315fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc0eaa1b0de3ca1dc2f78850a79db8bc" id="r_abc0eaa1b0de3ca1dc2f78850a79db8bc"><td class="memItemLeft" align="right" valign="top"><a id="abc0eaa1b0de3ca1dc2f78850a79db8bc" name="abc0eaa1b0de3ca1dc2f78850a79db8bc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>LargeChange</b> = 5<code> [get, set]</code></td></tr>
+<tr class="memdesc:abc0eaa1b0de3ca1dc2f78850a79db8bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスクリック or PAGE_UP/DOWNでの移動量 <br /></td></tr>
+<tr class="separator:abc0eaa1b0de3ca1dc2f78850a79db8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3ff8082e2c9fad8b59bac36a836449" id="r_aeb3ff8082e2c9fad8b59bac36a836449"><td class="memItemLeft" align="right" valign="top"><a id="aeb3ff8082e2c9fad8b59bac36a836449" name="aeb3ff8082e2c9fad8b59bac36a836449"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>SmallChange</b> = 1<code> [get, set]</code></td></tr>
+<tr class="memdesc:aeb3ff8082e2c9fad8b59bac36a836449"><td class="mdescLeft">&#160;</td><td class="mdescRight">カーソルキーでの移動量 <br /></td></tr>
+<tr class="separator:aeb3ff8082e2c9fad8b59bac36a836449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30428d3646743f3120a36cb3ff9735cf" id="r_a30428d3646743f3120a36cb3ff9735cf"><td class="memItemLeft" align="right" valign="top"><a id="a30428d3646743f3120a36cb3ff9735cf" name="a30428d3646743f3120a36cb3ff9735cf"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>TickFrequency</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a30428d3646743f3120a36cb3ff9735cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">目盛りマークの単位 <br /></td></tr>
+<tr class="separator:a30428d3646743f3120a36cb3ff9735cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab072b69c68c36a9d5c00d9f539f188bb" id="r_ab072b69c68c36a9d5c00d9f539f188bb"><td class="memItemLeft" align="right" valign="top">TickStyle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab072b69c68c36a9d5c00d9f539f188bb">TickStyle</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ab072b69c68c36a9d5c00d9f539f188bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">目盛り線の表示位置  <br /></td></tr>
+<tr class="separator:ab072b69c68c36a9d5c00d9f539f188bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a993813d276101d2ea5323792b0eb7da1" id="r_a993813d276101d2ea5323792b0eb7da1"><td class="memItemLeft" align="right" valign="top">Orientation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a993813d276101d2ea5323792b0eb7da1">Orientation</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a993813d276101d2ea5323792b0eb7da1"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックバーの方向  <br /></td></tr>
+<tr class="separator:a993813d276101d2ea5323792b0eb7da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c59cb16a9517f2207bf45d5cc75b073" id="r_a8c59cb16a9517f2207bf45d5cc75b073"><td class="memItemLeft" align="right" valign="top"><a id="a8c59cb16a9517f2207bf45d5cc75b073" name="a8c59cb16a9517f2207bf45d5cc75b073"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Inverse</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a8c59cb16a9517f2207bf45d5cc75b073"><td class="mdescLeft">&#160;</td><td class="mdescRight">反転(上下or左右)表示するか <br /></td></tr>
+<tr class="separator:a8c59cb16a9517f2207bf45d5cc75b073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e9ea121ee32324533a89ee15e799d8" id="r_a64e9ea121ee32324533a89ee15e799d8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64e9ea121ee32324533a89ee15e799d8">LabelFormat</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a64e9ea121ee32324533a89ee15e799d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">数値ラベルのフォーマット  <br /></td></tr>
+<tr class="separator:a64e9ea121ee32324533a89ee15e799d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29067e09ce378ea5f3f4a924a31e49bd" id="r_a29067e09ce378ea5f3f4a924a31e49bd"><td class="memItemLeft" align="right" valign="top"><a id="a29067e09ce378ea5f3f4a924a31e49bd" name="a29067e09ce378ea5f3f4a924a31e49bd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DisplayLabel</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a29067e09ce378ea5f3f4a924a31e49bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">数値ラベルの表示有無 <br /></td></tr>
+<tr class="separator:a29067e09ce378ea5f3f4a924a31e49bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25768c064f378f621f077ffa3e3da57b" id="r_a25768c064f378f621f077ffa3e3da57b"><td class="memItemLeft" align="right" valign="top"><a id="a25768c064f378f621f077ffa3e3da57b" name="a25768c064f378f621f077ffa3e3da57b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowCenterLabel</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a25768c064f378f621f077ffa3e3da57b"><td class="mdescLeft">&#160;</td><td class="mdescRight">中央のラベル表示有無 <br /></td></tr>
+<tr class="separator:a25768c064f378f621f077ffa3e3da57b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d8c318fd6ef3776a46c2a6896547f00" id="r_a3d8c318fd6ef3776a46c2a6896547f00"><td class="memItemLeft" align="right" valign="top"><a id="a3d8c318fd6ef3776a46c2a6896547f00" name="a3d8c318fd6ef3776a46c2a6896547f00"></a>
+new Font&#160;</td><td class="memItemRight" valign="bottom"><b>Font</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a3d8c318fd6ef3776a46c2a6896547f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">数値ラベルのフォント <br /></td></tr>
+<tr class="separator:a3d8c318fd6ef3776a46c2a6896547f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6179d212c17373f81dafb2bf3d5c8ed" id="r_ad6179d212c17373f81dafb2bf3d5c8ed"><td class="memItemLeft" align="right" valign="top"><a id="ad6179d212c17373f81dafb2bf3d5c8ed" name="ad6179d212c17373f81dafb2bf3d5c8ed"></a>
+Color&#160;</td><td class="memItemRight" valign="bottom"><b>LabelColor</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:ad6179d212c17373f81dafb2bf3d5c8ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">数値ラベルの色 <br /></td></tr>
+<tr class="separator:ad6179d212c17373f81dafb2bf3d5c8ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5a9cf308354f8892822e11eeb4dab79" id="r_aa5a9cf308354f8892822e11eeb4dab79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5a9cf308354f8892822e11eeb4dab79">LabelRotate</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aa5a9cf308354f8892822e11eeb4dab79"><td class="mdescLeft">&#160;</td><td class="mdescRight">数値ラベルを回転させるかどうか  <br /></td></tr>
+<tr class="separator:aa5a9cf308354f8892822e11eeb4dab79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2175552022400f38b1a97483a188f714" id="r_a2175552022400f38b1a97483a188f714"><td class="memItemLeft" align="right" valign="top"><a id="a2175552022400f38b1a97483a188f714" name="a2175552022400f38b1a97483a188f714"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowDescription</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a2175552022400f38b1a97483a188f714"><td class="mdescLeft">&#160;</td><td class="mdescRight">説明文の表示有無 <br /></td></tr>
+<tr class="separator:a2175552022400f38b1a97483a188f714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeafe78f11c1fe88183b833d0b90e0d70" id="r_aeafe78f11c1fe88183b833d0b90e0d70"><td class="memItemLeft" align="right" valign="top"><a id="aeafe78f11c1fe88183b833d0b90e0d70" name="aeafe78f11c1fe88183b833d0b90e0d70"></a>
+<a class="el" href="#a3d8c318fd6ef3776a46c2a6896547f00">Font</a>&#160;</td><td class="memItemRight" valign="bottom"><b>DescriptionFont</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:aeafe78f11c1fe88183b833d0b90e0d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">説明文のフォント <br /></td></tr>
+<tr class="separator:aeafe78f11c1fe88183b833d0b90e0d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8959a4c3f5056c2d609c935bb4fb632e" id="r_a8959a4c3f5056c2d609c935bb4fb632e"><td class="memItemLeft" align="right" valign="top"><a id="a8959a4c3f5056c2d609c935bb4fb632e" name="a8959a4c3f5056c2d609c935bb4fb632e"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>DescriptionMin</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a8959a4c3f5056c2d609c935bb4fb632e"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小値側の説明文 <br /></td></tr>
+<tr class="separator:a8959a4c3f5056c2d609c935bb4fb632e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc222d36792120966a6baf1d49085a44" id="r_abc222d36792120966a6baf1d49085a44"><td class="memItemLeft" align="right" valign="top"><a id="abc222d36792120966a6baf1d49085a44" name="abc222d36792120966a6baf1d49085a44"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>DescriptionMax</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:abc222d36792120966a6baf1d49085a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大値側の説明文 <br /></td></tr>
+<tr class="separator:abc222d36792120966a6baf1d49085a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98423fec28851e44c72c7c32c8159008" id="r_a98423fec28851e44c72c7c32c8159008"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98423fec28851e44c72c7c32c8159008">DescriptionRotate</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a98423fec28851e44c72c7c32c8159008"><td class="mdescLeft">&#160;</td><td class="mdescRight">説明文を回転させるかどうか  <br /></td></tr>
+<tr class="separator:a98423fec28851e44c72c7c32c8159008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb08bd466e61b3e7ad20fae09e1779dc" id="r_afb08bd466e61b3e7ad20fae09e1779dc"><td class="memItemLeft" align="right" valign="top"><a id="afb08bd466e61b3e7ad20fae09e1779dc" name="afb08bd466e61b3e7ad20fae09e1779dc"></a>
+Color&#160;</td><td class="memItemRight" valign="bottom"><b>DescriptionColor</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:afb08bd466e61b3e7ad20fae09e1779dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">説明文の色 <br /></td></tr>
+<tr class="separator:afb08bd466e61b3e7ad20fae09e1779dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e655833f7eb87267589a64d8f641176" id="r_a0e655833f7eb87267589a64d8f641176"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e655833f7eb87267589a64d8f641176">LongPress</a> = 250<code> [get, set]</code></td></tr>
+<tr class="memdesc:a0e655833f7eb87267589a64d8f641176"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウス長押しタイマー値  <br /></td></tr>
+<tr class="separator:a0e655833f7eb87267589a64d8f641176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d39e7d1df8649989ce6b48e1750168" id="r_a61d39e7d1df8649989ce6b48e1750168"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61d39e7d1df8649989ce6b48e1750168">AutoSize</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a61d39e7d1df8649989ce6b48e1750168"><td class="mdescLeft">&#160;</td><td class="mdescRight">自動サイズ調整  <br /></td></tr>
+<tr class="separator:a61d39e7d1df8649989ce6b48e1750168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a468e0f5a73f6b96c016f684ca21e06f7" id="r_a468e0f5a73f6b96c016f684ca21e06f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a468e0f5a73f6b96c016f684ca21e06f7">ShowDebug</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a468e0f5a73f6b96c016f684ca21e06f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ表示をするかどうか  <br /></td></tr>
+<tr class="separator:a468e0f5a73f6b96c016f684ca21e06f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+イベント</h2></td></tr>
+<tr class="memitem:a1a7e3a2f865ece7d5065de7e8bf08741" id="r_a1a7e3a2f865ece7d5065de7e8bf08741"><td class="memItemLeft" align="right" valign="top"><a id="a1a7e3a2f865ece7d5065de7e8bf08741" name="a1a7e3a2f865ece7d5065de7e8bf08741"></a>
+EventHandler&#160;</td><td class="memItemRight" valign="bottom"><b>ValueChanged</b></td></tr>
+<tr class="memdesc:a1a7e3a2f865ece7d5065de7e8bf08741"><td class="mdescLeft">&#160;</td><td class="mdescRight">値変更イベント <br /></td></tr>
+<tr class="separator:a1a7e3a2f865ece7d5065de7e8bf08741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>カスタムトラックバー Minimum,Maximum,中央値のラベル表示と、説明ラベル表示を追加 </p>
+</div><h2 class="groupheader">メソッド詳解</h2>
+<a id="aee9cc5c676a8f88b77e6129d4589a539" name="aee9cc5c676a8f88b77e6129d4589a539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee9cc5c676a8f88b77e6129d4589a539">&#9670;&#160;</a></span>BeginInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.LabeledTrackBar.BeginInit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化開始 </p>
+<p>プロパティの値変更等で、座標値等の計算を行わないようにする。<br  />
+ <a class="el" href="#af51b0c0bfb614374bc9fae80efdc2d06" title="初期化終了">EndInit()</a>呼び出しで、一括再計算させる。 </p>
+
+</div>
+</div>
+<a id="a6c6b52acd287223eaa0001fe82ffdd45" name="a6c6b52acd287223eaa0001fe82ffdd45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c6b52acd287223eaa0001fe82ffdd45">&#9670;&#160;</a></span>Dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.LabeledTrackBar.Dispose </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>disposing</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>リソースの解放 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disposing</td><td>true:リソース解放中</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>文字列画像を解放する。 </p>
+
+</div>
+</div>
+<a id="af51b0c0bfb614374bc9fae80efdc2d06" name="af51b0c0bfb614374bc9fae80efdc2d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af51b0c0bfb614374bc9fae80efdc2d06">&#9670;&#160;</a></span>EndInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.LabeledTrackBar.EndInit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化終了 </p>
+<p>トラックバーの分割数、各座標値を計算する。 </p>
+
+</div>
+</div>
+<a id="a84aebd678eae1dc293f50a7355cb00b2" name="a84aebd678eae1dc293f50a7355cb00b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84aebd678eae1dc293f50a7355cb00b2">&#9670;&#160;</a></span>OnClientSizeChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.LabeledTrackBar.OnClientSizeChanged </td>
+          <td>(</td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>クライアントサイズ変更 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>コントロール描画範囲の変更に伴う各座標値の再計算を行う。 </p>
+
+</div>
+</div>
+<a id="a0a2c75109703a55755ee134ce525dc39" name="a0a2c75109703a55755ee134ce525dc39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a2c75109703a55755ee134ce525dc39">&#9670;&#160;</a></span>OnGotFocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.LabeledTrackBar.OnGotFocus </td>
+          <td>(</td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>フォーカスが来た </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>フォーカスを取得した場合、描画処理(OnPaint)に点線の枠を描画するように指示する。 </p>
+
+</div>
+</div>
+<a id="a50339e7f028a65b715411db6a580fb5c" name="a50339e7f028a65b715411db6a580fb5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50339e7f028a65b715411db6a580fb5c">&#9670;&#160;</a></span>OnKeyDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.LabeledTrackBar.OnKeyDown </td>
+          <td>(</td>
+          <td class="paramtype">KeyEventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>キーボード処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>キーイベントデータ</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>カーソルキーの場合、小さく移動(SmallChange)<br  />
+ PageUp/Downキーの場合は、大きく移動(LargeChage)させる。 </p>
+
+<p class="reference">参照先 <a class="el" href="#a993813d276101d2ea5323792b0eb7da1">SSTools.LabeledTrackBar.Orientation</a>.</p>
+
+</div>
+</div>
+<a id="ae0fdae220f17a312d94551a857bbe7e2" name="ae0fdae220f17a312d94551a857bbe7e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0fdae220f17a312d94551a857bbe7e2">&#9670;&#160;</a></span>OnLostFocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.LabeledTrackBar.OnLostFocus </td>
+          <td>(</td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>フォーカスが離れた </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>フォーカスが離れた場合、描画処理(OnPaint)に点線の枠を描画しないよう指示する。 </p>
+
+</div>
+</div>
+<a id="aa44b6294cb8ee761bd675905777b991d" name="aa44b6294cb8ee761bd675905777b991d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa44b6294cb8ee761bd675905777b991d">&#9670;&#160;</a></span>OnMouseDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.LabeledTrackBar.OnMouseDown </td>
+          <td>(</td>
+          <td class="paramtype">MouseEventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マウスボタン押された時の処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>マウスイベントデータ</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>マウスボタンの押された座標が、スライダー領域内の場合は、 スライダー中心とのオフセットを算出し、スライダークリック状態にする。<br  />
+ また、マウスボタンの押された座標が、トラックバー上での場合は、 大きく移動(LargeChange)の処理を行う。 </p>
+
+<p class="reference">参照先 <a class="el" href="#abc0eaa1b0de3ca1dc2f78850a79db8bc">SSTools.LabeledTrackBar.LargeChange</a>, <a class="el" href="#ad122ce171037d1b1558d3336c553960e">SSTools.LabeledTrackBar.OnValueChanged()</a>, <a class="el" href="#a993813d276101d2ea5323792b0eb7da1">SSTools.LabeledTrackBar.Orientation</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d95/class_s_s_tools_1_1_labeled_track_bar_aa44b6294cb8ee761bd675905777b991d_cgraph.png" border="0" usemap="#ad4/d95/class_s_s_tools_1_1_labeled_track_bar_aa44b6294cb8ee761bd675905777b991d_cgraph" alt=""/></div>
+<map name="ad4/d95/class_s_s_tools_1_1_labeled_track_bar_aa44b6294cb8ee761bd675905777b991d_cgraph" id="ad4/d95/class_s_s_tools_1_1_labeled_track_bar_aa44b6294cb8ee761bd675905777b991d_cgraph">
+<area shape="rect" title="マウスボタン押された時の処理" alt="" coords="5,5,182,48"/>
+<area shape="rect" href="../../d4/d95/class_s_s_tools_1_1_labeled_track_bar.html#ad122ce171037d1b1558d3336c553960e" title="値変更イベント発行" alt="" coords="230,5,406,48"/>
+<area shape="poly" title=" " alt="" coords="182,24,214,24,214,29,182,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aff4a7d68e21ee8cf31834b614bfbbb2b" name="aff4a7d68e21ee8cf31834b614bfbbb2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff4a7d68e21ee8cf31834b614bfbbb2b">&#9670;&#160;</a></span>OnMouseMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.LabeledTrackBar.OnMouseMove </td>
+          <td>(</td>
+          <td class="paramtype">MouseEventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マウス移動中処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>マウスイベントデータ</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>スライダークリック状態の場合は、マウス座標から値を算出し、更新されている場合は、 値変更のイベントを発行する。<br  />
+ また、トラックバー上を通過している場合は、スライドバーの表示状態を変更する。 </p>
+
+<p class="reference">参照先 <a class="el" href="#ad122ce171037d1b1558d3336c553960e">SSTools.LabeledTrackBar.OnValueChanged()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d95/class_s_s_tools_1_1_labeled_track_bar_aff4a7d68e21ee8cf31834b614bfbbb2b_cgraph.png" border="0" usemap="#ad4/d95/class_s_s_tools_1_1_labeled_track_bar_aff4a7d68e21ee8cf31834b614bfbbb2b_cgraph" alt=""/></div>
+<map name="ad4/d95/class_s_s_tools_1_1_labeled_track_bar_aff4a7d68e21ee8cf31834b614bfbbb2b_cgraph" id="ad4/d95/class_s_s_tools_1_1_labeled_track_bar_aff4a7d68e21ee8cf31834b614bfbbb2b_cgraph">
+<area shape="rect" title="マウス移動中処理" alt="" coords="5,5,182,48"/>
+<area shape="rect" href="../../d4/d95/class_s_s_tools_1_1_labeled_track_bar.html#ad122ce171037d1b1558d3336c553960e" title="値変更イベント発行" alt="" coords="230,5,406,48"/>
+<area shape="poly" title=" " alt="" coords="182,24,214,24,214,29,182,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a788dfa7e496b0de7572f1c7bd3b24a37" name="a788dfa7e496b0de7572f1c7bd3b24a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a788dfa7e496b0de7572f1c7bd3b24a37">&#9670;&#160;</a></span>OnMouseUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.LabeledTrackBar.OnMouseUp </td>
+          <td>(</td>
+          <td class="paramtype">MouseEventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マウスボタンが離れた時の処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>マウスイベントデータ</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>スライダークリック状態の場合は、現在のマウス座標値から、 トラックバーの値を計算し、値の更新をする。 </p>
+
+<p class="reference">参照先 <a class="el" href="#ad122ce171037d1b1558d3336c553960e">SSTools.LabeledTrackBar.OnValueChanged()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d95/class_s_s_tools_1_1_labeled_track_bar_a788dfa7e496b0de7572f1c7bd3b24a37_cgraph.png" border="0" usemap="#ad4/d95/class_s_s_tools_1_1_labeled_track_bar_a788dfa7e496b0de7572f1c7bd3b24a37_cgraph" alt=""/></div>
+<map name="ad4/d95/class_s_s_tools_1_1_labeled_track_bar_a788dfa7e496b0de7572f1c7bd3b24a37_cgraph" id="ad4/d95/class_s_s_tools_1_1_labeled_track_bar_a788dfa7e496b0de7572f1c7bd3b24a37_cgraph">
+<area shape="rect" title="マウスボタンが離れた時の処理" alt="" coords="5,5,182,48"/>
+<area shape="rect" href="../../d4/d95/class_s_s_tools_1_1_labeled_track_bar.html#ad122ce171037d1b1558d3336c553960e" title="値変更イベント発行" alt="" coords="230,5,406,48"/>
+<area shape="poly" title=" " alt="" coords="182,24,214,24,214,29,182,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5f797d140280c6aa460e7b5e54fe7e22" name="a5f797d140280c6aa460e7b5e54fe7e22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f797d140280c6aa460e7b5e54fe7e22">&#9670;&#160;</a></span>OnPaddingChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.LabeledTrackBar.OnPaddingChanged </td>
+          <td>(</td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>パディングが変更になった </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae835338131da29cead85ccf5c44ea117" name="ae835338131da29cead85ccf5c44ea117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae835338131da29cead85ccf5c44ea117">&#9670;&#160;</a></span>OnPaint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.LabeledTrackBar.OnPaint </td>
+          <td>(</td>
+          <td class="paramtype">PaintEventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OnPaint ... トラックバーの描画処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>描画イベントパラメータ</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>コントロール全体・一部の描画処理を行う。<br  />
+ ・フォーカスがある場合は、点線でコントロールを囲む四角形を描画する。(条件なし)<br  />
+ ・説明文字列の描画(指定された領域に説明文字列領域が含まれる場合のみ)<br  />
+ ・最大値・最小値・中央値のラベルの描画(指定された領域に各文字列領域が含まれる場合のみ)<br  />
+ ・目盛り線の描画(指定された領域に目盛り線領域が含まれる場合のみ)<br  />
+ ・トラックバーとスライダーの描画(指定された領域に各領域が含まれる場合のみ)<br  />
+ 各描画座標値は、あらかじめ算出されているはず(calculateTrackBarSize()で)。<br  />
+ 文字列は画像として保存されていない場合は、文字列画像を生成して描画。保存されている場合は、その画像を描画する。<br  />
+ 目盛り線の分割数は、分割数 &gt;= 目盛り線の幅/2 の場合、目盛り線の幅/2として描画する。<br  />
+ （分割数&gt;目盛り線の幅の場合、TrackBarRenderer.DrawHorizontalTicks()が無限ループ状態になるため... ＋<br  />
+ 　目盛り線自体が2pixelあるので、余計な描画をさせないようにするため） </p>
+
+<p class="reference">参照先 <a class="el" href="#abc222d36792120966a6baf1d49085a44">SSTools.LabeledTrackBar.DescriptionMax</a>, <a class="el" href="#a8959a4c3f5056c2d609c935bb4fb632e">SSTools.LabeledTrackBar.DescriptionMin</a>, <a class="el" href="#a993813d276101d2ea5323792b0eb7da1">SSTools.LabeledTrackBar.Orientation</a>, <a class="el" href="#a468e0f5a73f6b96c016f684ca21e06f7">SSTools.LabeledTrackBar.ShowDebug</a>, <a class="el" href="#ab072b69c68c36a9d5c00d9f539f188bb">SSTools.LabeledTrackBar.TickStyle</a>.</p>
+
+</div>
+</div>
+<a id="a4e412c5c5cf0a681856299e9eb947661" name="a4e412c5c5cf0a681856299e9eb947661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e412c5c5cf0a681856299e9eb947661">&#9670;&#160;</a></span>OnPreviewKeyDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.LabeledTrackBar.OnPreviewKeyDown </td>
+          <td>(</td>
+          <td class="paramtype">PreviewKeyDownEventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>カーソルキーをキャッチする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>キーイベントデータ</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>カーソルキーの押下を補足するため、<br  />
+ ・垂直バーの場合<br  />
+ 　　上下カーソルキーを動作を無効=<a class="el" href="#a50339e7f028a65b715411db6a580fb5c" title="キーボード処理">OnKeyDown()</a>イベントで処理<br  />
+ ・水平バーの場合<br  />
+ 　　左右カーソルキーを動作を無効=<a class="el" href="#a50339e7f028a65b715411db6a580fb5c" title="キーボード処理">OnKeyDown()</a>イベントで処理<br  />
+ </p>
+
+<p class="reference">参照先 <a class="el" href="#a993813d276101d2ea5323792b0eb7da1">SSTools.LabeledTrackBar.Orientation</a>.</p>
+
+</div>
+</div>
+<a id="ad122ce171037d1b1558d3336c553960e" name="ad122ce171037d1b1558d3336c553960e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad122ce171037d1b1558d3336c553960e">&#9670;&#160;</a></span>OnValueChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SSTools.LabeledTrackBar.OnValueChanged </td>
+          <td>(</td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>値変更イベント発行 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベントデータ</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>値更新イベントを発行し、要求元に値の変更を通知する。</p>
+
+<p class="reference">参照先 <a class="el" href="#a1a7e3a2f865ece7d5065de7e8bf08741">SSTools.LabeledTrackBar.ValueChanged</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="#aa44b6294cb8ee761bd675905777b991d">SSTools.LabeledTrackBar.OnMouseDown()</a>, <a class="el" href="#aff4a7d68e21ee8cf31834b614bfbbb2b">SSTools.LabeledTrackBar.OnMouseMove()</a>, <a class="el" href="#a788dfa7e496b0de7572f1c7bd3b24a37">SSTools.LabeledTrackBar.OnMouseUp()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d95/class_s_s_tools_1_1_labeled_track_bar_ad122ce171037d1b1558d3336c553960e_icgraph.png" border="0" usemap="#ad4/d95/class_s_s_tools_1_1_labeled_track_bar_ad122ce171037d1b1558d3336c553960e_icgraph" alt=""/></div>
+<map name="ad4/d95/class_s_s_tools_1_1_labeled_track_bar_ad122ce171037d1b1558d3336c553960e_icgraph" id="ad4/d95/class_s_s_tools_1_1_labeled_track_bar_ad122ce171037d1b1558d3336c553960e_icgraph">
+<area shape="rect" title="値変更イベント発行" alt="" coords="230,72,406,115"/>
+<area shape="rect" href="../../d4/d95/class_s_s_tools_1_1_labeled_track_bar.html#aa44b6294cb8ee761bd675905777b991d" title="マウスボタン押された時の処理" alt="" coords="5,5,182,48"/>
+<area shape="poly" title=" " alt="" coords="229,70,167,51,169,46,230,65"/>
+<area shape="rect" href="../../d4/d95/class_s_s_tools_1_1_labeled_track_bar.html#aff4a7d68e21ee8cf31834b614bfbbb2b" title="マウス移動中処理" alt="" coords="5,72,182,115"/>
+<area shape="poly" title=" " alt="" coords="214,96,182,96,182,91,214,91"/>
+<area shape="rect" href="../../d4/d95/class_s_s_tools_1_1_labeled_track_bar.html#a788dfa7e496b0de7572f1c7bd3b24a37" title="マウスボタンが離れた時の処理" alt="" coords="5,139,182,181"/>
+<area shape="poly" title=" " alt="" coords="230,122,169,141,167,135,229,117"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a029edf6a61c3c66d564d43df83364fcb" name="a029edf6a61c3c66d564d43df83364fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a029edf6a61c3c66d564d43df83364fcb">&#9670;&#160;</a></span>SetRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.LabeledTrackBar.SetRange </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>minValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxValue</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値の範囲を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minValue</td><td>最小値</td></tr>
+    <tr><td class="paramname">maxValue</td><td>最大値</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>トラックバーの最小値と最大値を設定する。 </p>
+
+</div>
+</div>
+<h2 class="groupheader">プロパティ詳解</h2>
+<a id="a61d39e7d1df8649989ce6b48e1750168" name="a61d39e7d1df8649989ce6b48e1750168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d39e7d1df8649989ce6b48e1750168">&#9670;&#160;</a></span>AutoSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool SSTools.LabeledTrackBar.AutoSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>自動サイズ調整 </p>
+<p>trueの場合、設定された内容でサイズの自動調整を行う。 デフォルトは「false」。 </p>
+
+</div>
+</div>
+<a id="a98423fec28851e44c72c7c32c8159008" name="a98423fec28851e44c72c7c32c8159008"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98423fec28851e44c72c7c32c8159008">&#9670;&#160;</a></span>DescriptionRotate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.LabeledTrackBar.DescriptionRotate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>説明文を回転させるかどうか </p>
+<p>trueの場合、-90度回転した説明文を表示する </p>
+
+</div>
+</div>
+<a id="a64e9ea121ee32324533a89ee15e799d8" name="a64e9ea121ee32324533a89ee15e799d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64e9ea121ee32324533a89ee15e799d8">&#9670;&#160;</a></span>LabelFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string SSTools.LabeledTrackBar.LabelFormat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>数値ラベルのフォーマット </p>
+<p>ラベルフォーマットを指定する。<br  />
+ ns,us,μs,ms,sが末尾の場合は、値がその単位として変換を行う<br  />
+ {SI}が含まれる場合は、K,M,Gの単位を付ける。 </p>
+
+</div>
+</div>
+<a id="aa5a9cf308354f8892822e11eeb4dab79" name="aa5a9cf308354f8892822e11eeb4dab79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5a9cf308354f8892822e11eeb4dab79">&#9670;&#160;</a></span>LabelRotate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.LabeledTrackBar.LabelRotate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>数値ラベルを回転させるかどうか </p>
+<p>trueの場合、-90度回転した数値ラベルを表示する </p>
+
+</div>
+</div>
+<a id="a0e655833f7eb87267589a64d8f641176" name="a0e655833f7eb87267589a64d8f641176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e655833f7eb87267589a64d8f641176">&#9670;&#160;</a></span>LongPress</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SSTools.LabeledTrackBar.LongPress = 250</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マウス長押しタイマー値 </p>
+<p>マウスの長押し判定をする時間(ms) </p>
+
+</div>
+</div>
+<a id="a993813d276101d2ea5323792b0eb7da1" name="a993813d276101d2ea5323792b0eb7da1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a993813d276101d2ea5323792b0eb7da1">&#9670;&#160;</a></span>Orientation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Orientation SSTools.LabeledTrackBar.Orientation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>トラックバーの方向 </p>
+<p>Horizontal ... 左側が小さい、右側が大きい<br  />
+ Verical ... 下側が小さい、上側が大きい<br  />
+ (Inverseプロパティがtrueの場合はで反転する) </p>
+
+<p class="reference">参照元 <a class="el" href="#a50339e7f028a65b715411db6a580fb5c">SSTools.LabeledTrackBar.OnKeyDown()</a>, <a class="el" href="#aa44b6294cb8ee761bd675905777b991d">SSTools.LabeledTrackBar.OnMouseDown()</a>, <a class="el" href="#ae835338131da29cead85ccf5c44ea117">SSTools.LabeledTrackBar.OnPaint()</a>, <a class="el" href="#a4e412c5c5cf0a681856299e9eb947661">SSTools.LabeledTrackBar.OnPreviewKeyDown()</a>.</p>
+
+</div>
+</div>
+<a id="a468e0f5a73f6b96c016f684ca21e06f7" name="a468e0f5a73f6b96c016f684ca21e06f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a468e0f5a73f6b96c016f684ca21e06f7">&#9670;&#160;</a></span>ShowDebug</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.LabeledTrackBar.ShowDebug</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デバッグ表示をするかどうか </p>
+<p>trueの場合、コントロールの領域を赤枠で表示する。 </p>
+
+<p class="reference">参照元 <a class="el" href="#ae835338131da29cead85ccf5c44ea117">SSTools.LabeledTrackBar.OnPaint()</a>.</p>
+
+</div>
+</div>
+<a id="ab072b69c68c36a9d5c00d9f539f188bb" name="ab072b69c68c36a9d5c00d9f539f188bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab072b69c68c36a9d5c00d9f539f188bb">&#9670;&#160;</a></span>TickStyle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TickStyle SSTools.LabeledTrackBar.TickStyle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>目盛り線の表示位置 </p>
+<p>目盛り線の表示位置により、スライダーの形状も変更する。 </p>
+
+<p class="reference">参照元 <a class="el" href="#ae835338131da29cead85ccf5c44ea117">SSTools.LabeledTrackBar.OnPaint()</a>.</p>
+
+</div>
+</div>
+<a id="a8056211b7d34d2c2b4559f3a30a315fd" name="a8056211b7d34d2c2b4559f3a30a315fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8056211b7d34d2c2b4559f3a30a315fd">&#9670;&#160;</a></span>Value</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SSTools.LabeledTrackBar.Value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>現在値(スライダーの位置) </p>
+<p>Inverseプロパティ=true もしくは OrientationプロパティがVerticalの場合、<br  />
+ 最大値 - 内部の値となる。<br  />
+ (Inverseプロパティ=false で OrientationプロパティがVerticalの場合は内部の値は変換しない) </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SSTools/CustomizeControl/<b>LabeledTrackBar.cs</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/db1/namespace_s_s_tools.html">SSTools</a></li><li class="navelem"><a class="el" href="../../d4/d95/class_s_s_tools_1_1_labeled_track_bar.html">LabeledTrackBar</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

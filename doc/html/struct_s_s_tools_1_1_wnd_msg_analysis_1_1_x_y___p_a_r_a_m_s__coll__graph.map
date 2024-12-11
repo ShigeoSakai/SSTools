@@ -1,5 +1,0 @@
-<map id="SSTools.WndMsgAnalysis.XY_PARAMS" name="SSTools.WndMsgAnalysis.XY_PARAMS">
-<area shape="rect" id="Node000001" title="XY" alt="" coords="5,80,204,123"/>
-<area shape="rect" id="Node000002" href="$interface_s_s_tools_1_1_wnd_msg_analysis_1_1_i_set_value.html" title="WParam/LParam値設定I/F" alt="" coords="66,5,143,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,48,107,80,102,80,102,48"/>
-</map>

@@ -1,0 +1,5 @@
+<map id="SSTools.ShapeManager.Remove" name="SSTools.ShapeManager.Remove">
+<area shape="rect" id="Node000001" title="図形の削除" alt="" coords="278,5,492,32"/>
+<area shape="rect" id="Node000002" href="$d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a60b1753268935d0c61923859d1d298ad" title="指定図形を削除" alt="" coords="5,5,230,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,21,230,21,230,16,262,16"/>
+</map>

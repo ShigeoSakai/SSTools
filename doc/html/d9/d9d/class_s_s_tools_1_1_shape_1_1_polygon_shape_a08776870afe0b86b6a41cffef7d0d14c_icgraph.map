@@ -1,0 +1,5 @@
+<map id="SSTools.Shape.PolygonShape.Draw" name="SSTools.Shape.PolygonShape.Draw">
+<area shape="rect" id="Node000001" title="描画" alt="" coords="246,13,480,40"/>
+<area shape="rect" id="Node000002" href="$d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#ab52fa42945fe0743c0feb98436ef1969" title="描画イベント" alt="" coords="5,5,198,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,29,198,29,198,24,230,24"/>
+</map>

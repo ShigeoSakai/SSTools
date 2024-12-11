@@ -1,0 +1,5 @@
+<map id="SSTools.ShapeManager.RemovePattern" name="SSTools.ShapeManager.RemovePattern">
+<area shape="rect" id="Node000001" title="パターンを指定して削除" alt="" coords="278,5,492,48"/>
+<area shape="rect" id="Node000002" href="$d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a758b4ed99c5dd6c3ff14051b5a351561" title="パターンで指定された図形を削除" alt="" coords="5,5,230,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,29,230,29,230,24,262,24"/>
+</map>

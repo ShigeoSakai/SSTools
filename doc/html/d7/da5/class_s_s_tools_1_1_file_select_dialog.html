@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SSTools: SSTools.FileSelectDialog クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SSTools
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('d7/da5/class_s_s_tools_1_1_file_select_dialog.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="../../d1/da9/class_s_s_tools_1_1_file_select_dialog-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">SSTools.FileSelectDialog クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>ファイル選択ダイアログ  
+ <a href="#details">[詳解]</a></p>
+<div class="dynheader">
+SSTools.FileSelectDialog の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d8d/class_s_s_tools_1_1_file_select_dialog__inherit__graph.png" border="0" usemap="#a_s_s_tools_8_file_select_dialog_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_s_s_tools_8_file_select_dialog_inherit__map" id="a_s_s_tools_8_file_select_dialog_inherit__map">
+<area shape="rect" title="ファイル選択ダイアログ" alt="" coords="7,96,177,123"/>
+<area shape="rect" title=" " alt="" coords="5,5,179,48"/>
+<area shape="poly" title=" " alt="" coords="95,64,95,95,89,95,89,64"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+SSTools.FileSelectDialog 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/db7/class_s_s_tools_1_1_file_select_dialog__coll__graph.png" border="0" usemap="#a_s_s_tools_8_file_select_dialog_coll__map" alt="Collaboration graph"/></div>
+<map name="a_s_s_tools_8_file_select_dialog_coll__map" id="a_s_s_tools_8_file_select_dialog_coll__map">
+<area shape="rect" title="ファイル選択ダイアログ" alt="" coords="29,188,198,215"/>
+<area shape="rect" title=" " alt="" coords="5,81,179,124"/>
+<area shape="poly" title=" " alt="" coords="102,138,113,187,108,188,97,140"/>
+<area shape="rect" href="../../de/d4c/class_s_s_tools_1_1_file_list_view.html" title="ファイル一覧View" alt="" coords="203,89,349,116"/>
+<area shape="poly" title=" " alt="" coords="243,126,136,190,133,185,241,122"/>
+<area shape="rect" title=" " alt="" coords="230,5,322,32"/>
+<area shape="poly" title=" " alt="" coords="279,47,279,89,273,89,273,47"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a7527fe1013a3eea3af8caa1cdca11bd1" id="r_a7527fe1013a3eea3af8caa1cdca11bd1"><td class="memItemLeft" align="right" valign="top"><a id="a7527fe1013a3eea3af8caa1cdca11bd1" name="a7527fe1013a3eea3af8caa1cdca11bd1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FileSelectDialog</b> ()</td></tr>
+<tr class="memdesc:a7527fe1013a3eea3af8caa1cdca11bd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="separator:a7527fe1013a3eea3af8caa1cdca11bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3f8d228cb36c8cd5a1c29df8351be146" id="r_a3f8d228cb36c8cd5a1c29df8351be146"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f8d228cb36c8cd5a1c29df8351be146">GetIntialDirectory</a> (string init_folder)</td></tr>
+<tr class="memdesc:a3f8d228cb36c8cd5a1c29df8351be146"><td class="mdescLeft">&#160;</td><td class="mdescRight">直近のパスと新規パスから、参照できるパスを取得  <br /></td></tr>
+<tr class="separator:a3f8d228cb36c8cd5a1c29df8351be146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:a1ddec3e393da25f1e54fa8c6df06b48c" id="r_a1ddec3e393da25f1e54fa8c6df06b48c"><td class="memItemLeft" align="right" valign="top"><a id="a1ddec3e393da25f1e54fa8c6df06b48c" name="a1ddec3e393da25f1e54fa8c6df06b48c"></a>
+static string&#160;</td><td class="memItemRight" valign="bottom"><b>RecentPath</b> = null</td></tr>
+<tr class="memdesc:a1ddec3e393da25f1e54fa8c6df06b48c"><td class="mdescLeft">&#160;</td><td class="mdescRight">直近の選択パス <br /></td></tr>
+<tr class="separator:a1ddec3e393da25f1e54fa8c6df06b48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620504e271fc87ea422524b97c9e365e" id="r_a620504e271fc87ea422524b97c9e365e"><td class="memItemLeft" align="right" valign="top"><a id="a620504e271fc87ea422524b97c9e365e" name="a620504e271fc87ea422524b97c9e365e"></a>
+static <a class="el" href="../../de/d4c/class_s_s_tools_1_1_file_list_view.html#ab05cb52a041be9bad16e535c47fc8fad">FileListView.FILE_VIEW</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RecentView</b> = <a class="el" href="../../de/d4c/class_s_s_tools_1_1_file_list_view.html#ab05cb52a041be9bad16e535c47fc8fada08f7728d14d36f52bd6d413d9c963e7c">FileListView.FILE_VIEW.LargeIcon</a></td></tr>
+<tr class="memdesc:a620504e271fc87ea422524b97c9e365e"><td class="mdescLeft">&#160;</td><td class="mdescRight">最後に選択されたView <br /></td></tr>
+<tr class="separator:a620504e271fc87ea422524b97c9e365e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab4caa11f41607f4ca5977bcc0daebfee" id="r_ab4caa11f41607f4ca5977bcc0daebfee"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4caa11f41607f4ca5977bcc0daebfee">OnShown</a> (EventArgs e)</td></tr>
+<tr class="memdesc:ab4caa11f41607f4ca5977bcc0daebfee"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示された  <br /></td></tr>
+<tr class="separator:ab4caa11f41607f4ca5977bcc0daebfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4427d5bfaa128f34baf3f81a912b691" id="r_af4427d5bfaa128f34baf3f81a912b691"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4427d5bfaa128f34baf3f81a912b691">Dispose</a> (bool disposing)</td></tr>
+<tr class="memdesc:af4427d5bfaa128f34baf3f81a912b691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean up any resources being used.  <br /></td></tr>
+<tr class="separator:af4427d5bfaa128f34baf3f81a912b691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:aefde2c9675791c45fe0bd560c2d78c39" id="r_aefde2c9675791c45fe0bd560c2d78c39"><td class="memItemLeft" align="right" valign="top"><a id="aefde2c9675791c45fe0bd560c2d78c39" name="aefde2c9675791c45fe0bd560c2d78c39"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>CheckFileExists</b> = true<code> [get, set]</code></td></tr>
+<tr class="memdesc:aefde2c9675791c45fe0bd560c2d78c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">存在しないファイルの名前をユーザーが指定した場合に、ダイアログ ボックスが 警告を表示するかどうかを示す値 既定値は true <br /></td></tr>
+<tr class="separator:aefde2c9675791c45fe0bd560c2d78c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d99e303b55f18c5f52070db457c659" id="r_a52d99e303b55f18c5f52070db457c659"><td class="memItemLeft" align="right" valign="top"><a id="a52d99e303b55f18c5f52070db457c659" name="a52d99e303b55f18c5f52070db457c659"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>CheckPathExists</b> = true<code> [get, set]</code></td></tr>
+<tr class="memdesc:a52d99e303b55f18c5f52070db457c659"><td class="mdescLeft">&#160;</td><td class="mdescRight">存在しないパスをユーザーが指定したときに、ダイアログ ボックスに警告を 表示するかどうかを示す値 既定値は true <br /></td></tr>
+<tr class="separator:a52d99e303b55f18c5f52070db457c659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec797b4979426ed2818ae34f9cab527a" id="r_aec797b4979426ed2818ae34f9cab527a"><td class="memItemLeft" align="right" valign="top"><a id="aec797b4979426ed2818ae34f9cab527a" name="aec797b4979426ed2818ae34f9cab527a"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>FileName</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:aec797b4979426ed2818ae34f9cab527a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル ダイアログ ボックスで選択されたファイル名を含む文字列 既定値は空の文字列 ("") <br /></td></tr>
+<tr class="separator:aec797b4979426ed2818ae34f9cab527a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492a58ced1a2a3a2f28450854690b097" id="r_a492a58ced1a2a3a2f28450854690b097"><td class="memItemLeft" align="right" valign="top"><a id="a492a58ced1a2a3a2f28450854690b097" name="a492a58ced1a2a3a2f28450854690b097"></a>
+string[]&#160;</td><td class="memItemRight" valign="bottom"><b>FileNames</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a492a58ced1a2a3a2f28450854690b097"><td class="mdescLeft">&#160;</td><td class="mdescRight">選択されたファイル名(フルパス) <br /></td></tr>
+<tr class="separator:a492a58ced1a2a3a2f28450854690b097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fda893da3ae1c8830510c7c48e57497" id="r_a7fda893da3ae1c8830510c7c48e57497"><td class="memItemLeft" align="right" valign="top"><a id="a7fda893da3ae1c8830510c7c48e57497" name="a7fda893da3ae1c8830510c7c48e57497"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>SafeFileName</b><code> [get]</code></td></tr>
+<tr class="separator:a7fda893da3ae1c8830510c7c48e57497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b5595d58024f2a048ab1683c4a1ead" id="r_a69b5595d58024f2a048ab1683c4a1ead"><td class="memItemLeft" align="right" valign="top"><a id="a69b5595d58024f2a048ab1683c4a1ead" name="a69b5595d58024f2a048ab1683c4a1ead"></a>
+string[]&#160;</td><td class="memItemRight" valign="bottom"><b>SafeFileNames</b><code> [get]</code></td></tr>
+<tr class="separator:a69b5595d58024f2a048ab1683c4a1ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a798338d3e3ffcb8bb2d43e0945007e" id="r_a1a798338d3e3ffcb8bb2d43e0945007e"><td class="memItemLeft" align="right" valign="top"><a id="a1a798338d3e3ffcb8bb2d43e0945007e" name="a1a798338d3e3ffcb8bb2d43e0945007e"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>Filter</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a1a798338d3e3ffcb8bb2d43e0945007e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログ ボックスの [ファイルの種類] ボックスに表示される選択肢 <br /></td></tr>
+<tr class="separator:a1a798338d3e3ffcb8bb2d43e0945007e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a895d42fffc7d768ef50fe09d23c50fca" id="r_a895d42fffc7d768ef50fe09d23c50fca"><td class="memItemLeft" align="right" valign="top"><a id="a895d42fffc7d768ef50fe09d23c50fca" name="a895d42fffc7d768ef50fe09d23c50fca"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>FilterIndex</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a895d42fffc7d768ef50fe09d23c50fca"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル ダイアログ ボックスで現在選択されているフィルターのインデックス <br /></td></tr>
+<tr class="separator:a895d42fffc7d768ef50fe09d23c50fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7f2df04b66d567dec7b53fb80ff3b7" id="r_a0f7f2df04b66d567dec7b53fb80ff3b7"><td class="memItemLeft" align="right" valign="top"><a id="a0f7f2df04b66d567dec7b53fb80ff3b7" name="a0f7f2df04b66d567dec7b53fb80ff3b7"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>InitialDirectory</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a0f7f2df04b66d567dec7b53fb80ff3b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル ダイアログ ボックスに表示される起動ディレクトリ <br /></td></tr>
+<tr class="separator:a0f7f2df04b66d567dec7b53fb80ff3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a545d76212bc95c87f315d6914cb82c55" id="r_a545d76212bc95c87f315d6914cb82c55"><td class="memItemLeft" align="right" valign="top"><a id="a545d76212bc95c87f315d6914cb82c55" name="a545d76212bc95c87f315d6914cb82c55"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>Title</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a545d76212bc95c87f315d6914cb82c55"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル ダイアログ ボックスのタイトル <br /></td></tr>
+<tr class="separator:a545d76212bc95c87f315d6914cb82c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac104c895bb3b1fcd731dd50495454137" id="r_ac104c895bb3b1fcd731dd50495454137"><td class="memItemLeft" align="right" valign="top"><a id="ac104c895bb3b1fcd731dd50495454137" name="ac104c895bb3b1fcd731dd50495454137"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Multiselect</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac104c895bb3b1fcd731dd50495454137"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログ ボックスで複数のファイルを選択できるかどうかを示す値 既定値は false <br /></td></tr>
+<tr class="separator:ac104c895bb3b1fcd731dd50495454137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f3a398eef6171be787275f5f53927d3" id="r_a4f3a398eef6171be787275f5f53927d3"><td class="memItemLeft" align="right" valign="top"><a id="a4f3a398eef6171be787275f5f53927d3" name="a4f3a398eef6171be787275f5f53927d3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowHiddenFolder</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a4f3a398eef6171be787275f5f53927d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">隠しフォルダを表示するか <br /></td></tr>
+<tr class="separator:a4f3a398eef6171be787275f5f53927d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ファイル選択ダイアログ </p>
+</div><h2 class="groupheader">メソッド詳解</h2>
+<a id="af4427d5bfaa128f34baf3f81a912b691" name="af4427d5bfaa128f34baf3f81a912b691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4427d5bfaa128f34baf3f81a912b691">&#9670;&#160;</a></span>Dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.FileSelectDialog.Dispose </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>disposing</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clean up any resources being used. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disposing</td><td>true if managed resources should be disposed; otherwise, false.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3f8d228cb36c8cd5a1c29df8351be146" name="a3f8d228cb36c8cd5a1c29df8351be146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f8d228cb36c8cd5a1c29df8351be146">&#9670;&#160;</a></span>GetIntialDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string SSTools.FileSelectDialog.GetIntialDirectory </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>init_folder</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>直近のパスと新規パスから、参照できるパスを取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">init_folder</td><td>初期フォルダ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>参照できるパス</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="#a1ddec3e393da25f1e54fa8c6df06b48c">SSTools.FileSelectDialog.RecentPath</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="#ab4caa11f41607f4ca5977bcc0daebfee">SSTools.FileSelectDialog.OnShown()</a>, <a class="el" href="../../d8/d6f/class_s_s_tools_1_1_folder_select_dialog.html#a767267a714045e0fec1303f561172144">SSTools.FolderSelectDialog.OnShown()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/da5/class_s_s_tools_1_1_file_select_dialog_a3f8d228cb36c8cd5a1c29df8351be146_icgraph.png" border="0" usemap="#ad7/da5/class_s_s_tools_1_1_file_select_dialog_a3f8d228cb36c8cd5a1c29df8351be146_icgraph" alt=""/></div>
+<map name="ad7/da5/class_s_s_tools_1_1_file_select_dialog_a3f8d228cb36c8cd5a1c29df8351be146_icgraph" id="ad7/da5/class_s_s_tools_1_1_file_select_dialog_a3f8d228cb36c8cd5a1c29df8351be146_icgraph">
+<area shape="rect" title="直近のパスと新規パスから、参照できるパスを取得" alt="" coords="242,39,415,81"/>
+<area shape="rect" href="../../d7/da5/class_s_s_tools_1_1_file_select_dialog.html#ab4caa11f41607f4ca5977bcc0daebfee" title="表示された" alt="" coords="13,5,186,48"/>
+<area shape="poly" title=" " alt="" coords="226,48,186,42,187,37,227,43"/>
+<area shape="rect" href="../../d8/d6f/class_s_s_tools_1_1_folder_select_dialog.html#a767267a714045e0fec1303f561172144" title="表示された" alt="" coords="5,72,194,115"/>
+<area shape="poly" title=" " alt="" coords="227,77,194,82,194,77,226,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab4caa11f41607f4ca5977bcc0daebfee" name="ab4caa11f41607f4ca5977bcc0daebfee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4caa11f41607f4ca5977bcc0daebfee">&#9670;&#160;</a></span>OnShown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.FileSelectDialog.OnShown </td>
+          <td>(</td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>表示された </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a3f8d228cb36c8cd5a1c29df8351be146">SSTools.FileSelectDialog.GetIntialDirectory()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/da5/class_s_s_tools_1_1_file_select_dialog_ab4caa11f41607f4ca5977bcc0daebfee_cgraph.png" border="0" usemap="#ad7/da5/class_s_s_tools_1_1_file_select_dialog_ab4caa11f41607f4ca5977bcc0daebfee_cgraph" alt=""/></div>
+<map name="ad7/da5/class_s_s_tools_1_1_file_select_dialog_ab4caa11f41607f4ca5977bcc0daebfee_cgraph" id="ad7/da5/class_s_s_tools_1_1_file_select_dialog_ab4caa11f41607f4ca5977bcc0daebfee_cgraph">
+<area shape="rect" title="表示された" alt="" coords="5,5,179,48"/>
+<area shape="rect" href="../../d7/da5/class_s_s_tools_1_1_file_select_dialog.html#a3f8d228cb36c8cd5a1c29df8351be146" title="直近のパスと新規パスから、参照できるパスを取得" alt="" coords="227,5,400,48"/>
+<area shape="poly" title=" " alt="" coords="179,24,211,24,211,29,179,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SSTools/Form/<b>FileSelectDialog.cs</b></li>
+<li>SSTools/Form/<b>FileSelectDialog.Designer.cs</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/db1/namespace_s_s_tools.html">SSTools</a></li><li class="navelem"><a class="el" href="../../d7/da5/class_s_s_tools_1_1_file_select_dialog.html">FileSelectDialog</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

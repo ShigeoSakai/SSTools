@@ -1,0 +1,5 @@
+<map id="SSTools.ZoomPictureBox.AddShape" name="SSTools.ZoomPictureBox.AddShape">
+<area shape="rect" id="Node000001" title="複数図形の追加" alt="" coords="5,5,204,48"/>
+<area shape="rect" id="Node000002" href="$d0/d70/class_s_s_tools_1_1_shape_manager.html#af8e79d2564ddd2b518cf0c131f103fdb" title="図形の追加" alt="" coords="252,5,440,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,24,236,24,236,29,204,29"/>
+</map>

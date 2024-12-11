@@ -1,0 +1,9 @@
+<map id="SSTools.FolderTreeView.FolderTreeView" name="SSTools.FolderTreeView.FolderTreeView">
+<area shape="rect" id="Node000001" title="コンストラクタ(ルートフォルダ指定)" alt="" coords="5,27,210,69"/>
+<area shape="rect" id="Node000002" href="$dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#a71b1a2230221186807de76e83bed8979" title="アイコンマネージャ初期化" alt="" coords="258,5,474,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,34,242,30,243,35,211,39"/>
+<area shape="rect" id="Node000003" href="$dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#ae236bc1d279eac3f3d59ca64784b5302" title="画像リストを初期化する" alt="" coords="267,56,465,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,57,251,62,251,67,210,62"/>
+<area shape="rect" id="Node000004" href="$dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#a5bf3b954effdb2e329bc22bbe4e2e535" title="アイコンのサイズを取得する" alt="" coords="522,56,720,99"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="466,75,506,75,506,80,466,80"/>
+</map>

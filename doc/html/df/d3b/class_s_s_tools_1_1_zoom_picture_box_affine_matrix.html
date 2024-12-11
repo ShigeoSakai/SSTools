@@ -1,0 +1,1055 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SSTools: SSTools.ZoomPictureBoxAffineMatrix クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SSTools
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="../../da/d0b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">SSTools.ZoomPictureBoxAffineMatrix クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>アフィン行列クラス  
+ <a href="#details">[詳解]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a8e693bfd2857306f434b7d1f047055f5" id="r_a8e693bfd2857306f434b7d1f047055f5"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e693bfd2857306f434b7d1f047055f5">GetImageLocaltion</a> (Point mouseLocation)</td></tr>
+<tr class="memdesc:a8e693bfd2857306f434b7d1f047055f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウス座標から画像座標への変換  <br /></td></tr>
+<tr class="separator:a8e693bfd2857306f434b7d1f047055f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a54ba432a2efdc386938e75d662d1d" id="r_a17a54ba432a2efdc386938e75d662d1d"><td class="memItemLeft" align="right" valign="top">PointF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17a54ba432a2efdc386938e75d662d1d">GetImageLocaltionF</a> (Point mouseLocation)</td></tr>
+<tr class="memdesc:a17a54ba432a2efdc386938e75d662d1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウス座標から画像座標への変換  <br /></td></tr>
+<tr class="separator:a17a54ba432a2efdc386938e75d662d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d54f77650db963771d991c95f3079d" id="r_a55d54f77650db963771d991c95f3079d"><td class="memItemLeft" align="right" valign="top">PointF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55d54f77650db963771d991c95f3079d">GetImageLocaltionF</a> (PointF mouseLocation)</td></tr>
+<tr class="memdesc:a55d54f77650db963771d991c95f3079d"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウス座標から画像座標への変換  <br /></td></tr>
+<tr class="separator:a55d54f77650db963771d991c95f3079d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1b38265cf806a4375e82ae4859f9893" id="r_ad1b38265cf806a4375e82ae4859f9893"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1b38265cf806a4375e82ae4859f9893">GetImageSize</a> (Size size)</td></tr>
+<tr class="memdesc:ad1b38265cf806a4375e82ae4859f9893"><td class="mdescLeft">&#160;</td><td class="mdescRight">コントロールサイズから実画像サイズを求める  <br /></td></tr>
+<tr class="separator:ad1b38265cf806a4375e82ae4859f9893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e24cd79c78b0e5f08b4b26d5dabbc3e" id="r_a9e24cd79c78b0e5f08b4b26d5dabbc3e"><td class="memItemLeft" align="right" valign="top">SizeF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e24cd79c78b0e5f08b4b26d5dabbc3e">GetImageSizeF</a> (Size size)</td></tr>
+<tr class="memdesc:a9e24cd79c78b0e5f08b4b26d5dabbc3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コントロールサイズから実画像サイズを求める  <br /></td></tr>
+<tr class="separator:a9e24cd79c78b0e5f08b4b26d5dabbc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0110bd79806e83a22578f7e11822165f" id="r_a0110bd79806e83a22578f7e11822165f"><td class="memItemLeft" align="right" valign="top">SizeF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0110bd79806e83a22578f7e11822165f">GetImageSizeF</a> (SizeF size)</td></tr>
+<tr class="memdesc:a0110bd79806e83a22578f7e11822165f"><td class="mdescLeft">&#160;</td><td class="mdescRight">コントロールサイズから実画像サイズを求める  <br /></td></tr>
+<tr class="separator:a0110bd79806e83a22578f7e11822165f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d3f651fc772c5412017518b4a7787a" id="r_a00d3f651fc772c5412017518b4a7787a"><td class="memItemLeft" align="right" valign="top">PointF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00d3f651fc772c5412017518b4a7787a">GetImageDelta</a> (PointF delta)</td></tr>
+<tr class="memdesc:a00d3f651fc772c5412017518b4a7787a"><td class="mdescLeft">&#160;</td><td class="mdescRight">コントロール座標系差分から画像座標系差分を求める  <br /></td></tr>
+<tr class="separator:a00d3f651fc772c5412017518b4a7787a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1557982c3c0c2d1ae48f69d7fd701449" id="r_a1557982c3c0c2d1ae48f69d7fd701449"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1557982c3c0c2d1ae48f69d7fd701449">GetMouseLocation</a> (Point location)</td></tr>
+<tr class="memdesc:a1557982c3c0c2d1ae48f69d7fd701449"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像座標からコントロール座標に変換する  <br /></td></tr>
+<tr class="separator:a1557982c3c0c2d1ae48f69d7fd701449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f6d01fa96f203feaa4911872525872" id="r_af4f6d01fa96f203feaa4911872525872"><td class="memItemLeft" align="right" valign="top">PointF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4f6d01fa96f203feaa4911872525872">GetMouseLocationF</a> (PointF location)</td></tr>
+<tr class="memdesc:af4f6d01fa96f203feaa4911872525872"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像座標からコントロール座標に変換する  <br /></td></tr>
+<tr class="separator:af4f6d01fa96f203feaa4911872525872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f15257fc7bf7c259fd5ff0f8c81c934" id="r_a0f15257fc7bf7c259fd5ff0f8c81c934"><td class="memItemLeft" align="right" valign="top">PointF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f15257fc7bf7c259fd5ff0f8c81c934">GetMouseLocationF</a> (Point location)</td></tr>
+<tr class="memdesc:a0f15257fc7bf7c259fd5ff0f8c81c934"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像座標からコントロール座標に変換する  <br /></td></tr>
+<tr class="separator:a0f15257fc7bf7c259fd5ff0f8c81c934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c25891c69f2e5a4b8d35a58931bdb4" id="r_a73c25891c69f2e5a4b8d35a58931bdb4"><td class="memItemLeft" align="right" valign="top">Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73c25891c69f2e5a4b8d35a58931bdb4">GetControlSize</a> (Size size)</td></tr>
+<tr class="memdesc:a73c25891c69f2e5a4b8d35a58931bdb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像座標系の大きさをコントロール座標系に変換する  <br /></td></tr>
+<tr class="separator:a73c25891c69f2e5a4b8d35a58931bdb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed308e787e1c8288aa40178912a1b3d9" id="r_aed308e787e1c8288aa40178912a1b3d9"><td class="memItemLeft" align="right" valign="top">SizeF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed308e787e1c8288aa40178912a1b3d9">GetControlSizeF</a> (SizeF size)</td></tr>
+<tr class="memdesc:aed308e787e1c8288aa40178912a1b3d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像座標系の大きさをコントロール座標系に変換する  <br /></td></tr>
+<tr class="separator:aed308e787e1c8288aa40178912a1b3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1086151378d446e0a088e376ad4d7a96" id="r_a1086151378d446e0a088e376ad4d7a96"><td class="memItemLeft" align="right" valign="top">SizeF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1086151378d446e0a088e376ad4d7a96">GetControlSizeF</a> (Size size)</td></tr>
+<tr class="memdesc:a1086151378d446e0a088e376ad4d7a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像座標系の大きさをコントロール座標系に変換する  <br /></td></tr>
+<tr class="separator:a1086151378d446e0a088e376ad4d7a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a584a950d19b944f085cc1401eb732b13" id="r_a584a950d19b944f085cc1401eb732b13"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a584a950d19b944f085cc1401eb732b13">SetAspect</a> (float xRatio, float yRatio)</td></tr>
+<tr class="memdesc:a584a950d19b944f085cc1401eb732b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">アスペクト比の設定  <br /></td></tr>
+<tr class="separator:a584a950d19b944f085cc1401eb732b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56b839969c10d553162514d7f7a962fd" id="r_a56b839969c10d553162514d7f7a962fd"><td class="memItemLeft" align="right" valign="top"><a id="a56b839969c10d553162514d7f7a962fd" name="a56b839969c10d553162514d7f7a962fd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ZoomPictureBoxAffineMatrix</b> ()</td></tr>
+<tr class="memdesc:a56b839969c10d553162514d7f7a962fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br /></td></tr>
+<tr class="separator:a56b839969c10d553162514d7f7a962fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a444069cdef2ddf8eb9308fa6e365db0f" id="r_a444069cdef2ddf8eb9308fa6e365db0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a444069cdef2ddf8eb9308fa6e365db0f">ZoomPictureBoxAffineMatrix</a> (<a class="el" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html">ZoomPictureBoxAffineMatrix</a> src)</td></tr>
+<tr class="memdesc:a444069cdef2ddf8eb9308fa6e365db0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ  <br /></td></tr>
+<tr class="separator:a444069cdef2ddf8eb9308fa6e365db0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2c9d63a46dbac227aa4a7406b7f4c07" id="r_ae2c9d63a46dbac227aa4a7406b7f4c07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2c9d63a46dbac227aa4a7406b7f4c07">ZoomPictureBoxAffineMatrix</a> (Size imageSize, Size contorlSize, PictureBoxSizeMode sizeMode, double aspect=1.0)</td></tr>
+<tr class="memdesc:ae2c9d63a46dbac227aa4a7406b7f4c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:ae2c9d63a46dbac227aa4a7406b7f4c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5d605d132ad0715703b85f30f0769cb" id="r_ab5d605d132ad0715703b85f30f0769cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5d605d132ad0715703b85f30f0769cb">Reset</a> (Size imageSize, Size contorlSize, PictureBoxSizeMode sizeMode, double aspect=1.0, bool zoomReset=false, Rectangle? rect=null)</td></tr>
+<tr class="memdesc:ab5d605d132ad0715703b85f30f0769cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">アフィン行列のリセット  <br /></td></tr>
+<tr class="separator:ab5d605d132ad0715703b85f30f0769cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaa22f9fcf533c8260478c1f0175ab27" id="r_adaa22f9fcf533c8260478c1f0175ab27"><td class="memItemLeft" align="right" valign="top"><a id="adaa22f9fcf533c8260478c1f0175ab27" name="adaa22f9fcf533c8260478c1f0175ab27"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CalcZoomInit</b> ()</td></tr>
+<tr class="memdesc:adaa22f9fcf533c8260478c1f0175ab27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zoom倍率を考慮したMatrixの生成(初期化・リセット時) <br /></td></tr>
+<tr class="separator:adaa22f9fcf533c8260478c1f0175ab27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae9b168f4d96806f50e889aff26202c" id="r_a2ae9b168f4d96806f50e889aff26202c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ae9b168f4d96806f50e889aff26202c">SetShowRectAngle</a> (Rectangle rect)</td></tr>
+<tr class="memdesc:a2ae9b168f4d96806f50e889aff26202c"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示領域の設定  <br /></td></tr>
+<tr class="separator:a2ae9b168f4d96806f50e889aff26202c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfe4759f2a79970a366456e80d8a2096" id="r_acfe4759f2a79970a366456e80d8a2096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfe4759f2a79970a366456e80d8a2096">ChangeControlSize</a> (Size controlSize)</td></tr>
+<tr class="memdesc:acfe4759f2a79970a366456e80d8a2096"><td class="mdescLeft">&#160;</td><td class="mdescRight">コントロールサイズ変更  <br /></td></tr>
+<tr class="separator:acfe4759f2a79970a366456e80d8a2096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e697d63b46c6b31d77c644648441d07" id="r_a2e697d63b46c6b31d77c644648441d07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e697d63b46c6b31d77c644648441d07">ZoomIn</a> (Point? localtion=null)</td></tr>
+<tr class="memdesc:a2e697d63b46c6b31d77c644648441d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡大  <br /></td></tr>
+<tr class="separator:a2e697d63b46c6b31d77c644648441d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e758968be3ea052d96ba70def83bf8" id="r_ae1e758968be3ea052d96ba70def83bf8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1e758968be3ea052d96ba70def83bf8">ZoomOut</a> (Point? localtion=null)</td></tr>
+<tr class="memdesc:ae1e758968be3ea052d96ba70def83bf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">縮小  <br /></td></tr>
+<tr class="separator:ae1e758968be3ea052d96ba70def83bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2924ef09a82d576d21e487ab9276256" id="r_ab2924ef09a82d576d21e487ab9276256"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2924ef09a82d576d21e487ab9276256">Zoom</a> (int tick, Point? localtion=null)</td></tr>
+<tr class="memdesc:ab2924ef09a82d576d21e487ab9276256"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡大・縮小  <br /></td></tr>
+<tr class="separator:ab2924ef09a82d576d21e487ab9276256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac64695ef2840e96b0abca9dde9b8cdcd" id="r_ac64695ef2840e96b0abca9dde9b8cdcd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac64695ef2840e96b0abca9dde9b8cdcd">Shift</a> (int deltaX, int deltaY)</td></tr>
+<tr class="memdesc:ac64695ef2840e96b0abca9dde9b8cdcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">移動  <br /></td></tr>
+<tr class="separator:ac64695ef2840e96b0abca9dde9b8cdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc8a0aa61aaf489d4709f275d413a2e" id="r_aacc8a0aa61aaf489d4709f275d413a2e"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacc8a0aa61aaf489d4709f275d413a2e">ToString</a> ()</td></tr>
+<tr class="memdesc:aacc8a0aa61aaf489d4709f275d413a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列変換  <br /></td></tr>
+<tr class="separator:aacc8a0aa61aaf489d4709f275d413a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a3fae9bbdb1e0531b7f522234566edebe" id="r_a3fae9bbdb1e0531b7f522234566edebe"><td class="memItemLeft" align="right" valign="top"><a id="a3fae9bbdb1e0531b7f522234566edebe" name="a3fae9bbdb1e0531b7f522234566edebe"></a>
+Matrix&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix</b><code> [get]</code></td></tr>
+<tr class="memdesc:a3fae9bbdb1e0531b7f522234566edebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">アフィン行列 <br /></td></tr>
+<tr class="separator:a3fae9bbdb1e0531b7f522234566edebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad59484c4fcc8e30ecdd603139bc6376b" id="r_ad59484c4fcc8e30ecdd603139bc6376b"><td class="memItemLeft" align="right" valign="top"><a id="ad59484c4fcc8e30ecdd603139bc6376b" name="ad59484c4fcc8e30ecdd603139bc6376b"></a>
+<a class="el" href="#a3fae9bbdb1e0531b7f522234566edebe">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>InvMatrix</b><code> [get]</code></td></tr>
+<tr class="memdesc:ad59484c4fcc8e30ecdd603139bc6376b"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆行列 <br /></td></tr>
+<tr class="separator:ad59484c4fcc8e30ecdd603139bc6376b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66159c8cd60d59b6b7d233820025d1bb" id="r_a66159c8cd60d59b6b7d233820025d1bb"><td class="memItemLeft" align="right" valign="top"><a id="a66159c8cd60d59b6b7d233820025d1bb" name="a66159c8cd60d59b6b7d233820025d1bb"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>Aspect</b><code> [get]</code></td></tr>
+<tr class="memdesc:a66159c8cd60d59b6b7d233820025d1bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">アスペクト比 <br /></td></tr>
+<tr class="separator:a66159c8cd60d59b6b7d233820025d1bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0287b29180e2f2b3ada4851b348f871" id="r_ae0287b29180e2f2b3ada4851b348f871"><td class="memItemLeft" align="right" valign="top"><a id="ae0287b29180e2f2b3ada4851b348f871" name="ae0287b29180e2f2b3ada4851b348f871"></a>
+Size&#160;</td><td class="memItemRight" valign="bottom"><b>ImageSize</b> = new Size()<code> [get]</code></td></tr>
+<tr class="memdesc:ae0287b29180e2f2b3ada4851b348f871"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像サイズ <br /></td></tr>
+<tr class="separator:ae0287b29180e2f2b3ada4851b348f871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef5bcd6a96512de7bf7a0a9997b3816" id="r_a6ef5bcd6a96512de7bf7a0a9997b3816"><td class="memItemLeft" align="right" valign="top"><a id="a6ef5bcd6a96512de7bf7a0a9997b3816" name="a6ef5bcd6a96512de7bf7a0a9997b3816"></a>
+SizeF&#160;</td><td class="memItemRight" valign="bottom"><b>ImageSizeF</b><code> [get]</code></td></tr>
+<tr class="memdesc:a6ef5bcd6a96512de7bf7a0a9997b3816"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像サイズ(SizeF) <br /></td></tr>
+<tr class="separator:a6ef5bcd6a96512de7bf7a0a9997b3816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39cc2d8ced215a12771d585bc651a2d7" id="r_a39cc2d8ced215a12771d585bc651a2d7"><td class="memItemLeft" align="right" valign="top"><a id="a39cc2d8ced215a12771d585bc651a2d7" name="a39cc2d8ced215a12771d585bc651a2d7"></a>
+Size&#160;</td><td class="memItemRight" valign="bottom"><b>ControlSize</b> = new Size()<code> [get]</code></td></tr>
+<tr class="memdesc:a39cc2d8ced215a12771d585bc651a2d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">コントロールのサイズ <br /></td></tr>
+<tr class="separator:a39cc2d8ced215a12771d585bc651a2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>アフィン行列クラス </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a444069cdef2ddf8eb9308fa6e365db0f" name="a444069cdef2ddf8eb9308fa6e365db0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a444069cdef2ddf8eb9308fa6e365db0f">&#9670;&#160;</a></span>ZoomPictureBoxAffineMatrix() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.ZoomPictureBoxAffineMatrix.ZoomPictureBoxAffineMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html">ZoomPictureBoxAffineMatrix</a></td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コピーコンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>コピー元</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a39cc2d8ced215a12771d585bc651a2d7">SSTools.ZoomPictureBoxAffineMatrix.ControlSize</a>, <a class="el" href="#ae0287b29180e2f2b3ada4851b348f871">SSTools.ZoomPictureBoxAffineMatrix.ImageSize</a>.</p>
+
+</div>
+</div>
+<a id="ae2c9d63a46dbac227aa4a7406b7f4c07" name="ae2c9d63a46dbac227aa4a7406b7f4c07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c9d63a46dbac227aa4a7406b7f4c07">&#9670;&#160;</a></span>ZoomPictureBoxAffineMatrix() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.ZoomPictureBoxAffineMatrix.ZoomPictureBoxAffineMatrix </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>imageSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>contorlSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PictureBoxSizeMode</td>          <td class="paramname"><span class="paramname"><em>sizeMode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>aspect</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1::0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imageSize</td><td>画像サイズ</td></tr>
+    <tr><td class="paramname">contorlSize</td><td>コントロールサイズ</td></tr>
+    <tr><td class="paramname">sizeMode</td><td>サイズモード</td></tr>
+    <tr><td class="paramname">aspect</td><td>アスペクト比</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#ab5d605d132ad0715703b85f30f0769cb">SSTools.ZoomPictureBoxAffineMatrix.Reset()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ae2c9d63a46dbac227aa4a7406b7f4c07_cgraph.png" border="0" usemap="#adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ae2c9d63a46dbac227aa4a7406b7f4c07_cgraph" alt=""/></div>
+<map name="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ae2c9d63a46dbac227aa4a7406b7f4c07_cgraph" id="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ae2c9d63a46dbac227aa4a7406b7f4c07_cgraph">
+<area shape="rect" title="コンストラクタ" alt="" coords="5,5,233,48"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#ab5d605d132ad0715703b85f30f0769cb" title="アフィン行列のリセット" alt="" coords="281,5,485,48"/>
+<area shape="poly" title=" " alt="" coords="233,24,265,24,265,29,233,29"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#adaa22f9fcf533c8260478c1f0175ab27" title="Zoom倍率を考慮したMatrixの生成(初期化・リセット時)" alt="" coords="533,5,737,48"/>
+<area shape="poly" title=" " alt="" coords="485,24,517,24,517,29,485,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="acfe4759f2a79970a366456e80d8a2096" name="acfe4759f2a79970a366456e80d8a2096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfe4759f2a79970a366456e80d8a2096">&#9670;&#160;</a></span>ChangeControlSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.ZoomPictureBoxAffineMatrix.ChangeControlSize </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>controlSize</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コントロールサイズ変更 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controlSize</td><td>コントロールのサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a39cc2d8ced215a12771d585bc651a2d7">SSTools.ZoomPictureBoxAffineMatrix.ControlSize</a>, <a class="el" href="#a9e24cd79c78b0e5f08b4b26d5dabbc3e">SSTools.ZoomPictureBoxAffineMatrix.GetImageSizeF()</a>, <a class="el" href="#ae0287b29180e2f2b3ada4851b348f871">SSTools.ZoomPictureBoxAffineMatrix.ImageSize</a>, <a class="el" href="#a3fae9bbdb1e0531b7f522234566edebe">SSTools.ZoomPictureBoxAffineMatrix.Matrix</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_acfe4759f2a79970a366456e80d8a2096_cgraph.png" border="0" usemap="#adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_acfe4759f2a79970a366456e80d8a2096_cgraph" alt=""/></div>
+<map name="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_acfe4759f2a79970a366456e80d8a2096_cgraph" id="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_acfe4759f2a79970a366456e80d8a2096_cgraph">
+<area shape="rect" title="コントロールサイズ変更" alt="" coords="5,5,210,48"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#a9e24cd79c78b0e5f08b4b26d5dabbc3e" title="コントロールサイズから実画像サイズを求める" alt="" coords="258,5,462,48"/>
+<area shape="poly" title=" " alt="" coords="210,24,242,24,242,29,210,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a73c25891c69f2e5a4b8d35a58931bdb4" name="a73c25891c69f2e5a4b8d35a58931bdb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73c25891c69f2e5a4b8d35a58931bdb4">&#9670;&#160;</a></span>GetControlSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Size SSTools.ZoomPictureBoxAffineMatrix.GetControlSize </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>画像座標系の大きさをコントロール座標系に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>画像座標系のサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コントロール座標系のサイズ</dd></dl>
+
+</div>
+</div>
+<a id="a1086151378d446e0a088e376ad4d7a96" name="a1086151378d446e0a088e376ad4d7a96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1086151378d446e0a088e376ad4d7a96">&#9670;&#160;</a></span>GetControlSizeF() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SizeF SSTools.ZoomPictureBoxAffineMatrix.GetControlSizeF </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>画像座標系の大きさをコントロール座標系に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>画像座標系のサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コントロール座標系のサイズ</dd></dl>
+
+</div>
+</div>
+<a id="aed308e787e1c8288aa40178912a1b3d9" name="aed308e787e1c8288aa40178912a1b3d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed308e787e1c8288aa40178912a1b3d9">&#9670;&#160;</a></span>GetControlSizeF() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SizeF SSTools.ZoomPictureBoxAffineMatrix.GetControlSizeF </td>
+          <td>(</td>
+          <td class="paramtype">SizeF</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>画像座標系の大きさをコントロール座標系に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>画像座標系のサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コントロール座標系のサイズ</dd></dl>
+
+</div>
+</div>
+<a id="a00d3f651fc772c5412017518b4a7787a" name="a00d3f651fc772c5412017518b4a7787a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d3f651fc772c5412017518b4a7787a">&#9670;&#160;</a></span>GetImageDelta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PointF SSTools.ZoomPictureBoxAffineMatrix.GetImageDelta </td>
+          <td>(</td>
+          <td class="paramtype">PointF</td>          <td class="paramname"><span class="paramname"><em>delta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コントロール座標系差分から画像座標系差分を求める </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delta</td><td>コントロール座標系差分</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>画像座標系差分</dd></dl>
+
+<p class="reference">参照元 <a class="el" href="#ac64695ef2840e96b0abca9dde9b8cdcd">SSTools.ZoomPictureBoxAffineMatrix.Shift()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a00d3f651fc772c5412017518b4a7787a_icgraph.png" border="0" usemap="#adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a00d3f651fc772c5412017518b4a7787a_icgraph" alt=""/></div>
+<map name="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a00d3f651fc772c5412017518b4a7787a_icgraph" id="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a00d3f651fc772c5412017518b4a7787a_icgraph">
+<area shape="rect" title="コントロール座標系差分から画像座標系差分を求める" alt="" coords="258,5,462,48"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#ac64695ef2840e96b0abca9dde9b8cdcd" title="移動" alt="" coords="5,5,210,48"/>
+<area shape="poly" title=" " alt="" coords="242,29,210,29,210,24,242,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8e693bfd2857306f434b7d1f047055f5" name="a8e693bfd2857306f434b7d1f047055f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e693bfd2857306f434b7d1f047055f5">&#9670;&#160;</a></span>GetImageLocaltion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Point SSTools.ZoomPictureBoxAffineMatrix.GetImageLocaltion </td>
+          <td>(</td>
+          <td class="paramtype">Point</td>          <td class="paramname"><span class="paramname"><em>mouseLocation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>マウス座標から画像座標への変換 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseLocation</td><td>マウス座標</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>画像座標</dd></dl>
+
+</div>
+</div>
+<a id="a17a54ba432a2efdc386938e75d662d1d" name="a17a54ba432a2efdc386938e75d662d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a54ba432a2efdc386938e75d662d1d">&#9670;&#160;</a></span>GetImageLocaltionF() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PointF SSTools.ZoomPictureBoxAffineMatrix.GetImageLocaltionF </td>
+          <td>(</td>
+          <td class="paramtype">Point</td>          <td class="paramname"><span class="paramname"><em>mouseLocation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>マウス座標から画像座標への変換 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseLocation</td><td>マウス座標</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>画像座標</dd></dl>
+
+</div>
+</div>
+<a id="a55d54f77650db963771d991c95f3079d" name="a55d54f77650db963771d991c95f3079d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55d54f77650db963771d991c95f3079d">&#9670;&#160;</a></span>GetImageLocaltionF() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PointF SSTools.ZoomPictureBoxAffineMatrix.GetImageLocaltionF </td>
+          <td>(</td>
+          <td class="paramtype">PointF</td>          <td class="paramname"><span class="paramname"><em>mouseLocation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>マウス座標から画像座標への変換 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseLocation</td><td>マウス座標</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>画像座標</dd></dl>
+
+</div>
+</div>
+<a id="ad1b38265cf806a4375e82ae4859f9893" name="ad1b38265cf806a4375e82ae4859f9893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1b38265cf806a4375e82ae4859f9893">&#9670;&#160;</a></span>GetImageSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Size SSTools.ZoomPictureBoxAffineMatrix.GetImageSize </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コントロールサイズから実画像サイズを求める </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>サイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>実画像サイズ</dd></dl>
+
+</div>
+</div>
+<a id="a9e24cd79c78b0e5f08b4b26d5dabbc3e" name="a9e24cd79c78b0e5f08b4b26d5dabbc3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e24cd79c78b0e5f08b4b26d5dabbc3e">&#9670;&#160;</a></span>GetImageSizeF() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SizeF SSTools.ZoomPictureBoxAffineMatrix.GetImageSizeF </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コントロールサイズから実画像サイズを求める </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>サイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>実画像サイズ</dd></dl>
+
+<p class="reference">参照元 <a class="el" href="#acfe4759f2a79970a366456e80d8a2096">SSTools.ZoomPictureBoxAffineMatrix.ChangeControlSize()</a>, <a class="el" href="#a2ae9b168f4d96806f50e889aff26202c">SSTools.ZoomPictureBoxAffineMatrix.SetShowRectAngle()</a>, <a class="el" href="#ac64695ef2840e96b0abca9dde9b8cdcd">SSTools.ZoomPictureBoxAffineMatrix.Shift()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a9e24cd79c78b0e5f08b4b26d5dabbc3e_icgraph.png" border="0" usemap="#adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a9e24cd79c78b0e5f08b4b26d5dabbc3e_icgraph" alt=""/></div>
+<map name="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a9e24cd79c78b0e5f08b4b26d5dabbc3e_icgraph" id="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a9e24cd79c78b0e5f08b4b26d5dabbc3e_icgraph">
+<area shape="rect" title="コントロールサイズから実画像サイズを求める" alt="" coords="258,72,462,115"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#acfe4759f2a79970a366456e80d8a2096" title="コントロールサイズ変更" alt="" coords="5,5,210,48"/>
+<area shape="poly" title=" " alt="" coords="261,70,190,51,192,46,263,65"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#a2ae9b168f4d96806f50e889aff26202c" title="表示領域の設定" alt="" coords="5,72,210,115"/>
+<area shape="poly" title=" " alt="" coords="242,96,210,96,210,91,242,91"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#ac64695ef2840e96b0abca9dde9b8cdcd" title="移動" alt="" coords="5,139,210,181"/>
+<area shape="poly" title=" " alt="" coords="263,122,192,141,190,135,261,117"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0110bd79806e83a22578f7e11822165f" name="a0110bd79806e83a22578f7e11822165f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0110bd79806e83a22578f7e11822165f">&#9670;&#160;</a></span>GetImageSizeF() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SizeF SSTools.ZoomPictureBoxAffineMatrix.GetImageSizeF </td>
+          <td>(</td>
+          <td class="paramtype">SizeF</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コントロールサイズから実画像サイズを求める </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>サイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>実画像サイズ</dd></dl>
+
+</div>
+</div>
+<a id="a1557982c3c0c2d1ae48f69d7fd701449" name="a1557982c3c0c2d1ae48f69d7fd701449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1557982c3c0c2d1ae48f69d7fd701449">&#9670;&#160;</a></span>GetMouseLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Point SSTools.ZoomPictureBoxAffineMatrix.GetMouseLocation </td>
+          <td>(</td>
+          <td class="paramtype">Point</td>          <td class="paramname"><span class="paramname"><em>location</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>画像座標からコントロール座標に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>画像座標</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コントロール座標</dd></dl>
+
+</div>
+</div>
+<a id="a0f15257fc7bf7c259fd5ff0f8c81c934" name="a0f15257fc7bf7c259fd5ff0f8c81c934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f15257fc7bf7c259fd5ff0f8c81c934">&#9670;&#160;</a></span>GetMouseLocationF() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PointF SSTools.ZoomPictureBoxAffineMatrix.GetMouseLocationF </td>
+          <td>(</td>
+          <td class="paramtype">Point</td>          <td class="paramname"><span class="paramname"><em>location</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>画像座標からコントロール座標に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>画像座標</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コントロール座標</dd></dl>
+
+</div>
+</div>
+<a id="af4f6d01fa96f203feaa4911872525872" name="af4f6d01fa96f203feaa4911872525872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f6d01fa96f203feaa4911872525872">&#9670;&#160;</a></span>GetMouseLocationF() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PointF SSTools.ZoomPictureBoxAffineMatrix.GetMouseLocationF </td>
+          <td>(</td>
+          <td class="paramtype">PointF</td>          <td class="paramname"><span class="paramname"><em>location</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>画像座標からコントロール座標に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>画像座標</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>コントロール座標</dd></dl>
+
+</div>
+</div>
+<a id="ab5d605d132ad0715703b85f30f0769cb" name="ab5d605d132ad0715703b85f30f0769cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5d605d132ad0715703b85f30f0769cb">&#9670;&#160;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.ZoomPictureBoxAffineMatrix.Reset </td>
+          <td>(</td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>imageSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Size</td>          <td class="paramname"><span class="paramname"><em>contorlSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PictureBoxSizeMode</td>          <td class="paramname"><span class="paramname"><em>sizeMode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>aspect</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1::0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>zoomReset</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle?</td>          <td class="paramname"><span class="paramname"><em>rect</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アフィン行列のリセット </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imageSize</td><td>画像サイズ</td></tr>
+    <tr><td class="paramname">contorlSize</td><td>コントロールのサイズ</td></tr>
+    <tr><td class="paramname">sizeMode</td><td>SizeMode</td></tr>
+    <tr><td class="paramname">aspect</td><td>アスペクト比</td></tr>
+    <tr><td class="paramname">zoomReset</td><td>倍率をリセットするか</td></tr>
+    <tr><td class="paramname">rect</td><td>表示指定領域</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#adaa22f9fcf533c8260478c1f0175ab27">SSTools.ZoomPictureBoxAffineMatrix.CalcZoomInit()</a>, <a class="el" href="#a39cc2d8ced215a12771d585bc651a2d7">SSTools.ZoomPictureBoxAffineMatrix.ControlSize</a>, <a class="el" href="#ae0287b29180e2f2b3ada4851b348f871">SSTools.ZoomPictureBoxAffineMatrix.ImageSize</a>, <a class="el" href="#a3fae9bbdb1e0531b7f522234566edebe">SSTools.ZoomPictureBoxAffineMatrix.Matrix</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="#ae2c9d63a46dbac227aa4a7406b7f4c07">SSTools.ZoomPictureBoxAffineMatrix.ZoomPictureBoxAffineMatrix()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ab5d605d132ad0715703b85f30f0769cb_cgraph.png" border="0" usemap="#adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ab5d605d132ad0715703b85f30f0769cb_cgraph" alt=""/></div>
+<map name="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ab5d605d132ad0715703b85f30f0769cb_cgraph" id="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ab5d605d132ad0715703b85f30f0769cb_cgraph">
+<area shape="rect" title="アフィン行列のリセット" alt="" coords="5,5,210,48"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#adaa22f9fcf533c8260478c1f0175ab27" title="Zoom倍率を考慮したMatrixの生成(初期化・リセット時)" alt="" coords="258,5,462,48"/>
+<area shape="poly" title=" " alt="" coords="210,24,242,24,242,29,210,29"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ab5d605d132ad0715703b85f30f0769cb_icgraph.png" border="0" usemap="#adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ab5d605d132ad0715703b85f30f0769cb_icgraph" alt=""/></div>
+<map name="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ab5d605d132ad0715703b85f30f0769cb_icgraph" id="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ab5d605d132ad0715703b85f30f0769cb_icgraph">
+<area shape="rect" title="アフィン行列のリセット" alt="" coords="281,5,485,48"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#ae2c9d63a46dbac227aa4a7406b7f4c07" title="コンストラクタ" alt="" coords="5,5,233,48"/>
+<area shape="poly" title=" " alt="" coords="265,29,233,29,233,24,265,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a584a950d19b944f085cc1401eb732b13" name="a584a950d19b944f085cc1401eb732b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a584a950d19b944f085cc1401eb732b13">&#9670;&#160;</a></span>SetAspect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SSTools.ZoomPictureBoxAffineMatrix.SetAspect </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>xRatio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>yRatio</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アスペクト比の設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xRatio</td><td>Xの比率</td></tr>
+    <tr><td class="paramname">yRatio</td><td>Yの比率</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>アスペクト比</dd></dl>
+
+</div>
+</div>
+<a id="a2ae9b168f4d96806f50e889aff26202c" name="a2ae9b168f4d96806f50e889aff26202c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae9b168f4d96806f50e889aff26202c">&#9670;&#160;</a></span>SetShowRectAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.ZoomPictureBoxAffineMatrix.SetShowRectAngle </td>
+          <td>(</td>
+          <td class="paramtype">Rectangle</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>表示領域の設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>表示領域</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a39cc2d8ced215a12771d585bc651a2d7">SSTools.ZoomPictureBoxAffineMatrix.ControlSize</a>, <a class="el" href="#a9e24cd79c78b0e5f08b4b26d5dabbc3e">SSTools.ZoomPictureBoxAffineMatrix.GetImageSizeF()</a>, <a class="el" href="#a3fae9bbdb1e0531b7f522234566edebe">SSTools.ZoomPictureBoxAffineMatrix.Matrix</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a2ae9b168f4d96806f50e889aff26202c_cgraph.png" border="0" usemap="#adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a2ae9b168f4d96806f50e889aff26202c_cgraph" alt=""/></div>
+<map name="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a2ae9b168f4d96806f50e889aff26202c_cgraph" id="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a2ae9b168f4d96806f50e889aff26202c_cgraph">
+<area shape="rect" title="表示領域の設定" alt="" coords="5,5,210,48"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#a9e24cd79c78b0e5f08b4b26d5dabbc3e" title="コントロールサイズから実画像サイズを求める" alt="" coords="258,5,462,48"/>
+<area shape="poly" title=" " alt="" coords="210,24,242,24,242,29,210,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac64695ef2840e96b0abca9dde9b8cdcd" name="ac64695ef2840e96b0abca9dde9b8cdcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac64695ef2840e96b0abca9dde9b8cdcd">&#9670;&#160;</a></span>Shift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBoxAffineMatrix.Shift </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>deltaX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>deltaY</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移動 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaX</td><td>X移動量</td></tr>
+    <tr><td class="paramname">deltaY</td><td>Y移動量</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:移動した</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="#a39cc2d8ced215a12771d585bc651a2d7">SSTools.ZoomPictureBoxAffineMatrix.ControlSize</a>, <a class="el" href="#a00d3f651fc772c5412017518b4a7787a">SSTools.ZoomPictureBoxAffineMatrix.GetImageDelta()</a>, <a class="el" href="#a9e24cd79c78b0e5f08b4b26d5dabbc3e">SSTools.ZoomPictureBoxAffineMatrix.GetImageSizeF()</a>, <a class="el" href="#ae0287b29180e2f2b3ada4851b348f871">SSTools.ZoomPictureBoxAffineMatrix.ImageSize</a>, <a class="el" href="#a3fae9bbdb1e0531b7f522234566edebe">SSTools.ZoomPictureBoxAffineMatrix.Matrix</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ac64695ef2840e96b0abca9dde9b8cdcd_cgraph.png" border="0" usemap="#adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ac64695ef2840e96b0abca9dde9b8cdcd_cgraph" alt=""/></div>
+<map name="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ac64695ef2840e96b0abca9dde9b8cdcd_cgraph" id="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ac64695ef2840e96b0abca9dde9b8cdcd_cgraph">
+<area shape="rect" title="移動" alt="" coords="5,39,210,81"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#a00d3f651fc772c5412017518b4a7787a" title="コントロール座標系差分から画像座標系差分を求める" alt="" coords="258,5,462,48"/>
+<area shape="poly" title=" " alt="" coords="210,44,242,40,242,45,210,49"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#a9e24cd79c78b0e5f08b4b26d5dabbc3e" title="コントロールサイズから実画像サイズを求める" alt="" coords="258,72,462,115"/>
+<area shape="poly" title=" " alt="" coords="210,71,242,75,242,80,210,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aacc8a0aa61aaf489d4709f275d413a2e" name="aacc8a0aa61aaf489d4709f275d413a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacc8a0aa61aaf489d4709f275d413a2e">&#9670;&#160;</a></span>ToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string SSTools.ZoomPictureBoxAffineMatrix.ToString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文字列変換 </p>
+<dl class="section return"><dt>戻り値</dt><dd>各Matrixを文字列に変換</dd></dl>
+
+</div>
+</div>
+<a id="ab2924ef09a82d576d21e487ab9276256" name="ab2924ef09a82d576d21e487ab9276256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2924ef09a82d576d21e487ab9276256">&#9670;&#160;</a></span>Zoom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBoxAffineMatrix.Zoom </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tick</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Point?</td>          <td class="paramname"><span class="paramname"><em>localtion</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拡大・縮小 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tick</td><td>負の場合は縮小。正の場合は拡大</td></tr>
+    <tr><td class="paramname">localtion</td><td>中心座標</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:ズームOK</dd></dl>
+
+<p class="reference">参照元 <a class="el" href="#a2e697d63b46c6b31d77c644648441d07">SSTools.ZoomPictureBoxAffineMatrix.ZoomIn()</a>, <a class="el" href="#ae1e758968be3ea052d96ba70def83bf8">SSTools.ZoomPictureBoxAffineMatrix.ZoomOut()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ab2924ef09a82d576d21e487ab9276256_icgraph.png" border="0" usemap="#adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ab2924ef09a82d576d21e487ab9276256_icgraph" alt=""/></div>
+<map name="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ab2924ef09a82d576d21e487ab9276256_icgraph" id="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ab2924ef09a82d576d21e487ab9276256_icgraph">
+<area shape="rect" title="拡大・縮小" alt="" coords="258,39,462,81"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#a2e697d63b46c6b31d77c644648441d07" title="拡大" alt="" coords="5,5,210,48"/>
+<area shape="poly" title=" " alt="" coords="242,47,210,43,211,38,243,42"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#ae1e758968be3ea052d96ba70def83bf8" title="縮小" alt="" coords="5,72,210,115"/>
+<area shape="poly" title=" " alt="" coords="243,78,211,82,210,77,242,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2e697d63b46c6b31d77c644648441d07" name="a2e697d63b46c6b31d77c644648441d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e697d63b46c6b31d77c644648441d07">&#9670;&#160;</a></span>ZoomIn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBoxAffineMatrix.ZoomIn </td>
+          <td>(</td>
+          <td class="paramtype">Point?</td>          <td class="paramname"><span class="paramname"><em>localtion</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拡大 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">localtion</td><td>中心座標</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:ズームOK</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="#ab2924ef09a82d576d21e487ab9276256">SSTools.ZoomPictureBoxAffineMatrix.Zoom()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a2e697d63b46c6b31d77c644648441d07_cgraph.png" border="0" usemap="#adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a2e697d63b46c6b31d77c644648441d07_cgraph" alt=""/></div>
+<map name="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a2e697d63b46c6b31d77c644648441d07_cgraph" id="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_a2e697d63b46c6b31d77c644648441d07_cgraph">
+<area shape="rect" title="拡大" alt="" coords="5,5,210,48"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#ab2924ef09a82d576d21e487ab9276256" title="拡大・縮小" alt="" coords="258,5,462,48"/>
+<area shape="poly" title=" " alt="" coords="210,24,242,24,242,29,210,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae1e758968be3ea052d96ba70def83bf8" name="ae1e758968be3ea052d96ba70def83bf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e758968be3ea052d96ba70def83bf8">&#9670;&#160;</a></span>ZoomOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBoxAffineMatrix.ZoomOut </td>
+          <td>(</td>
+          <td class="paramtype">Point?</td>          <td class="paramname"><span class="paramname"><em>localtion</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>縮小 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">localtion</td><td>中心座標</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:ズームOK</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="#ab2924ef09a82d576d21e487ab9276256">SSTools.ZoomPictureBoxAffineMatrix.Zoom()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ae1e758968be3ea052d96ba70def83bf8_cgraph.png" border="0" usemap="#adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ae1e758968be3ea052d96ba70def83bf8_cgraph" alt=""/></div>
+<map name="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ae1e758968be3ea052d96ba70def83bf8_cgraph" id="adf/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix_ae1e758968be3ea052d96ba70def83bf8_cgraph">
+<area shape="rect" title="縮小" alt="" coords="5,5,210,48"/>
+<area shape="rect" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#ab2924ef09a82d576d21e487ab9276256" title="拡大・縮小" alt="" coords="258,5,462,48"/>
+<area shape="poly" title=" " alt="" coords="210,24,242,24,242,29,210,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SSTools/CustomizeControl/<b>ZoomPictureBoxAffineMatrix.cs</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/db1/namespace_s_s_tools.html">SSTools</a></li><li class="navelem"><a class="el" href="../../df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html">ZoomPictureBoxAffineMatrix</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<map id="SSTools.WndMsgAnalysis.ISetValue" name="SSTools.WndMsgAnalysis.ISetValue">
+<area shape="rect" id="Node000001" title="WParam/LParam値設定I/F" alt="" coords="5,72,210,115"/>
+<area shape="rect" id="Node000002" href="$da/de3/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_s_i_z_e___p_a_r_a_m_s.html" title="WM_SIZE" alt="" coords="269,5,479,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,65,285,46,286,51,211,70"/>
+<area shape="rect" id="Node000003" href="$da/d9e/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_w_p_r_a_m___l_p_a_r_a_m.html" title="WParam/LParam値保持構造体" alt="" coords="258,72,490,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,91,257,91,257,96,225,96"/>
+<area shape="rect" id="Node000004" href="$df/d61/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_x_y___p_a_r_a_m_s.html" title="XY" alt="" coords="275,139,473,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="211,116,286,135,285,141,210,122"/>
+</map>

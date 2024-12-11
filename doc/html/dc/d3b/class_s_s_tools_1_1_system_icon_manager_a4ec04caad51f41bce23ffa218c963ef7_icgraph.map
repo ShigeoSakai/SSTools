@@ -1,0 +1,5 @@
+<map id="SSTools.SystemIconManager.GetIconCount" name="SSTools.SystemIconManager.GetIconCount">
+<area shape="rect" id="Node000001" title="リストに登録されているアイコンの数を取得" alt="" coords="252,5,450,48"/>
+<area shape="rect" id="Node000002" href="$dc/d3b/class_s_s_tools_1_1_system_icon_manager.html#aea7ed6c4b3fdbd831d35a307634d5472" title="画像リストに全てのアイコンを格納する" alt="" coords="5,5,204,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,29,204,29,204,24,236,24"/>
+</map>

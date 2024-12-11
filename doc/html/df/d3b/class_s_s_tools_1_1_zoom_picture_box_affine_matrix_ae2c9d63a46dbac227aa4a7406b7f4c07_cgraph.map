@@ -1,0 +1,7 @@
+<map id="SSTools.ZoomPictureBoxAffineMatrix.ZoomPictureBoxAffineMatrix" name="SSTools.ZoomPictureBoxAffineMatrix.ZoomPictureBoxAffineMatrix">
+<area shape="rect" id="Node000001" title="コンストラクタ" alt="" coords="5,5,233,48"/>
+<area shape="rect" id="Node000002" href="$df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#ab5d605d132ad0715703b85f30f0769cb" title="アフィン行列のリセット" alt="" coords="281,5,485,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,24,265,24,265,29,233,29"/>
+<area shape="rect" id="Node000003" href="$df/d3b/class_s_s_tools_1_1_zoom_picture_box_affine_matrix.html#adaa22f9fcf533c8260478c1f0175ab27" title="Zoom倍率を考慮したMatrixの生成(初期化・リセット時)" alt="" coords="533,5,737,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="485,24,517,24,517,29,485,29"/>
+</map>

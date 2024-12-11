@@ -1,0 +1,5 @@
+<map id="SSTools.Shape.BaseShape.GetDrawSize" name="SSTools.Shape.BaseShape.GetDrawSize">
+<area shape="rect" id="Node000001" title="描画領域サイズを取得" alt="" coords="263,5,449,48"/>
+<area shape="rect" id="Node000002" href="$d0/d70/class_s_s_tools_1_1_shape_manager.html#a022930420fb6c9ee4ec5fdb0c3160c35" title="図形がある領域のクリッピングした画像を取得" alt="" coords="5,13,215,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,29,215,29,215,24,247,24"/>
+</map>

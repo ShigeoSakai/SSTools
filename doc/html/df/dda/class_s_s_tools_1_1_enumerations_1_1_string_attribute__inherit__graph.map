@@ -1,0 +1,9 @@
+<map id="SSTools.Enumerations.StringAttribute" name="SSTools.Enumerations.StringAttribute">
+<area shape="rect" id="Node000001" title=" " alt="" coords="124,39,316,81"/>
+<area shape="rect" id="Node000003" href="$d4/dd8/class_s_s_tools_1_1_enumerations_1_1_description_attribute.html" title="This attributes provides StringAttributeUtility with data used to generate human&#45;readable Description..." alt="" coords="364,5,588,48"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="331,43,363,39,364,44,332,48"/>
+<area shape="rect" id="Node000004" href="$d6/db4/class_s_s_tools_1_1_enumerations_1_1_display_name_attribute.html" title="This attributes provides StringAttributeUtility with data used to generate human&#45;readable Display Nam..." alt="" coords="375,72,577,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="332,72,375,77,374,83,331,77"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,47,76,73"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,57,123,57,123,63,92,63"/>
+</map>

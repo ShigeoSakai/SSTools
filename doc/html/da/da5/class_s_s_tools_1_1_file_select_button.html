@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SSTools: SSTools.FileSelectButton クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SSTools
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('da/da5/class_s_s_tools_1_1_file_select_button.html','../../'); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="#events">イベント</a> &#124;
+<a href="../../db/db0/class_s_s_tools_1_1_file_select_button-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">SSTools.FileSelectButton クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>ファイル選択ボタン  
+ <a href="#details">[詳解]</a></p>
+<div class="dynheader">
+SSTools.FileSelectButton の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/dad/class_s_s_tools_1_1_file_select_button__inherit__graph.png" border="0" usemap="#a_s_s_tools_8_file_select_button_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_s_s_tools_8_file_select_button_inherit__map" id="a_s_s_tools_8_file_select_button_inherit__map">
+<area shape="rect" title="ファイル選択ボタン" alt="" coords="5,80,176,107"/>
+<area shape="rect" title=" " alt="" coords="61,5,120,32"/>
+<area shape="poly" title=" " alt="" coords="93,48,93,80,88,80,88,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+SSTools.FileSelectButton 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d01/class_s_s_tools_1_1_file_select_button__coll__graph.png" border="0" usemap="#a_s_s_tools_8_file_select_button_coll__map" alt="Collaboration graph"/></div>
+<map name="a_s_s_tools_8_file_select_button_coll__map" id="a_s_s_tools_8_file_select_button_coll__map">
+<area shape="rect" title="ファイル選択ボタン" alt="" coords="5,80,176,107"/>
+<area shape="rect" title=" " alt="" coords="61,5,120,32"/>
+<area shape="poly" title=" " alt="" coords="93,48,93,80,88,80,88,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a6426cf3cb126003a74dcb186159c1893" id="r_a6426cf3cb126003a74dcb186159c1893"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6426cf3cb126003a74dcb186159c1893">FILTER_PRESET</a> { <br />
+&#160;&#160;<a class="el" href="#a6426cf3cb126003a74dcb186159c1893ab50339a10e1de285ac99d4c3990b8693">NONE</a> = 0
+, <a class="el" href="#a6426cf3cb126003a74dcb186159c1893a23a12f67f614b5518c7f1c2465bf95e3">IMAGE</a> = 1
+, <a class="el" href="#a6426cf3cb126003a74dcb186159c1893a61a96ffcb251bb9bf0abf8fec19d0ea8">TEXT</a> = 2
+, <a class="el" href="#a6426cf3cb126003a74dcb186159c1893ade5e5ba1f70956d42bcdb5731fa69e42">MOVIE</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="#a6426cf3cb126003a74dcb186159c1893a5c6e4f44044eb1d3591aaa440ed6f3ad">EXE</a> = 16
+, <a class="el" href="#a6426cf3cb126003a74dcb186159c1893afa177138f94a7ea01f549b1aa7893d03">SYSTEM</a> = 17
+<br />
+ }</td></tr>
+<tr class="memdesc:a6426cf3cb126003a74dcb186159c1893"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォルタプリセット  <a href="#a6426cf3cb126003a74dcb186159c1893">[詳解]</a><br /></td></tr>
+<tr class="separator:a6426cf3cb126003a74dcb186159c1893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a145b9538f96275e68e7cbc19c18135c4" id="r_a145b9538f96275e68e7cbc19c18135c4"><td class="memItemLeft" align="right" valign="top"><a id="a145b9538f96275e68e7cbc19c18135c4" name="a145b9538f96275e68e7cbc19c18135c4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FileSelectButton</b> ()</td></tr>
+<tr class="memdesc:a145b9538f96275e68e7cbc19c18135c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="separator:a145b9538f96275e68e7cbc19c18135c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4669a7153b1ed91d90ba132eed410a14" id="r_a4669a7153b1ed91d90ba132eed410a14"><td class="memItemLeft" align="right" valign="top"><a id="a4669a7153b1ed91d90ba132eed410a14" name="a4669a7153b1ed91d90ba132eed410a14"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnFileSelect</b> ()</td></tr>
+<tr class="memdesc:a4669a7153b1ed91d90ba132eed410a14"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル選択イベント発行 <br /></td></tr>
+<tr class="separator:a4669a7153b1ed91d90ba132eed410a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cd6442ea6f61f92f46b883e1ef0f182" id="r_a6cd6442ea6f61f92f46b883e1ef0f182"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cd6442ea6f61f92f46b883e1ef0f182">OnClick</a> (EventArgs e)</td></tr>
+<tr class="memdesc:a6cd6442ea6f61f92f46b883e1ef0f182"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリックイベント  <br /></td></tr>
+<tr class="separator:a6cd6442ea6f61f92f46b883e1ef0f182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a099eb7bd0475012495fb0c5e5680a0c0" id="r_a099eb7bd0475012495fb0c5e5680a0c0"><td class="memItemLeft" align="right" valign="top"><a id="a099eb7bd0475012495fb0c5e5680a0c0" name="a099eb7bd0475012495fb0c5e5680a0c0"></a>
+new string&#160;</td><td class="memItemRight" valign="bottom"><b>Text</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a099eb7bd0475012495fb0c5e5680a0c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示テキスト （設定できなくする） <br /></td></tr>
+<tr class="separator:a099eb7bd0475012495fb0c5e5680a0c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef5c19d1a984025818a155762371321" id="r_a6ef5c19d1a984025818a155762371321"><td class="memItemLeft" align="right" valign="top"><a id="a6ef5c19d1a984025818a155762371321" name="a6ef5c19d1a984025818a155762371321"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>AddExtension</b> = true<code> [get, set]</code></td></tr>
+<tr class="memdesc:a6ef5c19d1a984025818a155762371321"><td class="mdescLeft">&#160;</td><td class="mdescRight">ユーザーが拡張子を指定しない場合、ダイアログ ボックスがファイル名に 自動的に拡張子を付けるかどうかを示す値 既定値は true <br /></td></tr>
+<tr class="separator:a6ef5c19d1a984025818a155762371321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11586c2350bcb638265125eea25f2a57" id="r_a11586c2350bcb638265125eea25f2a57"><td class="memItemLeft" align="right" valign="top"><a id="a11586c2350bcb638265125eea25f2a57" name="a11586c2350bcb638265125eea25f2a57"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>AutoUpgradeEnabled</b> = true<code> [get, set]</code></td></tr>
+<tr class="memdesc:a11586c2350bcb638265125eea25f2a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">この FileDialog インスタンスが Windows Vista で実行されているときに 外観と動作を自動的にアップグレードする必要がある 既定値は true <br /></td></tr>
+<tr class="separator:a11586c2350bcb638265125eea25f2a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab4108ff8ee39325aa1a431b68c4341d" id="r_aab4108ff8ee39325aa1a431b68c4341d"><td class="memItemLeft" align="right" valign="top"><a id="aab4108ff8ee39325aa1a431b68c4341d" name="aab4108ff8ee39325aa1a431b68c4341d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>CheckFileExists</b> = true<code> [get, set]</code></td></tr>
+<tr class="memdesc:aab4108ff8ee39325aa1a431b68c4341d"><td class="mdescLeft">&#160;</td><td class="mdescRight">存在しないファイルの名前をユーザーが指定した場合に、ダイアログ ボックスが 警告を表示するかどうかを示す値 既定値は true <br /></td></tr>
+<tr class="separator:aab4108ff8ee39325aa1a431b68c4341d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cbf4416300e80b4c7791574ee612c1a" id="r_a5cbf4416300e80b4c7791574ee612c1a"><td class="memItemLeft" align="right" valign="top"><a id="a5cbf4416300e80b4c7791574ee612c1a" name="a5cbf4416300e80b4c7791574ee612c1a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>CheckPathExists</b> = true<code> [get, set]</code></td></tr>
+<tr class="memdesc:a5cbf4416300e80b4c7791574ee612c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">存在しないパスをユーザーが指定したときに、ダイアログ ボックスに警告を 表示するかどうかを示す値 既定値は true <br /></td></tr>
+<tr class="separator:a5cbf4416300e80b4c7791574ee612c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae80d1e44ba07e9f2f891ff8c252c3cf1" id="r_ae80d1e44ba07e9f2f891ff8c252c3cf1"><td class="memItemLeft" align="right" valign="top"><a id="ae80d1e44ba07e9f2f891ff8c252c3cf1" name="ae80d1e44ba07e9f2f891ff8c252c3cf1"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>DefaultExt</b> = &quot;&quot;<code> [get, set]</code></td></tr>
+<tr class="memdesc:ae80d1e44ba07e9f2f891ff8c252c3cf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">既定のファイル名の拡張子 既定値は空の文字列 ("") <br /></td></tr>
+<tr class="separator:ae80d1e44ba07e9f2f891ff8c252c3cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2492ef7cc3b32917c29e215d062a52f1" id="r_a2492ef7cc3b32917c29e215d062a52f1"><td class="memItemLeft" align="right" valign="top"><a id="a2492ef7cc3b32917c29e215d062a52f1" name="a2492ef7cc3b32917c29e215d062a52f1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>DereferenceLinks</b> = true<code> [get, set]</code></td></tr>
+<tr class="memdesc:a2492ef7cc3b32917c29e215d062a52f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログ ボックスが、ショートカットで参照されたファイルの場所を返すかどうか、 またはショートカットの場所 (.lnk) を返すかどうかを指定する値 既定値は true <br /></td></tr>
+<tr class="separator:a2492ef7cc3b32917c29e215d062a52f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98383f7d006edd6c892bbb02bae9dd01" id="r_a98383f7d006edd6c892bbb02bae9dd01"><td class="memItemLeft" align="right" valign="top"><a id="a98383f7d006edd6c892bbb02bae9dd01" name="a98383f7d006edd6c892bbb02bae9dd01"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>FileName</b> = &quot;&quot;<code> [get, set]</code></td></tr>
+<tr class="memdesc:a98383f7d006edd6c892bbb02bae9dd01"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル ダイアログ ボックスで選択されたファイル名を含む文字列 既定値は空の文字列 ("") <br /></td></tr>
+<tr class="separator:a98383f7d006edd6c892bbb02bae9dd01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94a7739a7eb16b38874c60e28da56bd6" id="r_a94a7739a7eb16b38874c60e28da56bd6"><td class="memItemLeft" align="right" valign="top"><a id="a94a7739a7eb16b38874c60e28da56bd6" name="a94a7739a7eb16b38874c60e28da56bd6"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>Filter</b> = &quot;全てのファイル|*.*&quot;<code> [get, set]</code></td></tr>
+<tr class="memdesc:a94a7739a7eb16b38874c60e28da56bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログ ボックスの [ファイルの種類] ボックスに表示される選択肢 <br /></td></tr>
+<tr class="separator:a94a7739a7eb16b38874c60e28da56bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa753c4444587ce5d99a5e741d5652589" id="r_aa753c4444587ce5d99a5e741d5652589"><td class="memItemLeft" align="right" valign="top"><a id="aa753c4444587ce5d99a5e741d5652589" name="aa753c4444587ce5d99a5e741d5652589"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>FilterIndex</b> = 1<code> [get, set]</code></td></tr>
+<tr class="memdesc:aa753c4444587ce5d99a5e741d5652589"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル ダイアログ ボックスで現在選択されているフィルターのインデックス <br /></td></tr>
+<tr class="separator:aa753c4444587ce5d99a5e741d5652589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84affc79e21a5eb3383fb73f2a55a84e" id="r_a84affc79e21a5eb3383fb73f2a55a84e"><td class="memItemLeft" align="right" valign="top"><a id="a84affc79e21a5eb3383fb73f2a55a84e" name="a84affc79e21a5eb3383fb73f2a55a84e"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>InitialDirectory</b> = &quot;&quot;<code> [get, set]</code></td></tr>
+<tr class="memdesc:a84affc79e21a5eb3383fb73f2a55a84e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル ダイアログ ボックスに表示される起動ディレクトリ <br /></td></tr>
+<tr class="separator:a84affc79e21a5eb3383fb73f2a55a84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af80fa975f8bad22f24cdad88916e19f3" id="r_af80fa975f8bad22f24cdad88916e19f3"><td class="memItemLeft" align="right" valign="top"><a id="af80fa975f8bad22f24cdad88916e19f3" name="af80fa975f8bad22f24cdad88916e19f3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>RestoreDirectory</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:af80fa975f8bad22f24cdad88916e19f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログ ボックスを閉じる前に、ディレクトリを以前選択されていた ディレクトリに復元するかどうかを示す値 既定値は false <br /></td></tr>
+<tr class="separator:af80fa975f8bad22f24cdad88916e19f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00885a6da40d986d73d5d5fd82d7dc9e" id="r_a00885a6da40d986d73d5d5fd82d7dc9e"><td class="memItemLeft" align="right" valign="top"><a id="a00885a6da40d986d73d5d5fd82d7dc9e" name="a00885a6da40d986d73d5d5fd82d7dc9e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowHelp</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:a00885a6da40d986d73d5d5fd82d7dc9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル ダイアログ ボックスに [ヘルプ] ボタンを表示するかどうかを示す値 既定値は false <br /></td></tr>
+<tr class="separator:a00885a6da40d986d73d5d5fd82d7dc9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3bccc6643495bb5072d8d72d5a1053e" id="r_ad3bccc6643495bb5072d8d72d5a1053e"><td class="memItemLeft" align="right" valign="top"><a id="ad3bccc6643495bb5072d8d72d5a1053e" name="ad3bccc6643495bb5072d8d72d5a1053e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>SupportMultiDottedExtensions</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:ad3bccc6643495bb5072d8d72d5a1053e"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数のファイル名拡張子を持つファイルの表示をダイアログボックスが サポートするかどうかを示す値 既定値は false <br /></td></tr>
+<tr class="separator:ad3bccc6643495bb5072d8d72d5a1053e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e1515ea8d9d720e066cdef10f78ca9" id="r_ab9e1515ea8d9d720e066cdef10f78ca9"><td class="memItemLeft" align="right" valign="top"><a id="ab9e1515ea8d9d720e066cdef10f78ca9" name="ab9e1515ea8d9d720e066cdef10f78ca9"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>Title</b> = &quot;&quot;<code> [get, set]</code></td></tr>
+<tr class="memdesc:ab9e1515ea8d9d720e066cdef10f78ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル ダイアログ ボックスのタイトル <br /></td></tr>
+<tr class="separator:ab9e1515ea8d9d720e066cdef10f78ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe664147c8416687d5389577fd792012" id="r_afe664147c8416687d5389577fd792012"><td class="memItemLeft" align="right" valign="top"><a id="afe664147c8416687d5389577fd792012" name="afe664147c8416687d5389577fd792012"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ValidateNames</b> = true<code> [get, set]</code></td></tr>
+<tr class="memdesc:afe664147c8416687d5389577fd792012"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログ ボックスが有効な Win32 ファイル名だけを受け入れるかどうかを示す値 既定値は true <br /></td></tr>
+<tr class="separator:afe664147c8416687d5389577fd792012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefaaddd2962a153aeeaa99a2d15fe801" id="r_aefaaddd2962a153aeeaa99a2d15fe801"><td class="memItemLeft" align="right" valign="top"><a id="aefaaddd2962a153aeeaa99a2d15fe801" name="aefaaddd2962a153aeeaa99a2d15fe801"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Multiselect</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:aefaaddd2962a153aeeaa99a2d15fe801"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログ ボックスで複数のファイルを選択できるかどうかを示す値 既定値は false <br /></td></tr>
+<tr class="separator:aefaaddd2962a153aeeaa99a2d15fe801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacdcdabb8be0c40797fbca62dfb5688a" id="r_aacdcdabb8be0c40797fbca62dfb5688a"><td class="memItemLeft" align="right" valign="top"><a id="aacdcdabb8be0c40797fbca62dfb5688a" name="aacdcdabb8be0c40797fbca62dfb5688a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReadOnlyChecked</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:aacdcdabb8be0c40797fbca62dfb5688a"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み取り専用チェック ボックスがオンかオフかを示す値 既定値は false <br /></td></tr>
+<tr class="separator:aacdcdabb8be0c40797fbca62dfb5688a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab4ce7942e76a065fff73d1eeacc9121" id="r_aab4ce7942e76a065fff73d1eeacc9121"><td class="memItemLeft" align="right" valign="top"><a id="aab4ce7942e76a065fff73d1eeacc9121" name="aab4ce7942e76a065fff73d1eeacc9121"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowReadOnly</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:aab4ce7942e76a065fff73d1eeacc9121"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログ ボックスに読み取り専用チェック ボックスが表示されているかどうかを示す値 既定値は false <br /></td></tr>
+<tr class="separator:aab4ce7942e76a065fff73d1eeacc9121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d88369de081614f4c0f824050237aa6" id="r_a7d88369de081614f4c0f824050237aa6"><td class="memItemLeft" align="right" valign="top"><a id="a7d88369de081614f4c0f824050237aa6" name="a7d88369de081614f4c0f824050237aa6"></a>
+Control&#160;</td><td class="memItemRight" valign="bottom"><b>LinkControl</b> = null<code> [get, set]</code></td></tr>
+<tr class="memdesc:a7d88369de081614f4c0f824050237aa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">リンクするコントロール <br /></td></tr>
+<tr class="separator:a7d88369de081614f4c0f824050237aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f6467b5c56904aeae54f8885e6f74e9" id="r_a3f6467b5c56904aeae54f8885e6f74e9"><td class="memItemLeft" align="right" valign="top"><a id="a3f6467b5c56904aeae54f8885e6f74e9" name="a3f6467b5c56904aeae54f8885e6f74e9"></a>
+<a class="el" href="#a6426cf3cb126003a74dcb186159c1893">FILTER_PRESET</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Preset</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a3f6467b5c56904aeae54f8885e6f74e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィルタプリセット <br /></td></tr>
+<tr class="separator:a3f6467b5c56904aeae54f8885e6f74e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24b3ba15c66c473e368a6206ee5eb1b2" id="r_a24b3ba15c66c473e368a6206ee5eb1b2"><td class="memItemLeft" align="right" valign="top"><a id="a24b3ba15c66c473e368a6206ee5eb1b2" name="a24b3ba15c66c473e368a6206ee5eb1b2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>UserCustomDialog</b> = false<code> [get, set]</code></td></tr>
+<tr class="memdesc:a24b3ba15c66c473e368a6206ee5eb1b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">カスタムファイルオープンダイアログを使用 <br /></td></tr>
+<tr class="separator:a24b3ba15c66c473e368a6206ee5eb1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5451040654d90cd0f6c2e28a4039cb2e" id="r_a5451040654d90cd0f6c2e28a4039cb2e"><td class="memItemLeft" align="right" valign="top"><a id="a5451040654d90cd0f6c2e28a4039cb2e" name="a5451040654d90cd0f6c2e28a4039cb2e"></a>
+Control&#160;</td><td class="memItemRight" valign="bottom"><b>SendClickControl</b> = null<code> [get, set]</code></td></tr>
+<tr class="memdesc:a5451040654d90cd0f6c2e28a4039cb2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clickイベントを送信するコントロール <br /></td></tr>
+<tr class="separator:a5451040654d90cd0f6c2e28a4039cb2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c8138db2ceca59411a3d1968411acf6" id="r_a9c8138db2ceca59411a3d1968411acf6"><td class="memItemLeft" align="right" valign="top"><a id="a9c8138db2ceca59411a3d1968411acf6" name="a9c8138db2ceca59411a3d1968411acf6"></a>
+string[]&#160;</td><td class="memItemRight" valign="bottom"><b>FileNames</b> = null<code> [get]</code></td></tr>
+<tr class="memdesc:a9c8138db2ceca59411a3d1968411acf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログ ボックスで選択されたすべてのファイルの名前 <br /></td></tr>
+<tr class="separator:a9c8138db2ceca59411a3d1968411acf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+イベント</h2></td></tr>
+<tr class="memitem:a49c93b4399ecd76ad5321b5c0e48dbaf" id="r_a49c93b4399ecd76ad5321b5c0e48dbaf"><td class="memItemLeft" align="right" valign="top"><a id="a49c93b4399ecd76ad5321b5c0e48dbaf" name="a49c93b4399ecd76ad5321b5c0e48dbaf"></a>
+EventHandler&#160;</td><td class="memItemRight" valign="bottom"><b>FileSelect</b></td></tr>
+<tr class="memdesc:a49c93b4399ecd76ad5321b5c0e48dbaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル選択イベント <br /></td></tr>
+<tr class="separator:a49c93b4399ecd76ad5321b5c0e48dbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ファイル選択ボタン </p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a6426cf3cb126003a74dcb186159c1893" name="a6426cf3cb126003a74dcb186159c1893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6426cf3cb126003a74dcb186159c1893">&#9670;&#160;</a></span>FILTER_PRESET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a6426cf3cb126003a74dcb186159c1893">SSTools.FileSelectButton.FILTER_PRESET</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フォルタプリセット </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a6426cf3cb126003a74dcb186159c1893ab50339a10e1de285ac99d4c3990b8693" name="a6426cf3cb126003a74dcb186159c1893ab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"><p>なし </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6426cf3cb126003a74dcb186159c1893a23a12f67f614b5518c7f1c2465bf95e3" name="a6426cf3cb126003a74dcb186159c1893a23a12f67f614b5518c7f1c2465bf95e3"></a>IMAGE&#160;</td><td class="fielddoc"><p>画像ファイル </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6426cf3cb126003a74dcb186159c1893a61a96ffcb251bb9bf0abf8fec19d0ea8" name="a6426cf3cb126003a74dcb186159c1893a61a96ffcb251bb9bf0abf8fec19d0ea8"></a>TEXT&#160;</td><td class="fielddoc"><p>テキストファイル </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6426cf3cb126003a74dcb186159c1893ade5e5ba1f70956d42bcdb5731fa69e42" name="a6426cf3cb126003a74dcb186159c1893ade5e5ba1f70956d42bcdb5731fa69e42"></a>MOVIE&#160;</td><td class="fielddoc"><p>動画ファイル </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6426cf3cb126003a74dcb186159c1893a5c6e4f44044eb1d3591aaa440ed6f3ad" name="a6426cf3cb126003a74dcb186159c1893a5c6e4f44044eb1d3591aaa440ed6f3ad"></a>EXE&#160;</td><td class="fielddoc"><p>実行ファイル </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6426cf3cb126003a74dcb186159c1893afa177138f94a7ea01f549b1aa7893d03" name="a6426cf3cb126003a74dcb186159c1893afa177138f94a7ea01f549b1aa7893d03"></a>SYSTEM&#160;</td><td class="fielddoc"><p>システムファイル </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="a6cd6442ea6f61f92f46b883e1ef0f182" name="a6cd6442ea6f61f92f46b883e1ef0f182"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cd6442ea6f61f92f46b883e1ef0f182">&#9670;&#160;</a></span>OnClick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.FileSelectButton.OnClick </td>
+          <td>(</td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>クリックイベント </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a4669a7153b1ed91d90ba132eed410a14">SSTools.FileSelectButton.OnFileSelect()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/da5/class_s_s_tools_1_1_file_select_button_a6cd6442ea6f61f92f46b883e1ef0f182_cgraph.png" border="0" usemap="#ada/da5/class_s_s_tools_1_1_file_select_button_a6cd6442ea6f61f92f46b883e1ef0f182_cgraph" alt=""/></div>
+<map name="ada/da5/class_s_s_tools_1_1_file_select_button_a6cd6442ea6f61f92f46b883e1ef0f182_cgraph" id="ada/da5/class_s_s_tools_1_1_file_select_button_a6cd6442ea6f61f92f46b883e1ef0f182_cgraph">
+<area shape="rect" title="クリックイベント" alt="" coords="5,5,180,48"/>
+<area shape="rect" href="../../da/da5/class_s_s_tools_1_1_file_select_button.html#a4669a7153b1ed91d90ba132eed410a14" title="ファイル選択イベント発行" alt="" coords="228,5,402,48"/>
+<area shape="poly" title=" " alt="" coords="180,24,212,24,212,29,180,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SSTools/Button/<b>FileSelectButton.cs</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/db1/namespace_s_s_tools.html">SSTools</a></li><li class="navelem"><a class="el" href="../../da/da5/class_s_s_tools_1_1_file_select_button.html">FileSelectButton</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

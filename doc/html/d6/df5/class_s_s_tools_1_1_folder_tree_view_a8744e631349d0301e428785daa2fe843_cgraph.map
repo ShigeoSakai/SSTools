@@ -1,0 +1,13 @@
+<map id="SSTools.FolderTreeView.SelectFolder" name="SSTools.FolderTreeView.SelectFolder">
+<area shape="rect" id="Node000001" title="フォルダを選択" alt="" coords="5,139,211,181"/>
+<area shape="rect" id="Node000002" href="$d6/df5/class_s_s_tools_1_1_folder_tree_view.html#ad0215bb3b313639dca04b45cbb104df7" title="更新開始" alt="" coords="270,5,471,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,136,190,97,257,58,271,52,273,56,260,62,193,101,138,140"/>
+<area shape="rect" id="Node000003" href="$d6/df5/class_s_s_tools_1_1_folder_tree_view.html#a73648626531e717493b6725ae211a850" title="更新終了" alt="" coords="275,72,466,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,135,268,116,270,122,195,141"/>
+<area shape="rect" id="Node000004" href="$d1/df6/class_s_s_tools_1_1_folder_tree_node.html#a1b1d46152e2c027829ad181c7a515805" title="親Nodeから全て転換する" alt="" coords="263,139,478,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="211,157,247,157,247,163,211,163"/>
+<area shape="rect" id="Node000005" href="$d1/df6/class_s_s_tools_1_1_folder_tree_node.html#aff5f16301eba7ffe5efc00f4c3dcf8c2" title="指定パスのNodeを検索する" alt="" coords="259,205,482,232"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="207,179,293,199,292,204,206,185"/>
+<area shape="rect" id="Node000006" href="$d6/df5/class_s_s_tools_1_1_folder_tree_view.html#aaf2b6e4146743faac7f1a33af01dbe79" title="Node選択イベント発行" alt="" coords="278,256,463,299"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="145,180,198,211,260,242,275,248,273,253,258,246,195,216,142,184"/>
+</map>

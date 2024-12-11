@@ -1,0 +1,5 @@
+<map id="SSTools.LogDetail.WriteLine" name="SSTools.LogDetail.WriteLine">
+<area shape="rect" id="Node000001" title="ログ出力(改行あり)" alt="" coords="5,5,193,32"/>
+<area shape="rect" id="Node000002" href="$d8/d2d/class_s_s_tools_1_1_log_detail.html#a5c20a7e44964dd9ab839cd225b1eb141" title="出力文字列生成" alt="" coords="241,5,452,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,16,225,16,225,21,193,21"/>
+</map>

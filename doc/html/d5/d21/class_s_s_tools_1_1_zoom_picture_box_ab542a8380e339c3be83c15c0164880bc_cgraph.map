@@ -1,0 +1,20 @@
+<map id="SSTools.ZoomPictureBox.SaveClipImage" name="SSTools.ZoomPictureBox.SaveClipImage">
+<area shape="rect" id="Node000001" title="図形が入る領域で画像を切り取り、ファイルに保存する" alt="" coords="5,72,211,115"/>
+<area shape="rect" id="Node000002" href="$d0/d70/class_s_s_tools_1_1_shape_manager.html#a5b1c69ea0df3f844f56c8d8f65f610a6" title="クリッピングした画像を取得" alt="" coords="259,80,468,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,91,243,91,243,96,211,96"/>
+<area shape="rect" id="Node000003" href="$d0/d70/class_s_s_tools_1_1_shape_manager.html#ab5ebe8673ebbf9754429dd876f911a85" title="描画(float)" alt="" coords="516,80,712,107"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="468,91,500,91,500,96,468,96"/>
+<area shape="rect" id="Node000004" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a7070e38f80176738a445171c1d136c6b" title="描画" alt="" coords="760,51,978,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="713,79,745,76,745,81,713,85"/>
+<area shape="rect" id="Node000009" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#ae179af57cf3c6b171a414c89db2ebae0" title="領域に図形が含まれるか" alt="" coords="776,101,962,144"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="713,102,761,108,760,113,713,107"/>
+<area shape="rect" id="Node000005" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a8f64bfd13606235e33ee63c3dd716138" title="文字列の描画" alt="" coords="1026,13,1212,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="978,49,1010,45,1011,50,978,54"/>
+<area shape="rect" id="Node000008" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a50e058da057b7319763aabec9a3d9df0" title="描画色を取得" alt="" coords="1260,72,1446,115"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="978,68,1245,84,1245,89,978,73"/>
+<area shape="rect" id="Node000006" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#af5983565ef863d8f2852d1fcd22eb735" title="テキスト表示位置の算出" alt="" coords="1260,5,1446,48"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1212,29,1244,28,1245,33,1212,34"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="1207,54,1251,65,1250,70,1206,59"/>
+<area shape="rect" id="Node000007" href="$dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#afeb447ddc1011c77d3f2c56680526ae1" title="文字列表示位置からオフセットを算出" alt="" coords="1494,5,1681,48"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1447,24,1479,24,1479,29,1447,29"/>
+</map>

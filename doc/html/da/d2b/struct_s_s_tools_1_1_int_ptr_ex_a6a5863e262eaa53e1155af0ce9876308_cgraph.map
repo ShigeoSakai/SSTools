@@ -1,0 +1,7 @@
+<map id="SSTools.IntPtrEx.CompareTo" name="SSTools.IntPtrEx.CompareTo">
+<area shape="rect" id="Node000001" title="値の比較" alt="" coords="5,47,199,73"/>
+<area shape="rect" id="Node000002" href="$db/d9d/struct_s_s_tools_1_1_int_ptr_ex_1_1_h_i___l_o.html#a4be6634b5dee904ee29c20c35ac271f7" title="符号あり値の取得" alt="" coords="247,5,387,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,43,231,37,232,42,192,49"/>
+<area shape="rect" id="Node000003" href="$db/d9d/struct_s_s_tools_1_1_int_ptr_ex_1_1_h_i___l_o.html#a15bea228f1ac833089ee30d4c3c7e46f" title="符号なし値の取得" alt="" coords="247,72,387,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,71,232,78,231,83,192,77"/>
+</map>

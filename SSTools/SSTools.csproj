@@ -188,6 +188,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CustomizeControl\ShapeManager.cs" />
+    <Compile Include="CustomizeControl\Shape\CircleShape.cs" />
     <Compile Include="CustomizeControl\ZoomPictureBoxAffineMatrix.cs" />
     <Compile Include="CustomizeControl\AutoSizeNumericUpDown.cs">
       <SubType>Component</SubType>
@@ -262,6 +263,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SimpleParser.cs" />
     <Compile Include="Win32API\ShellItem.cs" />
     <Compile Include="Win32API\SystemIconManager.cs" />
     <Compile Include="Win32API\Win32FileInfo.cs" />

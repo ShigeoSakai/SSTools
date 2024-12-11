@@ -32,8 +32,8 @@ namespace SSTools
         /// <summary>
         /// 逆行列の算出
         /// </summary>
-        /// <param name="matrix"></param>
-        /// <returns></returns>
+        /// <param name="matrix">アフィン行列</param>
+        /// <returns>逆行列</returns>
         private Matrix CalcInvMatrix(Matrix matrix)
         {
             if ((matrix != null) && (matrix.IsInvertible))
@@ -319,10 +319,19 @@ namespace SSTools
         #endregion [座標変換]
 
         /// <summary>
-        /// アスペクト比
+        /// アスペクト比 X
         /// </summary>
         private double xRatio_ = 1.0;
+        /// <summary>
+        /// アスペクト比 Y
+        /// </summary>
         private double yRatio_ = 1.0;
+        /// <summary>
+        /// アスペクト比の設定
+        /// </summary>
+        /// <param name="xRatio">Xの比率</param>
+        /// <param name="yRatio">Yの比率</param>
+        /// <returns>アスペクト比</returns>
         public double SetAspect(float xRatio,float yRatio)
         {
             this.xRatio_ = xRatio;
@@ -344,7 +353,9 @@ namespace SSTools
         /// 画像サイズ
         /// </summary>
         public Size ImageSize { get; private set; } = new Size();
-
+        /// <summary>
+        /// 画像サイズ(SizeF)
+        /// </summary>
         public SizeF ImageSizeF { get { return new SizeF(ImageSize.Width, ImageSize.Height); } }
         /// <summary>
         /// コントロールのサイズ
@@ -409,7 +420,7 @@ namespace SSTools
         /// <summary>
         /// コピーコンストラクタ
         /// </summary>
-        /// <param name="src"></param>
+        /// <param name="src">コピー元</param>
         public ZoomPictureBoxAffineMatrix(ZoomPictureBoxAffineMatrix src) 
         {
             defaultMatrix_ = src.defaultMatrix_.Clone();
@@ -423,10 +434,10 @@ namespace SSTools
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        /// <param name="imageSize"></param>
-        /// <param name="contorlSize"></param>
-        /// <param name="sizeMode"></param>
-        /// <param name="aspect"></param>
+        /// <param name="imageSize">画像サイズ</param>
+        /// <param name="contorlSize">コントロールサイズ</param>
+        /// <param name="sizeMode">サイズモード</param>
+        /// <param name="aspect">アスペクト比</param>
         public ZoomPictureBoxAffineMatrix(Size imageSize,Size contorlSize,PictureBoxSizeMode sizeMode,double aspect=1.0)
         {
             // リセット処理を呼ぶ
@@ -435,10 +446,10 @@ namespace SSTools
         /// <summary>
         /// 最小倍率の計算
         /// </summary>
-        /// <param name="imageSize"></param>
-        /// <param name="controlSize"></param>
-        /// <param name="x_scale"></param>
-        /// <param name="y_scale"></param>
+        /// <param name="imageSize">画像サイズ</param>
+        /// <param name="contorlSize">コントロールサイズ</param>
+        /// <param name="x_scale">X方向の倍率</param>
+        /// <param name="y_scale">Y方向の倍率</param>
         /// <returns></returns>
         private int CalcMinZoomIndex(Size imageSize, Size controlSize, float x_scale, float y_scale)
         {
@@ -466,6 +477,7 @@ namespace SSTools
         /// <param name="sizeMode">SizeMode</param>
         /// <param name="aspect">アスペクト比</param>
         /// <param name="zoomReset">倍率をリセットするか</param>
+        /// <param name="rect">表示指定領域</param>
         public void Reset(Size imageSize, Size contorlSize, PictureBoxSizeMode sizeMode, double aspect = 1.0, bool zoomReset = false,
             Rectangle? rect = null)
         {
@@ -561,7 +573,7 @@ namespace SSTools
         /// <summary>
         /// 倍率の取得
         /// </summary>
-        /// <returns></returns>
+        /// <returns>ズーム倍率</returns>
         private float GetZoomFactor()
         {
             return zoomFactor[ZoomIndex];
@@ -603,7 +615,10 @@ namespace SSTools
             // 逆行列を算出
             invMatrix_ =  CalcInvMatrix(matrix_);
         }
-
+        /// <summary>
+        /// 表示領域の設定
+        /// </summary>
+        /// <param name="rect">表示領域</param>
         public void SetShowRectAngle(Rectangle rect)
         {
             // 現在のコントロールサイズ内での倍率
@@ -641,7 +656,7 @@ namespace SSTools
         /// <summary>
         /// コントロールサイズ変更
         /// </summary>
-        /// <param name="controlSize"></param>
+        /// <param name="controlSize">コントロールのサイズ</param>
         public void ChangeControlSize(Size controlSize)
         {
             // コントロールのサイズ設定
@@ -769,7 +784,7 @@ namespace SSTools
         /// 拡大
         /// </summary>
         /// <param name="localtion">中心座標</param>
-        /// <returns></returns>
+        /// <returns>true:ズームOK</returns>
         public bool ZoomIn(Point? localtion = null)
         {
             return Zoom(1, localtion);
@@ -778,7 +793,7 @@ namespace SSTools
         /// 縮小
         /// </summary>
         /// <param name="localtion">中心座標</param>
-        /// <returns></returns>
+        /// <returns>true:ズームOK</returns>
         public bool ZoomOut(Point? localtion = null)
         {
             return Zoom(-1, localtion);
@@ -788,7 +803,7 @@ namespace SSTools
         /// </summary>
         /// <param name="tick">負の場合は縮小。正の場合は拡大</param>
         /// <param name="localtion">中心座標</param>
-        /// <returns></returns>
+        /// <returns>true:ズームOK</returns>
         public bool Zoom(int tick, Point? localtion = null)
         {
             int add_value = (tick < 0) ? -1 : 1;

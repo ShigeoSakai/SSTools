@@ -33,7 +33,7 @@ namespace SSTools
         /// <summary>
         /// コピーコンストラクタ
         /// </summary>
-        /// <param name="src"></param>
+        /// <param name="src">コピー元</param>
         public ShapeManager(ShapeManager src)
         {
             foreach(KeyValuePair<string,BaseShape> pair in src.shapeDictionary)
@@ -42,7 +42,7 @@ namespace SSTools
         /// <summary>
         /// クローンコピー
         /// </summary>
-        /// <returns></returns>
+        /// <returns>コピーされたオブジェクト</returns>
         public ShapeManager Clone()
         { 
             return new ShapeManager(this); 
@@ -55,7 +55,7 @@ namespace SSTools
         /// <summary>
         /// 図形の一覧(Enumerator)
         /// </summary>
-        /// <returns></returns>
+        /// <returns>図形</returns>
         public IEnumerable<BaseShape> EnumerableShape()
         {
             foreach (BaseShape shape in shapeDictionary.Values)
@@ -64,7 +64,7 @@ namespace SSTools
         /// <summary>
         /// 図形の追加
         /// </summary>
-        /// <param name="shape"></param>
+        /// <param name="shape">図形</param>
         public void AddShape(BaseShape shape)
         {
             if (shapeDictionary.ContainsKey(shape.Name))
@@ -77,7 +77,7 @@ namespace SSTools
         /// <summary>
         /// 図形の追加
         /// </summary>
-        /// <param name="shapes"></param>
+        /// <param name="shapes">図形</param>
         public void AddShape(IEnumerable<BaseShape> shapes)
         {
             if ((shapes != null) && (shapes.Count() > 0))
@@ -86,6 +86,10 @@ namespace SSTools
                     AddShape(shape);
             }
         }
+        /// <summary>
+        /// 図形の追加
+        /// </summary>
+        /// <param name="src">図形管理マネージャー</param>
         public void AddShape(ShapeManager src)
         {
             if ((src != null) && (src.Count > 0))
@@ -97,7 +101,7 @@ namespace SSTools
         /// <summary>
         /// 図形の名前一覧の取得
         /// </summary>
-        /// <returns></returns>
+        /// <returns>図形の名前一覧</returns>
         public List<string> GetShapeNames()
         {
             List<string> names = new List<string>();
@@ -108,8 +112,8 @@ namespace SSTools
         /// <summary>
         /// 図形の削除
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
+        /// <param name="name">名前</param>
+        /// <returns>true:削除された</returns>
         public bool Remove(string name)
         {
             if (shapeDictionary.ContainsKey(name))
@@ -277,8 +281,8 @@ namespace SSTools
         /// <summary>
         /// 登録図形から凡例用データを作成する
         /// </summary>
-        /// <param name="visibleOnly"></param>
-        /// <returns></returns>
+        /// <param name="visibleOnly">表示図形のみか</param>
+        /// <returns>凡例用データリスト</returns>
         public List<LegendData> GetLegend(bool visibleOnly = false)
         {
             if (shapeDictionary.Count > 0)
@@ -303,7 +307,7 @@ namespace SSTools
         /// 指定図形の一覧を取得(Enumrator)
         /// </summary>
         /// <typeparam name="T">図形</typeparam>
-        /// <returns></returns>
+        /// <returns>図形</returns>
         public IEnumerable<T> EnumerableShapes<T>() where T:BaseShape
         {
             foreach (BaseShape shape in shapeDictionary.Values)
@@ -316,7 +320,7 @@ namespace SSTools
         /// 指定図形の一覧を取得(Enumrator)
         /// </summary>
         /// <param name="pattern">取得する図形名の正規表現</param>
-        /// <returns></returns>
+        /// <returns>図形</returns>
         public IEnumerable<BaseShape> EnumerableShapes(string pattern)
         {
             Regex regex = new Regex(pattern);
@@ -330,7 +334,7 @@ namespace SSTools
         /// パターンを指定して削除
         /// </summary>
         /// <param name="pattern"></param>
-        /// <returns></returns>
+        /// <returns>true:図形が削除された</returns>
         public bool RemovePattern(string pattern)
         {
             bool isDel = false;
@@ -376,22 +380,22 @@ namespace SSTools
         /// </summary>
         public enum SHAPE_PROPERTY
         {
-            Color,
-            FillColor,
-            LineWidth,
-            MarkerSize,
-            MarkerType,
-            DashStyle,
-            ShowLable,
-            Text,
-            LabelPosition,
-            LabelFont,
-            LabelColor,
-            LabelFill,
-            LabelFillColor,
-            LabelBorder,
-            LabelBorderColor,
-            Visible,
+            Color,              //!< 色
+            FillColor,          //!< 塗りつぶし色
+            LineWidth,          //!< 線幅
+            MarkerSize,         //!< マーカーサイズ
+            MarkerType,         //!< マーカー種類
+            DashStyle,          //!< 線種
+            ShowLable,          //!< ラベル表示有無
+            Text,               //!< ラベルテキスト
+            LabelPosition,      //!< ラベル表示位置
+            LabelFont,          //!< ラベルフォント
+            LabelColor,         //!< ラベル色
+            LabelFill,          //!< ラベルを塗りつぶすか
+            LabelFillColor,     //!< ラベル塗りつぶし色
+            LabelBorder,        //!< ラベルの枠表示 
+            LabelBorderColor,   //!< ラベルの枠色 
+            Visible,            //!< 表示有無
         }
         /// <summary>
         /// 基本図形のプロパティ情報

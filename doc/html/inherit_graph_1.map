@@ -1,0 +1,9 @@
+<map id="クラス階層図" name="クラス階層図">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,56,65,83"/>
+<area shape="rect" id="Node000001" href="$class_s_s_tools_1_1_color_selection_button.html" title="色選択ボタン" alt="" coords="113,5,310,32"/>
+<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="79,52,112,41,153,30,154,35,113,47,80,57"/>
+<area shape="rect" id="Node000002" href="$class_s_s_tools_1_1_file_select_button.html" title="ファイル選択ボタン" alt="" coords="126,56,296,83"/>
+<area shape="poly" id="edge7_Node000000_Node000002" title=" " alt="" coords="80,67,126,67,126,72,80,72"/>
+<area shape="rect" id="Node000003" href="$class_s_s_tools_1_1_folder_select_button.html" title="フォルダ選択ボタン" alt="" coords="119,107,304,133"/>
+<area shape="poly" id="edge8_Node000000_Node000003" title=" " alt="" coords="80,82,113,92,154,103,153,109,112,97,79,87"/>
+</map>

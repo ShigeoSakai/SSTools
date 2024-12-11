@@ -21,17 +21,17 @@ namespace SSTools
         /// </summary>
         public enum FILTER_PRESET
         {
-            NONE = 0,
+            NONE = 0,                           //!< なし
             [Description("画像ファイル")]
-            IMAGE = 1,
+            IMAGE = 1,                          //!< 画像ファイル
 			[Description("テキストファイル")]
-			TEXT = 2,
+			TEXT = 2,                           //!< テキストファイル
 			[Description("動画ファイル")]
-			MOVIE = 3,
+			MOVIE = 3,                          //!< 動画ファイル
 			[Description("実行ファイル")]
-			EXE = 16,
+			EXE = 16,                           //!< 実行ファイル
 			[Description("システムファイル")]
-			SYSTEM = 17,
+			SYSTEM = 17,                        //!< システムファイル
         }
 
         /// <summary>
@@ -92,8 +92,8 @@ namespace SSTools
             /// <summary>
             /// プリセットフィルターの取得
             /// </summary>
-            /// <param name="filter"></param>
-            /// <returns></returns>
+            /// <param name="filter">フィルタープリセット</param>
+            /// <returns>フィルター文字列</returns>
             public string GetPresetFilter(FILTER_PRESET filter)
             {
                 if (PresetDict.ContainsKey(filter)) return PresetDict[filter];
@@ -332,7 +332,7 @@ namespace SSTools
         /// <summary>
         /// クリックイベント
         /// </summary>
-        /// <param name="e"></param>
+        /// <param name="e">イベント引数</param>
         protected override void OnClick(EventArgs e)
         {
             // ファイル選択ダイアログを開く

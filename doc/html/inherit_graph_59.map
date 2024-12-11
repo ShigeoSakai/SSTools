@@ -1,0 +1,11 @@
+<map id="クラス階層図" name="クラス階層図">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,81,205,108"/>
+<area shape="rect" id="Node000001" href="$class_s_s_tools_1_1_file_select_dialog.html" title="ファイル選択ダイアログ" alt="" coords="260,5,430,32"/>
+<area shape="poly" id="edge141_Node000000_Node000001" title=" " alt="" coords="158,73,252,41,291,30,292,35,253,47,160,78"/>
+<area shape="rect" id="Node000002" href="$class_s_s_tools_1_1_folder_select_dialog.html" title="フォルダ選択ダイアログ" alt="" coords="253,56,437,83"/>
+<area shape="poly" id="edge142_Node000000_Node000002" title=" " alt="" coords="220,80,252,76,252,82,220,85"/>
+<area shape="rect" id="Node000003" href="$class_s_s_tools_1_1_fullscreen_form.html" title="フルスクリーン表示対応フォーム" alt="" coords="263,107,427,133"/>
+<area shape="poly" id="edge143_Node000000_Node000003" title=" " alt="" coords="221,104,262,109,262,114,220,110"/>
+<area shape="rect" id="Node000004" href="$class_s_s_tools_1_1_waiting_form.html" title="進捗表示付き待ちフォーム" alt="" coords="271,157,418,184"/>
+<area shape="poly" id="edge144_Node000000_Node000004" title=" " alt="" coords="160,111,253,143,292,154,291,159,252,148,158,116"/>
+</map>

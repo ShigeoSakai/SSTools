@@ -12,6 +12,9 @@ using static SSTools.Win32FileInfo;
 
 namespace SSTools
 {
+	/// <summary>
+	/// システムアイコンマネージャ
+	/// </summary>
 	public class SystemIconManager
 	{
 		/// <summary>
@@ -20,10 +23,10 @@ namespace SSTools
 		[Flags]
 		public enum ICON_SIZE
 		{
-			SMALL = 0x0001,
-			LARGE = 0x0002,
-			EXTRA_LARGE = 0x0004,
-			JUMBO = 0x0008,
+			SMALL = 0x0001,			//!< 小アイコン
+			LARGE = 0x0002,			//!< 大アイコン
+			EXTRA_LARGE = 0x0004,	//!< 特大アイコン
+			JUMBO = 0x0008,			//!< ジャンボアイコン
 		}
 
 		/// <summary>
@@ -43,7 +46,10 @@ namespace SSTools
 		/// </summary>
 		private static IntPtr JumboIconList = IntPtr.Zero;
 
-
+		/// <summary>
+		/// アイコンマネージャ初期化
+		/// </summary>
+		/// <param name="kind">アイコンサイズ</param>
 		public static void Init(ICON_SIZE kind)
 		{
 			// システムアイコンを取得
@@ -68,8 +74,16 @@ namespace SSTools
 				SHGetImageList(SHIL.SHIL_JUMBO, ref IID_IImageList, out JumboIconList);
 			}
 		}
-		public static void Init() => Init(ICON_SIZE.SMALL | ICON_SIZE.LARGE);
-
+        /// <summary>
+        /// アイコンマネージャ初期化
+        /// </summary>
+		/// <remarks>
+		/// アイコンサイズは、大・小を指定
+		/// </remarks>
+        public static void Init() => Init(ICON_SIZE.SMALL | ICON_SIZE.LARGE);
+		/// <summary>
+		/// デストラクタ
+		/// </summary>
 		public static void Dispose()
 		{
 			if (SmallIconList != IntPtr.Zero)
@@ -93,7 +107,12 @@ namespace SSTools
 				JumboIconList = IntPtr.Zero;
 			}
 		}
-
+		/// <summary>
+		/// アイコンの取得
+		/// </summary>
+		/// <param name="list">アイコンリストのアドレス</param>
+		/// <param name="index">インデックス</param>
+		/// <returns>アイコン</returns>
 		public static Icon GetIcon(IntPtr list, int index)
 		{
 			if (list != IntPtr.Zero)
@@ -162,7 +181,7 @@ namespace SSTools
 		/// アイコンのサイズを取得する
 		/// </summary>
 		/// <param name="size"></param>
-		/// <returns></returns>
+		/// <returns>アイコンサイズ</returns>
 		public static Size GetIconSize(ICON_SIZE size = ICON_SIZE.SMALL)
 		{
 			IntPtr list = GetListPtr(size);
@@ -174,7 +193,12 @@ namespace SSTools
 			}
 			return new Size();
 		}
-
+		/// <summary>
+		/// 画像リストを初期化する
+		/// </summary>
+		/// <param name="imgList">画像リスト</param>
+		/// <param name="size">アイコンサイズ</param>
+		/// <returns>true:初期化完了</returns>
 		public static bool InitImageList(ref ImageList imgList, ICON_SIZE size = ICON_SIZE.SMALL)
 		{
 			IntPtr list = GetListPtr(size);
@@ -191,7 +215,13 @@ namespace SSTools
 			}
 			return false;
 		}
-
+		/// <summary>
+		/// 画像リストにアイコンを格納する
+		/// </summary>
+		/// <param name="imgList">画像リスト</param>
+		/// <param name="icon_index">アイコンインデックス</param>
+		/// <param name="size">アイコンサイズ</param>
+		/// <returns>画像リストのインデックス</returns>
 		public static int StoreImageList(ref ImageList imgList,int icon_index, ICON_SIZE size = ICON_SIZE.SMALL) 
 		{
 			IntPtr list = GetListPtr(size);
@@ -210,7 +240,14 @@ namespace SSTools
 			}
 			return -1;
 		}
-		public static int StoreOpenIconImageList(ref ImageList imgList, IntPtr openIcon,int icon_index)
+        /// <summary>
+        /// 画像リストに「開いた」アイコンを格納する
+        /// </summary>
+        /// <param name="imgList">画像リスト</param>
+        /// <param name="openIcon">開いたアイコンのアドレス</param>
+        /// <param name="icon_index">アイコンインデックス</param>
+        /// <returns>画像リストのインデックス</returns>
+        public static int StoreOpenIconImageList(ref ImageList imgList, IntPtr openIcon,int icon_index)
 		{
 			if (openIcon != IntPtr.Zero)
 			{
@@ -227,7 +264,12 @@ namespace SSTools
 			return -1;
 		}
 
-
+		/// <summary>
+		/// 画像リストに全てのアイコンを格納する
+		/// </summary>
+		/// <param name="imgList">画像リスト</param>
+		/// <param name="size">アイコンサイズ</param>
+		/// <returns>画像リストの件数</returns>
 		public static int StoreAllIcon(ref ImageList imgList, ICON_SIZE size = ICON_SIZE.SMALL)
 		{
 			IntPtr list = GetListPtr(size);

@@ -63,7 +63,7 @@ namespace SSTools
 		/// コンボボックスの作成
 		/// </summary>
 		/// <param name="combo">コンボボックス</param>
-		/// <param name="array"><T></T>の配列</param>
+		/// <param name="array">配列</param>
 		public static void MakeCombo(Array array, ComboBox combo)
 		{
 			combo.Items.Clear();
@@ -74,7 +74,7 @@ namespace SSTools
 		/// コンボボックスの作成
 		/// </summary>
 		/// <param name="combo">コンボボックス</param>
-		/// <param name="array"><T></T>の配列</param>
+		/// <param name="array">Tの配列</param>
 		public static void MakeCombo(ComboBox combo, IEnumerable<T> items)
 		{
 			combo.Items.Clear();
@@ -88,7 +88,7 @@ namespace SSTools
 		/// </summary>
 		/// <param name="combo">コンボボックス</param>
 		/// <param name="defaultValue">デフォルト値</param>
-		/// <returns></returns>
+		/// <returns>選択されている値</returns>
 		public static T Get(ComboBox combo, T defaultValue)
 		{
 			if (combo.SelectedItem is ComboItem<T> item)

@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 
 namespace SSTools.Shape
 {
+    /// <summary>
+    /// 点クラス
+    /// </summary>
     public class PointShape : BaseShape
     {
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">名前</param>
         public PointShape(string name) : base(name) { }
 
         /// <summary>

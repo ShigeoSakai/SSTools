@@ -21,7 +21,9 @@ namespace SSTools.Shape
         /// 塗りつぶすかどうか
         /// </summary>
         public bool Fill { get; set; } = false;
-
+        /// <summary>
+        /// 中心を表示するかどうか
+        /// </summary>
         public bool ShowCenter { get; set; } = false;
 
         /// <summary>
@@ -73,7 +75,7 @@ namespace SSTools.Shape
         /// <summary>
         /// コピーコンストラクタ
         /// </summary>
-        /// <param name="src"></param>
+        /// <param name="src">コピー元</param>
         public RectangleShape(RectangleShape src) : base(src) 
         {
             Rectangle = src.Rectangle;
@@ -83,6 +85,7 @@ namespace SSTools.Shape
         /// <summary>
         /// クローンコピー
         /// </summary>
+        /// <returns>コピーされたオブジェクト</returns>
         public override BaseShape Clone()
         {
             return new RectangleShape(this);
@@ -104,6 +107,7 @@ namespace SSTools.Shape
         /// 描画
         /// </summary>
         /// <param name="g">グラフィックス</param>
+        /// <param name="size">表示サイズ</param>
         public override void Draw(Graphics g, SizeF? size)
         {
             if (Visible)
@@ -137,7 +141,7 @@ namespace SSTools.Shape
         /// </summary>
         /// <param name="textSize">文字列表示サイズ</param>
         /// <param name="size">表示サイズ</param>
-        /// <param name="pts">頂点座標リスト</param>
+        /// <param name="center">中心座標</param>
         /// <returns>テキスト表示領域</returns>
 
         protected override RectangleF CalcTextPosition(SizeF textSize, SizeF? size, PointF center)
@@ -176,6 +180,10 @@ namespace SSTools.Shape
         }
 
 
+        /// <summary>
+        /// 描画領域サイズを取得
+        /// </summary>
+        /// <returns>描画領域サイズ</returns>
 
         public override Rectangle GetDrawSize()
         {

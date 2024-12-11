@@ -1,0 +1,37 @@
+<map id="クラス階層図" name="クラス階層図">
+<area shape="rect" id="Node000000" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_p_a_r_a_m___l_p_a_r_a_m___i_s___v_a_l_u_e.html" title=" " alt="" coords="5,472,295,515"/>
+<area shape="rect" id="Node000001" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_i_m_e___n_o_t_i_f_y.html" title="IME_NOTIFY用クラス" alt="" coords="343,5,547,48"/>
+<area shape="poly" id="edge123_Node000000_Node000001" title=" " alt="" coords="155,456,173,375,207,268,232,211,262,156,298,104,341,58,357,46,360,51,344,62,302,107,267,159,237,214,212,270,178,376,160,457"/>
+<area shape="rect" id="Node000002" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_i_m_e___s_e_t_c_o_n_t_e_x_t.html" title="IME_SETCONTEXT用クラス" alt="" coords="343,72,547,115"/>
+<area shape="poly" id="edge124_Node000000_Node000002" title=" " alt="" coords="158,456,180,386,216,297,241,251,270,205,303,162,341,125,358,113,361,117,344,129,307,166,274,208,246,253,221,300,185,388,163,458"/>
+<area shape="rect" id="Node000003" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___a_c_t_i_v_e.html" title="WM_ACTIVE用クラス" alt="" coords="343,139,547,181"/>
+<area shape="poly" id="edge125_Node000000_Node000003" title=" " alt="" coords="162,456,188,399,226,327,277,254,308,221,341,191,359,180,362,184,344,195,311,225,282,258,231,330,193,401,167,459"/>
+<area shape="rect" id="Node000004" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___c_o_l_o_r___c_h_a_n_g_e.html" title="WM_COLOR_CHANGE用クラス" alt="" coords="343,205,547,248"/>
+<area shape="poly" id="edge126_Node000000_Node000004" title=" " alt="" coords="169,457,198,412,237,359,285,305,341,258,361,246,364,251,344,262,289,308,241,362,202,415,173,460"/>
+<area shape="rect" id="Node000005" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___c_o_m_m_a_n_d.html" title="WM_COMMAND用クラス" alt="" coords="343,272,547,315"/>
+<area shape="poly" id="edge127_Node000000_Node000005" title=" " alt="" coords="179,459,249,391,294,356,341,324,366,313,368,318,344,329,297,360,253,395,183,463"/>
+<area shape="rect" id="Node000006" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___d_e_f_a_u_l_t.html" title="デフォルトクラス(WParam/LParam保持のみ)" alt="" coords="343,339,547,381"/>
+<area shape="poly" id="edge128_Node000000_Node000006" title=" " alt="" coords="201,462,267,426,342,391,371,379,373,384,344,396,269,431,203,466"/>
+<area shape="rect" id="Node000007" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___g_e_t_i_c_o_n.html" title="GetICON用クラス" alt="" coords="343,405,547,448"/>
+<area shape="poly" id="edge129_Node000000_Node000007" title=" " alt="" coords="262,465,347,446,348,451,263,471"/>
+<area shape="rect" id="Node000008" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___m_o_u_s_e.html" title="マウス用共通クラス" alt="" coords="343,472,547,515"/>
+<area shape="poly" id="edge130_Node000000_Node000008" title=" " alt="" coords="310,491,342,491,342,496,310,496"/>
+<area shape="rect" id="Node000011" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___n_c_m_o_u_s_e.html" title="WM_NCMOUSE用クラス" alt="" coords="343,539,547,581"/>
+<area shape="poly" id="edge133_Node000000_Node000011" title=" " alt="" coords="263,516,348,535,347,541,262,521"/>
+<area shape="rect" id="Node000012" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___n_o_t_i_f_y___f_o_r_m_a_t.html" title="WM_NOTIFY_FORMAT用クラス" alt="" coords="343,605,547,648"/>
+<area shape="poly" id="edge134_Node000000_Node000012" title=" " alt="" coords="203,520,269,556,344,591,373,602,371,607,342,596,267,561,201,525"/>
+<area shape="rect" id="Node000013" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___p_r_i_n_t___c_l_i_e_n_t.html" title="WM_PRINT_CLIENT用クラス" alt="" coords="343,672,547,715"/>
+<area shape="poly" id="edge135_Node000000_Node000013" title=" " alt="" coords="183,524,253,591,297,627,344,658,368,669,366,674,341,662,294,631,249,595,179,528"/>
+<area shape="rect" id="Node000014" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___s_e_t_c_u_r_s_o_r.html" title="WM_SETCURSOR用クラス" alt="" coords="343,739,547,781"/>
+<area shape="poly" id="edge136_Node000000_Node000014" title=" " alt="" coords="173,527,202,572,241,625,289,678,344,724,364,736,361,740,341,729,285,682,237,628,198,575,169,530"/>
+<area shape="rect" id="Node000015" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___s_h_o_w_w_i_n_d_o_w.html" title="WM_SHOWWINDOW用クラス" alt="" coords="343,805,547,848"/>
+<area shape="poly" id="edge137_Node000000_Node000015" title=" " alt="" coords="167,528,193,586,231,656,282,729,311,762,344,791,362,802,359,807,341,795,308,766,277,732,226,659,188,588,162,530"/>
+<area shape="rect" id="Node000016" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___s_y_s_c_o_m_m_a_n_d.html" title="WM_SYSCOMMAND用クラス" alt="" coords="343,872,547,915"/>
+<area shape="poly" id="edge138_Node000000_Node000016" title=" " alt="" coords="163,529,185,599,221,687,246,733,274,779,307,821,344,858,361,869,358,874,341,862,303,824,270,782,241,736,216,689,180,600,158,530"/>
+<area shape="rect" id="Node000017" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___u_i_s_t_a_t_e.html" title="UI_STATE用クラス" alt="" coords="343,939,547,981"/>
+<area shape="poly" id="edge139_Node000000_Node000017" title=" " alt="" coords="160,529,178,610,212,717,237,773,267,828,302,879,344,925,360,936,357,940,341,929,298,883,262,831,232,775,207,719,173,612,155,530"/>
+<area shape="rect" id="Node000009" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___m_o_u_s_e___w_h_e_e_l.html" title="WM_MOUSE_WHEEL用クラス" alt="" coords="595,439,799,481"/>
+<area shape="poly" id="edge131_Node000008_Node000009" title=" " alt="" coords="562,475,594,471,595,476,563,480"/>
+<area shape="rect" id="Node000010" href="$class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___x___m_o_u_s_e.html" title="Xボタン用クラス" alt="" coords="595,505,799,548"/>
+<area shape="poly" id="edge132_Node000008_Node000010" title=" " alt="" coords="563,506,595,510,594,516,562,511"/>
+</map>

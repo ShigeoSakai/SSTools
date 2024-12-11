@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SSTools: SSTools.FormThread クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SSTools
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_s_s_tools_1_1_form_thread.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="class_s_s_tools_1_1_form_thread-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">SSTools.FormThread クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>フォーム用スレッドクラス  
+ <a href="#details">[詳解]</a></p>
+<div class="dynheader">
+SSTools.FormThread の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_form_thread__inherit__graph.png" border="0" usemap="#a_s_s_tools_8_form_thread_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_s_s_tools_8_form_thread_inherit__map" id="a_s_s_tools_8_form_thread_inherit__map">
+<area shape="rect" title="フォーム用スレッドクラス" alt="" coords="5,80,150,107"/>
+<area shape="rect" title=" " alt="" coords="32,5,123,32"/>
+<area shape="poly" title=" " alt="" coords="80,48,80,80,75,80,75,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+SSTools.FormThread 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_form_thread__coll__graph.png" border="0" usemap="#a_s_s_tools_8_form_thread_coll__map" alt="Collaboration graph"/></div>
+<map name="a_s_s_tools_8_form_thread_coll__map" id="a_s_s_tools_8_form_thread_coll__map">
+<area shape="rect" title="フォーム用スレッドクラス" alt="" coords="5,80,150,107"/>
+<area shape="rect" title=" " alt="" coords="32,5,123,32"/>
+<area shape="poly" title=" " alt="" coords="80,48,80,80,75,80,75,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:af74bf9f0203d338915207ba57fc83e48" id="r_af74bf9f0203d338915207ba57fc83e48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af74bf9f0203d338915207ba57fc83e48">FormThread</a> (System.Windows.Forms.Form form)</td></tr>
+<tr class="memdesc:af74bf9f0203d338915207ba57fc83e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:af74bf9f0203d338915207ba57fc83e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ab49169274ef95897fd516e6c1826b" id="r_ae9ab49169274ef95897fd516e6c1826b"><td class="memItemLeft" align="right" valign="top"><a id="ae9ab49169274ef95897fd516e6c1826b" name="ae9ab49169274ef95897fd516e6c1826b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Dispose</b> ()</td></tr>
+<tr class="memdesc:ae9ab49169274ef95897fd516e6c1826b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose処理 <br /></td></tr>
+<tr class="separator:ae9ab49169274ef95897fd516e6c1826b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add945a3f283e1b2bd222c6bf33fca239" id="r_add945a3f283e1b2bd222c6bf33fca239"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add945a3f283e1b2bd222c6bf33fca239">SetProperty</a> (string propertyName, Type type, object value)</td></tr>
+<tr class="memdesc:add945a3f283e1b2bd222c6bf33fca239"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォームのプロパティを設定  <br /></td></tr>
+<tr class="separator:add945a3f283e1b2bd222c6bf33fca239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35bd121b555bcec0d5a1df0c7733edd9" id="r_a35bd121b555bcec0d5a1df0c7733edd9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35bd121b555bcec0d5a1df0c7733edd9">SetProperty&lt; T &gt;</a> (string propertyName, T value)</td></tr>
+<tr class="memdesc:a35bd121b555bcec0d5a1df0c7733edd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロパティ設定(ジェネリック)  <br /></td></tr>
+<tr class="separator:a35bd121b555bcec0d5a1df0c7733edd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaac00029d1d542f789a186a068f3bb46" id="r_aaac00029d1d542f789a186a068f3bb46"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaac00029d1d542f789a186a068f3bb46">GetProperty&lt; T &gt;</a> (string propertyName)</td></tr>
+<tr class="memdesc:aaac00029d1d542f789a186a068f3bb46"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロパティ取得(ジェネリック)  <br /></td></tr>
+<tr class="separator:aaac00029d1d542f789a186a068f3bb46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e50415098427279fc790819d7e7110a" id="r_a6e50415098427279fc790819d7e7110a"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e50415098427279fc790819d7e7110a">GetProperty</a> (string propertyName, Type type)</td></tr>
+<tr class="memdesc:a6e50415098427279fc790819d7e7110a"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロパティ取得  <br /></td></tr>
+<tr class="separator:a6e50415098427279fc790819d7e7110a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67bac6bb455353ac85b1dc287ef8ffe" id="r_aa67bac6bb455353ac85b1dc287ef8ffe"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa67bac6bb455353ac85b1dc287ef8ffe">CallMethod</a> (string methodName, params object[] args)</td></tr>
+<tr class="memdesc:aa67bac6bb455353ac85b1dc287ef8ffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォームのメソッドを呼び出す  <br /></td></tr>
+<tr class="separator:aa67bac6bb455353ac85b1dc287ef8ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a3cae26e942c0319b12d013b4ad112e10" id="r_a3cae26e942c0319b12d013b4ad112e10"><td class="memItemLeft" align="right" valign="top"><a id="a3cae26e942c0319b12d013b4ad112e10" name="a3cae26e942c0319b12d013b4ad112e10"></a>
+DialogResult&#160;</td><td class="memItemRight" valign="bottom"><b>DialogResult</b><code> [get]</code></td></tr>
+<tr class="memdesc:a3cae26e942c0319b12d013b4ad112e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダイアログの表示結果(プロパティ) <br /></td></tr>
+<tr class="separator:a3cae26e942c0319b12d013b4ad112e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>フォーム用スレッドクラス </p>
+<p>生成と表示 <a class="el" href="class_s_s_tools_1_1_form_thread.html" title="フォーム用スレッドクラス">SSTools.FormThread</a> thread = new <a class="el" href="class_s_s_tools_1_1_form_thread.html" title="フォーム用スレッドクラス">SSTools.FormThread(form)</a>; formのスレッド化と表示(formは、Formクラスを継承していれば何でもOK) showDialog()で表示する。閉じた場合、結果をDialogResultプロパティに設定し、 スレッドを終了させる。</p>
+<p>フォームの表示結果 <br  />
+ DialogResultプロパティに設定される。 閉じていない場合は、None。中断された場合はAbortが格納される。</p>
+<p>フォームのプロパティ取得 object thread.GetProperty(プロパティ名,プロパティの型) プロパティ名,型が一致した場合、プロパティ値をobject型で返す。 (プロパティの型にキャストが必要) 取得できない場合はnull</p>
+<p>プロパティの型 thread.GetProperty＜プロパティの型＞(プロパティ名) プロパティ名,型が一致した場合、プロパティ値を返す。 取得できない場合は、その型のデフォルト値</p>
+<p>フォームのプロパティ設定 bool thread.SetProperty(プロパティ名,プロパティの型,設定する値) プロパティ名,型が一致して、設定できればtrue それ以外はfalse</p>
+<p>bool thread.SetProperty＜プロパティの型＞(プロパティ名,設定する値) プロパティ名,型が一致して、設定できればtrue それ以外はfalse</p>
+<p>フォームのメソッド呼び出し object thread.CallMethod(メソッド名,引数,...) 　　戻り値は、object型なので、メソッドの型にキャストが必要 　　 終了 thread.Dispose() フォームが表示されていたら、閉じてスレッドを終了する。 この場合、DialogResultがAbortになる。 </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="af74bf9f0203d338915207ba57fc83e48" name="af74bf9f0203d338915207ba57fc83e48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af74bf9f0203d338915207ba57fc83e48">&#9670;&#160;</a></span>FormThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.FormThread.FormThread </td>
+          <td>(</td>
+          <td class="paramtype">System.Windows.Forms.Form</td>          <td class="paramname"><span class="paramname"><em>form</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">caption</td><td>表示する文字列</td></tr>
+    <tr><td class="paramname">total</td><td>合計数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a3cae26e942c0319b12d013b4ad112e10">SSTools.FormThread.DialogResult</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="aa67bac6bb455353ac85b1dc287ef8ffe" name="aa67bac6bb455353ac85b1dc287ef8ffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa67bac6bb455353ac85b1dc287ef8ffe">&#9670;&#160;</a></span>CallMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">object SSTools.FormThread.CallMethod </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>methodName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params object[]</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フォームのメソッドを呼び出す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">methodName</td><td>メソッド名</td></tr>
+    <tr><td class="paramname">args</td><td>引数</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>結果</dd></dl>
+
+</div>
+</div>
+<a id="a6e50415098427279fc790819d7e7110a" name="a6e50415098427279fc790819d7e7110a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e50415098427279fc790819d7e7110a">&#9670;&#160;</a></span>GetProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">object SSTools.FormThread.GetProperty </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>propertyName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type</td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プロパティ取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">propertyName</td><td>プロパティ名</td></tr>
+    <tr><td class="paramname">type</td><td>型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>プロパティの値</dd></dl>
+
+</div>
+</div>
+<a id="aaac00029d1d542f789a186a068f3bb46" name="aaac00029d1d542f789a186a068f3bb46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaac00029d1d542f789a186a068f3bb46">&#9670;&#160;</a></span>GetProperty&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="#a6e50415098427279fc790819d7e7110a">SSTools.FormThread.GetProperty</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>propertyName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プロパティ取得(ジェネリック) </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>プロパティの型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">propertyName</td><td>プロパティ名</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>プロパティの値</dd></dl>
+
+</div>
+</div>
+<a id="add945a3f283e1b2bd222c6bf33fca239" name="add945a3f283e1b2bd222c6bf33fca239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add945a3f283e1b2bd222c6bf33fca239">&#9670;&#160;</a></span>SetProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.FormThread.SetProperty </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>propertyName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フォームのプロパティを設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">propertyName</td><td>プロパティ名</td></tr>
+    <tr><td class="paramname">type</td><td>型</td></tr>
+    <tr><td class="paramname">value</td><td>値</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:設定OK</dd></dl>
+
+</div>
+</div>
+<a id="a35bd121b555bcec0d5a1df0c7733edd9" name="a35bd121b555bcec0d5a1df0c7733edd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35bd121b555bcec0d5a1df0c7733edd9">&#9670;&#160;</a></span>SetProperty&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="#add945a3f283e1b2bd222c6bf33fca239">SSTools.FormThread.SetProperty</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>propertyName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プロパティ設定(ジェネリック) </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>プロパティの型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">propertyName</td><td>プロパティ名</td></tr>
+    <tr><td class="paramname">value</td><td>値</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:設定OK</dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SSTools/<b>FormThread.cs</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_s_s_tools.html">SSTools</a></li><li class="navelem"><a class="el" href="class_s_s_tools_1_1_form_thread.html">FormThread</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

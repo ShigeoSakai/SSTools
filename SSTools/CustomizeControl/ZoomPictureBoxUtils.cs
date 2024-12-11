@@ -19,6 +19,7 @@ namespace SSTools
         /// <param name="dstRect">コピー先領域</param>
         /// <param name="srcRect">コピー元領域</param>
         /// <param name="onePixcelSize">1ピクセルのサイズ(拡大倍率)</param>
+        /// <param name="startOffset">コピー先の開始オフセット</param>
         private void CopyImage(Bitmap dst, Bitmap src, Rectangle dstRect, Rectangle srcRect, int onePixcelSize, ref Point startOffset)
         {
             // 書き込みオフセット
@@ -243,11 +244,29 @@ namespace SSTools
         /// </summary>
         public class LegendData
         {
+            /// <summary>
+            /// 名前
+            /// </summary>
             public string Name { get; private set; }
+            /// <summary>
+            /// 色
+            /// </summary>
             public Color Color { get; private set; }
+            /// <summary>
+            /// 表示テキスト
+            /// </summary>
             public string Text { get; private set; }
+            /// <summary>
+            /// 図形の型
+            /// </summary>
             public Type Type { get; private set; }
-
+            /// <summary>
+            /// コンストラクタ
+            /// </summary>
+            /// <param name="name">名前</param>
+            /// <param name="color">色</param>
+            /// <param name="text">表示テキスト</param>
+            /// <param name="type">図形の型</param>
             public LegendData(string name, Color color,string text, Type type)
             {
                 Name = name;

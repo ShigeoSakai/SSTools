@@ -1,0 +1,1737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SSTools: SSTools.ZoomPictureBox クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SSTools
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_s_s_tools_1_1_zoom_picture_box.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#properties">プロパティ</a> &#124;
+<a href="#events">イベント</a> &#124;
+<a href="class_s_s_tools_1_1_zoom_picture_box-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">SSTools.ZoomPictureBox クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>ズームできるPictureBox  
+ <a href="#details">[詳解]</a></p>
+<div class="dynheader">
+SSTools.ZoomPictureBox の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box__inherit__graph.png" border="0" usemap="#a_s_s_tools_8_zoom_picture_box_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_s_s_tools_8_zoom_picture_box_inherit__map" id="a_s_s_tools_8_zoom_picture_box_inherit__map">
+<area shape="rect" title="ズームできるPictureBox" alt="" coords="5,80,177,107"/>
+<area shape="rect" title=" " alt="" coords="48,5,134,32"/>
+<area shape="poly" title=" " alt="" coords="94,48,94,80,88,80,88,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+SSTools.ZoomPictureBox 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box__coll__graph.png" border="0" usemap="#a_s_s_tools_8_zoom_picture_box_coll__map" alt="Collaboration graph"/></div>
+<map name="a_s_s_tools_8_zoom_picture_box_coll__map" id="a_s_s_tools_8_zoom_picture_box_coll__map">
+<area shape="rect" title="ズームできるPictureBox" alt="" coords="5,80,177,107"/>
+<area shape="rect" title=" " alt="" coords="48,5,134,32"/>
+<area shape="poly" title=" " alt="" coords="94,48,94,80,88,80,88,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_s_tools_1_1_zoom_picture_box_1_1_legend_data.html">LegendData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">凡例データクラス  <a href="class_s_s_tools_1_1_zoom_picture_box_1_1_legend_data.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_s_tools_1_1_zoom_picture_box_1_1_picture_box_info.html">PictureBoxInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">画素情報クラス  <a href="class_s_s_tools_1_1_zoom_picture_box_1_1_picture_box_info.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a20e429c534f4657afe8c264c770e60b2" id="r_a20e429c534f4657afe8c264c770e60b2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20e429c534f4657afe8c264c770e60b2">PictureBoxDrawMode</a> { <a class="el" href="#a20e429c534f4657afe8c264c770e60b2a1e23852820b9154316c7c06e2b7ba051">NORMAL</a> = 0
+, <a class="el" href="#a20e429c534f4657afe8c264c770e60b2a58510617f7f2748cb53702e426700630">AREA_SELECT</a>
+, <a class="el" href="#a20e429c534f4657afe8c264c770e60b2a2b4807f24940ca2fe73284bc6e864d66">DRAW</a>
+ }</td></tr>
+<tr class="memdesc:a20e429c534f4657afe8c264c770e60b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">PictureBox描画モード  <a href="#a20e429c534f4657afe8c264c770e60b2">[詳解]</a><br /></td></tr>
+<tr class="separator:a20e429c534f4657afe8c264c770e60b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:abfbda69e1fc9ab4a763e5cc712cc957a" id="r_abfbda69e1fc9ab4a763e5cc712cc957a"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfbda69e1fc9ab4a763e5cc712cc957a">ZoomPictureBox_InfoEventHandler</a> (object sender, <a class="el" href="class_s_s_tools_1_1_zoom_picture_box_1_1_picture_box_info.html">PictureBoxInfo</a> info)</td></tr>
+<tr class="memdesc:abfbda69e1fc9ab4a763e5cc712cc957a"><td class="mdescLeft">&#160;</td><td class="mdescRight">画素情報取得イベントハンドラ  <br /></td></tr>
+<tr class="separator:abfbda69e1fc9ab4a763e5cc712cc957a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff3f477ca0b9fa09abc35f57c6697ac2" id="r_aff3f477ca0b9fa09abc35f57c6697ac2"><td class="memItemLeft" align="right" valign="top"><a id="aff3f477ca0b9fa09abc35f57c6697ac2" name="aff3f477ca0b9fa09abc35f57c6697ac2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ZoomPictureBox</b> ()</td></tr>
+<tr class="memdesc:aff3f477ca0b9fa09abc35f57c6697ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="separator:aff3f477ca0b9fa09abc35f57c6697ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab249bfced8485595ccdf529592838850" id="r_ab249bfced8485595ccdf529592838850"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab249bfced8485595ccdf529592838850">SetShowRectAngle</a> (Rectangle rect)</td></tr>
+<tr class="memdesc:ab249bfced8485595ccdf529592838850"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示領域の指定  <br /></td></tr>
+<tr class="separator:ab249bfced8485595ccdf529592838850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f87be0be1eb95054e7d108f3dc5254" id="r_a29f87be0be1eb95054e7d108f3dc5254"><td class="memItemLeft" align="right" valign="top">delegate bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29f87be0be1eb95054e7d108f3dc5254">AreaConfirmEventHandler</a> (object sender, List&lt; Point &gt; pointList)</td></tr>
+<tr class="memdesc:a29f87be0be1eb95054e7d108f3dc5254"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示エリア確定イベントハンドラ  <br /></td></tr>
+<tr class="separator:a29f87be0be1eb95054e7d108f3dc5254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab51277ed842025a907c4130162c4ac0a" id="r_ab51277ed842025a907c4130162c4ac0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab51277ed842025a907c4130162c4ac0a">Reset</a> (float x_ratio, float y_ratio, PictureBoxSizeMode sizeMode)</td></tr>
+<tr class="memdesc:ab51277ed842025a907c4130162c4ac0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">アフィン行列のリセット  <br /></td></tr>
+<tr class="separator:ab51277ed842025a907c4130162c4ac0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2430db5ee5e653128e5f160b6674e6e2" id="r_a2430db5ee5e653128e5f160b6674e6e2"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_s_s_tools_1_1_shape_1_1_base_shape.html">Shape.BaseShape</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2430db5ee5e653128e5f160b6674e6e2">EnumerableShape</a> ()</td></tr>
+<tr class="memdesc:a2430db5ee5e653128e5f160b6674e6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録されている図形の一覧を取得する(Enumrator)  <br /></td></tr>
+<tr class="separator:a2430db5ee5e653128e5f160b6674e6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7b893fa2fd79896d8cadde5ccc25fff" id="r_ac7b893fa2fd79896d8cadde5ccc25fff"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7b893fa2fd79896d8cadde5ccc25fff">EnumerableShapes&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:ac7b893fa2fd79896d8cadde5ccc25fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定図形の一覧を取得(Enumrator)  <br /></td></tr>
+<tr class="separator:ac7b893fa2fd79896d8cadde5ccc25fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83b9054402af5bba41664a28f5e61ef" id="r_ad83b9054402af5bba41664a28f5e61ef"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="class_s_s_tools_1_1_shape_1_1_base_shape.html">BaseShape</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad83b9054402af5bba41664a28f5e61ef">EnumerableShapes</a> (string pattern)</td></tr>
+<tr class="memdesc:ad83b9054402af5bba41664a28f5e61ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定図形の一覧を取得(Enumrator)  <br /></td></tr>
+<tr class="separator:ad83b9054402af5bba41664a28f5e61ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d267213b67a6c534c62f6ff415134e" id="r_a28d267213b67a6c534c62f6ff415134e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28d267213b67a6c534c62f6ff415134e">AddShape</a> (<a class="el" href="class_s_s_tools_1_1_shape_1_1_base_shape.html">Shape.BaseShape</a> shape)</td></tr>
+<tr class="memdesc:a28d267213b67a6c534c62f6ff415134e"><td class="mdescLeft">&#160;</td><td class="mdescRight">図形の追加  <br /></td></tr>
+<tr class="separator:a28d267213b67a6c534c62f6ff415134e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1a5f8852297e20d859ce47f08406d1" id="r_a4e1a5f8852297e20d859ce47f08406d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e1a5f8852297e20d859ce47f08406d1">AddShape</a> (IEnumerable&lt; <a class="el" href="class_s_s_tools_1_1_shape_1_1_base_shape.html">Shape.BaseShape</a> &gt; shapes)</td></tr>
+<tr class="memdesc:a4e1a5f8852297e20d859ce47f08406d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数図形の追加  <br /></td></tr>
+<tr class="separator:a4e1a5f8852297e20d859ce47f08406d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa455b2d80270cdc524212656c4c5ed8c" id="r_aa455b2d80270cdc524212656c4c5ed8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa455b2d80270cdc524212656c4c5ed8c">AddShape</a> (<a class="el" href="class_s_s_tools_1_1_shape_manager.html">ShapeManager</a> shapes)</td></tr>
+<tr class="memdesc:aa455b2d80270cdc524212656c4c5ed8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">図形の追加  <br /></td></tr>
+<tr class="separator:aa455b2d80270cdc524212656c4c5ed8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5a7bef1ce43deddba3cf86ce344e9b" id="r_afc5a7bef1ce43deddba3cf86ce344e9b"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc5a7bef1ce43deddba3cf86ce344e9b">GetShapeNames</a> ()</td></tr>
+<tr class="memdesc:afc5a7bef1ce43deddba3cf86ce344e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">図形の名前一覧の取得  <br /></td></tr>
+<tr class="separator:afc5a7bef1ce43deddba3cf86ce344e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af556b69f9e7f8ce567ab4c6cd9cd29f8" id="r_af556b69f9e7f8ce567ab4c6cd9cd29f8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af556b69f9e7f8ce567ab4c6cd9cd29f8">ChangeColor</a> (string name, Color color)</td></tr>
+<tr class="memdesc:af556b69f9e7f8ce567ab4c6cd9cd29f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定図形の色を設定  <br /></td></tr>
+<tr class="separator:af556b69f9e7f8ce567ab4c6cd9cd29f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0a070ebb916c5aa62c9747734354e0" id="r_a9f0a070ebb916c5aa62c9747734354e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f0a070ebb916c5aa62c9747734354e0">ChangeVisible</a> (string name, bool visible)</td></tr>
+<tr class="memdesc:a9f0a070ebb916c5aa62c9747734354e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定図形の表示有無を設定  <br /></td></tr>
+<tr class="separator:a9f0a070ebb916c5aa62c9747734354e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60b1753268935d0c61923859d1d298ad" id="r_a60b1753268935d0c61923859d1d298ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60b1753268935d0c61923859d1d298ad">Remove</a> (string name)</td></tr>
+<tr class="memdesc:a60b1753268935d0c61923859d1d298ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定図形を削除  <br /></td></tr>
+<tr class="separator:a60b1753268935d0c61923859d1d298ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a758b4ed99c5dd6c3ff14051b5a351561" id="r_a758b4ed99c5dd6c3ff14051b5a351561"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a758b4ed99c5dd6c3ff14051b5a351561">RemovePattern</a> (string pattern)</td></tr>
+<tr class="memdesc:a758b4ed99c5dd6c3ff14051b5a351561"><td class="mdescLeft">&#160;</td><td class="mdescRight">パターンで指定された図形を削除  <br /></td></tr>
+<tr class="separator:a758b4ed99c5dd6c3ff14051b5a351561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a11b7fdffd93352bb90e295dce7eb3" id="r_a18a11b7fdffd93352bb90e295dce7eb3"><td class="memItemLeft" align="right" valign="top"><a id="a18a11b7fdffd93352bb90e295dce7eb3" name="a18a11b7fdffd93352bb90e295dce7eb3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearShape</b> ()</td></tr>
+<tr class="memdesc:a18a11b7fdffd93352bb90e295dce7eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">図形の全クリア <br /></td></tr>
+<tr class="separator:a18a11b7fdffd93352bb90e295dce7eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ad804ed4ce01f42c3de490563ae274d" id="r_a1ad804ed4ce01f42c3de490563ae274d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ad804ed4ce01f42c3de490563ae274d">SetShapeProperty</a> (string pattern, string property, object value)</td></tr>
+<tr class="memdesc:a1ad804ed4ce01f42c3de490563ae274d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定図形のプロパティを設定する  <br /></td></tr>
+<tr class="separator:a1ad804ed4ce01f42c3de490563ae274d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cb378a017f3678afadbac04815d0f15" id="r_a2cb378a017f3678afadbac04815d0f15"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cb378a017f3678afadbac04815d0f15">SetShapeProperty</a> (string pattern, SHAPE_PROPERTY property, object value)</td></tr>
+<tr class="memdesc:a2cb378a017f3678afadbac04815d0f15"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定図形のプロパティを設定する  <br /></td></tr>
+<tr class="separator:a2cb378a017f3678afadbac04815d0f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69fdb8fca81ace4b8b946b88aa7f5bc9" id="r_a69fdb8fca81ace4b8b946b88aa7f5bc9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69fdb8fca81ace4b8b946b88aa7f5bc9">SaveImage</a> (string filename, bool drawShape=true, bool drawMask=true)</td></tr>
+<tr class="memdesc:a69fdb8fca81ace4b8b946b88aa7f5bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像を保存  <br /></td></tr>
+<tr class="separator:a69fdb8fca81ace4b8b946b88aa7f5bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fffdab53f005a3af0e218b04566d36c" id="r_a6fffdab53f005a3af0e218b04566d36c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fffdab53f005a3af0e218b04566d36c">ToClipBoard</a> (bool drawShape=true, bool drawMask=true)</td></tr>
+<tr class="memdesc:a6fffdab53f005a3af0e218b04566d36c"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリップボードに画像をコピー  <br /></td></tr>
+<tr class="separator:a6fffdab53f005a3af0e218b04566d36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027ed911faf713c6d203b749f7208029" id="r_a027ed911faf713c6d203b749f7208029"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a027ed911faf713c6d203b749f7208029">SaveClipImage</a> (string filename, Rectangle rect, bool drawShape=true, bool drawMask=true, Bitmap legendImage=null)</td></tr>
+<tr class="memdesc:a027ed911faf713c6d203b749f7208029"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された矩形で画像を切り取り、ファイルに保存する  <br /></td></tr>
+<tr class="separator:a027ed911faf713c6d203b749f7208029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab542a8380e339c3be83c15c0164880bc" id="r_ab542a8380e339c3be83c15c0164880bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab542a8380e339c3be83c15c0164880bc">SaveClipImage</a> (string filename, <a class="el" href="namespace_s_s_tools.html#a59345785469191916f1aa85981faa507">CLIP_OPTION</a> option=<a class="el" href="namespace_s_s_tools.html#a59345785469191916f1aa85981faa507ab50339a10e1de285ac99d4c3990b8693">CLIP_OPTION.NONE</a>, bool drawShape=true, bool drawMask=true, Bitmap legendImage=null, int clip_margin=50)</td></tr>
+<tr class="memdesc:ab542a8380e339c3be83c15c0164880bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">図形が入る領域で画像を切り取り、ファイルに保存する  <br /></td></tr>
+<tr class="separator:ab542a8380e339c3be83c15c0164880bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22328c7c8a9f500d0d2f98dca83709d9" id="r_a22328c7c8a9f500d0d2f98dca83709d9"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_s_s_tools_1_1_zoom_picture_box_1_1_legend_data.html">LegendData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22328c7c8a9f500d0d2f98dca83709d9">GetLegend</a> (bool visibleOnly=false)</td></tr>
+<tr class="memdesc:a22328c7c8a9f500d0d2f98dca83709d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録図形から凡例用データを作成する  <br /></td></tr>
+<tr class="separator:a22328c7c8a9f500d0d2f98dca83709d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad83b416ededfb82cdcd23bb6e8a51775" id="r_ad83b416ededfb82cdcd23bb6e8a51775"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad83b416ededfb82cdcd23bb6e8a51775">OnInfoEvent</a> (int x, int y, int imgX, int imgY)</td></tr>
+<tr class="memdesc:ad83b416ededfb82cdcd23bb6e8a51775"><td class="mdescLeft">&#160;</td><td class="mdescRight">画素情報取得イベント発行  <br /></td></tr>
+<tr class="separator:ad83b416ededfb82cdcd23bb6e8a51775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a447043ad4482b5e9e230200526fb4586" id="r_a447043ad4482b5e9e230200526fb4586"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a447043ad4482b5e9e230200526fb4586">OnClickInfoEvent</a> (int x, int y, int imgX, int imgY)</td></tr>
+<tr class="memdesc:a447043ad4482b5e9e230200526fb4586"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像イベント発行  <br /></td></tr>
+<tr class="separator:a447043ad4482b5e9e230200526fb4586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab52fa42945fe0743c0feb98436ef1969" id="r_ab52fa42945fe0743c0feb98436ef1969"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab52fa42945fe0743c0feb98436ef1969">OnPaint</a> (PaintEventArgs pe)</td></tr>
+<tr class="memdesc:ab52fa42945fe0743c0feb98436ef1969"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画イベント  <br /></td></tr>
+<tr class="separator:ab52fa42945fe0743c0feb98436ef1969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b4c0ead534bb3da6880e0d37f08d67a" id="r_a9b4c0ead534bb3da6880e0d37f08d67a"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b4c0ead534bb3da6880e0d37f08d67a">OnSizeChanged</a> (EventArgs e)</td></tr>
+<tr class="memdesc:a9b4c0ead534bb3da6880e0d37f08d67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">コントロールのサイズ変更  <br /></td></tr>
+<tr class="separator:a9b4c0ead534bb3da6880e0d37f08d67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad310c4fcec0ffc449f94b2f653ff501" id="r_aad310c4fcec0ffc449f94b2f653ff501"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad310c4fcec0ffc449f94b2f653ff501">OnMouseWheel</a> (MouseEventArgs e)</td></tr>
+<tr class="memdesc:aad310c4fcec0ffc449f94b2f653ff501"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスホィール  <br /></td></tr>
+<tr class="separator:aad310c4fcec0ffc449f94b2f653ff501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5f92c05ce9b5e94f00199f20b95ecd" id="r_a0c5f92c05ce9b5e94f00199f20b95ecd"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c5f92c05ce9b5e94f00199f20b95ecd">OnMouseDown</a> (MouseEventArgs e)</td></tr>
+<tr class="memdesc:a0c5f92c05ce9b5e94f00199f20b95ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスダウンイベント  <br /></td></tr>
+<tr class="separator:a0c5f92c05ce9b5e94f00199f20b95ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0588979d0f992d59415686ec0f2831b9" id="r_a0588979d0f992d59415686ec0f2831b9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0588979d0f992d59415686ec0f2831b9">OnAreaConfirmEvent</a> (List&lt; Point &gt; pointList)</td></tr>
+<tr class="memdesc:a0588979d0f992d59415686ec0f2831b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示エリア確定イベント発行  <br /></td></tr>
+<tr class="separator:a0588979d0f992d59415686ec0f2831b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27fa469e752c14bd359e8354df8b9c14" id="r_a27fa469e752c14bd359e8354df8b9c14"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27fa469e752c14bd359e8354df8b9c14">OnMouseUp</a> (MouseEventArgs e)</td></tr>
+<tr class="memdesc:a27fa469e752c14bd359e8354df8b9c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスアップイベント  <br /></td></tr>
+<tr class="separator:a27fa469e752c14bd359e8354df8b9c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e0339138a62681b8ebb66cd00fb3fd0" id="r_a0e0339138a62681b8ebb66cd00fb3fd0"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e0339138a62681b8ebb66cd00fb3fd0">OnDoubleClick</a> (EventArgs e)</td></tr>
+<tr class="memdesc:a0e0339138a62681b8ebb66cd00fb3fd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ダブルクリック時の処理  <br /></td></tr>
+<tr class="separator:a0e0339138a62681b8ebb66cd00fb3fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a697e537868c5511b0bcf4f34acb28570" id="r_a697e537868c5511b0bcf4f34acb28570"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a697e537868c5511b0bcf4f34acb28570">OnMouseMove</a> (MouseEventArgs e)</td></tr>
+<tr class="memdesc:a697e537868c5511b0bcf4f34acb28570"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウス移動イベント  <br /></td></tr>
+<tr class="separator:a697e537868c5511b0bcf4f34acb28570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+プロパティ</h2></td></tr>
+<tr class="memitem:a0f6d59341f1f61a4f6f7ab6e603211ad" id="r_a0f6d59341f1f61a4f6f7ab6e603211ad"><td class="memItemLeft" align="right" valign="top"><a id="a0f6d59341f1f61a4f6f7ab6e603211ad" name="a0f6d59341f1f61a4f6f7ab6e603211ad"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowImage</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a0f6d59341f1f61a4f6f7ab6e603211ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像表示をするかどうか(プロパティ) <br /></td></tr>
+<tr class="separator:a0f6d59341f1f61a4f6f7ab6e603211ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd0c0a76a32320940e2ebd6747acd506" id="r_abd0c0a76a32320940e2ebd6747acd506"><td class="memItemLeft" align="right" valign="top"><a id="abd0c0a76a32320940e2ebd6747acd506" name="abd0c0a76a32320940e2ebd6747acd506"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>MaskAlfa</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:abd0c0a76a32320940e2ebd6747acd506"><td class="mdescLeft">&#160;</td><td class="mdescRight">マスク画像のAlfa値 <br /></td></tr>
+<tr class="separator:abd0c0a76a32320940e2ebd6747acd506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67b5ed4de343546fca931ee15f526545" id="r_a67b5ed4de343546fca931ee15f526545"><td class="memItemLeft" align="right" valign="top"><a id="a67b5ed4de343546fca931ee15f526545" name="a67b5ed4de343546fca931ee15f526545"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>AutoImageDispose</b> = true<code> [get, set]</code></td></tr>
+<tr class="memdesc:a67b5ed4de343546fca931ee15f526545"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imageを自動削除するかどうか(プロパティ) <br /></td></tr>
+<tr class="separator:a67b5ed4de343546fca931ee15f526545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e82fba1de961cd2d52a9712f4bee30" id="r_a83e82fba1de961cd2d52a9712f4bee30"><td class="memItemLeft" align="right" valign="top"><a id="a83e82fba1de961cd2d52a9712f4bee30" name="a83e82fba1de961cd2d52a9712f4bee30"></a>
+new Image&#160;</td><td class="memItemRight" valign="bottom"><b>Image</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a83e82fba1de961cd2d52a9712f4bee30"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像 <br /></td></tr>
+<tr class="separator:a83e82fba1de961cd2d52a9712f4bee30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3147fd62939338502305e8df36ad0724" id="r_a3147fd62939338502305e8df36ad0724"><td class="memItemLeft" align="right" valign="top"><a id="a3147fd62939338502305e8df36ad0724" name="a3147fd62939338502305e8df36ad0724"></a>
+<a class="el" href="#a83e82fba1de961cd2d52a9712f4bee30">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MaskImage</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a3147fd62939338502305e8df36ad0724"><td class="mdescLeft">&#160;</td><td class="mdescRight">マスク画像 <br /></td></tr>
+<tr class="separator:a3147fd62939338502305e8df36ad0724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a78f4956efdb0706ee0c310db778088" id="r_a0a78f4956efdb0706ee0c310db778088"><td class="memItemLeft" align="right" valign="top"><a id="a0a78f4956efdb0706ee0c310db778088" name="a0a78f4956efdb0706ee0c310db778088"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>MaskShow</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a0a78f4956efdb0706ee0c310db778088"><td class="mdescLeft">&#160;</td><td class="mdescRight">マスク画像の表示有無(プロパティ) <br /></td></tr>
+<tr class="separator:a0a78f4956efdb0706ee0c310db778088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af712b5a2230948d29807dd24b4d25967" id="r_af712b5a2230948d29807dd24b4d25967"><td class="memItemLeft" align="right" valign="top"><a id="af712b5a2230948d29807dd24b4d25967" name="af712b5a2230948d29807dd24b4d25967"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShapeShow</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:af712b5a2230948d29807dd24b4d25967"><td class="mdescLeft">&#160;</td><td class="mdescRight">図形表示有無(プロパティ) <br /></td></tr>
+<tr class="separator:af712b5a2230948d29807dd24b4d25967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51bfb05226bbc989b088ea818c4d2e24" id="r_a51bfb05226bbc989b088ea818c4d2e24"><td class="memItemLeft" align="right" valign="top"><a id="a51bfb05226bbc989b088ea818c4d2e24" name="a51bfb05226bbc989b088ea818c4d2e24"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>XRatio</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a51bfb05226bbc989b088ea818c4d2e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">X軸比率(プロパティ) <br /></td></tr>
+<tr class="separator:a51bfb05226bbc989b088ea818c4d2e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac537691f64a96cadb5127779309c6361" id="r_ac537691f64a96cadb5127779309c6361"><td class="memItemLeft" align="right" valign="top"><a id="ac537691f64a96cadb5127779309c6361" name="ac537691f64a96cadb5127779309c6361"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>YRatio</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac537691f64a96cadb5127779309c6361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y軸比率(プロパティ) <br /></td></tr>
+<tr class="separator:ac537691f64a96cadb5127779309c6361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a655e0d3d2f954d6cf788311f4f2c6bfc" id="r_a655e0d3d2f954d6cf788311f4f2c6bfc"><td class="memItemLeft" align="right" valign="top"><a id="a655e0d3d2f954d6cf788311f4f2c6bfc" name="a655e0d3d2f954d6cf788311f4f2c6bfc"></a>
+new PictureBoxSizeMode&#160;</td><td class="memItemRight" valign="bottom"><b>SizeMode</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:a655e0d3d2f954d6cf788311f4f2c6bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">SizeMode(プロパティ) <br /></td></tr>
+<tr class="separator:a655e0d3d2f954d6cf788311f4f2c6bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38aea48a15a11ecfe89aac45ae17b6d0" id="r_a38aea48a15a11ecfe89aac45ae17b6d0"><td class="memItemLeft" align="right" valign="top"><a id="a38aea48a15a11ecfe89aac45ae17b6d0" name="a38aea48a15a11ecfe89aac45ae17b6d0"></a>
+Color&#160;</td><td class="memItemRight" valign="bottom"><b>AreaSelectColor</b> = Color.YellowGreen<code> [get, set]</code></td></tr>
+<tr class="memdesc:a38aea48a15a11ecfe89aac45ae17b6d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">エリア選択時の色 <br /></td></tr>
+<tr class="separator:a38aea48a15a11ecfe89aac45ae17b6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8db7a93f59d1ec8ba7c05299d8b108b" id="r_ac8db7a93f59d1ec8ba7c05299d8b108b"><td class="memItemLeft" align="right" valign="top"><a id="ac8db7a93f59d1ec8ba7c05299d8b108b" name="ac8db7a93f59d1ec8ba7c05299d8b108b"></a>
+<a class="el" href="#a20e429c534f4657afe8c264c770e60b2">PictureBoxDrawMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>PictureBoxMode</b><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac8db7a93f59d1ec8ba7c05299d8b108b"><td class="mdescLeft">&#160;</td><td class="mdescRight">PictureBox描画モード指定(プロパティ) <br /></td></tr>
+<tr class="separator:ac8db7a93f59d1ec8ba7c05299d8b108b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+イベント</h2></td></tr>
+<tr class="memitem:a064738a37c7bbef7c5de1ff397aed0e2" id="r_a064738a37c7bbef7c5de1ff397aed0e2"><td class="memItemLeft" align="right" valign="top"><a id="a064738a37c7bbef7c5de1ff397aed0e2" name="a064738a37c7bbef7c5de1ff397aed0e2"></a>
+<a class="el" href="#abfbda69e1fc9ab4a763e5cc712cc957a">ZoomPictureBox_InfoEventHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><b>InfoEvent</b></td></tr>
+<tr class="memdesc:a064738a37c7bbef7c5de1ff397aed0e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">画素情報取得イベント <br /></td></tr>
+<tr class="separator:a064738a37c7bbef7c5de1ff397aed0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a867562e7768d0331aa77a13dfa5e1f27" id="r_a867562e7768d0331aa77a13dfa5e1f27"><td class="memItemLeft" align="right" valign="top"><a id="a867562e7768d0331aa77a13dfa5e1f27" name="a867562e7768d0331aa77a13dfa5e1f27"></a>
+<a class="el" href="#abfbda69e1fc9ab4a763e5cc712cc957a">ZoomPictureBox_InfoEventHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ClickInfoEvent</b></td></tr>
+<tr class="memdesc:a867562e7768d0331aa77a13dfa5e1f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像クリックイベント <br /></td></tr>
+<tr class="separator:a867562e7768d0331aa77a13dfa5e1f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b60926c64091363cbecd45ea8c1eea3" id="r_a6b60926c64091363cbecd45ea8c1eea3"><td class="memItemLeft" align="right" valign="top"><a id="a6b60926c64091363cbecd45ea8c1eea3" name="a6b60926c64091363cbecd45ea8c1eea3"></a>
+<a class="el" href="#a29f87be0be1eb95054e7d108f3dc5254">AreaConfirmEventHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AreaConfirmEvent</b></td></tr>
+<tr class="memdesc:a6b60926c64091363cbecd45ea8c1eea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示エリア確定イベント <br /></td></tr>
+<tr class="separator:a6b60926c64091363cbecd45ea8c1eea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ズームできるPictureBox </p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a20e429c534f4657afe8c264c770e60b2" name="a20e429c534f4657afe8c264c770e60b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20e429c534f4657afe8c264c770e60b2">&#9670;&#160;</a></span>PictureBoxDrawMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a20e429c534f4657afe8c264c770e60b2">SSTools.ZoomPictureBox.PictureBoxDrawMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PictureBox描画モード </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a20e429c534f4657afe8c264c770e60b2a1e23852820b9154316c7c06e2b7ba051" name="a20e429c534f4657afe8c264c770e60b2a1e23852820b9154316c7c06e2b7ba051"></a>NORMAL&#160;</td><td class="fielddoc"><p>通常 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a20e429c534f4657afe8c264c770e60b2a58510617f7f2748cb53702e426700630" name="a20e429c534f4657afe8c264c770e60b2a58510617f7f2748cb53702e426700630"></a>AREA_SELECT&#160;</td><td class="fielddoc"><p>エリア選択中 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a20e429c534f4657afe8c264c770e60b2a2b4807f24940ca2fe73284bc6e864d66" name="a20e429c534f4657afe8c264c770e60b2a2b4807f24940ca2fe73284bc6e864d66"></a>DRAW&#160;</td><td class="fielddoc"><p>描画中 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="a4e1a5f8852297e20d859ce47f08406d1" name="a4e1a5f8852297e20d859ce47f08406d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1a5f8852297e20d859ce47f08406d1">&#9670;&#160;</a></span>AddShape() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.ZoomPictureBox.AddShape </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="class_s_s_tools_1_1_shape_1_1_base_shape.html">Shape.BaseShape</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>shapes</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>複数図形の追加 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shapes</td><td>図形</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#af8e79d2564ddd2b518cf0c131f103fdb">SSTools.ShapeManager.AddShape()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a4e1a5f8852297e20d859ce47f08406d1_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a4e1a5f8852297e20d859ce47f08406d1_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a4e1a5f8852297e20d859ce47f08406d1_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a4e1a5f8852297e20d859ce47f08406d1_cgraph">
+<area shape="rect" title="複数図形の追加" alt="" coords="5,5,204,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#af8e79d2564ddd2b518cf0c131f103fdb" title="図形の追加" alt="" coords="252,5,440,48"/>
+<area shape="poly" title=" " alt="" coords="204,24,236,24,236,29,204,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a28d267213b67a6c534c62f6ff415134e" name="a28d267213b67a6c534c62f6ff415134e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28d267213b67a6c534c62f6ff415134e">&#9670;&#160;</a></span>AddShape() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.ZoomPictureBox.AddShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_s_tools_1_1_shape_1_1_base_shape.html">Shape.BaseShape</a></td>          <td class="paramname"><span class="paramname"><em>shape</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>図形の追加 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shape</td><td>図形</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#af8e79d2564ddd2b518cf0c131f103fdb">SSTools.ShapeManager.AddShape()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a28d267213b67a6c534c62f6ff415134e_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a28d267213b67a6c534c62f6ff415134e_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a28d267213b67a6c534c62f6ff415134e_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a28d267213b67a6c534c62f6ff415134e_cgraph">
+<area shape="rect" title="図形の追加" alt="" coords="5,5,204,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#af8e79d2564ddd2b518cf0c131f103fdb" title="図形の追加" alt="" coords="252,5,440,48"/>
+<area shape="poly" title=" " alt="" coords="204,24,236,24,236,29,204,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa455b2d80270cdc524212656c4c5ed8c" name="aa455b2d80270cdc524212656c4c5ed8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa455b2d80270cdc524212656c4c5ed8c">&#9670;&#160;</a></span>AddShape() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.ZoomPictureBox.AddShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_s_tools_1_1_shape_manager.html">ShapeManager</a></td>          <td class="paramname"><span class="paramname"><em>shapes</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>図形の追加 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shapes</td><td>図形マネージャ</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#af8e79d2564ddd2b518cf0c131f103fdb">SSTools.ShapeManager.AddShape()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_aa455b2d80270cdc524212656c4c5ed8c_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_aa455b2d80270cdc524212656c4c5ed8c_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_aa455b2d80270cdc524212656c4c5ed8c_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_aa455b2d80270cdc524212656c4c5ed8c_cgraph">
+<area shape="rect" title="図形の追加" alt="" coords="5,5,204,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#af8e79d2564ddd2b518cf0c131f103fdb" title="図形の追加" alt="" coords="252,5,440,48"/>
+<area shape="poly" title=" " alt="" coords="204,24,236,24,236,29,204,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a29f87be0be1eb95054e7d108f3dc5254" name="a29f87be0be1eb95054e7d108f3dc5254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29f87be0be1eb95054e7d108f3dc5254">&#9670;&#160;</a></span>AreaConfirmEventHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">delegate bool SSTools.ZoomPictureBox.AreaConfirmEventHandler </td>
+          <td>(</td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>sender</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Point &gt;</td>          <td class="paramname"><span class="paramname"><em>pointList</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>表示エリア確定イベントハンドラ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sender</td><td>送信元</td></tr>
+    <tr><td class="paramname">pointList</td><td>座標リスト</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:確定する</dd></dl>
+
+</div>
+</div>
+<a id="af556b69f9e7f8ce567ab4c6cd9cd29f8" name="af556b69f9e7f8ce567ab4c6cd9cd29f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af556b69f9e7f8ce567ab4c6cd9cd29f8">&#9670;&#160;</a></span>ChangeColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBox.ChangeColor </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定図形の色を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>図形名</td></tr>
+    <tr><td class="paramname">color</td><td>色</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true;設定OK</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#ad258eac9057cf09afc4eb14cffe08a0b">SSTools.ShapeManager.SetShapeProperty()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_af556b69f9e7f8ce567ab4c6cd9cd29f8_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_af556b69f9e7f8ce567ab4c6cd9cd29f8_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_af556b69f9e7f8ce567ab4c6cd9cd29f8_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_af556b69f9e7f8ce567ab4c6cd9cd29f8_cgraph">
+<area shape="rect" title="指定図形の色を設定" alt="" coords="5,5,226,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#ad258eac9057cf09afc4eb14cffe08a0b" title="指定図形のプロパティを設定する" alt="" coords="274,5,459,48"/>
+<area shape="poly" title=" " alt="" coords="226,24,258,24,258,29,226,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9f0a070ebb916c5aa62c9747734354e0" name="a9f0a070ebb916c5aa62c9747734354e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0a070ebb916c5aa62c9747734354e0">&#9670;&#160;</a></span>ChangeVisible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBox.ChangeVisible </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>visible</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定図形の表示有無を設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>名前</td></tr>
+    <tr><td class="paramname">visible</td><td>表示有無</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true;設定OK</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#ad258eac9057cf09afc4eb14cffe08a0b">SSTools.ShapeManager.SetShapeProperty()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a9f0a070ebb916c5aa62c9747734354e0_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a9f0a070ebb916c5aa62c9747734354e0_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a9f0a070ebb916c5aa62c9747734354e0_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a9f0a070ebb916c5aa62c9747734354e0_cgraph">
+<area shape="rect" title="指定図形の表示有無を設定" alt="" coords="5,5,226,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#ad258eac9057cf09afc4eb14cffe08a0b" title="指定図形のプロパティを設定する" alt="" coords="274,5,459,48"/>
+<area shape="poly" title=" " alt="" coords="226,24,258,24,258,29,226,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2430db5ee5e653128e5f160b6674e6e2" name="a2430db5ee5e653128e5f160b6674e6e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2430db5ee5e653128e5f160b6674e6e2">&#9670;&#160;</a></span>EnumerableShape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt; <a class="el" href="class_s_s_tools_1_1_shape_1_1_base_shape.html">Shape.BaseShape</a> &gt; SSTools.ZoomPictureBox.EnumerableShape </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>登録されている図形の一覧を取得する(Enumrator) </p>
+<dl class="section return"><dt>戻り値</dt><dd>登録されている図形</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#a64413a6e8a083ba3f844b127bacf1395">SSTools.ShapeManager.EnumerableShape()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a2430db5ee5e653128e5f160b6674e6e2_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a2430db5ee5e653128e5f160b6674e6e2_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a2430db5ee5e653128e5f160b6674e6e2_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a2430db5ee5e653128e5f160b6674e6e2_cgraph">
+<area shape="rect" title="登録されている図形の一覧を取得する(Enumrator)" alt="" coords="5,5,250,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#a64413a6e8a083ba3f844b127bacf1395" title="図形の一覧(Enumerator)" alt="" coords="298,5,532,48"/>
+<area shape="poly" title=" " alt="" coords="250,24,282,24,282,29,250,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad83b9054402af5bba41664a28f5e61ef" name="ad83b9054402af5bba41664a28f5e61ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad83b9054402af5bba41664a28f5e61ef">&#9670;&#160;</a></span>EnumerableShapes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt; <a class="el" href="class_s_s_tools_1_1_shape_1_1_base_shape.html">BaseShape</a> &gt; SSTools.ZoomPictureBox.EnumerableShapes </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定図形の一覧を取得(Enumrator) </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pattern</td><td>取得する図形名の正規表現</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>指定図形の一覧</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#a9775f75ee32597bb74a02842eec94307">SSTools.ShapeManager.EnumerableShapes()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_ad83b9054402af5bba41664a28f5e61ef_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_ad83b9054402af5bba41664a28f5e61ef_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_ad83b9054402af5bba41664a28f5e61ef_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_ad83b9054402af5bba41664a28f5e61ef_cgraph">
+<area shape="rect" title="指定図形の一覧を取得(Enumrator)" alt="" coords="5,5,250,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#a9775f75ee32597bb74a02842eec94307" title="指定図形の一覧を取得(Enumrator)" alt="" coords="298,5,532,48"/>
+<area shape="poly" title=" " alt="" coords="250,24,282,24,282,29,250,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac7b893fa2fd79896d8cadde5ccc25fff" name="ac7b893fa2fd79896d8cadde5ccc25fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7b893fa2fd79896d8cadde5ccc25fff">&#9670;&#160;</a></span>EnumerableShapes&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt; T &gt; <a class="el" href="#ad83b9054402af5bba41664a28f5e61ef">SSTools.ZoomPictureBox.EnumerableShapes</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定図形の一覧を取得(Enumrator) </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>図形</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>指定図形の一覧</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>型制約</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>BaseShape</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#a9775f75ee32597bb74a02842eec94307">SSTools.ShapeManager.EnumerableShapes()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_ac7b893fa2fd79896d8cadde5ccc25fff_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_ac7b893fa2fd79896d8cadde5ccc25fff_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_ac7b893fa2fd79896d8cadde5ccc25fff_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_ac7b893fa2fd79896d8cadde5ccc25fff_cgraph">
+<area shape="rect" title="指定図形の一覧を取得(Enumrator)" alt="" coords="5,5,250,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#a9775f75ee32597bb74a02842eec94307" title="指定図形の一覧を取得(Enumrator)" alt="" coords="298,5,532,48"/>
+<area shape="poly" title=" " alt="" coords="250,24,282,24,282,29,250,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a22328c7c8a9f500d0d2f98dca83709d9" name="a22328c7c8a9f500d0d2f98dca83709d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22328c7c8a9f500d0d2f98dca83709d9">&#9670;&#160;</a></span>GetLegend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="class_s_s_tools_1_1_zoom_picture_box_1_1_legend_data.html">LegendData</a> &gt; SSTools.ZoomPictureBox.GetLegend </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>visibleOnly</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>登録図形から凡例用データを作成する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visibleOnly</td><td>見えている図形のみか</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>凡例データリスト</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#a66d0bb4ba92df6b812d824a5a006d716">SSTools.ShapeManager.GetLegend()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a22328c7c8a9f500d0d2f98dca83709d9_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a22328c7c8a9f500d0d2f98dca83709d9_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a22328c7c8a9f500d0d2f98dca83709d9_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a22328c7c8a9f500d0d2f98dca83709d9_cgraph">
+<area shape="rect" title="登録図形から凡例用データを作成する" alt="" coords="5,5,202,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#a66d0bb4ba92df6b812d824a5a006d716" title="登録図形から凡例用データを作成する" alt="" coords="250,5,436,48"/>
+<area shape="poly" title=" " alt="" coords="202,24,234,24,234,29,202,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afc5a7bef1ce43deddba3cf86ce344e9b" name="afc5a7bef1ce43deddba3cf86ce344e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc5a7bef1ce43deddba3cf86ce344e9b">&#9670;&#160;</a></span>GetShapeNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; string &gt; SSTools.ZoomPictureBox.GetShapeNames </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>図形の名前一覧の取得 </p>
+<dl class="section return"><dt>戻り値</dt><dd>図形の名前一覧</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#ac7152d8e381267ebc595746fd950f204">SSTools.ShapeManager.GetShapeNames()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_afc5a7bef1ce43deddba3cf86ce344e9b_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_afc5a7bef1ce43deddba3cf86ce344e9b_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_afc5a7bef1ce43deddba3cf86ce344e9b_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_afc5a7bef1ce43deddba3cf86ce344e9b_cgraph">
+<area shape="rect" title="図形の名前一覧の取得" alt="" coords="5,5,202,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#ac7152d8e381267ebc595746fd950f204" title="図形の名前一覧の取得" alt="" coords="250,5,436,48"/>
+<area shape="poly" title=" " alt="" coords="202,24,234,24,234,29,202,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0588979d0f992d59415686ec0f2831b9" name="a0588979d0f992d59415686ec0f2831b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0588979d0f992d59415686ec0f2831b9">&#9670;&#160;</a></span>OnAreaConfirmEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SSTools.ZoomPictureBox.OnAreaConfirmEvent </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; Point &gt;</td>          <td class="paramname"><span class="paramname"><em>pointList</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>表示エリア確定イベント発行 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pointList</td><td>座標リスト</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:確定する</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="#a6b60926c64091363cbecd45ea8c1eea3">SSTools.ZoomPictureBox.AreaConfirmEvent</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="#a0e0339138a62681b8ebb66cd00fb3fd0">SSTools.ZoomPictureBox.OnDoubleClick()</a>, <a class="el" href="#a27fa469e752c14bd359e8354df8b9c14">SSTools.ZoomPictureBox.OnMouseUp()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a0588979d0f992d59415686ec0f2831b9_icgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a0588979d0f992d59415686ec0f2831b9_icgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a0588979d0f992d59415686ec0f2831b9_icgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a0588979d0f992d59415686ec0f2831b9_icgraph">
+<area shape="rect" title="表示エリア確定イベント発行" alt="" coords="246,39,438,81"/>
+<area shape="rect" href="class_s_s_tools_1_1_zoom_picture_box.html#a0e0339138a62681b8ebb66cd00fb3fd0" title="ダブルクリック時の処理" alt="" coords="5,5,198,48"/>
+<area shape="poly" title=" " alt="" coords="230,47,198,43,199,37,231,42"/>
+<area shape="rect" href="class_s_s_tools_1_1_zoom_picture_box.html#a27fa469e752c14bd359e8354df8b9c14" title="マウスアップイベント" alt="" coords="5,72,198,115"/>
+<area shape="poly" title=" " alt="" coords="231,78,199,83,198,77,230,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a447043ad4482b5e9e230200526fb4586" name="a447043ad4482b5e9e230200526fb4586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a447043ad4482b5e9e230200526fb4586">&#9670;&#160;</a></span>OnClickInfoEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.ZoomPictureBox.OnClickInfoEvent </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>imgX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>imgY</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>画像イベント発行 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X座標</td></tr>
+    <tr><td class="paramname">y</td><td>Y座標</td></tr>
+    <tr><td class="paramname">imgX</td><td>画像上のX座標</td></tr>
+    <tr><td class="paramname">imgY</td><td>画像上のY座標</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a867562e7768d0331aa77a13dfa5e1f27">SSTools.ZoomPictureBox.ClickInfoEvent</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="#a27fa469e752c14bd359e8354df8b9c14">SSTools.ZoomPictureBox.OnMouseUp()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a447043ad4482b5e9e230200526fb4586_icgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a447043ad4482b5e9e230200526fb4586_icgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a447043ad4482b5e9e230200526fb4586_icgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a447043ad4482b5e9e230200526fb4586_icgraph">
+<area shape="rect" title="画像イベント発行" alt="" coords="246,5,438,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_zoom_picture_box.html#a27fa469e752c14bd359e8354df8b9c14" title="マウスアップイベント" alt="" coords="5,5,198,48"/>
+<area shape="poly" title=" " alt="" coords="230,29,198,29,198,24,230,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0e0339138a62681b8ebb66cd00fb3fd0" name="a0e0339138a62681b8ebb66cd00fb3fd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e0339138a62681b8ebb66cd00fb3fd0">&#9670;&#160;</a></span>OnDoubleClick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.ZoomPictureBox.OnDoubleClick </td>
+          <td>(</td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ダブルクリック時の処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a0588979d0f992d59415686ec0f2831b9">SSTools.ZoomPictureBox.OnAreaConfirmEvent()</a>, <a class="el" href="class_s_s_tools_1_1_shape_1_1_polygon_shape.html#a89c07522f5422971747bfd85e3b473cc">SSTools.Shape.PolygonShape.Points</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a0e0339138a62681b8ebb66cd00fb3fd0_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a0e0339138a62681b8ebb66cd00fb3fd0_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a0e0339138a62681b8ebb66cd00fb3fd0_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a0e0339138a62681b8ebb66cd00fb3fd0_cgraph">
+<area shape="rect" title="ダブルクリック時の処理" alt="" coords="5,5,198,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_zoom_picture_box.html#a0588979d0f992d59415686ec0f2831b9" title="表示エリア確定イベント発行" alt="" coords="246,5,438,48"/>
+<area shape="poly" title=" " alt="" coords="198,24,230,24,230,29,198,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad83b416ededfb82cdcd23bb6e8a51775" name="ad83b416ededfb82cdcd23bb6e8a51775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad83b416ededfb82cdcd23bb6e8a51775">&#9670;&#160;</a></span>OnInfoEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.ZoomPictureBox.OnInfoEvent </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>imgX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>imgY</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>画素情報取得イベント発行 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X座標</td></tr>
+    <tr><td class="paramname">y</td><td>Y座標</td></tr>
+    <tr><td class="paramname">imgX</td><td>画像上のX座標</td></tr>
+    <tr><td class="paramname">imgY</td><td>画像上のY座標</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a064738a37c7bbef7c5de1ff397aed0e2">SSTools.ZoomPictureBox.InfoEvent</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="#a697e537868c5511b0bcf4f34acb28570">SSTools.ZoomPictureBox.OnMouseMove()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_ad83b416ededfb82cdcd23bb6e8a51775_icgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_ad83b416ededfb82cdcd23bb6e8a51775_icgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_ad83b416ededfb82cdcd23bb6e8a51775_icgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_ad83b416ededfb82cdcd23bb6e8a51775_icgraph">
+<area shape="rect" title="画素情報取得イベント発行" alt="" coords="246,5,438,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_zoom_picture_box.html#a697e537868c5511b0bcf4f34acb28570" title="マウス移動イベント" alt="" coords="5,5,198,48"/>
+<area shape="poly" title=" " alt="" coords="230,29,198,29,198,24,230,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0c5f92c05ce9b5e94f00199f20b95ecd" name="a0c5f92c05ce9b5e94f00199f20b95ecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c5f92c05ce9b5e94f00199f20b95ecd">&#9670;&#160;</a></span>OnMouseDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.ZoomPictureBox.OnMouseDown </td>
+          <td>(</td>
+          <td class="paramtype">MouseEventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マウスダウンイベント </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a697e537868c5511b0bcf4f34acb28570" name="a697e537868c5511b0bcf4f34acb28570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a697e537868c5511b0bcf4f34acb28570">&#9670;&#160;</a></span>OnMouseMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.ZoomPictureBox.OnMouseMove </td>
+          <td>(</td>
+          <td class="paramtype">MouseEventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マウス移動イベント </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="#a064738a37c7bbef7c5de1ff397aed0e2">SSTools.ZoomPictureBox.InfoEvent</a>, <a class="el" href="#ad83b416ededfb82cdcd23bb6e8a51775">SSTools.ZoomPictureBox.OnInfoEvent()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a697e537868c5511b0bcf4f34acb28570_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a697e537868c5511b0bcf4f34acb28570_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a697e537868c5511b0bcf4f34acb28570_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a697e537868c5511b0bcf4f34acb28570_cgraph">
+<area shape="rect" title="マウス移動イベント" alt="" coords="5,5,198,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_zoom_picture_box.html#ad83b416ededfb82cdcd23bb6e8a51775" title="画素情報取得イベント発行" alt="" coords="246,5,438,48"/>
+<area shape="poly" title=" " alt="" coords="198,24,230,24,230,29,198,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a27fa469e752c14bd359e8354df8b9c14" name="a27fa469e752c14bd359e8354df8b9c14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27fa469e752c14bd359e8354df8b9c14">&#9670;&#160;</a></span>OnMouseUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.ZoomPictureBox.OnMouseUp </td>
+          <td>(</td>
+          <td class="paramtype">MouseEventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マウスアップイベント </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_1_1_polygon_shape.html#a8ec8c55a9c7b9004371185cae39ba43c">SSTools.Shape.PolygonShape.AddPoint()</a>, <a class="el" href="#a38aea48a15a11ecfe89aac45ae17b6d0">SSTools.ZoomPictureBox.AreaSelectColor</a>, <a class="el" href="#a867562e7768d0331aa77a13dfa5e1f27">SSTools.ZoomPictureBox.ClickInfoEvent</a>, <a class="el" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#af159a52ece422b612a8cd642d123a3cf">SSTools.Shape.BaseShape.MarkerSize</a>, <a class="el" href="#a0588979d0f992d59415686ec0f2831b9">SSTools.ZoomPictureBox.OnAreaConfirmEvent()</a>, <a class="el" href="#a447043ad4482b5e9e230200526fb4586">SSTools.ZoomPictureBox.OnClickInfoEvent()</a>, <a class="el" href="class_s_s_tools_1_1_shape_1_1_polygon_shape.html#a89c07522f5422971747bfd85e3b473cc">SSTools.Shape.PolygonShape.Points</a>, <a class="el" href="class_s_s_tools_1_1_shape_1_1_polygon_shape.html#af2662192cd26b35d845fd812ef415666">SSTools.Shape.PolygonShape.StartPoint</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a27fa469e752c14bd359e8354df8b9c14_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a27fa469e752c14bd359e8354df8b9c14_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a27fa469e752c14bd359e8354df8b9c14_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a27fa469e752c14bd359e8354df8b9c14_cgraph">
+<area shape="rect" title="マウスアップイベント" alt="" coords="5,72,198,115"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_polygon_shape.html#a8ec8c55a9c7b9004371185cae39ba43c" title="座標の追加" alt="" coords="246,5,449,48"/>
+<area shape="poly" title=" " alt="" coords="182,69,251,50,252,55,183,74"/>
+<area shape="rect" href="class_s_s_tools_1_1_zoom_picture_box.html#a0588979d0f992d59415686ec0f2831b9" title="表示エリア確定イベント発行" alt="" coords="251,72,444,115"/>
+<area shape="poly" title=" " alt="" coords="198,91,236,91,236,96,198,96"/>
+<area shape="rect" href="class_s_s_tools_1_1_zoom_picture_box.html#a447043ad4482b5e9e230200526fb4586" title="画像イベント発行" alt="" coords="251,139,444,181"/>
+<area shape="poly" title=" " alt="" coords="183,113,252,131,251,137,182,118"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aad310c4fcec0ffc449f94b2f653ff501" name="aad310c4fcec0ffc449f94b2f653ff501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad310c4fcec0ffc449f94b2f653ff501">&#9670;&#160;</a></span>OnMouseWheel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.ZoomPictureBox.OnMouseWheel </td>
+          <td>(</td>
+          <td class="paramtype">MouseEventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マウスホィール </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab52fa42945fe0743c0feb98436ef1969" name="ab52fa42945fe0743c0feb98436ef1969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab52fa42945fe0743c0feb98436ef1969">&#9670;&#160;</a></span>OnPaint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.ZoomPictureBox.OnPaint </td>
+          <td>(</td>
+          <td class="paramtype">PaintEventArgs</td>          <td class="paramname"><span class="paramname"><em>pe</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画イベント </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pe</td><td>Paintイベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#acd0edc0dfd9c1b55d2061edea3c77f0e">SSTools.ShapeManager.Count</a>, <a class="el" href="class_s_s_tools_1_1_shape_1_1_polygon_shape.html#a08776870afe0b86b6a41cffef7d0d14c">SSTools.Shape.PolygonShape.Draw()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_ab52fa42945fe0743c0feb98436ef1969_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_ab52fa42945fe0743c0feb98436ef1969_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_ab52fa42945fe0743c0feb98436ef1969_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_ab52fa42945fe0743c0feb98436ef1969_cgraph">
+<area shape="rect" title="描画イベント" alt="" coords="5,5,198,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_polygon_shape.html#a08776870afe0b86b6a41cffef7d0d14c" title="描画" alt="" coords="246,13,480,40"/>
+<area shape="poly" title=" " alt="" coords="198,24,230,24,230,29,198,29"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#a50e058da057b7319763aabec9a3d9df0" title="描画色を取得" alt="" coords="528,5,714,48"/>
+<area shape="poly" title=" " alt="" coords="480,24,512,24,512,29,480,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9b4c0ead534bb3da6880e0d37f08d67a" name="a9b4c0ead534bb3da6880e0d37f08d67a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b4c0ead534bb3da6880e0d37f08d67a">&#9670;&#160;</a></span>OnSizeChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SSTools.ZoomPictureBox.OnSizeChanged </td>
+          <td>(</td>
+          <td class="paramtype">EventArgs</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コントロールのサイズ変更 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>イベント引数</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a60b1753268935d0c61923859d1d298ad" name="a60b1753268935d0c61923859d1d298ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b1753268935d0c61923859d1d298ad">&#9670;&#160;</a></span>Remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBox.Remove </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定図形を削除 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>名前</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:削除OK</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#a24ccaa6d0ef19958e4178aff0ff8d973">SSTools.ShapeManager.Remove()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a60b1753268935d0c61923859d1d298ad_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a60b1753268935d0c61923859d1d298ad_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a60b1753268935d0c61923859d1d298ad_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a60b1753268935d0c61923859d1d298ad_cgraph">
+<area shape="rect" title="指定図形を削除" alt="" coords="5,5,230,32"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#a24ccaa6d0ef19958e4178aff0ff8d973" title="図形の削除" alt="" coords="278,5,492,32"/>
+<area shape="poly" title=" " alt="" coords="230,16,262,16,262,21,230,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a758b4ed99c5dd6c3ff14051b5a351561" name="a758b4ed99c5dd6c3ff14051b5a351561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a758b4ed99c5dd6c3ff14051b5a351561">&#9670;&#160;</a></span>RemovePattern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBox.RemovePattern </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>パターンで指定された図形を削除 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pattern</td><td>名前のパターン(正規表現)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:削除OK</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#a9978da013332a4db6bb1f29ce1c8c193">SSTools.ShapeManager.RemovePattern()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a758b4ed99c5dd6c3ff14051b5a351561_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a758b4ed99c5dd6c3ff14051b5a351561_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a758b4ed99c5dd6c3ff14051b5a351561_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a758b4ed99c5dd6c3ff14051b5a351561_cgraph">
+<area shape="rect" title="パターンで指定された図形を削除" alt="" coords="5,5,230,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#a9978da013332a4db6bb1f29ce1c8c193" title="パターンを指定して削除" alt="" coords="278,5,492,48"/>
+<area shape="poly" title=" " alt="" coords="230,24,262,24,262,29,230,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab51277ed842025a907c4130162c4ac0a" name="ab51277ed842025a907c4130162c4ac0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab51277ed842025a907c4130162c4ac0a">&#9670;&#160;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.ZoomPictureBox.Reset </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x_ratio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y_ratio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PictureBoxSizeMode</td>          <td class="paramname"><span class="paramname"><em>sizeMode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アフィン行列のリセット </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x_ratio</td><td>X軸比率</td></tr>
+    <tr><td class="paramname">y_ratio</td><td>Y軸比率</td></tr>
+    <tr><td class="paramname">sizeMode</td><td>SizeMode</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab542a8380e339c3be83c15c0164880bc" name="ab542a8380e339c3be83c15c0164880bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab542a8380e339c3be83c15c0164880bc">&#9670;&#160;</a></span>SaveClipImage() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBox.SaveClipImage </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_s_s_tools.html#a59345785469191916f1aa85981faa507">CLIP_OPTION</a></td>          <td class="paramname"><span class="paramname"><em>option</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespace_s_s_tools.html#a59345785469191916f1aa85981faa507ab50339a10e1de285ac99d4c3990b8693">CLIP_OPTION::NONE</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>drawShape</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>drawMask</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Bitmap</td>          <td class="paramname"><span class="paramname"><em>legendImage</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clip_margin</em></span><span class="paramdefsep"> = </span><span class="paramdefval">50</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>図形が入る領域で画像を切り取り、ファイルに保存する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>ファイル名</td></tr>
+    <tr><td class="paramname">option</td><td>切り取りオプション</td></tr>
+    <tr><td class="paramname">drawShape</td><td>図形描画有無</td></tr>
+    <tr><td class="paramname">drawMask</td><td>マスク描画有無</td></tr>
+    <tr><td class="paramname">legendImage</td><td>凡例画像</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:ファイルに保存OK</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#a5b1c69ea0df3f844f56c8d8f65f610a6">SSTools.ShapeManager.GetClip()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_ab542a8380e339c3be83c15c0164880bc_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_ab542a8380e339c3be83c15c0164880bc_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_ab542a8380e339c3be83c15c0164880bc_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_ab542a8380e339c3be83c15c0164880bc_cgraph">
+<area shape="rect" title="図形が入る領域で画像を切り取り、ファイルに保存する" alt="" coords="5,72,211,115"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#a5b1c69ea0df3f844f56c8d8f65f610a6" title="クリッピングした画像を取得" alt="" coords="259,80,468,107"/>
+<area shape="poly" title=" " alt="" coords="211,91,243,91,243,96,211,96"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#ab5ebe8673ebbf9754429dd876f911a85" title="描画(float)" alt="" coords="516,80,712,107"/>
+<area shape="poly" title=" " alt="" coords="468,91,500,91,500,96,468,96"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#a7070e38f80176738a445171c1d136c6b" title="描画" alt="" coords="760,51,978,77"/>
+<area shape="poly" title=" " alt="" coords="713,79,745,76,745,81,713,85"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#ae179af57cf3c6b171a414c89db2ebae0" title="領域に図形が含まれるか" alt="" coords="776,101,962,144"/>
+<area shape="poly" title=" " alt="" coords="713,102,761,108,760,113,713,107"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#a8f64bfd13606235e33ee63c3dd716138" title="文字列の描画" alt="" coords="1026,13,1212,56"/>
+<area shape="poly" title=" " alt="" coords="978,49,1010,45,1011,50,978,54"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#a50e058da057b7319763aabec9a3d9df0" title="描画色を取得" alt="" coords="1260,72,1446,115"/>
+<area shape="poly" title=" " alt="" coords="978,68,1245,84,1245,89,978,73"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#af5983565ef863d8f2852d1fcd22eb735" title="テキスト表示位置の算出" alt="" coords="1260,5,1446,48"/>
+<area shape="poly" title=" " alt="" coords="1212,29,1244,28,1245,33,1212,34"/>
+<area shape="poly" title=" " alt="" coords="1207,54,1251,65,1250,70,1206,59"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#afeb447ddc1011c77d3f2c56680526ae1" title="文字列表示位置からオフセットを算出" alt="" coords="1494,5,1681,48"/>
+<area shape="poly" title=" " alt="" coords="1447,24,1479,24,1479,29,1447,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a027ed911faf713c6d203b749f7208029" name="a027ed911faf713c6d203b749f7208029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a027ed911faf713c6d203b749f7208029">&#9670;&#160;</a></span>SaveClipImage() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBox.SaveClipImage </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rectangle</td>          <td class="paramname"><span class="paramname"><em>rect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>drawShape</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>drawMask</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Bitmap</td>          <td class="paramname"><span class="paramname"><em>legendImage</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定された矩形で画像を切り取り、ファイルに保存する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>ファイル名</td></tr>
+    <tr><td class="paramname">rect</td><td>指定領域</td></tr>
+    <tr><td class="paramname">drawShape</td><td>図形描画有無</td></tr>
+    <tr><td class="paramname">drawMask</td><td>マスク描画有無</td></tr>
+    <tr><td class="paramname">legendImage</td><td>凡例画像</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:ファイルに保存OK</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#a5b1c69ea0df3f844f56c8d8f65f610a6">SSTools.ShapeManager.GetClip()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a027ed911faf713c6d203b749f7208029_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a027ed911faf713c6d203b749f7208029_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a027ed911faf713c6d203b749f7208029_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a027ed911faf713c6d203b749f7208029_cgraph">
+<area shape="rect" title="指定された矩形で画像を切り取り、ファイルに保存する" alt="" coords="5,72,211,115"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#a5b1c69ea0df3f844f56c8d8f65f610a6" title="クリッピングした画像を取得" alt="" coords="259,80,468,107"/>
+<area shape="poly" title=" " alt="" coords="211,91,243,91,243,96,211,96"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#ab5ebe8673ebbf9754429dd876f911a85" title="描画(float)" alt="" coords="516,80,712,107"/>
+<area shape="poly" title=" " alt="" coords="468,91,500,91,500,96,468,96"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#a7070e38f80176738a445171c1d136c6b" title="描画" alt="" coords="760,51,978,77"/>
+<area shape="poly" title=" " alt="" coords="713,79,745,76,745,81,713,85"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#ae179af57cf3c6b171a414c89db2ebae0" title="領域に図形が含まれるか" alt="" coords="776,101,962,144"/>
+<area shape="poly" title=" " alt="" coords="713,102,761,108,760,113,713,107"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#a8f64bfd13606235e33ee63c3dd716138" title="文字列の描画" alt="" coords="1026,13,1212,56"/>
+<area shape="poly" title=" " alt="" coords="978,49,1010,45,1011,50,978,54"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#a50e058da057b7319763aabec9a3d9df0" title="描画色を取得" alt="" coords="1260,72,1446,115"/>
+<area shape="poly" title=" " alt="" coords="978,68,1245,84,1245,89,978,73"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#af5983565ef863d8f2852d1fcd22eb735" title="テキスト表示位置の算出" alt="" coords="1260,5,1446,48"/>
+<area shape="poly" title=" " alt="" coords="1212,29,1244,28,1245,33,1212,34"/>
+<area shape="poly" title=" " alt="" coords="1207,54,1251,65,1250,70,1206,59"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_1_1_base_shape.html#afeb447ddc1011c77d3f2c56680526ae1" title="文字列表示位置からオフセットを算出" alt="" coords="1494,5,1681,48"/>
+<area shape="poly" title=" " alt="" coords="1447,24,1479,24,1479,29,1447,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a69fdb8fca81ace4b8b946b88aa7f5bc9" name="a69fdb8fca81ace4b8b946b88aa7f5bc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69fdb8fca81ace4b8b946b88aa7f5bc9">&#9670;&#160;</a></span>SaveImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBox.SaveImage </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>drawShape</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>drawMask</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>画像を保存 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>ファイル名</td></tr>
+    <tr><td class="paramname">drawShape</td><td>図形描画有無</td></tr>
+    <tr><td class="paramname">drawMask</td><td>マスク描画有無</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:保存OK</dd></dl>
+
+</div>
+</div>
+<a id="a2cb378a017f3678afadbac04815d0f15" name="a2cb378a017f3678afadbac04815d0f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cb378a017f3678afadbac04815d0f15">&#9670;&#160;</a></span>SetShapeProperty() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBox.SetShapeProperty </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SHAPE_PROPERTY</td>          <td class="paramname"><span class="paramname"><em>property</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定図形のプロパティを設定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pattern</td><td>取得する図形名の正規表現</td></tr>
+    <tr><td class="paramname">property</td><td>プロパティ名</td></tr>
+    <tr><td class="paramname">value</td><td>値</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:設定した</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#ad258eac9057cf09afc4eb14cffe08a0b">SSTools.ShapeManager.SetShapeProperty()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a2cb378a017f3678afadbac04815d0f15_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a2cb378a017f3678afadbac04815d0f15_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a2cb378a017f3678afadbac04815d0f15_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a2cb378a017f3678afadbac04815d0f15_cgraph">
+<area shape="rect" title="指定図形のプロパティを設定する" alt="" coords="5,5,201,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#ad258eac9057cf09afc4eb14cffe08a0b" title="指定図形のプロパティを設定する" alt="" coords="249,5,434,48"/>
+<area shape="poly" title=" " alt="" coords="201,24,233,24,233,29,201,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1ad804ed4ce01f42c3de490563ae274d" name="a1ad804ed4ce01f42c3de490563ae274d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ad804ed4ce01f42c3de490563ae274d">&#9670;&#160;</a></span>SetShapeProperty() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBox.SetShapeProperty </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>property</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定図形のプロパティを設定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pattern</td><td>取得する図形名の正規表現</td></tr>
+    <tr><td class="paramname">property</td><td>プロパティ名</td></tr>
+    <tr><td class="paramname">value</td><td>値</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true:設定した</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="class_s_s_tools_1_1_shape_manager.html#ad258eac9057cf09afc4eb14cffe08a0b">SSTools.ShapeManager.SetShapeProperty()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_s_tools_1_1_zoom_picture_box_a1ad804ed4ce01f42c3de490563ae274d_cgraph.png" border="0" usemap="#aclass_s_s_tools_1_1_zoom_picture_box_a1ad804ed4ce01f42c3de490563ae274d_cgraph" alt=""/></div>
+<map name="aclass_s_s_tools_1_1_zoom_picture_box_a1ad804ed4ce01f42c3de490563ae274d_cgraph" id="aclass_s_s_tools_1_1_zoom_picture_box_a1ad804ed4ce01f42c3de490563ae274d_cgraph">
+<area shape="rect" title="指定図形のプロパティを設定する" alt="" coords="5,5,201,48"/>
+<area shape="rect" href="class_s_s_tools_1_1_shape_manager.html#ad258eac9057cf09afc4eb14cffe08a0b" title="指定図形のプロパティを設定する" alt="" coords="249,5,434,48"/>
+<area shape="poly" title=" " alt="" coords="201,24,233,24,233,29,201,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab249bfced8485595ccdf529592838850" name="ab249bfced8485595ccdf529592838850"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab249bfced8485595ccdf529592838850">&#9670;&#160;</a></span>SetShowRectAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SSTools.ZoomPictureBox.SetShowRectAngle </td>
+          <td>(</td>
+          <td class="paramtype">Rectangle</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>表示領域の指定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>表示する領域</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6fffdab53f005a3af0e218b04566d36c" name="a6fffdab53f005a3af0e218b04566d36c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fffdab53f005a3af0e218b04566d36c">&#9670;&#160;</a></span>ToClipBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SSTools.ZoomPictureBox.ToClipBoard </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>drawShape</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>drawMask</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>クリップボードに画像をコピー </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drawShape</td><td>図形描画有無</td></tr>
+    <tr><td class="paramname">drawMask</td><td>マスク描画有無</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true;クリップボードにコピーOK</dd></dl>
+
+</div>
+</div>
+<a id="abfbda69e1fc9ab4a763e5cc712cc957a" name="abfbda69e1fc9ab4a763e5cc712cc957a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfbda69e1fc9ab4a763e5cc712cc957a">&#9670;&#160;</a></span>ZoomPictureBox_InfoEventHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">delegate void SSTools.ZoomPictureBox.ZoomPictureBox_InfoEventHandler </td>
+          <td>(</td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>sender</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_s_s_tools_1_1_zoom_picture_box_1_1_picture_box_info.html">PictureBoxInfo</a></td>          <td class="paramname"><span class="paramname"><em>info</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>画素情報取得イベントハンドラ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sender</td><td>送信元</td></tr>
+    <tr><td class="paramname">info</td><td>画素情報</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>SSTools/CustomizeControl/<b>ZoomPictureBox.cs</b></li>
+<li>SSTools/CustomizeControl/<b>ZoomPictureBoxUtils.cs</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_s_s_tools.html">SSTools</a></li><li class="navelem"><a class="el" href="class_s_s_tools_1_1_zoom_picture_box.html">ZoomPictureBox</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

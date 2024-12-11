@@ -20,21 +20,21 @@ namespace SSTools
         /// </summary>
         public enum ERROR_CODE : int
         {
-            NONE = 0,
-            UNEXPECTED_PARENTHESES_START = 1,   // 意図しない括弧'('開始
-            UNEXPECTED_PARENTHESES_END = 2,     // 意図しない括弧')'終了
-            UNEXPECTED_BRACKETS_START = 3,      // 意図しない括弧'['開始
-            UNEXPECTED_BRACKETS_END = 4,        // 意図しない括弧']'終了
-            UNEXPECTED_CURLY_BRACKETS_START = 5,// 意図しない括弧'['開始
-            UNEXPECTED_CURLY_BRACKETS_END = 6,  // 意図しない括弧']'終了
-            UNEXPECTED_EQUAL = 7,               // 意図しない'='
-            UNEXPECTED_COLON = 8,               // 意図しない':'
-            UNEXPECTED_END_OF_TEXT = 9,         // 意図しない文字列の終了
-            UNKNOWN_LITERAL = 10,               // リテラルが特定できない
-            HEX_CONVERT_ERROR = 30,             // 16進数から変換エラー
-            BIN_CONVERT_ERROR = 31,             // 2進数から変換エラー
-            QUOTE_END_OF_TEXT = 40,             // 文字列引用符が見つからない
-            ASSIGN_NAME_AND_LITERAL = 50,       // 名前と値の両方がある
+            NONE = 0,                           //!< エラーなし
+            UNEXPECTED_PARENTHESES_START = 1,   //!< 意図しない括弧'('開始
+            UNEXPECTED_PARENTHESES_END = 2,     //!< 意図しない括弧')'終了
+            UNEXPECTED_BRACKETS_START = 3,      //!< 意図しない括弧'['開始
+            UNEXPECTED_BRACKETS_END = 4,        //!< 意図しない括弧']'終了
+            UNEXPECTED_CURLY_BRACKETS_START = 5,//!< 意図しない括弧'['開始
+            UNEXPECTED_CURLY_BRACKETS_END = 6,  //!< 意図しない括弧']'終了
+            UNEXPECTED_EQUAL = 7,               //!< 意図しない'='
+            UNEXPECTED_COLON = 8,               //!< 意図しない':'
+            UNEXPECTED_END_OF_TEXT = 9,         //!< 意図しない文字列の終了
+            UNKNOWN_LITERAL = 10,               //!< リテラルが特定できない
+            HEX_CONVERT_ERROR = 30,             //!< 16進数から変換エラー
+            BIN_CONVERT_ERROR = 31,             //!< 2進数から変換エラー
+            QUOTE_END_OF_TEXT = 40,             //!< 文字列引用符が見つからない
+            ASSIGN_NAME_AND_LITERAL = 50,       //!< 名前と値の両方がある
         }
         /// <summary>
         /// 解析Exception
@@ -60,13 +60,20 @@ namespace SSTools
             /// <param name="args">フォーマット引数</param>
             public ParserException(ERROR_CODE error_code, string format, params object[] args)
                 : base(string.Format(format, args)) => ErrorCode = error_code;
+            /// <summary>
+            /// 解析エラー
+            /// </summary>
+            /// <param name="error_code">エラーコード</param>
+            /// <param name="innerException">内部で発生した例外</param>
+            /// <param name="format">フォーマット</param>
+            /// <param name="args">フォーマット引数</param>
             public ParserException(ERROR_CODE error_code, Exception innerException, string format, params object[] args)
                 : base(string.Format(format, args), innerException) => ErrorCode = error_code;
             /// <summary>
             /// シリアル化された情報からExceptionを生成
             /// </summary>
-            /// <param name="info"></param>
-            /// <param name="context"></param>
+            /// <param name="info">シリアル化情報</param>
+            /// <param name="context">コンテキスト</param>
             protected ParserException(SerializationInfo info, StreamingContext context) : base(info, context)
             {
                 // エラーコードを取得
@@ -110,12 +117,12 @@ namespace SSTools
         /// </summary>
         private enum LITELAL_TYPE
         {
-            NONE,       // なし
-            STRING,     // 文字列(クォートされた文字列)
-            NUMBER,     // 数値
-            NAME,       // 名前
-            PENDING,    // 判定保留
-            ERROR       // エラー
+            NONE,       //!< なし
+            STRING,     //!< 文字列(クォートされた文字列)
+            NUMBER,     //!< 数値
+            NAME,       //!< 名前
+            PENDING,    //!< 判定保留
+            ERROR       //!< エラー
         }
 
         /// <summary>
@@ -935,6 +942,8 @@ namespace SSTools
             /// コンストラクタ
             /// </summary>
             /// <param name="obj">引数オブジェクト</param>
+            /// <param name="startChar">開始文字</param>
+            /// <param name="endChar">終了文字</param>
             public ParenthesesOrBrackets(object obj, char startChar, char endChar)
             {
                 Arguments = obj;

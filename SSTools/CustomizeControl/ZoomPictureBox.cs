@@ -18,14 +18,34 @@ namespace SSTools
     /// </summary>
     public partial class ZoomPictureBox : PictureBox
     {
-
+        /// <summary>
+        /// 画素情報クラス
+        /// </summary>
         public class PictureBoxInfo
         {
+            /// <summary>
+            /// X座標
+            /// </summary>
             public int X { get; private set; }
+            /// <summary>
+            /// Y座標
+            /// </summary>
             public int Y { get; private set; }
+            /// <summary>
+            /// 画像上でのX座標
+            /// </summary>
             public int ImageX { get; private set; }
+            /// <summary>
+            /// 画像上でのY座標
+            /// </summary>
             public int ImageY { get; private set; }
-
+            /// <summary>
+            /// コンストラクタ
+            /// </summary>
+            /// <param name="x">X座標</param>
+            /// <param name="y">Y座標</param>
+            /// <param name="imgX">画像上のX座標</param>
+            /// <param name="imgY">画像上のY座標</param>
             public PictureBoxInfo(int x, int y, int imgX, int imgY)
             {
                 X = x;
@@ -34,13 +54,38 @@ namespace SSTools
                 ImageY = imgY;
             }
         }
+        /// <summary>
+        ///画素情報取得イベントハンドラ
+        /// </summary>
+        /// <param name="sender">送信元</param>
+        /// <param name="info">画素情報</param>
         public delegate void ZoomPictureBox_InfoEventHandler(object sender, PictureBoxInfo info);
+        /// <summary>
+        /// 画素情報取得イベント
+        /// </summary>
         public event ZoomPictureBox_InfoEventHandler InfoEvent;
+        /// <summary>
+        /// 画素情報取得イベント発行
+        /// </summary>
+        /// <param name="x">X座標</param>
+        /// <param name="y">Y座標</param>
+        /// <param name="imgX">画像上のX座標</param>
+        /// <param name="imgY">画像上のY座標</param>
         protected void OnInfoEvent(int x, int y, int imgX, int imgY)
         {
             InfoEvent?.Invoke(this, new PictureBoxInfo(x, y, imgX, imgY));
         }
+        /// <summary>
+        /// 画像クリックイベント
+        /// </summary>
         public event ZoomPictureBox_InfoEventHandler ClickInfoEvent;
+        /// <summary>
+        /// 画像イベント発行
+        /// </summary>
+        /// <param name="x">X座標</param>
+        /// <param name="y">Y座標</param>
+        /// <param name="imgX">画像上のX座標</param>
+        /// <param name="imgY">画像上のY座標</param>
         protected void OnClickInfoEvent(int x, int y, int imgX, int imgY)
         {
             ClickInfoEvent?.Invoke(this, new PictureBoxInfo(x, y, imgX, imgY));
@@ -51,7 +96,13 @@ namespace SSTools
         /// </summary>
         private readonly ZoomPictureBoxAffineMatrix affineMatrix_ = new ZoomPictureBoxAffineMatrix();
 
+        /// <summary>
+        /// 画像表示をするか
+        /// </summary>
         private bool showImage_ = true;
+        /// <summary>
+        /// 画像表示をするかどうか(プロパティ)
+        /// </summary>
         public bool ShowImage { get { return showImage_; }
             set
             {
@@ -96,7 +147,9 @@ namespace SSTools
             }
         }
 
-
+        /// <summary>
+        /// Imageを自動削除するかどうか(プロパティ)
+        /// </summary>
         public bool AutoImageDispose { get; set; } = true;
 
         /// <summary>
@@ -119,6 +172,10 @@ namespace SSTools
                 Refresh();
             }
         }
+        /// <summary>
+        /// 表示領域の指定
+        /// </summary>
+        /// <param name="rect">表示する領域</param>
         public void SetShowRectAngle(Rectangle rect)
         {
             // Matrixの計算
@@ -156,6 +213,9 @@ namespace SSTools
         /// マスク表示
         /// </summary>
         private bool maskShow_ = true;
+        /// <summary>
+        /// マスク画像の表示有無(プロパティ)
+        /// </summary>
         public bool MaskShow
         {
             get { return maskShow_; }
@@ -169,8 +229,13 @@ namespace SSTools
                 }
             }
         }
-
+        /// <summary>
+        /// 図形表示有無
+        /// </summary>
         private bool shapeShow_ = true;
+        /// <summary>
+        /// 図形表示有無(プロパティ)
+        /// </summary>
         public bool ShapeShow
         {
             get { return shapeShow_; }
@@ -197,7 +262,7 @@ namespace SSTools
         private float yRatio_ = 1.0F;
 
         /// <summary>
-        /// X軸比率
+        /// X軸比率(プロパティ)
         /// </summary>
         public float XRatio
         {
@@ -213,7 +278,7 @@ namespace SSTools
             }
         }
         /// <summary>
-        /// Y軸比率
+        /// Y軸比率(プロパティ)
         /// </summary>
         public float YRatio
         {
@@ -229,7 +294,7 @@ namespace SSTools
             }
         }
         /// <summary>
-        /// SizeMode
+        /// SizeMode(プロパティ)
         /// </summary>
         public new PictureBoxSizeMode SizeMode
         {
@@ -241,16 +306,26 @@ namespace SSTools
                 Refresh();
             }
         }
-
+        /// <summary>
+        /// PictureBox描画モード
+        /// </summary>
         public enum PictureBoxDrawMode
         {
-            NORMAL = 0,
-            AREA_SELECT,
-            DRAW,
+            NORMAL = 0,     //!< 通常
+            AREA_SELECT,    //!< エリア選択中
+            DRAW,           //!< 描画中
         }
+        /// <summary>
+        /// エリア選択時の色
+        /// </summary>
         public Color AreaSelectColor { get; set; } = Color.YellowGreen;
-
+        /// <summary>
+        /// PictureBox描画モード指定
+        /// </summary>
         private PictureBoxDrawMode pictureBoxDrawMode_ = PictureBoxDrawMode.NORMAL;
+        /// <summary>
+        /// PictureBox描画モード指定(プロパティ)
+        /// </summary>
         public PictureBoxDrawMode PictureBoxMode
         {
             get { return pictureBoxDrawMode_; }
@@ -279,7 +354,7 @@ namespace SSTools
         /// <summary>
         /// 描画イベント
         /// </summary>
-        /// <param name="pe"></param>
+        /// <param name="pe">Paintイベント引数</param>
         protected override void OnPaint(PaintEventArgs pe)
         {
             if (base.Image != null)
@@ -323,6 +398,7 @@ namespace SSTools
         /// アフィン行列の計算
         /// </summary>
         /// <param name="isReset">true;倍率リセット</param>
+        /// <param name="rect">表示指定領域</param>
         private void CalcMatrix(bool isReset = false, Rectangle? rect = null)
         {
             if (base.Image != null)
@@ -336,7 +412,7 @@ namespace SSTools
         /// <summary>
         /// コントロールのサイズ変更
         /// </summary>
-        /// <param name="e"></param>
+        /// <param name="e">イベント引数</param>
         protected override void OnSizeChanged(EventArgs e)
         {
             base.OnSizeChanged(e);
@@ -352,7 +428,7 @@ namespace SSTools
         /// <summary>
         /// マウスホィール
         /// </summary>
-        /// <param name="e"></param>
+        /// <param name="e">イベント引数</param>
         protected override void OnMouseWheel(MouseEventArgs e)
         {
             base.OnMouseWheel(e);
@@ -376,7 +452,7 @@ namespace SSTools
         /// <summary>
         /// マウスダウンイベント
         /// </summary>
-        /// <param name="e"></param>
+        /// <param name="e">イベント引数</param>
         protected override void OnMouseDown(MouseEventArgs e)
         {
             // ドラッグ中
@@ -384,9 +460,22 @@ namespace SSTools
             // 座標値を保存
             beforeMousePosition = e.Location;
         }
-
+        /// <summary>
+        /// 表示エリア確定イベントハンドラ
+        /// </summary>
+        /// <param name="sender">送信元</param>
+        /// <param name="pointList">座標リスト</param>
+        /// <returns>true:確定する</returns>
         public delegate bool AreaConfirmEventHandler(object sender, List<Point> pointList);
+        /// <summary>
+        /// 表示エリア確定イベント
+        /// </summary>
         public event AreaConfirmEventHandler AreaConfirmEvent;
+        /// <summary>
+        /// 表示エリア確定イベント発行
+        /// </summary>
+        /// <param name="pointList">座標リスト</param>
+        /// <returns>true:確定する</returns>
         protected virtual bool OnAreaConfirmEvent(List<Point> pointList)
         {
             if (AreaConfirmEvent != null)
@@ -398,7 +487,7 @@ namespace SSTools
         /// <summary>
         /// マウスアップイベント
         /// </summary>
-        /// <param name="e"></param>
+        /// <param name="e">イベント引数</param>
         protected override void OnMouseUp(MouseEventArgs e)
         {
             if (isMouseDown)
@@ -442,6 +531,10 @@ namespace SSTools
             }
 
         }
+        /// <summary>
+        /// ダブルクリック時の処理
+        /// </summary>
+        /// <param name="e">イベント引数</param>
         protected override void OnDoubleClick(EventArgs e)
         {
             if ((pictureBoxDrawMode_ == PictureBoxDrawMode.AREA_SELECT) && (areaSelectShape_ != null))
@@ -461,7 +554,7 @@ namespace SSTools
         /// <summary>
         /// マウス移動イベント
         /// </summary>
-        /// <param name="e"></param>
+        /// <param name="e">イベント引数</param>
         protected override void OnMouseMove(MouseEventArgs e)
         {
             if ((isMouseDown) && (e.Button == MouseButtons.Left))
@@ -511,7 +604,10 @@ namespace SSTools
         /// </summary>
         //private readonly Dictionary<string, Shape.BaseShape> shapeDictionary = new Dictionary<string, Shape.BaseShape>();
         private ShapeManager _Shapes = new ShapeManager();
-
+        /// <summary>
+        /// 登録されている図形の一覧を取得する(Enumrator)
+        /// </summary>
+        /// <returns>登録されている図形</returns>
         public IEnumerable<Shape.BaseShape> EnumerableShape()
         {
             return _Shapes.EnumerableShape();
@@ -520,7 +616,7 @@ namespace SSTools
         /// 指定図形の一覧を取得(Enumrator)
         /// </summary>
         /// <typeparam name="T">図形</typeparam>
-        /// <returns></returns>
+        /// <returns>指定図形の一覧</returns>
         public IEnumerable<T> EnumerableShapes<T>() where T : BaseShape
         {
             return _Shapes.EnumerableShapes<T>();
@@ -529,20 +625,31 @@ namespace SSTools
         /// 指定図形の一覧を取得(Enumrator)
         /// </summary>
         /// <param name="pattern">取得する図形名の正規表現</param>
-        /// <returns></returns>
+        /// <returns>指定図形の一覧</returns>
         public IEnumerable<BaseShape> EnumerableShapes(string pattern)
         {
             return _Shapes.EnumerableShapes(pattern);
         }
-
+        /// <summary>
+        /// 図形の追加
+        /// </summary>
+        /// <param name="shape">図形</param>
         public void AddShape(Shape.BaseShape shape)
         {
             _Shapes.AddShape(shape);
         }
+        /// <summary>
+        /// 複数図形の追加
+        /// </summary>
+        /// <param name="shapes">図形</param>
         public void AddShape(IEnumerable<Shape.BaseShape> shapes)
         {
             _Shapes.AddShape(shapes);
         }
+        /// <summary>
+        /// 図形の追加
+        /// </summary>
+        /// <param name="shapes">図形マネージャ</param>
         public void AddShape(ShapeManager shapes)
         {
             _Shapes.AddShape(shapes);
@@ -551,32 +658,54 @@ namespace SSTools
         /// <summary>
         /// 図形の名前一覧の取得
         /// </summary>
-        /// <returns></returns>
+        /// <returns>図形の名前一覧</returns>
         public List<string> GetShapeNames()
         {
             return _Shapes.GetShapeNames();
         }
+        /// <summary>
+        /// 指定図形の色を設定
+        /// </summary>
+        /// <param name="name">図形名</param>
+        /// <param name="color">色</param>
+        /// <returns>true;設定OK</returns>
         public bool ChangeColor(string name,Color color)
         {
             return _Shapes.SetShapeProperty(name,ShapeManager.SHAPE_PROPERTY.Color,color);
         }
+        /// <summary>
+        /// 指定図形の表示有無を設定
+        /// </summary>
+        /// <param name="name">名前</param>
+        /// <param name="visible">表示有無</param>
+        /// <returns>true;設定OK</returns>
         public bool ChangeVisible(string name, bool visible)
         {
             return (_Shapes.SetShapeProperty(name, ShapeManager.SHAPE_PROPERTY.Visible,visible));
         }
-
+        /// <summary>
+        /// 指定図形を削除
+        /// </summary>
+        /// <param name="name">名前</param>
+        /// <returns>true:削除OK</returns>
         public bool Remove(string name)
         {
            return _Shapes.Remove(name);
         }
-
+        /// <summary>
+        /// パターンで指定された図形を削除
+        /// </summary>
+        /// <param name="pattern">名前のパターン(正規表現)</param>
+        /// <returns>true:削除OK</returns>
         public bool RemovePattern(string pattern)
         {
             return _Shapes.RemovePattern(pattern);
         }
 
 
-
+        /// <summary>
+        /// 図形の全クリア
+        /// </summary>
         public void ClearShape()
         {
             _Shapes.ClearShape();
@@ -606,7 +735,11 @@ namespace SSTools
         }
 
 
-
+        /// <summary>
+        /// 図形の描画
+        /// </summary>
+        /// <param name="g">グラフィックス</param>
+        /// <returns>true:図形を描画した</returns>
         private bool DrawShape(Graphics g)
         {
             // 描画領域
@@ -619,11 +752,10 @@ namespace SSTools
         /// <summary>
         /// 画像を保存
         /// </summary>
-        /// <param name="filename"></param>
-        /// <param name="drawShape"></param>
-        /// <param name="drawMask"></param>
-        /// <returns></returns>
-
+        /// <param name="filename">ファイル名</param>
+        /// <param name="drawShape">図形描画有無</param>
+        /// <param name="drawMask">マスク描画有無</param>
+        /// <returns>true:保存OK</returns>
         public bool SaveImage(string filename, bool drawShape = true, bool drawMask = true)
         {
             bool result = false;
@@ -649,9 +781,9 @@ namespace SSTools
         /// <summary>
         /// クリップボードに画像をコピー
         /// </summary>
-        /// <param name="drawShape"></param>
-        /// <param name="drawMask"></param>
-        /// <returns></returns>
+        /// <param name="drawShape">図形描画有無</param>
+        /// <param name="drawMask">マスク描画有無</param>
+        /// <returns>true;クリップボードにコピーOK</returns>
         public bool ToClipBoard(bool drawShape = true, bool drawMask = true)
         {
             bool result = false;
@@ -669,9 +801,9 @@ namespace SSTools
         /// <summary>
         /// 画像をBitmapにコピーする
         /// </summary>
-        /// <param name="drawShape"></param>
-        /// <param name="drawMask"></param>
-        /// <returns></returns>
+        /// <param name="drawShape">図形描画有無</param>
+        /// <param name="drawMask">マスク描画有無</param>
+        /// <returns>画像のビットマップ</returns>
         private Bitmap GetImageToBitmap(bool drawShape = true, bool drawMask = true)
         {
             if (base.Image != null)
@@ -697,12 +829,12 @@ namespace SSTools
         /// <summary>
         /// 指定された矩形で画像を切り取り、ファイルに保存する
         /// </summary>
-        /// <param name="filename"></param>
-        /// <param name="rect"></param>
-        /// <param name="drawShape"></param>
-        /// <param name="drawMask"></param>
-        /// <param name="legendImage"></param>
-        /// <returns></returns>
+        /// <param name="filename">ファイル名</param>
+        /// <param name="rect">指定領域</param>
+        /// <param name="drawShape">図形描画有無</param>
+        /// <param name="drawMask">マスク描画有無</param>
+        /// <param name="legendImage">凡例画像</param>
+        /// <returns>true:ファイルに保存OK</returns>
         public bool SaveClipImage(string filename, Rectangle rect, bool drawShape = true, bool drawMask = true, Bitmap legendImage = null)
         {
             if (base.Image != null)
@@ -730,12 +862,12 @@ namespace SSTools
         /// <summary>
         /// 図形が入る領域で画像を切り取り、ファイルに保存する
         /// </summary>
-        /// <param name="filename"></param>
-        /// <param name="option"></param>
-        /// <param name="drawShape"></param>
-        /// <param name="drawMask"></param>
-        /// <param name="legendImage"></param>
-        /// <returns></returns>
+        /// <param name="filename">ファイル名</param>
+        /// <param name="option">切り取りオプション</param>
+        /// <param name="drawShape">図形描画有無</param>
+        /// <param name="drawMask">マスク描画有無</param>
+        /// <param name="legendImage">凡例画像</param>
+        /// <returns>true:ファイルに保存OK</returns>
         public bool SaveClipImage(string filename, CLIP_OPTION option = CLIP_OPTION.NONE, bool drawShape = true, bool drawMask = true, 
             Bitmap legendImage = null,int clip_margin = 50)
         {
@@ -765,8 +897,8 @@ namespace SSTools
         /// <summary>
         /// 登録図形から凡例用データを作成する
         /// </summary>
-        /// <param name="visibleOnly"></param>
-        /// <returns></returns>
+        /// <param name="visibleOnly">見えている図形のみか</param>
+        /// <returns>凡例データリスト</returns>
         public List<LegendData> GetLegend(bool visibleOnly = false)
         {
             return _Shapes.GetLegend(visibleOnly);

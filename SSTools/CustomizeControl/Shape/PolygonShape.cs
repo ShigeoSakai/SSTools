@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace SSTools.Shape
 {
+    /// <summary>
+    /// 多角形クラス
+    /// </summary>
     public class PolygonShape : BaseShape
     {
         /// <summary>
@@ -100,7 +103,7 @@ namespace SSTools.Shape
         /// <summary>
         /// コピーコンストラクタ
         /// </summary>
-        /// <param name="src"></param>
+        /// <param name="src">コピー元</param>
         public PolygonShape(PolygonShape src) : base(src) 
         {
             points = new List<Point>(src.Points);
@@ -112,6 +115,7 @@ namespace SSTools.Shape
         /// <summary>
         /// クローンコピー
         /// </summary>
+       /// <returns>コピーされたオブジェクト</returns>
         public override BaseShape Clone()
         {
             return new PolygonShape(this);
@@ -173,6 +177,7 @@ namespace SSTools.Shape
         /// 描画
         /// </summary>
         /// <param name="g">グラフィックス</param>
+        /// <param name="size">表示サイズ</param>
         public override void Draw(Graphics g, SizeF? size)
         {
             if (Visible)
@@ -215,6 +220,10 @@ namespace SSTools.Shape
                 }
             }
         }
+        /// <summary>
+        /// 描画領域サイズを取得
+        /// </summary>
+        /// <returns>描画領域サイズ</returns>
         public override Rectangle GetDrawSize()
         {
             Rectangle rect = GetBoundingRect();

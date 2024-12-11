@@ -9,18 +9,27 @@ using System.Windows.Forms;
 
 namespace SSTools.Shape
 {
+    /// <summary>
+    /// 円,楕円クラス
+    /// </summary>
     public class CircleShape : BaseShape
     {
         /// <summary>
         /// 塗りつぶすかどうか
         /// </summary>
         public bool Fill { get; set; } = false;
-
+        /// <summary>
+        /// 中心点を表示するか
+        /// </summary>
         public bool ShowCenter { get; set; } = false;
 
-
+        /// <summary>
+        /// 外接矩形
+        /// </summary>
         private RectangleF _enclosingRectangle = new RectangleF();
-
+        /// <summary>
+        /// 外接矩形(Rectangle)(プロパティ)
+        /// </summary>
         public Rectangle EnclosingRectangle 
         {
             get {
@@ -38,6 +47,9 @@ namespace SSTools.Shape
                     (int)(_enclosingRectangle.Y + value.Height / 2));
             }
         }
+        /// <summary>
+        /// 外接矩形(RectangleF)(プロパティ)
+        /// </summary>
         public RectangleF EnclosingRectangleF
         {
             get => _enclosingRectangle;
@@ -49,7 +61,9 @@ namespace SSTools.Shape
             }
         }
 
-
+        /// <summary>
+        /// 横方向の半径
+        /// </summary>
         public float RadiusX
         {
             get
@@ -66,6 +80,9 @@ namespace SSTools.Shape
                     value, _enclosingRectangle.Height);
             }
         }
+        /// <summary>
+        /// 縦方向の半径
+        /// </summary>
         public float RadiusY
         {
             get
@@ -83,19 +100,55 @@ namespace SSTools.Shape
             }
         }
 
-
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="name">図形名</param>
         public CircleShape(string name) : base(name) { }
-
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="name">図形名</param>
+        /// <param name="color">色</param>
+        /// <param name="lineWidth">線幅</param>
+        /// <param name="dashStyle">線種</param>
+        /// <param name="markerSize">マーカーサイズ</param>
         public CircleShape(string name, Color? color = null, float? lineWidth = null, DashStyle? dashStyle = null, float? markerSize = null)
             : base(name, color, lineWidth, dashStyle, markerSize) { }
-
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="name">図形名</param>
+        /// <param name="point">中心座標</param>
+        /// <param name="color">色</param>
+        /// <param name="lineWidth">線幅</param>
+        /// <param name="dashStyle">線種</param>
+        /// <param name="markerSize">マーカーサイズ</param>
         public CircleShape(string name, Point point, Color? color = null, float? lineWidth = null, DashStyle? dashStyle = null, float? markerSize = null)
             : base(name, point, color, lineWidth, dashStyle, markerSize) { }
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="name">図形名</param>
+        /// <param name="rect">外接矩形</param>
+        /// <param name="color">色</param>
+        /// <param name="lineWidth">線幅</param>
+        /// <param name="dashStyle">線種</param>
+        /// <param name="markerSize">マーカーサイズ</param>
         public CircleShape(string name, Rectangle rect, Color? color = null, float? lineWidth = null, DashStyle? dashStyle = null, float? markerSize = null)
             : base(name,  color, lineWidth, dashStyle, markerSize) 
         {
             EnclosingRectangle= rect;
         }
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="name">図形名</param>
+        /// <param name="rect">外接矩形</param>
+        /// <param name="color">色</param>
+        /// <param name="lineWidth">線幅</param>
+        /// <param name="dashStyle">線種</param>
+        /// <param name="markerSize">マーカーサイズ</param>
         public CircleShape(string name, RectangleF rect, Color? color = null, float? lineWidth = null, DashStyle? dashStyle = null, float? markerSize = null)
             : base(name, color, lineWidth, dashStyle, markerSize)
         {
@@ -104,7 +157,7 @@ namespace SSTools.Shape
         /// <summary>
         /// コピーコンストラクタ
         /// </summary>
-        /// <param name="src"></param>
+        /// <param name="src">コピー元</param>
         public CircleShape(CircleShape src) : base(src)
         {
             Fill = src.Fill;
@@ -114,6 +167,7 @@ namespace SSTools.Shape
         /// <summary>
         /// クローンコピー
         /// </summary>
+        /// <returns>コピーされたオブジェクト</returns>
         public override BaseShape Clone()
         {
             return new CircleShape(this);
@@ -136,6 +190,7 @@ namespace SSTools.Shape
         /// 描画
         /// </summary>
         /// <param name="g">グラフィックス</param>
+        /// <param name="size">表示サイズ</param>
         public override void Draw(Graphics g, SizeF? size)
         {
             if (Visible)
@@ -163,6 +218,10 @@ namespace SSTools.Shape
                 }
             }
         }
+        /// <summary>
+        /// 描画領域サイズを取得
+        /// </summary>
+        /// <returns>描画領域サイズ</returns>
         public override Rectangle GetDrawSize()
         {
             return new Rectangle(

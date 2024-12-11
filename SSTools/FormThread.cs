@@ -30,7 +30,7 @@ namespace SSTools
 	///        (プロパティの型にキャストが必要)
 	///        取得できない場合はnull
 	///        
-	///    プロパティの型  thread.GetProperty<プロパティの型>(プロパティ名)
+	///    プロパティの型  thread.GetProperty＜プロパティの型＞(プロパティ名)
 	///        プロパティ名,型が一致した場合、プロパティ値を返す。
 	///        取得できない場合は、その型のデフォルト値
 	///        
@@ -39,7 +39,7 @@ namespace SSTools
 	///        プロパティ名,型が一致して、設定できればtrue
 	///        それ以外はfalse
 	///    
-	///    bool thread.SetProperty<プロパティの型>(プロパティ名,設定する値)
+	///    bool thread.SetProperty＜プロパティの型＞(プロパティ名,設定する値)
 	///        プロパティ名,型が一致して、設定できればtrue
 	///        それ以外はfalse
 	/// 
@@ -119,19 +119,19 @@ namespace SSTools
 		/// <summary>
 		/// フォームが表示された時の処理
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">送信元</param>
+		/// <param name="e">イベント引数</param>
 		private void Form_Shown(object sender, EventArgs e)
 		{
 			// 設定完了を通知
 			setEvent.Set();
 		}
-		/// <summary>
-		/// フォームが閉じた
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void UIForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
+        /// <summary>
+        /// フォームが閉じた
+        /// </summary>
+        /// <param name="sender">送信元</param>
+        /// <param name="e">イベント引数</param>
+        private void UIForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
 		{
 			if ((UIThread != null) && (UIThread.IsAlive))
 			{
@@ -322,7 +322,7 @@ namespace SSTools
 		/// </summary>
 		/// <param name="method">メソッド情報</param>
 		/// <param name="parameters">引数</param>
-		/// <returns></returns>
+		/// <returns>メソッド呼び出し結果</returns>
 		/// <remarks>
 		///    フォームが実行されているスレッドへInvoke()する
 		/// </remarks>

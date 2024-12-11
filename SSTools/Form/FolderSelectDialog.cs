@@ -13,6 +13,9 @@ using System.Reflection.Emit;
 
 namespace SSTools
 {
+    /// <summary>
+    /// フォルダ選択ダイアログ
+    /// </summary>
     public partial class FolderSelectDialog : System.Windows.Forms.Form
     {
         /// <summary>
@@ -134,7 +137,7 @@ namespace SSTools
         /// <summary>
         /// 表示された
         /// </summary>
-        /// <param name="e"></param>
+        /// <param name="e">イベント引数</param>
 
         protected override void OnShown(EventArgs e)
         {
@@ -153,7 +156,7 @@ namespace SSTools
         /// <summary>
         /// 選択されたパスを表示
         /// </summary>
-        /// <param name="path"></param>
+        /// <param name="path">パス</param>
         private void ShowSelectTree(string path)
         {
             FolderTree.SelectFolder(path);
@@ -161,10 +164,10 @@ namespace SSTools
         /// <summary>
         /// フォルダノードが選択された
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="path"></param>
-        /// <param name="fullpath"></param>
-        /// <param name="topNode"></param>
+        /// <param name="sender">送信元</param>
+        /// <param name="path">パス</param>
+        /// <param name="fullpath">フルパス</param>
+        /// <param name="topNode">Top Node</param>
         private void FolderTree_SelectNodeEvent(object sender, string path, string fullpath, FolderTreeNode topNode)
         {
             // パスの更新
@@ -176,9 +179,9 @@ namespace SSTools
         /// <summary>
         /// FileViewからディレクトリ変更イベント
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="path"></param>
-        /// <param name="topNode"></param>
+        /// <param name="sender">送信元</param>
+        /// <param name="path">パス</param>
+        /// <param name="topNode">Top Node</param>
         private void FileView_ChangeDirectoryEvent(object sender, string path, FolderTreeNode topNode)
         {
             FolderTree.SelectFolder(path, topNode);
@@ -186,7 +189,7 @@ namespace SSTools
         /// <summary>
         /// フォルダのチェック
         /// </summary>
-        /// <returns></returns>
+        /// <returns>true:チェックOK</returns>
         private bool CheckFolder()
         {
             string check_path = null;
@@ -211,8 +214,8 @@ namespace SSTools
         /// <summary>
         /// OKボタン
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">送信元</param>
+        /// <param name="e">イベント引数</param>
         private void BtOK_Click(object sender, EventArgs e)
         {
             // ファイルの選択チェック
@@ -227,8 +230,8 @@ namespace SSTools
         /// <summary>
         /// キャンセルボタン
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">送信元</param>
+        /// <param name="e">イベント引数</param>
         private void BtCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
@@ -237,8 +240,8 @@ namespace SSTools
         /// <summary>
         /// フォルダをテキストボックスの内容に変更
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">送信元</param>
+        /// <param name="e">イベント引数</param>
         private void BtOpen_Click(object sender, EventArgs e)
         {
             if ((CheckPathExists == false) || (Directory.Exists(TbPath.Text)))
@@ -255,8 +258,8 @@ namespace SSTools
         /// <summary>
         /// フォルダ選択イベント
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="paths"></param>
+        /// <param name="sender">送信元</param>
+        /// <param name="paths">パス</param>
         private void FileView_FolderSelectedEvent(object sender, string[] paths)
         {
 

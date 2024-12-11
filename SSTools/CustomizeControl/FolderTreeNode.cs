@@ -9,6 +9,9 @@ using System.Windows.Forms;
 
 namespace SSTools
 {
+	/// <summary>
+	/// フォルダTree Nodeクラス
+	/// </summary>
 	public class FolderTreeNode : TreeNode, IDisposable
 	{
 		/// <summary>
@@ -20,8 +23,16 @@ namespace SSTools
 		/// </summary>
 		public bool SubFolderIsDummy { get; set; } = false;
 
+		/// <summary>
+		/// DeskTop Shell Item
+		/// </summary>
 		private ShellItem m_shDesktop = null;
-
+		/// <summary>
+		/// コンストラクタ
+		/// </summary>
+		/// <param name="imageList">画像リスト(アイコン表示用)</param>
+		/// <param name="isShowHidenFolder">隠しフォルダの表示・非表示</param>
+		/// <param name="folder">ルートフォルダ</param>
 		public FolderTreeNode(ref ImageList imageList, bool isShowHidenFolder,
 			Environment.SpecialFolder folder = Environment.SpecialFolder.Desktop) : base()
 		{
@@ -43,16 +54,20 @@ namespace SSTools
 				Nodes.Add(childNode);
 			}
 		}
-		/// <summary>
-		/// コンストラクタ
-		/// </summary>
-		/// <param name="shellItem"></param>
-		/// <param name="imgList"></param>
-		public FolderTreeNode(ShellItem shellItem, ref ImageList imageList) :base() => CreateNode(shellItem, ref imageList);
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="shellItem">Shell Item</param>
+        /// <param name="imgList">画像リスト(アイコン表示用)</param>
+        public FolderTreeNode(ShellItem shellItem, ref ImageList imageList) :base() => CreateNode(shellItem, ref imageList);
 
 
-
-		private void CreateNode(ShellItem shellItem, ref ImageList imageList)
+        /// <summary>
+        /// Nodeの生成
+        /// </summary>
+        /// <param name="shellItem">Shell Item</param>
+        /// <param name="imgList">画像リスト(アイコン表示用)</param>
+        private void CreateNode(ShellItem shellItem, ref ImageList imageList)
 		{
 			if (shellItem != null)
 			{
@@ -72,7 +87,6 @@ namespace SSTools
 		/// <summary>
 		/// デストラクタ
 		/// </summary>
-		/// <exception cref="NotImplementedException"></exception>
 		public void Dispose()
 		{
 			// サブノードのクリア
@@ -86,6 +100,9 @@ namespace SSTools
 				Nodes.Clear();
 			}
 		}
+		/// <summary>
+		/// Root Shell Itemを解放する
+		/// </summary>
 		public void DisposeRoot()
 		{
             if (m_shDesktop != null)
@@ -101,7 +118,11 @@ namespace SSTools
             }
         }
 
-
+        /// <summary>
+        /// サブフォルダの展開
+        /// </summary>
+        /// <param name="imageList">画像リスト(アイコン表示用)</param>
+        /// <param name="isShowHidenFolder">隠しフォルダの表示・非表示</param>
         public void ExpandSubFolder(ref ImageList imgList, bool isShowHidenFolder = false)
 		{
 			if (SubFolderIsDummy)
@@ -126,6 +147,14 @@ namespace SSTools
 				SubFolderIsDummy = false;
 			}
 		}
+		/// <summary>
+		/// Top Nodeの取得
+		/// </summary>
+		/// <param name="root">現在のNode</param>
+		/// <returns>親Node</returns>
+		/// <remarks>
+		///	　再帰呼び出しをする
+		/// </remarks>
 		public FolderTreeNode GetTopOfNode(FolderTreeNode root)
 		{
 			if ((Parent == null) || (Parent.Equals(root)))
@@ -135,6 +164,9 @@ namespace SSTools
 			return null;
 
 		}
+		/// <summary>
+		/// 親Nodeから全て転換する
+		/// </summary>
 		public void ExpandToTopNode()
 		{
 			TreeNode node = this;
@@ -144,7 +176,15 @@ namespace SSTools
 				node = node.Parent;
 			}
 		}
-		public FolderTreeNode FindPath(string path, ref ImageList imageList, FolderTreeNode topNode = null, bool isShowHidden = false)
+        /// <summary>
+        /// 指定パスのNodeを検索する
+        /// </summary>
+        /// <param name="path">パス</param>
+        /// <param name="imageList">画像リスト(アイコン表示用)</param>
+        /// <param name="topNode">Top Node</param>
+        /// <param name="isShowHidden">隠しフォルダの表示・非表示</param>
+        /// <returns>指定パスのNode。見つからない場合はnull</returns>
+        public FolderTreeNode FindPath(string path, ref ImageList imageList, FolderTreeNode topNode = null, bool isShowHidden = false)
 		{
 			FolderTreeNode op_node = topNode ?? this;
 			CHECK_RESULT result = op_node.CheckNode(path, out _);
@@ -154,14 +194,22 @@ namespace SSTools
 				return op_node.FindChild(path, ref imageList, isShowHidden);
 			return null;
 		}
-
+		/// <summary>
+		/// チェック結果Enum
+		/// </summary>
 		private enum CHECK_RESULT
 		{
-			MATCH = 1,
-			PARTIAL_MATCH = 2,
-			VIRTUAL_FOLDER = 3,
-			NOT_MATCH = 0,
+			MATCH = 1,			//!< 一致
+			PARTIAL_MATCH = 2,	//!< 部分一致
+			VIRTUAL_FOLDER = 3,	//!< 仮想フォルダ
+			NOT_MATCH = 0,		//!< 不一致
 		}
+		/// <summary>
+		/// 現在のNodeと一致するかチェック
+		/// </summary>
+		/// <param name="path">パス</param>
+		/// <param name="match_length">一致した長さ</param>
+		/// <returns>チェック結果</returns>
 		private CHECK_RESULT CheckNode(string path, out int match_length)
 		{
 			match_length = 0;
@@ -185,8 +233,14 @@ namespace SSTools
             return CHECK_RESULT.NOT_MATCH;
 		}
 
-
-		private FolderTreeNode FindChild(string path, ref ImageList imageList, bool isShowHidden = false)
+        /// <summary>
+        /// 子Nodeの検索
+        /// </summary>
+        /// <param name="path">パス</param>
+        /// <param name="imageList">画像リスト(アイコン表示用)</param>
+        /// <param name="isShowHidden">隠しフォルダの表示・非表示</param>
+        /// <returns>指定パスのNode。見つからない場合は自分を返す</returns>
+        private FolderTreeNode FindChild(string path, ref ImageList imageList, bool isShowHidden = false)
 		{
 			if (SubFolderIsDummy)
 			{   // 子を取得

@@ -1,0 +1,6 @@
+<map id="SSTools.FullscreenForm" name="SSTools.FullscreenForm">
+<area shape="rect" id="Node000001" title="フルスクリーン表示対応フォーム" alt="" coords="10,96,174,123"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,179,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,64,88,95,83,96,80,64"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="104,64,101,96,96,95,98,64"/>
+</map>

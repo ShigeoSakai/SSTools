@@ -14,6 +14,9 @@ using static SSTools.FileListView;
 
 namespace SSTools
 {
+    /// <summary>
+    /// ファイル選択ダイアログ
+    /// </summary>
     public partial class FileSelectDialog : System.Windows.Forms.Form
     {
         /// <summary>
@@ -292,7 +295,7 @@ namespace SSTools
             /// <summary>
             /// 文字列変換(表示名を返す)
             /// </summary>
-            /// <returns></returns>
+            /// <returns>変換した文字列</returns>
             public override string ToString()
             {
                 return DisplayName;
@@ -300,8 +303,8 @@ namespace SSTools
             /// <summary>
             /// 拡張子リストを生成
             /// </summary>
-            /// <param name="text"></param>
-            /// <returns></returns>
+            /// <param name="text">拡張子文字列</param>
+            /// <returns>拡張子のリスト</returns>
             public static List<FIlterListClass> MakeList(string text)
             {
                 List<FIlterListClass> list = new List<FIlterListClass>();
@@ -333,9 +336,9 @@ namespace SSTools
             /// <summary>
             /// 拡張子リストをコンボボックスに設定
             /// </summary>
-            /// <param name="comboBox"></param>
-            /// <param name="list"></param>
-            /// <param name="select_index"></param>
+            /// <param name="comboBox">コンボボックス</param>
+            /// <param name="list">拡張子リスト</param>
+            /// <param name="select_index">選択するインデックス</param>
             public static void MakeComboBox(ComboBox comboBox, List<FIlterListClass> list,int select_index = 0)
             {
                 comboBox.Items.Clear();
@@ -349,8 +352,8 @@ namespace SSTools
             /// <summary>
             /// 拡張子リストを文字列に変換する
             /// </summary>
-            /// <param name="list"></param>
-            /// <returns></returns>
+            /// <param name="list">拡張子リスト</param>
+            /// <returns>変換した文字列</returns>
             public static string ToString(List<FIlterListClass> list)
             {
                 string result = string.Empty;
@@ -371,8 +374,8 @@ namespace SSTools
         /// <summary>
         /// 直近のパスと新規パスから、参照できるパスを取得
         /// </summary>
-        /// <param name="init_folder"></param>
-        /// <returns></returns>
+        /// <param name="init_folder">初期フォルダ</param>
+        /// <returns>参照できるパス</returns>
         public static string GetIntialDirectory(string init_folder)
         {
             if (string.IsNullOrEmpty(init_folder))
@@ -407,7 +410,7 @@ namespace SSTools
         /// <summary>
         /// 表示された
         /// </summary>
-        /// <param name="e"></param>
+        /// <param name="e">イベント引数</param>
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);
@@ -426,7 +429,7 @@ namespace SSTools
         /// <summary>
         /// 選択されたパスを表示
         /// </summary>
-        /// <param name="path"></param>
+        /// <param name="path">パス</param>
         private void ShowSelectTree(string path)
         {
             FolderTree.SelectFolder(path);
@@ -434,10 +437,10 @@ namespace SSTools
         /// <summary>
         /// フォルダノードが選択された
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="path"></param>
-        /// <param name="fullpath"></param>
-        /// <param name="topNode"></param>
+        /// <param name="sender">送信元</param>
+        /// <param name="path">パス</param>
+        /// <param name="fullpath">フルパス</param>
+        /// <param name="topNode">Top Node</param>
         private void FolderTree_SelectNodeEvent(object sender, string path, string fullpath, FolderTreeNode topNode)
         {
             // パスの更新
@@ -458,8 +461,8 @@ namespace SSTools
         /// <summary>
         /// フィルタの選択が変わった
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">送信元</param>
+        /// <param name="e">イベント引数</param>
         private void CbFilter_SelectionChangeCommitted(object sender, EventArgs e)
         {
             if ((CbFilter.Items.Count > 0) && (CbFilter.SelectedItem != null) &&
@@ -472,9 +475,9 @@ namespace SSTools
         /// <summary>
         /// FileViewからディレクトリ変更イベント
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="path"></param>
-        /// <param name="topNode"></param>
+        /// <param name="sender">送信元</param>
+        /// <param name="path">パス</param>
+        /// <param name="topNode">Top Node</param>
         private void FileView_ChangeDirectoryEvent(object sender, string path, FolderTreeNode topNode)
         {
             FolderTree.SelectFolder(path, topNode);
@@ -482,8 +485,9 @@ namespace SSTools
         /// <summary>
         /// ファイルが選択された
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="paths"></param>
+        /// <param name="sender">送信元</param>
+        /// <param name="paths">パス(配列)</param>
+        /// <param name="isDoubleClick">true:DoubleClickされた</param>
         private void FileView_SelectedEvent(object sender, string[] paths,bool isDoubleClick)
         {
             if (paths.Length > 0) 
@@ -506,8 +510,8 @@ namespace SSTools
         /// <summary>
         /// テキストボックスからファイル一覧を取得
         /// </summary>
-        /// <param name="textBox"></param>
-        /// <returns></returns>
+        /// <param name="textBox">テキストボックス</param>
+        /// <returns>ファイル一覧</returns>
         private string[] GetFilenamesFromTextbox(TextBox textBox)
         {
             if (string.IsNullOrEmpty(textBox.Text) == false)
@@ -527,7 +531,7 @@ namespace SSTools
         /// <summary>
         /// ファイルの存在チェックとプロパティへの格納
         /// </summary>
-        /// <returns></returns>
+        /// <returns>true:ファイルが存在</returns>
         private bool CheckAndStoreFileNames()
         {
             string[] files = GetFilenamesFromTextbox(TbSelectFiles);
@@ -574,8 +578,8 @@ namespace SSTools
         /// <summary>
         /// OKボタン
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">送信元</param>
+        /// <param name="e">イベント引数</param>
         private void BtOK_Click(object sender, EventArgs e)
         {
             // ファイルの選択チェック
@@ -591,8 +595,8 @@ namespace SSTools
         /// <summary>
         /// キャンセルボタン
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">送信元</param>
+        /// <param name="e">イベント引数</param>
         private void BtCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
@@ -601,8 +605,8 @@ namespace SSTools
         /// <summary>
         /// フォルダをテキストボックスの内容に変更
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">送信元</param>
+        /// <param name="e">イベント引数</param>
         private void BtOpen_Click(object sender, EventArgs e)
         {
             if ((CheckPathExists == false) || (Directory.Exists(TbPath.Text)))

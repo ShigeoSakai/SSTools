@@ -9,7 +9,10 @@ using System.Threading.Tasks;
 
 namespace SSTools
 {
-	public struct IntPtrEx : IFormattable, IComparable
+    /// <summary>
+    /// IntPtrを使いやすくするクラス
+    /// </summary>
+    public struct IntPtrEx : IFormattable, IComparable
 	{
 		/// <summary>
 		/// IntPtrを色々な数値型に変換する構造体
@@ -18,36 +21,36 @@ namespace SSTools
 		public struct HI_LO
 		{
 			[FieldOffset(0)]
-			public ushort LO_WORD;
+			public ushort LO_WORD;		//!< word(16bit) low
 			[FieldOffset(0)]
-			public short LO_SHORT;
-			[FieldOffset(2)]
-			public ushort HI_WORD;
-			[FieldOffset(2)]
-			public short HI_SHORT;
-			[FieldOffset(0)]
-			public uint LO_UINT;
-			[FieldOffset(0)]
-			public int LO_INT;
+			public short LO_SHORT;      //!< short(16bit) low
+            [FieldOffset(2)]
+			public ushort HI_WORD;      //!< word(16bit) hi
+            [FieldOffset(2)]
+			public short HI_SHORT;      //!< short(16bit) hi
+            [FieldOffset(0)]
+			public uint LO_UINT;        //!< uint(32bit) low
+            [FieldOffset(0)]
+			public int LO_INT;			//!< int(32bit) low
 
-			[FieldOffset(0)]
-			public IntPtr Ptr;
+            [FieldOffset(0)]
+			public IntPtr Ptr;			//!< IntPtr
 
 #if !WIN32
 			[FieldOffset(0)]
-			public ulong ULONG;
+			public ulong ULONG;			//!< ulong(64bit)
 			[FieldOffset(0)]
-			public long LONG;
-			[FieldOffset(4)]
-			public uint HI_UINT;
-			[FieldOffset(4)]
-			public int HI_INT;
+			public long LONG;           //!< long(64bit)
+            [FieldOffset(4)]
+			public uint HI_UINT;        //!< uint(32bit) hi
+            [FieldOffset(4)]
+			public int HI_INT;          //!< int(32bit) hi
 #endif
-			/// <summary>
-			/// 明示的な値の設定
-			/// </summary>
-			/// <param name="value">IntPtr値</param>
-			public void Set(IntPtr value)
+            /// <summary>
+            /// 明示的な値の設定
+            /// </summary>
+            /// <param name="value">IntPtr値</param>
+            public void Set(IntPtr value)
 			{
 				Ptr = value;
 #if !WIN32
@@ -126,12 +129,12 @@ namespace SSTools
 		/// </remarks>
 		public IntPtrEx(IntPtr value) : this() { IntPtr = value; }
 
-		/// <summary>
-		/// インスタンス生成
-		/// </summary>
-		/// <param name="value"></param>
-		/// <returns></returns>
-		public static IntPtrEx Instance(IntPtr value) => new IntPtrEx(value);
+        /// <summary>
+        /// インスタンス生成
+        /// </summary>
+        /// <param name="value">IntPtr値</param>
+        /// <returns>インスタンス</returns>
+        public static IntPtrEx Instance(IntPtr value) => new IntPtrEx(value);
 
 		/// <summary>
 		/// 文字列変換
@@ -188,11 +191,18 @@ namespace SSTools
 				return Value.GetUnsigned().ToString(format, formatProvider);
 			}
 		}
-		public delegate void PtrEventHandler(string name, Type type, object value);
+        /// <summary>
+        /// 指定フィールドに値が入った時のイベントハンドラ
+        /// </summary>
+        /// <param name="name">フィールド名</param>
+        /// <param name="type">フィールド型</param>
+        /// <param name="value">値</param>
+        public delegate void PtrEventHandler(string name, Type type, object value);
 		/// <summary>
 		/// 値の示す番地から構造体を生成
 		/// </summary>
 		/// <typeparam name="T">構造体の型</typeparam>
+		/// <param name="func">イベント関数</param>
 		/// <returns>構造体</returns>
 		public T GetStructure<T>(PtrEventHandler func = null) where T : struct
 		{
@@ -223,13 +233,24 @@ namespace SSTools
 			}
 			return default;
 		}
+		/// <summary>
+		/// IntPtrを文字列変換
+		/// </summary>
+		/// <returns>変換された文字列</returns>
 		public string GetString()
 		{
 			if (Value.Ptr != (IntPtr)0)
 				return Marshal.PtrToStringAuto(Value.Ptr);
 			return default;
 		}
-		public T[] GetArray<T>(int value_size, int capacity) where T : struct
+        /// <summary>
+        /// 指定構造体の配列として取り出す
+        /// </summary>
+        /// <typeparam name="T">構造体に型</typeparam>
+        /// <param name="value_size">構造体のサイズ</param>
+        /// <param name="capacity">配列のサイズ</param>
+        /// <returns>指定構造体の配列</returns>
+        public T[] GetArray<T>(int value_size, int capacity) where T : struct
 		{
 			if (Value.Ptr != (IntPtr)0)
 			{
@@ -246,8 +267,8 @@ namespace SSTools
 		/// 値の比較
 		/// </summary>
 		/// <param name="obj">比較する値</param>
-		/// <returns></returns>
-		/// <exception cref="ArgumentException"></exception>
+		/// <returns>負値:小さい,0:同じ,正値:大きい</returns>
+		/// <exception cref="ArgumentException">比較できない型(intPtrEx2)と比較した</exception>
 		public int CompareTo(object obj)
 		{
 			if (obj == null) return 1;
@@ -263,74 +284,233 @@ namespace SSTools
 			if (obj is int iValue) return (int)(Value.GetSigned() - iValue);
 			throw new ArgumentException(string.Format("IntPtrEx2型は\"{0}\"型と比較できません", obj.GetType().Name));
 		}
-		/// <summary>
-		/// 値の比較(一致)
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <returns></returns>
-		public override bool Equals(object obj) => CompareTo(obj) == 0;
+        /// <summary>
+        /// 値の比較(一致)
+        /// </summary>
+        /// <param name="obj">比較する値</param>
+        /// <returns>true:一致</returns>
+        public override bool Equals(object obj) => CompareTo(obj) == 0;
 		/// <summary>
 		/// ハッシュ値の取得
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>ハッシュ値</returns>
 		public override int GetHashCode() =>Value.GetUnsigned().GetHashCode();
+        /// <summary>
+        /// オペレーター「＋」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(IntPtrEx)</param>
+        /// <returns>演算結果</returns>
+        public static IntPtrEx operator +(IntPtrEx left, IntPtrEx right) => Instance((IntPtr)(left.Value.GetUnsigned() + right.Value.GetUnsigned()));
+#if WIN32
 		/// <summary>
 		/// オペレーター「＋」
 		/// </summary>
-		/// <param name="left"></param>
-		/// <param name="right"></param>
-		/// <returns></returns>
-		public static IntPtrEx operator +(IntPtrEx left, IntPtrEx right) => Instance((IntPtr)(left.Value.GetUnsigned() + right.Value.GetUnsigned()));
-#if WIN32
+		/// <param name="left">左側値(IntPtrEx)</param>
+		/// <param name="right">右側値(IntPtr)</param>
+		/// <returns>演算結果</returns>
 		public static IntPtrEx operator +(IntPtrEx left, IntPtr right) => Instance((IntPtr)(left.Value.GetUnsigned() + (uint)right));
+		/// <summary>
+		/// オペレーター「＋」
+		/// </summary>
+		/// <param name="left">左側値(IntPtr)</param>
+		/// <param name="right">右側値(IntPtrEx)</param>
+		/// <returns>演算結果</returns>
 		public static IntPtrEx operator +(IntPtr left, IntPtrEx right) => Instance((IntPtr)((uint)left + right.Value.GetUnsigned()));
 #else
-		public static IntPtrEx operator +(IntPtrEx left, IntPtr right) => Instance((IntPtr)(left.Value.GetUnsigned() + (ulong)right));
-		public static IntPtrEx operator +(IntPtr left, IntPtrEx right) => Instance((IntPtr)((ulong)left + right.Value.GetUnsigned()));
-		public static IntPtrEx operator +(IntPtrEx left, ulong right) => Instance((IntPtr)(left.Value.GetUnsigned() + right));
-		public static IntPtrEx operator +(ulong left, IntPtrEx right) => Instance((IntPtr)(left + right.Value.GetUnsigned()));
+        /// <summary>
+        /// オペレーター「＋」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(IntPtr)</param>
+        /// <returns>演算結果</returns>
+        public static IntPtrEx operator +(IntPtrEx left, IntPtr right) => Instance((IntPtr)(left.Value.GetUnsigned() + (ulong)right));
+        /// <summary>
+        /// オペレーター「＋」
+        /// </summary>
+        /// <param name="left">左側値(IntPtr)</param>
+        /// <param name="right">右側値(IntPtrEx)</param>
+        /// <returns>演算結果</returns>
+        public static IntPtrEx operator +(IntPtr left, IntPtrEx right) => Instance((IntPtr)((ulong)left + right.Value.GetUnsigned()));
+        /// <summary>
+        /// オペレーター「＋」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(ulong)</param>
+        /// <returns>演算結果</returns>
+        public static IntPtrEx operator +(IntPtrEx left, ulong right) => Instance((IntPtr)(left.Value.GetUnsigned() + right));
+        /// <summary>
+        /// オペレーター「＋」
+        /// </summary>
+        /// <param name="left">左側値(ulong)</param>
+        /// <param name="right">右側値(IntPtrEx)</param>
+        /// <returns>演算結果</returns>
+        public static IntPtrEx operator +(ulong left, IntPtrEx right) => Instance((IntPtr)(left + right.Value.GetUnsigned()));
 #endif
-		public static IntPtrEx operator +(IntPtrEx left, uint right) => Instance((IntPtr)(left.Value.GetUnsigned() + right));
-		public static IntPtrEx operator +(uint left, IntPtrEx right) => Instance((IntPtr)(left + right.Value.GetUnsigned()));
-		public static IntPtrEx operator +(IntPtrEx left, int right) => Instance((IntPtr)(left.Value.GetSigned() + right));
-		public static IntPtrEx operator +(int left, IntPtrEx right) => Instance((IntPtr)(left + right.Value.GetSigned()));
-		public static IntPtrEx operator ++(IntPtrEx value) => Instance((IntPtr)(value.Value.GetUnsigned() + 1));
+        /// <summary>
+        /// オペレーター「＋」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(uint)</param>
+        /// <returns>演算結果</returns>
+        public static IntPtrEx operator +(IntPtrEx left, uint right) => Instance((IntPtr)(left.Value.GetUnsigned() + right));
+        /// <summary>
+        /// オペレーター「＋」
+        /// </summary>
+        /// <param name="left">左側値(uint)</param>
+        /// <param name="right">右側値(IntPtrEx)</param>
+        /// <returns>演算結果</returns>
+        public static IntPtrEx operator +(uint left, IntPtrEx right) => Instance((IntPtr)(left + right.Value.GetUnsigned()));
+        /// <summary>
+        /// オペレーター「＋」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(int)</param>
+        /// <returns>演算結果</returns>
+        public static IntPtrEx operator +(IntPtrEx left, int right) => Instance((IntPtr)(left.Value.GetSigned() + right));
+        /// <summary>
+        /// オペレーター「＋」
+        /// </summary>
+        /// <param name="left">左側値(int)</param>
+        /// <param name="right">右側値(IntPtrEx)</param>
+        /// <returns>演算結果</returns>
+        public static IntPtrEx operator +(int left, IntPtrEx right) => Instance((IntPtr)(left + right.Value.GetSigned()));
+        /// <summary>
+        /// オペレーター「＋＋」
+        /// </summary>
+        /// <param name="value">値(IntPtrEx)</param>
+        /// <returns>演算結果</returns>
+        public static IntPtrEx operator ++(IntPtrEx value) => Instance((IntPtr)(value.Value.GetUnsigned() + 1));
 
 
-		/// <summary>
-		/// オペレーター「ー」
-		/// </summary>
-		/// <param name="left"></param>
-		/// <param name="right"></param>
-		/// <returns></returns>
-		public static IntPtrEx operator -(IntPtrEx left, IntPtrEx right) => Instance((IntPtr)(left.Value.GetUnsigned() - right.Value.GetUnsigned()));
+        /// <summary>
+        /// オペレーター「ー」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(IntPtrEx)</param>
+        /// <returns>演算結果</returns>
+        public static IntPtrEx operator -(IntPtrEx left, IntPtrEx right) => Instance((IntPtr)(left.Value.GetUnsigned() - right.Value.GetUnsigned()));
 #if WIN32
+        /// <summary>
+        /// オペレーター「ー」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(IntPtr)</param>
+        /// <returns>演算結果</returns>
 		public static IntPtrEx operator -(IntPtrEx left, IntPtr right) => Instance((IntPtr)(left.Value.GetUnsigned() - (uint)right));
+        /// <summary>
+        /// オペレーター「ー」
+        /// </summary>
+        /// <param name="left">左側値(IntPtr)</param>
+        /// <param name="right">右側値(IntPtrEx)</param>
+        /// <returns>演算結果</returns>
 		public static IntPtrEx operator -(IntPtr left, IntPtrEx right) => Instance((IntPtr)((uint)left - right.Value.GetUnsigned()));
 #else
-		public static IntPtrEx operator -(IntPtrEx left, IntPtr right) => Instance((IntPtr)(left.Value.GetUnsigned() - (ulong)right));
+        /// <summary>
+        /// オペレーター「ー」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(IntPtr)</param>
+        /// <returns>演算結果</returns>
+        public static IntPtrEx operator -(IntPtrEx left, IntPtr right) => Instance((IntPtr)(left.Value.GetUnsigned() - (ulong)right));
+        /// <summary>
+        /// オペレーター「ー」
+        /// </summary>
+        /// <param name="left">左側値(IntPtr)</param>
+        /// <param name="right">右側値(IntPtrEx)</param>
+        /// <returns>演算結果</returns>
 		public static IntPtrEx operator -(IntPtr left, IntPtrEx right) => Instance((IntPtr)((ulong)left - right.Value.GetUnsigned()));
+        /// <summary>
+        /// オペレーター「ー」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(ulong)</param>
+        /// <returns>演算結果</returns>
 		public static IntPtrEx operator -(IntPtrEx left, ulong right) => Instance((IntPtr)(left.Value.GetUnsigned() - right));
+        /// <summary>
+        /// オペレーター「ー」
+        /// </summary>
+        /// <param name="left">左側値(ulong)</param>
+        /// <param name="right">右側値(IntPtrEx)</param>
+        /// <returns>演算結果</returns>
 		public static IntPtrEx operator -(ulong left, IntPtrEx right) => Instance((IntPtr)(left - right.Value.GetUnsigned()));
 #endif
+        /// <summary>
+        /// オペレーター「ー」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(uint)</param>
+        /// <returns>演算結果</returns>
 		public static IntPtrEx operator -(IntPtrEx left, uint right) => Instance((IntPtr)(left.Value.GetUnsigned() - right));
+        /// <summary>
+        /// オペレーター「ー」
+        /// </summary>
+        /// <param name="left">左側値(uint)</param>
+        /// <param name="right">右側値(IntPtrEx)</param>
+        /// <returns>演算結果</returns>
 		public static IntPtrEx operator -(uint left, IntPtrEx right) => Instance((IntPtr)(left - right.Value.GetUnsigned()));
+        /// <summary>
+        /// オペレーター「ー」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(int)</param>
+        /// <returns>演算結果</returns>
 		public static IntPtrEx operator -(IntPtrEx left, int right) => Instance((IntPtr)(left.Value.GetSigned() - right));
+        /// <summary>
+        /// オペレーター「ー」
+        /// </summary>
+        /// <param name="left">左側値(int)</param>
+        /// <param name="right">右側値(IntPtrEx)</param>
+        /// <returns>演算結果</returns>
 		public static IntPtrEx operator -(int left, IntPtrEx right) => Instance((IntPtr)(left - right.Value.GetSigned()));
+        /// <summary>
+        /// オペレーター「ーー」
+        /// </summary>
+        /// <param name="value">値(IntPtrEx)</param>
+        /// <returns>演算結果</returns>
 		public static IntPtrEx operator --(IntPtrEx value) => Instance((IntPtr)(value.Value.GetUnsigned() - 1));
 
-		/// <summary>
-		/// オペレーター「==」
-		/// </summary>
-		/// <param name="left"></param>
-		/// <param name="right"></param>
-		/// <returns></returns>
-		public static bool operator ==(IntPtrEx left, object right) => left.Equals(right);
+        /// <summary>
+        /// オペレーター「==」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(object)</param>
+        /// <returns>演算結果</returns>
+        public static bool operator ==(IntPtrEx left, object right) => left.Equals(right);
+        /// <summary>
+        /// オペレーター「!=」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(object)</param>
+        /// <returns>演算結果</returns>
 		public static bool operator !=(IntPtrEx left, object right) => left.Equals(right);
-
-		public static bool operator <(IntPtrEx left, object right) => left.CompareTo(right) < 0;
+        /// <summary>
+        /// オペレーター「<」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(object)</param>
+        /// <returns>演算結果</returns>
+        public static bool operator <(IntPtrEx left, object right) => left.CompareTo(right) < 0;
+        /// <summary>
+        /// オペレーター「>」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(object)</param>
+        /// <returns>演算結果</returns>
 		public static bool operator >(IntPtrEx left, object right) => left.CompareTo(right) > 0;
+        /// <summary>
+        /// オペレーター「<=」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(object)</param>
+        /// <returns>演算結果</returns>
 		public static bool operator <=(IntPtrEx left, object right) => left.CompareTo(right) <= 0;
+        /// <summary>
+        /// オペレーター「>=」
+        /// </summary>
+        /// <param name="left">左側値(IntPtrEx)</param>
+        /// <param name="right">右側値(object)</param>
+        /// <returns>演算結果</returns>
 		public static bool operator >=(IntPtrEx left, object right) => left.CompareTo(right) >= 0;
 	}
 }

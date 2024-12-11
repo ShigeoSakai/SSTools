@@ -14,12 +14,15 @@ namespace SSTools.Shape
     /// </summary>
     public class BaseShape
     {
+        /// <summary>
+        /// マーカーの種類
+        /// </summary>
         public enum MARKER_TYPE
         {
-            POINT = 0,
-            PLUS = 1,
-            CROSS = 2,
-            CIRCLE = 3,
+            POINT = 0,      //!< 点
+            PLUS = 1,       //!< ＋(十字)
+            CROSS = 2,      //!< ×
+            CIRCLE = 3,     //!< 〇
         }
 
 
@@ -89,9 +92,13 @@ namespace SSTools.Shape
         /// ラベル枠色
         /// </summary>
         public Color? LabelBorderColor { get; set; }
-
+        /// <summary>
+        /// 表示・非表示
+        /// </summary>
         public bool Visible { get; set; } = true;
-
+        /// <summary>
+        /// マーカー種類
+        /// </summary>
         public MARKER_TYPE MarkerType { get; set; } = MARKER_TYPE.CROSS;
 
         /// <summary>
@@ -139,7 +146,7 @@ namespace SSTools.Shape
         /// <summary>
         /// コピーコンストラクタ
         /// </summary>
-        /// <param name="src"></param>
+        /// <param name="src">コピー元</param>
         public BaseShape(BaseShape src)
         {
             Name = src.Name;
@@ -164,7 +171,7 @@ namespace SSTools.Shape
         /// <summary>
         /// クローンコピー
         /// </summary>
-        /// <returns></returns>
+        /// <returns>コピーされたオブジェクト</returns>
         public virtual BaseShape Clone()
         {
             return new BaseShape(this);
@@ -186,6 +193,7 @@ namespace SSTools.Shape
         /// 描画
         /// </summary>
         /// <param name="g">グラフィックス</param>
+        /// <param name="size">表示サイズ</param>
         public virtual void Draw(Graphics g, SizeF? size)
         {
             if (Visible)
@@ -230,7 +238,17 @@ namespace SSTools.Shape
                 pen.Dispose();
             }
         }
-
+        /// <summary>
+        /// 点の描画
+        /// </summary>
+        /// <param name="g">グラフィックス</param>
+        /// <param name="size">サイズ</param>
+        /// <param name="point">点座標</param>
+        /// <param name="color">色</param>
+        /// <param name="lineWidth">線幅</param>
+        /// <param name="dashStyle">線種</param>
+        /// <param name="markerSize">マーカーサイズ</param>
+        /// <param name="markerType">マーカー種類</param>
         protected void DrawPoint(Graphics g, SizeF? size,
             PointF? point = null, Color? color = null, float? lineWidth = null,
             DashStyle? dashStyle = null,float? markerSize = null,MARKER_TYPE? markerType = null)
@@ -282,7 +300,6 @@ namespace SSTools.Shape
         /// <param name="targetRect">領域</param>
         /// <param name="baseRect">矩形</param>
         /// <returns>true:含まれる</returns>
-
         protected bool RectContains(RectangleF targetRect,Rectangle baseRect)
         {
             if ((targetRect.Contains(baseRect.Left, baseRect.Top)) ||
@@ -302,6 +319,12 @@ namespace SSTools.Shape
                 return true;
             return false;
         }
+        /// <summary>
+        /// 矩形が領域に含まれるか
+        /// </summary>
+        /// <param name="targetRect">領域</param>
+        /// <param name="baseRect">矩形</param>
+        /// <returns>true:含まれる</returns>
         protected bool RectContains(RectangleF targetRect, RectangleF baseRect)
         {
             if ((targetRect.Contains(baseRect.Left, baseRect.Top)) ||
@@ -328,17 +351,18 @@ namespace SSTools.Shape
         /// </summary>
         protected enum COLOR_SELECT
         {
-            NORMAL_COLOR,
-            FILL_COLOR,
-            TEXT_COLOR,
-            TEXT_FILL_COLOR,
-            TEXT_BORDER_COLOR
+            NORMAL_COLOR,       //!< 通常の色
+            FILL_COLOR,         //!< 塗りつぶし色
+            TEXT_COLOR,         //!< テキスト色
+            TEXT_FILL_COLOR,    //!< テキスト枠色
+            TEXT_BORDER_COLOR   //!< テキスト枠色
         }
 
         /// <summary>
         /// 描画色を取得
         /// </summary>
-        /// <returns></returns>
+        /// <param name="colorSelect">色の種別</param>
+        /// <returns>色</returns>
         protected Color GetDrawColor(COLOR_SELECT colorSelect)
         {
             Color drawColor;
@@ -427,7 +451,7 @@ namespace SSTools.Shape
         /// </summary>
         /// <param name="textSize">文字列表示サイズ</param>
         /// <param name="size">表示サイズ</param>
-        /// <param name="pts">頂点座標リスト</param>
+        /// <param name="center">中心座標</param>
         /// <returns>テキスト表示領域</returns>
         protected virtual RectangleF CalcTextPosition(SizeF textSize, SizeF? size, PointF center)
         {
@@ -460,7 +484,7 @@ namespace SSTools.Shape
         /// </summary>
         /// <param name="graphics">グラフィック</param>
         /// <param name="size">表示サイズ</param>
-        /// <param name="pts">頂点座標リスト</param>
+        /// <param name="center">中心座標</param>
         protected void DrawText(Graphics graphics, SizeF? size, PointF center)
         {
             if ((ShowLable) && (Text != null))
@@ -494,6 +518,10 @@ namespace SSTools.Shape
                 }
             }
         }
+        /// <summary>
+        /// 描画領域サイズを取得
+        /// </summary>
+        /// <returns>描画領域サイズ</returns>
         public virtual Rectangle GetDrawSize()
         {
             if (MarkerType == MARKER_TYPE.POINT)

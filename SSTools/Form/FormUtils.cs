@@ -8,17 +8,20 @@ using System.Windows.Forms;
 
 namespace SSTools
 {
+    /// <summary>
+    /// フォームユーティリティ
+    /// </summary>
     public class FormUtils
     {
         /// <summary>
-        /// 
+        /// フォームの表示位置を算出する
         /// </summary>
-        /// <param name="ctrlLocation"></param>
-        /// <param name="ctrlSize"></param>
-        /// <param name="form"></param>
-        /// <returns></returns>
+        /// <param name="baseControl">基準になるコントロール</param>
+        /// <param name="formSize">フォームのサイズ</param>
+        /// <returns>フォーム表示位置</returns>
         /// <remarks>
-        ///        
+        ///  フォームが、画面からはみ出ないて、基準コントロールの周辺に表示できる
+        ///  位置を求める
         ///       ┌─────┐       ┌─────┐
         ///       │3         │       │5         │
         /// ┌─────┐    │       │    ┌─────┐
@@ -139,31 +142,34 @@ namespace SSTools
                     screenRect.Y + (screenRect.Height - formSize.Height)/2);
             }
         }
+        /// <summary>
+        /// 表示位置Enum
+        /// </summary>
+        /// <remarks>
+        /// POS_1 = POS_LEFT_MAX | POS_TOP,
+        /// POS_2 = POS_LEFT_MAX | POS_BOTTOM,
+        /// POS_3 = POS_LEFT | POS_TOP_MAX,
+        /// POS_4 = POS_LEFT | POS_BOTTOM_MAX,
+        ///
+        /// POS_5 = POS_RIGHT | POS_TOP_MAX,
+        /// POS_6 = POS_RIGHT | POS_BOTTOM_MAX,
+        /// POS_7 = POS_RIGHT_MAX | POS_TOP,
+        /// POS_8 = POS_RIGHT_MAX | POS_BOTTOM,
+        /// </remarks>
         [Flags]
         private enum LocatePositon
         {
-            POS_LEFT_MAX = 0x0001,
-            POS_LEFT = 0x0002,
-            POS_RIGHT = 0x0004,
-            POS_RIGHT_MAX = 0x0008,
+            POS_LEFT_MAX = 0x0001,          //!< 横方向:左最大
+            POS_LEFT = 0x0002,              //!< 横方向:左
+            POS_RIGHT = 0x0004,             //!< 横方向:右
+            POS_RIGHT_MAX = 0x0008,         //!< 横方向:右最大
 
-            POS_TOP_MAX = 0x0010,
-            POS_TOP = 0x0020,
-            POS_BOTTOM = 0x0040,
-            POS_BOTTOM_MAX = 0x0080,
+            POS_TOP_MAX = 0x0010,           //!< 縦方向:上最大
+            POS_TOP = 0x0020,               //!< 縦方向:上
+            POS_BOTTOM = 0x0040,            //!< 縦方向:下
+            POS_BOTTOM_MAX = 0x0080,        //!< 縦方向:下最大
 
-            NONE = 0,
-
-            //POS_1 = POS_LEFT_MAX | POS_TOP,
-            //POS_2 = POS_LEFT_MAX | POS_BOTTOM,
-            //POS_3 = POS_LEFT | POS_TOP_MAX,
-            //POS_4 = POS_LEFT | POS_BOTTOM_MAX,
-
-            //POS_5 = POS_RIGHT | POS_TOP_MAX,
-            //POS_6 = POS_RIGHT | POS_BOTTOM_MAX,
-            //POS_7 = POS_RIGHT_MAX | POS_TOP,
-            //POS_8 = POS_RIGHT_MAX | POS_BOTTOM,
-
+            NONE = 0,                       //!< 未指定
         }
     }
 }

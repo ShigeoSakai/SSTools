@@ -16,6 +16,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace SSTools
 {
+	/// <summary>
+	/// ファイル一覧View
+	/// </summary>
 	public partial class FileListView : UserControl
 	{
 		/// <summary>
@@ -23,14 +26,14 @@ namespace SSTools
 		/// </summary>
 		public enum FILE_VIEW
 		{
-			LargeIcon = System.Windows.Forms.View.LargeIcon,
-			Details = System.Windows.Forms.View.Details,
-			SmallIcon = System.Windows.Forms.View.SmallIcon,
-			List = System.Windows.Forms.View.List,
-			Tile = System.Windows.Forms.View.Tile,
-			ExtraLargeIcon,
-			JumboIcon,
-			TileLarge,
+			LargeIcon = System.Windows.Forms.View.LargeIcon,	//!< 大きいアイコン表示
+			Details = System.Windows.Forms.View.Details,		//!< 詳細表示
+			SmallIcon = System.Windows.Forms.View.SmallIcon,	//!< 小さいアイコン表示
+			List = System.Windows.Forms.View.List,				//!< リスト表示
+			Tile = System.Windows.Forms.View.Tile,				//!< タイル表示
+			ExtraLargeIcon,										//!< 特大アイコン表示
+			JumboIcon,											//!< ジャンボアイコン表示
+			TileLarge,											//!< 大きいタイル表示
 		}
 		/// <summary>
 		/// ディレクトリ変更イベントハンドラ

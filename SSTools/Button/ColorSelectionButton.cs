@@ -27,7 +27,7 @@ namespace SSTools
 		/// <summary>
 		/// Dispose I/F
 		/// </summary>
-		/// <param name="disposing"></param>
+		/// <param name="disposing">コンポーネントをDisposeするか</param>
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && (components != null))
@@ -57,14 +57,14 @@ namespace SSTools
 		public enum SHOW_COLOR_NAME
 		{
 			[Description("色名表示しない")]
-			NONE = 0,
-			[Description("システムカラーのみ")]
-			SYSTEM = 0x01,
-			[Description("定義済み色のみ")]
-			KNOWN_COLOR = 0x02,
-			[Description("名前のある色")]
-			ALL = SYSTEM | KNOWN_COLOR,
-		}
+			NONE = 0,                               //!< 色名表示しない
+            [Description("システムカラーのみ")]
+			SYSTEM = 0x01,                          //!< システムカラーのみ
+            [Description("定義済み色のみ")]
+			KNOWN_COLOR = 0x02,                     //!< 定義済み色のみ
+            [Description("名前のある色")]
+			ALL = SYSTEM | KNOWN_COLOR,             //!< 名前のある色
+        }
 		/// <summary>
 		/// システム・規定色の一覧
 		/// </summary>
@@ -181,7 +181,7 @@ namespace SSTools
 		/// <summary>
 		/// ボタンクリック時の処理
 		/// </summary>
-		/// <param name="e"></param>
+		/// <param name="e">イベント引数</param>
 		protected override void OnClick(EventArgs e)
 		{
 			// ダイアログ表示位置指定
@@ -306,7 +306,7 @@ namespace SSTools
 		/// <summary>
 		/// テキストの変更
 		/// </summary>
-		/// <param name="e"></param>
+		/// <param name="e">イベント引数</param>
 		protected override void OnTextChanged(EventArgs e)
 		{
 			// このクラス内からの変更か？

@@ -26,3 +26,6 @@
 * ComboItem<br>コンボボックスアイテム登録
 * FormThread<br>フォームを別スレッドで起動
 * IntPtrEx<br>IntPtrを使いやすくするクラス
+
+# ドキュメント
+[htmlドキュメント](doc/html/index.html)

@@ -1,6 +1,7 @@
 var class_s_s_tools_1_1_folder_tree_node =
 [
     [ "FolderTreeNode", "d1/df6/class_s_s_tools_1_1_folder_tree_node.html#ada0e2fc6ee8cafbc01c602ef2caa676d", null ],
+    [ "FolderTreeNode", "d1/df6/class_s_s_tools_1_1_folder_tree_node.html#afe6da8cb2c9e6ddc306186d8c82d9773", null ],
     [ "Dispose", "d1/df6/class_s_s_tools_1_1_folder_tree_node.html#a70d06b18583d27d96a53a5a207382a19", null ],
     [ "DisposeRoot", "d1/df6/class_s_s_tools_1_1_folder_tree_node.html#af45d8268c13e6409e9c6632ef3a4b8f2", null ],
     [ "ExpandSubFolder", "d1/df6/class_s_s_tools_1_1_folder_tree_node.html#afbbea22b4bb450f88a2f93777ee4508a", null ],

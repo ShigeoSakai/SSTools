@@ -1,4 +1,30 @@
 var searchData=
 [
-  ['hex_5fconvert_5ferror_0',['HEX_CONVERT_ERROR',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750ca634e88c5471e94c205ad0b05c30933c3',1,'SSTools::SimpleParser']]]
+  ['hex_5fconvert_5ferror_0',['HEX_CONVERT_ERROR',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750ca634e88c5471e94c205ad0b05c30933c3',1,'SSTools::SimpleParser']]],
+  ['htborder_1',['HTBORDER',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea9ec0fde76c247bcfe077c4edb5d4a14f',1,'SSTools::WndMsgAnalysis']]],
+  ['htbottom_2',['HTBOTTOM',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea76ecd398d02df3926b1a98309315f90c',1,'SSTools::WndMsgAnalysis']]],
+  ['htbottomleft_3',['HTBOTTOMLEFT',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea36c81ad8923b4153ad948f6e5e333f0b',1,'SSTools::WndMsgAnalysis']]],
+  ['htbottomright_4',['HTBOTTOMRIGHT',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea2cd6e8ae4b4f29dd26b1996cfe58542a',1,'SSTools::WndMsgAnalysis']]],
+  ['htcaption_5',['HTCAPTION',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea2e312e23689731d3952d08571381d79a',1,'SSTools::WndMsgAnalysis']]],
+  ['htclient_6',['HTCLIENT',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea4c73996421cccf8b5de883dd96c80eab',1,'SSTools::WndMsgAnalysis']]],
+  ['htclose_7',['HTCLOSE',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775deade9baf507889a0e3d9f15be00b67d8e3',1,'SSTools::WndMsgAnalysis']]],
+  ['hterror_8',['HTERROR',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dead654c652bf3a7c58bae6296a6bb454a9',1,'SSTools::WndMsgAnalysis']]],
+  ['htgrowbox_9',['HTGROWBOX',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea649e404db3eaf043e801c8afbc9f6c6b',1,'SSTools::WndMsgAnalysis']]],
+  ['hthelp_10',['HTHELP',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea681ba2541c6d15cb36fb8f3daaf7b5f0',1,'SSTools::WndMsgAnalysis']]],
+  ['hthscroll_11',['HTHSCROLL',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea2b1a0ef05b847b3fefb3745f6951d701',1,'SSTools::WndMsgAnalysis']]],
+  ['htleft_12',['HTLEFT',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea3e57c7e2894279a6e73aa4308acd44f2',1,'SSTools::WndMsgAnalysis']]],
+  ['htmaxbutton_13',['HTMAXBUTTON',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea333fb74e36a585a12084593a75fd9ca2',1,'SSTools::WndMsgAnalysis']]],
+  ['htmenu_14',['HTMENU',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea060e80a414088b7f0b35c48302ab96ac',1,'SSTools::WndMsgAnalysis']]],
+  ['htminbutton_15',['HTMINBUTTON',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea8c55868a958570f9531c9de51ccbe34f',1,'SSTools::WndMsgAnalysis']]],
+  ['htnowhere_16',['HTNOWHERE',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea73b2adbbf9e31a26b66d39562833868a',1,'SSTools::WndMsgAnalysis']]],
+  ['htreduce_17',['HTREDUCE',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea255e40cb70dea690f05719ae514c27d7',1,'SSTools::WndMsgAnalysis']]],
+  ['htright_18',['HTRIGHT',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea23dc3263fe448e86f21321d1f4df8032',1,'SSTools::WndMsgAnalysis']]],
+  ['htsize_19',['HTSIZE',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea5dbb6a10337911cd99107d9c6b0b17ec',1,'SSTools::WndMsgAnalysis']]],
+  ['htsysmenu_20',['HTSYSMENU',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea7a0af2a8a0cc6d4e641caff082eae955',1,'SSTools::WndMsgAnalysis']]],
+  ['httop_21',['HTTOP',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775deae50310f067dc85a177976c9203c7c1ec',1,'SSTools::WndMsgAnalysis']]],
+  ['httopleft_22',['HTTOPLEFT',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775deace90343637a1b4cc4dc52f754d0662ae',1,'SSTools::WndMsgAnalysis']]],
+  ['httopright_23',['HTTOPRIGHT',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea097b29f596722eb16c63a92e48fcf57f',1,'SSTools::WndMsgAnalysis']]],
+  ['httransparent_24',['HTTRANSPARENT',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775deaf90681ddaf78c90a7ec08b7e26d9456c',1,'SSTools::WndMsgAnalysis']]],
+  ['htvscroll_25',['HTVSCROLL',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775deae99f450f6402ff6e2dc16c91fb16e839',1,'SSTools::WndMsgAnalysis']]],
+  ['htzoom_26',['HTZOOM',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#ae29dea55840a1077c54344013f2775dea7bc7356eaad44010774e8e230a9a3b05',1,'SSTools::WndMsgAnalysis']]]
 ];

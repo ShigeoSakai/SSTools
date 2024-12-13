@@ -102,40 +102,473 @@ $(function(){initNavTree('d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_s
   <div class="headertitle"><div class="title">SSTools.Win32FileInfo.IShellFolder インタフェース</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Shell Folder I/F  
+ <a href="#details">[詳解]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a6721dc10e37304216adde0fcdcf1fbc3" id="r_a6721dc10e37304216adde0fcdcf1fbc3"><td class="memItemLeft" align="right" valign="top"><a id="a6721dc10e37304216adde0fcdcf1fbc3" name="a6721dc10e37304216adde0fcdcf1fbc3"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><b>ParseDisplayName</b> (IntPtr hwnd, IntPtr pbc, [In(), MarshalAs(UnmanagedType.LPWStr)] string pszDisplayName, out uint pchEaten, out IntPtr ppidl, ref uint pdwAttributes)</td></tr>
+<tr class="memitem:a6721dc10e37304216adde0fcdcf1fbc3" id="r_a6721dc10e37304216adde0fcdcf1fbc3"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6721dc10e37304216adde0fcdcf1fbc3">ParseDisplayName</a> (IntPtr hwnd, IntPtr pbc, [In(), MarshalAs(UnmanagedType.LPWStr)] string pszDisplayName, out uint pchEaten, out IntPtr ppidl, ref uint pdwAttributes)</td></tr>
+<tr class="memdesc:a6721dc10e37304216adde0fcdcf1fbc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translates a file object's or folder's display name into an item identifier list.  <br /></td></tr>
 <tr class="separator:a6721dc10e37304216adde0fcdcf1fbc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addb125a8d45783824da25c1175dc83db" id="r_addb125a8d45783824da25c1175dc83db"><td class="memItemLeft" align="right" valign="top"><a id="addb125a8d45783824da25c1175dc83db" name="addb125a8d45783824da25c1175dc83db"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><b>EnumObjects</b> (IntPtr hwnd, SHCONTF grfFlags, out <a class="el" href="../../dc/de4/interface_s_s_tools_1_1_win32_file_info_1_1_i_enum_i_d_list.html">IEnumIDList</a> ppenumIDList)</td></tr>
+<tr class="memitem:addb125a8d45783824da25c1175dc83db" id="r_addb125a8d45783824da25c1175dc83db"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addb125a8d45783824da25c1175dc83db">EnumObjects</a> (IntPtr hwnd, <a class="el" href="../../d6/dfe/class_s_s_tools_1_1_win32_file_info.html#adff86a325ee3d0059a0b70f04be020d2">SHCONTF</a> grfFlags, out <a class="el" href="../../dc/de4/interface_s_s_tools_1_1_win32_file_info_1_1_i_enum_i_d_list.html">IEnumIDList</a> ppenumIDList)</td></tr>
+<tr class="memdesc:addb125a8d45783824da25c1175dc83db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows a client to determine the contents of a folder by creating an item identifier enumeration object and returning its <a class="el" href="../../dc/de4/interface_s_s_tools_1_1_win32_file_info_1_1_i_enum_i_d_list.html" title="IDList I/F">IEnumIDList</a> interface.  <br /></td></tr>
 <tr class="separator:addb125a8d45783824da25c1175dc83db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3db09811354f0997b03a322e30f05bc5" id="r_a3db09811354f0997b03a322e30f05bc5"><td class="memItemLeft" align="right" valign="top"><a id="a3db09811354f0997b03a322e30f05bc5" name="a3db09811354f0997b03a322e30f05bc5"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><b>BindToObject</b> (IntPtr pidl, IntPtr pbc, [In()] ref Guid riid, out <a class="el" href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html">IShellFolder</a> ppv)</td></tr>
+<tr class="memitem:a3db09811354f0997b03a322e30f05bc5" id="r_a3db09811354f0997b03a322e30f05bc5"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3db09811354f0997b03a322e30f05bc5">BindToObject</a> (IntPtr pidl, IntPtr pbc, [In()] ref Guid riid, out <a class="el" href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html">IShellFolder</a> ppv)</td></tr>
+<tr class="memdesc:a3db09811354f0997b03a322e30f05bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves an <a class="el" href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html" title="Shell Folder I/F">IShellFolder</a> object for a subfolder.  <br /></td></tr>
 <tr class="separator:a3db09811354f0997b03a322e30f05bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acff3168c2ccdbdb6b0b1d655c8af39a0" id="r_acff3168c2ccdbdb6b0b1d655c8af39a0"><td class="memItemLeft" align="right" valign="top"><a id="acff3168c2ccdbdb6b0b1d655c8af39a0" name="acff3168c2ccdbdb6b0b1d655c8af39a0"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><b>BindToStorage</b> (IntPtr pidl, IntPtr pbc, [In()] ref Guid riid, [MarshalAs(UnmanagedType.Interface)] out object ppv)</td></tr>
+<tr class="memitem:acff3168c2ccdbdb6b0b1d655c8af39a0" id="r_acff3168c2ccdbdb6b0b1d655c8af39a0"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acff3168c2ccdbdb6b0b1d655c8af39a0">BindToStorage</a> (IntPtr pidl, IntPtr pbc, [In()] ref Guid riid, [MarshalAs(UnmanagedType.Interface)] out object ppv)</td></tr>
+<tr class="memdesc:acff3168c2ccdbdb6b0b1d655c8af39a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests a pointer to an object's storage interface  <br /></td></tr>
 <tr class="separator:acff3168c2ccdbdb6b0b1d655c8af39a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeda37c30f15b0e3e10b98fa5da8d64e3" id="r_aeda37c30f15b0e3e10b98fa5da8d64e3"><td class="memItemLeft" align="right" valign="top"><a id="aeda37c30f15b0e3e10b98fa5da8d64e3" name="aeda37c30f15b0e3e10b98fa5da8d64e3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>CompareIDs</b> (int lParam, IntPtr pidl1, IntPtr pidl2)</td></tr>
+<tr class="memitem:aeda37c30f15b0e3e10b98fa5da8d64e3" id="r_aeda37c30f15b0e3e10b98fa5da8d64e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeda37c30f15b0e3e10b98fa5da8d64e3">CompareIDs</a> (int lParam, IntPtr pidl1, IntPtr pidl2)</td></tr>
+<tr class="memdesc:aeda37c30f15b0e3e10b98fa5da8d64e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the relative order of two file objects or folders, given their item identifier lists. Return value: If this method is successful, the CODE field of the HRESULT contains one of the following values (the code can be retrived using the helper function GetHResultCode)...  <br /></td></tr>
 <tr class="separator:aeda37c30f15b0e3e10b98fa5da8d64e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f9dc62699783593be13f77ab88981b1" id="r_a4f9dc62699783593be13f77ab88981b1"><td class="memItemLeft" align="right" valign="top"><a id="a4f9dc62699783593be13f77ab88981b1" name="a4f9dc62699783593be13f77ab88981b1"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><b>CreateViewObject</b> (IntPtr hwndOwner, [In()] ref Guid riid, [MarshalAs(UnmanagedType.Interface)] out object ppv)</td></tr>
+<tr class="memitem:a4f9dc62699783593be13f77ab88981b1" id="r_a4f9dc62699783593be13f77ab88981b1"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f9dc62699783593be13f77ab88981b1">CreateViewObject</a> (IntPtr hwndOwner, [In()] ref Guid riid, [MarshalAs(UnmanagedType.Interface)] out object ppv)</td></tr>
+<tr class="memdesc:a4f9dc62699783593be13f77ab88981b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests an object that can be used to obtain information from or interact with a folder object.  <br /></td></tr>
 <tr class="separator:a4f9dc62699783593be13f77ab88981b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a642a317fb274ebf6eb722f33a6295cbf" id="r_a642a317fb274ebf6eb722f33a6295cbf"><td class="memItemLeft" align="right" valign="top"><a id="a642a317fb274ebf6eb722f33a6295cbf" name="a642a317fb274ebf6eb722f33a6295cbf"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><b>GetAttributesOf</b> (int cidl, out IntPtr apidl, out SFGAOF rgfInOut)</td></tr>
+<tr class="memitem:a642a317fb274ebf6eb722f33a6295cbf" id="r_a642a317fb274ebf6eb722f33a6295cbf"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a642a317fb274ebf6eb722f33a6295cbf">GetAttributesOf</a> (int cidl, out IntPtr apidl, out <a class="el" href="../../d6/dfe/class_s_s_tools_1_1_win32_file_info.html#a1b874ba4ed35fca210453c4ad9bc7982">SFGAOF</a> rgfInOut)</td></tr>
 <tr class="separator:a642a317fb274ebf6eb722f33a6295cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3eee6de0263b1e19f8f621ffce1e4843" id="r_a3eee6de0263b1e19f8f621ffce1e4843"><td class="memItemLeft" align="right" valign="top"><a id="a3eee6de0263b1e19f8f621ffce1e4843" name="a3eee6de0263b1e19f8f621ffce1e4843"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><b>GetUIObjectOf</b> (IntPtr hwndOwner, int cidl, [In(), MarshalAs(UnmanagedType.LPArray)] IntPtr[] apidl, [In()] ref Guid riid, IntPtr rgfReserved, [MarshalAs(UnmanagedType.Interface)] out object ppv)</td></tr>
+<tr class="memitem:a3eee6de0263b1e19f8f621ffce1e4843" id="r_a3eee6de0263b1e19f8f621ffce1e4843"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eee6de0263b1e19f8f621ffce1e4843">GetUIObjectOf</a> (IntPtr hwndOwner, int cidl, [In(), MarshalAs(UnmanagedType.LPArray)] IntPtr[] apidl, [In()] ref Guid riid, IntPtr rgfReserved, [MarshalAs(UnmanagedType.Interface)] out object ppv)</td></tr>
+<tr class="memdesc:a3eee6de0263b1e19f8f621ffce1e4843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves an OLE interface that can be used to carry out actions on the specified file objects or folders.  <br /></td></tr>
 <tr class="separator:a3eee6de0263b1e19f8f621ffce1e4843"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7118c6015ef08cfc433c0628ee37539" id="r_ae7118c6015ef08cfc433c0628ee37539"><td class="memItemLeft" align="right" valign="top"><a id="ae7118c6015ef08cfc433c0628ee37539" name="ae7118c6015ef08cfc433c0628ee37539"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><b>GetDisplayNameOf</b> (IntPtr pidl, SHGNO uFlags, out STRRET pName)</td></tr>
+<tr class="memitem:ae7118c6015ef08cfc433c0628ee37539" id="r_ae7118c6015ef08cfc433c0628ee37539"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7118c6015ef08cfc433c0628ee37539">GetDisplayNameOf</a> (IntPtr pidl, <a class="el" href="../../d6/dfe/class_s_s_tools_1_1_win32_file_info.html#a158f7dd61496add9ef97b6c32af15978">SHGNO</a> uFlags, out <a class="el" href="../../d6/dfe/class_s_s_tools_1_1_win32_file_info.html#a9709c7306e524820f84025c2d5456135">STRRET</a> pName)</td></tr>
+<tr class="memdesc:ae7118c6015ef08cfc433c0628ee37539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the display name for the specified file object or subfolder.  <br /></td></tr>
 <tr class="separator:ae7118c6015ef08cfc433c0628ee37539"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4b5793b0242b7373716e152aa89eb99" id="r_ad4b5793b0242b7373716e152aa89eb99"><td class="memItemLeft" align="right" valign="top"><a id="ad4b5793b0242b7373716e152aa89eb99" name="ad4b5793b0242b7373716e152aa89eb99"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><b>SetNameOf</b> (IntPtr hwnd, IntPtr pidl, [In(), MarshalAs(UnmanagedType.LPWStr)] string pszName, SHGNO uFlags, out IntPtr ppidlOut)</td></tr>
+<tr class="memitem:ad4b5793b0242b7373716e152aa89eb99" id="r_ad4b5793b0242b7373716e152aa89eb99"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4b5793b0242b7373716e152aa89eb99">SetNameOf</a> (IntPtr hwnd, IntPtr pidl, [In(), MarshalAs(UnmanagedType.LPWStr)] string pszName, <a class="el" href="../../d6/dfe/class_s_s_tools_1_1_win32_file_info.html#a158f7dd61496add9ef97b6c32af15978">SHGNO</a> uFlags, out IntPtr ppidlOut)</td></tr>
+<tr class="memdesc:ad4b5793b0242b7373716e152aa89eb99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the display name of a file object or subfolder, changing the item identifier in the process.  <br /></td></tr>
 <tr class="separator:ad4b5793b0242b7373716e152aa89eb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Shell Folder I/F </p>
+</div><h2 class="groupheader">メソッド詳解</h2>
+<a id="a3db09811354f0997b03a322e30f05bc5" name="a3db09811354f0997b03a322e30f05bc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3db09811354f0997b03a322e30f05bc5">&#9670;&#160;</a></span>BindToObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint SSTools.Win32FileInfo.IShellFolder.BindToObject </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>pidl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>pbc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[In()] ref Guid</td>          <td class="paramname"><span class="paramname"><em>riid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out <a class="el" href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html">IShellFolder</a></td>          <td class="paramname"><span class="paramname"><em>ppv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves an <a class="el" href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html" title="Shell Folder I/F">IShellFolder</a> object for a subfolder. </p>
+<dl class="section return"><dt>戻り値</dt><dd>error code, if any</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pidl</td><td>Address of an ITEMIDLIST structure (PIDL) that identifies the subfolder.  </td></tr>
+    <tr><td class="paramname">pbc</td><td>Optional address of an IBindCtx interface on a bind context object to be used during this operation.  </td></tr>
+    <tr><td class="paramname">riid</td><td>Identifier of the interface to return.  </td></tr>
+    <tr><td class="paramname">ppv</td><td>Address that receives the interface pointer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acff3168c2ccdbdb6b0b1d655c8af39a0" name="acff3168c2ccdbdb6b0b1d655c8af39a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff3168c2ccdbdb6b0b1d655c8af39a0">&#9670;&#160;</a></span>BindToStorage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint SSTools.Win32FileInfo.IShellFolder.BindToStorage </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>pidl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>pbc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[In()] ref Guid</td>          <td class="paramname"><span class="paramname"><em>riid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[MarshalAs(UnmanagedType.Interface)] out object</td>          <td class="paramname"><span class="paramname"><em>ppv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Requests a pointer to an object's storage interface </p>
+<dl class="section return"><dt>戻り値</dt><dd>error code, if any</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pidl</td><td>Address of an ITEMIDLIST structure that identifies the subfolder relative to its parent folder.  </td></tr>
+    <tr><td class="paramname">pbc</td><td>Optional address of an IBindCtx interface on a bind context object to be used during this operation.  </td></tr>
+    <tr><td class="paramname">riid</td><td>Interface identifier (IID) of the requested storage interface.  </td></tr>
+    <tr><td class="paramname">ppv</td><td>Address that receives the interface pointer specified by riid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeda37c30f15b0e3e10b98fa5da8d64e3" name="aeda37c30f15b0e3e10b98fa5da8d64e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeda37c30f15b0e3e10b98fa5da8d64e3">&#9670;&#160;</a></span>CompareIDs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SSTools.Win32FileInfo.IShellFolder.CompareIDs </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>lParam</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>pidl1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>pidl2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines the relative order of two file objects or folders, given their item identifier lists. Return value: If this method is successful, the CODE field of the HRESULT contains one of the following values (the code can be retrived using the helper function GetHResultCode)... </p>
+<dl class="section return"><dt>戻り値</dt><dd>A negative return value indicates that the first item should precede the second (pidl1 &lt; pidl2). A positive return value indicates that the first item should follow the second (pidl1 &gt; pidl2). Zero A return value of zero indicates that the two items are the same (pidl1 = pidl2). </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lParam</td><td>Value that specifies how the comparison should be performed. The lower sixteen bits of lParam define the sorting rule.  </td></tr>
+    <tr><td class="paramname">pidl1</td><td>Pointer to the first item's ITEMIDLIST structure.  </td></tr>
+    <tr><td class="paramname">pidl2</td><td>Pointer to the second item's ITEMIDLIST structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4f9dc62699783593be13f77ab88981b1" name="a4f9dc62699783593be13f77ab88981b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f9dc62699783593be13f77ab88981b1">&#9670;&#160;</a></span>CreateViewObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint SSTools.Win32FileInfo.IShellFolder.CreateViewObject </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>hwndOwner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[In()] ref Guid</td>          <td class="paramname"><span class="paramname"><em>riid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[MarshalAs(UnmanagedType.Interface)] out object</td>          <td class="paramname"><span class="paramname"><em>ppv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Requests an object that can be used to obtain information from or interact with a folder object. </p>
+<dl class="section return"><dt>戻り値</dt><dd>error code, if any</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwndOwner</td><td>Handle to the owner window.  </td></tr>
+    <tr><td class="paramname">riid</td><td>Identifier of the requested interface.  </td></tr>
+    <tr><td class="paramname">ppv</td><td>Address of a pointer to the requested interface. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="addb125a8d45783824da25c1175dc83db" name="addb125a8d45783824da25c1175dc83db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb125a8d45783824da25c1175dc83db">&#9670;&#160;</a></span>EnumObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint SSTools.Win32FileInfo.IShellFolder.EnumObjects </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>hwnd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/dfe/class_s_s_tools_1_1_win32_file_info.html#adff86a325ee3d0059a0b70f04be020d2">SHCONTF</a></td>          <td class="paramname"><span class="paramname"><em>grfFlags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out <a class="el" href="../../dc/de4/interface_s_s_tools_1_1_win32_file_info_1_1_i_enum_i_d_list.html">IEnumIDList</a></td>          <td class="paramname"><span class="paramname"><em>ppenumIDList</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows a client to determine the contents of a folder by creating an item identifier enumeration object and returning its <a class="el" href="../../dc/de4/interface_s_s_tools_1_1_win32_file_info_1_1_i_enum_i_d_list.html" title="IDList I/F">IEnumIDList</a> interface. </p>
+<dl class="section return"><dt>戻り値</dt><dd>error code, if any</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwnd</td><td>If user input is required to perform the enumeration, this window handle should be used by the enumeration object as the parent window to take user input.  </td></tr>
+    <tr><td class="paramname">grfFlags</td><td>Flags indicating which items to include in the enumeration. For a list of possible values, see the SHCONTF enum.  </td></tr>
+    <tr><td class="paramname">ppenumIDList</td><td>Address that receives a pointer to the <a class="el" href="../../dc/de4/interface_s_s_tools_1_1_win32_file_info_1_1_i_enum_i_d_list.html" title="IDList I/F">IEnumIDList</a> interface of the enumeration object created by this method. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a642a317fb274ebf6eb722f33a6295cbf" name="a642a317fb274ebf6eb722f33a6295cbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a642a317fb274ebf6eb722f33a6295cbf">&#9670;&#160;</a></span>GetAttributesOf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint SSTools.Win32FileInfo.IShellFolder.GetAttributesOf </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cidl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out IntPtr</td>          <td class="paramname"><span class="paramname"><em>apidl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out <a class="el" href="../../d6/dfe/class_s_s_tools_1_1_win32_file_info.html#a1b874ba4ed35fca210453c4ad9bc7982">SFGAOF</a></td>          <td class="paramname"><span class="paramname"><em>rgfInOut</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>戻り値</dt><dd></dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cidl</td><td>Number of file objects from which to retrieve attributes.  </td></tr>
+    <tr><td class="paramname">apidl</td><td>Address of an array of pointers to ITEMIDLIST structures, each of which uniquely identifies a file object relative to the parent folder.  </td></tr>
+    <tr><td class="paramname">rgfInOut</td><td>Address of a single ULONG value that, on entry, contains the attributes that the caller is requesting. On exit, this value contains the requested attributes that are common to all of the specified objects. this value can be from the SFGAO enum </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae7118c6015ef08cfc433c0628ee37539" name="ae7118c6015ef08cfc433c0628ee37539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7118c6015ef08cfc433c0628ee37539">&#9670;&#160;</a></span>GetDisplayNameOf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint SSTools.Win32FileInfo.IShellFolder.GetDisplayNameOf </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>pidl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/dfe/class_s_s_tools_1_1_win32_file_info.html#a158f7dd61496add9ef97b6c32af15978">SHGNO</a></td>          <td class="paramname"><span class="paramname"><em>uFlags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out <a class="el" href="../../d6/dfe/class_s_s_tools_1_1_win32_file_info.html#a9709c7306e524820f84025c2d5456135">STRRET</a></td>          <td class="paramname"><span class="paramname"><em>pName</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the display name for the specified file object or subfolder. </p>
+<dl class="section return"><dt>戻り値</dt><dd>error code, if any</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pidl</td><td>Address of an ITEMIDLIST structure (PIDL) that uniquely identifies the file object or subfolder relative to the parent folder.  </td></tr>
+    <tr><td class="paramname">uFlags</td><td>Flags used to request the type of display name to return. For a list of possible values.  </td></tr>
+    <tr><td class="paramname">pName</td><td>Address of a STRRET structure in which to return the display name. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3eee6de0263b1e19f8f621ffce1e4843" name="a3eee6de0263b1e19f8f621ffce1e4843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eee6de0263b1e19f8f621ffce1e4843">&#9670;&#160;</a></span>GetUIObjectOf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint SSTools.Win32FileInfo.IShellFolder.GetUIObjectOf </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>hwndOwner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cidl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[In(), MarshalAs(UnmanagedType.LPArray)] IntPtr[]</td>          <td class="paramname"><span class="paramname"><em>apidl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[In()] ref Guid</td>          <td class="paramname"><span class="paramname"><em>riid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>rgfReserved</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[MarshalAs(UnmanagedType.Interface)] out object</td>          <td class="paramname"><span class="paramname"><em>ppv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves an OLE interface that can be used to carry out actions on the specified file objects or folders. </p>
+<dl class="section return"><dt>戻り値</dt><dd>error code, if any</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwndOwner</td><td>Handle to the owner window that the client should specify if it displays a dialog box or message box.  </td></tr>
+    <tr><td class="paramname">cidl</td><td>Number of file objects or subfolders specified in the apidl parameter.  </td></tr>
+    <tr><td class="paramname">apidl</td><td>Address of an array of pointers to ITEMIDLIST structures, each of which uniquely identifies a file object or subfolder relative to the parent folder.  </td></tr>
+    <tr><td class="paramname">riid</td><td>Identifier of the COM interface object to return.  </td></tr>
+    <tr><td class="paramname">rgfReserved</td><td>Reserved.  </td></tr>
+    <tr><td class="paramname">ppv</td><td>Pointer to the requested interface. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6721dc10e37304216adde0fcdcf1fbc3" name="a6721dc10e37304216adde0fcdcf1fbc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6721dc10e37304216adde0fcdcf1fbc3">&#9670;&#160;</a></span>ParseDisplayName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint SSTools.Win32FileInfo.IShellFolder.ParseDisplayName </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>hwnd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>pbc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[In(), MarshalAs(UnmanagedType.LPWStr)] string</td>          <td class="paramname"><span class="paramname"><em>pszDisplayName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out uint</td>          <td class="paramname"><span class="paramname"><em>pchEaten</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out IntPtr</td>          <td class="paramname"><span class="paramname"><em>ppidl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref uint</td>          <td class="paramname"><span class="paramname"><em>pdwAttributes</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Translates a file object's or folder's display name into an item identifier list. </p>
+<dl class="section return"><dt>戻り値</dt><dd>error code, if any</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwnd</td><td>Optional window handle  </td></tr>
+    <tr><td class="paramname">pbc</td><td>Optional bind context that controls the parsing operation. This parameter is normally set to NULL.  </td></tr>
+    <tr><td class="paramname">pszDisplayName</td><td>Null-terminated UNICODE string with the display name.  </td></tr>
+    <tr><td class="paramname">pchEaten</td><td>Pointer to a ULONG value that receives the number of characters of the display name that was parsed.  </td></tr>
+    <tr><td class="paramname">ppidl</td><td>Pointer to an ITEMIDLIST pointer that receives the item identifier list for the object.  </td></tr>
+    <tr><td class="paramname">pdwAttributes</td><td>Optional parameter that can be used to query for file attributes. This can be values from the SFGAO enum </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad4b5793b0242b7373716e152aa89eb99" name="ad4b5793b0242b7373716e152aa89eb99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4b5793b0242b7373716e152aa89eb99">&#9670;&#160;</a></span>SetNameOf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint SSTools.Win32FileInfo.IShellFolder.SetNameOf </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>hwnd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>pidl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[In(), MarshalAs(UnmanagedType.LPWStr)] string</td>          <td class="paramname"><span class="paramname"><em>pszName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/dfe/class_s_s_tools_1_1_win32_file_info.html#a158f7dd61496add9ef97b6c32af15978">SHGNO</a></td>          <td class="paramname"><span class="paramname"><em>uFlags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out IntPtr</td>          <td class="paramname"><span class="paramname"><em>ppidlOut</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the display name of a file object or subfolder, changing the item identifier in the process. </p>
+<dl class="section return"><dt>戻り値</dt><dd>error code, if any</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwnd</td><td>Handle to the owner window of any dialog or message boxes that the client displays.  </td></tr>
+    <tr><td class="paramname">pidl</td><td>Pointer to an ITEMIDLIST structure that uniquely identifies the file object or subfolder relative to the parent folder.  </td></tr>
+    <tr><td class="paramname">pszName</td><td>Pointer to a null-terminated string that specifies the new display name.  </td></tr>
+    <tr><td class="paramname">uFlags</td><td>Flags indicating the type of name specified by the lpszName parameter. For a list of possible values, see the description of the SHGNO enum.  </td></tr>
+    <tr><td class="paramname">ppidlOut</td><td>Address of a pointer to an ITEMIDLIST structure which receives the new ITEMIDLIST. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>このインタフェース詳解は次のファイルから抽出されました:<ul>
 <li>SSTools/Win32API/<b>Win32FileInfo.cs</b></li>
 </ul>

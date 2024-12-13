@@ -867,6 +867,7 @@ namespace SSTools
         /// <param name="drawShape">図形描画有無</param>
         /// <param name="drawMask">マスク描画有無</param>
         /// <param name="legendImage">凡例画像</param>
+        /// <param name="clip_margin">クリップ時のマージン</param>
         /// <returns>true:ファイルに保存OK</returns>
         public bool SaveClipImage(string filename, CLIP_OPTION option = CLIP_OPTION.NONE, bool drawShape = true, bool drawMask = true, 
             Bitmap legendImage = null,int clip_margin = 50)

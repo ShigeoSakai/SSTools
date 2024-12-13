@@ -79,8 +79,7 @@ namespace SSTools
 		/// <summary>
 		/// コンストラクタ
 		/// </summary>
-		/// <param name="caption">表示する文字列</param>
-		/// <param name="total">合計数</param>
+		/// <param name="form">スレッドで表示するフォーム</param>
 		public FormThread(System.Windows.Forms.Form form)
 		{
             // スレッドを生成

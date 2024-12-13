@@ -136,6 +136,9 @@ SSTools.FolderTreeNode 連携図</div>
 <tr class="memitem:ada0e2fc6ee8cafbc01c602ef2caa676d" id="r_ada0e2fc6ee8cafbc01c602ef2caa676d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada0e2fc6ee8cafbc01c602ef2caa676d">FolderTreeNode</a> (ref ImageList imageList, bool isShowHidenFolder, Environment.SpecialFolder folder=Environment.SpecialFolder.Desktop)</td></tr>
 <tr class="memdesc:ada0e2fc6ee8cafbc01c602ef2caa676d"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
 <tr class="separator:ada0e2fc6ee8cafbc01c602ef2caa676d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe6da8cb2c9e6ddc306186d8c82d9773" id="r_afe6da8cb2c9e6ddc306186d8c82d9773"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe6da8cb2c9e6ddc306186d8c82d9773">FolderTreeNode</a> (<a class="el" href="../../d6/ddc/class_s_s_tools_1_1_shell_item.html">ShellItem</a> shellItem, ref ImageList imageList)</td></tr>
+<tr class="memdesc:afe6da8cb2c9e6ddc306186d8c82d9773"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="separator:afe6da8cb2c9e6ddc306186d8c82d9773"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70d06b18583d27d96a53a5a207382a19" id="r_a70d06b18583d27d96a53a5a207382a19"><td class="memItemLeft" align="right" valign="top"><a id="a70d06b18583d27d96a53a5a207382a19" name="a70d06b18583d27d96a53a5a207382a19"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Dispose</b> ()</td></tr>
 <tr class="memdesc:a70d06b18583d27d96a53a5a207382a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
@@ -173,7 +176,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>SubFolderIsDummy</b> 
 <div class="textblock"><p>フォルダTree Nodeクラス </p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="ada0e2fc6ee8cafbc01c602ef2caa676d" name="ada0e2fc6ee8cafbc01c602ef2caa676d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada0e2fc6ee8cafbc01c602ef2caa676d">&#9670;&#160;</a></span>FolderTreeNode()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ada0e2fc6ee8cafbc01c602ef2caa676d">&#9670;&#160;</a></span>FolderTreeNode() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,6 +243,36 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>SubFolderIsDummy</b> 
 
 </div>
 </div>
+<a id="afe6da8cb2c9e6ddc306186d8c82d9773" name="afe6da8cb2c9e6ddc306186d8c82d9773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe6da8cb2c9e6ddc306186d8c82d9773">&#9670;&#160;</a></span>FolderTreeNode() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SSTools.FolderTreeNode.FolderTreeNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/ddc/class_s_s_tools_1_1_shell_item.html">ShellItem</a></td>          <td class="paramname"><span class="paramname"><em>shellItem</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref ImageList</td>          <td class="paramname"><span class="paramname"><em>imageList</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shellItem</td><td>Shell Item</td></tr>
+    <tr><td class="paramname">imageList</td><td>画像リスト(アイコン表示用)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">メソッド詳解</h2>
 <a id="afbbea22b4bb450f88a2f93777ee4508a" name="afbbea22b4bb450f88a2f93777ee4508a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afbbea22b4bb450f88a2f93777ee4508a">&#9670;&#160;</a></span>ExpandSubFolder()</h2>
@@ -263,7 +296,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>SubFolderIsDummy</b> 
 <p>サブフォルダの展開 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">imageList</td><td>画像リスト(アイコン表示用)</td></tr>
+    <tr><td class="paramname">imgList</td><td>画像リスト(アイコン表示用)</td></tr>
     <tr><td class="paramname">isShowHidenFolder</td><td>隠しフォルダの表示・非表示</td></tr>
   </table>
   </dd>

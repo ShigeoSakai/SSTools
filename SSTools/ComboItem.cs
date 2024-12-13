@@ -70,12 +70,12 @@ namespace SSTools
 			foreach(T item in array)
 				combo.Items.Add(new ComboItem<T>(item));
 		}
-		/// <summary>
-		/// コンボボックスの作成
-		/// </summary>
-		/// <param name="combo">コンボボックス</param>
-		/// <param name="array">Tの配列</param>
-		public static void MakeCombo(ComboBox combo, IEnumerable<T> items)
+        /// <summary>
+        /// コンボボックスの作成
+        /// </summary>
+        /// <param name="combo">コンボボックス</param>
+        /// <param name="items">Tの配列</param>
+        public static void MakeCombo(ComboBox combo, IEnumerable<T> items)
 		{
 			combo.Items.Clear();
 			foreach (T item in items)

@@ -106,211 +106,594 @@ $(function(){initNavTree('d6/dfe/class_s_s_tools_1_1_win32_file_info.html','../.
   <div class="headertitle"><div class="title">SSTools.Win32FileInfo クラス</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Win32 File Infomation Class  
+ <a href="#details">[詳解]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de4/interface_s_s_tools_1_1_win32_file_info_1_1_i_enum_i_d_list.html">IEnumIDList</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">IDList I/F  <a href="../../dc/de4/interface_s_s_tools_1_1_win32_file_info_1_1_i_enum_i_d_list.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html">IShellFolder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shell Folder I/F  <a href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/df1/struct_s_s_tools_1_1_win32_file_info_1_1_s_h_f_i_l_e_i_n_f_o.html">SHFILEINFO</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shell File Info構造体  <a href="../../dd/df1/struct_s_s_tools_1_1_win32_file_info_1_1_s_h_f_i_l_e_i_n_f_o.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 公開型</h2></td></tr>
-<tr class="memitem:a158f7dd61496add9ef97b6c32af15978" id="r_a158f7dd61496add9ef97b6c32af15978"><td class="memItemLeft" align="right" valign="top"><a id="a158f7dd61496add9ef97b6c32af15978" name="a158f7dd61496add9ef97b6c32af15978"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>SHGNO</b> : uint { <br />
-&#160;&#160;<b>SHGDN_NORMAL</b> = 0x0000
-, <b>SHGDN_INFOLDER</b> = 0x0001
-, <b>SHGDN_FOREDITING</b> = 0x1000
-, <b>SHGDN_FORADDRESSBAR</b> = 0x4000
+<tr class="memitem:a158f7dd61496add9ef97b6c32af15978" id="r_a158f7dd61496add9ef97b6c32af15978"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a158f7dd61496add9ef97b6c32af15978">SHGNO</a> : uint { <br />
+&#160;&#160;<a class="el" href="#a158f7dd61496add9ef97b6c32af15978a55640986acc296a9fc6796d7d2368599">SHGDN_NORMAL</a> = 0x0000
+, <a class="el" href="#a158f7dd61496add9ef97b6c32af15978aaeda8a187d1c2aa8fa0a2fbf3979831b">SHGDN_INFOLDER</a> = 0x0001
+, <a class="el" href="#a158f7dd61496add9ef97b6c32af15978ab872bb51e10ec12596f08499c3b18d8d">SHGDN_FOREDITING</a> = 0x1000
+, <a class="el" href="#a158f7dd61496add9ef97b6c32af15978a82991d0c14f9546cfff019976d6f8a89">SHGDN_FORADDRESSBAR</a> = 0x4000
 , <br />
-&#160;&#160;<b>SHGDN_FORPARSING</b> = 0x8000
+&#160;&#160;<a class="el" href="#a158f7dd61496add9ef97b6c32af15978a96c699cba3d02ee979b07ec5b42f842a">SHGDN_FORPARSING</a> = 0x8000
 <br />
  }</td></tr>
+<tr class="memdesc:a158f7dd61496add9ef97b6c32af15978"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル名またはフォルダー名の種類  <a href="#a158f7dd61496add9ef97b6c32af15978">[詳解]</a><br /></td></tr>
 <tr class="separator:a158f7dd61496add9ef97b6c32af15978"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adff86a325ee3d0059a0b70f04be020d2" id="r_adff86a325ee3d0059a0b70f04be020d2"><td class="memItemLeft" align="right" valign="top"><a id="adff86a325ee3d0059a0b70f04be020d2" name="adff86a325ee3d0059a0b70f04be020d2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>SHCONTF</b> : uint { <br />
-&#160;&#160;<b>SHCONTF_FOLDERS</b> = 0x0020
-, <b>SHCONTF_NONFOLDERS</b> = 0x0040
-, <b>SHCONTF_INCLUDEHIDDEN</b> = 0x0080
-, <b>SHCONTF_INIT_ON_FIRST_NEXT</b> = 0x0100
+<tr class="memitem:adff86a325ee3d0059a0b70f04be020d2" id="r_adff86a325ee3d0059a0b70f04be020d2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adff86a325ee3d0059a0b70f04be020d2">SHCONTF</a> : uint { <br />
+&#160;&#160;<a class="el" href="#adff86a325ee3d0059a0b70f04be020d2aafbe8dfd5cebf201b35400c2c71a0a68">SHCONTF_FOLDERS</a> = 0x0020
+, <a class="el" href="#adff86a325ee3d0059a0b70f04be020d2a48b1a4a6cfee965db1c65b7f301c5cc7">SHCONTF_NONFOLDERS</a> = 0x0040
+, <a class="el" href="#adff86a325ee3d0059a0b70f04be020d2a31b2f4cd77c2a159125f1fb8691349fc">SHCONTF_INCLUDEHIDDEN</a> = 0x0080
+, <a class="el" href="#adff86a325ee3d0059a0b70f04be020d2a9a968f7e0356323093187b9a7e5e0391">SHCONTF_INIT_ON_FIRST_NEXT</a> = 0x0100
 , <br />
-&#160;&#160;<b>SHCONTF_NETPRINTERSRCH</b> = 0x0200
-, <b>SHCONTF_SHAREABLE</b> = 0x0400
-, <b>SHCONTF_STORAGE</b> = 0x0800
+&#160;&#160;<a class="el" href="#adff86a325ee3d0059a0b70f04be020d2a9503e84e40cb43b97a51ed0ee80b7ed8">SHCONTF_NETPRINTERSRCH</a> = 0x0200
+, <a class="el" href="#adff86a325ee3d0059a0b70f04be020d2a5dd80beda84916021de3993a2e20fc0f">SHCONTF_SHAREABLE</a> = 0x0400
+, <a class="el" href="#adff86a325ee3d0059a0b70f04be020d2aa47ce27b4c601e74371f71caa2d1c4ce">SHCONTF_STORAGE</a> = 0x0800
 <br />
  }</td></tr>
+<tr class="memdesc:adff86a325ee3d0059a0b70f04be020d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">列挙に含まれる項目の種類  <a href="#adff86a325ee3d0059a0b70f04be020d2">[詳解]</a><br /></td></tr>
 <tr class="separator:adff86a325ee3d0059a0b70f04be020d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b874ba4ed35fca210453c4ad9bc7982" id="r_a1b874ba4ed35fca210453c4ad9bc7982"><td class="memItemLeft" align="right" valign="top"><a id="a1b874ba4ed35fca210453c4ad9bc7982" name="a1b874ba4ed35fca210453c4ad9bc7982"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>SFGAOF</b> : uint { <br />
-&#160;&#160;<b>SFGAO_CANCOPY</b> = 0x1
-, <b>SFGAO_CANMOVE</b> = 0x2
-, <b>SFGAO_CANLINK</b> = 0x4
-, <b>SFGAO_STORAGE</b> = 0x00000008
+<tr class="memitem:a1b874ba4ed35fca210453c4ad9bc7982" id="r_a1b874ba4ed35fca210453c4ad9bc7982"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982">SFGAOF</a> : uint { <br />
+&#160;&#160;<a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982aa89405ffc0c8e1b9091a9b00ce209e2b">SFGAO_CANCOPY</a> = 0x1
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a5e5d37b897ed7280ce120e39e2ba6e89">SFGAO_CANMOVE</a> = 0x2
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a957aa64c60e3632f83433806bb3fadcf">SFGAO_CANLINK</a> = 0x4
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982ae35cad5d036b5e6c984dc4b827ab550c">SFGAO_STORAGE</a> = 0x00000008
 , <br />
-&#160;&#160;<b>SFGAO_CANRENAME</b> = 0x00000010
-, <b>SFGAO_CANDELETE</b> = 0x00000020
-, <b>SFGAO_HASPROPSHEET</b> = 0x00000040
-, <b>SFGAO_DROPTARGET</b> = 0x00000100
+&#160;&#160;<a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a5cc9ffd2aae5bed38b7eafa6ef8e7121">SFGAO_CANRENAME</a> = 0x00000010
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982ab64b7c0a0542739541a7be76297832b0">SFGAO_CANDELETE</a> = 0x00000020
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982ae71f76ec0d55fab15f285cededf885fa">SFGAO_HASPROPSHEET</a> = 0x00000040
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a1769c9d0f1e919efb6e236c3c7fb55e6">SFGAO_DROPTARGET</a> = 0x00000100
 , <br />
-&#160;&#160;<b>SFGAO_CAPABILITYMASK</b> = 0x00000177
-, <b>SFGAO_ENCRYPTED</b> = 0x00002000
-, <b>SFGAO_ISSLOW</b> = 0x00004000
-, <b>SFGAO_GHOSTED</b> = 0x00008000
+&#160;&#160;<a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a5a269a605ebc96afac7166f2501d8c42">SFGAO_CAPABILITYMASK</a> = 0x00000177
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a7342f5b2e802316c9e9a448fd01a3b3d">SFGAO_ENCRYPTED</a> = 0x00002000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982aa096a4596155d0874417bdf2971cbdd4">SFGAO_ISSLOW</a> = 0x00004000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a00ea9a9506b97ede031483108d026edb">SFGAO_GHOSTED</a> = 0x00008000
 , <br />
-&#160;&#160;<b>SFGAO_LINK</b> = 0x00010000
-, <b>SFGAO_SHARE</b> = 0x00020000
-, <b>SFGAO_READONLY</b> = 0x00040000
-, <b>SFGAO_HIDDEN</b> = 0x00080000
+&#160;&#160;<a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982afa35749879f4cab5060e8469794473e8">SFGAO_LINK</a> = 0x00010000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a00e05221cbc975b357cee25aba4795f2">SFGAO_SHARE</a> = 0x00020000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982ad65e35284cb06b5926e29b51f0de2e8f">SFGAO_READONLY</a> = 0x00040000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a70a8751ba5757c13e6679516dbeb4d67">SFGAO_HIDDEN</a> = 0x00080000
 , <br />
-&#160;&#160;<b>SFGAO_DISPLAYATTRMASK</b> = 0x000FC000
-, <b>SFGAO_FILESYSANCESTOR</b> = 0x10000000
-, <b>SFGAO_FOLDER</b> = 0x20000000
-, <b>SFGAO_FILESYSTEM</b> = 0x40000000
+&#160;&#160;<a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a4d97f13ce38dc904ca124e7d02e0393b">SFGAO_DISPLAYATTRMASK</a> = 0x000FC000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982af33cf8f0b612455d61dcdeedfd767cac">SFGAO_FILESYSANCESTOR</a> = 0x10000000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982aa0292a8311ab8b56579b3623780eb2c1">SFGAO_FOLDER</a> = 0x20000000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a7355d919fecf8e15d820c4a5eca269b2">SFGAO_FILESYSTEM</a> = 0x40000000
 , <br />
-&#160;&#160;<b>SFGAO_HASSUBFOLDER</b> = 0x80000000
-, <b>SFGAO_CONTENTSMASK</b> = 0x80000000
-, <b>SFGAO_VALIDATE</b> = 0x01000000
-, <b>SFGAO_REMOVABLE</b> = 0x02000000
+&#160;&#160;<a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a8f74f5c3344aa5e2345830c228eaf9e1">SFGAO_HASSUBFOLDER</a> = 0x80000000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a62adf80bc0af3f84201e5c9901cd3111">SFGAO_CONTENTSMASK</a> = 0x80000000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a134bc16ff15f74bd206ceb0fb4843e2c">SFGAO_VALIDATE</a> = 0x01000000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a228ffbde346c8852db0fa2c4536c586e">SFGAO_REMOVABLE</a> = 0x02000000
 , <br />
-&#160;&#160;<b>SFGAO_COMPRESSED</b> = 0x04000000
-, <b>SFGAO_BROWSABLE</b> = 0x08000000
-, <b>SFGAO_NONENUMERATED</b> = 0x00100000
-, <b>SFGAO_NEWCONTENT</b> = 0x00200000
+&#160;&#160;<a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982afebf4e8b73284b577946f29f9a6c8846">SFGAO_COMPRESSED</a> = 0x04000000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a6706872c61a63e0dbb7da244d189fcc8">SFGAO_BROWSABLE</a> = 0x08000000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a98a0224922d2b47b6febb4117281e199">SFGAO_NONENUMERATED</a> = 0x00100000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a1fe1719cf07535415fd8ddffef3de90c">SFGAO_NEWCONTENT</a> = 0x00200000
 , <br />
-&#160;&#160;<b>SFGAO_CANMONIKER</b> = 0x00400000
-, <b>SFGAO_HASSTORAGE</b> = 0x00400000
-, <b>SFGAO_STREAM</b> = 0x00400000
-, <b>SFGAO_STORAGEANCESTOR</b> = 0x00800000
+&#160;&#160;<a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a8fbb841b4b21e42d15253e4ca0c0bbb7">SFGAO_CANMONIKER</a> = 0x00400000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a7ad3b456ed12d0badb9f3af9c78e0d15">SFGAO_HASSTORAGE</a> = 0x00400000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a21c266a731abd411daf8b5655046b263">SFGAO_STREAM</a> = 0x00400000
+, <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a9309e07eaf28ad4deab0a80d9e3e1979">SFGAO_STORAGEANCESTOR</a> = 0x00800000
 , <br />
-&#160;&#160;<b>SFGAO_STORAGECAPMASK</b> = 0x70C50008
+&#160;&#160;<a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982a4b37962a26ec17ef9835e2dbbf82c991">SFGAO_STORAGECAPMASK</a> = 0x70C50008
 <br />
  }</td></tr>
+<tr class="memdesc:a1b874ba4ed35fca210453c4ad9bc7982"><td class="mdescLeft">&#160;</td><td class="mdescRight">アイテム (ファイルまたはフォルダー) またはアイテムのセットで取得できる属性  <a href="#a1b874ba4ed35fca210453c4ad9bc7982">[詳解]</a><br /></td></tr>
 <tr class="separator:a1b874ba4ed35fca210453c4ad9bc7982"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9709c7306e524820f84025c2d5456135" id="r_a9709c7306e524820f84025c2d5456135"><td class="memItemLeft" align="right" valign="top"><a id="a9709c7306e524820f84025c2d5456135" name="a9709c7306e524820f84025c2d5456135"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>STRRET</b> : uint { <b>STRRET_WSTR</b> = 0
-, <b>STRRET_OFFSET</b> = 0x1
-, <b>STRRET_CSTR</b> = 0x2
+<tr class="memitem:a9709c7306e524820f84025c2d5456135" id="r_a9709c7306e524820f84025c2d5456135"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9709c7306e524820f84025c2d5456135">STRRET</a> : uint { <a class="el" href="#a9709c7306e524820f84025c2d5456135af746a22916fd3da9410c2aecc4fc3740">STRRET_WSTR</a> = 0
+, <a class="el" href="#a9709c7306e524820f84025c2d5456135a19411bb6fa1e2ac330d1558b24545987">STRRET_OFFSET</a> = 0x1
+, <a class="el" href="#a9709c7306e524820f84025c2d5456135a1bf4834dd475e213ddcf0e35fe902fcd">STRRET_CSTR</a> = 0x2
  }</td></tr>
+<tr class="memdesc:a9709c7306e524820f84025c2d5456135"><td class="mdescLeft">&#160;</td><td class="mdescRight">IShellFolderインターフェイスメソッドから返される文字列の種類  <a href="#a9709c7306e524820f84025c2d5456135">[詳解]</a><br /></td></tr>
 <tr class="separator:a9709c7306e524820f84025c2d5456135"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32c4ae577bb52dd9d1ea574c8947350c" id="r_a32c4ae577bb52dd9d1ea574c8947350c"><td class="memItemLeft" align="right" valign="top"><a id="a32c4ae577bb52dd9d1ea574c8947350c" name="a32c4ae577bb52dd9d1ea574c8947350c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>SHGFI</b> { <br />
-&#160;&#160;<b>SHGFI_ICON</b> = 0x000000100
-, <b>SHGFI_DISPLAYNAME</b> = 0x000000200
-, <b>SHGFI_TYPENAME</b> = 0x000000400
-, <b>SHGFI_ATTRIBUTES</b> = 0x000000800
+<tr class="memitem:a32c4ae577bb52dd9d1ea574c8947350c" id="r_a32c4ae577bb52dd9d1ea574c8947350c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350c">SHGFI</a> { <br />
+&#160;&#160;<a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca1ca178e6a7fbc958d4f68f23668a0cce">SHGFI_ICON</a> = 0x000000100
+, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca34438b64d315b297fef8092dc4caf0c0">SHGFI_DISPLAYNAME</a> = 0x000000200
+, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca5ea2f5c135a23024c3b1226931ef9c52">SHGFI_TYPENAME</a> = 0x000000400
+, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca9ab924239953e120537719ea84d9fe86">SHGFI_ATTRIBUTES</a> = 0x000000800
 , <br />
-&#160;&#160;<b>SHGFI_ICONLOCATION</b> = 0x000001000
-, <b>SHGFI_EXETYPE</b> = 0x000002000
-, <b>SHGFI_SYSICONINDEX</b> = 0x000004000
-, <b>SHGFI_LINKOVERLAY</b> = 0x000008000
+&#160;&#160;<a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca3dfba2475d452b9bdeaa4a673d577e91">SHGFI_ICONLOCATION</a> = 0x000001000
+, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca95b16e269eb907cd6daf89828b7805d0">SHGFI_EXETYPE</a> = 0x000002000
+, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca02af06ca6dc8b6fdade4f629c72a1ad1">SHGFI_SYSICONINDEX</a> = 0x000004000
+, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca1038650afe3c051c06f903977f3e7693">SHGFI_LINKOVERLAY</a> = 0x000008000
 , <br />
-&#160;&#160;<b>SHGFI_SELECTED</b> = 0x000010000
-, <b>SHGFI_ATTR_SPECIFIED</b> = 0x000020000
-, <b>SHGFI_LARGEICON</b> = 0x000000000
-, <b>SHGFI_SMALLICON</b> = 0x000000001
+&#160;&#160;<a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca426c28bce1be0a9219eb604767404912">SHGFI_SELECTED</a> = 0x000010000
+, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca2192c92f12f74e24f8803741e3c1bf9a">SHGFI_ATTR_SPECIFIED</a> = 0x000020000
+, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350cad1e28791f66c19f1753671ed4e993845">SHGFI_LARGEICON</a> = 0x000000000
+, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350cadcad52a770d20783a811fcf44f35e2b0">SHGFI_SMALLICON</a> = 0x000000001
 , <br />
-&#160;&#160;<b>SHGFI_OPENICON</b> = 0x000000002
-, <b>SHGFI_SHELLICONSIZE</b> = 0x000000004
-, <b>SHGFI_PIDL</b> = 0x000000008
-, <b>SHGFI_USEFILEATTRIBUTES</b> = 0x000000010
+&#160;&#160;<a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca673b93ba342439f62c7618d220a40a3c">SHGFI_OPENICON</a> = 0x000000002
+, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350cae6f928a274d4ec424730fdbf9a2b6ec4">SHGFI_SHELLICONSIZE</a> = 0x000000004
+, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca35a0c7cfb9194b57172b6ba8a039f30e">SHGFI_PIDL</a> = 0x000000008
+, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca6377b6724535e647c94b9565fd543d8d">SHGFI_USEFILEATTRIBUTES</a> = 0x000000010
 , <br />
-&#160;&#160;<b>SHGFI_ADDOVERLAYS</b> = 0x000000020
-, <b>SHGFI_OVERLAYINDEX</b> = 0x000000040
+&#160;&#160;<a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca2d7b75bd3db7f20a08aa546dee718e55">SHGFI_ADDOVERLAYS</a> = 0x000000020
+, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350ca5960d1c02c068af5134e5b47c06823b6">SHGFI_OVERLAYINDEX</a> = 0x000000040
 <br />
  }</td></tr>
+<tr class="memdesc:a32c4ae577bb52dd9d1ea574c8947350c"><td class="mdescLeft">&#160;</td><td class="mdescRight">取得するファイル情報を指定するフラグ  <a href="#a32c4ae577bb52dd9d1ea574c8947350c">[詳解]</a><br /></td></tr>
 <tr class="separator:a32c4ae577bb52dd9d1ea574c8947350c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3044ad3b99028404810668c6938de5c" id="r_ae3044ad3b99028404810668c6938de5c"><td class="memItemLeft" align="right" valign="top"><a id="ae3044ad3b99028404810668c6938de5c" name="ae3044ad3b99028404810668c6938de5c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>CSIDL</b> : uint { <b>CSIDL_DESKTOP</b> = 0x0000
-, <b>CSIDL_WINDOWS</b> = 0x0024
+<tr class="memitem:ae3044ad3b99028404810668c6938de5c" id="r_ae3044ad3b99028404810668c6938de5c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3044ad3b99028404810668c6938de5c">CSIDL</a> : uint { <a class="el" href="#ae3044ad3b99028404810668c6938de5ca01dea18f7c67d735cebf3b80622ea6b3">CSIDL_DESKTOP</a> = 0x0000
+, <a class="el" href="#ae3044ad3b99028404810668c6938de5cabf15c611be135a32ad4a9237db60ffc4">CSIDL_WINDOWS</a> = 0x0024
  }</td></tr>
+<tr class="memdesc:ae3044ad3b99028404810668c6938de5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置するフォルダーを識別するCSIDL値  <a href="#ae3044ad3b99028404810668c6938de5c">[詳解]</a><br /></td></tr>
 <tr class="separator:ae3044ad3b99028404810668c6938de5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acde670b6f8d415c8566e747990e5994c" id="r_acde670b6f8d415c8566e747990e5994c"><td class="memItemLeft" align="right" valign="top"><a id="acde670b6f8d415c8566e747990e5994c" name="acde670b6f8d415c8566e747990e5994c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>SHIL</b> { <br />
-&#160;&#160;<b>SHIL_LARGE</b> = 0x0000
-, <b>SHIL_SMALL</b> = 0x0001
-, <b>SHIL_EXTRALARGE</b> = 0x002
-, <b>SHIL_SYSSMALL</b> = 0x003
+<tr class="memitem:acde670b6f8d415c8566e747990e5994c" id="r_acde670b6f8d415c8566e747990e5994c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acde670b6f8d415c8566e747990e5994c">SHIL</a> { <br />
+&#160;&#160;<a class="el" href="#acde670b6f8d415c8566e747990e5994caf2ce1c6bf2bcf998e9942493ab1a7016">SHIL_LARGE</a> = 0x0000
+, <a class="el" href="#acde670b6f8d415c8566e747990e5994caa4b3980f5ba87e24db02960812b85b7f">SHIL_SMALL</a> = 0x0001
+, <a class="el" href="#acde670b6f8d415c8566e747990e5994cad10388536c0306d1b0dc3e440f3818d1">SHIL_EXTRALARGE</a> = 0x002
+, <a class="el" href="#acde670b6f8d415c8566e747990e5994ca9fe8fccad92170823e9c837bd06f6e27">SHIL_SYSSMALL</a> = 0x003
 , <br />
-&#160;&#160;<b>SHIL_JUMBO</b> = 0x004
-, <b>SHIL_LAST</b>
+&#160;&#160;<a class="el" href="#acde670b6f8d415c8566e747990e5994ca0166eb4584f90f3fc082a9cf26938572">SHIL_JUMBO</a> = 0x004
+, <a class="el" href="#acde670b6f8d415c8566e747990e5994cac7cdc2f4eaf1bfd820b17d6ab50d514f">SHIL_LAST</a>
 <br />
  }</td></tr>
+<tr class="memdesc:acde670b6f8d415c8566e747990e5994c"><td class="mdescLeft">&#160;</td><td class="mdescRight">取得するIconの種類  <a href="#acde670b6f8d415c8566e747990e5994c">[詳解]</a><br /></td></tr>
 <tr class="separator:acde670b6f8d415c8566e747990e5994c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b698238e2b300010d51e4053618fa5a" id="r_a9b698238e2b300010d51e4053618fa5a"><td class="memItemLeft" align="right" valign="top"><a id="a9b698238e2b300010d51e4053618fa5a" name="a9b698238e2b300010d51e4053618fa5a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>IDL</b> { <br />
-&#160;&#160;<b>ILD_NORMAL</b> = 0x00000000
-, <b>ILD_TRANSPARENT</b> = 0x00000001
-, <b>ILD_BLEND25</b> = 0x00000002
-, <b>ILD_FOCUS</b> = 0x00000002
+<tr class="memitem:a9b698238e2b300010d51e4053618fa5a" id="r_a9b698238e2b300010d51e4053618fa5a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b698238e2b300010d51e4053618fa5a">IDL</a> { <br />
+&#160;&#160;<a class="el" href="#a9b698238e2b300010d51e4053618fa5aa8f932e8eb405a640848a198be5823416">ILD_NORMAL</a> = 0x00000000
+, <a class="el" href="#a9b698238e2b300010d51e4053618fa5aa2192ee81b671859a06f7415ef27bcab3">ILD_TRANSPARENT</a> = 0x00000001
+, <a class="el" href="#a9b698238e2b300010d51e4053618fa5aae098a1946b94f4fe949d66935bc47343">ILD_BLEND25</a> = 0x00000002
+, <a class="el" href="#a9b698238e2b300010d51e4053618fa5aa3c60df4d389f4f90c5556eca6aeecbc2">ILD_FOCUS</a> = 0x00000002
 , <br />
-&#160;&#160;<b>ILD_BLEND50</b> = 0x00000004
-, <b>ILD_SELECTED</b> = 0x00000004
+&#160;&#160;<a class="el" href="#a9b698238e2b300010d51e4053618fa5aa3f47bf7d9171ba9a8e44e6cee4fdcc15">ILD_BLEND50</a> = 0x00000004
+, <a class="el" href="#a9b698238e2b300010d51e4053618fa5aaa3fa58d61f10b08c113743eeeec2e695">ILD_SELECTED</a> = 0x00000004
 , <b>ILD_BLEND</b> = 0x00000004
 , <b>ILD_MASK</b> = 0x00000010
 , <br />
-&#160;&#160;<b>ILD_IMAGE</b> = 0x00000020
+&#160;&#160;<a class="el" href="#a9b698238e2b300010d51e4053618fa5aae31a49f03c5d4cb0d9ec0fecbf751a1a">ILD_IMAGE</a> = 0x00000020
 <br />
  }</td></tr>
+<tr class="memdesc:a9b698238e2b300010d51e4053618fa5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Icon描画方法  <a href="#a9b698238e2b300010d51e4053618fa5a">[詳解]</a><br /></td></tr>
 <tr class="separator:a9b698238e2b300010d51e4053618fa5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a83c30cbce8d1122fd8ddb7712df7f209" id="r_a83c30cbce8d1122fd8ddb7712df7f209"><td class="memItemLeft" align="right" valign="top"><a id="a83c30cbce8d1122fd8ddb7712df7f209" name="a83c30cbce8d1122fd8ddb7712df7f209"></a>
-static Int32&#160;</td><td class="memItemRight" valign="bottom"><b>SHGetDesktopFolder</b> (ref <a class="el" href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html">IShellFolder</a> ppshf)</td></tr>
+<tr class="memitem:a83c30cbce8d1122fd8ddb7712df7f209" id="r_a83c30cbce8d1122fd8ddb7712df7f209"><td class="memItemLeft" align="right" valign="top">static Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83c30cbce8d1122fd8ddb7712df7f209">SHGetDesktopFolder</a> (ref <a class="el" href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html">IShellFolder</a> ppshf)</td></tr>
+<tr class="memdesc:a83c30cbce8d1122fd8ddb7712df7f209"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェルの名前空間のルートであるデスクトップ フォルダーの <a class="el" href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html" title="Shell Folder I/F">IShellFolder</a> インターフェイスを取得します。  <br /></td></tr>
 <tr class="separator:a83c30cbce8d1122fd8ddb7712df7f209"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a698e0542b49ef9fbb990fb4a29b8f3a2" id="r_a698e0542b49ef9fbb990fb4a29b8f3a2"><td class="memItemLeft" align="right" valign="top"><a id="a698e0542b49ef9fbb990fb4a29b8f3a2" name="a698e0542b49ef9fbb990fb4a29b8f3a2"></a>
-static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><b>SHGetFileInfo</b> (string pszPath, uint dwFileAttribs, out <a class="el" href="../../dd/df1/struct_s_s_tools_1_1_win32_file_info_1_1_s_h_f_i_l_e_i_n_f_o.html">SHFILEINFO</a> psfi, uint cbFileInfo, SHGFI uFlags)</td></tr>
+<tr class="memitem:a698e0542b49ef9fbb990fb4a29b8f3a2" id="r_a698e0542b49ef9fbb990fb4a29b8f3a2"><td class="memItemLeft" align="right" valign="top">static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a698e0542b49ef9fbb990fb4a29b8f3a2">SHGetFileInfo</a> (string pszPath, uint dwFileAttribs, out <a class="el" href="../../dd/df1/struct_s_s_tools_1_1_win32_file_info_1_1_s_h_f_i_l_e_i_n_f_o.html">SHFILEINFO</a> psfi, uint cbFileInfo, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350c">SHGFI</a> uFlags)</td></tr>
+<tr class="memdesc:a698e0542b49ef9fbb990fb4a29b8f3a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル、フォルダー、ディレクトリ、ドライブ ルートなど、ファイル システム内のオブジェクトに関する情報を取得します。  <br /></td></tr>
 <tr class="separator:a698e0542b49ef9fbb990fb4a29b8f3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a663677718a4364be7230e6c9f074dcb2" id="r_a663677718a4364be7230e6c9f074dcb2"><td class="memItemLeft" align="right" valign="top"><a id="a663677718a4364be7230e6c9f074dcb2" name="a663677718a4364be7230e6c9f074dcb2"></a>
-static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><b>SHGetFileInfo</b> (IntPtr pIDL, uint dwFileAttributes, out <a class="el" href="../../dd/df1/struct_s_s_tools_1_1_win32_file_info_1_1_s_h_f_i_l_e_i_n_f_o.html">SHFILEINFO</a> psfi, uint cbFileInfo, SHGFI uFlags)</td></tr>
+<tr class="memitem:a663677718a4364be7230e6c9f074dcb2" id="r_a663677718a4364be7230e6c9f074dcb2"><td class="memItemLeft" align="right" valign="top">static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a663677718a4364be7230e6c9f074dcb2">SHGetFileInfo</a> (IntPtr pIDL, uint dwFileAttributes, out <a class="el" href="../../dd/df1/struct_s_s_tools_1_1_win32_file_info_1_1_s_h_f_i_l_e_i_n_f_o.html">SHFILEINFO</a> psfi, uint cbFileInfo, <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350c">SHGFI</a> uFlags)</td></tr>
+<tr class="memdesc:a663677718a4364be7230e6c9f074dcb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル、フォルダー、ディレクトリ、ドライブ ルートなど、ファイル システム内のオブジェクトに関する情報を取得します。  <br /></td></tr>
 <tr class="separator:a663677718a4364be7230e6c9f074dcb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a350f94c20a63a06650abd3ce85f9247f" id="r_a350f94c20a63a06650abd3ce85f9247f"><td class="memItemLeft" align="right" valign="top"><a id="a350f94c20a63a06650abd3ce85f9247f" name="a350f94c20a63a06650abd3ce85f9247f"></a>
-static Int32&#160;</td><td class="memItemRight" valign="bottom"><b>SHGetSpecialFolderLocation</b> (IntPtr hwndOwner, CSIDL nFolder, ref IntPtr ppidl)</td></tr>
+<tr class="memitem:a350f94c20a63a06650abd3ce85f9247f" id="r_a350f94c20a63a06650abd3ce85f9247f"><td class="memItemLeft" align="right" valign="top">static Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a350f94c20a63a06650abd3ce85f9247f">SHGetSpecialFolderLocation</a> (IntPtr hwndOwner, <a class="el" href="#ae3044ad3b99028404810668c6938de5c">CSIDL</a> nFolder, ref IntPtr ppidl)</td></tr>
+<tr class="memdesc:a350f94c20a63a06650abd3ce85f9247f"><td class="mdescLeft">&#160;</td><td class="mdescRight">特殊なフォルダーの ITEMIDLIST 構造体へのポインターを取得します。  <br /></td></tr>
 <tr class="separator:a350f94c20a63a06650abd3ce85f9247f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e6500b45e48f263e0c3584695aa24e8" id="r_a9e6500b45e48f263e0c3584695aa24e8"><td class="memItemLeft" align="right" valign="top"><a id="a9e6500b45e48f263e0c3584695aa24e8" name="a9e6500b45e48f263e0c3584695aa24e8"></a>
-static Int32&#160;</td><td class="memItemRight" valign="bottom"><b>SHGetSpecialFolderLocation</b> (IntPtr hwndOwner, uint nFolder, ref IntPtr ppidl)</td></tr>
+<tr class="memitem:a9e6500b45e48f263e0c3584695aa24e8" id="r_a9e6500b45e48f263e0c3584695aa24e8"><td class="memItemLeft" align="right" valign="top">static Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e6500b45e48f263e0c3584695aa24e8">SHGetSpecialFolderLocation</a> (IntPtr hwndOwner, uint nFolder, ref IntPtr ppidl)</td></tr>
+<tr class="memdesc:a9e6500b45e48f263e0c3584695aa24e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">特殊なフォルダーの ITEMIDLIST 構造体へのポインターを取得します。  <br /></td></tr>
 <tr class="separator:a9e6500b45e48f263e0c3584695aa24e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a8009dc2cf4cd44b4bddd8c02287a92" id="r_a9a8009dc2cf4cd44b4bddd8c02287a92"><td class="memItemLeft" align="right" valign="top"><a id="a9a8009dc2cf4cd44b4bddd8c02287a92" name="a9a8009dc2cf4cd44b4bddd8c02287a92"></a>
-static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><b>ILCombine</b> (IntPtr pIDLParent, IntPtr pIDLChild)</td></tr>
+<tr class="memitem:a9a8009dc2cf4cd44b4bddd8c02287a92" id="r_a9a8009dc2cf4cd44b4bddd8c02287a92"><td class="memItemLeft" align="right" valign="top">static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a8009dc2cf4cd44b4bddd8c02287a92">ILCombine</a> (IntPtr pIDLParent, IntPtr pIDLChild)</td></tr>
+<tr class="memdesc:a9a8009dc2cf4cd44b4bddd8c02287a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">2 つの ITEMIDLIST 構造体を結合します。  <br /></td></tr>
 <tr class="separator:a9a8009dc2cf4cd44b4bddd8c02287a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae56f7019f37a87b474e96db8893c1cb6" id="r_ae56f7019f37a87b474e96db8893c1cb6"><td class="memItemLeft" align="right" valign="top"><a id="ae56f7019f37a87b474e96db8893c1cb6" name="ae56f7019f37a87b474e96db8893c1cb6"></a>
-static Int32&#160;</td><td class="memItemRight" valign="bottom"><b>SHGetPathFromIDList</b> (IntPtr pIDL, StringBuilder strPath)</td></tr>
+<tr class="memitem:ae56f7019f37a87b474e96db8893c1cb6" id="r_ae56f7019f37a87b474e96db8893c1cb6"><td class="memItemLeft" align="right" valign="top">static Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae56f7019f37a87b474e96db8893c1cb6">SHGetPathFromIDList</a> (IntPtr pIDL, StringBuilder strPath)</td></tr>
+<tr class="memdesc:ae56f7019f37a87b474e96db8893c1cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">項目識別子リストをファイル システム パスに変換します。  <br /></td></tr>
 <tr class="separator:ae56f7019f37a87b474e96db8893c1cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fc1d690c89885a13a8e0c7c5fdb3cbe" id="r_a8fc1d690c89885a13a8e0c7c5fdb3cbe"><td class="memItemLeft" align="right" valign="top"><a id="a8fc1d690c89885a13a8e0c7c5fdb3cbe" name="a8fc1d690c89885a13a8e0c7c5fdb3cbe"></a>
-static Int32&#160;</td><td class="memItemRight" valign="bottom"><b>SHGetImageList</b> (SHIL iImageList, ref Guid riid, out IntPtr handle)</td></tr>
+<tr class="memitem:a8fc1d690c89885a13a8e0c7c5fdb3cbe" id="r_a8fc1d690c89885a13a8e0c7c5fdb3cbe"><td class="memItemLeft" align="right" valign="top">static Int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fc1d690c89885a13a8e0c7c5fdb3cbe">SHGetImageList</a> (<a class="el" href="#acde670b6f8d415c8566e747990e5994c">SHIL</a> iImageList, ref Guid riid, out IntPtr handle)</td></tr>
+<tr class="memdesc:a8fc1d690c89885a13a8e0c7c5fdb3cbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">イメージ リストを取得します。  <br /></td></tr>
 <tr class="separator:a8fc1d690c89885a13a8e0c7c5fdb3cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24e113ec77f90b5b14cf8f6624a17433" id="r_a24e113ec77f90b5b14cf8f6624a17433"><td class="memItemLeft" align="right" valign="top">static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24e113ec77f90b5b14cf8f6624a17433">ImageList_GetIcon</a> (IntPtr himl, int i, IDL flags)</td></tr>
-<tr class="memdesc:a24e113ec77f90b5b14cf8f6624a17433"><td class="mdescLeft">&#160;</td><td class="mdescRight">ImageListからIconハンドルを取得する  <br /></td></tr>
+<tr class="memitem:a24e113ec77f90b5b14cf8f6624a17433" id="r_a24e113ec77f90b5b14cf8f6624a17433"><td class="memItemLeft" align="right" valign="top">static IntPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24e113ec77f90b5b14cf8f6624a17433">ImageList_GetIcon</a> (IntPtr himl, int i, <a class="el" href="#a9b698238e2b300010d51e4053618fa5a">IDL</a> flags)</td></tr>
+<tr class="memdesc:a24e113ec77f90b5b14cf8f6624a17433"><td class="mdescLeft">&#160;</td><td class="mdescRight">イメージからアイコンを作成し、イメージ リストにマスクします。  <br /></td></tr>
 <tr class="separator:a24e113ec77f90b5b14cf8f6624a17433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6d243af147155fb57e568768f9a15d3" id="r_af6d243af147155fb57e568768f9a15d3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6d243af147155fb57e568768f9a15d3">ImageList_GetIconSize</a> (IntPtr himl, ref int cx, ref int cy)</td></tr>
-<tr class="memdesc:af6d243af147155fb57e568768f9a15d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ImageListに格納されているアイコンのサイズを取得  <br /></td></tr>
+<tr class="memdesc:af6d243af147155fb57e568768f9a15d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">イメージ リスト内のイメージのディメンションを取得します。 イメージ リスト内のすべてのイメージのサイズは同じです。  <br /></td></tr>
 <tr class="separator:af6d243af147155fb57e568768f9a15d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a850d5cac1ecf2c3a5b30037d84d09d9a" id="r_a850d5cac1ecf2c3a5b30037d84d09d9a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a850d5cac1ecf2c3a5b30037d84d09d9a">ImageList_GetImageCount</a> (IntPtr himl)</td></tr>
-<tr class="memdesc:a850d5cac1ecf2c3a5b30037d84d09d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ImageListに格納されているアイコン数を取得  <br /></td></tr>
+<tr class="memdesc:a850d5cac1ecf2c3a5b30037d84d09d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">イメージ リスト内のイメージの数を取得します。  <br /></td></tr>
 <tr class="separator:a850d5cac1ecf2c3a5b30037d84d09d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3a42b4552dc14d15c4c5623326b1cb4" id="r_ae3a42b4552dc14d15c4c5623326b1cb4"><td class="memItemLeft" align="right" valign="top"><a id="ae3a42b4552dc14d15c4c5623326b1cb4" name="ae3a42b4552dc14d15c4c5623326b1cb4"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>DestroyIcon</b> (IntPtr handle)</td></tr>
+<tr class="memitem:ae3a42b4552dc14d15c4c5623326b1cb4" id="r_ae3a42b4552dc14d15c4c5623326b1cb4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3a42b4552dc14d15c4c5623326b1cb4">DestroyIcon</a> (IntPtr handle)</td></tr>
+<tr class="memdesc:ae3a42b4552dc14d15c4c5623326b1cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">アイコンを破棄し、アイコンが占有していたメモリを解放します。  <br /></td></tr>
 <tr class="separator:ae3a42b4552dc14d15c4c5623326b1cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
-<tr class="memitem:ad92a576c10b22ece4a9c74672523a8a1" id="r_ad92a576c10b22ece4a9c74672523a8a1"><td class="memItemLeft" align="right" valign="top"><a id="ad92a576c10b22ece4a9c74672523a8a1" name="ad92a576c10b22ece4a9c74672523a8a1"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsXpOrAbove</b> ()</td></tr>
+<tr class="memitem:ad92a576c10b22ece4a9c74672523a8a1" id="r_ad92a576c10b22ece4a9c74672523a8a1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad92a576c10b22ece4a9c74672523a8a1">IsXpOrAbove</a> ()</td></tr>
+<tr class="memdesc:ad92a576c10b22ece4a9c74672523a8a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">WindowsXP以上か？  <br /></td></tr>
 <tr class="separator:ad92a576c10b22ece4a9c74672523a8a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a151c6148fc73978a170128b9146c311b" id="r_a151c6148fc73978a170128b9146c311b"><td class="memItemLeft" align="right" valign="top"><a id="a151c6148fc73978a170128b9146c311b" name="a151c6148fc73978a170128b9146c311b"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>Is2KOrAbove</b> ()</td></tr>
+<tr class="memitem:a151c6148fc73978a170128b9146c311b" id="r_a151c6148fc73978a170128b9146c311b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a151c6148fc73978a170128b9146c311b">Is2KOrAbove</a> ()</td></tr>
+<tr class="memdesc:a151c6148fc73978a170128b9146c311b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows2000以上か？  <br /></td></tr>
 <tr class="separator:a151c6148fc73978a170128b9146c311b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0657ae288c377d1a9e53ed66f16b6c18" id="r_a0657ae288c377d1a9e53ed66f16b6c18"><td class="memItemLeft" align="right" valign="top"><a id="a0657ae288c377d1a9e53ed66f16b6c18" name="a0657ae288c377d1a9e53ed66f16b6c18"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsVistaOrAbove</b> ()</td></tr>
+<tr class="memitem:a0657ae288c377d1a9e53ed66f16b6c18" id="r_a0657ae288c377d1a9e53ed66f16b6c18"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0657ae288c377d1a9e53ed66f16b6c18">IsVistaOrAbove</a> ()</td></tr>
+<tr class="memdesc:a0657ae288c377d1a9e53ed66f16b6c18"><td class="mdescLeft">&#160;</td><td class="mdescRight">WindowsVista以上か？  <br /></td></tr>
 <tr class="separator:a0657ae288c377d1a9e53ed66f16b6c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
 <tr class="memitem:a9aa3c57e77bcd003e04610830706dcff" id="r_a9aa3c57e77bcd003e04610830706dcff"><td class="memItemLeft" align="right" valign="top"><a id="a9aa3c57e77bcd003e04610830706dcff" name="a9aa3c57e77bcd003e04610830706dcff"></a>
 const Int32&#160;</td><td class="memItemRight" valign="bottom"><b>FILE_ATTRIBUTE_NORMAL</b> = 0x80</td></tr>
+<tr class="memdesc:a9aa3c57e77bcd003e04610830706dcff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalのファイル属性 <br /></td></tr>
 <tr class="separator:a9aa3c57e77bcd003e04610830706dcff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcc06f29dae9df3921c2b34d04101efc" id="r_adcc06f29dae9df3921c2b34d04101efc"><td class="memItemLeft" align="right" valign="top"><a id="adcc06f29dae9df3921c2b34d04101efc" name="adcc06f29dae9df3921c2b34d04101efc"></a>
 static Guid&#160;</td><td class="memItemRight" valign="bottom"><b>IID_IShellFolder</b> = new Guid(&quot;000214E6-0000-0000-C000-000000000046&quot;)</td></tr>
+<tr class="memdesc:adcc06f29dae9df3921c2b34d04101efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shell FolderのGUID <br /></td></tr>
 <tr class="separator:adcc06f29dae9df3921c2b34d04101efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc0c4bdac303e1a40ea17c2504998301" id="r_abc0c4bdac303e1a40ea17c2504998301"><td class="memItemLeft" align="right" valign="top"><a id="abc0c4bdac303e1a40ea17c2504998301" name="abc0c4bdac303e1a40ea17c2504998301"></a>
 static Guid&#160;</td><td class="memItemRight" valign="bottom"><b>IID_IImageList</b> = new Guid(&quot;46EB5926-582E-4017-9FDF-E8998DAA0950&quot;)</td></tr>
+<tr class="memdesc:abc0c4bdac303e1a40ea17c2504998301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image ListのGUID <br /></td></tr>
 <tr class="separator:abc0c4bdac303e1a40ea17c2504998301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Win32 File Infomation Class </p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="ae3044ad3b99028404810668c6938de5c" name="ae3044ad3b99028404810668c6938de5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3044ad3b99028404810668c6938de5c">&#9670;&#160;</a></span>CSIDL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ae3044ad3b99028404810668c6938de5c">SSTools.Win32FileInfo.CSIDL</a> : uint</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配置するフォルダーを識別するCSIDL値 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ae3044ad3b99028404810668c6938de5ca01dea18f7c67d735cebf3b80622ea6b3" name="ae3044ad3b99028404810668c6938de5ca01dea18f7c67d735cebf3b80622ea6b3"></a>CSIDL_DESKTOP&#160;</td><td class="fielddoc"><p>Desktop </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae3044ad3b99028404810668c6938de5cabf15c611be135a32ad4a9237db60ffc4" name="ae3044ad3b99028404810668c6938de5cabf15c611be135a32ad4a9237db60ffc4"></a>CSIDL_WINDOWS&#160;</td><td class="fielddoc"><p>WIndows </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a9b698238e2b300010d51e4053618fa5a" name="a9b698238e2b300010d51e4053618fa5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b698238e2b300010d51e4053618fa5a">&#9670;&#160;</a></span>IDL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a9b698238e2b300010d51e4053618fa5a">SSTools.Win32FileInfo.IDL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Icon描画方法 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a9b698238e2b300010d51e4053618fa5aa8f932e8eb405a640848a198be5823416" name="a9b698238e2b300010d51e4053618fa5aa8f932e8eb405a640848a198be5823416"></a>ILD_NORMAL&#160;</td><td class="fielddoc"><p>イメージ リストの背景色を使用してイメージを描画します。 背景色がCLR_NONE値の場合、イメージはマスクを使用して透明に描画されます。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b698238e2b300010d51e4053618fa5aa2192ee81b671859a06f7415ef27bcab3" name="a9b698238e2b300010d51e4053618fa5aa2192ee81b671859a06f7415ef27bcab3"></a>ILD_TRANSPARENT&#160;</td><td class="fielddoc"><p>背景色に関係なく、マスクを使用してイメージを透明に描画します。 イメージ リストにマスクが含まれていない場合、この値は無効です。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b698238e2b300010d51e4053618fa5aae098a1946b94f4fe949d66935bc47343" name="a9b698238e2b300010d51e4053618fa5aae098a1946b94f4fe949d66935bc47343"></a>ILD_BLEND25&#160;</td><td class="fielddoc"><p>画像を描画し、 rgbFg で指定されたブレンド色で 25% ブレンドします。 イメージ リストにマスクが含まれていない場合、この値は無効です。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b698238e2b300010d51e4053618fa5aa3c60df4d389f4f90c5556eca6aeecbc2" name="a9b698238e2b300010d51e4053618fa5aa3c60df4d389f4f90c5556eca6aeecbc2"></a>ILD_FOCUS&#160;</td><td class="fielddoc"><p>ILD_BLEND25と同じです。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b698238e2b300010d51e4053618fa5aa3f47bf7d9171ba9a8e44e6cee4fdcc15" name="a9b698238e2b300010d51e4053618fa5aa3f47bf7d9171ba9a8e44e6cee4fdcc15"></a>ILD_BLEND50&#160;</td><td class="fielddoc"><p>画像を描画し、 rgbFg で指定されたブレンド色で 50% ブレンドします。 イメージ リストにマスクが含まれていない場合、この値は無効です。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b698238e2b300010d51e4053618fa5aaa3fa58d61f10b08c113743eeeec2e695" name="a9b698238e2b300010d51e4053618fa5aaa3fa58d61f10b08c113743eeeec2e695"></a>ILD_SELECTED&#160;</td><td class="fielddoc"><p>ILD_BLEND50と同じです。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b698238e2b300010d51e4053618fa5aae31a49f03c5d4cb0d9ec0fecbf751a1a" name="a9b698238e2b300010d51e4053618fa5aae31a49f03c5d4cb0d9ec0fecbf751a1a"></a>ILD_IMAGE&#160;</td><td class="fielddoc"><p>オーバーレイでマスクを描画する必要がない場合は、このフラグを設定します。 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a1b874ba4ed35fca210453c4ad9bc7982" name="a1b874ba4ed35fca210453c4ad9bc7982"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b874ba4ed35fca210453c4ad9bc7982">&#9670;&#160;</a></span>SFGAOF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a1b874ba4ed35fca210453c4ad9bc7982">SSTools.Win32FileInfo.SFGAOF</a> : uint</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アイテム (ファイルまたはフォルダー) またはアイテムのセットで取得できる属性 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982aa89405ffc0c8e1b9091a9b00ce209e2b" name="a1b874ba4ed35fca210453c4ad9bc7982aa89405ffc0c8e1b9091a9b00ce209e2b"></a>SFGAO_CANCOPY&#160;</td><td class="fielddoc"><p>Objects can be copied (DROPEFFECT_COPY) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a5e5d37b897ed7280ce120e39e2ba6e89" name="a1b874ba4ed35fca210453c4ad9bc7982a5e5d37b897ed7280ce120e39e2ba6e89"></a>SFGAO_CANMOVE&#160;</td><td class="fielddoc"><p>Objects can be moved (DROPEFFECT_MOVE) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a957aa64c60e3632f83433806bb3fadcf" name="a1b874ba4ed35fca210453c4ad9bc7982a957aa64c60e3632f83433806bb3fadcf"></a>SFGAO_CANLINK&#160;</td><td class="fielddoc"><p>Objects can be linked (DROPEFFECT_LINK) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982ae35cad5d036b5e6c984dc4b827ab550c" name="a1b874ba4ed35fca210453c4ad9bc7982ae35cad5d036b5e6c984dc4b827ab550c"></a>SFGAO_STORAGE&#160;</td><td class="fielddoc"><p>Supports BindToObject(IID_IStorage) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a5cc9ffd2aae5bed38b7eafa6ef8e7121" name="a1b874ba4ed35fca210453c4ad9bc7982a5cc9ffd2aae5bed38b7eafa6ef8e7121"></a>SFGAO_CANRENAME&#160;</td><td class="fielddoc"><p>Objects can be renamed </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982ab64b7c0a0542739541a7be76297832b0" name="a1b874ba4ed35fca210453c4ad9bc7982ab64b7c0a0542739541a7be76297832b0"></a>SFGAO_CANDELETE&#160;</td><td class="fielddoc"><p>Objects can be deleted </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982ae71f76ec0d55fab15f285cededf885fa" name="a1b874ba4ed35fca210453c4ad9bc7982ae71f76ec0d55fab15f285cededf885fa"></a>SFGAO_HASPROPSHEET&#160;</td><td class="fielddoc"><p>Objects have property sheets </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a1769c9d0f1e919efb6e236c3c7fb55e6" name="a1b874ba4ed35fca210453c4ad9bc7982a1769c9d0f1e919efb6e236c3c7fb55e6"></a>SFGAO_DROPTARGET&#160;</td><td class="fielddoc"><p>Objects are drop target </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a5a269a605ebc96afac7166f2501d8c42" name="a1b874ba4ed35fca210453c4ad9bc7982a5a269a605ebc96afac7166f2501d8c42"></a>SFGAO_CAPABILITYMASK&#160;</td><td class="fielddoc"><p>Capability Mask </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a7342f5b2e802316c9e9a448fd01a3b3d" name="a1b874ba4ed35fca210453c4ad9bc7982a7342f5b2e802316c9e9a448fd01a3b3d"></a>SFGAO_ENCRYPTED&#160;</td><td class="fielddoc"><p>Object is encrypted (use alt color) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982aa096a4596155d0874417bdf2971cbdd4" name="a1b874ba4ed35fca210453c4ad9bc7982aa096a4596155d0874417bdf2971cbdd4"></a>SFGAO_ISSLOW&#160;</td><td class="fielddoc"><p>'Slow' object </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a00ea9a9506b97ede031483108d026edb" name="a1b874ba4ed35fca210453c4ad9bc7982a00ea9a9506b97ede031483108d026edb"></a>SFGAO_GHOSTED&#160;</td><td class="fielddoc"><p>Ghosted icon </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982afa35749879f4cab5060e8469794473e8" name="a1b874ba4ed35fca210453c4ad9bc7982afa35749879f4cab5060e8469794473e8"></a>SFGAO_LINK&#160;</td><td class="fielddoc"><p>Shortcut (link) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a00e05221cbc975b357cee25aba4795f2" name="a1b874ba4ed35fca210453c4ad9bc7982a00e05221cbc975b357cee25aba4795f2"></a>SFGAO_SHARE&#160;</td><td class="fielddoc"><p>Shared </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982ad65e35284cb06b5926e29b51f0de2e8f" name="a1b874ba4ed35fca210453c4ad9bc7982ad65e35284cb06b5926e29b51f0de2e8f"></a>SFGAO_READONLY&#160;</td><td class="fielddoc"><p>Read-only </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a70a8751ba5757c13e6679516dbeb4d67" name="a1b874ba4ed35fca210453c4ad9bc7982a70a8751ba5757c13e6679516dbeb4d67"></a>SFGAO_HIDDEN&#160;</td><td class="fielddoc"><p>Hidden object </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a4d97f13ce38dc904ca124e7d02e0393b" name="a1b874ba4ed35fca210453c4ad9bc7982a4d97f13ce38dc904ca124e7d02e0393b"></a>SFGAO_DISPLAYATTRMASK&#160;</td><td class="fielddoc"><p>Display Attribute Mask </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982af33cf8f0b612455d61dcdeedfd767cac" name="a1b874ba4ed35fca210453c4ad9bc7982af33cf8f0b612455d61dcdeedfd767cac"></a>SFGAO_FILESYSANCESTOR&#160;</td><td class="fielddoc"><p>May contain children with SFGAO_FILESYSTEM </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982aa0292a8311ab8b56579b3623780eb2c1" name="a1b874ba4ed35fca210453c4ad9bc7982aa0292a8311ab8b56579b3623780eb2c1"></a>SFGAO_FOLDER&#160;</td><td class="fielddoc"><p>Support BindToObject(IID_IShellFolder) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a7355d919fecf8e15d820c4a5eca269b2" name="a1b874ba4ed35fca210453c4ad9bc7982a7355d919fecf8e15d820c4a5eca269b2"></a>SFGAO_FILESYSTEM&#160;</td><td class="fielddoc"><p>Is a win32 file system object (file/folder/root) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a8f74f5c3344aa5e2345830c228eaf9e1" name="a1b874ba4ed35fca210453c4ad9bc7982a8f74f5c3344aa5e2345830c228eaf9e1"></a>SFGAO_HASSUBFOLDER&#160;</td><td class="fielddoc"><p>May contain children with SFGAO_FOLDER </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a62adf80bc0af3f84201e5c9901cd3111" name="a1b874ba4ed35fca210453c4ad9bc7982a62adf80bc0af3f84201e5c9901cd3111"></a>SFGAO_CONTENTSMASK&#160;</td><td class="fielddoc"><p>Contexts Mask </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a134bc16ff15f74bd206ceb0fb4843e2c" name="a1b874ba4ed35fca210453c4ad9bc7982a134bc16ff15f74bd206ceb0fb4843e2c"></a>SFGAO_VALIDATE&#160;</td><td class="fielddoc"><p>Invalidate cached information </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a228ffbde346c8852db0fa2c4536c586e" name="a1b874ba4ed35fca210453c4ad9bc7982a228ffbde346c8852db0fa2c4536c586e"></a>SFGAO_REMOVABLE&#160;</td><td class="fielddoc"><p>Is this removeable media? </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982afebf4e8b73284b577946f29f9a6c8846" name="a1b874ba4ed35fca210453c4ad9bc7982afebf4e8b73284b577946f29f9a6c8846"></a>SFGAO_COMPRESSED&#160;</td><td class="fielddoc"><p>Object is compressed (use alt color) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a6706872c61a63e0dbb7da244d189fcc8" name="a1b874ba4ed35fca210453c4ad9bc7982a6706872c61a63e0dbb7da244d189fcc8"></a>SFGAO_BROWSABLE&#160;</td><td class="fielddoc"><p>Supports <a class="el" href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html" title="Shell Folder I/F">IShellFolder</a>, but only implements CreateViewObject() (non-folder view) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a98a0224922d2b47b6febb4117281e199" name="a1b874ba4ed35fca210453c4ad9bc7982a98a0224922d2b47b6febb4117281e199"></a>SFGAO_NONENUMERATED&#160;</td><td class="fielddoc"><p>Is a non-enumerated object </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a1fe1719cf07535415fd8ddffef3de90c" name="a1b874ba4ed35fca210453c4ad9bc7982a1fe1719cf07535415fd8ddffef3de90c"></a>SFGAO_NEWCONTENT&#160;</td><td class="fielddoc"><p>Should show bold in explorer tree </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a8fbb841b4b21e42d15253e4ca0c0bbb7" name="a1b874ba4ed35fca210453c4ad9bc7982a8fbb841b4b21e42d15253e4ca0c0bbb7"></a>SFGAO_CANMONIKER&#160;</td><td class="fielddoc"><p>Defunct </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a7ad3b456ed12d0badb9f3af9c78e0d15" name="a1b874ba4ed35fca210453c4ad9bc7982a7ad3b456ed12d0badb9f3af9c78e0d15"></a>SFGAO_HASSTORAGE&#160;</td><td class="fielddoc"><p>Defunct </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a21c266a731abd411daf8b5655046b263" name="a1b874ba4ed35fca210453c4ad9bc7982a21c266a731abd411daf8b5655046b263"></a>SFGAO_STREAM&#160;</td><td class="fielddoc"><p>Supports BindToObject(IID_IStream) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a9309e07eaf28ad4deab0a80d9e3e1979" name="a1b874ba4ed35fca210453c4ad9bc7982a9309e07eaf28ad4deab0a80d9e3e1979"></a>SFGAO_STORAGEANCESTOR&#160;</td><td class="fielddoc"><p>May contain children with SFGAO_STORAGE or SFGAO_STREAM </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b874ba4ed35fca210453c4ad9bc7982a4b37962a26ec17ef9835e2dbbf82c991" name="a1b874ba4ed35fca210453c4ad9bc7982a4b37962a26ec17ef9835e2dbbf82c991"></a>SFGAO_STORAGECAPMASK&#160;</td><td class="fielddoc"><p>For determining storage capabilities, ie for open/save semantics </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="adff86a325ee3d0059a0b70f04be020d2" name="adff86a325ee3d0059a0b70f04be020d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adff86a325ee3d0059a0b70f04be020d2">&#9670;&#160;</a></span>SHCONTF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#adff86a325ee3d0059a0b70f04be020d2">SSTools.Win32FileInfo.SHCONTF</a> : uint</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>列挙に含まれる項目の種類 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="adff86a325ee3d0059a0b70f04be020d2aafbe8dfd5cebf201b35400c2c71a0a68" name="adff86a325ee3d0059a0b70f04be020d2aafbe8dfd5cebf201b35400c2c71a0a68"></a>SHCONTF_FOLDERS&#160;</td><td class="fielddoc"><p>Only want folders enumerated (SFGAO_FOLDER) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adff86a325ee3d0059a0b70f04be020d2a48b1a4a6cfee965db1c65b7f301c5cc7" name="adff86a325ee3d0059a0b70f04be020d2a48b1a4a6cfee965db1c65b7f301c5cc7"></a>SHCONTF_NONFOLDERS&#160;</td><td class="fielddoc"><p>Include non folders </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adff86a325ee3d0059a0b70f04be020d2a31b2f4cd77c2a159125f1fb8691349fc" name="adff86a325ee3d0059a0b70f04be020d2a31b2f4cd77c2a159125f1fb8691349fc"></a>SHCONTF_INCLUDEHIDDEN&#160;</td><td class="fielddoc"><p>Show items normally hidden </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adff86a325ee3d0059a0b70f04be020d2a9a968f7e0356323093187b9a7e5e0391" name="adff86a325ee3d0059a0b70f04be020d2a9a968f7e0356323093187b9a7e5e0391"></a>SHCONTF_INIT_ON_FIRST_NEXT&#160;</td><td class="fielddoc"><p>Allow EnumObject() to return before validating enum </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adff86a325ee3d0059a0b70f04be020d2a9503e84e40cb43b97a51ed0ee80b7ed8" name="adff86a325ee3d0059a0b70f04be020d2a9503e84e40cb43b97a51ed0ee80b7ed8"></a>SHCONTF_NETPRINTERSRCH&#160;</td><td class="fielddoc"><p>Hint that client is looking for printers </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adff86a325ee3d0059a0b70f04be020d2a5dd80beda84916021de3993a2e20fc0f" name="adff86a325ee3d0059a0b70f04be020d2a5dd80beda84916021de3993a2e20fc0f"></a>SHCONTF_SHAREABLE&#160;</td><td class="fielddoc"><p>Hint that client is looking sharable resources (remote shares) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adff86a325ee3d0059a0b70f04be020d2aa47ce27b4c601e74371f71caa2d1c4ce" name="adff86a325ee3d0059a0b70f04be020d2aa47ce27b4c601e74371f71caa2d1c4ce"></a>SHCONTF_STORAGE&#160;</td><td class="fielddoc"><p>Include all items with accessible storage and their ancestors </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a32c4ae577bb52dd9d1ea574c8947350c" name="a32c4ae577bb52dd9d1ea574c8947350c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32c4ae577bb52dd9d1ea574c8947350c">&#9670;&#160;</a></span>SHGFI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350c">SSTools.Win32FileInfo.SHGFI</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>取得するファイル情報を指定するフラグ </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca1ca178e6a7fbc958d4f68f23668a0cce" name="a32c4ae577bb52dd9d1ea574c8947350ca1ca178e6a7fbc958d4f68f23668a0cce"></a>SHGFI_ICON&#160;</td><td class="fielddoc"><p>Icon </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca34438b64d315b297fef8092dc4caf0c0" name="a32c4ae577bb52dd9d1ea574c8947350ca34438b64d315b297fef8092dc4caf0c0"></a>SHGFI_DISPLAYNAME&#160;</td><td class="fielddoc"><p>Diaplay Name </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca5ea2f5c135a23024c3b1226931ef9c52" name="a32c4ae577bb52dd9d1ea574c8947350ca5ea2f5c135a23024c3b1226931ef9c52"></a>SHGFI_TYPENAME&#160;</td><td class="fielddoc"><p>Type Name </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca9ab924239953e120537719ea84d9fe86" name="a32c4ae577bb52dd9d1ea574c8947350ca9ab924239953e120537719ea84d9fe86"></a>SHGFI_ATTRIBUTES&#160;</td><td class="fielddoc"><p>Attributes </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca3dfba2475d452b9bdeaa4a673d577e91" name="a32c4ae577bb52dd9d1ea574c8947350ca3dfba2475d452b9bdeaa4a673d577e91"></a>SHGFI_ICONLOCATION&#160;</td><td class="fielddoc"><p>Icon Location </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca95b16e269eb907cd6daf89828b7805d0" name="a32c4ae577bb52dd9d1ea574c8947350ca95b16e269eb907cd6daf89828b7805d0"></a>SHGFI_EXETYPE&#160;</td><td class="fielddoc"><p>Exe Type </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca02af06ca6dc8b6fdade4f629c72a1ad1" name="a32c4ae577bb52dd9d1ea574c8947350ca02af06ca6dc8b6fdade4f629c72a1ad1"></a>SHGFI_SYSICONINDEX&#160;</td><td class="fielddoc"><p>System Icon Index </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca1038650afe3c051c06f903977f3e7693" name="a32c4ae577bb52dd9d1ea574c8947350ca1038650afe3c051c06f903977f3e7693"></a>SHGFI_LINKOVERLAY&#160;</td><td class="fielddoc"><p>Link Overlay </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca426c28bce1be0a9219eb604767404912" name="a32c4ae577bb52dd9d1ea574c8947350ca426c28bce1be0a9219eb604767404912"></a>SHGFI_SELECTED&#160;</td><td class="fielddoc"><p>Selected </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca2192c92f12f74e24f8803741e3c1bf9a" name="a32c4ae577bb52dd9d1ea574c8947350ca2192c92f12f74e24f8803741e3c1bf9a"></a>SHGFI_ATTR_SPECIFIED&#160;</td><td class="fielddoc"><p>Attribute Specified </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350cad1e28791f66c19f1753671ed4e993845" name="a32c4ae577bb52dd9d1ea574c8947350cad1e28791f66c19f1753671ed4e993845"></a>SHGFI_LARGEICON&#160;</td><td class="fielddoc"><p>Large Icon </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350cadcad52a770d20783a811fcf44f35e2b0" name="a32c4ae577bb52dd9d1ea574c8947350cadcad52a770d20783a811fcf44f35e2b0"></a>SHGFI_SMALLICON&#160;</td><td class="fielddoc"><p>Small Icon </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca673b93ba342439f62c7618d220a40a3c" name="a32c4ae577bb52dd9d1ea574c8947350ca673b93ba342439f62c7618d220a40a3c"></a>SHGFI_OPENICON&#160;</td><td class="fielddoc"><p>Open Icon </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350cae6f928a274d4ec424730fdbf9a2b6ec4" name="a32c4ae577bb52dd9d1ea574c8947350cae6f928a274d4ec424730fdbf9a2b6ec4"></a>SHGFI_SHELLICONSIZE&#160;</td><td class="fielddoc"><p>Shell Icon Size </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca35a0c7cfb9194b57172b6ba8a039f30e" name="a32c4ae577bb52dd9d1ea574c8947350ca35a0c7cfb9194b57172b6ba8a039f30e"></a>SHGFI_PIDL&#160;</td><td class="fielddoc"><p>PIDL </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca6377b6724535e647c94b9565fd543d8d" name="a32c4ae577bb52dd9d1ea574c8947350ca6377b6724535e647c94b9565fd543d8d"></a>SHGFI_USEFILEATTRIBUTES&#160;</td><td class="fielddoc"><p>Use File Attribute </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca2d7b75bd3db7f20a08aa546dee718e55" name="a32c4ae577bb52dd9d1ea574c8947350ca2d7b75bd3db7f20a08aa546dee718e55"></a>SHGFI_ADDOVERLAYS&#160;</td><td class="fielddoc"><p>Add Overlays </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a32c4ae577bb52dd9d1ea574c8947350ca5960d1c02c068af5134e5b47c06823b6" name="a32c4ae577bb52dd9d1ea574c8947350ca5960d1c02c068af5134e5b47c06823b6"></a>SHGFI_OVERLAYINDEX&#160;</td><td class="fielddoc"><p>Overlay Index </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a158f7dd61496add9ef97b6c32af15978" name="a158f7dd61496add9ef97b6c32af15978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a158f7dd61496add9ef97b6c32af15978">&#9670;&#160;</a></span>SHGNO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a158f7dd61496add9ef97b6c32af15978">SSTools.Win32FileInfo.SHGNO</a> : uint</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイル名またはフォルダー名の種類 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a158f7dd61496add9ef97b6c32af15978a55640986acc296a9fc6796d7d2368599" name="a158f7dd61496add9ef97b6c32af15978a55640986acc296a9fc6796d7d2368599"></a>SHGDN_NORMAL&#160;</td><td class="fielddoc"><p>Default (display purpose) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a158f7dd61496add9ef97b6c32af15978aaeda8a187d1c2aa8fa0a2fbf3979831b" name="a158f7dd61496add9ef97b6c32af15978aaeda8a187d1c2aa8fa0a2fbf3979831b"></a>SHGDN_INFOLDER&#160;</td><td class="fielddoc"><p>Displayed under a folder (relative) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a158f7dd61496add9ef97b6c32af15978ab872bb51e10ec12596f08499c3b18d8d" name="a158f7dd61496add9ef97b6c32af15978ab872bb51e10ec12596f08499c3b18d8d"></a>SHGDN_FOREDITING&#160;</td><td class="fielddoc"><p>For in-place editing </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a158f7dd61496add9ef97b6c32af15978a82991d0c14f9546cfff019976d6f8a89" name="a158f7dd61496add9ef97b6c32af15978a82991d0c14f9546cfff019976d6f8a89"></a>SHGDN_FORADDRESSBAR&#160;</td><td class="fielddoc"><p>UI friendly parsing name (remove ugly stuff) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a158f7dd61496add9ef97b6c32af15978a96c699cba3d02ee979b07ec5b42f842a" name="a158f7dd61496add9ef97b6c32af15978a96c699cba3d02ee979b07ec5b42f842a"></a>SHGDN_FORPARSING&#160;</td><td class="fielddoc"><p>Parsing name for ParseDisplayName() </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="acde670b6f8d415c8566e747990e5994c" name="acde670b6f8d415c8566e747990e5994c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acde670b6f8d415c8566e747990e5994c">&#9670;&#160;</a></span>SHIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#acde670b6f8d415c8566e747990e5994c">SSTools.Win32FileInfo.SHIL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>取得するIconの種類 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="acde670b6f8d415c8566e747990e5994caf2ce1c6bf2bcf998e9942493ab1a7016" name="acde670b6f8d415c8566e747990e5994caf2ce1c6bf2bcf998e9942493ab1a7016"></a>SHIL_LARGE&#160;</td><td class="fielddoc"><p>画像のサイズは通常 32 x 32 ピクセルです。 ただし、[表示プロパティ] の[外観] タブの[効果] セクションで[大きいアイコンを使用する] オプションが選択されている場合、 画像は 48 x 48 ピクセルです。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acde670b6f8d415c8566e747990e5994caa4b3980f5ba87e24db02960812b85b7f" name="acde670b6f8d415c8566e747990e5994caa4b3980f5ba87e24db02960812b85b7f"></a>SHIL_SMALL&#160;</td><td class="fielddoc"><p>これらのイメージはシェル標準の小さいアイコン サイズ 16 x 16 ですが、サイズはユーザーがカスタマイズできます。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acde670b6f8d415c8566e747990e5994cad10388536c0306d1b0dc3e440f3818d1" name="acde670b6f8d415c8566e747990e5994cad10388536c0306d1b0dc3e440f3818d1"></a>SHIL_EXTRALARGE&#160;</td><td class="fielddoc"><p>これらのイメージは、シェル標準の特大アイコン サイズです。 これは通常 48 x 48 ですが、サイズはユーザーがカスタマイズできます。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acde670b6f8d415c8566e747990e5994ca9fe8fccad92170823e9c837bd06f6e27" name="acde670b6f8d415c8566e747990e5994ca9fe8fccad92170823e9c837bd06f6e27"></a>SHIL_SYSSMALL&#160;</td><td class="fielddoc"><p>これらのイメージは、SM_CXSMICON で呼び出される GetSystemMetrics と 、SM_CYSMICON で呼び出された GetSystemMetricsで指定されたサイズです。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acde670b6f8d415c8566e747990e5994ca0166eb4584f90f3fc082a9cf26938572" name="acde670b6f8d415c8566e747990e5994ca0166eb4584f90f3fc082a9cf26938572"></a>SHIL_JUMBO&#160;</td><td class="fielddoc"><p>Windows Vista 以降。 画像は通常 256 x 256 ピクセルです。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acde670b6f8d415c8566e747990e5994cac7cdc2f4eaf1bfd820b17d6ab50d514f" name="acde670b6f8d415c8566e747990e5994cac7cdc2f4eaf1bfd820b17d6ab50d514f"></a>SHIL_LAST&#160;</td><td class="fielddoc"><p>最後 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a9709c7306e524820f84025c2d5456135" name="a9709c7306e524820f84025c2d5456135"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9709c7306e524820f84025c2d5456135">&#9670;&#160;</a></span>STRRET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a9709c7306e524820f84025c2d5456135">SSTools.Win32FileInfo.STRRET</a> : uint</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IShellFolderインターフェイスメソッドから返される文字列の種類 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a9709c7306e524820f84025c2d5456135af746a22916fd3da9410c2aecc4fc3740" name="a9709c7306e524820f84025c2d5456135af746a22916fd3da9410c2aecc4fc3740"></a>STRRET_WSTR&#160;</td><td class="fielddoc"><p>WSTR </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9709c7306e524820f84025c2d5456135a19411bb6fa1e2ac330d1558b24545987" name="a9709c7306e524820f84025c2d5456135a19411bb6fa1e2ac330d1558b24545987"></a>STRRET_OFFSET&#160;</td><td class="fielddoc"><p>Offset </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9709c7306e524820f84025c2d5456135a1bf4834dd475e213ddcf0e35fe902fcd" name="a9709c7306e524820f84025c2d5456135a1bf4834dd475e213ddcf0e35fe902fcd"></a>STRRET_CSTR&#160;</td><td class="fielddoc"><p>CStr </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">メソッド詳解</h2>
+<a id="ae3a42b4552dc14d15c4c5623326b1cb4" name="ae3a42b4552dc14d15c4c5623326b1cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a42b4552dc14d15c4c5623326b1cb4">&#9670;&#160;</a></span>DestroyIcon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool SSTools.Win32FileInfo.DestroyIcon </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アイコンを破棄し、アイコンが占有していたメモリを解放します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>破棄するアイコンのハンドル。 アイコンを使用することはできません。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>関数が成功すると、戻り値は 0 以外になります。関数が失敗した場合は、0 を返します。</dd></dl>
+
+</div>
+</div>
+<a id="a9a8009dc2cf4cd44b4bddd8c02287a92" name="a9a8009dc2cf4cd44b4bddd8c02287a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a8009dc2cf4cd44b4bddd8c02287a92">&#9670;&#160;</a></span>ILCombine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IntPtr SSTools.Win32FileInfo.ILCombine </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>pIDLParent</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>pIDLChild</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>2 つの ITEMIDLIST 構造体を結合します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pIDLParent</td><td>最初の ITEMIDLIST 構造体へのポインター。</td></tr>
+    <tr><td class="paramname">pIDLChild</td><td>2 番目の ITEMIDLIST 構造体へのポインター。 この構造体は、 pidl1 が指す構造体に追加されます。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>結合された構造体を含む ITEMIDLIST を返します。 pidl1 または pidl2 を NULL に設定した場合、返される ITEMIDLIST 構造体は NULL 以外のパラメーターの複製です。 pidl1 と pidl2 の両方が NULL に設定されている場合は NULL を返します。</dd></dl>
+
+</div>
+</div>
 <a id="a24e113ec77f90b5b14cf8f6624a17433" name="a24e113ec77f90b5b14cf8f6624a17433"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a24e113ec77f90b5b14cf8f6624a17433">&#9670;&#160;</a></span>ImageList_GetIcon()</h2>
 
@@ -330,21 +713,21 @@ static Guid&#160;</td><td class="memItemRight" valign="bottom"><b>IID_IImageList
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IDL</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#a9b698238e2b300010d51e4053618fa5a">IDL</a></td>          <td class="paramname"><span class="paramname"><em>flags</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>ImageListからIconハンドルを取得する </p>
+<p>イメージからアイコンを作成し、イメージ リストにマスクします。 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">himl</td><td></td></tr>
-    <tr><td class="paramname">i</td><td></td></tr>
-    <tr><td class="paramname">flags</td><td></td></tr>
+    <tr><td class="paramname">himl</td><td>イメージ リストへのハンドル。</td></tr>
+    <tr><td class="paramname">i</td><td>イメージのインデックス。</td></tr>
+    <tr><td class="paramname">flags</td><td>描画スタイルを指定するフラグの組み合わせ。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd></dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合はアイコンへのハンドルを返し、それ以外の場合は NULL を 返します</dd></dl>
 <p>ImportするDLLは、 "comctl32" ... OK "comctl32.dll" ... NG（何故かマスクが適用されていないアイコンを取得する） なので注意 </p>
 
 </div>
@@ -373,16 +756,16 @@ static Guid&#160;</td><td class="memItemRight" valign="bottom"><b>IID_IImageList
       </table>
 </div><div class="memdoc">
 
-<p>ImageListに格納されているアイコンのサイズを取得 </p>
+<p>イメージ リスト内のイメージのディメンションを取得します。 イメージ リスト内のすべてのイメージのサイズは同じです。 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">himl</td><td></td></tr>
-    <tr><td class="paramname">cx</td><td></td></tr>
-    <tr><td class="paramname">cy</td><td></td></tr>
+    <tr><td class="paramname">himl</td><td>イメージ リストへのハンドル。</td></tr>
+    <tr><td class="paramname">cx</td><td>各画像の幅をピクセル単位で受け取る整数変数へのポインター。</td></tr>
+    <tr><td class="paramname">cy</td><td>各画像の高さをピクセル単位で受け取る整数変数へのポインター。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd></dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合は 0 以外、それ以外の場合は 0 を返します。</dd></dl>
 <p>ImportするDLLは、 "comctl32" ... OK "comctl32.dll" ... NG（何故かマスクが適用されていないアイコンを取得する） なので注意 </p>
 
 </div>
@@ -402,15 +785,365 @@ static Guid&#160;</td><td class="memItemRight" valign="bottom"><b>IID_IImageList
       </table>
 </div><div class="memdoc">
 
-<p>ImageListに格納されているアイコン数を取得 </p>
+<p>イメージ リスト内のイメージの数を取得します。 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">himl</td><td></td></tr>
+    <tr><td class="paramname">himl</td><td>イメージ リストへのハンドル。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd></dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>画像の数を返します。</dd></dl>
 <p>ImportするDLLは、 "comctl32" ... OK "comctl32.dll" ... NG（何故かマスクが適用されていないアイコンを取得する） なので注意 </p>
+
+</div>
+</div>
+<a id="a151c6148fc73978a170128b9146c311b" name="a151c6148fc73978a170128b9146c311b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a151c6148fc73978a170128b9146c311b">&#9670;&#160;</a></span>Is2KOrAbove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool SSTools.Win32FileInfo.Is2KOrAbove </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Windows2000以上か？ </p>
+<dl class="section return"><dt>戻り値</dt><dd>true:Windows2000以上</dd></dl>
+
+</div>
+</div>
+<a id="a0657ae288c377d1a9e53ed66f16b6c18" name="a0657ae288c377d1a9e53ed66f16b6c18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0657ae288c377d1a9e53ed66f16b6c18">&#9670;&#160;</a></span>IsVistaOrAbove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool SSTools.Win32FileInfo.IsVistaOrAbove </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>WindowsVista以上か？ </p>
+<dl class="section return"><dt>戻り値</dt><dd>true:WindowsVista以上</dd></dl>
+
+</div>
+</div>
+<a id="ad92a576c10b22ece4a9c74672523a8a1" name="ad92a576c10b22ece4a9c74672523a8a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad92a576c10b22ece4a9c74672523a8a1">&#9670;&#160;</a></span>IsXpOrAbove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool SSTools.Win32FileInfo.IsXpOrAbove </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>WindowsXP以上か？ </p>
+<dl class="section return"><dt>戻り値</dt><dd>true:WindowsXP以上</dd></dl>
+
+</div>
+</div>
+<a id="a83c30cbce8d1122fd8ddb7712df7f209" name="a83c30cbce8d1122fd8ddb7712df7f209"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83c30cbce8d1122fd8ddb7712df7f209">&#9670;&#160;</a></span>SHGetDesktopFolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Int32 SSTools.Win32FileInfo.SHGetDesktopFolder </td>
+          <td>(</td>
+          <td class="paramtype">ref <a class="el" href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html">IShellFolder</a></td>          <td class="paramname"><span class="paramname"><em>ppshf</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>シェルの名前空間のルートであるデスクトップ フォルダーの <a class="el" href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html" title="Shell Folder I/F">IShellFolder</a> インターフェイスを取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ppshf</td><td>このメソッドが戻ると、デスクトップ フォルダーの <a class="el" href="../../d8/dbf/interface_s_s_tools_1_1_win32_file_info_1_1_i_shell_folder.html" title="Shell Folder I/F">IShellFolder</a> インターフェイス ポインターを受け取ります。 呼び出し元のアプリケーションは、最終的に IUnknown::Release メソッドを呼び出してインターフェイスを解放します。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>この関数が成功すると、 S_OKが返されます。 そうでない場合は、HRESULT エラー コードを返します。</dd></dl>
+
+</div>
+</div>
+<a id="a663677718a4364be7230e6c9f074dcb2" name="a663677718a4364be7230e6c9f074dcb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a663677718a4364be7230e6c9f074dcb2">&#9670;&#160;</a></span>SHGetFileInfo() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IntPtr SSTools.Win32FileInfo.SHGetFileInfo </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>pIDL</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>dwFileAttributes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out <a class="el" href="../../dd/df1/struct_s_s_tools_1_1_win32_file_info_1_1_s_h_f_i_l_e_i_n_f_o.html">SHFILEINFO</a></td>          <td class="paramname"><span class="paramname"><em>psfi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>cbFileInfo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350c">SHGFI</a></td>          <td class="paramname"><span class="paramname"><em>uFlags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイル、フォルダー、ディレクトリ、ドライブ ルートなど、ファイル システム内のオブジェクトに関する情報を取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pIDL</td><td>シェルの名前空間内のファイルを一意に識別する項目識別子のリストを含む ITEMIDLIST (PIDL) 構造体のアドレスである必要があります。 PIDL は完全修飾 PIDL である必要があります。 相対 PIDL は使用できません。</td></tr>
+    <tr><td class="paramname">dwFileAttributes</td><td>1 つ以上の ファイル属性フラグの組み合わせ (Winnt.h で定義されている値FILE_ATTRIBUTE_)。 uFlags SHGFI_USEFILEATTRIBUTES フラグが含まれていない場合、このパラメーターは無視されます。</td></tr>
+    <tr><td class="paramname">psfi</td><td>ファイル情報を受信する <a class="el" href="../../dd/df1/struct_s_s_tools_1_1_win32_file_info_1_1_s_h_f_i_l_e_i_n_f_o.html" title="Shell File Info構造体">SHFILEINFO</a> 構造体へのポインター。</td></tr>
+    <tr><td class="paramname">cbFileInfo</td><td>psfi パラメーターによって指 <a class="el" href="../../dd/df1/struct_s_s_tools_1_1_win32_file_info_1_1_s_h_f_i_l_e_i_n_f_o.html" title="Shell File Info構造体">SHFILEINFO</a> 構造体のサイズ (バイト単位)。</td></tr>
+    <tr><td class="paramname">uFlags</td><td>取得するファイル情報を指定するフラグ。 このパラメーターには、次の値の組み合わせを指定できます。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>uFlags パラメーターに依存する意味を持つ値を返します。 uFlags に SHGFI_EXETYPE または SHGFI_SYSICONINDEXが含まれていない場合、戻り値は成功した場合は 0 以外、それ以外の場合は 0 になります。</dd></dl>
+
+</div>
+</div>
+<a id="a698e0542b49ef9fbb990fb4a29b8f3a2" name="a698e0542b49ef9fbb990fb4a29b8f3a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a698e0542b49ef9fbb990fb4a29b8f3a2">&#9670;&#160;</a></span>SHGetFileInfo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IntPtr SSTools.Win32FileInfo.SHGetFileInfo </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>pszPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>dwFileAttribs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out <a class="el" href="../../dd/df1/struct_s_s_tools_1_1_win32_file_info_1_1_s_h_f_i_l_e_i_n_f_o.html">SHFILEINFO</a></td>          <td class="paramname"><span class="paramname"><em>psfi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>cbFileInfo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a32c4ae577bb52dd9d1ea574c8947350c">SHGFI</a></td>          <td class="paramname"><span class="paramname"><em>uFlags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイル、フォルダー、ディレクトリ、ドライブ ルートなど、ファイル システム内のオブジェクトに関する情報を取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pszPath</td><td>パスとファイル名を含む最大長MAX_PATHの null終了文字列へのポインター。 絶対パスと相対パスの両方が有効です。</td></tr>
+    <tr><td class="paramname">dwFileAttribs</td><td>1 つ以上の ファイル属性フラグの組み合わせ (Winnt.h で定義されている値FILE_ATTRIBUTE_)。 uFlags SHGFI_USEFILEATTRIBUTES フラグが含まれていない場合、このパラメーターは無視されます。</td></tr>
+    <tr><td class="paramname">psfi</td><td>ファイル情報を受信する <a class="el" href="../../dd/df1/struct_s_s_tools_1_1_win32_file_info_1_1_s_h_f_i_l_e_i_n_f_o.html" title="Shell File Info構造体">SHFILEINFO</a> 構造体へのポインター。</td></tr>
+    <tr><td class="paramname">cbFileInfo</td><td>psfi パラメーターによって指 <a class="el" href="../../dd/df1/struct_s_s_tools_1_1_win32_file_info_1_1_s_h_f_i_l_e_i_n_f_o.html" title="Shell File Info構造体">SHFILEINFO</a> 構造体のサイズ (バイト単位)。</td></tr>
+    <tr><td class="paramname">uFlags</td><td>取得するファイル情報を指定するフラグ。 このパラメーターには、次の値の組み合わせを指定できます。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>uFlags パラメーターに依存する意味を持つ値を返します。 uFlags に SHGFI_EXETYPE または SHGFI_SYSICONINDEXが含まれていない場合、戻り値は成功した場合は 0 以外、それ以外の場合は 0 になります。</dd></dl>
+
+</div>
+</div>
+<a id="a8fc1d690c89885a13a8e0c7c5fdb3cbe" name="a8fc1d690c89885a13a8e0c7c5fdb3cbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fc1d690c89885a13a8e0c7c5fdb3cbe">&#9670;&#160;</a></span>SHGetImageList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Int32 SSTools.Win32FileInfo.SHGetImageList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#acde670b6f8d415c8566e747990e5994c">SHIL</a></td>          <td class="paramname"><span class="paramname"><em>iImageList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref Guid</td>          <td class="paramname"><span class="paramname"><em>riid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out IntPtr</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>イメージ リストを取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iImageList</td><td>リストに含まれるイメージの種類。</td></tr>
+    <tr><td class="paramname">riid</td><td>イメージ リスト インターフェイス識別子への参照(通常はIID_IImageList)。</td></tr>
+    <tr><td class="paramname">handle</td><td>このメソッドが戻るとき、 には 、riid で要求されたインターフェイス ポインターが含まれます。 これは通常 、IImageList です。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>この関数が成功すると、 S_OKが返されます。</dd></dl>
+
+</div>
+</div>
+<a id="ae56f7019f37a87b474e96db8893c1cb6" name="ae56f7019f37a87b474e96db8893c1cb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae56f7019f37a87b474e96db8893c1cb6">&#9670;&#160;</a></span>SHGetPathFromIDList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Int32 SSTools.Win32FileInfo.SHGetPathFromIDList </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>pIDL</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StringBuilder</td>          <td class="paramname"><span class="paramname"><em>strPath</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>項目識別子リストをファイル システム パスに変換します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pIDL</td><td>名前空間 (デスクトップ) のルートを基準にしたファイルまたはディレクトリの場所を指定する項目識別子リストのアドレス。</td></tr>
+    <tr><td class="paramname">strPath</td><td>ファイル システム パスを受け取るバッファーのアドレス。 このバッファーのサイズは、少なくともMAX_PATH文字にする必要があります。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合 TRUE を返します。</dd></dl>
+
+</div>
+</div>
+<a id="a350f94c20a63a06650abd3ce85f9247f" name="a350f94c20a63a06650abd3ce85f9247f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a350f94c20a63a06650abd3ce85f9247f">&#9670;&#160;</a></span>SHGetSpecialFolderLocation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Int32 SSTools.Win32FileInfo.SHGetSpecialFolderLocation </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>hwndOwner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ae3044ad3b99028404810668c6938de5c">CSIDL</a></td>          <td class="paramname"><span class="paramname"><em>nFolder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref IntPtr</td>          <td class="paramname"><span class="paramname"><em>ppidl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>特殊なフォルダーの ITEMIDLIST 構造体へのポインターを取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwndOwner</td><td>予約済み。</td></tr>
+    <tr><td class="paramname">nFolder</td><td>配置するフォルダーを識別するCSIDL値。 CSIDLs に関連付けられているフォルダーが特定のシステムに存在しない可能性があります。</td></tr>
+    <tr><td class="paramname">ppidl</td><td>名前空間 (デスクトップ) のルートに対するフォルダーの場所を指定するアイテム識別子リスト構造へのポインターのアドレス。 失敗した場合、 ppidl パラメーターは NULL に設定されます。 呼び出し元のアプリケーションは、 ILFree を呼び出してこのリソースを解放する役割を担います。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合はS_OK</dd></dl>
+
+</div>
+</div>
+<a id="a9e6500b45e48f263e0c3584695aa24e8" name="a9e6500b45e48f263e0c3584695aa24e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6500b45e48f263e0c3584695aa24e8">&#9670;&#160;</a></span>SHGetSpecialFolderLocation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Int32 SSTools.Win32FileInfo.SHGetSpecialFolderLocation </td>
+          <td>(</td>
+          <td class="paramtype">IntPtr</td>          <td class="paramname"><span class="paramname"><em>hwndOwner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>nFolder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref IntPtr</td>          <td class="paramname"><span class="paramname"><em>ppidl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>特殊なフォルダーの ITEMIDLIST 構造体へのポインターを取得します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwndOwner</td><td>予約済み。</td></tr>
+    <tr><td class="paramname">nFolder</td><td>配置するフォルダーを識別するCSIDL値。 CSIDLs に関連付けられているフォルダーが特定のシステムに存在しない可能性があります。</td></tr>
+    <tr><td class="paramname">ppidl</td><td>名前空間 (デスクトップ) のルートに対するフォルダーの場所を指定するアイテム識別子リスト構造へのポインターのアドレス。 失敗した場合、 ppidl パラメーターは NULL に設定されます。 呼び出し元のアプリケーションは、 ILFree を呼び出してこのリソースを解放する役割を担います。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>成功した場合はS_OK</dd></dl>
 
 </div>
 </div>

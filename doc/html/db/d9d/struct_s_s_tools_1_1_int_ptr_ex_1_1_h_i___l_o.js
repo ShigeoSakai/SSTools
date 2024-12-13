@@ -1,5 +1,7 @@
 var struct_s_s_tools_1_1_int_ptr_ex_1_1_h_i___l_o =
 [
+    [ "HI_LO", "db/d9d/struct_s_s_tools_1_1_int_ptr_ex_1_1_h_i___l_o.html#a9670dcb7b5046856b9900f4d5607d010", null ],
+    [ "HI_LO", "db/d9d/struct_s_s_tools_1_1_int_ptr_ex_1_1_h_i___l_o.html#a563fdc76b9be223befce10e51480dc39", null ],
     [ "GetSigned", "db/d9d/struct_s_s_tools_1_1_int_ptr_ex_1_1_h_i___l_o.html#a4be6634b5dee904ee29c20c35ac271f7", null ],
     [ "GetUnsigned", "db/d9d/struct_s_s_tools_1_1_int_ptr_ex_1_1_h_i___l_o.html#a15bea228f1ac833089ee30d4c3c7e46f", null ],
     [ "Set", "db/d9d/struct_s_s_tools_1_1_int_ptr_ex_1_1_h_i___l_o.html#addecdc5d540182ec23456df7e5e8433d", null ],

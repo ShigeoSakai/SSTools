@@ -14,20 +14,20 @@ namespace SSTools
 		[Flags]
 		public enum ANALYSIS_MODE
 		{
-			NONE = 0,					// なし
-			WINDOW_MSG = 0x01,			// Window関連
-			CONTROL_MSG = 0x02,			// Control関連
-			MOUSE_MSG = 0x04,			// マウス関連
-			WINDOW_MGR_MSG = 0x08,		// ウィンドウマネージャ関連
-			IME_MSG = 0x10,				// IME関連
-			OTHER_MSG = 0x20,			// その他メッセージ関連
+			NONE = 0,                   //!< なし
+            WINDOW_MSG = 0x01,          //!< Window関連
+            CONTROL_MSG = 0x02,         //!< Control関連
+            MOUSE_MSG = 0x04,           //!< マウス関連
+            WINDOW_MGR_MSG = 0x08,      //!< ウィンドウマネージャ関連
+            IME_MSG = 0x10,             //!< IME関連
+            OTHER_MSG = 0x20,           //!< その他メッセージ関連
 
-			USER_DEFINE = 0x100,		// ユーザー定義処理
-			SHOW_DESCRIPTION = 0x1000,	// 説明を表示
-			DEBUG = 0x2000,				// デバッグ
-			// メッセージ全て
-			ALL = WINDOW_MSG | CONTROL_MSG | MOUSE_MSG | WINDOW_MGR_MSG | IME_MSG | OTHER_MSG,
-		}
+            USER_DEFINE = 0x100,        //!< ユーザー定義処理
+            SHOW_DESCRIPTION = 0x1000,  //!< 説明を表示
+            DEBUG = 0x2000,             //!< デバッグ
+
+            ALL = WINDOW_MSG | CONTROL_MSG | MOUSE_MSG | WINDOW_MGR_MSG | IME_MSG | OTHER_MSG, //!< メッセージ全て
+        }
 
 		/// <summary>
 		/// ID - Windowsメッセージ処理辞書
@@ -163,7 +163,7 @@ namespace SSTools
 		/// <param name="msg">WindowメッセージID</param>
 		/// <param name="wparam">WParam</param>
 		/// <param name="lparam">LParam</param>
-		/// <return>true:処理済み/false:未処理</return>
+		/// <returns>true:処理済み/false:未処理</returns>
 		public bool Analysis(IntPtr hWnd, int msg, IntPtr wparam, IntPtr lparam)
 		{
 			bool result = false;

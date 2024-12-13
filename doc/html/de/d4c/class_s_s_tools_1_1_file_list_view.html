@@ -146,11 +146,11 @@ SSTools.FileListView 連携図</div>
  }</td></tr>
 <tr class="memdesc:ab05cb52a041be9bad16e535c47fc8fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示方法  <a href="#ab05cb52a041be9bad16e535c47fc8fad">[詳解]</a><br /></td></tr>
 <tr class="separator:ab05cb52a041be9bad16e535c47fc8fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a636e96b2bba7a3425d7eab19008814f5" id="r_a636e96b2bba7a3425d7eab19008814f5"><td class="memItemLeft" align="right" valign="top"><a id="a636e96b2bba7a3425d7eab19008814f5" name="a636e96b2bba7a3425d7eab19008814f5"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a636e96b2bba7a3425d7eab19008814f5">SELECT_FLAGS</a> { <b>FILE</b> = 1
-, <b>FOLDER</b> = 2
-, <b>ALL</b> = 3
+<tr class="memitem:a636e96b2bba7a3425d7eab19008814f5" id="r_a636e96b2bba7a3425d7eab19008814f5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a636e96b2bba7a3425d7eab19008814f5">SELECT_FLAGS</a> { <a class="el" href="#a636e96b2bba7a3425d7eab19008814f5a9fc5887c030f7a3e19821ebec457e719">FILE</a> = 1
+, <a class="el" href="#a636e96b2bba7a3425d7eab19008814f5a80dc13242b57656668e67c9ca779ccb3">FOLDER</a> = 2
+, <a class="el" href="#a636e96b2bba7a3425d7eab19008814f5a5fb1f955b45e38e31789286a1790398d">ALL</a> = 3
  }</td></tr>
-<tr class="memdesc:a636e96b2bba7a3425d7eab19008814f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">選択対象フラグ <br /></td></tr>
+<tr class="memdesc:a636e96b2bba7a3425d7eab19008814f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">選択対象フラグ  <a href="#a636e96b2bba7a3425d7eab19008814f5">[詳解]</a><br /></td></tr>
 <tr class="separator:a636e96b2bba7a3425d7eab19008814f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -174,7 +174,7 @@ SSTools.FileListView 連携図</div>
 <tr class="memitem:a70402e6207c281dc24d6ebfa88a900bf" id="r_a70402e6207c281dc24d6ebfa88a900bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70402e6207c281dc24d6ebfa88a900bf">SetSelect</a> (string[] filenames)</td></tr>
 <tr class="memdesc:a70402e6207c281dc24d6ebfa88a900bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定されたファイルを選択状態にする  <br /></td></tr>
 <tr class="separator:a70402e6207c281dc24d6ebfa88a900bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa8e6c4de4aeb94d12c6c2dd43e6c9d7" id="r_aaa8e6c4de4aeb94d12c6c2dd43e6c9d7"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa8e6c4de4aeb94d12c6c2dd43e6c9d7">GetSelected</a> (<a class="el" href="#a636e96b2bba7a3425d7eab19008814f5">SELECT_FLAGS</a> flags=SELECT_FLAGS.ALL)</td></tr>
+<tr class="memitem:aaa8e6c4de4aeb94d12c6c2dd43e6c9d7" id="r_aaa8e6c4de4aeb94d12c6c2dd43e6c9d7"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa8e6c4de4aeb94d12c6c2dd43e6c9d7">GetSelected</a> (<a class="el" href="#a636e96b2bba7a3425d7eab19008814f5">SELECT_FLAGS</a> flags=<a class="el" href="#a636e96b2bba7a3425d7eab19008814f5a5fb1f955b45e38e31789286a1790398d">SELECT_FLAGS.ALL</a>)</td></tr>
 <tr class="memdesc:aaa8e6c4de4aeb94d12c6c2dd43e6c9d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">選択されているアイテムを取得する  <br /></td></tr>
 <tr class="separator:aaa8e6c4de4aeb94d12c6c2dd43e6c9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -265,6 +265,30 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowNewFolderButton</
 <tr><td class="fieldname"><a id="ab05cb52a041be9bad16e535c47fc8fadad421d3d98549e1a46d5969371f507e23" name="ab05cb52a041be9bad16e535c47fc8fadad421d3d98549e1a46d5969371f507e23"></a>JumboIcon&#160;</td><td class="fielddoc"><p>ジャンボアイコン表示 </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab05cb52a041be9bad16e535c47fc8fadaab786f3b92aecd4343ec07f82e812245" name="ab05cb52a041be9bad16e535c47fc8fadaab786f3b92aecd4343ec07f82e812245"></a>TileLarge&#160;</td><td class="fielddoc"><p>大きいタイル表示 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a636e96b2bba7a3425d7eab19008814f5" name="a636e96b2bba7a3425d7eab19008814f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636e96b2bba7a3425d7eab19008814f5">&#9670;&#160;</a></span>SELECT_FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a636e96b2bba7a3425d7eab19008814f5">SSTools.FileListView.SELECT_FLAGS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>選択対象フラグ </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a636e96b2bba7a3425d7eab19008814f5a9fc5887c030f7a3e19821ebec457e719" name="a636e96b2bba7a3425d7eab19008814f5a9fc5887c030f7a3e19821ebec457e719"></a>FILE&#160;</td><td class="fielddoc"><p>ファイル </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a636e96b2bba7a3425d7eab19008814f5a80dc13242b57656668e67c9ca779ccb3" name="a636e96b2bba7a3425d7eab19008814f5a80dc13242b57656668e67c9ca779ccb3"></a>FOLDER&#160;</td><td class="fielddoc"><p>フォルダ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a636e96b2bba7a3425d7eab19008814f5a5fb1f955b45e38e31789286a1790398d" name="a636e96b2bba7a3425d7eab19008814f5a5fb1f955b45e38e31789286a1790398d"></a>ALL&#160;</td><td class="fielddoc"><p>全て </p>
 </td></tr>
 </table>
 
@@ -369,6 +393,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowNewFolderButton</
   <table class="params">
     <tr><td class="paramname">sender</td><td>送信元</td></tr>
     <tr><td class="paramname">paths</td><td>選択されたパス</td></tr>
+    <tr><td class="paramname">IsDoubleClick</td><td>ダブルクリックかどうか</td></tr>
   </table>
   </dd>
 </dl>
@@ -414,14 +439,20 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowNewFolderButton</
         <tr>
           <td class="memname">string[] SSTools.FileListView.GetSelected </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a636e96b2bba7a3425d7eab19008814f5">SELECT_FLAGS</a></td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval">SELECT_FLAGS::ALL</span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a636e96b2bba7a3425d7eab19008814f5">SELECT_FLAGS</a></td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a636e96b2bba7a3425d7eab19008814f5a5fb1f955b45e38e31789286a1790398d">SELECT_FLAGS::ALL</a></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>選択されているアイテムを取得する </p>
-<dl class="section return"><dt>戻り値</dt><dd></dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>選択対象</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>選択されいるファイル名の配列</dd></dl>
 
 <p class="reference">参照先 <a class="el" href="#ab05cb52a041be9bad16e535c47fc8fada4ee29ca12c7d126654bd0e5275de6135">SSTools.FileListView.List</a>.</p>
 
@@ -495,7 +526,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowNewFolderButton</
 <p>ファイル選択イベント発行 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">paths</td><td>選択されたパス</td></tr>
+    <tr><td class="paramname">path</td><td>選択されたパス</td></tr>
+    <tr><td class="paramname">IsDoubleClick</td><td>ダブルクリックかどうか</td></tr>
   </table>
   </dd>
 </dl>
@@ -533,6 +565,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowNewFolderButton</
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">paths</td><td>選択されたパス</td></tr>
+    <tr><td class="paramname">IsDoubleClick</td><td>ダブルクリックかどうか</td></tr>
   </table>
   </dd>
 </dl>
@@ -565,7 +598,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowNewFolderButton</
 <p>フォルダ選択イベント発行 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">paths</td><td>選択されたパス</td></tr>
+    <tr><td class="paramname">path</td><td>選択されたパス</td></tr>
   </table>
   </dd>
 </dl>
@@ -634,6 +667,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShowNewFolderButton</
   <table class="params">
     <tr><td class="paramname">path</td><td>ディレクトリ</td></tr>
     <tr><td class="paramname">topNode</td><td>最上位ノード</td></tr>
+    <tr><td class="paramname">ext_lists</td><td>拡張子リスト</td></tr>
   </table>
   </dd>
 </dl>

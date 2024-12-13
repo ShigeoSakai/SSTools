@@ -13,6 +13,15 @@ namespace SSTools
     /// <summary>
     /// フォルダ選択ボタン
     /// </summary>
+    /// <remarks>
+    /// 動作：
+    ///    プロパティ:LinkControlで指定されたコントロールのTextプロパティの内容を
+    ///    ファイルパスとして、FolderBrowserDialog(もしくはFolderSelectDialog)を生成、表示し、
+    ///    Dialogの結果がOKの場合、
+    ///      1.プロパティ:LinkControlで指定されたコントロールのTextプロパティの内容を更新
+    ///      2.プロパティ:SendClickControlで指定されたコントロールのPerformClick()、もしくは
+    ///         OnClick()メソッドを呼び出す。
+    /// </remarks>
     public class FolderSelectButton : Button
     {
         /// <summary>

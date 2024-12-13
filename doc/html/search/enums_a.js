@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['select_5fflags_0',['SELECT_FLAGS',['../de/d4c/class_s_s_tools_1_1_file_list_view.html#a636e96b2bba7a3425d7eab19008814f5',1,'SSTools::FileListView']]],
-  ['shape_5fproperty_1',['SHAPE_PROPERTY',['../d0/d70/class_s_s_tools_1_1_shape_manager.html#a8596d7938cc0cf371eb246b795cd5cb6',1,'SSTools::ShapeManager']]],
-  ['show_5fcolor_5fname_2',['SHOW_COLOR_NAME',['../d6/d15/class_s_s_tools_1_1_color_selection_button.html#a471accb0de0ef1ad4487b1a6dd7726d7',1,'SSTools::ColorSelectionButton']]]
+  ['query_5fkind_0',['QUERY_KIND',['../d3/db1/class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___n_o_t_i_f_y___f_o_r_m_a_t.html#a46bc69da2db4b722cced9b577317a08d',1,'SSTools::WndMsgAnalysis::WM_NOTIFY_FORMAT']]]
 ];

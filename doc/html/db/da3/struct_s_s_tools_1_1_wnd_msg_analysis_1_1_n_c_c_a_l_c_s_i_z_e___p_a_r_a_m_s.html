@@ -104,14 +104,14 @@ $(function(){initNavTree('db/da3/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_n_c_c
 </div><!--header-->
 <div class="contents">
 
-<p>WM_NCCALCSIZE  
+<p>WM_NCCALCSIZE ウィンドウのクライアント領域のサイズ、位置、および有効な内容を計算するために 、WM_NCCALCSIZE メッセージの処理中にアプリケーションが使用できる情報  
  <a href="#details">[詳解]</a></p>
 <div class="dynheader">
 SSTools.WndMsgAnalysis.NCCALCSIZE_PARAMS 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/da8/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_n_c_c_a_l_c_s_i_z_e___p_a_r_a_m_s__coll__graph.png" border="0" usemap="#a_s_s_tools_8_wnd_msg_analysis_8_n_c_c_a_l_c_s_i_z_e___p_a_r_a_m_s_coll__map" alt="Collaboration graph"/></div>
 <map name="a_s_s_tools_8_wnd_msg_analysis_8_n_c_c_a_l_c_s_i_z_e___p_a_r_a_m_s_coll__map" id="a_s_s_tools_8_wnd_msg_analysis_8_n_c_c_a_l_c_s_i_z_e___p_a_r_a_m_s_coll__map">
-<area shape="rect" title="WM_NCCALCSIZE" alt="" coords="5,128,272,171"/>
+<area shape="rect" title="WM_NCCALCSIZE ウィンドウのクライアント領域のサイズ、位置、および有効な内容を計算するために 、WM_NCCALCSIZE メッセージの処理中にアプリケーションが使用できる情報" alt="" coords="5,128,272,171"/>
 <area shape="rect" href="../../d9/d5e/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_r_e_c_t.html" title="RECT構造体" alt="" coords="30,5,247,32"/>
 <area shape="poly" title=" " alt="" coords="141,47,141,128,136,128,136,47"/>
 </map>
@@ -127,19 +127,23 @@ SSTools.WndMsgAnalysis.NCCALCSIZE_PARAMS 連携図</div>
 公開変数類</h2></td></tr>
 <tr class="memitem:a50f3420b58fa79441d9f492dcd61b8fe" id="r_a50f3420b58fa79441d9f492dcd61b8fe"><td class="memItemLeft" align="right" valign="top"><a id="a50f3420b58fa79441d9f492dcd61b8fe" name="a50f3420b58fa79441d9f492dcd61b8fe"></a>
 <a class="el" href="../../d9/d5e/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_r_e_c_t.html">RECT</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Rect0</b></td></tr>
+<tr class="memdesc:a50f3420b58fa79441d9f492dcd61b8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">移動またはサイズ変更されたウィンドウの新しい座標 <br /></td></tr>
 <tr class="separator:a50f3420b58fa79441d9f492dcd61b8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9782f977daaeb07af084e9a31608f243" id="r_a9782f977daaeb07af084e9a31608f243"><td class="memItemLeft" align="right" valign="top"><a id="a9782f977daaeb07af084e9a31608f243" name="a9782f977daaeb07af084e9a31608f243"></a>
 <a class="el" href="../../d9/d5e/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_r_e_c_t.html">RECT</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Rect1</b></td></tr>
+<tr class="memdesc:a9782f977daaeb07af084e9a31608f243"><td class="mdescLeft">&#160;</td><td class="mdescRight">移動またはサイズ変更される前のウィンドウの座標 <br /></td></tr>
 <tr class="separator:a9782f977daaeb07af084e9a31608f243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66eb3f9fbdc3b5618dd033ae037fdb0b" id="r_a66eb3f9fbdc3b5618dd033ae037fdb0b"><td class="memItemLeft" align="right" valign="top"><a id="a66eb3f9fbdc3b5618dd033ae037fdb0b" name="a66eb3f9fbdc3b5618dd033ae037fdb0b"></a>
 <a class="el" href="../../d9/d5e/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_r_e_c_t.html">RECT</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Rect2</b></td></tr>
+<tr class="memdesc:a66eb3f9fbdc3b5618dd033ae037fdb0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウが移動またはサイズ変更される前のウィンドウのクライアント領域の座標 <br /></td></tr>
 <tr class="separator:a66eb3f9fbdc3b5618dd033ae037fdb0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3a42dc742eb4a5437e154f7370fa4f9" id="r_ad3a42dc742eb4a5437e154f7370fa4f9"><td class="memItemLeft" align="right" valign="top"><a id="ad3a42dc742eb4a5437e154f7370fa4f9" name="ad3a42dc742eb4a5437e154f7370fa4f9"></a>
 IntPtr&#160;</td><td class="memItemRight" valign="bottom"><b>LpPos</b></td></tr>
+<tr class="memdesc:ad3a42dc742eb4a5437e154f7370fa4f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウを移動またはサイズ変更した操作で指定されたサイズと位置の値を含む WINDOWPOS 構造体へのポインター。 <br /></td></tr>
 <tr class="separator:ad3a42dc742eb4a5437e154f7370fa4f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>WM_NCCALCSIZE </p>
+<div class="textblock"><p>WM_NCCALCSIZE ウィンドウのクライアント領域のサイズ、位置、および有効な内容を計算するために 、WM_NCCALCSIZE メッセージの処理中にアプリケーションが使用できる情報 </p>
 </div><h2 class="groupheader">メソッド詳解</h2>
 <a id="aa264c6a4c582ee4802e5dae551a4f6c8" name="aa264c6a4c582ee4802e5dae551a4f6c8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa264c6a4c582ee4802e5dae551a4f6c8">&#9670;&#160;</a></span>ToString()</h2>
@@ -157,7 +161,19 @@ IntPtr&#160;</td><td class="memItemRight" valign="bottom"><b>LpPos</b></td></tr>
 </div><div class="memdoc">
 
 <p>文字列変換 </p>
-<dl class="section return"><dt>戻り値</dt><dd></dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>変換された文字列</dd></dl>
+
+<p class="reference">参照先 <a class="el" href="#ad3a42dc742eb4a5437e154f7370fa4f9">SSTools.WndMsgAnalysis.NCCALCSIZE_PARAMS.LpPos</a>, <a class="el" href="#a50f3420b58fa79441d9f492dcd61b8fe">SSTools.WndMsgAnalysis.NCCALCSIZE_PARAMS.Rect0</a>, <a class="el" href="#a9782f977daaeb07af084e9a31608f243">SSTools.WndMsgAnalysis.NCCALCSIZE_PARAMS.Rect1</a>, <a class="el" href="#a66eb3f9fbdc3b5618dd033ae037fdb0b">SSTools.WndMsgAnalysis.NCCALCSIZE_PARAMS.Rect2</a>, <a class="el" href="../../d9/d5e/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_r_e_c_t.html#a01cdf5ee0269212e7fd51709c371317e">SSTools.WndMsgAnalysis.RECT.ToString()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/da3/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_n_c_c_a_l_c_s_i_z_e___p_a_r_a_m_s_aa264c6a4c582ee4802e5dae551a4f6c8_cgraph.png" border="0" usemap="#adb/da3/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_n_c_c_a_l_c_s_i_z_e___p_a_r_a_m_s_aa264c6a4c582ee4802e5dae551a4f6c8_cgraph" alt=""/></div>
+<map name="adb/da3/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_n_c_c_a_l_c_s_i_z_e___p_a_r_a_m_s_aa264c6a4c582ee4802e5dae551a4f6c8_cgraph" id="adb/da3/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_n_c_c_a_l_c_s_i_z_e___p_a_r_a_m_s_aa264c6a4c582ee4802e5dae551a4f6c8_cgraph">
+<area shape="rect" title="文字列変換" alt="" coords="5,5,272,48"/>
+<area shape="rect" href="../../d9/d5e/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_r_e_c_t.html#a01cdf5ee0269212e7fd51709c371317e" title="文字列変換" alt="" coords="320,5,540,48"/>
+<area shape="poly" title=" " alt="" coords="272,24,304,24,304,29,272,29"/>
+</map>
+</div>
 
 </div>
 </div>

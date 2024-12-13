@@ -58,8 +58,8 @@ namespace SSTools
         /// コンストラクタ
         /// </summary>
         /// <param name="shellItem">Shell Item</param>
-        /// <param name="imgList">画像リスト(アイコン表示用)</param>
-        public FolderTreeNode(ShellItem shellItem, ref ImageList imageList) :base() => CreateNode(shellItem, ref imageList);
+        /// <param name="imageList">画像リスト(アイコン表示用)</param>
+        public FolderTreeNode(ShellItem shellItem, ref ImageList imageList) :base() { CreateNode(shellItem, ref imageList); }
 
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace SSTools
         /// <summary>
         /// サブフォルダの展開
         /// </summary>
-        /// <param name="imageList">画像リスト(アイコン表示用)</param>
+        /// <param name="imgList">画像リスト(アイコン表示用)</param>
         /// <param name="isShowHidenFolder">隠しフォルダの表示・非表示</param>
         public void ExpandSubFolder(ref ImageList imgList, bool isShowHidenFolder = false)
 		{

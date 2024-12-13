@@ -10,7 +10,7 @@ var searchData=
   ['labelposition_7',['LabelPosition',['../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a7e5766e4261951f5c7cc7a8b59d3d04c',1,'SSTools::Shape::BaseShape']]],
   ['labelrotate_8',['LabelRotate',['../d4/d95/class_s_s_tools_1_1_labeled_track_bar.html#aa5a9cf308354f8892822e11eeb4dab79',1,'SSTools::LabeledTrackBar']]],
   ['large_9',['Large',['../d9/d81/class_s_s_tools_1_1_icon_resource.html#a2a4e2e9318b8e2610acce996fce92887',1,'SSTools::IconResource']]],
-  ['largechange_10',['LargeChange',['../d4/d95/class_s_s_tools_1_1_labeled_track_bar.html#abc0eaa1b0de3ca1dc2f78850a79db8bc',1,'SSTools::LabeledTrackBar']]],
+  ['largechange_10',['LargeChange',['../d7/d47/class_s_s_tools_1_1_track_bar_and_value.html#a3f1dd824312b17f2420ddd411f0b4032',1,'SSTools.TrackBarAndValue.LargeChange'],['../d4/d95/class_s_s_tools_1_1_labeled_track_bar.html#abc0eaa1b0de3ca1dc2f78850a79db8bc',1,'SSTools.LabeledTrackBar.LargeChange']]],
   ['linewidth_11',['LineWidth',['../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a5f1b8156462d2221eeea3e04f6b1e33d',1,'SSTools::Shape::BaseShape']]],
   ['linkcontrol_12',['LinkControl',['../da/da5/class_s_s_tools_1_1_file_select_button.html#a7d88369de081614f4c0f824050237aa6',1,'SSTools.FileSelectButton.LinkControl'],['../d1/d40/class_s_s_tools_1_1_folder_select_button.html#affb263753165412cc268b343dda7e59c',1,'SSTools.FolderSelectButton.LinkControl']]],
   ['list_13',['List',['../d9/d81/class_s_s_tools_1_1_icon_resource.html#a352b19b99a45f174e9b271e1b06de9ae',1,'SSTools::IconResource']]],

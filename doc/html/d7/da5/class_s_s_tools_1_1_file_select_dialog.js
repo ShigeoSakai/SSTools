@@ -14,6 +14,8 @@ var class_s_s_tools_1_1_file_select_dialog =
     [ "FilterIndex", "d7/da5/class_s_s_tools_1_1_file_select_dialog.html#a895d42fffc7d768ef50fe09d23c50fca", null ],
     [ "InitialDirectory", "d7/da5/class_s_s_tools_1_1_file_select_dialog.html#a0f7f2df04b66d567dec7b53fb80ff3b7", null ],
     [ "Multiselect", "d7/da5/class_s_s_tools_1_1_file_select_dialog.html#ac104c895bb3b1fcd731dd50495454137", null ],
+    [ "SafeFileName", "d7/da5/class_s_s_tools_1_1_file_select_dialog.html#a7fda893da3ae1c8830510c7c48e57497", null ],
+    [ "SafeFileNames", "d7/da5/class_s_s_tools_1_1_file_select_dialog.html#a69b5595d58024f2a048ab1683c4a1ead", null ],
     [ "ShowHiddenFolder", "d7/da5/class_s_s_tools_1_1_file_select_dialog.html#a4f3a398eef6171be787275f5f53927d3", null ],
     [ "Title", "d7/da5/class_s_s_tools_1_1_file_select_dialog.html#a545d76212bc95c87f315d6914cb82c55", null ]
 ];

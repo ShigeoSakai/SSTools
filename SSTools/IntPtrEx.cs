@@ -86,14 +86,14 @@ namespace SSTools
             public int  GetSigned() => LO_INT;
 #endif
 
-			/// <summary>
-			/// コンストラクタ
-			/// </summary>
-			/// <param name="value">IntPtr値</param>
-			/// <remarks>
-			/// 規定のコンストラクタthis()を明示的に呼び出して、構造体メンバーを初期化する必要がある
-			/// </remarks>
-			public HI_LO(IntPtr value) : this() => Set(value);
+            /// <summary>
+            /// コンストラクタ
+            /// </summary>
+            /// <param name="value">IntPtr値</param>
+            /// <remarks>
+            /// 規定のコンストラクタthis()を明示的に呼び出して、構造体メンバーを初期化する必要がある
+            /// </remarks>
+            public HI_LO(IntPtr value) : this() { Set(value); }
 			/// <summary>
 			/// コピーコンストラクタ
 			/// </summary>
@@ -101,7 +101,7 @@ namespace SSTools
 			/// <remarks>
 			/// 規定のコンストラクタthis()を明示的に呼び出して、構造体メンバーを初期化する必要がある
 			/// </remarks>
-			public HI_LO(HI_LO value) : this() => Set(value.Ptr);
+			public HI_LO(HI_LO value) : this() { Set(value.Ptr); }
 		}
 		/// <summary>
 		/// 値(実体)

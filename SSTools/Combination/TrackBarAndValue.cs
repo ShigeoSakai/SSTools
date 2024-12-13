@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace SSTools
 {
+	/// <summary>
+	/// 数値（NumericUpDown）とトラックバーを組み合わせたクラス
+	/// </summary>
 	public partial class TrackBarAndValue : UserControl
 	{
 		/// <summary>
@@ -105,6 +108,9 @@ namespace SSTools
 				TrackBarValue.Enabled = !value;
 			}
 		}
+		/// <summary>
+		/// 数値(NumericUpDown)のテキストの配置
+		/// </summary>
 		[Category("動作"),
 			DefaultValue(HorizontalAlignment.Left),
 			Description("スピンボックス (アップダウンコントロール) でのテキストの配置")]
@@ -113,7 +119,10 @@ namespace SSTools
 			get => UpDownValue.TextAlign;
 			set => UpDownValue.TextAlign = value;
 		}
-		[Category("動作"),
+        /// <summary>
+        /// 数値(NumericUpDown)のスピンボックスの配置
+        /// </summary>
+        [Category("動作"),
 			DefaultValue(LeftRightAlignment.Right),
 			Description("スピンボックス (アップダウンコントロール) の上向きの矢印ボタンと下向きの矢印ボタンの配置")]
 		public LeftRightAlignment UpDownAlign
@@ -122,7 +131,10 @@ namespace SSTools
 			set => UpDownValue.UpDownAlign = value;
 
 		}
-		[Category("動作"),
+        /// <summary>
+        /// 数値(NumericUpDown)の小数部の桁数
+        /// </summary>
+        [Category("動作"),
 			DefaultValue(0),
 			Description("スピンボックス (アップダウンコントロール) に表示する小数部の桁数")]
 		public int DecimalPlaces
@@ -146,7 +158,10 @@ namespace SSTools
 			}
 
 		}
-		[Category("動作"),
+        /// <summary>
+        /// 数値(NumericUpDown)の値を16進形式で表示するかどうか
+        /// </summary>
+        [Category("動作"),
 			DefaultValue(false),
 			Description("スピン ボックス (アップダウンコントロール) に値を16進形式で表示するかどうかを示す値")]
 		public bool Hexadecimal
@@ -154,7 +169,10 @@ namespace SSTools
 			get => UpDownValue.Hexadecimal;
 			set => UpDownValue.Hexadecimal = value;
 		}
-		[Category("動作"),
+        /// <summary>
+        /// 数値(NumericUpDown)の増分
+        /// </summary>
+        [Category("動作"),
 			DefaultValue(1),
 			Description("上向きまたは下向きの矢印ボタンがクリックされたときに、スピンボックス (アップダウンコントロール) で増分または減分する値")]
 		public decimal Increment
@@ -166,6 +184,9 @@ namespace SSTools
 				TrackBarValue.SmallChange = CalcValue(value, DecimalPlaces);
 			}
 		}
+		/// <summary>
+		/// トラックバーの移動単位（小）
+		/// </summary>
 		[Category("動作"),
 			DefaultValue(1),
 			Description("わずかに移動したときにTrackBar.Valueプロパティに対して加算または減算される値")]
@@ -174,7 +195,10 @@ namespace SSTools
 			get => UpDownValue.Increment;
 			set => Increment = value;
 		}
-		[Category("動作"),
+        /// <summary>
+        /// トラックバーの移動単位（大）
+        /// </summary>
+        [Category("動作"),
 			DefaultValue(10),
 			Description("大きく移動したときにTrackBar.Valueプロパティに対して加算または減算される値")]
 		public decimal LargeChange
@@ -182,6 +206,9 @@ namespace SSTools
 			get => ToDecimal(TrackBarValue.LargeChange, DecimalPlaces);
 			set => TrackBarValue.LargeChange = CalcValue(value, DecimalPlaces);
 		}
+		/// <summary>
+		/// トラックバーの目盛り感覚
+		/// </summary>
 		[Category("動作"),
 			DefaultValue(10),
 			Description("コントロールに描画された目盛り間のデルタを指定する値")]
@@ -244,7 +271,10 @@ namespace SSTools
 		/// 軸の反転
 		/// </summary>
 		private bool _reverse = false;
-		[Category("動作"), 
+        /// <summary>
+        /// 軸の反転(プロパティ)
+        /// </summary>
+        [Category("動作"), 
 			Description("軸を反転します。"), DefaultValue(false)]
 		public bool Reverse
 		{
@@ -374,8 +404,8 @@ namespace SSTools
 		/// <summary>
 		/// アップダウンコントロールの値変更
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">送信元</param>
+		/// <param name="e">イベント引数</param>
 		private void UpDownValue_ValueChanged(object sender, EventArgs e)
 		{
 			// トラックバーに設定
@@ -383,23 +413,23 @@ namespace SSTools
 			// 値変更イベント発行
 			OnValueChanged();
 		}
-		/// <summary>
-		/// トラックバーの値変更
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void TrackBarValue_ValueChanged(object sender, EventArgs e)
+        /// <summary>
+        /// トラックバーの値変更
+        /// </summary>
+        /// <param name="sender">送信元</param>
+        /// <param name="e">イベント引数</param>
+        private void TrackBarValue_ValueChanged(object sender, EventArgs e)
 		{
 			UpDownValue.Value = GetTrackBarValue(_reverse, DecimalPlaces);
 			// 値変更イベント発行
 			OnValueChanged();
 		}
-		/// <summary>
-		/// トラックバースクロール
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void TrackBarValue_Scroll(object sender, EventArgs e)
+        /// <summary>
+        /// トラックバースクロール
+        /// </summary>
+        /// <param name="sender">送信元</param>
+        /// <param name="e">イベント引数</param>
+        private void TrackBarValue_Scroll(object sender, EventArgs e)
 		{
 			UpDownValue.Value = GetTrackBarValue(_reverse, DecimalPlaces);
 			// スクロールイベント発行
@@ -444,11 +474,11 @@ namespace SSTools
 			RestoreChanging(ref SizeChanging, before);
 		}
 
-		/// <summary>
-		/// サイズ変更
-		/// </summary>
-		/// <param name="e"></param>
-		protected override void OnSizeChanged(EventArgs e)
+        /// <summary>
+        /// サイズ変更
+        /// </summary>
+        /// <param name="e">イベント引数</param>
+        protected override void OnSizeChanged(EventArgs e)
 		{
 			if (IsChanging(ref SizeChanging) == false)
 			{	// このコントロール以外から設定された
@@ -457,12 +487,12 @@ namespace SSTools
 			}
 			base.OnSizeChanged(e);
 		}
-		/// <summary>
-		/// UpDownコントロールのサイズ変更イベント
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void UpDownValue_SizeChanged(object sender, EventArgs e)
+        /// <summary>
+        /// UpDownコントロールのサイズ変更イベント
+        /// </summary>
+        /// <param name="sender">送信元</param>
+        /// <param name="e">イベント引数</param>
+        private void UpDownValue_SizeChanged(object sender, EventArgs e)
 		{
 			Size newSize = CalcSize(base.Size);
 			SetSize(newSize);
@@ -481,7 +511,7 @@ namespace SSTools
 			/// </summary>
 			public Orientation OldValue { get; private set; }
 			/// <summary>
-			/// コンストラクション
+			/// コンストラクタ
 			/// </summary>
 			/// <param name="newValue">変更後の値</param>
 			/// <param name="oldValue">変更前の値</param>
@@ -491,11 +521,11 @@ namespace SSTools
 				OldValue = oldValue;
 			}
 		}
-		/// <summary>
-		/// 向きの変更
-		/// </summary>
-		/// <param name="e"></param>
-		protected virtual void OnOrientationChange(OrientationChangeEventArg e)
+        /// <summary>
+        /// 向きの変更
+        /// </summary>
+        /// <param name="e">イベント引数(OrientationChangeEventArg)</param>
+        protected virtual void OnOrientationChange(OrientationChangeEventArg e)
 		{
 			if (e.NewValue != e.OldValue)
 			{   // 向きが変わった
@@ -521,18 +551,18 @@ namespace SSTools
 		/// <summary>
 		/// AutoSizeが変わった
 		/// </summary>
-		/// <param name="e"></param>
+		/// <param name="e">イベント引数</param>
 		protected override void OnAutoSizeChanged(EventArgs e)
 		{
 			// サイズを変更
 			SetSize(CalcSize());
 			base.OnAutoSizeChanged(e);
 		}
-		/// <summary>
-		/// Dockが変わった
-		/// </summary>
-		/// <param name="e"></param>
-		protected override void OnDockChanged(EventArgs e)
+        /// <summary>
+        /// Dockが変わった
+        /// </summary>
+        /// <param name="e">イベント引数</param>
+        protected override void OnDockChanged(EventArgs e)
 		{
 			Orientation oldValue = Orientation;
 			if ((Dock == DockStyle.Left) || (Dock == DockStyle.Right))
@@ -605,12 +635,12 @@ namespace SSTools
 			}
 			return new Size(width, height);
 		}
-		/// <summary>
-		/// サイズを算出
-		/// </summary>
-		/// <param name="size"></param>
-		/// <returns></returns>
-		private Size CalcSize(Size? size = null)
+        /// <summary>
+        /// サイズを算出
+        /// </summary>
+        /// <param name="size">サイズ指定</param>
+        /// <returns>算出したサイズ</returns>
+        private Size CalcSize(Size? size = null)
 		{
 			// 最小のサイズを求める
 			Size minSize = CalcMinimunSize(size);
@@ -646,11 +676,11 @@ namespace SSTools
 				return newSize;
 			}
 		}
-		/// <summary>
-		/// レイアウト実行
-		/// </summary>
-		/// <param name="size"></param>
-		private void ExecLayout(Size? size)
+        /// <summary>
+        /// レイアウト実行
+        /// </summary>
+        /// <param name="size">サイズ指定</param>
+        private void ExecLayout(Size? size)
 		{
 			// TrackBarのサイズ
 			Size trackBarSize = TrackBarValue.Size;

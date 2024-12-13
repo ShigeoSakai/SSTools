@@ -180,6 +180,7 @@ namespace SSTools
         /// <param name="sourceFilePath">呼び出し元ソースパス</param>
         /// <param name="sourceLineNumber">行番号</param>
         /// <param name="log_path">ログのパス</param>
+        /// <param name="tag">タグ</param>
         /// <param name="kind">呼び出し元表示</param>
         public LogDetail(string memberName, string sourceFilePath, int sourceLineNumber,string log_path = null,string tag = null,LogUtil.KIND kind = LogUtil.KIND.NONE)
         {
@@ -325,7 +326,6 @@ namespace SSTools
         /// <summary>
         /// 出力文字列生成
         /// </summary>
-        /// <param name="tag">タグ</param>
         /// <param name="args">オブジェクト</param>
         /// <returns>出力する文字列</returns>
         public string GetValueText(params object[] args)

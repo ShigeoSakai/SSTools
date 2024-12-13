@@ -1,7 +1,7 @@
 var searchData=
 [
   ['dashstyle_0',['DashStyle',['../dd/d46/class_s_s_tools_1_1_shape_1_1_base_shape.html#a4ca17aa58b47af231e63b88ff72c3126',1,'SSTools::Shape::BaseShape']]],
-  ['decimalplaces_1',['DecimalPlaces',['../d3/d41/class_s_s_tools_1_1_auto_size_numeric_up_down.html#abd8596d06c802ae57253ad5e4591ce12',1,'SSTools::AutoSizeNumericUpDown']]],
+  ['decimalplaces_1',['DecimalPlaces',['../d7/d47/class_s_s_tools_1_1_track_bar_and_value.html#a00f8a11ce3a0463c032f7f6b408d0fb3',1,'SSTools.TrackBarAndValue.DecimalPlaces'],['../d3/d41/class_s_s_tools_1_1_auto_size_numeric_up_down.html#abd8596d06c802ae57253ad5e4591ce12',1,'SSTools.AutoSizeNumericUpDown.DecimalPlaces']]],
   ['defaultext_2',['DefaultExt',['../da/da5/class_s_s_tools_1_1_file_select_button.html#ae80d1e44ba07e9f2f891ff8c252c3cf1',1,'SSTools::FileSelectButton']]],
   ['defaultsize_3',['DefaultSize',['../d7/d47/class_s_s_tools_1_1_track_bar_and_value.html#a9cdb80531156aca50a64514a1678bf9d',1,'SSTools::TrackBarAndValue']]],
   ['dereferencelinks_4',['DereferenceLinks',['../da/da5/class_s_s_tools_1_1_file_select_button.html#a2492ef7cc3b32917c29e215d062a52f1',1,'SSTools::FileSelectButton']]],

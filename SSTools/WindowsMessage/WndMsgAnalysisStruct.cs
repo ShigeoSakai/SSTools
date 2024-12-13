@@ -65,19 +65,19 @@ namespace SSTools
 		public struct HI_LO
 		{
 			[FieldOffset(0)]
-			public ushort Lo;
+			public ushort Lo;           //!< ushort value low
+            [FieldOffset(0)]
+			public short LoI;           //!< short value low 
+            [FieldOffset(2)]
+			public ushort Hi;           //!< ushort value hi 
+            [FieldOffset(2)]
+			public short HiI;           //!< short value hi
+            [FieldOffset(0)]
+			public IntPtr ValuePtr;     //!< IntPtr value
+            [FieldOffset(0)]
+			public Int32 Value;			//!< int32 value
 			[FieldOffset(0)]
-			public short LoI;
-			[FieldOffset(2)]
-			public ushort Hi;
-			[FieldOffset(2)]
-			public short HiI;
-			[FieldOffset(0)]
-			public IntPtr ValuePtr;
-			[FieldOffset(0)]
-			public Int32 Value;
-			[FieldOffset(0)]
-			public UInt32 ValueU;
+			public UInt32 ValueU;		//!< Uint32 value
 		}
 		/// <summary>
 		/// WParam/LParam値保持構造体
@@ -92,12 +92,11 @@ namespace SSTools
 			/// LParam
 			/// </summary>
 			public HI_LO L;
-			/// <summary>
-			/// 文字列変換
-			/// </summary>
-			/// <returns></returns>
-			public override string ToString() =>
-				string.Format("wParam:0x{0:X8},lParam:0x{1:X8}", W.ValueU, L.ValueU);
+            /// <summary>
+            /// 文字列変換
+            /// </summary>
+            /// <returns>変換された文字列</returns>
+            public override string ToString() { return string.Format("wParam:0x{0:X8},lParam:0x{1:X8}", W.ValueU, L.ValueU); }
 			/// <summary>
 			/// 値の設定
 			/// </summary>
@@ -110,18 +109,18 @@ namespace SSTools
 			}
 		}
 		/// <summary>
-		/// XY
+		/// XY構造体
 		/// </summary>
 		[StructLayout(LayoutKind.Explicit)]
 		public struct XY_PARAMS : ISetValue
 		{
 			/// <summary>
-			/// 幅
+			/// X値
 			/// </summary>
 			[FieldOffset(0)]
 			public Int16 X;
 			/// <summary>
-			/// 高さ
+			/// Y値
 			/// </summary>
 			[FieldOffset(2)]
 			public Int16 Y;
@@ -134,14 +133,14 @@ namespace SSTools
 			/// <summary>
 			/// 文字列変換
 			/// </summary>
-			/// <returns></returns>
-			public override string ToString() =>string.Format("X:{0},Y:{1}", X, Y);
+			/// <returns>変換された文字列</returns>
+			public override string ToString() { return string.Format("X:{0},Y:{1}", X, Y); }
 			/// <summary>
 			/// 値の設定
 			/// </summary>
 			/// <param name="wParam">wParam</param>
 			/// <param name="lParam">lParam</param>
-			public void Set(IntPtr wParam, IntPtr lParam) =>this.Value = (UInt32)wParam;
+			public void Set(IntPtr wParam, IntPtr lParam){ this.Value = (UInt32) wParam; }
 		}
 		/// <summary>
 		/// WM_SIZE
@@ -165,17 +164,17 @@ namespace SSTools
 			[FieldOffset(0)]
 			public UInt32 Value;
 
-			/// <summary>
-			/// 文字列変換
-			/// </summary>
-			/// <returns></returns>
-			public override string ToString() => string.Format("W:{0},H:{1}", Width, Height);
+            /// <summary>
+            /// 文字列変換
+            /// </summary>
+            /// <returns>変換された文字列</returns>
+            public override string ToString() { return string.Format("W:{0},H:{1}", Width, Height); }
 			/// <summary>
 			/// 値の設定
 			/// </summary>
 			/// <param name="wParam">wParam</param>
 			/// <param name="lParam">lParam</param>
-			public void Set(IntPtr wParam, IntPtr lParam) => this.Value = (UInt32)wParam;
+			public void Set(IntPtr wParam, IntPtr lParam){ this.Value = (UInt32) wParam; }
 		}
 		/// <summary>
 		/// RECT構造体
@@ -199,12 +198,12 @@ namespace SSTools
 			/// 下
 			/// </summary>
 			public int Bottom;
-			/// <summary>
-			/// 文字列変換
-			/// </summary>
-			/// <returns></returns>
-			public override string ToString() =>
-				string.Format("({0},{1}) - ({2},{3}) W:{4} H:{5}", Left, Top, Right, Bottom, Right - Left, Bottom - Top);
+            /// <summary>
+            /// 文字列変換
+            /// </summary>
+            /// <returns>変換された文字列</returns>
+            public override string ToString()
+			{ return string.Format("({0},{1}) - ({2},{3}) W:{4} H:{5}", Left, Top, Right, Bottom, Right - Left, Bottom - Top); }
 			/// <summary>
 			/// 幅
 			/// </summary>
@@ -216,58 +215,75 @@ namespace SSTools
 		}
 
 
-		/// <summary>
-		/// WINDOWPOS
-		/// </summary>
-		[StructLayout(LayoutKind.Sequential)]
+        /// <summary>
+        /// WINDOWPOS
+        /// ウィンドウのサイズと位置に関する情報
+        /// </summary>
+        [StructLayout(LayoutKind.Sequential)]
 		public struct WINDOWPOS_PARAMS
 		{
-			public IntPtr Hwnd;
-			public IntPtr HwndInsertAfter;
-			public int X;
-			public int Y;
-			public int Cx;
-			public int Cy;
-			public uint Flags;
+			public IntPtr Hwnd;                 //!< ウィンドウへのハンドル。
+            public IntPtr HwndInsertAfter;      //!< ウィンドウの位置を Z 順 (前面から背面への位置) で指定します。
+            public int X;                       //!< ウィンドウの左端の位置。
+            public int Y;                       //!< ウィンドウの上端の位置。
+            public int Cx;                      //!< ウィンドウの幅 (ピクセル単位)。
+            public int Cy;                      //!< ウィンドウの高さ (ピクセル単位)。
+            public uint Flags;					//!< ウィンドウの位置。
 
-			/// <summary>
-			/// 文字列変換
-			/// </summary>
-			/// <returns></returns>
-			public override string ToString() =>
-				string.Format("({0},{1}) W:{2},H:{3} flags:{4:X8}", X, Y, Cx, Cy, Flags);
+            /// <summary>
+            /// 文字列変換
+            /// </summary>
+            /// <returns>変換された文字列</returns>
+            public override string ToString()
+			{ return string.Format("({0},{1}) W:{2},H:{3} flags:{4:X8}", X, Y, Cx, Cy, Flags); }
 		}
 
-		/// <summary>
-		/// WM_NCCALCSIZE
-		/// </summary>
-		[StructLayout(LayoutKind.Sequential)]
+        /// <summary>
+        /// WM_NCCALCSIZE
+        /// ウィンドウのクライアント領域のサイズ、位置、および有効な内容を計算するために 、WM_NCCALCSIZE メッセージの処理中にアプリケーションが使用できる情報
+        /// </summary>
+        [StructLayout(LayoutKind.Sequential)]
 		public struct NCCALCSIZE_PARAMS
 		{
-			public RECT Rect0;
-			public RECT Rect1;
-			public RECT Rect2;
-			public IntPtr LpPos;    // WINDOWPOS_PARAMS
+			public RECT Rect0;      //!< 移動またはサイズ変更されたウィンドウの新しい座標
+            public RECT Rect1;      //!< 移動またはサイズ変更される前のウィンドウの座標
+            public RECT Rect2;      //!< ウィンドウが移動またはサイズ変更される前のウィンドウのクライアント領域の座標
+            public IntPtr LpPos;    //!< ウィンドウを移動またはサイズ変更した操作で指定されたサイズと位置の値を含む WINDOWPOS 構造体へのポインター。
 
 			/// <summary>
 			/// 文字列変換
 			/// </summary>
-			/// <returns></returns>
-			public override string ToString() =>
-				string.Format("RECT0:{0} RECT[1]:{1} RECT[2]:{2} LPPos:{3}",
+			/// <returns>変換された文字列</returns>
+			public override string ToString()
+			{
+				return string.Format("RECT0:{0} RECT[1]:{1} RECT[2]:{2} LPPos:{3}",
 					Rect0.ToString(), Rect1.ToString(), Rect2.ToString(), LpPos.ToString());
+			}
 		}
-
-		public class NCCALCSIZE_PARAMS_CLASS
+        /// <summary>
+        /// WM_NCCALCSIZEメッセージ解析クラス
+        /// </summary>
+        public class NCCALCSIZE_PARAMS_CLASS
 		{
-			public NCCALCSIZE_PARAMS NcCalcSize;
-			public WINDOWPOS_PARAMS WindowPos;
+			public NCCALCSIZE_PARAMS NcCalcSize;        //!< WM_NCCALCSIZE情報
+            public WINDOWPOS_PARAMS WindowPos;          //!< WINDOWPOS情報
 
-			public NCCALCSIZE_PARAMS_CLASS(IntPtr address)
+            /// <summary>
+            /// コンストラクタ
+            /// WM_NCCALCSIZE情報を生成
+            /// </summary>
+            /// <param name="address">パラメータアドレス</param>
+            public NCCALCSIZE_PARAMS_CLASS(IntPtr address)
 			{
 				NcCalcSize = IntPtrEx.Instance(address).GetStructure<NCCALCSIZE_PARAMS>(PtrFunc);
 			}
-			private void PtrFunc(string name,Type type,object value)
+            /// <summary>
+            /// WINDOWPOS情報を生成
+            /// </summary>
+            /// <param name="name">名前("LpPos"のみ有効)</param>
+            /// <param name="type">値の型(IntPtr/IntPtrEx)</param>
+            /// <param name="value">値(アドレス)</param>
+            private void PtrFunc(string name,Type type,object value)
 			{
 				if (name == "LpPos")
 				{
@@ -278,53 +294,78 @@ namespace SSTools
 				}
 					
 			}
-
-			public override string ToString() =>
-				string.Format("RECT0:{0} RECT[1]:{1} RECT[2]:{2} LPPos:{3}" +
+			/// <summary>
+			/// 文字列変換
+			/// </summary>
+			/// <returns>変換された文字列</returns>
+			public override string ToString()
+			{
+				return string.Format("RECT0:{0} RECT[1]:{1} RECT[2]:{2} LPPos:{3}" +
 					" Hwnd:{4} HwndInsertAfter:{5} X:{6} Y:{7} W:{8} H:{9} Flags:{10}",
-					NcCalcSize.Rect0.ToString(), NcCalcSize.Rect1.ToString(), NcCalcSize.Rect2.ToString(),IntPtrEx.Instance(NcCalcSize.LpPos),
+					NcCalcSize.Rect0.ToString(), NcCalcSize.Rect1.ToString(), NcCalcSize.Rect2.ToString(), IntPtrEx.Instance(NcCalcSize.LpPos),
 					IntPtrEx.Instance(WindowPos.Hwnd), IntPtrEx.Instance(WindowPos.HwndInsertAfter),
-					WindowPos.X, WindowPos.Y, WindowPos.Cx,WindowPos.Cy,WindowPos.Flags);
-		}
-
-		/// <summary>
-		/// NMHDR構造体
-		/// </summary>
-		[StructLayout(LayoutKind.Sequential)]
-		public struct NMHDR
-		{
-			public IntPtr HwndFrom;
-			public UInt32 IdFrom;
-			public UInt32 Code;
-			public override string ToString() =>
-				string.Format("HwndFrom:0x{0:X8} ID From:0x{1:X8} Code:0x{2:X8}",(uint)HwndFrom, IdFrom, Code);
+					WindowPos.X, WindowPos.Y, WindowPos.Cx, WindowPos.Cy, WindowPos.Flags);
+			}
 		}
 
         /// <summary>
-        /// CREATESTRUCTA構造体
+        /// NMHDR構造体
+        /// 通知メッセージに関する情報
         /// </summary>
         [StructLayout(LayoutKind.Sequential)]
+		public struct NMHDR
+		{
+            /// <summary>
+            /// メッセージを送信するコントロールへのウィンドウ ハンドル。
+            /// </summary>
+            public IntPtr HwndFrom;
+            /// <summary>
+            /// メッセージを送信するコントロールの識別子。
+            /// </summary>
+            public UInt32 IdFrom;
+            /// <summary>
+            /// 通知コード。
+            /// </summary>
+            public UInt32 Code;
+			/// <summary>
+			/// 文字列変換
+			/// </summary>
+			/// <returns>変換された文字列</returns>
+			public override string ToString()
+			{ return string.Format("HwndFrom:0x{0:X8} ID From:0x{1:X8} Code:0x{2:X8}", (uint)HwndFrom, IdFrom, Code); }
+		}
 
-        public struct CREATESTRUCTA
-        {
-            public IntPtr lpCreateParams;
-            public IntPtr hInstance;
-            public IntPtr hMenu;
-            public IntPtr hwndParent;
-            public int cy;
-            public int cx;
-            public int y;
-            public int x;
-            public UInt32 style;
-            public IntPtr lpszName;
-            public IntPtr lpszClass;
-            public UInt32 dwExStyle;
+		/// <summary>
+		/// CREATESTRUCTA構造体
+		/// アプリケーションのウィンドウ プロシージャに渡される初期化パラメーターを定義
+		/// </summary>
+		[StructLayout(LayoutKind.Sequential)]
+		public struct CREATESTRUCTA
+		{
+			public IntPtr lpCreateParams;   //!< ウィンドウの作成パラメータ
+			public IntPtr hInstance;        //!< 新しいウィンドウを所有するモジュールのハンドル。
+			public IntPtr hMenu;            //!< 新しいウィンドウで使用するメニューのハンドル。
+			public IntPtr hwndParent;       //!< ウィンドウが子ウィンドウの場合は、親ウィンドウへのハンドル
+			public int cy;                  //!< 新しいウィンドウの高さ (ピクセル単位)。
+			public int cx;                  //!< 新しいウィンドウの幅 (ピクセル単位)。
+			public int y;                   //!< 新しいウィンドウの左上隅の y 座標。
+			public int x;                   //!< 新しいウィンドウの左上隅の x 座標。
+			public UInt32 style;            //!< 新しいウィンドウのスタイル
+			public IntPtr lpszName;         //!< 新しいウィンドウの名前
+			public IntPtr lpszClass;        //!< null で終わる文字列または新しいウィンドウのクラス名を指定するアトムへのポインター
+			public UInt32 dwExStyle;        //!< 新しいウィンドウの拡張ウィンドウ スタイル
 
-			public override string ToString() =>
-				string.Format("CreateParams:0x{0:X8} Instance:0x{1:X8} Menu:0x{2:X8} Parent:0x{3:X8} X:{4},Y:{5} Cx:{6} Cy:{7} Style:{8}" +
+			/// <summary>
+			/// 文字列変換
+			/// </summary>
+			/// <returns>変換された文字列</returns>
+			public override string ToString()
+			{ 
+				return string.Format("CreateParams:0x{0:X8} Instance:0x{1:X8} Menu:0x{2:X8} Parent:0x{3:X8} X:{4},Y:{5} Cx:{6} Cy:{7} Style:{8}" +
 					" Name:0x{9:X8} Class:0x{10:X8} ExtStyle:{11}",
-					(uint)lpCreateParams, (uint)hInstance, (uint)hMenu, (uint)hwndParent, 
-					x, y, cx, cy, (WINDOW_STYLE)style,(uint)lpszName,(uint)lpszClass,(EXTEND_WINDOW_STYLE)dwExStyle);
+					(uint) lpCreateParams, (uint) hInstance, (uint) hMenu, (uint) hwndParent,
+					x, y, cx, cy, (WINDOW_STYLE) style, (uint) lpszName, (uint) lpszClass, (EXTEND_WINDOW_STYLE) dwExStyle); 
+			}
         }
     }
 }

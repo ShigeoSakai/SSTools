@@ -1,13 +1,20 @@
 var searchData=
 [
-  ['unexpected_5fbrackets_5fend_0',['UNEXPECTED_BRACKETS_END',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750ca683fa75300a108576be444e8e722aa4f',1,'SSTools::SimpleParser']]],
-  ['unexpected_5fbrackets_5fstart_1',['UNEXPECTED_BRACKETS_START',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750ca0762464a4478d7a80bfd7bb4b240a288',1,'SSTools::SimpleParser']]],
-  ['unexpected_5fcolon_2',['UNEXPECTED_COLON',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750cacb3374b58de5454210cb2d10ea95dce8',1,'SSTools::SimpleParser']]],
-  ['unexpected_5fcurly_5fbrackets_5fend_3',['UNEXPECTED_CURLY_BRACKETS_END',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750ca8b9f86a47d9e60a427e88a950a4e2962',1,'SSTools::SimpleParser']]],
-  ['unexpected_5fcurly_5fbrackets_5fstart_4',['UNEXPECTED_CURLY_BRACKETS_START',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750cabb2bf0f5e0df77e44d302df01df7c938',1,'SSTools::SimpleParser']]],
-  ['unexpected_5fend_5fof_5ftext_5',['UNEXPECTED_END_OF_TEXT',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750cac1958bff2d72499be332fa9c59742a2e',1,'SSTools::SimpleParser']]],
-  ['unexpected_5fequal_6',['UNEXPECTED_EQUAL',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750ca2c3ea907891038590304a536048dfbfd',1,'SSTools::SimpleParser']]],
-  ['unexpected_5fparentheses_5fend_7',['UNEXPECTED_PARENTHESES_END',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750cafa7fada172872d9f84826555f90d6243',1,'SSTools::SimpleParser']]],
-  ['unexpected_5fparentheses_5fstart_8',['UNEXPECTED_PARENTHESES_START',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750cabb2facf4d66090286d64b6f1a36b239a',1,'SSTools::SimpleParser']]],
-  ['unknown_5fliteral_9',['UNKNOWN_LITERAL',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750cafc2cf50f3d54b7e0d8c9dfbf3b26e806',1,'SSTools::SimpleParser']]]
+  ['uis_5fclear_0',['UIS_CLEAR',['../da/d43/class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___u_i_s_t_a_t_e.html#abd327dd3700ea1a7552c240e3b3db3b9a9b0080e60d14512223fcf70d9fdeef26',1,'SSTools::WndMsgAnalysis::WM_UISTATE']]],
+  ['uis_5finitialize_1',['UIS_INITIALIZE',['../da/d43/class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___u_i_s_t_a_t_e.html#abd327dd3700ea1a7552c240e3b3db3b9ab265a1a6b533a48bb9aeee4018b769f0',1,'SSTools::WndMsgAnalysis::WM_UISTATE']]],
+  ['uis_5fset_2',['UIS_SET',['../da/d43/class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___u_i_s_t_a_t_e.html#abd327dd3700ea1a7552c240e3b3db3b9a79ec201a630b53bd0cf15f5fbcd3429a',1,'SSTools::WndMsgAnalysis::WM_UISTATE']]],
+  ['uisf_5factive_3',['UISF_ACTIVE',['../da/d43/class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___u_i_s_t_a_t_e.html#aa306382057e77a640cd449e056787b81a0e9c6d6865774d36302496d2f3a50881',1,'SSTools::WndMsgAnalysis::WM_UISTATE']]],
+  ['uisf_5fhideaccel_4',['UISF_HIDEACCEL',['../da/d43/class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___u_i_s_t_a_t_e.html#aa306382057e77a640cd449e056787b81a0ead199afac92728ff619eab2ee4e7e2',1,'SSTools::WndMsgAnalysis::WM_UISTATE']]],
+  ['uisf_5fhidefocus_5',['UISF_HIDEFOCUS',['../da/d43/class_s_s_tools_1_1_wnd_msg_analysis_1_1_w_m___u_i_s_t_a_t_e.html#aa306382057e77a640cd449e056787b81acfbc8af6dc1fab649bb30b50750488ca',1,'SSTools::WndMsgAnalysis::WM_UISTATE']]],
+  ['unexpected_5fbrackets_5fend_6',['UNEXPECTED_BRACKETS_END',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750ca683fa75300a108576be444e8e722aa4f',1,'SSTools::SimpleParser']]],
+  ['unexpected_5fbrackets_5fstart_7',['UNEXPECTED_BRACKETS_START',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750ca0762464a4478d7a80bfd7bb4b240a288',1,'SSTools::SimpleParser']]],
+  ['unexpected_5fcolon_8',['UNEXPECTED_COLON',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750cacb3374b58de5454210cb2d10ea95dce8',1,'SSTools::SimpleParser']]],
+  ['unexpected_5fcurly_5fbrackets_5fend_9',['UNEXPECTED_CURLY_BRACKETS_END',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750ca8b9f86a47d9e60a427e88a950a4e2962',1,'SSTools::SimpleParser']]],
+  ['unexpected_5fcurly_5fbrackets_5fstart_10',['UNEXPECTED_CURLY_BRACKETS_START',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750cabb2bf0f5e0df77e44d302df01df7c938',1,'SSTools::SimpleParser']]],
+  ['unexpected_5fend_5fof_5ftext_11',['UNEXPECTED_END_OF_TEXT',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750cac1958bff2d72499be332fa9c59742a2e',1,'SSTools::SimpleParser']]],
+  ['unexpected_5fequal_12',['UNEXPECTED_EQUAL',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750ca2c3ea907891038590304a536048dfbfd',1,'SSTools::SimpleParser']]],
+  ['unexpected_5fparentheses_5fend_13',['UNEXPECTED_PARENTHESES_END',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750cafa7fada172872d9f84826555f90d6243',1,'SSTools::SimpleParser']]],
+  ['unexpected_5fparentheses_5fstart_14',['UNEXPECTED_PARENTHESES_START',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750cabb2facf4d66090286d64b6f1a36b239a',1,'SSTools::SimpleParser']]],
+  ['unknown_5fliteral_15',['UNKNOWN_LITERAL',['../dc/dcf/class_s_s_tools_1_1_simple_parser.html#ac6e4392888bcf09597bab2b307bc750cafc2cf50f3d54b7e0d8c9dfbf3b26e806',1,'SSTools::SimpleParser']]],
+  ['user_5fdefine_16',['USER_DEFINE',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#abfe976b838753857560b3b46c735dadaa7f97710816e7e84d462ab474bb28408a',1,'SSTools::WndMsgAnalysis']]]
 ];

@@ -13,6 +13,11 @@ namespace SSTools
 	/// <summary>
 	/// 色選択ボタン
 	/// </summary>
+	/// <remarks>
+	///  色を選択するボタン
+	///  ボタンの色は選択色で、クリックすると位置指定可能なColorSelectDialogが開く
+	///  定義済みの色の場合は、ツールチップにその名前を表示する
+	/// </remarks>
 	public class ColorSelectionButton :Button
 	{
 		/// <summary>

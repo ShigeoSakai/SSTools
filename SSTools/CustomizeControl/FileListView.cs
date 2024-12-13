@@ -58,21 +58,24 @@ namespace SSTools
 		/// </summary>
 		/// <param name="sender">送信元</param>
 		/// <param name="paths">選択されたパス</param>
+		/// <param name="IsDoubleClick">ダブルクリックかどうか</param>
 		public delegate void FileSelectedEventHandler(object sender, string[] paths, bool IsDoubleClick);
 		/// <summary>
 		/// ファイル選択イベント
 		/// </summary>
 		public event FileSelectedEventHandler FileSelectedEvent;
-		/// <summary>
-		/// ファイル選択イベント発行
-		/// </summary>
-		/// <param name="paths">選択されたパス</param>
-		protected virtual void OnFileSelectedEvent(string[] paths, bool IsDoubleClick) => FileSelectedEvent?.Invoke(this, paths,IsDoubleClick);
-		/// <summary>
-		/// ファイル選択イベント発行
-		/// </summary>
-		/// <param name="paths">選択されたパス</param>
-		protected virtual void OnFileSelectedEvent(string path, bool IsDoubleClick) => FileSelectedEvent?.Invoke(this, new string[] { path },IsDoubleClick);
+        /// <summary>
+        /// ファイル選択イベント発行
+        /// </summary>
+        /// <param name="paths">選択されたパス</param>
+        /// <param name="IsDoubleClick">ダブルクリックかどうか</param>
+        protected virtual void OnFileSelectedEvent(string[] paths, bool IsDoubleClick) => FileSelectedEvent?.Invoke(this, paths,IsDoubleClick);
+        /// <summary>
+        /// ファイル選択イベント発行
+        /// </summary>
+        /// <param name="path">選択されたパス</param>
+        /// <param name="IsDoubleClick">ダブルクリックかどうか</param>
+        protected virtual void OnFileSelectedEvent(string path, bool IsDoubleClick) => FileSelectedEvent?.Invoke(this, new string[] { path },IsDoubleClick);
 
         /// <summary>
         /// フォルダ選択イベントハンドラ
@@ -92,7 +95,7 @@ namespace SSTools
         /// <summary>
         /// フォルダ選択イベント発行
         /// </summary>
-        /// <param name="paths">選択されたパス</param>
+        /// <param name="path">選択されたパス</param>
         protected virtual void OnFolderSelectedEvent(string path) => FolderSelectedEvent?.Invoke(this, new string[] { path });
 
 
@@ -590,6 +593,7 @@ namespace SSTools
 		/// </summary>
 		/// <param name="path">ディレクトリ</param>
 		/// <param name="topNode">最上位ノード</param>
+		/// <param name="ext_lists">拡張子リスト</param>
 		public void SetPath(string path, FolderTreeNode topNode = null,List<string> ext_lists = null)
 		{
 			ListViewFile.BeginUpdate();
@@ -1004,14 +1008,15 @@ namespace SSTools
 		[Flags]
 		public enum SELECT_FLAGS
 		{
-			FILE = 1,
-			FOLDER = 2,
-			ALL = 3
+			FILE = 1,		//!< ファイル
+			FOLDER = 2,		//!< フォルダ
+			ALL = 3			//!< 全て
 		}
 		/// <summary>
 		/// 選択されているアイテムを取得する
 		/// </summary>
-		/// <returns></returns>
+		/// <param name="flags">選択対象</param>
+		/// <returns>選択されいるファイル名の配列</returns>
 		public string[] GetSelected(SELECT_FLAGS flags = SELECT_FLAGS.ALL)
 		{
 			if (ListViewFile.SelectedItems.Count > 0)

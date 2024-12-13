@@ -8,6 +8,9 @@ var searchData=
   ['rdylgn_5fmap_5f_5',['rdylgn_map_',['../d4/d8f/class_s_s_tools_1_1_color_map_1_1_diverging_1_1_rdylgn_color_map.html#a89c8905f59fd88fcce77f7e85b7d21ed',1,'SSTools::ColorMap::Diverging::RdylgnColorMap']]],
   ['recentpath_6',['RecentPath',['../d7/da5/class_s_s_tools_1_1_file_select_dialog.html#a1ddec3e393da25f1e54fa8c6df06b48c',1,'SSTools::FileSelectDialog']]],
   ['recentview_7',['RecentView',['../d7/da5/class_s_s_tools_1_1_file_select_dialog.html#a620504e271fc87ea422524b97c9e365e',1,'SSTools::FileSelectDialog']]],
-  ['reds_5fmap_5f_8',['reds_map_',['../d5/d15/class_s_s_tools_1_1_color_map_1_1_sequential_1_1_reds_color_map.html#a5bb59a7e4b117d65391c2149ab6f264d',1,'SSTools::ColorMap::Sequential::RedsColorMap']]],
-  ['right_9',['Right',['../d9/d5e/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_r_e_c_t.html#aa69989f4fcdcd8e0e733fa62fbad658c',1,'SSTools::WndMsgAnalysis::RECT']]]
+  ['rect0_8',['Rect0',['../db/da3/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_n_c_c_a_l_c_s_i_z_e___p_a_r_a_m_s.html#a50f3420b58fa79441d9f492dcd61b8fe',1,'SSTools::WndMsgAnalysis::NCCALCSIZE_PARAMS']]],
+  ['rect1_9',['Rect1',['../db/da3/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_n_c_c_a_l_c_s_i_z_e___p_a_r_a_m_s.html#a9782f977daaeb07af084e9a31608f243',1,'SSTools::WndMsgAnalysis::NCCALCSIZE_PARAMS']]],
+  ['rect2_10',['Rect2',['../db/da3/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_n_c_c_a_l_c_s_i_z_e___p_a_r_a_m_s.html#a66eb3f9fbdc3b5618dd033ae037fdb0b',1,'SSTools::WndMsgAnalysis::NCCALCSIZE_PARAMS']]],
+  ['reds_5fmap_5f_11',['reds_map_',['../d5/d15/class_s_s_tools_1_1_color_map_1_1_sequential_1_1_reds_color_map.html#a5bb59a7e4b117d65391c2149ab6f264d',1,'SSTools::ColorMap::Sequential::RedsColorMap']]],
+  ['right_12',['Right',['../d9/d5e/struct_s_s_tools_1_1_wnd_msg_analysis_1_1_r_e_c_t.html#aa69989f4fcdcd8e0e733fa62fbad658c',1,'SSTools::WndMsgAnalysis::RECT']]]
 ];

@@ -7,18 +7,34 @@ using System.IO;
 
 namespace SSTools
 {
+    /// <summary>
+    /// Shell Itemクラス
+    /// </summary>
     public class ShellItem : IDisposable
     {
-        // Sets a flag specifying whether or not we've got the IShellFolder interface for the Desktop.
+        /// <summary>
+        /// Sets a flag specifying whether or not we've got the IShellFolder interface for the Desktop.
+        /// </summary>
         private static Boolean m_bHaveRootShell = false;
 
+        /// <summary>
+        /// Disposeされたか
+        /// </summary>
         private bool disposed = false;
 
+        /// <summary>
+        /// 圧縮ファイルのファイルタイプ
+        /// </summary>
         private string[] CompressdFileTypes = new string[]
         {
             "圧縮","アーカイブ","Compressed","Zip"
         };
 
+        /// <summary>
+        /// 圧縮ファイルかチェック
+        /// </summary>
+        /// <param name="typeString">ファイルタイプ</param>
+        /// <returns>true:圧縮ファイル</returns>
         private bool IsCompressdFileType(string typeString)
         {
             foreach (string type in CompressdFileTypes)
@@ -27,10 +43,12 @@ namespace SSTools
             return false;
         }
 
-		/// <summary>
-		/// Constructor. Creates the ShellItem object for the Desktop.
-		/// </summary>
-		public ShellItem(Environment.SpecialFolder folder = Environment.SpecialFolder.Desktop, bool include_hidden = false)
+        /// <summary>
+        /// Constructor. Creates the ShellItem object for the Desktop.
+        /// </summary>
+        /// <param name="folder">ルートフォルダ</param>
+        /// <param name="include_hidden">隠しフォルダ/ファイルを含めるか</param>
+        public ShellItem(Environment.SpecialFolder folder = Environment.SpecialFolder.Desktop, bool include_hidden = false)
         {
             // new ShellItem() can only be called once.
             // if (m_bHaveRootShell)
@@ -106,6 +124,7 @@ namespace SSTools
         /// <param name="shDesktop">IShellFolder interface of the Desktop</param>
         /// <param name="pIDL">The fully qualified PIDL for this shell item</param>
         /// <param name="shParent">The ShellItem object for this item's parent</param>
+        /// <param name="include_hidden">隠しフォルダ/ファイルを含めるか</param>
         public ShellItem(IShellFolder shDesktop, IntPtr pIDL, ShellItem shParent, bool include_hidden = false)
         {
             // We need the Desktop shell item to exist first.
@@ -178,7 +197,7 @@ namespace SSTools
         /// <summary>
         /// デストラクタ
         /// </summary>
-        /// <param name="disposing"></param>
+        /// <param name="disposing">マネージド リソースを破棄する場合は true を指定し、その他の場合は false を指定します。</param>
         protected virtual void Dispose(bool disposing)
         {
             if (disposed== false) 
@@ -229,6 +248,7 @@ namespace SSTools
         /// <summary>
         /// Retrieves an array of ShellItem objects for sub-folders of this shell item.
         /// </summary>
+        /// <param name="include_hidden">隠しフォルダ/ファイルを含めるか</param>
         /// <returns>ArrayList of ShellItem objects.</returns>
         public ArrayList GetSubFolders(bool include_hidden = false)
         {
@@ -288,7 +308,7 @@ namespace SSTools
         /// <summary>
         /// 本当にサブフォルダがあるか？
         /// </summary>
-        /// <param name="include_hidden"></param>
+        /// <param name="include_hidden">隠しフォルダ/ファイルを含めるか</param>
         /// <returns></returns>
         public bool IsRealyHasSubFolder(bool include_hidden = false)
         {

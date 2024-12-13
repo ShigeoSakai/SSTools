@@ -51,7 +51,7 @@ namespace SSTools
             /// </summary>
             /// <param name="error_code">エラーコード</param>
             /// <param name="message">メッセージ</param>
-            public ParserException(ERROR_CODE error_code, string message) : base(message) => ErrorCode = error_code;
+            public ParserException(ERROR_CODE error_code, string message) : base(message) { ErrorCode = error_code; }
             /// <summary>
             /// 解析エラー
             /// </summary>
@@ -59,7 +59,7 @@ namespace SSTools
             /// <param name="format">フォーマット</param>
             /// <param name="args">フォーマット引数</param>
             public ParserException(ERROR_CODE error_code, string format, params object[] args)
-                : base(string.Format(format, args)) => ErrorCode = error_code;
+                : base(string.Format(format, args)) { ErrorCode = error_code; }
             /// <summary>
             /// 解析エラー
             /// </summary>
@@ -68,7 +68,8 @@ namespace SSTools
             /// <param name="format">フォーマット</param>
             /// <param name="args">フォーマット引数</param>
             public ParserException(ERROR_CODE error_code, Exception innerException, string format, params object[] args)
-                : base(string.Format(format, args), innerException) => ErrorCode = error_code;
+                : base(string.Format(format, args), innerException) { ErrorCode = error_code; }
+
             /// <summary>
             /// シリアル化された情報からExceptionを生成
             /// </summary>

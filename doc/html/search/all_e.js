@@ -25,9 +25,9 @@ var searchData=
   ['oninfoevent_22',['OnInfoEvent',['../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#ad83b416ededfb82cdcd23bb6e8a51775',1,'SSTools::ZoomPictureBox']]],
   ['onkeydown_23',['OnKeyDown',['../d4/d95/class_s_s_tools_1_1_labeled_track_bar.html#a50339e7f028a65b715411db6a580fb5c',1,'SSTools::LabeledTrackBar']]],
   ['onlostfocus_24',['OnLostFocus',['../d4/d95/class_s_s_tools_1_1_labeled_track_bar.html#ae0fdae220f17a312d94551a857bbe7e2',1,'SSTools::LabeledTrackBar']]],
-  ['only_5flparam_25',['ONLY_LPARAM',['../d3/d5f/class_s_s_tools_1_1_wnd_msg_analysis_1_1_o_n_l_y___l_p_a_r_a_m.html',1,'SSTools::WndMsgAnalysis']]],
+  ['only_5flparam_25',['ONLY_LPARAM',['../d3/d5f/class_s_s_tools_1_1_wnd_msg_analysis_1_1_o_n_l_y___l_p_a_r_a_m.html',1,'SSTools.WndMsgAnalysis.ONLY_LPARAM&lt; T &gt;'],['../d3/d5f/class_s_s_tools_1_1_wnd_msg_analysis_1_1_o_n_l_y___l_p_a_r_a_m.html#a15eec58c06385337351f2f74aeea84cd',1,'SSTools.WndMsgAnalysis.ONLY_LPARAM.ONLY_LPARAM()']]],
   ['only_5flparam_3c_20createstructa_20_3e_26',['ONLY_LPARAM&lt; CREATESTRUCTA &gt;',['../d3/d5f/class_s_s_tools_1_1_wnd_msg_analysis_1_1_o_n_l_y___l_p_a_r_a_m.html',1,'SSTools::WndMsgAnalysis']]],
-  ['only_5flparam_5fclass_27',['ONLY_LPARAM_CLASS',['../d2/ded/class_s_s_tools_1_1_wnd_msg_analysis_1_1_o_n_l_y___l_p_a_r_a_m___c_l_a_s_s.html',1,'SSTools::WndMsgAnalysis']]],
+  ['only_5flparam_5fclass_27',['ONLY_LPARAM_CLASS',['../d2/ded/class_s_s_tools_1_1_wnd_msg_analysis_1_1_o_n_l_y___l_p_a_r_a_m___c_l_a_s_s.html',1,'SSTools.WndMsgAnalysis.ONLY_LPARAM_CLASS&lt; T &gt;'],['../d2/ded/class_s_s_tools_1_1_wnd_msg_analysis_1_1_o_n_l_y___l_p_a_r_a_m___c_l_a_s_s.html#a8740056e401b28a1d8bc543f6ed2b298',1,'SSTools.WndMsgAnalysis.ONLY_LPARAM_CLASS.ONLY_LPARAM_CLASS()']]],
   ['onmaximumchange_28',['OnMaximumChange',['../d3/d41/class_s_s_tools_1_1_auto_size_numeric_up_down.html#a43b9dcf1c58f4bde6deab6665d6a23f0',1,'SSTools::AutoSizeNumericUpDown']]],
   ['onminimumchange_29',['OnMinimumChange',['../d3/d41/class_s_s_tools_1_1_auto_size_numeric_up_down.html#abc7a91db98c17e73728e1e8751d8cb60',1,'SSTools::AutoSizeNumericUpDown']]],
   ['onmousedown_30',['OnMouseDown',['../d4/d95/class_s_s_tools_1_1_labeled_track_bar.html#aa44b6294cb8ee761bd675905777b991d',1,'SSTools.LabeledTrackBar.OnMouseDown()'],['../d5/d21/class_s_s_tools_1_1_zoom_picture_box.html#a0c5f92c05ce9b5e94f00199f20b95ecd',1,'SSTools.ZoomPictureBox.OnMouseDown()']]],
@@ -69,5 +69,6 @@ var searchData=
   ['original_5fheight_66',['ORIGINAL_HEIGHT',['../d7/db1/namespace_s_s_tools.html#a59345785469191916f1aa85981faa507af8c856f761abe2828481b86e2bf853b8',1,'SSTools']]],
   ['original_5fwidth_67',['ORIGINAL_WIDTH',['../d7/db1/namespace_s_s_tools.html#a59345785469191916f1aa85981faa507a9ec0b6d995294f55634ba779fcd65f60',1,'SSTools']]],
   ['orrd_5fmap_5f_68',['orrd_map_',['../d7/d27/class_s_s_tools_1_1_color_map_1_1_sequential_1_1_orrd_color_map.html#af890815fd3962611be243a9835e62070',1,'SSTools::ColorMap::Sequential::OrrdColorMap']]],
-  ['orrdcolormap_69',['OrrdColorMap',['../d7/d27/class_s_s_tools_1_1_color_map_1_1_sequential_1_1_orrd_color_map.html',1,'SSTools.ColorMap.Sequential.OrrdColorMap'],['../d7/d27/class_s_s_tools_1_1_color_map_1_1_sequential_1_1_orrd_color_map.html#a623877a614b15cc4ae712ed09b1af6ac',1,'SSTools.ColorMap.Sequential.OrrdColorMap.OrrdColorMap()']]]
+  ['orrdcolormap_69',['OrrdColorMap',['../d7/d27/class_s_s_tools_1_1_color_map_1_1_sequential_1_1_orrd_color_map.html',1,'SSTools.ColorMap.Sequential.OrrdColorMap'],['../d7/d27/class_s_s_tools_1_1_color_map_1_1_sequential_1_1_orrd_color_map.html#a623877a614b15cc4ae712ed09b1af6ac',1,'SSTools.ColorMap.Sequential.OrrdColorMap.OrrdColorMap()']]],
+  ['other_5fmsg_70',['OTHER_MSG',['../df/de7/class_s_s_tools_1_1_wnd_msg_analysis.html#abfe976b838753857560b3b46c735dadaa4e4da03cb6aa7f71e9925e20bfdd2283',1,'SSTools::WndMsgAnalysis']]]
 ];
